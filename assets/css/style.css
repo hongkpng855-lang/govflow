@@ -72,57 +72,90 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.75rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  font-size: 1rem;
+  padding: 0.85rem 2rem;
+  border-radius: 0.625rem;
+  font-weight: 700;
+  font-size: 1.05rem;
   cursor: pointer;
   transition: all 0.2s ease;
   border: none;
   text-decoration: none;
+  letter-spacing: 0.01em;
 }
 
 .btn-gov-primary {
-  background: var(--gold);
+  background: linear-gradient(135deg, var(--gold), #D4B254);
   color: var(--navy);
+  box-shadow: 0 4px 14px rgba(201, 168, 76, 0.35);
 }
 
 .btn-gov-primary:hover {
-  background: var(--gold-light);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.3);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 168, 76, 0.45);
 }
 
 .btn-gov-outline {
   background: transparent;
   color: var(--white);
-  border: 2px solid var(--white);
+  border: 2.5px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(2px);
 }
 
 .btn-gov-outline:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+}
+
+.btn-gov-outline-dark {
+  background: transparent;
+  color: var(--navy);
+  border: 2.5px solid var(--navy);
+}
+
+.btn-gov-outline-dark:hover {
+  background: var(--navy);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(27, 42, 74, 0.2);
 }
 
 .btn-gov-dark {
   background: var(--navy);
   color: var(--white);
+  border: 2px solid var(--navy);
 }
 
 .btn-gov-dark:hover {
   background: var(--navy-light);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(27, 42, 74, 0.3);
+  border-color: var(--navy-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(27, 42, 74, 0.35);
 }
 
 .btn-gov-success {
-  background: var(--success);
+  background: linear-gradient(135deg, var(--success), #2F9E4A);
   color: var(--white);
+  box-shadow: 0 4px 12px rgba(43, 138, 62, 0.35);
 }
 
 .btn-gov-success:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(43, 138, 62, 0.45);
+}
+
+/* Gumroad attention pulse */
+.btn-gov-pulse {
+  position: relative;
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 4px 14px rgba(201, 168, 76, 0.35); }
+  50% { box-shadow: 0 4px 24px rgba(201, 168, 76, 0.6); }
 }
 
 /* Process Cards */

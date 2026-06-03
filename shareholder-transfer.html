@@ -169,8 +169,8 @@
             <p class="text-xs text-gray-600 mb-3">
               解鎖全部 7 個步驟 + 所有範例及模板
             </p>
-            <button @click="goToPayment()" class="btn-gov btn-gov-primary text-sm w-full justify-center py-2">
-              解鎖完整指南 HK$<span x-text="process.data?.price || 149"></span>
+            <button @click="goToPayment()" class="btn-gov btn-gov-primary text-sm w-full justify-center py-2 btn-gov-pulse">
+              🔓 解鎖完整指南 HK$<span x-text="process.data?.price || 149"></span>
             </button>
           </div>
         </nav>
@@ -297,7 +297,7 @@
                     <span>✅</span> 14 日退款保證
                   </div>
                 </div>
-                <button @click="goToPayment()" class="btn-gov btn-gov-primary text-lg w-full sm:w-auto">
+                <button @click="goToPayment()" class="btn-gov btn-gov-primary text-lg w-full sm:w-auto btn-gov-pulse">
                   解鎖完整指南 — 限時 HK$<span x-text="process.data?.price || 149"></span>
                 </button>
               </div>
@@ -332,8 +332,8 @@
   <!-- ═══════════════ Bottom CTA (Sticky Mobile) ═══════════════ -->
   <div x-show="!process.isPaid"
        class="sm:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 z-40 shadow-lg">
-    <button @click="goToPayment()" class="btn-gov btn-gov-primary w-full justify-center text-sm">
-      解鎖完整指南 + 所有模板 — HK$<span x-text="process.data?.price || 149"></span>
+    <button @click="goToPayment()" class="btn-gov btn-gov-primary w-full justify-center text-sm btn-gov-pulse">
+      🔓 解鎖完整指南 + 所有模板 — HK$<span x-text="process.data?.price || 149"></span>
     </button>
   </div>
 
