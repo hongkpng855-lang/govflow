@@ -1,8 +1,8 @@
 {
   "processId": "shareholder-transfer",
   "title": "香港有限公司股份轉讓完整指南",
-  "description": "由真實經歷者整理，7個步驟、15+份文件模板，避免補交文件",
-  "estimatedTime": "1-2 星期（視乎公司秘書效率）",
+  "description": "由真實經歷者整理，避開網上錯誤格式、補交陷阱，7步完成股份轉讓",
+  "estimatedTime": "1-2 星期（視乎準備是否充足）",
   "difficulty": "中等",
   "totalSteps": 7,
   "freeSteps": 2,
@@ -11,190 +11,181 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "準備股份轉讓書 (Instrument of Transfer)",
-      "summary": "轉讓人與承讓人簽署轉讓文件，釐定每股作價",
+      "title": "準備股份轉讓書（Instrument of Transfer）",
+      "summary": "轉讓人同承讓人簽署轉讓文件，注意：網上搵嘅格式未必啱，要用官方認可版本",
       "isFree": true,
-      "details": "股份轉讓書（又稱 Bought and Sold Note / Instrument of Transfer）係整個轉讓程序嘅起點。你需要在文件上填寫轉讓雙方嘅資料、股份數量及作價，然後由轉讓人（賣方）同承讓人（買方）簽署確認。呢份文件係證明交易嘅基礎文件，稅務局同公司註冊處都會查核。",
+      "details": "呢份文件係成個轉讓嘅基礎，但好多人以為上網 download 一個通用版就得。我當初就係咁諗，結果用錯格式，要重新做過。正確做法：轉讓書必須列明轉讓人、承讓人、轉讓股數、每股作價，以及雙方簽署。公司名要同商業登記證完全一致，連標點符號都要一樣。",
       "documents": [
         {
-          "name": "股份轉讓書",
-          "description": "Bought and Sold Note / Instrument of Transfer",
-          "demoImage": "/assets/demo/transfer-form.jpg",
-          "templateFile": "/templates/transfer-form.docx",
+          "name": "股份轉讓書（Instrument of Transfer）",
+          "description": "官方認可格式，列明轉讓股數、每股作價、轉讓人及承讓人資料",
+          "demoImage": "/assets/demo/step1-instrument.jpg",
+          "templateFile": "/templates/instrument-of-transfer.docx",
           "commonMistakes": [
-            "未填寫完整公司名稱（必須與商業登記證一致）",
+            "上網 download 通用模板，格式不符合公司註冊處要求（我錯咗兩次）",
+            "公司名同商業登記證不一致（漏咗 'Limited' 或中文名寫錯）",
             "轉讓日期留空或倒填",
-            "股份數目與股東名冊不符",
-            "冇填寫轉讓雙方嘅完整地址"
+            "股份數目同現有股東名冊不符"
           ]
         }
       ],
       "rejectionRisks": [
-        "股份轉讓書未簽署或簽署不完整",
-        "轉讓價格與實際不符引起稅務局質疑"
+        "格式錯誤 = 整份文件作廢，要重新簽過（我經歷過）",
+        "公司名稱不一致 = 即時退回"
       ]
     },
     {
       "stepNumber": 2,
-      "title": "計算並繳付印花稅 (Stamp Duty)",
-      "summary": "前往稅務局繳納轉讓股份價值的 0.2% 印花稅（買賣雙方各 0.1%）",
+      "title": "董事會書面決議（Board Resolution）",
+      "summary": "董事簽署書面決議，批准股份轉讓及更新股東名冊",
       "isFree": true,
-      "details": "股份轉讓需要繳付從價印花稅（ad valorem stamp duty），稅率為轉讓代價嘅 0.2%，由買賣雙方各付 0.1%。你需要帶同股份轉讓書正本到稅務局印花稅署（香港灣仔告士打道5號稅務大樓）打釐印。你亦可透過互聯網加蓋印花。",
+      "details": "唔使開實體會議，用書面決議就得。決議要寫明：1. 董事會批准呢次股份轉讓 2. 同意更新股東名冊 3. 授權邊個去公司註冊處提交文件。注意：如果公司得你一個董事，都要做呢份文件，自己簽自己。",
       "documents": [
         {
-          "name": "已填妥嘅股份轉讓書正本",
-          "description": "原件供稅務局蓋印",
-          "demoImage": "/assets/demo/stamped-transfer.jpg",
-          "templateFile": null,
+          "name": "董事會書面決議",
+          "description": "董事簽署，批准轉讓並授權後續步驟",
+          "demoImage": "/assets/demo/step2-resolution.jpg",
+          "templateFile": "/templates/board-resolution.docx",
           "commonMistakes": [
-            "冇帶足夠現金或支票繳付印花稅",
-            "錯誤計算轉讓價值導致少交稅款",
-            "過期交稅（需在簽署後30日內）"
+            "冇列明授權代表（之後邊個去交文件？）",
+            "決議日期早於轉讓書日期（邏輯唔通，會被質疑）",
+            "漏咗董事簽名或日期"
           ]
         }
       ],
       "rejectionRisks": [
-        "過期繳付印花稅需繳交罰款",
-        "印花稅計算錯誤被要求補交"
+        "授權不清 = 交文件嗰陣可能要補董事身份證明",
+        "日期前後矛盾 = 成個流程被質疑"
       ]
     },
     {
       "stepNumber": 3,
-      "title": "準備董事會書面決議",
-      "summary": "召開董事會會議或通過書面決議批准股份轉讓",
+      "title": "更新股東名冊（Register of Members）",
+      "summary": "將舊股東除名，加入新股東，更新持股紀錄",
       "isFree": false,
-      "details": "公司需要通過董事會決議正式批准股份轉讓。董事會需要確認：轉讓符合公司章程、轉讓手續合法、以及更新股東名冊嘅安排。可直接以書面決議方式進行，唔需要親身開會。",
+      "details": "轉讓完成後，必須喺股東名冊反映變更。呢步好多人以為「遲啲先搞」，但官方要求轉讓後盡快更新。要記錄：轉讓日期、轉讓股數、每股作價、新股東姓名地址。",
       "documents": [
         {
-          "name": "董事會書面決議",
-          "description": "批准股份轉讓嘅正式決議文件",
-          "demoImage": "/assets/demo/board-resolution.jpg",
-          "templateFile": "/templates/board-resolution.docx",
+          "name": "更新後股東名冊",
+          "description": "反映轉讓後最新持股狀況",
+          "demoImage": "/assets/demo/step3-register.jpg",
+          "templateFile": "/templates/register-of-members.docx",
           "commonMistakes": [
-            "決議內容未明確列明轉讓股份數量",
-            "缺少董事簽署或簽署人數不足",
-            "冇記錄決議日期"
-          ]
-        },
-        {
-          "name": "公司章程細則副本",
-          "description": "查閱章程中關於股份轉讓嘅條文",
-          "demoImage": null,
-          "templateFile": null,
-          "commonMistakes": [
-            "忽略章程中嘅優先購買權條款",
-            "冇跟從章程訂明嘅轉讓程序"
+            "用舊版股東名冊，未更新轉讓後資料",
+            "漏咗轉讓日期或作價",
+            "格式同之前不一致"
           ]
         }
       ],
       "rejectionRisks": [
-        "董事會決議未正式通過導致轉讓無效",
-        "違反公司章程中嘅股份轉讓限制"
+        "名冊同轉讓書不一致 = 會被要求解釋",
+        "遲遲未更新 = 公司秘書失責"
       ]
     },
     {
       "stepNumber": 4,
-      "title": "更新股東名冊 (Register of Members)",
-      "summary": "將股份由轉讓人名下轉至承讓人名下，更新公司股東記錄",
+      "title": "準備公司註冊處表格（Form NSC1）",
+      "summary": "填寫股份變動申報表，注意：官方冇列明嘅文件原來都要交",
       "isFree": false,
-      "details": "公司必須在股份轉讓完成後，更新股東名冊（Register of Members）嘅記錄。需要填寫轉讓日期、新舊股東資料、股份數量等。呢個係法定要求，未能及時更新可能影響股東權益。",
+      "details": "呢步最陰險。官方網站列咗 NSC1，但原來仲有啲既定文件係「預設你要識」嘅，冇寫明係必須，但漏咗就會被打回頭。我當初以為淨係交 NSC1 就得，點知原來仲要附轉讓書副本同董事決議，要重新整過。",
       "documents": [
         {
-          "name": "股東名冊更新頁",
-          "description": "記錄股份轉讓後嘅最新股東資料",
-          "demoImage": "/assets/demo/register-of-members.jpg",
-          "templateFile": "/templates/register-of-members.docx",
+          "name": "Form NSC1（股份變動申報表）",
+          "description": "向公司註冊處申報股份轉讓",
+          "demoImage": "/assets/demo/step4-nsc1.jpg",
+          "templateFile": "/templates/form-nsc1.docx",
           "commonMistakes": [
-            "遺漏更新轉讓日期",
-            "股份數量計算錯誤",
-            "冇同步更新股份證明書紀錄"
+            "以為淨係交 NSC1 就得，漏咗附件（我嘅慘痛經歷）",
+            "股份詳情填錯（類別、數目、面值）",
+            "簽署見證不符要求"
+          ]
+        },
+        {
+          "name": "轉讓書副本（附件）",
+          "description": "NSC1 必須一併提交，官方網站未必列明",
+          "demoImage": "/assets/demo/step4-attachment.jpg",
+          "templateFile": "/templates/transfer-attachment.docx",
+          "commonMistakes": [
+            "以為「附件」optional，結果要補交",
+            "副本同正本不一致"
           ]
         }
       ],
       "rejectionRisks": [
-        "股東名冊未更新導致第三方無法確認股權",
-        "紀錄不一致引起核數問題"
+        "漏交附件 = 成份申請退回，浪費時間（我經歷過）",
+        "表格填錯 = 要重新填過、重新簽"
       ]
     },
     {
       "stepNumber": 5,
-      "title": "簽發新股份證明書 (Share Certificate)",
-      "summary": "向承讓人簽發新股份證明書，同時收回註銷轉讓人嘅舊證明書",
+      "title": "繳交印花稅（Stamp Duty）",
+      "summary": "網上或親身到稅務大樓打釐印，計錯稅會導致退件",
       "isFree": false,
-      "details": "每次股份轉讓後，公司必須向新股東簽發股份證明書（Share Certificate），同時收回轉讓人嘅舊證明書並註銷。股份證明書係股權嘅法定憑證，必須由公司授權代表簽署及蓋上公司鋼印先至有效。",
+      "details": "印花稅按轉讓股份嘅市值或作價計算，取較高者。可以網上繳交，都可以親身去稅務大樓。注意：作價寫得太低會被質疑係送贈，印花稅計法可能唔同。",
       "documents": [
         {
-          "name": "新股份證明書",
-          "description": "簽發俾承讓人嘅正式股權證明",
-          "demoImage": "/assets/demo/share-certificate.jpg",
-          "templateFile": "/templates/share-certificate.docx",
+          "name": "印花稅計算表",
+          "description": "列明應繳稅額，供稅局參考",
+          "demoImage": "/assets/demo/step5-stamp.jpg",
+          "templateFile": "/templates/stamp-duty-calculation.docx",
           "commonMistakes": [
-            "證明書上股份數量與轉讓書不符",
-            "缺少公司鋼印或授權簽署",
-            "冇註明證明書簽發日期"
-          ]
-        },
-        {
-          "name": "舊股份證明書（已註銷）",
-          "description": "收回轉讓人嘅舊證明書並記錄註銷",
-          "demoImage": null,
-          "templateFile": null,
-          "commonMistakes": [
-            "冇保留已註銷證明書嘅紀錄",
-            "註銷冇經董事會確認"
+            "作價寫 $0 或過低，被視為送贈而非買賣",
+            "冇列明每股作價，只寫總額",
+            "計錯稅額，少交要補"
           ]
         }
       ],
       "rejectionRisks": [
-        "股份證明書簽發不規範影響股權認證",
-        "未有妥善保存已註銷證明書紀錄"
+        "印花稅不足 = 文件唔會被處理，要補錢",
+        "作價明顯偏低 = 稅局可能質疑交易真實性"
       ]
     },
     {
       "stepNumber": 6,
-      "title": "提交公司註冊處文件 (ND2A)",
-      "summary": "向公司註冊處提交更改股份架構嘅申報表",
+      "title": "親身到公司註冊處提交文件",
+      "summary": "帶齊文件去灣仔排隊，整個流程約兩小時",
       "isFree": false,
-      "details": "股份轉讓完成後，公司需要向公司註冊處提交「更改公司秘書及董事通知書（股份有限公司）」表格（ND2A），申報股份結構嘅變更。呢個係法定申報要求，需在轉讓後指定期限內提交。",
+      "details": "雖然有網上遞交，但親身去可以即場確認文件齊唔齊，有問題即時補。我選擇親身去，成個流程約兩小時。記得帶正本，副本唔收。帶多份後備，以防要即場改。",
       "documents": [
         {
-          "name": "ND2A 表格",
-          "description": "更改股份架構嘅法定申報表",
-          "demoImage": "/assets/demo/nd2a-form.jpg",
-          "templateFile": "/templates/nd2a-form.docx",
+          "name": "文件檢查清單",
+          "description": "提交前逐項核對，避免漏帶",
+          "demoImage": "/assets/demo/step6-checklist.jpg",
+          "templateFile": "/templates/submission-checklist.docx",
           "commonMistakes": [
-            "逾期提交（需在變更後15日內）",
-            "填寫錯誤嘅股份數量或類別",
-            "漏填董事或秘書資料更新"
+            "帶副本唔帶正本（官方唔收副本）",
+            "漏咗附件（以為淨係交主表）",
+            "冇帶後備，現場發現錯要再排隊"
           ]
         }
       ],
       "rejectionRisks": [
-        "逾期提交需繳交罰款",
-        "ND2A 資料與轉讓文件不一致被退回"
+        "文件唔齊 = 白行一趟，重新預約",
+        "正副本問題 = 現場先發現，浪費時間"
       ]
     },
     {
       "stepNumber": 7,
-      "title": "通知稅務局及更新商業登記",
-      "summary": "將股權變更通知稅務局，確保商業登記資料同步更新",
+      "title": "後續更新（銀行、商業登記等）",
+      "summary": "轉讓完成後，記得更新銀行戶口簽署人及相關紀錄",
       "isFree": false,
-      "details": "最後一步係通知稅務局及商業登記署有關股權變更嘅情況。雖然公司註冊處嘅申報已涵蓋大部分資料，但稅務局可能會要求提供更新嘅股東資料以作評稅之用。同時，若董事有變動，需同步更新商業登記證上嘅資料。",
+      "details": "公司註冊處搞掂唔代表完結。仲有幾個後續步驟要做：銀行戶口簽署人變更、商業登記資料更新、公司印章如有需要都要跟進。我當初就係漏咗銀行嗰 part，轉讓完成後舊股東仲可以簽公司支票，好彩發現得早。",
       "documents": [
         {
-          "name": "致稅務局嘅股權變更通知書",
-          "description": "通知稅務局最新股權架構",
-          "demoImage": "/assets/demo/ir-notification.jpg",
-          "templateFile": "/templates/ir-notification.docx",
+          "name": "銀行戶口簽署人變更表",
+          "description": "通知銀行更新公司戶口簽署授權",
+          "demoImage": "/assets/demo/step7-bank.jpg",
+          "templateFile": "/templates/bank-authorization.docx",
           "commonMistakes": [
-            "冇保留稅務局回條",
-            "忽略同步更新商業登記資料"
+            "漏咗更新銀行簽署人（舊股東仲有權簽支票）",
+            "冇帶齊公司註冊處批准文件去銀行",
+            "商業登記資料冇同步更新"
           ]
         }
       ],
       "rejectionRisks": [
-        "未通知稅務局可能影響利得稅評稅",
-        "商業登記資料不一致引起合規問題"
+        "銀行授權未更新 = 舊股東仍可操作公司戶口",
+        "商業登記資料唔一致 = 日後開戶或核數有麻煩"
       ]
     }
   ]
