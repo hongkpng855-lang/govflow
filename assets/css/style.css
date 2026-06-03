@@ -67,22 +67,63 @@ body {
   background: var(--navy);
 }
 
-/* Buttons */
+/* ─── Buttons ─────────────────────────────── */
 .btn-gov {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.85rem 2rem;
-  border-radius: 0.625rem;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2.2rem;
+  border-radius: 0.75rem;
   font-weight: 700;
   font-size: 1.05rem;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   text-decoration: none;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
+  position: relative;
+  overflow: hidden;
 }
 
+/* 🔥 Purchase button — super prominent */
+.btn-gov-buy {
+  background: linear-gradient(135deg, #D4A843 0%, #F0D78C 50%, #C9A84C 100%);
+  color: #1B2A4A;
+  font-weight: 800;
+  font-size: 1.15rem;
+  padding: 1rem 2.4rem;
+  box-shadow: 0 6px 24px rgba(201, 168, 76, 0.5);
+  border: 2px solid rgba(255, 215, 100, 0.3);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+  transform: scale(1);
+}
+
+.btn-gov-buy:hover {
+  background: linear-gradient(135deg, #E0BC60 0%, #F8E4A0 50%, #D4B254 100%);
+  box-shadow: 0 8px 32px rgba(201, 168, 76, 0.65);
+  transform: translateY(-3px) scale(1.02);
+}
+
+.btn-gov-buy:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* 📖 Preview button — solid navy */
+.btn-gov-preview {
+  background: #1B2A4A;
+  color: #FFFFFF;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(27, 42, 74, 0.25);
+}
+
+.btn-gov-preview:hover {
+  background: #2C3E6B;
+  box-shadow: 0 6px 20px rgba(27, 42, 74, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Gold primary (general use) */
 .btn-gov-primary {
   background: linear-gradient(135deg, var(--gold), #D4B254);
   color: var(--navy);
@@ -95,31 +136,19 @@ body {
   box-shadow: 0 6px 20px rgba(201, 168, 76, 0.45);
 }
 
+/* Outline on navy bg */
 .btn-gov-outline {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.08);
   color: var(--white);
-  border: 2.5px solid rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(2px);
+  border: 2.5px solid rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
 }
 
 .btn-gov-outline:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.2);
   border-color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
-}
-
-.btn-gov-outline-dark {
-  background: transparent;
-  color: var(--navy);
-  border: 2.5px solid var(--navy);
-}
-
-.btn-gov-outline-dark:hover {
-  background: var(--navy);
-  color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(27, 42, 74, 0.2);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
 }
 
 .btn-gov-dark {
