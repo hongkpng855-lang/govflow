@@ -1,0 +1,223 @@
+GovFlow Website — Technical Spec for AI Developer
+Project: GovFlow (Hong Kong Government Process Guide Platform)
+Your client: A 3-person HK company owner who survived a 3-month shareholder transfer nightmare.
+Your role: Build the web application. Business strategy and content are handled by another AI.
+Stack preference: Modern, simple, fast to build, easy to maintain by a non-technical founder.
+
+1. Project Overview
+
+Build a single-page application (or multi-page static site) that presents government/bureaucratic processes as interactive, visual step-by-step guides.
+
+MVP scope: ONE process only — Shareholder Transfer for Hong Kong Companies.
+
+The core interaction:
+
+• User sees a visual flowchart/timeline of steps
+• User clicks any step → sees explanation + required documents
+• User clicks any document → sees a demo/example image + downloadable template
+• First 2 steps are fully visible (free), remaining steps show locked/preview state until payment
+
+2. Technology Stack (Recommended)
+
+Option A: Next.js 14 (App Router) + Tailwind CSS + shadcn/ui
+
+• Why: SEO-friendly, static export possible, component ecosystem, good defaults
+• Deployment: Vercel (free tier) or Cloudflare Pages
+
+Option B: Astro + Tailwind CSS
+
+• Why: Even simpler, zero JS by default, excellent for content-heavy sites
+• Deployment: Cloudflare Pages / Vercel / Netlify
+
+Option C: Pure HTML + Tailwind CDN + Alpine.js
+
+• Why: Zero build step, easiest for non-technical founder to tweak later
+• Deployment: Any static host (GitHub Pages, Cloudflare Pages)
+
+Recommendation: Start with Option C for fastest MVP, migrate to Option A if traction proves.
+
+3. Page Structure
+
+Page 1: Homepage (/)
+
+• Hero section: "香港公司秘書文件，原來可以很簡單"
+• Problem agitation: "3個月補交文件？其實1星期就搞得掂"
+• Featured process card: "公司股份轉讓完整指南"
+  • "7 個步驟"
+  • "15+ 份文件模板"
+  • "真實範例對照"
+  • CTA: "免費睇頭兩步 → $149 解鎖全套"
+• Trust signals: "由真實經歷者整理 | 已幫助 XX 位老闆"
+• Footer: Disclaimer about not being legal advice
+
+Page 2: Process Detail (/shareholder-transfer)
+
+• Sticky top bar: Process title + progress indicator
+• Left sidebar (desktop) / top tabs (mobile): Step navigator
+  • Steps 1-2: Unlocked, fully accessible
+  • Steps 3-7: Locked, shows summary only, "解鎖完整指南" CTA
+• Main content area (per step):
+  • Step number + title
+  • Plain-language explanation (what this step does, why it matters)
+  • "所需文件" section: list of documents
+    • Each document = clickable card
+    • Click → expand/overlay showing:
+      • Demo image (placeholder for now: "[範例圖片: 轉讓書正確填寫示範]")
+      • Common mistakes (bullet points)
+      • "下載可編輯模板" button (locked for paid steps)
+  • "常見錯誤導致補交" callout box
+• Bottom CTA: "解鎖完整指南 + 所有模板 — 限時 $149"
+
+Page 3: Checkout/Payment (or use Stripe Payment Link)
+
+• For MVP: Use Stripe Payment Link or Lemon Squeezy
+• No need to build custom checkout initially
+• After payment: redirect to thank-you page with instructions to email for templates
+...4. Data Structure (Content Schema)
+
+Create a JSON file to drive the UI. The founder will edit this JSON to add more processes later.
+
+{
+"processId": "shareholder-transfer",
+"title": "香港有限公司股份轉讓完整指南",
+"description": "由真實經歷者整理，7個步驟、15+份文件模板，避免補交文件",
+"estimatedTime": "1-2 星期（視乎公司秘書效率）",
+"difficulty": "中等",
+"totalSteps": 7,
+"freeSteps": 2,
+"price": 149,
+"currency": "HKD",
+"steps": [
+{
+"stepNumber": 1,
+"title": "準備股份轉讓書 (Instrument of Transfer)",
+"summary": "轉讓人與承讓人簽署轉讓文件，釐定每股作價",
+"isFree": true,
+"details": "...",
+"documents": [
+{
+"name": "股份轉讓書",
+"description": "Bought and Sold Note / Instrument of Transfer",
+"demoImage": "/assets/demo/transfer-form.jpg",
+"templateFile": "/templates/transfer-form.docx",
+"commonMistakes": [
+"未填寫完整公司名稱（必須與商業登記證一致）",
+"轉讓日期留空或倒填",
+"股份數目與股東名冊不符"
+]
+}
+],
+"rejectionRisks": ["..."]
+}
+]
+}
+
+5. UI/UX Requirements
+
+Visual Style
+
+• Clean, trustworthy, government-adjacent but modern
+• Color palette: Navy blue + white + subtle gold accent (trust, professionalism)...
+
+• Avoid: playful illustrations, overly bright colors
+• Typography: Clear, readable Chinese fonts (Noto Sans TC or system-ui)
+
+Key Interactions
+
+1. Step navigation: Click step number → smooth scroll to content
+2. Document cards: Hover lift effect, click to expand overlay
+3. Lock/paywall: Blurred content preview + "解鎖" button (not annoying popups)
+4. Mobile-first: Most users will be on phone, checking while at government offices
+
+Accessibility
+
+• All images have alt text
+• Keyboard-navigable
+• Chinese text must be fully supported (no tofu characters)
+
+6. Assets & Content (MVP)
+
+You do NOT need real content. Create placeholder structure.
+
+The founder will provide:
+
+• Real document demo images (scanned/anonymised)
+• Actual template files (Word/PDF)
+• Specific rejection reasons and corrections
+
+For now, create with placeholder text:
+
+• "[範例圖片：股份轉讓書正確填寫示範]"
+• "[模板：股份轉讓書可編輯版本]"
+• Step content can use generic descriptions based on standard CR procedures
+
+───
+
+
+7. Payment Integration (MVP)
+
+Phase 1 (recommended for speed):
+
+• Use Stripe Payment Link (no coding needed)
+• Or Lemon Squeezy checkout link
+• After payment: redirect to thank-you page with instructions to email for templates
+• Manual delivery of templates via email initially
+
+Phase 2 (if volume proves):
+
+• Integrate Stripe Checkout or Lemon Squeezy embed
+• Automatic email delivery (use Gumroad or Lemon Squeezy's built-in digital delivery)
+• Unlock content automatically upon payment
+
+8. SEO & Marketing Setup
+
+• Meta title: "香港公司股份轉讓完整指南 | GovFlow"
+• Meta description: "真實範例、可下載模板、避免補交。由經歷者整理，7步完成股份轉讓。"
+• Add OpenGraph tags for social sharing
+• Include FAQ section on homepage for structured data
+• Set up Google Analytics 4 (or Plausible for privacy)
+
+9. Deliverables
+
+10. Working website deployed to a live URL
+
+11. Source code in a GitHub repo with README
+
+12. Content JSON structure that founder can edit to add more processes
+
+13. Payment link integration (even if manual for MVP)
+
+14. Mobile-responsive design verified
+
+15. Constraints & Non-Goals
+
+Do NOT build:
+
+• User accounts / authentication (overkill for MVP)
+• Custom CMS (use JSON + Git for now)
+• Video hosting (use images + text)
+• Multi-language (start with 繁體中文 only)
+• Complex admin dashboard
+
+Keep it simple. The goal is to validate if people will pay $149 for a guide. Anything that delays launch by more than 1 week is unnecessary.
+
+11. Success Criteria
+
+Website is ready when:
+
+• Homepage loads in < 2 seconds
+• Shareholder transfer flow is fully clickable on mobile
+• Steps 1-2 show real content (or good placeholders)
+• Steps 3-7 show lock state with clear payment CTA
+• Payment link works and redirects correctly
+• Founder can edit process content without touching code (via JSON)
+
+12. Handoff Notes for Founder
+
+Include in README:
+
+• How to edit content/processes.json to change text
+• How to add images to public/assets/
+• How to redeploy (git push or drag-drop to hosting)
+• Where to paste Stripe/Lemon Squeezy payment link
+• Disclaimer template to add to footer
