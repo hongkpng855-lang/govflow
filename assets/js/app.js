@@ -1,4 +1,4 @@
-/* GovFlow - UI Enhancements (stores registered in inline script) */
+/* GovFlow - UI Enhancements */
 
 document.addEventListener('alpine:init', () => {
   // ─── Smooth Scroll for Anchor Links ──────────────────

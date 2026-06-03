@@ -14,46 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script>
-    console.log('⚡ Registering Alpine stores synchronously...');
-    try {
-      Alpine.store('process', {
-        data: null, currentStep: 1, totalSteps: 7, freeSteps: 2, isLoading: true, error: null,
-        async load(pid) {
-          this.isLoading = true; this.error = null;
-          try {
-            const r = await fetch('processes.json');
-            if (!r.ok) throw new Error('HTTP '+r.status);
-            const j = await r.json();
-            this.data = j; this.totalSteps = j.totalSteps; this.freeSteps = j.freeSteps;
-          } catch(e) {
-            this.error = '無法載入內容，請重新整理頁面';
-            console.error('Load error:', e);
-          } finally { this.isLoading = false; }
-        },
-        get steps() { return this.data?.steps || []; },
-        get currentStepData() { return this.steps.find(s => s.stepNumber === this.currentStep) || null; },
-        get isPaid() { return localStorage.getItem('govflow_unlocked') === 'true'; },
-        get unlockedSteps() { return this.steps.filter(s => s.isFree || this.isPaid); },
-        isStepAccessible(sn) { return sn <= this.freeSteps || this.isPaid; },
-        goToStep(sn) { if (sn >= 1 && sn <= this.totalSteps) { this.currentStep = sn; document.getElementById('step-content')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); } },
-        unlockAll() { localStorage.setItem('govflow_unlocked', 'true'); }
-      });
-      console.log('✅ process store registered successfully');
-    } catch(e) { console.error('❌ Store registration error:', e); }
-    Alpine.data('docOverlay', () => ({
-      open: false, doc: null,
-      show(d) { this.doc = d; this.open = true; document.body.style.overflow = 'hidden'; },
-      close() { this.open = false; this.doc = null; document.body.style.overflow = ''; }
-    }));
-    Alpine.data('payment', () => ({
-      price: 149, currency: 'HKD',
-      get displayPrice() { return 'HK$'+this.price; },
-      checkout() { window.open('https://1714457598663.gumroad.com/l/wkjykk', '_blank'); }
-    }));
-    console.log('✅ All Alpine stores/data registered');
-  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script defer src="assets/js/app.js"></script>
   <script>
     tailwind.config = {
@@ -72,32 +33,42 @@
   </script>
 </head>
 <body x-data="{
-  process: Alpine.$store.process,
-  docOverlay: Alpine.$data(document.querySelector('[x-data]')?.__x_scope || {}),
+  processData: null,
+  currentStep: 1,
+  totalSteps: 7,
+  freeSteps: 2,
+  isLoading: true,
+  error: null,
   activeMobileTab: 1,
   selectedDoc: null,
   showOverlay: false,
 
-  init() {
-    this.process.load('shareholder-transfer');
+  async init() {
+    try {
+      const r = await fetch('processes.json');
+      if (!r.ok) throw new Error('HTTP '+r.status);
+      const j = await r.json();
+      this.processData = j;
+      this.totalSteps = j.totalSteps;
+      this.freeSteps = j.freeSteps;
+    } catch(e) {
+      this.error = '無法載入內容，請重新整理頁面';
+      console.error('Load error:', e);
+    } finally {
+      this.isLoading = false;
+    }
   },
 
-  get step() {
-    return this.process.currentStepData;
-  },
-
-  get progressPercent() {
-    return ((this.process.currentStep) / this.process.totalSteps) * 100;
-  },
-
-  get isAccessible() {
-    const s = this.process.currentStep;
-    return s <= this.process.freeSteps || this.process.isPaid;
-  },
+  get steps() { return this.processData?.steps || []; },
+  get currentStepData() { return this.steps.find(s => s.stepNumber === this.currentStep) || null; },
+  get isPaid() { return localStorage.getItem('govflow_unlocked') === 'true'; },
+  get progressPercent() { return (this.currentStep / this.totalSteps) * 100; },
+  get isAccessible() { return this.currentStep <= this.freeSteps || this.isPaid; },
+  isStepAccessible(sn) { return sn <= this.freeSteps || this.isPaid; },
 
   goToStep(n) {
-    if (n >= 1 && n <= this.process.totalSteps) {
-      this.process.currentStep = n;
+    if (n >= 1 && n <= this.totalSteps) {
+      this.currentStep = n;
       this.activeMobileTab = n;
     }
   },
@@ -131,10 +102,10 @@
         </div>
         <div class="flex items-center gap-3 shrink-0">
           <span class="text-xs text-gray-300 hidden sm:inline">
-            步驟 <span x-text="process.currentStep"></span>/<span x-text="process.totalSteps"></span>
+            步驟 <span x-text="currentStep"></span>/<span x-text="totalSteps"></span>
           </span>
           <span class="text-xs bg-gold/20 text-gold px-2 py-1 rounded-full whitespace-nowrap">
-            HK$<span x-text="process.data?.price || 149"></span>
+            HK$<span x-text="processData?.price || 149"></span>
           </span>
         </div>
       </div>
@@ -147,22 +118,22 @@
 
   <!-- ═══════════════ Mobile Step Tabs ═══════════════ -->
   <div class="sm:hidden bg-white border-b border-gray-200 step-tabs">
-    <div class="flex gap-1 p-2" x-show="process.steps.length > 0">
-      <template x-for="s in process.steps" :key="s.stepNumber">
+    <div class="flex gap-1 p-2" x-show="steps.length > 0">
+      <template x-for="s in steps" :key="s.stepNumber">
         <button
           class="step-nav-item flex items-center gap-1 px-3 py-2 rounded-lg text-xs font-medium whitespace-nowrap transition"
           :class="{
-            'active bg-navy text-white': process.currentStep === s.stepNumber,
-            'opacity-50': !process.isStepAccessible(s.stepNumber) && process.currentStep !== s.stepNumber,
-            'border border-gold': process.currentStep === s.stepNumber
+            'active bg-navy text-white': currentStep === s.stepNumber,
+            'opacity-50': !isStepAccessible(s.stepNumber) && currentStep !== s.stepNumber,
+            'border border-gold': currentStep === s.stepNumber
           }"
           @click="goToStep(s.stepNumber)"
         >
           <span x-text="s.stepNumber"></span>
-          <span class="hidden" :class="{'inline': process.currentStep === s.stepNumber}">
+          <span class="hidden" :class="{'inline': currentStep === s.stepNumber}">
             <span x-text="s.title.substring(0, 8) + '…'"></span>
           </span>
-          <span x-show="!process.isStepAccessible(s.stepNumber)" class="text-gray-400">🔒</span>
+          <span x-show="!isStepAccessible(s.stepNumber)" class="text-gray-400">🔒</span>
         </button>
       </template>
     </div>
@@ -178,38 +149,38 @@
           <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 px-3">
             步驟導航
           </div>
-          <template x-for="s in process.steps" :key="s.stepNumber">
+          <template x-for="s in steps" :key="s.stepNumber">
             <button
               class="step-nav-item w-full text-left px-3 py-2.5 rounded-lg text-sm flex items-center gap-2 transition"
               :class="{
-                'active bg-navy text-white font-semibold': process.currentStep === s.stepNumber,
-                'hover:bg-gray-100 text-gray-700': process.currentStep !== s.stepNumber && !s.isFree && !process.isPaid,
-                'opacity-50': !process.isStepAccessible(s.stepNumber) && process.currentStep !== s.stepNumber
+                'active bg-navy text-white font-semibold': currentStep === s.stepNumber,
+                'hover:bg-gray-100 text-gray-700': currentStep !== s.stepNumber && !s.isFree && !isPaid,
+                'opacity-50': !isStepAccessible(s.stepNumber) && currentStep !== s.stepNumber
               }"
               @click="goToStep(s.stepNumber)"
             >
               <span
                 class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0"
                 :class="{
-                  'bg-gold text-navy': process.currentStep === s.stepNumber,
-                  'bg-gray-200 text-gray-500': process.currentStep !== s.stepNumber && process.isStepAccessible(s.stepNumber),
-                  'bg-gray-100 text-gray-400': !process.isStepAccessible(s.stepNumber)
+                  'bg-gold text-navy': currentStep === s.stepNumber,
+                  'bg-gray-200 text-gray-500': currentStep !== s.stepNumber && isStepAccessible(s.stepNumber),
+                  'bg-gray-100 text-gray-400': !isStepAccessible(s.stepNumber)
                 }"
                 x-text="s.stepNumber"
               ></span>
               <span class="truncate" x-text="s.title.substring(0, 16) + (s.title.length > 16 ? '…' : '')"></span>
-              <span x-show="!process.isStepAccessible(s.stepNumber)" class="ml-auto text-gray-400">🔒</span>
+              <span x-show="!isStepAccessible(s.stepNumber)" class="ml-auto text-gray-400">🔒</span>
               <span x-show="s.isFree" class="ml-auto text-xs bg-green-100 text-green-700 px-1.5 py-0.5 rounded">免費</span>
             </button>
           </template>
 
           <!-- Sidebar CTA for locked users -->
-          <div x-show="!process.isPaid" class="mt-6 bg-navy/5 rounded-xl p-4 border border-gold/30">
+          <div x-show="!isPaid" class="mt-6 bg-navy/5 rounded-xl p-4 border border-gold/30">
             <p class="text-xs text-gray-600 mb-3">
               解鎖全部 7 個步驟 + 所有範例及模板
             </p>
             <button @click="goToPayment()" class="btn-gov btn-gov-buy text-sm w-full justify-center py-2 btn-gov-pulse">
-              🔓 解鎖完整指南 HK$<span x-text="process.data?.price || 149"></span>
+              🔓 解鎖完整指南 HK$<span x-text="processData?.price || 149"></span>
             </button>
           </div>
         </nav>
@@ -219,23 +190,23 @@
       <main id="step-content" class="flex-1 min-w-0">
 
         <!-- Loading -->
-        <div x-show="process.isLoading" class="text-center py-20">
+        <div x-show="isLoading" class="text-center py-20">
           <div class="w-8 h-8 border-4 border-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p class="text-gray-500 text-sm">載入中…</p>
         </div>
 
         <!-- Error -->
-        <div x-show="process.error" class="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
-          <p class="text-red-700" x-text="process.error"></p>
+        <div x-show="error" class="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
+          <p class="text-red-700" x-text="error"></p>
         </div>
 
         <!-- Step Content -->
-        <template x-for="s in process.steps" :key="s.stepNumber">
-          <div x-show="!process.isLoading && !process.error && process.currentStep === s.stepNumber"
+        <template x-for="s in steps" :key="s.stepNumber">
+          <div x-show="!isLoading && !error && currentStep === s.stepNumber"
                class="fade-in-up">
 
             <!-- Unlocked Step -->
-            <div x-show="process.isStepAccessible(s.stepNumber)">
+            <div x-show="isStepAccessible(s.stepNumber)">
               <!-- Step Header -->
               <div class="mb-8">
                 <div class="flex items-center gap-3 mb-2">
@@ -293,7 +264,7 @@
             </div>
 
             <!-- Locked Step -->
-            <div x-show="!process.isStepAccessible(s.stepNumber)" class="lock-overlay">
+            <div x-show="!isStepAccessible(s.stepNumber)" class="lock-overlay">
               <div class="mb-8">
                 <div class="flex items-center gap-3 mb-2">
                   <span class="w-10 h-10 rounded-full bg-gray-200 text-gray-400 flex items-center justify-center font-bold text-lg">
@@ -320,7 +291,7 @@
                 <div class="text-4xl mb-4">🔒</div>
                 <h3 class="text-xl font-bold mb-2">此步驟已鎖定</h3>
                 <p class="text-gray-300 mb-6 max-w-md mx-auto text-sm">
-                  解鎖完整指南即可查看全部 <span x-text="process.totalSteps"></span> 個步驟嘅詳細內容、範例圖片及可編輯模板
+                  解鎖完整指南即可查看全部 <span x-text="totalSteps"></span> 個步驟嘅詳細內容、範例圖片及可編輯模板
                 </p>
                 <div class="flex flex-col items-center gap-2 mb-4">
                   <div class="flex items-center gap-2 text-sm">
@@ -337,7 +308,7 @@
                   </div>
                 </div>
                 <button @click="goToPayment()" class="btn-gov btn-gov-buy text-lg w-full sm:w-auto btn-gov-pulse">
-                  解鎖完整指南 — 限時 HK$<span x-text="process.data?.price || 149"></span>
+                  解鎖完整指南 — 限時 HK$<span x-text="processData?.price || 149"></span>
                 </button>
               </div>
             </div>
@@ -353,7 +324,7 @@
               </button>
               <div x-show="s.stepNumber === 1"></div>
               <button
-                x-show="s.stepNumber < process.totalSteps"
+                x-show="s.stepNumber < totalSteps"
                 @click="goToStep(s.stepNumber + 1)"
                 class="btn-gov btn-gov-dark text-sm"
               >
@@ -369,10 +340,10 @@
   </div>
 
   <!-- ═══════════════ Bottom CTA (Sticky Mobile) ═══════════════ -->
-  <div x-show="!process.isPaid"
+  <div x-show="!isPaid"
        class="sm:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 z-40 shadow-lg">
     <button @click="goToPayment()" class="btn-gov btn-gov-buy w-full justify-center text-sm btn-gov-pulse">
-      🔓 解鎖完整指南 + 所有模板 — HK$<span x-text="process.data?.price || 149"></span>
+      🔓 解鎖完整指南 + 所有模板 — HK$<span x-text="processData?.price || 149"></span>
     </button>
   </div>
 

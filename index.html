@@ -14,46 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script>
-    console.log('⚡ Registering Alpine stores synchronously...');
-    try {
-      Alpine.store('process', {
-        data: null, currentStep: 1, totalSteps: 7, freeSteps: 2, isLoading: true, error: null,
-        async load(pid) {
-          this.isLoading = true; this.error = null;
-          try {
-            const r = await fetch('processes.json');
-            if (!r.ok) throw new Error('HTTP '+r.status);
-            const j = await r.json();
-            this.data = j; this.totalSteps = j.totalSteps; this.freeSteps = j.freeSteps;
-          } catch(e) {
-            this.error = '無法載入內容，請重新整理頁面';
-            console.error('Load error:', e);
-          } finally { this.isLoading = false; }
-        },
-        get steps() { return this.data?.steps || []; },
-        get currentStepData() { return this.steps.find(s => s.stepNumber === this.currentStep) || null; },
-        get isPaid() { return localStorage.getItem('govflow_unlocked') === 'true'; },
-        get unlockedSteps() { return this.steps.filter(s => s.isFree || this.isPaid); },
-        isStepAccessible(sn) { return sn <= this.freeSteps || this.isPaid; },
-        goToStep(sn) { if (sn >= 1 && sn <= this.totalSteps) { this.currentStep = sn; document.getElementById('step-content')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); } },
-        unlockAll() { localStorage.setItem('govflow_unlocked', 'true'); }
-      });
-      console.log('✅ process store registered successfully');
-    } catch(e) { console.error('❌ Store registration error:', e); }
-    Alpine.data('docOverlay', () => ({
-      open: false, doc: null,
-      show(d) { this.doc = d; this.open = true; document.body.style.overflow = 'hidden'; },
-      close() { this.open = false; this.doc = null; document.body.style.overflow = ''; }
-    }));
-    Alpine.data('payment', () => ({
-      price: 149, currency: 'HKD',
-      get displayPrice() { return 'HK$'+this.price; },
-      checkout() { window.open('https://1714457598663.gumroad.com/l/wkjykk', '_blank'); }
-    }));
-    console.log('✅ All Alpine stores/data registered');
-  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script defer src="assets/js/app.js"></script>
   <script>
     tailwind.config = {
