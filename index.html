@@ -18,8 +18,12 @@
   <script defer src="assets/js/app.js"></script>
   <script>
     window.__govflow_stores = null;
+    console.log('📢 GOVFLOW inline alpine:init listener registered');
     document.addEventListener('alpine:init', () => {
-      Alpine.store('process', {
+      console.log('🔥 alpine:init FIRED!');
+      try {
+        console.log('⚡ registering process store...');
+        Alpine.store('process', {
         data: null, currentStep: 1, totalSteps: 7, freeSteps: 2, isLoading: true, error: null,
         async load(pid) {
           this.isLoading = true; this.error = null;
@@ -41,6 +45,8 @@
         goToStep(sn) { if (sn >= 1 && sn <= this.totalSteps) { this.currentStep = sn; document.getElementById('step-content')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); } },
         unlockAll() { localStorage.setItem('govflow_unlocked', 'true'); }
       });
+        console.log('✅ process store registered');
+      } catch(e) { console.error('❌ Store registration error:', e); }
       Alpine.data('docOverlay', () => ({
         open: false, doc: null,
         show(d) { this.doc = d; this.open = true; document.body.style.overflow = 'hidden'; },

@@ -18,7 +18,9 @@
   <script defer src="assets/js/app.js"></script>
   <script>
     window.__govflow_stores = null;
+    console.log('📢 GOVFLOW inline alpine:init listener registered');
     document.addEventListener('alpine:init', () => {
+      console.log('🔥 alpine:init FIRED!');
       Alpine.store('process', {
         data: null, currentStep: 1, totalSteps: 7, freeSteps: 2, isLoading: true, error: null,
         async load(pid) {
