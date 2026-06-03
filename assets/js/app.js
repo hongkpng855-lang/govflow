@@ -14,7 +14,7 @@ document.addEventListener('alpine:init', () => {
       this.isLoading = true;
       this.error = null;
       try {
-        const resp = await fetch('/processes.json');
+        const resp = await fetch('processes.json');
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         const json = await resp.json();
         this.data = json;
