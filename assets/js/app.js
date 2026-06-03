@@ -90,15 +90,7 @@ document.addEventListener('alpine:init', () => {
     },
 
     checkout() {
-      // Stripe Payment Link placeholder — update with real link
-      const paymentLink = 'https://buy.stripe.com/XXXXXXXXXX';
-      
-      // If real link is set, redirect
-      if (paymentLink && paymentLink.includes('stripe.com')) {
-        window.open(paymentLink, '_blank');
-      } else {
-        alert('付款連結尚未設定。請通知創辦人設定 Stripe Payment Link。');
-      }
+      window.open('https://1714457598663.gumroad.com/l/wkjykk', '_blank');
     }
   }));
 
