@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港公司利得稅報稅及審計完整指南 — 稅表填寫、核數報告、豁免申報 2026 | GovFlow</title>
+<meta name="description" content="每年報稅季節頭都大？一文搞懂香港公司利得稅報稅及審計流程：稅表類型（BIR51/BIR52）、核數師報告要求、幾時要交、延期申請、零申報誤區、實際例子教學。由經歷者整理，唔使再俾會計公司食價。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-gov-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gov-gold { color: #C9A84C; }
+  .border-gov-gold { border-color: #C9A84C; }
+  .hover-gov-gold:hover { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .price-comparison { background: linear-gradient(135deg, #1B2A4A, #2a4066); color: white; padding: 1.5rem; border-radius: 1rem; margin: 1.5rem 0; text-align: center; }
+  .prose-custom .price-comparison .original { text-decoration: line-through; color: rgba(255,255,255,0.6); font-size: 1.1rem; }
+  .prose-custom .price-comparison .govflow-price { color: #C9A84C; font-size: 2rem; font-weight: 800; }
+  .prose-custom .step-card { background: white; border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1.25rem; margin: 1rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .prose-custom .step-card .step-num { display: inline-block; background: #1B2A4A; color: white; width: 28px; height: 28px; text-align: center; border-radius: 50%; font-weight: 700; font-size: 0.9rem; line-height: 28px; margin-right: 0.5rem; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"有限公司係咪一定要做審計（核數）？","acceptedAnswer":{"@type":"Answer","text":"係，根據香港《公司條例》，所有有限公司每年都必須委任核數師審計財務報表，無論公司有冇營運、有冇收入。就算係「零申報」嘅公司，都需要一份核數師報告，否則稅局有權評定罰款甚至檢控董事。"}},
+    {"@type":"Question","name":"利得稅幾時要交？截止日期係幾時？","acceptedAnswer":{"@type":"Answer","text":"稅局一般喺每年 4 月第一個工作日發出報稅表（BIR51/BIR52）。標準提交期限係發出日後 1 個月內。如果公司已委任稅代表（會計師/稅務顧問），可以申請延期，一般可延至 3-6 個月後（視乎公司結賬日期）。例如 12 月結賬嘅公司，可延至翌年 11 月。"}},
+    {"@type":"Question","name":"公司冇營業、冇收入，可唔可以做「零申報」？","acceptedAnswer":{"@type":"Answer","text":"「零申報」只適用於從未開始營運或已暫停營運兼冇任何銀行交易嘅公司。只要公司有銀行戶口（即使零結餘）、或有任何收入/支出，就算係 $1 都要如實申報。做錯零申報係違法，稅局可以追討最多 6 年嘅稅款及罰款。"}},
+    {"@type":"Question","name":"審計報告（核數報告）係咪一定要搵會計師樓做？自己嚟得唔得？","acceptedAnswer":{"@type":"Answer","text":"根據香港《公司條例》，核數師必須係香港會計師公會（HKICPA）註冊嘅執業會計師或會計師事務所。你自己冇得「自己做核數」。不過你可以自己準備好帳目同文件，俾核數師審閱，咁樣可以慳返唔少會計師費。"}},
+    {"@type":"Question","name":"逾期報稅會有咩後果？","acceptedAnswer":{"@type":"Answer","text":"逾期提交報稅表，稅局會發出罰款通知：首期罰款一般係 HK$1,200-HK$3,000。如果繼續唔交，稅局可以向法庭申請傳票，最高罰款 HK$10,000 及判處監禁。稅局仲可以根據估計評稅（Estimated Assessment），用佢哋估計嘅利潤向你徵稅，通常比你實際應繳嘅多。"}},
+    {"@type":"Question","name":"報稅同審計要俾會計師樓幾多錢？","acceptedAnswer":{"@type":"Answer","text":"視乎公司規模同交易數量：單純交報稅表（冇審計要求嘅無限公司）約 HK$1,000-HK$2,000。有限公司審計連報稅：最基本 HK$3,000-HK$5,000（簡單公司、少量交易），中型公司 HK$8,000-HK$15,000，交易量大嘅公司可達 HK$20,000+。所以自己準備好帳目係慳錢關鍵。"}}
+  ]
+}
+</script>
+<!-- Open Graph -->
+<meta property="og:title" content="香港公司利得稅報稅及審計完整指南 — 稅表填寫、核數報告、豁免申報 2026">
+<meta property="og:description" content="每年報稅季節唔使頭痛！由真實經歷者整理，7步搞掂香港公司利得稅報稅及審計：稅表類型、核數要求、延期申請、零申報陷阱。附真實範例對照。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://govflow.hk/blog/香港公司利得稅報稅及審計完整指南.html">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+<!-- Header -->
+<header class="bg-gov-navy text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center space-x-2">
+      <span class="text-xl font-bold tracking-tight">GovFlow</span>
+      <span class="text-gov-gold text-sm hidden sm:inline">· 香港公司指南</span>
+    </a>
+    <nav class="text-sm">
+      <a href="../index.html" class="hover:text-gov-gold transition mx-2">首頁</a>
+      <a href="../index.html#processes" class="hover:text-gov-gold transition mx-2">流程指南</a>
+      <a href="../index.html#blog" class="hover:text-gov-gold transition mx-2 text-gov-gold font-semibold">文章</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="bg-gov-navy text-white">
+  <div class="max-w-4xl mx-auto px-4 py-12 text-center">
+    <p class="text-gov-gold text-sm font-semibold tracking-widest uppercase mb-2">📄 公司稅務指南</p>
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-4">香港公司利得稅報稅及審計<br class="hidden sm:inline">完整指南 2026</h1>
+    <p class="text-lg sm:text-xl opacity-90 max-w-2xl mx-auto">每年報稅季節都頭痛？審計報告點樣準備？一文搞掂晒，慳返唔少會計師費！</p>
+
+    <div class="price-comparison mt-6 text-left max-w-lg mx-auto">
+      <p class="text-sm opacity-90">💰 會計師樓收費</p>
+      <p class="original text-lg">~~$3,000 - $10,000/年~~</p>
+      <hr class="border-t border-white border-opacity-20 my-3">
+      <p class="font-bold">GovFlow 完整指南只需</p>
+      <p class="govflow-price">HK$149</p>
+      <p class="text-sm opacity-80">一次性付費 · 永久存取 · 真實經歷者整理</p>
+    </div>
+  </div>
+</section>
+
+<main class="max-w-4xl mx-auto px-4 py-8">
+  <div class="flex flex-col lg:flex-row gap-8">
+
+    <!-- Sidebar TOC (Desktop) -->
+    <aside class="hidden lg:block w-64 flex-shrink-0">
+      <div class="sticky top-20 bg-white rounded-xl shadow-sm border p-5">
+        <h3 class="font-bold text-gov-navy mb-3">📑 目錄</h3>
+        <nav class="space-y-2 text-sm">
+          <a href="#intro" class="toc-item block text-gray-600 hover:text-gov-gold">開場：我嘅報稅血淚史</a>
+          <a href="#step1" class="toc-item block text-gray-600 hover:text-gov-gold">① 了解公司報稅點運作</a>
+          <a href="#step2" class="toc-item block text-gray-600 hover:text-gov-gold">② 準備財務紀錄及帳目</a>
+          <a href="#step3" class="toc-item block text-gray-600 hover:text-gov-gold">③ 委任核數師製作審計報告</a>
+          <a href="#step4" class="toc-item block text-gray-600 hover:text-gov-gold">④ 填寫利得稅報稅表</a>
+          <a href="#step5" class="toc-item block text-gray-600 hover:text-gov-gold">⑤ 提交報稅表及審計報告</a>
+          <a href="#step6" class="toc-item block text-gray-600 hover:text-gov-gold">⑥ 收到評稅通知書後點做</a>
+          <a href="#step7" class="toc-item block text-gray-600 hover:text-gov-gold">⑦ 常見錯誤 &amp; 慳錢貼士</a>
+          <a href="#faq" class="toc-item block text-gray-600 hover:text-gov-gold">❓ 常見問題 FAQ</a>
+        </nav>
+        <div class="mt-5 pt-4 border-t text-center">
+          <a href="../shareholder-transfer.html" class="inline-block bg-gov-gold text-gov-navy px-4 py-2 rounded-lg text-sm font-bold hover:bg-yellow-400 transition">📥 完整流程指南</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Article Content -->
+    <article class="prose-custom flex-1 min-w-0">
+
+      <!-- Author note -->
+      <div class="callout-info text-sm mb-6">
+        <strong>👋 唔係會計師，係過來人</strong>
+        <p class="mb-0 mt-1">我第一年收到稅表嗰陣完全唔知點算，搵會計師樓報價開價 $8,000，仲話要等 3 個月。後來自己研究完先知：原來做好準備功夫，可以慳返一大半錢。</p>
+      </div>
+
+      <!-- Intro -->
+      <section id="intro">
+        <p>每年 4 月，稅局就會寄出大量利得稅報稅表（BIR51、BIR52），好多有限公司東主見到封信就頭痛——「盤數要點準備？」、「係咪一定要搵核數師？」、「成萬蚊會計費好貴…」</p>
+        <p>其實報稅同審計冇想像中咁複雜。我第一年自己做 startup 嗰陣，以為「公司冇賺錢就唔使報稅」，差啲中招俾稅局罰錢。後來先知，<strong>有限公司無論有冇營運、有冇賺錢，都要按時提交審計報告同報稅表</strong>。</p>
+        <p>呢篇文章會由零開始，逐個 step 講解成個流程，仲會分享我親身中過嘅陷阱同慳錢秘訣。你只需要跟住做，就唔使俾會計師樓開天殺價。</p>
+      </section>
+
+      <!-- Step 1 -->
+      <section id="step1" class="mt-8">
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <h2 class="inline font-bold text-xl text-gov-navy" style="border:none;padding:0;margin:0;">了解公司報稅點運作</h2>
+        </div>
+        <p>首先要知道香港嘅利得稅（Profits Tax）係點運作：</p>
+        <ul>
+          <li><strong>課稅年度</strong>：每年 4 月 1 日至翌年 3 月 31 日（但公司可以自訂財務年度，例如 1 月至 12 月）</li>
+          <li><strong>稅率</strong>：首 HK$2,000,000 利潤按 8.25%（即係一半稅率），超過嘅按 16.5%</li>
+          <li><strong>報稅表類型</strong>：BIR51（適用於小型公司）、BIR52（適用於中型/大型公司）</li>
+          <li><strong>兩級制利得稅</strong>：一間集團只可以提名一間公司享有 8.25% 優惠稅率</li>
+        </ul>
+
+        <div class="callout-success">
+          <strong>✅ 重要概念：地域來源徵稅原則</strong>
+          <p class="mb-0 mt-1">香港只對「源自香港」嘅利潤徵稅。如果你嘅生意利潤係來自海外（例如客戶全部喺海外、合約喺海外簽訂），可以申請離岸稅務豁免（Offshore Claim）。不過申請門檻高，需要充足文件證明，建議諮詢專業意見。</p>
+        </div>
+      </section>
+
+      <!-- Step 2 -->
+      <section id="step2" class="mt-8">
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <h2 class="inline font-bold text-xl text-gov-navy" style="border:none;padding:0;margin:0;">準備財務紀錄及帳目</h2>
+        </div>
+        <p>呢步係最重要、亦係最多人忽略嘅一步。核數師要根據你嘅帳目做審計，如果帳目亂七八糟，核數師就要花更多時間整理，自然收得更貴。</p>
+        <p>你需要準備以下文件：</p>
+        <ul>
+          <li>📁 <strong>銀行月結單</strong>（全年所有戶口，包括儲蓄戶口）</li>
+          <li>📁 <strong>收入紀錄</strong>（發票、合約、收款證明）</li>
+          <li>📁 <strong>支出單據</strong>（租金、人工、營運開支、供應商發票）</li>
+          <li>📁 <strong>固定資產清單</strong>（電腦、傢俬、汽車等，及購買單據）</li>
+          <li>📁 <strong>董事及股東紀錄</strong>（如有變更要提供）</li>
+          <li>📁 <strong>上一年度審計報告及報稅表</strong>（如有）</li>
+        </ul>
+
+        <div class="callout-warning">
+          <strong>⚠️ 我嘅親身教訓：單據亂放</strong>
+          <p class="mb-0 mt-1">我 startup 第一年所有支出單據亂咁放喺 WhatsApp 同 email，核數師要我逐張整理，最終收多我 HK$3,000 「整理費」。如果你而家開始用 Excel 或會計軟件（如 Xero、QuickBooks）記帳，每個月花 30 分鐘整理，年尾可以慳返幾千蚊。</p>
+        </div>
+
+        <p>如果你交易量唔大，一份簡單嘅 Excel 損益表（Profit & Loss Account）及資產負債表（Balance Sheet）已經足夠俾核數師做審計。</p>
+      </section>
+
+      <!-- Step 3 -->
+      <section id="step3" class="mt-8">
+        <div class="step-card">
+          <span class="step-num">3</span>
+          <h2 class="inline font-bold text-xl text-gov-navy" style="border:none;padding:0;margin:0;">委任核數師製作審計報告</h2>
+        </div>
+        <p>根據香港《公司條例》第 408 條，所有有限公司嘅財務報表必須經由香港會計師公會（HKICPA）註冊嘅執業核數師審計。</p>
+        <p>委任核數師嘅步驟：</p>
+        <ol>
+          <li><strong>揀核數師</strong>：可以問朋友推薦、上網比較報價。小型公司（年收入 < HK$500 萬）一般收費約 HK$3,000 - HK$6,000</li>
+          <li><strong>確認任期</strong>：核數師由董事會委任，任期直至下一屆周年股東大會（AGM）</li>
+          <li><strong>提供文件</strong>：將 Step 2 準備好嘅文件交俾核數師</li>
+          <li><strong>回覆查詢</strong>：核數師會問你關於帳目嘅問題，誠實回答就得</li>
+          <li><strong>簽署審計報告</strong>：核數師完成審計後，會出一份核數師報告（Auditor's Report），董事要簽署確認</li>
+        </ol>
+
+        <div class="callout-info">
+          <strong>💡 慳錢貼士：先做好帳目再搵核數師</strong>
+          <p class="mb-0 mt-1">核數師嘅收費係「按工時計」嘅。如果你交俾佢嘅係一盤整理好嘅帳目（Profit & Loss + Balance Sheet + 銀行 reconciliation），佢哋嘅工作量大減，自然收費平啲。相反，你俾一疊單據同銀行 statement 叫佢幫你整理，等於要佢做埋會計嘅工作，收費自然貴好多。</p>
+        </div>
+      </section>
+
+      <!-- Step 4 -->
+      <section id="step4" class="mt-8">
+        <div class="step-card">
+          <span class="step-num">4</span>
+          <h2 class="inline font-bold text-xl text-gov-navy" style="border:none;padding:0;margin:0;">填寫利得稅報稅表</h2>
+        </div>
+        <p>收到稅局寄嚟嘅報稅表（BIR51/BIR52）後，你要填寫以下主要部分：</p>
+
+        <table>
+          <tr><th>部分</th><th>內容</th></tr>
+          <tr><td>第 1 部分</td><td>公司基本資料（名稱、地址、業務性質）</td></tr>
+          <tr><td>第 2 部分</td><td>評稅基期（財務年度起訖日期）</td></tr>
+          <tr><td>第 3 部分</td><td>應評稅利潤／調整後虧損</td></tr>
+          <tr><td>第 4 部分</td><td>附表明細（董事薪酬、折舊、利息收入等）</td></tr>
+          <tr><td>第 5 部分</td><td>聲明書（董事簽署）</td></tr>
+        </table>
+
+        <p>稅表有一欄叫「應評稅利潤（Adjusted Loss/Profit）」，呢個數字唔係直接抄你公司嘅會計利潤，而要根據稅務條例作出調整。例如：</p>
+        <ul>
+          <li>✚ 加上不可扣稅開支（如罰款、私人用途支出、資本性支出）</li>
+          <li>➖ 扣減免稅收入（如已繳海外稅嘅收入、某些政府資助）</li>
+          <li>➖ 扣減折舊免稅額（Depreciation Allowance）</li>
+        </ul>
+
+        <div class="callout-danger">
+          <strong>🚫 切記：唔好亂填數字</strong>
+          <p class="mb-0 mt-1">稅局有權抽查公司嘅帳目，如果你填嘅數字同審計報告唔一致，或者亂填支出，稅局會展開調查，到時你可能要面對補稅、罰款，甚至刑事檢控。所以審計報告出咗之後，報稅表嘅數字一定要同審計報告一致。</p>
+        </div>
+      </section>
+
+      <!-- Step 5 -->
+      <section id="step5" class="mt-8">
+        <div class="step-card">
+          <span class="step-num">5</span>
+          <h2 class="inline font-bold text-xl text-gov-navy" style="border:none;padding:0;margin:0;">提交報稅表及審計報告</h2>
+        </div>
+        <p>報稅表填好後，連同以下文件一併提交俾稅局：</p>
+        <ul>
+          <li>✅ <strong>已簽署嘅利得稅報稅表</strong>（董事簽名）</li>
+          <li>✅ <strong>審計報告（核數師報告）</strong></li>
+          <li>✅ <strong>財務報表</strong>（損益表、資產負債表、現金流量表）</li>
+          <li>✅ <strong>利得稅計算表</strong>（Tax Computation，即係會計利潤調整至應評稅利潤嘅計算過程）</li>
+        </ul>
+
+        <h3>提交方式</h3>
+        <ul>
+          <li><strong>網上提交</strong>：透過「稅務易」（eTAX）提交，最方便快捷</li>
+          <li><strong>郵寄</strong>：寄去稅局「香港告士打道郵政局郵箱 29032 號」</li>
+          <li><strong>親身提交</strong>：可以去稅局櫃位提交</li>
+        </ul>
+
+        <h3>申請延期</h3>
+        <p>如果你嘅核數師未出報告，可以申請延期。一般情況：</p>
+        <ul>
+          <li>12 月結賬公司：可延至翌年 11 月中</li>
+          <li>3 月結賬公司：可延至同年 11 月中</li>
+          <li>其他月份結賬：可延至結賬日後 6 個月內</li>
+        </ul>
+        <p>延期通常要由你的稅務代表（核數師/會計師）向稅局提交申請，並提供預計完成日期。</p>
+
+        <div class="callout-success">
+          <strong>✅ 過期未報？立即行動</strong>
+          <p class="mb-0 mt-1">如果你已經過咗期限，唔好驚！立即搵核數師盡快準備文件，然後提交。主動處理通常只會被罰款 HK$1,200 - HK$3,000。如果扮冇事唔理，稅局會發出估計評稅（Estimated Assessment），金額通常遠高於實際應繳稅款。</p>
+        </div>
+      </section>
+
+      <!-- Step 6 -->
+      <section id="step6" class="mt-8">
+        <div class="step-card">
+          <span class="step-num">6</span>
+          <h2 class="inline font-bold text-xl text-gov-navy" style="border:none;padding:0;margin:0;">收到評稅通知書後點做</h2>
+        </div>
+        <p>提交報稅表後約 3-6 個月，稅局會發出<strong>評稅通知書（Notice of Assessment）</strong>，上面寫明你要交幾多稅。收到後有幾點要注意：</p>
+
+        <ol>
+          <li><strong>核對數字</strong>：確認稅局評定嘅應評稅利潤同你提交嘅數字一致</li>
+          <li><strong>留意繳稅日期</strong>：通常分兩期繳交（第一期 12 月、第二期 4 月）</li>
+          <li><strong>準時繳款</strong>：逾期未繳會被加徵 5% 附加費，半年後再加 10%</li>
+          <li><strong>提出反對</strong>：如果你唔同意評稅結果，可以在通知書發出後 1 個月內書面向稅局提出反對（Objection）</li>
+        </ol>
+
+        <div class="callout-warning">
+          <strong>⚠️ 好多公司中招：第二期稅款自動到期</strong>
+          <p class="mb-0 mt-1">即使你第一年嘅實際利潤比預期低，稅局嘅第二期稅款通常係根據第一期嘅金額「預繳」嘅。如果你第二年嘅利潤大跌，記得主動向稅局申請「暫緩繳納暫繳稅（Holdover of Provisional Tax）」，否則你要先交咗錢，之後再申請退回（手續繁複）。</p>
+        </div>
+      </section>
+
+      <!-- Step 7 -->
+      <section id="step7" class="mt-8">
+        <div class="step-card">
+          <span class="step-num">7</span>
+          <h2 class="inline font-bold text-xl text-gov-navy" style="border:none;padding:0;margin:0;">常見錯誤 &amp; 慳錢貼士</h2>
+        </div>
+
+        <h3>🔥 最常見嘅 5 個錯誤</h3>
+
+        <div class="step-card">
+          <p><strong>❌ 錯誤 1：「零申報」亂用</strong></p>
+          <p>我見過好多人以為公司冇收入就可以做「零申報」。事實係：<strong>只要公司有銀行戶口，就算零結餘都唔算「零申報」</strong>。零申報只適用於從未開過銀行戶口、從未有任何交易嘅公司。如果你開咗銀行戶口但冇交易，都要如實申報「休眠公司（Dormant Company）」狀態，並提交審計報告。</p>
+        </div>
+
+        <div class="step-card">
+          <p><strong>❌ 錯誤 2：個人開支當公司支出</strong></p>
+          <p>好多 startup 東主鍾意將私人消費（食飯、旅行、買電子產品）入公司數。稅局查帳時會逐一審視，如果發現大量個人開支，不但唔扣得稅，仲會被罰款。記得：<strong>所有公司支出必須同業務有直接關係</strong>，並保留單據。</p>
+        </div>
+
+        <div class="step-card">
+          <p><strong>❌ 錯誤 3：Deadline 前先嚟急</strong></p>
+          <p>每年 3 月好多會計師樓都爆滿，如果你臨近 deadline 先搵佢哋，佢哋會收「急單費」（可以貴 30-50%）。最好喺收到稅表後立即開始準備，預留 2-3 個月俾核數師處理。</p>
+        </div>
+
+        <div class="step-card">
+          <p><strong>❌ 錯誤 4：以為冇賺錢就唔使理稅局</strong></p>
+          <p>有限公司即使虧損，都要提交審計報告同報稅表。稅局會根據你嘅虧損紀錄嚟評定「往年虧損（Loss Brought Forward）」，將來有盈利時可以抵扣。如果你唔申報虧損，將來賺錢時就冇得扣。</p>
+        </div>
+
+        <div class="step-card">
+          <p><strong>❌ 錯誤 5：唔保留單據</strong></p>
+          <p>稅局規定公司要保留業務紀錄至少 <strong>7 年</strong>。如果你的公司被抽查但又提供唔到單據，稅局可以估計你嘅利潤並徵收罰款。我以前就係咁，搬 office 時掉咗好多舊單據，結果被稅局追問時好頭痛。</p>
+        </div>
+
+        <h3 class="mt-6">💡 慳錢貼士總結</h3>
+        <table>
+          <tr><th>貼士</th><th>慳到幾多</th><th>難度</th></tr>
+          <tr><td>每月用會計軟件記帳（Xero/QuickBooks）</td><td>HK$2,000 - HK$4,000</td><td>⭐中等</td></tr>
+          <tr><td>自行準備損益表及資產負債表</td><td>HK$1,000 - HK$3,000</td><td>⭐中等</td></tr>
+          <tr><td>提前 3 個月搵核數師（避開旺季）</td><td>HK$1,000 - HK$3,000</td><td>⭐容易</td></tr>
+          <tr><td>銀行 reconciliation 每月做一次</td><td>HK$500 - HK$1,500</td><td>⭐容易</td></tr>
+          <tr><td>保留所有單據（電子化存檔）</td><td>避免罰款</td><td>⭐容易</td></tr>
+        </table>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="mt-12">
+        <h2>❓ 常見問題 FAQ</h2>
+
+        <div class="faq-item">
+          <details>
+            <summary>有限公司係咪一定要做審計（核數）？</summary>
+            <p>係，根據香港《公司條例》，所有有限公司每年都必須委任核數師審計財務報表，無論公司有冇營運、有冇收入。就算係「零申報」嘅公司，都需要一份核數師報告，否則稅局有權評定罰款甚至檢控董事。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>利得稅幾時要交？截止日期係幾時？</summary>
+            <p>稅局一般喺每年 4 月第一個工作日發出報稅表（BIR51/BIR52）。標準提交期限係發出日後 1 個月內。如果公司已委任稅代表（會計師/稅務顧問），可以申請延期，一般可延至 3-6 個月後（視乎公司結賬日期）。例如 12 月結賬嘅公司，可延至翌年 11 月。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>公司冇營業、冇收入，可唔可以做「零申報」？</summary>
+            <p>「零申報」只適用於從未開始營運或已暫停營運兼冇任何銀行交易嘅公司。只要公司有銀行戶口（即使零結餘）、或有任何收入/支出，就算係 $1 都要如實申報。做錯零申報係違法，稅局可以追討最多 6 年嘅稅款及罰款。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>審計報告係咪一定要搵會計師樓做？自己嚟得唔得？</summary>
+            <p>根據香港《公司條例》，核數師必須係香港會計師公會（HKICPA）註冊嘅執業會計師或會計師事務所。你自己冇得「自己做核數」。不過你可以自己準備好帳目同文件，俾核數師審閱，咁樣可以慳返唔少會計師費。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>逾期報稅會有咩後果？</summary>
+            <p>逾期提交報稅表，稅局會發出罰款通知：首期罰款一般係 HK$1,200-HK$3,000。如果繼續唔交，稅局可以向法庭申請傳票，最高罰款 HK$10,000 及判處監禁。稅局仲可以根據估計評稅（Estimated Assessment），用佢哋估計嘅利潤向你徵稅，通常比你實際應繳嘅多。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>報稅同審計要俾會計師樓幾多錢？</summary>
+            <p>視乎公司規模同交易數量：單純交報稅表（冇審計要求嘅無限公司）約 HK$1,000-HK$2,000。有限公司審計連報稅：最基本 HK$3,000-HK$5,000（簡單公司、少量交易），中型公司 HK$8,000-HK$15,000，交易量大嘅公司可達 HK$20,000+。所以自己準備好帳目係慳錢關鍵。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>可以轉換核數師嗎？要點做？</summary>
+            <p>可以。公司可以透過董事會決議更換核數師。要注意：<strong>辭任或解任核數師必須通知公司註冊處</strong>（遞交 NS1 表格），而且新核數師需要喺接任後審閱前任核數師嘅工作底稿。建議喺財政年度完結前決定更換，以免影響審計進度。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>咩係「休眠公司（Dormant Company）」？</summary>
+            <p>休眠公司係指喺某個財政年度內完全沒有「重大會計交易」（Significant Accounting Transactions）嘅公司。簡單講就係公司冇營運、冇收入、冇支出、銀行戶口零交易。休眠公司可以向公司註冊處申請豁免審計，但仍需要提交簡化版嘅財務報表同報稅表。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Related Guide CTA -->
+      <div class="price-comparison mt-12">
+        <p class="text-lg font-bold mb-2">📚 想睇詳細嘅 Step-by-step 流程？</p>
+        <p class="opacity-90 mb-4">我哋嘅完整指南有更多真實範例、文件模板、常見錯誤示範，幫你一步步搞掂報稅審計！</p>
+        <a href="../shareholder-transfer.html" class="inline-block bg-gov-gold text-gov-navy px-8 py-3 rounded-lg font-bold text-lg hover:bg-yellow-400 transition">👀 睇流程範例</a>
+        <p class="text-sm opacity-70 mt-3">HK$149 一次性 · 永久存取 · 持續更新</p>
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="bg-gov-navy text-white rounded-xl p-8 text-center mt-8">
+        <h3 class="text-2xl font-bold mb-3">想知更多香港公司流程？</h3>
+        <p class="mb-4 opacity-90">我哋有完整嘅 Step-by-step 指南，由真實經歷者整理，幫你避開所有陷阱。</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="../index.html" class="bg-gov-gold text-gov-navy px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition">👀 睇所有流程指南</a>
+          <a href="../shareholder-transfer.html" class="border-2 border-gov-gold text-gov-gold px-6 py-3 rounded-lg font-bold hover:bg-gov-gold hover:text-gov-navy transition">📄 股份轉讓指南</a>
+        </div>
+      </div>
+
+      <!-- Footer note -->
+      <div class="text-center text-gray-500 text-sm mt-8 border-t pt-6">
+        <p>📌 以上內容係基於個人經歷及公開資料整理，並非稅務或法律意見。如有需要，請向專業人士查詢。</p>
+        <p class="mt-1">© 2026 GovFlow.hk — 香港公司流程指南</p>
+      </div>
+
+    </article>
+  </div>
+</main>
+
+</body>
+</html>
