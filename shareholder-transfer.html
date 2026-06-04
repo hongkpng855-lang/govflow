@@ -116,23 +116,23 @@
     </div>
   </div>
 
-  <!-- ═══════════════ Mobile Step Tabs ═══════════════ -->
-  <div class="sm:hidden bg-white border-b border-gray-200 step-tabs">
+  <!-- ═══════════════ Mobile Step Scroll ═══════════════ -->
+  <div class="sm:hidden bg-white border-b border-gray-200 step-tabs shadow-sm">
     <div class="flex gap-1 p-2" x-show="steps.length > 0">
       <template x-for="s in steps" :key="s.stepNumber">
         <button
-          class="step-nav-item flex items-center gap-1 px-3 py-2 rounded-lg text-xs font-medium whitespace-nowrap transition"
+          class="step-nav-item flex flex-col items-center gap-0 px-3 py-1.5 rounded-lg text-[11px] font-medium leading-tight transition min-w-[52px]"
           :class="{
-            'active bg-navy text-white': currentStep === s.stepNumber,
-            'opacity-50': !isStepAccessible(s.stepNumber) && currentStep !== s.stepNumber,
-            'border border-gold': currentStep === s.stepNumber
+            'active bg-navy text-white shadow-md': currentStep === s.stepNumber,
+            'bg-gray-50 text-gray-500 border border-gray-200': currentStep !== s.stepNumber,
+            'opacity-60': !isStepAccessible(s.stepNumber) && currentStep !== s.stepNumber
           }"
           @click="goToStep(s.stepNumber)"
         >
-          <span x-text="s.stepNumber"></span>
-          <span x-text="(s.title.split('（')[0] || s.title).substring(0, 8)"></span>
-          <span x-show="!isStepAccessible(s.stepNumber)" class="text-gray-400">🔒</span>
-          <span x-show="s.isFree" class="text-green-600 text-[10px]">🆓</span>
+          <span class="font-bold text-sm" x-text="s.stepNumber"></span>
+          <span class="text-[10px] text-center leading-[1.1]" x-text="(s.title.split('（')[0] || s.title).substring(0, 6)"></span>
+          <span x-show="!isStepAccessible(s.stepNumber)" class="text-[10px]">🔒</span>
+          <span x-show="s.isFree" class="text-[10px]">🆓</span>
         </button>
       </template>
     </div>
@@ -144,22 +144,22 @@
       
       <!-- Desktop Sidebar -->
       <aside class="hidden sm:block w-64 shrink-0">
-        <nav class="sticky top-32 space-y-1">
-          <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 px-3">
-            步驟導航
+        <nav class="sticky top-32">
+          <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 px-4">
+            全部步驟
           </div>
+          <div class="space-y-0.5">
           <template x-for="s in steps" :key="s.stepNumber">
             <button
-              class="step-nav-item w-full text-left px-3 py-2.5 rounded-lg text-sm flex items-center gap-2 transition"
+              class="step-nav-item w-full text-left px-4 py-2.5 rounded-xl text-sm flex items-center gap-3 transition border border-transparent"
               :class="{
-                'active bg-navy text-white font-semibold': currentStep === s.stepNumber,
-                'hover:bg-gray-100 text-gray-700': currentStep !== s.stepNumber && !s.isFree && !isPaid,
-                'opacity-50': !isStepAccessible(s.stepNumber) && currentStep !== s.stepNumber
+                'bg-navy text-white shadow-sm border-gold/30': currentStep === s.stepNumber,
+                'hover:bg-gray-50 hover:border-gray-200': currentStep !== s.stepNumber
               }"
               @click="goToStep(s.stepNumber)"
             >
               <span
-                class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0"
+                class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 transition"
                 :class="{
                   'bg-gold text-navy': currentStep === s.stepNumber,
                   'bg-gray-200 text-gray-500': currentStep !== s.stepNumber && isStepAccessible(s.stepNumber),
@@ -168,12 +168,13 @@
                 x-text="s.stepNumber"
               ></span>
               <div class="min-w-0 flex-1">
-                <span class="block text-xs leading-tight truncate" x-text="s.title.split('（')[0] || s.title"></span>
-                <span class="block text-[10px] text-gray-400 truncate" x-show="!s.isFree && !isPaid" x-text="'🔒 ' + s.summary.substring(0, 20) + '…'"></span>
+                <span class="block text-xs font-medium leading-snug" :class="{'text-gray-500': !isStepAccessible(s.stepNumber) && currentStep !== s.stepNumber}" x-text="s.title.split('（')[0] || s.title"></span>
+                <span class="block text-[10px] mt-0.5" :class="{'text-gray-300': currentStep === s.stepNumber, 'text-gray-400': currentStep !== s.stepNumber}" x-show="s.isFree">🆓 免費步驟</span>
+                <span class="block text-[10px] mt-0.5" :class="{'text-gray-300': currentStep === s.stepNumber, 'text-gray-400': currentStep !== s.stepNumber}" x-show="!s.isFree && !isPaid">🔒 解鎖後可查看</span>
               </div>
-              <span x-show="s.isFree" class="shrink-0 text-[10px] bg-green-100 text-green-700 px-1.5 py-0.5 rounded">🆓</span>
             </button>
           </template>
+          </div>
 
           <!-- Sidebar CTA for locked users -->
           <div x-show="!isPaid" class="mt-6 bg-navy/5 rounded-xl p-4 border border-gold/30">
