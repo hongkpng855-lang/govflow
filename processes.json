@@ -8,6 +8,12 @@
   "freeSteps": 2,
   "price": 149,
   "currency": "HKD",
+  "priceComparison": {
+    "benchmark": 1000,
+    "benchmarkLabel": "會計公司行政費",
+    "savings": "85%",
+    "note": "自行準備文件，唔使俾人食價"
+  },
   "steps": [
     {
       "stepNumber": 1,

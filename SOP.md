@@ -91,6 +91,23 @@
 - 取最低嘅市場報價做比較基準
 - 如果流程係免費嘅（如自行遞交），比較嘅係「時間成本」
 
+### processes.json 設定
+每個流程嘅 `priceComparison` 字段決定顯示內容：
+```json
+{
+  "price": 149,
+  "priceComparison": {
+    "benchmark": 1000,
+    "benchmarkLabel": "會計公司行政費",
+    "savings": "85%",
+    "note": "自行準備文件，唔使俾人食價"
+  }
+}
+```
+- `benchmark`：市場價格數字
+- `benchmarkLabel`：顯示名稱（如「會計公司行政費／秘書公司收費」）
+- 網站會自動顯示「💰 benchmarkLabel ~~$benchmark+~~ → GovFlow 只需 $price」
+
 ### 例子：股份轉讓
 - 會計公司行政費：$1,000 - $3,000
 - 比較用最低價：$1,000+

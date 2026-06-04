@@ -203,11 +203,11 @@
         </div>
 
         <!-- Price Comparison Banner -->
-        <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-6 text-center" x-show="!isLoading && !error">
+        <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-6 text-center" x-show="!isLoading && !error && processData?.priceComparison">
           <p class="text-sm text-gray-700">
-            💰 會計公司行政費 <span class="line-through text-gray-400">$1,000+</span>
+            💰 <span x-text="processData.priceComparison.benchmarkLabel"></span> <span class="line-through text-gray-400">$<span x-text="processData.priceComparison.benchmark + '+'"></span></span>
             <span class="mx-2 text-amber-400">→</span>
-            <span class="text-gold font-bold text-base">GovFlow 只需 HK$149</span>
+            <span class="text-gold font-bold text-base">GovFlow 只需 HK$<span x-text="processData.price"></span></span>
           </p>
         </div>
 
