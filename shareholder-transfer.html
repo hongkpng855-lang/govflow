@@ -102,7 +102,7 @@
         </div>
         <div class="flex items-center gap-3 shrink-0">
           <span class="text-xs text-gray-300 hidden sm:inline truncate max-w-[200px]">
-            <span x-text="currentStepData?.title.substring(0, 28) || ''"></span>
+            <span x-text="(currentStepData?.title.split('（')[0] || currentStepData?.title || '').substring(0, 20)"></span>
           </span>
           <span class="text-xs bg-gold/20 text-gold px-2 py-1 rounded-full whitespace-nowrap">
             HK$<span x-text="processData?.price || 149"></span>
@@ -130,7 +130,7 @@
           @click="goToStep(s.stepNumber)"
         >
           <span x-text="s.stepNumber"></span>
-          <span x-text="s.title.substring(0, 8) + (s.title.length > 8 ? '…' : '')"></span>
+          <span x-text="(s.title.split('（')[0] || s.title).substring(0, 8)"></span>
           <span x-show="!isStepAccessible(s.stepNumber)" class="text-gray-400">🔒</span>
           <span x-show="s.isFree" class="text-green-600 text-[10px]">🆓</span>
         </button>
