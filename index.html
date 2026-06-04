@@ -32,18 +32,7 @@
     }
   </script>
 </head>
-<body x-data="{
-  featuredProcess: null,
-  async init() {
-    try {
-      const r = await fetch('processes.json');
-      if (r.ok) this.featuredProcess = await r.json();
-    } catch(e) {}
-  },
-  get pc() {
-    return this.featuredProcess?.priceComparison || {benchmark: 1000, benchmarkLabel: '會計公司行政費'};
-  }
-}">
+<body>
 
   <!-- ═══════════════ Navigation ═══════════════ -->
   <nav class="bg-navy text-white sticky top-0 z-50">
@@ -66,7 +55,7 @@
       <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-base sm:text-lg font-semibold text-gray-600">
         <span class="flex items-center gap-2">✅ 由真實經歷者整理</span>
         <span class="flex items-center gap-2">📋 15+ 份文件模板</span>
-        <span class="flex items-center gap-2">💰 <span x-text="pc.benchmarkLabel"></span> <span class="line-through text-gray-400">$<span x-text="pc.benchmark + '+' "></span></span> → 我哋只需 <span class="text-gold font-bold">$<span x-text="featuredProcess?.price || 149"></span></span></span>
+        <span class="flex items-center gap-2">🔒 一次性付費 $149</span>
       </div>
     </div>
   </section>
@@ -85,11 +74,7 @@
         <p class="text-gray-400 max-w-xl mx-auto">
           由真實經歷者整理，唔使你靠估。逐個步驟帶你完成公司秘書文件，避免補交。
         </p>
-        <p class="mt-6 inline-block bg-white/10 backdrop-blur rounded-full px-6 py-2 text-sm">
-          💰 <span x-text="pc.benchmarkLabel"></span> <span class="line-through text-gray-400">$<span x-text="pc.benchmark + '+'"></span></span>
-          <span class="mx-2">→</span>
-          <span class="text-gold font-bold text-base">GovFlow 只需 HK$<span x-text="featuredProcess?.price || 149"></span></span>
-        </p>
+
       </div>
     </div>
   </section>
@@ -149,6 +134,17 @@
             由真實經歷者整理，7 個步驟、15+ 份文件模板，避免補交文件。
             涵蓋股份轉讓書、印花稅、董事會決議、股東名冊更新等全部程序。
           </p>
+
+          <!-- Price Comparison -->
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6 text-center">
+            <p class="text-sm text-gray-700">
+              💰 會計公司行政費 <span class="line-through text-gray-400">$1,000+</span>
+              <span class="mx-2 text-amber-400">→</span>
+              <span class="text-gold font-bold text-base">GovFlow 只需 HK$149</span>
+            </p>
+            <p class="text-xs text-gray-400 mt-1">自行準備文件，唔使俾人食價</p>
+          </div>
+
           <div class="flex flex-wrap gap-4 mb-6">
             <div class="flex items-center gap-2 text-sm bg-gray-50 px-4 py-2 rounded-full">
               <span class="text-gray-700">📋</span> 7 個步驟
@@ -181,7 +177,31 @@
       </h2>
       <p class="text-center text-gray-500 mb-10">實用公司秘書知識，幫你避開常見陷阱</p>
       <div class="space-y-4">
-        <!-- 新文章 -->
+        <!-- 最新文章 -->
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-md transition">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-20 h-20 bg-navy rounded-lg flex items-center justify-center text-3xl">🚪</div>
+            <div class="flex-1">
+              <div class="text-xs font-semibold text-gold mb-1">📄 公司秘書常識</div>
+              <h3 class="font-bold text-navy text-lg mb-2">香港有限公司撤銷註冊終止營運完整指南</h3>
+              <p class="text-gray-600 text-sm mb-3">Strike-off 程序、除名條件、稅局不反對通知書、憲報公告 — 公司唔做要識得點收科</p>
+              <a href="blog/%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%92%A4%E9%8A%B7%E8%A8%BB%E5%86%8A%E7%B5%82%E6%AD%A2%E7%87%9F%E9%81%8B%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold text-sm hover:underline">閱讀全文 →</a>
+            </div>
+          </div>
+        </div>
+        <!-- 新文章 2 -->
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-md transition">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-20 h-20 bg-navy rounded-lg flex items-center justify-center text-3xl">🏪</div>
+            <div class="flex-1">
+              <div class="text-xs font-semibold text-gold mb-1">📄 公司秘書常識</div>
+              <h3 class="font-bold text-navy text-lg mb-2">香港公司商業登記續期全攻略</h3>
+              <p class="text-gray-600 text-sm mb-3">一年證 vs 三年證、網上續期步驟、逾期罰款、分行登記 — 公司東主必睇</p>
+              <a href="blog/%E5%95%86%E6%A5%AD%E7%99%BB%E8%A8%98%E7%BA%8C%E6%9C%9F%E5%85%A8%E6%94%BB%E7%95%A5.html" class="text-gold font-semibold text-sm hover:underline">閱讀全文 →</a>
+            </div>
+          </div>
+        </div>
+        <!-- 新文章 3 -->
         <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-md transition">
           <div class="flex items-start gap-4">
             <div class="flex-shrink-0 w-20 h-20 bg-navy rounded-lg flex items-center justify-center text-3xl">👔</div>
@@ -193,7 +213,7 @@
             </div>
           </div>
         </div>
-        <!-- 舊文章 -->
+        <!-- 舊文章 1 -->
         <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-md transition">
           <div class="flex items-start gap-4">
             <div class="flex-shrink-0 w-20 h-20 bg-navy rounded-lg flex items-center justify-center text-3xl">📋</div>
