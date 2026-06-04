@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#f8f9fa"/>
+  <rect x="40" y="30" width="720" height="340" rx="8" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="400" y="75" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1B2A4A">NSC1 附件清單 — 檢查用</text>
+  <line x1="100" y1="95" x2="700" y2="95" stroke="#C9A84C" stroke-width="2"/>
+  <text x="120" y="140" font-family="sans-serif" font-size="14" fill="#212529">✅ 轉讓書正本副本</text>
+  <text x="120" y="175" font-family="sans-serif" font-size="14" fill="#212529">✅ 董事會書面決議副本</text>
+  <text x="120" y="210" font-family="sans-serif" font-size="14" fill="#212529">✅ 更新後股東名冊副本</text>
+  <text x="120" y="245" font-family="sans-serif" font-size="14" fill="#212529">✅ 商業登記證副本</text>
+  <text x="120" y="280" font-family="sans-serif" font-size="14" fill="#e67700">❌ 漏咗附件 = 成份退回</text>
+  <text x="400" y="340" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#868e96">📌 我當初以為 NSC1 淨係交主表，結果要重新排隊</text>
+</svg>

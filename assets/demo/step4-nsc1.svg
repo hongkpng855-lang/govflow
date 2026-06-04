@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="550" viewBox="0 0 800 550">
+  <rect width="800" height="550" fill="#f8f9fa"/>
+  <rect x="40" y="30" width="720" height="490" rx="8" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="400" y="75" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1B2A4A">Form NSC1 — 股份變動申報表範例</text>
+  <line x1="100" y1="95" x2="700" y2="95" stroke="#C9A84C" stroke-width="2"/>
+  <text x="100" y="135" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1B2A4A">公司名稱:</text>
+  <text x="280" y="135" font-family="sans-serif" font-size="13" fill="#212529">ABC Trading Limited</text>
+  <text x="100" y="165" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1B2A4A">公司編號:</text>
+  <text x="280" y="165" font-family="sans-serif" font-size="13" fill="#212529">1234567</text>
+  <text x="100" y="195" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1B2A4A">股份變動日期:</text>
+  <text x="280" y="195" font-family="sans-serif" font-size="13" fill="#212529">2025-06-01</text>
+  <text x="100" y="230" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1B2A4A">變動前股本:</text>
+  <text x="280" y="230" font-family="sans-serif" font-size="13" fill="#212529">10,000 股普通股 @ HK$1.00</text>
+  <text x="100" y="260" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1B2A4A">變動後股本:</text>
+  <text x="280" y="260" font-family="sans-serif" font-size="13" fill="#212529">10,000 股普通股 @ HK$1.00</text>
+  <rect x="100" y="290" width="580" height="40" rx="4" fill="#fff4e6" stroke="#e67700" stroke-width="1"/>
+  <text x="110" y="315" font-family="sans-serif" font-size="12" fill="#e67700">⚠️ 必須附上轉讓書副本 + 董事決議！官方冇寫明但一定會退件</text>
+  <text x="400" y="480" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#868e96">📌 NSC1 冇寫明要附件，但漏交一定打回頭（親身經歷）</text>
+</svg>

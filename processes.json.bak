@@ -1,0 +1,192 @@
+{
+  "processId": "shareholder-transfer",
+  "title": "香港有限公司股份轉讓完整指南",
+  "description": "由真實經歷者整理，避開網上錯誤格式、補交陷阱，7步完成股份轉讓",
+  "estimatedTime": "1-2 星期（視乎準備是否充足）",
+  "difficulty": "中等",
+  "totalSteps": 7,
+  "freeSteps": 2,
+  "price": 149,
+  "currency": "HKD",
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "準備股份轉讓書（Instrument of Transfer）",
+      "summary": "轉讓人同承讓人簽署轉讓文件，注意：網上搵嘅格式未必啱，要用官方認可版本",
+      "isFree": true,
+      "details": "呢份文件係成個轉讓嘅基礎，但好多人以為上網 download 一個通用版就得。我當初就係咁諗，結果用錯格式，要重新做過。正確做法：轉讓書必須列明轉讓人、承讓人、轉讓股數、每股作價，以及雙方簽署。公司名要同商業登記證完全一致，連標點符號都要一樣。",
+      "documents": [
+        {
+          "name": "股份轉讓書（Instrument of Transfer）",
+          "description": "官方認可格式，列明轉讓股數、每股作價、轉讓人及承讓人資料",
+          "demoImage": "assets/demo/step1-instrument.jpg",
+          "templateFile": "templates/instrument-of-transfer.docx",
+          "commonMistakes": [
+            "上網 download 通用模板，格式不符合公司註冊處要求（我錯咗兩次）",
+            "公司名同商業登記證不一致（漏咗 'Limited' 或中文名寫錯）",
+            "轉讓日期留空或倒填",
+            "股份數目同現有股東名冊不符"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "格式錯誤 = 整份文件作廢，要重新簽過（我經歷過）",
+        "公司名稱不一致 = 即時退回"
+      ]
+    },
+    {
+      "stepNumber": 2,
+      "title": "董事會書面決議（Board Resolution）",
+      "summary": "董事簽署書面決議，批准股份轉讓及更新股東名冊",
+      "isFree": true,
+      "details": "唔使開實體會議，用書面決議就得。決議要寫明：1. 董事會批准呢次股份轉讓 2. 同意更新股東名冊 3. 授權邊個去公司註冊處提交文件。注意：如果公司得你一個董事，都要做呢份文件，自己簽自己。",
+      "documents": [
+        {
+          "name": "董事會書面決議",
+          "description": "董事簽署，批准轉讓並授權後續步驟",
+          "demoImage": "assets/demo/step2-resolution.jpg",
+          "templateFile": "templates/board-resolution.docx",
+          "commonMistakes": [
+            "冇列明授權代表（之後邊個去交文件？）",
+            "決議日期早於轉讓書日期（邏輯唔通，會被質疑）",
+            "漏咗董事簽名或日期"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "授權不清 = 交文件嗰陣可能要補董事身份證明",
+        "日期前後矛盾 = 成個流程被質疑"
+      ]
+    },
+    {
+      "stepNumber": 3,
+      "title": "更新股東名冊（Register of Members）",
+      "summary": "將舊股東除名，加入新股東，更新持股紀錄",
+      "isFree": false,
+      "details": "轉讓完成後，必須喺股東名冊反映變更。呢步好多人以為「遲啲先搞」，但官方要求轉讓後盡快更新。要記錄：轉讓日期、轉讓股數、每股作價、新股東姓名地址。",
+      "documents": [
+        {
+          "name": "更新後股東名冊",
+          "description": "反映轉讓後最新持股狀況",
+          "demoImage": "assets/demo/step3-register.jpg",
+          "templateFile": "templates/register-of-members.docx",
+          "commonMistakes": [
+            "用舊版股東名冊，未更新轉讓後資料",
+            "漏咗轉讓日期或作價",
+            "格式同之前不一致"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "名冊同轉讓書不一致 = 會被要求解釋",
+        "遲遲未更新 = 公司秘書失責"
+      ]
+    },
+    {
+      "stepNumber": 4,
+      "title": "準備公司註冊處表格（Form NSC1）",
+      "summary": "填寫股份變動申報表，注意：官方冇列明嘅文件原來都要交",
+      "isFree": false,
+      "details": "呢步最陰險。官方網站列咗 NSC1，但原來仲有啲既定文件係「預設你要識」嘅，冇寫明係必須，但漏咗就會被打回頭。我當初以為淨係交 NSC1 就得，點知原來仲要附轉讓書副本同董事決議，要重新整過。",
+      "documents": [
+        {
+          "name": "Form NSC1（股份變動申報表）",
+          "description": "向公司註冊處申報股份轉讓",
+          "demoImage": "assets/demo/step4-nsc1.jpg",
+          "templateFile": "templates/form-nsc1.docx",
+          "commonMistakes": [
+            "以為淨係交 NSC1 就得，漏咗附件（我嘅慘痛經歷）",
+            "股份詳情填錯（類別、數目、面值）",
+            "簽署見證不符要求"
+          ]
+        },
+        {
+          "name": "轉讓書副本（附件）",
+          "description": "NSC1 必須一併提交，官方網站未必列明",
+          "demoImage": "assets/demo/step4-attachment.jpg",
+          "templateFile": "templates/transfer-attachment.docx",
+          "commonMistakes": [
+            "以為「附件」optional，結果要補交",
+            "副本同正本不一致"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "漏交附件 = 成份申請退回，浪費時間（我經歷過）",
+        "表格填錯 = 要重新填過、重新簽"
+      ]
+    },
+    {
+      "stepNumber": 5,
+      "title": "繳交印花稅（Stamp Duty）",
+      "summary": "網上或親身到稅務大樓打釐印，計錯稅會導致退件",
+      "isFree": false,
+      "details": "印花稅按轉讓股份嘅市值或作價計算，取較高者。可以網上繳交，都可以親身去稅務大樓。注意：作價寫得太低會被質疑係送贈，印花稅計法可能唔同。",
+      "documents": [
+        {
+          "name": "印花稅計算表",
+          "description": "列明應繳稅額，供稅局參考",
+          "demoImage": "assets/demo/step5-stamp.jpg",
+          "templateFile": "templates/stamp-duty-calculation.docx",
+          "commonMistakes": [
+            "作價寫 $0 或過低，被視為送贈而非買賣",
+            "冇列明每股作價，只寫總額",
+            "計錯稅額，少交要補"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "印花稅不足 = 文件唔會被處理，要補錢",
+        "作價明顯偏低 = 稅局可能質疑交易真實性"
+      ]
+    },
+    {
+      "stepNumber": 6,
+      "title": "親身到公司註冊處提交文件",
+      "summary": "帶齊文件去灣仔排隊，整個流程約兩小時",
+      "isFree": false,
+      "details": "雖然有網上遞交，但親身去可以即場確認文件齊唔齊，有問題即時補。我選擇親身去，成個流程約兩小時。記得帶正本，副本唔收。帶多份後備，以防要即場改。",
+      "documents": [
+        {
+          "name": "文件檢查清單",
+          "description": "提交前逐項核對，避免漏帶",
+          "demoImage": "assets/demo/step6-checklist.jpg",
+          "templateFile": "templates/submission-checklist.docx",
+          "commonMistakes": [
+            "帶副本唔帶正本（官方唔收副本）",
+            "漏咗附件（以為淨係交主表）",
+            "冇帶後備，現場發現錯要再排隊"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "文件唔齊 = 白行一趟，重新預約",
+        "正副本問題 = 現場先發現，浪費時間"
+      ]
+    },
+    {
+      "stepNumber": 7,
+      "title": "後續更新（銀行、商業登記等）",
+      "summary": "轉讓完成後，記得更新銀行戶口簽署人及相關紀錄",
+      "isFree": false,
+      "details": "公司註冊處搞掂後，仲有後續：1. 銀行戶口要更新簽署人（舊股東可能仍有權限）2. 商業登記署（如適用）3. 其他政府牌照（如餐飲、進出口等）。我仲未做銀行更新，但呢步唔可以拖，否則舊股東仍然可以動用公司資金。",
+      "documents": [
+        {
+          "name": "銀行戶口更新信",
+          "description": "通知銀行股東變更及簽署人更新",
+          "demoImage": "assets/demo/step7-bank.jpg",
+          "templateFile": "templates/bank-update-letter.docx",
+          "commonMistakes": [
+            "以為公司註冊處搞掂就完，漏咗銀行",
+            "冇更新網上銀行權限",
+            "舊股東仍然有權簽支票"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "銀行紀錄唔更新 = 舊股東仍然有權限，潛在財務風險",
+        "商業登記資料不一致 = 年檢時被追問"
+      ]
+    }
+  ]
+}
