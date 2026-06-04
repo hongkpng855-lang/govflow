@@ -34,10 +34,12 @@
 </head>
 <body x-data="{
   processData: null,
+  currentStep: 1,
   totalSteps: 7,
   freeSteps: 2,
   isLoading: true,
   error: null,
+  activeMobileTab: 1,
   selectedDoc: null,
   showOverlay: false,
 
@@ -58,7 +60,18 @@
   },
 
   get steps() { return this.processData?.steps || []; },
+  get currentStepData() { return this.steps.find(s => s.stepNumber === this.currentStep) || null; },
   get isPaid() { return localStorage.getItem('govflow_unlocked') === 'true'; },
+  get progressPercent() { return (this.currentStep / this.totalSteps) * 100; },
+  get isAccessible() { return this.currentStep <= this.freeSteps || this.isPaid; },
+  isStepAccessible(sn) { return sn <= this.freeSteps || this.isPaid; },
+
+  goToStep(n) {
+    if (n >= 1 && n <= this.totalSteps) {
+      this.currentStep = n;
+      this.activeMobileTab = n;
+    }
+  },
 
   openDoc(doc) {
     this.selectedDoc = doc;
@@ -77,174 +90,254 @@
   }
 }">
 
-  <!-- ═══════════════ Sticky Nav (Simple) ═══════════════ -->
-  <div class="bg-navy text-white shadow-lg" x-init="init()">
+  <!-- ═══════════════ Sticky Header ═══════════════ -->
+  <div class="sticky-header bg-navy text-white shadow-lg" x-init="init()">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="flex items-center justify-between h-14">
+      <div class="flex items-center justify-between h-14 sm:h-16">
         <div class="flex items-center gap-3 min-w-0">
           <a href="./" class="text-gold shrink-0 hover:text-gold-light transition">←</a>
-          <span class="text-xs sm:text-sm font-semibold truncate text-gold">股份轉讓完整指南</span>
+          <h1 class="text-sm sm:text-base font-semibold truncate">
+            香港有限公司股份轉讓完整指南
+          </h1>
         </div>
-        <span class="text-xs bg-gold/20 text-gold px-2 py-1 rounded-full whitespace-nowrap">
-          HK$<span x-text="processData?.price || 149"></span>
-        </span>
+        <div class="flex items-center gap-3 shrink-0">
+          <span class="text-xs text-gray-300 hidden sm:inline truncate max-w-[200px]">
+            <span x-text="currentStepData?.title.substring(0, 28) || ''"></span>
+          </span>
+          <span class="text-xs bg-gold/20 text-gold px-2 py-1 rounded-full whitespace-nowrap">
+            HK$<span x-text="processData?.price || 149"></span>
+          </span>
+        </div>
+      </div>
+      <!-- Progress bar -->
+      <div class="progress-bar mb-2">
+        <div class="progress-fill" :style="'width: ' + progressPercent + '%'"></div>
       </div>
     </div>
   </div>
 
-  <!-- ═══════════════ All Steps (Scrollable) ═══════════════ -->
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-
-    <!-- Intro -->
-    <div class="mb-10">
-      <h1 class="text-2xl sm:text-3xl font-bold gov-heading mb-3">香港有限公司股份轉讓完整指南</h1>
-      <p class="text-gray-500 text-sm">一次性付費 HK$149 · 7 個步驟 · 15+ 份模板 · 永久存取</p>
+  <!-- ═══════════════ Mobile Step Tabs ═══════════════ -->
+  <div class="sm:hidden bg-white border-b border-gray-200 step-tabs">
+    <div class="flex gap-1 p-2" x-show="steps.length > 0">
+      <template x-for="s in steps" :key="s.stepNumber">
+        <button
+          class="step-nav-item flex items-center gap-1 px-3 py-2 rounded-lg text-xs font-medium whitespace-nowrap transition"
+          :class="{
+            'active bg-navy text-white': currentStep === s.stepNumber,
+            'opacity-50': !isStepAccessible(s.stepNumber) && currentStep !== s.stepNumber,
+            'border border-gold': currentStep === s.stepNumber
+          }"
+          @click="goToStep(s.stepNumber)"
+        >
+          <span x-text="s.stepNumber"></span>
+          <span x-text="s.title.substring(0, 8) + (s.title.length > 8 ? '…' : '')"></span>
+          <span x-show="!isStepAccessible(s.stepNumber)" class="text-gray-400">🔒</span>
+          <span x-show="s.isFree" class="text-green-600 text-[10px]">🆓</span>
+        </button>
+      </template>
     </div>
+  </div>
 
-    <!-- Loading -->
-    <div x-show="isLoading" class="text-center py-20">
-      <div class="w-8 h-8 border-4 border-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-      <p class="text-gray-500 text-sm">載入中…</p>
-    </div>
-
-    <!-- Error -->
-    <div x-show="error" class="bg-red-50 border border-red-200 rounded-xl p-6 text-center mb-8">
-      <p class="text-red-700" x-text="error"></p>
-    </div>
-
-    <!-- All Steps -->
-    <div x-show="!isLoading && !error" class="space-y-12">
-      <template x-for="(s, idx) in steps" :key="s.stepNumber">
-        <div class="scroll-mt-20">
-
-          <!-- ════ Free Step (Unlocked) ════ -->
-          <div x-show="s.stepNumber <= freeSteps || isPaid">
-            <!-- Header -->
-            <div class="flex items-center gap-3 mb-4">
-              <span class="w-10 h-10 rounded-full bg-gold text-navy flex items-center justify-center font-bold shrink-0">
-                <span x-text="s.stepNumber"></span>
-              </span>
-              <div>
-                <h2 class="text-xl sm:text-2xl font-bold gov-heading" x-text="s.title"></h2>
-                <span class="text-xs text-gold font-semibold" x-show="s.isFree">🆓 免費步驟</span>
-                <span class="text-xs text-green-600 font-semibold" x-show="!s.isFree">✅ 已解鎖</span>
+  <!-- ═══════════════ Main Content ═══════════════ -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+    <div class="flex gap-8">
+      
+      <!-- Desktop Sidebar -->
+      <aside class="hidden sm:block w-64 shrink-0">
+        <nav class="sticky top-32 space-y-1">
+          <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 px-3">
+            步驟導航
+          </div>
+          <template x-for="s in steps" :key="s.stepNumber">
+            <button
+              class="step-nav-item w-full text-left px-3 py-2.5 rounded-lg text-sm flex items-center gap-2 transition"
+              :class="{
+                'active bg-navy text-white font-semibold': currentStep === s.stepNumber,
+                'hover:bg-gray-100 text-gray-700': currentStep !== s.stepNumber && !s.isFree && !isPaid,
+                'opacity-50': !isStepAccessible(s.stepNumber) && currentStep !== s.stepNumber
+              }"
+              @click="goToStep(s.stepNumber)"
+            >
+              <span
+                class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0"
+                :class="{
+                  'bg-gold text-navy': currentStep === s.stepNumber,
+                  'bg-gray-200 text-gray-500': currentStep !== s.stepNumber && isStepAccessible(s.stepNumber),
+                  'bg-gray-100 text-gray-400': !isStepAccessible(s.stepNumber)
+                }"
+                x-text="s.stepNumber"
+              ></span>
+              <div class="min-w-0 flex-1">
+                <span class="block text-xs leading-tight truncate" x-text="s.title.split('（')[0] || s.title"></span>
+                <span class="block text-[10px] text-gray-400 truncate" x-show="!s.isFree && !isPaid" x-text="'🔒 ' + s.summary.substring(0, 20) + '…'"></span>
               </div>
-            </div>
-            <p class="text-gray-500 mb-4" x-text="s.summary"></p>
+              <span x-show="s.isFree" class="shrink-0 text-[10px] bg-green-100 text-green-700 px-1.5 py-0.5 rounded">🆓</span>
+            </button>
+          </template>
 
-            <!-- Details -->
-            <div class="bg-white rounded-xl border border-gray-200 p-5 sm:p-6 mb-6">
-              <div class="prose prose-sm max-w-none text-gray-700 leading-relaxed whitespace-pre-line" x-text="s.details"></div>
-            </div>
+          <!-- Sidebar CTA for locked users -->
+          <div x-show="!isPaid" class="mt-6 bg-navy/5 rounded-xl p-4 border border-gold/30">
+            <p class="text-xs text-gray-600 mb-3">
+              解鎖全部 7 個步驟 + 所有範例及模板
+            </p>
+            <button @click="goToPayment()" class="btn-gov btn-gov-buy text-sm w-full justify-center py-2 btn-gov-pulse">
+              🔓 解鎖完整指南 HK$<span x-text="processData?.price || 149"></span>
+            </button>
+          </div>
+        </nav>
+      </aside>
 
-            <!-- Documents -->
-            <div x-show="s.documents && s.documents.length > 0" class="mb-6">
-              <h3 class="font-semibold text-navy text-base mb-3">📋 所需文件</h3>
-              <div class="grid sm:grid-cols-2 gap-3">
-                <template x-for="(doc, dIdx) in s.documents" :key="dIdx">
-                  <div class="doc-card cursor-pointer p-4" @click="openDoc(doc)">
-                    <div class="flex items-start gap-3">
-                      <span class="text-xl mt-0.5">📄</span>
-                      <div class="min-w-0">
-                        <p class="font-semibold text-sm text-navy" x-text="doc.name"></p>
-                        <p class="text-xs text-gray-500 mt-1" x-text="doc.description"></p>
-                        <p class="text-xs text-gold font-medium mt-2">👆 按此查看範例</p>
+      <!-- ═══════════════ Content Area ═══════════════ -->
+      <main id="step-content" class="flex-1 min-w-0">
+
+        <!-- Loading -->
+        <div x-show="isLoading" class="text-center py-20">
+          <div class="w-8 h-8 border-4 border-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p class="text-gray-500 text-sm">載入中…</p>
+        </div>
+
+        <!-- Error -->
+        <div x-show="error" class="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
+          <p class="text-red-700" x-text="error"></p>
+        </div>
+
+        <!-- Step Content -->
+        <template x-for="s in steps" :key="s.stepNumber">
+          <div x-show="!isLoading && !error && currentStep === s.stepNumber"
+               class="fade-in-up">
+
+            <!-- Unlocked Step -->
+            <div x-show="isStepAccessible(s.stepNumber)">
+              <!-- Step Header -->
+              <div class="mb-8">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="w-10 h-10 rounded-full bg-gold text-navy flex items-center justify-center font-bold text-lg">
+                    <span x-text="s.stepNumber"></span>
+                  </span>
+                  <span class="text-sm text-gold font-semibold" x-show="s.isFree">免費步驟</span>
+                  <span class="text-sm text-green-600 font-semibold" x-show="!s.isFree">已解鎖 ✅</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-bold gov-heading mb-2" x-text="s.title"></h2>
+                <p class="text-gray-500" x-text="s.summary"></p>
+              </div>
+
+              <!-- Details -->
+              <div class="bg-white rounded-xl border border-gray-200 p-6 mb-8">
+                <h3 class="font-semibold text-navy text-lg mb-3">詳細說明</h3>
+                <p class="text-gray-700 leading-relaxed" x-text="s.details"></p>
+              </div>
+
+              <!-- Documents -->
+              <div x-show="s.documents && s.documents.length > 0" class="mb-8">
+                <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
+                <div class="grid sm:grid-cols-2 gap-3">
+                  <template x-for="(doc, idx) in s.documents" :key="idx">
+                    <div class="doc-card cursor-pointer" @click="openDoc(doc)">
+                      <div class="flex items-start gap-3">
+                        <span class="text-xl mt-0.5">📄</span>
+                        <div class="min-w-0">
+                          <p class="font-semibold text-sm text-navy" x-text="doc.name"></p>
+                          <p class="text-xs text-gray-500 mt-0.5" x-text="doc.description"></p>
+                          <div class="flex items-center gap-2 mt-2">
+                            <span class="text-xs text-gold font-medium">👆 按此查看範例</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                  </template>
+                </div>
+              </div>
+
+              <!-- Rejection Risks -->
+              <div x-show="s.rejectionRisks && s.rejectionRisks.length > 0" class="risk-callout mb-8">
+                <h4 class="font-semibold text-warning mb-2 flex items-center gap-2">
+                  ⚠️ 常見錯誤導致補交
+                </h4>
+                <ul class="text-sm text-gray-700 space-y-1">
+                  <template x-for="(risk, idx) in s.rejectionRisks" :key="idx">
+                    <li class="flex items-start gap-2">
+                      <span class="text-warning mt-0.5">•</span>
+                      <span x-text="risk"></span>
+                    </li>
+                  </template>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Locked Step -->
+            <div x-show="!isStepAccessible(s.stepNumber)" class="lock-overlay">
+              <div class="mb-8">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="w-10 h-10 rounded-full bg-gray-200 text-gray-400 flex items-center justify-center font-bold text-lg">
+                    <span x-text="s.stepNumber"></span>
+                  </span>
+                  <span class="text-sm text-gray-400 font-semibold">🔒 已鎖定</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-bold gov-heading mb-2" x-text="s.title"></h2>
+                <p class="text-gray-500" x-text="s.summary"></p>
+              </div>
+
+              <!-- Preview (blurred) -->
+              <div class="bg-white rounded-xl border border-gray-200 p-6 mb-6 opacity-40 select-none">
+                <div class="space-y-3">
+                  <div class="h-4 skeleton w-3/4"></div>
+                  <div class="h-4 skeleton w-full"></div>
+                  <div class="h-4 skeleton w-5/6"></div>
+                  <div class="h-4 skeleton w-2/3"></div>
+                </div>
+              </div>
+
+              <!-- Lock CTA -->
+              <div class="lock-content bg-gradient-to-br from-navy to-navy-light rounded-xl p-6 sm:p-8 text-white text-center mb-8">
+                <div class="text-4xl mb-4">🔒</div>
+                <h3 class="text-xl font-bold mb-2">此步驟已鎖定</h3>
+                <p class="text-gray-300 mb-6 max-w-md mx-auto text-sm">
+                  解鎖完整指南即可查看全部 <span x-text="totalSteps"></span> 個步驟嘅詳細內容、範例圖片及可編輯模板
+                </p>
+                <div class="flex flex-col items-center gap-2 mb-4">
+                  <div class="flex items-center gap-2 text-sm">
+                    <span>✅</span> 7 個完整步驟
                   </div>
-                </template>
-              </div>
-            </div>
-
-            <!-- Rejection Risks -->
-            <div x-show="s.rejectionRisks && s.rejectionRisks.length > 0" class="risk-callout mb-6">
-              <h4 class="font-semibold text-warning mb-2 flex items-center gap-2 text-sm">
-                ⚠️ 常見錯誤導致補交
-              </h4>
-              <ul class="text-sm text-gray-700 space-y-1">
-                <template x-for="(risk, rIdx) in s.rejectionRisks" :key="rIdx">
-                  <li class="flex items-start gap-2">
-                    <span class="text-warning mt-0.5 shrink-0">•</span>
-                    <span x-text="risk"></span>
-                  </li>
-                </template>
-              </ul>
-            </div>
-          </div>
-
-          <!-- ════ Locked Step (Paid) ════ -->
-          <div x-show="s.stepNumber > freeSteps && !isPaid" class="relative">
-            <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px] rounded-xl z-10"></div>
-            <div class="relative">
-              <!-- Header -->
-              <div class="flex items-center gap-3 mb-4">
-                <span class="w-10 h-10 rounded-full bg-gray-200 text-gray-400 flex items-center justify-center font-bold shrink-0">
-                  <span x-text="s.stepNumber"></span>
-                </span>
-                <div>
-                  <h2 class="text-xl sm:text-2xl font-bold text-gray-400" x-text="s.title"></h2>
-                  <span class="text-xs text-gray-400">🔒 已鎖定</span>
+                  <div class="flex items-center gap-2 text-sm">
+                    <span>✅</span> 15+ 份文件模板
+                  </div>
+                  <div class="flex items-center gap-2 text-sm">
+                    <span>✅</span> 真實填寫範例
+                  </div>
+                  <div class="flex items-center gap-2 text-sm">
+                    <span>✅</span> 14 日退款保證
+                  </div>
                 </div>
-              </div>
-              <p class="text-gray-400 mb-4" x-text="s.summary"></p>
-
-              <!-- Preview placeholder -->
-              <div class="bg-gray-50 rounded-xl border border-gray-200 p-5 mb-4 opacity-40">
-                <div class="space-y-2">
-                  <div class="h-3 skeleton w-3/4"></div>
-                  <div class="h-3 skeleton w-full"></div>
-                  <div class="h-3 skeleton w-2/3"></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Lock CTA (outside blur) -->
-            <div class="relative z-20 -mt-20 pt-12 pb-6 text-center">
-              <div class="bg-navy rounded-xl p-6 sm:p-8 text-white">
-                <div class="text-3xl mb-3">🔒</div>
-                <h3 class="text-lg font-bold mb-2">解鎖後可查看此步驟</h3>
-                <div class="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm text-gray-300 mb-4">
-                  <span>✅ 完整步驟內容</span>
-                  <span>✅ 範例圖片</span>
-                  <span>✅ 可編輯模板</span>
-                </div>
-                <button @click="goToPayment()" class="btn-gov btn-gov-buy text-base btn-gov-pulse">
-                  🔓 解鎖完整指南 HK$<span x-text="processData?.price || 149"></span>
+                <button @click="goToPayment()" class="btn-gov btn-gov-buy text-lg w-full sm:w-auto btn-gov-pulse">
+                  解鎖完整指南 — 限時 HK$<span x-text="processData?.price || 149"></span>
                 </button>
               </div>
             </div>
+
+            <!-- Step Navigation Buttons -->
+            <div class="flex justify-between items-center mt-8 mb-12">
+              <button
+                x-show="s.stepNumber > 1"
+                @click="goToStep(s.stepNumber - 1)"
+                class="btn-gov btn-gov-dark text-sm"
+              >
+                ← 上一步
+              </button>
+              <div x-show="s.stepNumber === 1"></div>
+              <button
+                x-show="s.stepNumber < totalSteps"
+                @click="goToStep(s.stepNumber + 1)"
+                class="btn-gov btn-gov-dark text-sm"
+              >
+                下一步 →
+              </button>
+            </div>
+
           </div>
+        </template>
 
-          <!-- Divider between steps -->
-          <div x-show="idx < steps.length - 1" class="border-b border-gray-100 my-8"></div>
-
-        </div>
-      </template>
-
-      <!-- Bottom CTA -->
-      <div x-show="!isPaid" class="text-center pb-8">
-        <div class="bg-gradient-to-br from-navy to-navy-light rounded-xl p-8 text-white">
-          <div class="text-4xl mb-3">🔓</div>
-          <h3 class="text-xl font-bold mb-2">準備好一次過搞掂？</h3>
-          <p class="text-gray-300 text-sm mb-6 max-w-md mx-auto">
-            解鎖全部 7 個步驟、15+ 份文件模板、真實填寫範例
-          </p>
-          <button @click="goToPayment()" class="btn-gov btn-gov-buy text-lg btn-gov-pulse">
-            🔓 即解鎖 HK$<span x-text="processData?.price || 149"></span>
-          </button>
-          <p class="text-xs text-gray-400 mt-4">一次性付款，永久存取 · 14 日退款保證</p>
-        </div>
-      </div>
-
+      </main>
     </div>
-  </div>
-
-  <!-- ═══════════════ Bottom Sticky CTA (Mobile) ═══════════════ -->
-  <div x-show="!isPaid"
-       class="sm:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 z-40 shadow-lg">
-    <button @click="goToPayment()" class="btn-gov btn-gov-buy w-full justify-center text-sm btn-gov-pulse">
-      🔓 解鎖完整指南 — HK$<span x-text="processData?.price || 149"></span>
-    </button>
   </div>
 
   <!-- ═══════════════ Bottom CTA (Sticky Mobile) ═══════════════ -->
@@ -265,12 +358,14 @@
 
       <!-- Demo Image Placeholder -->
       <template x-if="selectedDoc?.demoImage">
-        <div class="bg-gray-50 rounded-xl p-4 mb-4 text-center">
-          <img :src="selectedDoc.demoImage"
-               :alt="selectedDoc.name + ' 填寫範例'"
-               class="max-w-full h-auto mx-auto rounded-lg shadow-sm border border-gray-200"
-               loading="lazy" />
-          <p class="text-xs text-gray-400 mt-2">👆 填寫範例（對住呢個填就唔會錯）</p>
+        <div class="bg-gray-100 rounded-xl p-6 mb-4 text-center">
+          <div class="aspect-video bg-gray-200 rounded-lg flex items-center justify-center mb-3">
+            <div>
+              <p class="text-gray-400 text-sm">[範例圖片]</p>
+              <p class="text-gray-500 text-xs mt-1" x-text="selectedDoc.name + ' 正確填寫示範'"></p>
+            </div>
+          </div>
+          <p class="text-xs text-gray-400 italic">* 創辦人將替換為真實掃描範例</p>
         </div>
       </template>
 
