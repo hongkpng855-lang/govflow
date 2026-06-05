@@ -51,6 +51,26 @@
       </div>
     </div>
 
+    <!-- 文件說明 + 常見錯誤（由 overlay 整合過嚟）-->
+    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
+      <div class="flex items-start gap-3 mb-3">
+        <span class="text-lg mt-0.5 shrink-0">📄</span>
+        <div>
+          <p class="font-semibold text-navy text-sm">股份賣出單（Sold Note）</p>
+          <p class="text-xs text-gray-500 mt-0.5">記錄轉讓股數、作價及交易條款，雙方確認用</p>
+        </div>
+      </div>
+      <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
+        <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
+        <ul class="text-xs text-gray-700 space-y-1.5">
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>冇做 Sold Note — 口頭 agreement 就算，到填轉讓書嗰陣數字亂晒龍</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>股份類別寫錯 — 普通股同優先股要分開列明，唔可以溝埋</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>冇寫每股作價 — 只寫總額，到計印花稅嗰陣要返轉頭計</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>日期寫錯 — 交易日期同轉讓書日期要 match</li>
+        </ul>
+      </div>
+    </div>
+
     <!-- Template Modal -->
     <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4" onclick="closeTemplateModal(event)">
       <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
