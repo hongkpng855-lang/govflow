@@ -32,11 +32,19 @@
       📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅 PDF 檔案
     </div>
 
-    <!-- Template Modal Button -->
-    <button onclick="openTemplateModal()"
-            class="mb-4 w-full bg-white border border-gray-200 rounded-xl px-4 py-3 font-semibold text-navy hover:bg-gray-50 transition shadow-sm text-sm flex items-center justify-center gap-2">
-      👁️ 觀看模板（PDF 參考格式）
-    </button>
+    <!-- Demo 參考（始終可見，click 開大圖）-->
+    <div onclick="openTemplateModal()" class="mb-4 bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group">
+      <div class="flex items-center gap-3 p-3 sm:p-4">
+        <div class="w-16 h-12 sm:w-20 sm:h-14 bg-gray-50 rounded-lg overflow-hidden shrink-0 border border-gray-100">
+          <img src="assets/demo/sold-note-preview.png" alt="模板參考" class="w-full h-full object-cover" onerror="this.outerHTML='<div class=w-full h-full flex items-center justify-center text-gray-300 text-lg>🖼️</div>'" />
+        </div>
+        <div class="min-w-0 flex-1">
+          <p class="font-semibold text-navy text-sm group-hover:text-gold transition">📄 Sold Note 模板參考</p>
+          <p class="text-xs text-gray-400 mt-0.5">填寫時對照呢個格式，確保資料位置正確 — 👆 按此放大</p>
+        </div>
+        <span class="text-gray-300 group-hover:text-gold transition shrink-0 hidden sm:inline">🔍</span>
+      </div>
+    </div>
 
     <!-- Template Modal -->
     <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4" onclick="closeTemplateModal(event)">
