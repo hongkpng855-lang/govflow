@@ -366,16 +366,17 @@
         <button @click="closeDoc()" class="text-gray-400 hover:text-gray-600 text-xl leading-none">&times;</button>
       </div>
 
-      <!-- Demo Image Placeholder -->
+      <!-- Demo Image -->
       <template x-if="selectedDoc?.demoImage">
-        <div class="bg-gray-100 rounded-xl p-6 mb-4 text-center">
-          <div class="aspect-video bg-gray-200 rounded-lg flex items-center justify-center mb-3">
-            <div>
-              <p class="text-gray-400 text-sm">[範例圖片]</p>
-              <p class="text-gray-500 text-xs mt-1" x-text="selectedDoc.name + ' 正確填寫示範'"></p>
-            </div>
+        <div class="bg-gray-50 rounded-xl p-4 mb-4 border border-gray-200">
+          <img :src="selectedDoc.demoImage" :alt="selectedDoc.name + ' 填寫範例'"
+               class="w-full rounded-lg shadow-sm"
+               @error="$event.target.closest('div').querySelector('.img-fallback').classList.remove('hidden')"
+          />
+          <p class="text-xs text-gray-400 mt-2">👆 按右鍵 → 另存圖片即可儲存範例</p>
+          <div class="img-fallback hidden text-center py-8 text-gray-400">
+            <p>[範例圖片載入失敗]</p>
           </div>
-          <p class="text-xs text-gray-400 italic">* 創辦人將替換為真實掃描範例</p>
         </div>
       </template>
 
@@ -423,7 +424,7 @@
       <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
         <p>⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。</p>
         <p class="mt-1">© 2025 GovFlow. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v1.0.0 · 05b9f37</p>
+        <p class="mt-2 opacity-40">v1.0.0 · 8661ab1</p>
       </div>
     </div>
   </footer>

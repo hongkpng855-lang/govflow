@@ -25,7 +25,7 @@
         {
           "name": "股份賣出單（Sold Note）",
           "description": "記錄轉讓股數、作價及交易條款，雙方確認用",
-          "demoImage": "assets/demo/step1-soldnote.svg",
+          "demoImage": "assets/demo/step1-soldnote.png",
           "templateFile": "templates/sold-note.docx",
           "commonMistakes": [
             "冇做 Sold Note — 口頭 agreement 就算，到填轉讓書嗰陣數字亂晒龍",
