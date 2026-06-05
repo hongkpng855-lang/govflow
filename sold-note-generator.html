@@ -27,9 +27,17 @@
 
   <div class="max-w-4xl mx-auto px-4 py-6">
 
-    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-6 text-center text-sm text-gray-700">
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
       📝 填好下面資料 → 㩒「生成 PDF」→ 喺打印對話框揀「另存為 PDF」
     </div>
+
+    <!-- Template Reference -->
+    <details class="mb-4 bg-white rounded-xl border border-gray-200 shadow-sm">
+      <summary class="px-4 py-3 font-semibold text-navy cursor-pointer hover:bg-gray-50 rounded-xl text-sm">👁️ 觀看模板（PDF 參考格式）</summary>
+      <div class="px-4 pb-4">
+        <img src="assets/demo/sold-note-preview.png" alt="Sold Note 模板" class="w-full border border-gray-200 rounded-lg" />
+      </div>
+    </details>
 
     <!-- ═══════ FORM ═══════ -->
     <div class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px; font-family:'Noto Sans TC',sans-serif;">
@@ -206,7 +214,7 @@
         <div class="row"><span class="label">Sign:</span><span class="value">${v.f15}</span></div>
 
         <div class="footer">GovFlow · 示範範例</div>
-        <script>window.onload = function() { window.print(); window.close(); }</script>
+        <scr" + "ipt>window.onload = function() { window.print(); window.close(); }</scr" + "ipt>
       </body></html>`);
       w.document.close();
     }
