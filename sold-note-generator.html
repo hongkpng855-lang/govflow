@@ -33,30 +33,28 @@
     </div>
 
     <!-- 參考圖片兩幅（預視圖大小，click 開 modal 睇大）-->
-    <div class="grid grid-cols-2 gap-3 mb-4">
-      <!-- REAL DEMO -->
-      <div onclick="openTemplateModal()" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-        <div class="aspect-[3/4] bg-gray-50 overflow-hidden">
-          <img src="assets/demo/sold-note-realdemo-1.png" alt="Real Demo"
+    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
+      <!-- 真實案例 -->
+      <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="assets/demo/sold-note-realdemo-1.png" alt="真實案例"
                class="w-full h-full object-contain"
                onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
         </div>
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-          <span class="text-white text-xs font-bold drop-shadow-sm">REALDEMO</span>
+          <span class="text-white text-xs font-bold drop-shadow-sm">真實案例</span>
         </div>
-        <div class="absolute top-1.5 right-1.5 bg-white/90 text-navy text-[10px] font-medium px-1.5 py-0.5 rounded shadow-sm">👆</div>
       </div>
-      <!-- WORD TO PDF -->
-      <div onclick="openTemplateModal()" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-        <div class="aspect-[3/4] bg-gray-50 overflow-hidden">
-          <img src="assets/demo/sold-note-wordtopdf-1.png" alt="Word to PDF"
+      <!-- 可修改文件 -->
+      <div onclick="openTemplateModal('word2pdf')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="assets/demo/sold-note-wordtopdf-1.png" alt="可修改文件"
                class="w-full h-full object-contain"
                onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
         </div>
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-          <span class="text-white text-xs font-bold drop-shadow-sm">WORD2PDF</span>
+          <span class="text-white text-xs font-bold drop-shadow-sm">可修改文件</span>
         </div>
-        <div class="absolute top-1.5 right-1.5 bg-white/90 text-navy text-[10px] font-medium px-1.5 py-0.5 rounded shadow-sm">👆</div>
       </div>
     </div>
 
@@ -263,9 +261,10 @@
     }
 
     // ===== 模板 Modal =====
-    function openTemplateModal() {
+    function openTemplateModal(tab) {
       document.getElementById('templateModal').classList.remove('hidden');
       document.getElementById('templateModal').classList.add('flex');
+      if (tab && typeof switchModalTab === 'function') switchModalTab(tab);
     }
     function closeTemplateModal(e) {
       if (!e || e.target === document.getElementById('templateModal')) {
