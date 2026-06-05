@@ -258,6 +258,16 @@
                 </div>
               </div>
 
+              <!-- PDF Generator CTA for Step 1 (Sold Note) -->
+              <div x-show="s.stepNumber === 1" class="bg-gradient-to-r from-navy to-navy-light rounded-xl p-5 mb-8 text-white text-center shadow-lg">
+                <p class="text-lg font-bold mb-2">🎯 想一鍵生成 Sold Note？</p>
+                <p class="text-sm text-gray-300 mb-4">填資料 → 一鍵生成已填好嘅 PDF → 下載打印簽署</p>
+                <a href="sold-note-generator.html" 
+                   class="inline-block bg-gold text-navy font-bold px-6 py-3 rounded-xl hover:bg-gold-light transition shadow-lg">
+                  🚀 立即試用 PDF 生成器
+                </a>
+              </div>
+
               <!-- Rejection Risks -->
               <div x-show="s.rejectionRisks && s.rejectionRisks.length > 0" class="risk-callout mb-8">
                 <h4 class="font-semibold text-warning mb-2 flex items-center gap-2">
@@ -424,7 +434,7 @@
       <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
         <p>⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。</p>
         <p class="mt-1">© 2025 GovFlow. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v1.0.0 · 160affb</p>
+        <p class="mt-2 opacity-40">v1.0.0 · 66b9f6d</p>
       </div>
     </div>
   </footer>

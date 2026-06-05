@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sold Note 生成器 | GovFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @media print { body * { visibility: hidden; } #pdf-content, #pdf-content * { visibility: visible; } }
+    input:focus, select:focus { outline: 2px solid #C9A84C; outline-offset: 1px; }
+    input, select { transition: all 0.2s; }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Nav -->
+  <nav class="bg-navy text-white sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="./" class="flex items-center gap-2 font-bold text-lg">
+        <span class="text-gold">◆</span> GovFlow
+      </a>
+      <span class="text-sm text-gray-400">股份賣出單 Sold Note 生成器</span>
+    </div>
+  </nav>
+
+  <div class="max-w-5xl mx-auto px-4 py-6 sm:py-8">
+
+    <!-- Instructions -->
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-6 text-center">
+      <p class="text-sm text-gray-700">
+        💡 填好以下資料，一鍵生成已填好嘅 <strong>Sold Note PDF</strong>，下載後直接打印簽署就得。
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-6">
+
+      <!-- ═══ Form Panel ═══ -->
+      <div>
+        <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+          <h2 class="text-lg font-bold text-navy mb-5">📝 填寫資料</h2>
+          
+          <div class="space-y-4">
+
+            <!-- Transferor -->
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">賣方（轉讓人）</label>
+              <input id="transferorName" placeholder="姓名（英文）" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm mb-2" value="Tai Ming Chan" />
+              <input id="transferorAddress" placeholder="地址" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm" value="九龍觀塘開源道 72 號溢財中心 12/F 1208 室" />
+            </div>
+
+            <!-- Transferee -->
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">買方（承讓人）</label>
+              <input id="transfereeName" placeholder="姓名（英文）" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm mb-2" value="Siu Yan Li" />
+              <input id="transfereeAddress" placeholder="地址" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm" value="香港北角英皇道 250 號北角城中心 8/F 806 室" />
+            </div>
+
+            <!-- Share Details -->
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">股份詳情</label>
+              <div class="grid grid-cols-2 gap-2">
+                <select id="shareClass" class="border border-gray-300 rounded-lg px-3 py-2 text-sm">
+                  <option>普通股 Ordinary Shares</option>
+                  <option>優先股 Preference Shares</option>
+                </select>
+                <input id="shareQty" type="number" placeholder="股數" class="border border-gray-300 rounded-lg px-3 py-2 text-sm" value="5000" />
+              </div>
+            </div>
+
+            <!-- Price -->
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">作價</label>
+              <div class="grid grid-cols-2 gap-2">
+                <div>
+                  <span class="text-xs text-gray-400">每股 HK$</span>
+                  <input id="pricePerShare" type="number" step="0.01" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm" value="10.00" />
+                </div>
+                <div>
+                  <span class="text-xs text-gray-400">總代價 HK$</span>
+                  <input id="totalPrice" type="number" step="0.01" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-gray-50" value="50000.00" readonly />
+                </div>
+              </div>
+            </div>
+
+            <!-- Date -->
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">日期</label>
+              <input id="docDate" type="date" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm" />
+            </div>
+
+            <!-- Reference -->
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">參考編號</label>
+              <input id="refNo" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm" value="SN-2026-001" />
+            </div>
+
+          </div>
+
+          <!-- Generate Button -->
+          <button onclick="generatePDF()" 
+                  class="mt-6 w-full bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow-lg hover:shadow-xl flex items-center justify-center gap-2 text-lg">
+            📄 一鍵生成 PDF
+          </button>
+        </div>
+      </div>
+
+      <!-- ═══ Preview Panel ═══ -->
+      <div>
+        <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden sticky top-20">
+          <div class="bg-navy text-white text-center py-2 text-sm font-semibold">預覽</div>
+          <div id="pdf-content" class="p-4 sm:p-6" style="font-family:'Noto Sans TC',sans-serif;">
+            <!-- Dynamic preview -->
+            <div class="border-2 border-gray-300 p-4 rounded-lg bg-white" style="min-height:500px;">
+              <div class="text-center border-b-2 border-navy pb-2 mb-4">
+                <h3 class="text-navy font-bold text-lg">股份賣出單 Sold Note</h3>
+                <p class="text-xs text-gray-400" id="previewRef">參考編號：SN-2026-001</p>
+              </div>
+
+              <div class="space-y-3 text-sm">
+                <div class="bg-gray-50 p-3 rounded">
+                  <span class="font-bold text-navy">賣方 Transferor：</span><br/>
+                  <span id="previewTransferor">陳大明（Tai Ming Chan）</span><br/>
+                  <span class="text-xs text-gray-500" id="previewTAddress">九龍觀塘開源道 72 號溢財中心 12/F 1208 室</span>
+                </div>
+
+                <div class="bg-gray-50 p-3 rounded">
+                  <span class="font-bold text-navy">買方 Transferee：</span><br/>
+                  <span id="previewTransferee">李小欣（Siu Yan Li）</span><br/>
+                  <span class="text-xs text-gray-500" id="previewTFAddress">香港北角英皇道 250 號北角城中心 8/F 806 室</span>
+                </div>
+
+                <div class="bg-amber-50 border border-amber-200 p-3 rounded">
+                  <span class="font-bold text-navy">股份詳情：</span><br/>
+                  <span id="previewShares">5,000 股 普通股 @ HK$10.00/股</span><br/>
+                  <span class="font-bold text-navy">總代價：HK$ <span id="previewTotal">50,000.00</span></span>
+                </div>
+
+                <div class="flex justify-between text-xs text-gray-400 pt-2 border-t border-gray-200">
+                  <span id="previewDate">日期：2026-06-01</span>
+                  <span>示範預覽 · GovFlow</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-3 text-center border-t border-gray-200">
+            <p class="text-xs text-gray-400">👆 填寫左邊資料，預覽會自動更新</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Auto-calculate total
+    document.getElementById('shareQty').addEventListener('input', updatePreview);
+    document.getElementById('pricePerShare').addEventListener('input', updatePreview);
+    document.querySelectorAll('input, select').forEach(el => el.addEventListener('input', updatePreview));
+
+    function updatePreview() {
+      const qty = parseInt(document.getElementById('shareQty').value) || 0;
+      const price = parseFloat(document.getElementById('pricePerShare').value) || 0;
+      const total = qty * price;
+      document.getElementById('totalPrice').value = total.toFixed(2);
+
+      document.getElementById('previewTransferor').textContent = document.getElementById('transferorName').value || '(未填)';
+      document.getElementById('previewTAddress').textContent = document.getElementById('transferorAddress').value || '';
+      document.getElementById('previewTransferee').textContent = document.getElementById('transfereeName').value || '(未填)';
+      document.getElementById('previewTFAddress').textContent = document.getElementById('transfereeAddress').value || '';
+      document.getElementById('previewShares').textContent = qty.toLocaleString() + ' 股 ' + document.getElementById('shareClass').value + ' @ HK$' + price.toFixed(2) + '/股';
+      document.getElementById('previewTotal').textContent = total.toFixed(2);
+      document.getElementById('previewRef').textContent = '參考編號：' + (document.getElementById('refNo').value || '—');
+      const d = document.getElementById('docDate').value;
+      document.getElementById('previewDate').textContent = '日期：' + (d || '—');
+    }
+
+    async function generatePDF() {
+      const btn = document.querySelector('button');
+      btn.disabled = true;
+      btn.innerHTML = '⏳ 生成中…';
+
+      try {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF('p', 'mm', 'a4');
+        const pageW = 210;
+        const margin = 20;
+        const yStart = 30;
+        let y = yStart;
+
+        // Colors
+        const navy = '#1B2A4A';
+        const gold = '#C9A84C';
+
+        // Helper
+        function text(t, size, style, color, x, ly) {
+          doc.setFontSize(size);
+          doc.setFont('helvetica', style || 'normal');
+          if (color) doc.setTextColor(color);
+          doc.text(t, x || margin, ly || y);
+          if (!ly) y += size * 0.45;
+        }
+
+        // Title
+        doc.setFillColor(navy);
+        doc.rect(margin-5, y-8, pageW-margin*2+10, 18, 'F');
+        doc.setTextColor(gold);
+        doc.setFontSize(16);
+        doc.setFont('helvetica', 'bold');
+        doc.text('股份賣出單 Sold Note', pageW/2, y+3, { align: 'center' });
+        y += 22;
+
+        // Ref line
+        doc.setTextColor('#666666');
+        doc.setFontSize(10);
+        doc.text('參考編號：' + (document.getElementById('refNo').value || '—'), margin, y);
+        doc.text('日期：' + (document.getElementById('docDate').value || '—'), pageW - margin - 40, y);
+        y += 12;
+
+        // Seller box
+        doc.setFillColor('#F8F9FA');
+        doc.rect(margin-3, y-3, pageW-margin*2+6, 28, 'F');
+        doc.setDrawColor('#E0E0E0');
+        doc.rect(margin-3, y-3, pageW-margin*2+6, 28, 'S');
+        doc.setTextColor(navy);
+        doc.setFontSize(11);
+        doc.setFont('helvetica', 'bold');
+        doc.text('賣方資料（Transferor）', margin, y+4);
+        doc.setTextColor('#333333');
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(10);
+        doc.text('姓名：' + (document.getElementById('transferorName').value || '—'), margin, y+13);
+        doc.text('地址：' + (document.getElementById('transferorAddress').value || '—'), margin, y+22);
+        y += 32;
+
+        // Buyer box
+        doc.setFillColor('#F8F9FA');
+        doc.rect(margin-3, y-3, pageW-margin*2+6, 28, 'F');
+        doc.setDrawColor('#E0E0E0');
+        doc.rect(margin-3, y-3, pageW-margin*2+6, 28, 'S');
+        doc.setTextColor(navy);
+        doc.setFontSize(11);
+        doc.setFont('helvetica', 'bold');
+        doc.text('買方資料（Transferee）', margin, y+4);
+        doc.setTextColor('#333333');
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(10);
+        doc.text('姓名：' + (document.getElementById('transfereeName').value || '—'), margin, y+13);
+        doc.text('地址：' + (document.getElementById('transfereeAddress').value || '—'), margin, y+22);
+        y += 32;
+
+        // Share details box
+        doc.setFillColor('#FFF8E7');
+        doc.rect(margin-3, y-3, pageW-margin*2+6, 32, 'F');
+        doc.setDrawColor(gold);
+        doc.rect(margin-3, y-3, pageW-margin*2+6, 32, 'S');
+        doc.setTextColor(navy);
+        doc.setFontSize(11);
+        doc.setFont('helvetica', 'bold');
+        doc.text('交易詳情', margin, y+4);
+        doc.setTextColor('#333333');
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(10);
+        const qty = parseInt(document.getElementById('shareQty').value) || 0;
+        const price = parseFloat(document.getElementById('pricePerShare').value) || 0;
+        const total = (qty * price).toFixed(2);
+        doc.text('股份類別：' + document.getElementById('shareClass').value, margin, y+13);
+        doc.text('轉讓股數：' + qty.toLocaleString() + ' 股', margin, y+20);
+        doc.text('每股作價：HK$ ' + price.toFixed(2) + '   總代價：HK$ ' + total, margin, y+27);
+        y += 36;
+
+        // Signature area
+        doc.setDrawColor('#E0E0E0');
+        doc.line(margin, y, pageW-margin, y);
+        y += 8;
+        doc.setFontSize(10);
+        doc.setTextColor('#333333');
+        doc.text('賣方簽署：________________    日期：' + (document.getElementById('docDate').value || '—') + '    見證人：________________', margin, y);
+        y += 8;
+        doc.text('買方簽署：________________    日期：' + (document.getElementById('docDate').value || '—') + '    見證人：________________', margin, y);
+        y += 20;
+
+        // Footer
+        doc.setTextColor('#CCCCCC');
+        doc.setFontSize(8);
+        doc.text('由 GovFlow 生成 · 示範範例', pageW-margin, y+10, { align: 'right' });
+
+        // Save
+        doc.save('Sold_Note_' + (document.getElementById('transferorName').value || 'unknown') + '.pdf');
+        btn.innerHTML = '✅ 已下載！';
+        setTimeout(() => { btn.innerHTML = '📄 一鍵生成 PDF'; btn.disabled = false; }, 2000);
+
+      } catch(e) {
+        console.error(e);
+        btn.innerHTML = '❌ 生成失敗，請重試';
+        btn.disabled = false;
+      }
+    }
+
+    // Init today's date
+    document.getElementById('docDate').valueAsDate = new Date();
+    updatePreview();
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-navy text-white py-8 mt-12">
+    <div class="max-w-5xl mx-auto px-4 text-center text-xs text-gray-400">
+      <p>⚠️ 此工具僅供參考，並不構成法律意見。如有具體問題，請諮詢專業人士。</p>
+      <p class="mt-1">© GovFlow · 一次性付費 HK$149 解鎖完整指南</p>
+    </div>
+  </footer>
+</body>
+</html>
