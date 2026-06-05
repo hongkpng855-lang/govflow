@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港公司轉股東後必做的 5 件事 — 唔好以為公司註冊處搞掂就完 | GovFlow</title>
+<meta name="description" content="股份轉讓完成後仲要做咩？銀行簽署人更新、商業登記、公司印鑑、稅務記錄、重要控制人登記冊。真實經歷分享，避免後續法律風險。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-gov-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gov-gold { color: #C9A84C; }
+  .border-gov-gold { border-color: #C9A84C; }
+  .hover-gov-gold:hover { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"股份轉讓完成後銀行會自動更新嗎？","acceptedAnswer":{"@type":"Answer","text":"唔會。銀行唔會自動知道公司股東變更，需要你主動帶齊文件去分行辦理更新簽署人權限，否則舊股東理論上仲可以簽支票和登入網上銀行。"}},
+    {"@type":"Question","name":"轉股東後商業登記證要更新嗎？","acceptedAnswer":{"@type":"Answer","text":"如果股份轉讓導致公司控制權變更（例如主要股東換人），需要向商業登記署申報變更。一般情況下如果只是股東內部轉讓而公司名稱、業務性質不變，未必需要更新，但建議查詢確認。"}},
+    {"@type":"Question","name":"重要控制人登記冊（SCR）轉股東後要點做？","acceptedAnswer":{"@type":"Answer","text":"必須立即更新。股份轉讓後公司的重要控制人可能已經變更，法例要求在變更發生後 7 日內更新 SCR 紀錄，否則公司負責人可能被檢控。"}},
+    {"@type":"Question","name":"轉股東後幾耐要報稅？","acceptedAnswer":{"@type":"Answer","text":"股份轉讓本身需要在轉讓後 30 日內向公司註冊處提交 NSC1 表格。至於利得稅方面，轉讓的損益在該課稅年度的報稅表中申報即可，不需要即時通知稅局，但建議保留轉讓記錄。"}},
+    {"@type":"Question","name":"公司印鑑轉股東後要換嗎？","acceptedAnswer":{"@type":"Answer","text":"如果公司章上刻有股東姓名，股份轉讓後建議更換。如果公司章只刻公司名稱，則不需要更換。不過建議召開董事會決議授權新簽署人名單，以釐清簽署權限。"}}
+  ]
+}
+</script>
+<!-- Open Graph -->
+<meta property="og:title" content="香港公司轉股東後必做的 5 件事 — 唔好以為公司註冊處搞掂就完">
+<meta property="og:description" content="銀行簽署人更新、商業登記、公司印鑑、稅務記錄、SCR 更新 — 真實經驗分享，避免後續法律風險。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://govflow.hk/blog/轉股東後必做5件事.html">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+<!-- Header -->
+<header class="bg-gov-navy text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center space-x-2">
+      <span class="text-xl font-bold tracking-tight">GovFlow</span>
+      <span class="text-gov-gold text-sm hidden sm:inline">· 香港公司指南</span>
+    </a>
+    <nav class="text-sm">
+      <a href="../index.html" class="hover:text-gov-gold transition mx-2">首頁</a>
+      <a href="../index.html#processes" class="hover:text-gov-gold transition mx-2">流程指南</a>
+      <a href="../index.html#blog" class="hover:text-gov-gold transition mx-2 text-gov-gold font-semibold">文章</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Article Header -->
+<section class="bg-gov-navy text-white py-12">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="flex items-center space-x-2 text-gov-gold text-sm mb-3">
+      <span>📄 公司秘書</span>
+      <span>·</span>
+      <span>6 分鐘閱讀</span>
+      <span>·</span>
+      <span>2026 年 6 月</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-4">
+      香港公司轉股東後必做的 5 件事<br>
+      <span class="text-gov-gold text-xl sm:text-2xl font-normal">唔好以為公司註冊處搞掂就完</span>
+    </h1>
+    <p class="text-gray-300 text-lg max-w-3xl">
+      股份轉讓搞掂咗公司註冊處、交咗印花稅，以為成個流程完結？ 
+      我當初都係咁諗，結果差啲搞出大禍。呢篇文章話你知轉股東後一定要做嘅 5 件事。
+    </p>
+  </div>
+</section>
+
+<!-- Article Content -->
+<article class="max-w-4xl mx-auto px-4 py-8">
+
+  <!-- Price Comparison Banner -->
+  <div class="bg-gov-navy text-white rounded-lg p-4 sm:p-6 mb-8 flex flex-col sm:flex-row items-center justify-between">
+    <div>
+      <span class="text-gov-gold font-bold text-sm">💰 價格比較</span>
+      <p class="text-lg font-bold mt-1">會計公司行政費 <span class="line-through text-gray-400">$1,000+</span> → <span class="text-gov-gold text-xl">GovFlow 只需 HK$149</span></p>
+      <p class="text-sm text-gray-300 mt-1">完整 7 步指南 + 可下載模板 + 範例對照</p>
+    </div>
+    <a href="../shareholder-transfer.html" class="bg-gov-gold text-gov-navy font-bold px-6 py-3 rounded-lg mt-3 sm:mt-0 hover-gov-gold transition whitespace-nowrap">
+      即睇股份轉讓完整指南 →
+    </a>
+  </div>
+
+  <!-- Table of Contents -->
+  <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+    <h2 class="text-xl font-bold text-gov-navy mb-4">📋 本文目錄</h2>
+    <ul class="space-y-2">
+      <li><a href="#bank" class="toc-item text-gray-700 hover:text-gov-gold no-underline">1️⃣ 銀行戶口簽署人更新 — 呢個最緊要</a></li>
+      <li><a href="#br" class="toc-item text-gray-700 hover:text-gov-gold no-underline">2️⃣ 商業登記資料更新 — 唔好等到年檢先發現</a></li>
+      <li><a href="#scr" class="toc-item text-gray-700 hover:text-gov-gold no-underline">3️⃣ 重要控制人登記冊（SCR）更新 — 法例要求 7 日內</a></li>
+      <li><a href="#tax" class="toc-item text-gray-700 hover:text-gov-gold no-underline">4️⃣ 稅務記錄更新 — 保留轉讓文件</a></li>
+      <li><a href="#seal" class="toc-item text-gray-700 hover:text-gov-gold no-underline">5️⃣ 公司印鑑及簽署授權更新 — 釐清權限</a></li>
+      <li><a href="#faq" class="toc-item text-gray-700 hover:text-gov-gold no-underline">❓ 常見問題</a></li>
+    </ul>
+  </div>
+
+  <!-- Intro -->
+  <div class="prose-custom">
+    <p>
+      我上個月啱啱做完公司股份轉讓，公司註冊處搞掂咗、印花稅交咗，以為一切順利。
+      點知有個做會計嘅朋友問我：「銀行戶口嘅簽署人更新咗未？」
+    </p>
+    <p>
+      我當時呆咗。「吓？公司註冊處唔係會自動通知銀行嘅咩？」
+    </p>
+    <p>
+      朋友用一個「你係咪傻咗」嘅眼神望住我。😅
+    </p>
+    <p>
+      原來公司註冊處同銀行係兩個完全獨立嘅系統。佢唔會通知銀行，銀行亦唔會自動知道邊個係新股東。
+      換句話講：<strong>如果你唔主動去銀行更新，舊股東理論上仲可以簽你公司嘅支票、登入你嘅網上銀行戶口。</strong>
+    </p>
+    <div class="callout-danger">
+      <strong>⚠️ 重要警告：</strong> 唔好以為公司註冊處搞掂晒就等於完成。以下 5 件事，唔做嘅話隨時有法律同財務風險。
+    </div>
+    <p>
+     等我逐樣講你知。
+    </p>
+  </div>
+
+  <!-- 1. Bank -->
+  <div class="prose-custom" id="bank">
+    <h2>1️⃣ 銀行戶口簽署人更新 — 呢個最緊要</h2>
+    
+    <p>
+     呢個係最大鑊嘅一個，所以我放第一位。
+    </p>
+    <p>
+     你公司嘅銀行戶口，通常會登記咗某幾個人有簽票權限、可以登入網上銀行、可以授權交易。
+     如果你做咗股份轉讓、股東變更咗，但銀行紀錄冇更新，就會出現以下情況：
+    </p>
+    <ul>
+      <li><strong>離職股東仍然可以簽支票</strong> — 佢寫張票去銀行，銀行 check 咗簽署人登記，冇問題就會過數</li>
+      <li><strong>舊股東仲登入到網上銀行</strong> — 因為銀行唔知佢已經唔係股東</li>
+      <li><strong>新股東簽唔到票</strong> — 因為銀行紀錄冇佢個名，就算佢係公司合法股東都冇用</li>
+    </ul>
+
+    <div class="callout-warning">
+      <strong>😅 真人真事：</strong> 我朋友間公司轉咗股東後 3 個月先發現，舊股東仍然可以登入公司嘅網上銀行戶口。
+      雖然最後冇發生咩事，但諗起都背脊發涼。你唔會想知呢個漏洞喺你最唔想嘅時候被人利用。
+    </div>
+
+    <h3>銀行更新要做咩？</h3>
+    <ol>
+      <li>打電話或親身去銀行分行問所需文件（每間銀行要求有啲唔同）</li>
+      <li>一般都要求：公司決議副本、更新後商業登記證、董事身份證明文件</li>
+      <li>預約分行辦理（建議預約，唔使等咁耐）</li>
+      <li>帶齊文件 + 公司印章 + 所有董事身份證正本</li>
+      <li>填寫銀行嘅授權簽署人更新表格</li>
+      <li>確認新簽署人名單同權限（單簽定雙簽？限額幾多？）</li>
+    </ol>
+
+    <h3>常見銀行所需文件表</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>銀行</th>
+          <th>需時</th>
+          <th>特別要求</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>HSBC 滙豐</td><td>3-5 個工作天</td><td>公司決議 + 所有董事親身到</td></tr>
+        <tr><td>BOCHK 中銀</td><td>5-7 個工作天</td><td>可授權一人辦理，但要有授權書</td></tr>
+        <tr><td>Standard Chartered 渣打</td><td>3-5 個工作天</td><td>需要公司秘書信確認變更</td></tr>
+        <tr><td>Bank of East Asia 東亞</td><td>5-7 個工作天</td><td>公司印章必須帶</td></tr>
+      </tbody>
+    </table>
+    <p class="text-sm text-gray-500">* 以上資料僅供參考，實際要求以各銀行最終決定為準</p>
+  </div>
+
+  <!-- 2. BR -->
+  <div class="prose-custom" id="br">
+    <h2>2️⃣ 商業登記資料更新</h2>
+    
+    <p>
+     股份轉讓完成後，要檢查商業登記證上的資料是否需要更新。
+    </p>
+    <p>
+     一般情況下，如果股份轉讓只是股東之間內部調配，而公司名稱、業務性質、地址不變，<strong>商業登記證未必需要即時更新</strong>。
+     但如果轉讓導致公司控制權有明顯變更（例如大股東換人），就要小心：
+    </p>
+    <ul>
+      <li>商業登記署可能會喺年檢時要求你更新股東資料</li>
+      <li>如果商業登記嘅「東主資料」同實際不符，可能被視為申報不實</li>
+      <li>建議喺股份轉讓完成後 1 個月內，登入稅務易（eTAX）檢查公司資料</li>
+    </ul>
+    
+    <div class="callout-info">
+      <strong>💡 小貼士：</strong> 轉股東後最好同時更新公司註冊處嘅「董事及公司秘ari」資料（如有變更），
+      因為好多公司轉股東嘅同時都會換董事，呢啲都要申報。
+    </div>
+  </div>
+
+  <!-- 3. SCR -->
+  <div class="prose-custom" id="scr">
+    <h2>3️⃣ 重要控制人登記冊（SCR）更新 — 法例要求 7 日內</h2>
+    
+    <p>
+     呢個係最多人忽略嘅法定要求。
+    </p>
+    <p>
+     根據《公司條例》（第 622 章），所有香港有限公司都必須備存一份<strong>重要控制人登記冊（Significant Controllers Register，簡稱 SCR）</strong>。
+     股份轉讓後，公司的重要控制人可能已經變更——可能有人達到 25% 持股門檻，亦可能有人跌低過。
+    </p>
+    
+    <div class="callout-danger">
+      <strong>⚠️ 法定時限：</strong> 重要控制人變更後 <strong>7 日內</strong>必須更新 SCR 紀錄，否則公司負責人可被檢控，最高罰款 HK$25,000 及每日罰款 HK$700。
+    </div>
+
+    <p>
+     我當初完全唔知有呢個要求，好彩朋友提我。原來 SCR 紀錄係公司自己 keep 嘅，
+     但執法機構（如警務處、海關）有權查閱，如果紀錄唔 update 隨時中招。
+    </p>
+
+    <h3>SCR 更新步驟</h3>
+    <ol>
+      <li>核對轉讓後各股東嘅持股比例</li>
+      <li>確認邊啲人達到「重要控制人」門檻（持 25% 以上股份、有權委任或罷免董事等）</li>
+      <li>更新 SCR 表格，填寫新任重要控制人嘅資料（姓名、地址、身份證號碼、成為控制人日期）</li>
+      <li>移除已唔符合資格嘅舊控制人（填寫不再係控制人嘅日期）</li>
+      <li>由公司負責人簽署確認更新</li>
+    </ol>
+
+    <div class="callout-success">
+      <strong>✅ SCR 免費模板：</strong> 你需要一份標準 SCR 表格？GovFlow 嘅股份轉讓完整指南包含 SCR 更新指引，
+      仲有可下載模板，跟住填就唔會漏。
+    </div>
+  </div>
+
+  <!-- 4. Tax -->
+  <div class="prose-custom" id="tax">
+    <h2>4️⃣ 稅務記錄更新 — 保留轉讓文件</h2>
+    
+    <p>
+     股份轉讓會產生稅務影響，呢方面好多人忽略。
+    </p>
+    
+    <h3>印花稅</h3>
+    <p>
+     轉讓後要確保印花稅已經繳妥，保留稅局嘅印花收據。
+     如果將來賣公司或者做盡職審查（Due Diligence），呢份收據就係轉讓合法嘅證明。
+    </p>
+
+    <h3>利得稅</h3>
+    <ul>
+      <li>如果轉讓作價高於原本成本，轉讓人可能有利得稅責任</li>
+      <li>保留轉讓書副本，作為將來計算稅項嘅基礎</li>
+      <li>建議喺該課稅年度嘅報稅表中申報轉讓損益</li>
+      <li>如果係關聯方轉讓（例如同一集團內），要特別注意轉讓定價要求</li>
+    </ul>
+
+    <h3>公司會計記錄</h3>
+    <ul>
+      <li>更新公司嘅股東名冊（Register of Members）</li>
+      <li>喺會計系統中記錄轉讓交易</li>
+      <li>保留相關決議同文件至少 7 年（法例要求）</li>
+    </ul>
+
+    <div class="callout-warning">
+      <strong>😅 我嘅失誤：</strong> 第一次轉股東，我冇 keep 好印花稅收據。
+      一年後銀行要求睇轉讓證明，我搵咗成日先搵返。建議即刻影印多份，分開唔同地方保存。
+    </div>
+  </div>
+
+  <!-- 5. Seal -->
+  <div class="prose-custom" id="seal">
+    <h2>5️⃣ 公司印鑑及簽署授權更新</h2>
+    
+    <p>
+     最後一個，但都重要。
+    </p>
+
+    <h3>公司印章（Company Chop）</h3>
+    <p>
+     如果公司印章上刻有股東姓名，股份轉讓後建議更換。
+     如果印章只刻公司名稱（冇股東名），理論上唔需要換，但建議：
+    </p>
+    <ul>
+      <li>召開董事會決議，確認新簽署人名單</li>
+      <li>更新公司內部嘅簽署授權政策</li>
+      <li>通知公司秘書或相關合作夥伴</li>
+    </ul>
+
+    <h3>公司決議記錄</h3>
+    <p>
+     每次股東變更都應該記錄喺公司嘅決議記錄簿（Minute Book）：
+    </p>
+    <ul>
+      <li>記錄轉讓日期、股數、作價</li>
+      <li>記錄新舊股東名單</li>
+      <li>記錄新任簽署人名單及權限</li>
+      <li>所有董事簽署確認</li>
+    </ul>
+
+    <div class="callout-info">
+      <strong>💡 好習慣：</strong> 每次轉股東後，建議將所有文件整理成一個 folder，
+      包括：轉讓書、NSC1、印花稅收據、決議、更新後 SCR、銀行確認信。
+      第時賣公司或做 Due Diligence 就唔使周圍執。
+    </div>
+  </div>
+
+  <!-- Summary Checklist -->
+  <div class="bg-gov-navy text-white rounded-lg p-6 my-8">
+    <h2 class="text-xl font-bold text-gov-gold mb-4">✅ 轉股東後跟進 Checklist</h2>
+    <ul class="space-y-3">
+      <li class="flex items-start">
+        <span class="text-gov-gold mr-2">☐</span>
+        <span><strong>銀行戶口</strong> — 更新簽署人名單同權限</span>
+      </li>
+      <li class="flex items-start">
+        <span class="text-gov-gold mr-2">☐</span>
+        <span><strong>商業登記</strong> — 檢查是否需要更新資料</span>
+      </li>
+      <li class="flex items-start">
+        <span class="text-gov-gold mr-2">☐</span>
+        <span><strong>SCR 重要控制人登記冊</strong> — 7 日內必須更新</span>
+      </li>
+      <li class="flex items-start">
+        <span class="text-gov-gold mr-2">☐</span>
+        <span><strong>稅務記錄</strong> — 保存轉讓文件同印花稅收據</span>
+      </li>
+      <li class="flex items-start">
+        <span class="text-gov-gold mr-2">☐</span>
+        <span><strong>公司印鑑及簽署授權</strong> — 更新決議記錄</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8 my-8 text-center border-2 border-gov-gold">
+    <span class="bg-gov-gold text-gov-navy text-xs font-bold px-3 py-1 rounded-full">🔥 熱門指南</span>
+    <h2 class="text-2xl font-bold text-gov-navy mt-3 mb-2">股份轉讓完整 7 步指南</h2>
+    <p class="text-gray-600 mb-2">由真實經歷者整理，逐 step 教你準備文件、填表格、交印花稅</p>
+    <div class="flex items-center justify-center space-x-2 text-sm text-gray-500 mb-4">
+      <span>📄 7 步驟</span>
+      <span>·</span>
+      <span>📥 可下載模板</span>
+      <span>·</span>
+      <span>🖼️ 範例對照</span>
+    </div>
+    <div class="text-gov-gold text-lg font-bold mb-4">
+      <span class="line-through text-gray-400">$1,000+</span> → 只需 <span class="text-3xl">HK$149</span> 一次性
+    </div>
+    <a href="../shareholder-transfer.html" class="inline-block bg-gov-navy text-white font-bold px-8 py-4 rounded-lg hover:bg-blue-900 transition text-lg">
+      即解鎖完整指南 →
+    </a>
+    <p class="text-xs text-gray-400 mt-3">一次性付款 · 永久存取 · 附送可編輯 Word 模板</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="prose-custom" id="faq">
+    <h2>❓ 常見問題</h2>
+
+    <div class="faq-item">
+      <details>
+        <summary>股份轉讓完成後銀行會自動更新嗎？</summary>
+        <p>唔會。銀行唔會自動知道公司股東變更，需要你主動帶齊文件去分行辦理更新簽署人權限。建議轉讓完成後 1-2 星期內處理，避免舊股東仍然有銀行操作權限。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>轉股東後商業登記證要更新嗎？</summary>
+        <p>如果股份轉讓導致公司控制權變更（例如主要股東換人），建議向商業登記署查詢是否需要更新。一般情況下如果只是股東內部轉讓而公司名稱、業務性質不變，未必需要即時更新，但建議年檢時確認資料一致。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>重要控制人登記冊（SCR）轉股東後幾耐要更新？</summary>
+        <p><strong>7 日內</strong>。法例要求重要控制人變更後 7 日內更新 SCR 紀錄，否則公司負責人可被檢控，最高罰款 HK$25,000 及每日罰款 HK$700。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>轉股東後幾耐要報稅？</summary>
+        <p>股份轉讓本身需要在轉讓後 30 日內向公司註冊處提交 NSC1 表格。利得稅方面，轉讓的損益在該課稅年度的報稅表中申報即可。印花稅則要在轉讓後即時繳交或於指定限期內處理。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>公司印章要換嗎？</summary>
+        <p>如果公司印章上刻有股東姓名，建議更換。如果只刻公司名稱則不用。建議同時召開董事會決議授權新簽署人名單，確保權限清晰。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>轉股東後公司秘書要更新嗎？</summary>
+        <p>如果轉讓同時涉及董事或公司秘書變更，需要另外向公司註冊處提交 ND2A 表格申報。股份轉讓本身唔等於董事或秘書變更，兩者係獨立申報嘅。</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="bg-gov-navy text-white rounded-lg p-6 text-center mt-8">
+    <p class="text-lg font-bold">需要完整股份轉讓指南？</p>
+    <p class="text-gray-300 text-sm mb-4">7 步驟逐 step 教學 + 範例對照 + 可下載模板</p>
+    <a href="../shareholder-transfer.html" class="inline-block bg-gov-gold text-gov-navy font-bold px-8 py-3 rounded-lg hover-gov-gold transition">
+      HK$149 解鎖完整指南 →
+    </a>
+  </div>
+
+</article>
+
+<!-- Footer -->
+<footer class="bg-gov-navy text-gray-400 py-8 mt-8">
+  <div class="max-w-4xl mx-auto px-4 text-center text-sm">
+    <p class="text-gov-gold font-bold text-lg mb-2">GovFlow</p>
+    <p>香港公司流程指南 · 由真實經歷者整理</p>
+    <p class="mt-2">以上內容僅供參考，不構成法律或專業意見。如有疑問請諮詢專業會計師或律師。</p>
+    <div class="mt-4">
+      <a href="../index.html" class="hover:text-white mx-2">首頁</a>
+      <a href="../shareholder-transfer.html" class="hover:text-white mx-2">股份轉讓指南</a>
+      <a href="../index.html#blog" class="hover:text-white mx-2">文章</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

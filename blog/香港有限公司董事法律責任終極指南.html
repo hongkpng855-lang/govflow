@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港有限公司董事法律責任終極指南 — 唔做公司秘書、唔報稅、唔備存紀錄有咩後果？ | GovFlow</title>
+<meta name="description" content="香港有限公司董事法律責任全面解讀：公司秘書失責罰款、唔備存重要控制人登記冊（SCR）嘅刑責、董事個人承擔公司債務嘅情況、清盤時嘅法律風險。由真實經歷者整理，唔好等到收到罰單先嚟睇。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-gov-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gov-gold { color: #C9A84C; }
+  .border-gov-gold { border-color: #C9A84C; }
+  .hover-gov-gold:hover { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"香港有限公司董事有咩法定責任？","acceptedAnswer":{"@type":"Answer","text":"根據《公司條例》（第622章），董事嘅法定責任包括：備存公司紀錄（股東名冊、董事名冊、公司秘書名冊、重要控制人登記冊、會議紀錄等）、提交周年申報表（Annual Return）、申報董事/公司秘書變更、確保公司名稱同地址正確、以及準時報稅同交審計報告。唔做嘅話，公司同董事都可能被檢控。"}},
+    {"@type":"Question","name":"公司秘書失責（冇公司秘書）有咩後果？","acceptedAnswer":{"@type":"Answer","text":"根據《公司條例》，每間香港有限公司必須委任最少一名公司秘書（可以係個人或公司）。如果連續冇公司秘書超過14日，公司同每位責任董事都可能被罰款（最高 $50,000），而且可以每日計罰款。公司秘書唔係optional嘅，係法定要求。"}},
+    {"@type":"Question","name":"董事要為公司債務負責嗎？","acceptedAnswer":{"@type":"Answer","text":"一般情況下唔需要——有限公司嘅原則係「有限責任」，股東同董事唔需要為公司債務負責。但有以下例外：1) 你簽咗個人擔保；2) 公司喺清盤前嘅欺詐性交易（fraudulent trading）；3) 公司喺肯定冇力還款時仲繼續做生意（wrongful trading）；4) 未繳付嘅強積金供款；5) 欠稅局嘅税款（特定情況下稅局可以追究董事）。"}},
+    {"@type":"Question","name":"冇備存重要控制人登記冊（SCR）會被罰嗎？","acceptedAnswer":{"@type":"Answer","text":"會。根據《打擊洗錢條例》，所有香港公司必須備存重要控制人登記冊（Significant Controllers Register / SCR）。違反嘅話，公司同每位責任董事最高可被罰款 $25,000，同埋每日罰款 $2,000。執法部門（公司註冊處、警務處）可以隨時上門查冊，唔好搏。"}},
+    {"@type":"Question","name":"遲交周年申報表有咩罰則？","acceptedAnswer":{"@type":"Answer","text":"遲交周年申報表（Annual Return, Form NAR1）嘅罰款係遞增嘅：遲唔超過42日罰 $870；遲42日至3個月罰 $1,740；遲3至6個月罰 $2,610；遲超過6個月罰 $3,480。除咗罰款，遲交仲會影響公司嘅信譽，銀行可能因此凍結戶口或要求解釋。"}},
+    {"@type":"Question","name":"公司清盤時董事有咩風險？","acceptedAnswer":{"@type":"Answer","text":"公司清盤時，清盤人會調查董事嘅行為。如果發現：1) 公司喺資不抵債時仲繼續做生意（wrongful trading），董事可能要個人承擔部分債務；2) 董事挪用公司資金或資產，可能構成欺詐；3) 冇備存足夠會計紀錄，阻礙清盤程序，法庭可以取消董事資格（2-15年）。清盤唔係「一筆勾銷」，董事嘅責任會俾人查。"}}
+  ]
+}
+</script>
+<!-- Open Graph -->
+<meta property="og:title" content="香港有限公司董事法律責任終極指南 — 唔做公司秘書、唔報稅、唔備存紀錄有咩後果？">
+<meta property="og:description" content="全面解讀董事法律責任：SCR罰款、公司秘書失責、清盤風險、個人擔保陷阱。由真實經歷者整理，唔好等到收到罰單先嚟睇。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://govflow.hk/blog/香港有限公司董事法律責任終極指南.html">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+<!-- Header -->
+<header class="bg-gov-navy text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center space-x-2">
+      <span class="text-xl font-bold tracking-tight">GovFlow</span>
+      <span class="text-gov-gold text-sm hidden sm:inline">· 香港公司指南</span>
+    </a>
+    <nav class="text-sm">
+      <a href="../index.html" class="hover:text-gov-gold transition mx-2">首頁</a>
+      <a href="../shareholder-transfer.html" class="hover:text-gov-gold transition mx-2">流程指南</a>
+      <a href="../index.html#blog" class="hover:text-gov-gold transition mx-2 text-gov-gold font-semibold">文章</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Article Header -->
+<section class="bg-gov-navy text-white py-12">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="flex items-center space-x-2 text-gov-gold text-sm mb-3">
+      <span>⚖️ 法律責任</span>
+      <span>·</span>
+      <span>12 分鐘閱讀</span>
+      <span>·</span>
+      <span>2026 年 6 月</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-4">
+      香港有限公司董事法律責任終極指南<br>
+      <span class="text-gov-gold text-xl sm:text-2xl font-normal">公司秘書失責、唔報稅、唔備存紀錄，後果可以好嚴重</span>
+    </h1>
+    <p class="text-gray-300 text-lg max-w-3xl">
+      我開公司第一年，以為有限公司就係「有限責任」= 咩都唔使理。
+      直到收到公司註冊處嘅罰款信，先知原來董事有咁多法定責任。
+      呢篇文幫你逐項拆解，唔好等到中招先後悔。
+    </p>
+  </div>
+</section>
+
+<!-- Article Content -->
+<article class="max-w-4xl mx-auto px-4 py-8">
+
+  <!-- Table of Contents -->
+  <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+    <h2 class="text-xl font-bold text-gov-navy mb-4">📋 本文目錄</h2>
+    <ul class="space-y-2">
+      <li><a href="#wakeup" class="toc-item text-gray-700 hover:text-gov-gold no-underline">1️⃣ 我點樣中招：收到罰款信先嚟後悔</a></li>
+      <li><a href="#duties-overview" class="toc-item text-gray-700 hover:text-gov-gold no-underline">2️⃣ 董事法定責任總覽（公司條例第622章）</a></li>
+      <li><a href="#statutory-records" class="toc-item text-gray-700 hover:text-gov-gold no-underline">3️⃣ 備存公司紀錄要求 & 罰則</a></li>
+      <li><a href="#scr" class="toc-item text-gray-700 hover:text-gov-gold no-underline">4️⃣ 重要控制人登記冊（SCR）— 最多人中招</a></li>
+      <li><a href="#company-secretary" class="toc-item text-gray-700 hover:text-gov-gold no-underline">5️⃣ 公司秘書：唔係optional，係法定要求</a></li>
+      <li><a href="#annual-return" class="toc-item text-gray-700 hover:text-gov-gold no-underline">6️⃣ 周年申報表 & 報稅 — 遲交罰款逐日計</a></li>
+      <li><a href="#personal-liability" class="toc-item text-gray-700 hover:text-gov-gold no-underline">7️⃣ 董事要「上身」嘅情況</a></li>
+      <li><a href="#winding-up" class="toc-item text-gray-700 hover:text-gov-gold no-underline">8️⃣ 公司清盤時董事嘅法律風險</a></li>
+      <li><a href="#summary" class="toc-item text-gray-700 hover:text-gov-gold no-underline">9️⃣ 董事保命 Checklist</a></li>
+      <li><a href="#faq" class="toc-item text-gray-700 hover:text-gov-gold no-underline">❓ 常見問題</a></li>
+    </ul>
+  </div>
+
+  <!-- 1. Wake-up Call -->
+  <div class="prose-custom" id="wakeup">
+    <h2>1️⃣ 我點樣中招：收到罰款信先嚟後悔</h2>
+
+    <p>
+      話說我 2022 年開咗自己第一間有限公司，當時秘書公司幫我搞晒註冊，俾咗 $2,000。
+      之後我以為有限公司就係「有限責任」= 我咩都唔使理，交俾會計師就得。
+    </p>
+
+    <p>
+      結果一年後，我收到公司註冊處一封罰款信，話我遲交周年申報表。
+      罰款 $870，仲要係程序咁罰。我即刻搵返秘書公司，佢哋話「你冇俾錢我哋做年費，所以冇幫你搞。」
+      我 O 晒嘴 — 原來秘書公司只係幫我註冊，之後每個月要俾 $200 佢哋先有人幫你跟進。
+    </p>
+
+    <div class="callout-warning">
+      <strong>😅 真人真事：</strong> 最搞笑係，我另一個朋友仲大鑊。佢開咗公司 3 年，完全唔知要報稅、唔知要做審計、唔知公司要有公司秘書。
+      直到收到稅局嘅估稅通知書，連罰款連利息成 $50,000+。
+      佢以為有限公司嘅「有限責任」= 唔使報稅，結果中到應一應。
+    </div>
+
+    <p>
+      所以唔好以為開咗有限公司就一勞永逸。有限公司係一個獨立嘅法律實體，
+      係需要你（作為董事）去維護嘅。以下我會逐項講清楚董事嘅法定責任，
+      同埋違反嘅後果。呢啲嘢秘書公司唔會主動話你知（佢哋想你俾錢佢哋做），
+      但你自己一定要識。
+    </p>
+  </div>
+
+  <!-- 2. Duties Overview -->
+  <div class="prose-custom" id="duties-overview">
+    <h2>2️⃣ 董事法定責任總覽（公司條例第622章）</h2>
+
+    <p>
+      根據香港《公司條例》（第 622 章），公司董事嘅責任可以分為幾大類。
+      以下係最關你事嘅：
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>責任類別</th>
+          <th>具體要求</th>
+          <th>罰則</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>備存公司紀錄</td>
+          <td>股東名冊、董事名冊、公司秘書名冊、重要控制人登記冊、會議紀錄、會計紀錄</td>
+          <td>罰款 $25,000+，每日 $2,000</td>
+        </tr>
+        <tr>
+          <td>提交周年申報表</td>
+          <td>每年提交 NAR1（42 日內）</td>
+          <td>$870-$3,480 遞進罰款</td>
+        </tr>
+        <tr>
+          <td>申報變更</td>
+          <td>董事/公司秘書/地址變更 15 日內申報</td>
+          <td>罰款 $5,000+，每日 $500</td>
+        </tr>
+        <tr>
+          <td>報稅 & 審計</td>
+          <td>收到報稅表後準時填報 + 提交審計報告</td>
+          <td>估稅 + 罰款 + 利息（可達稅額 200%）</td>
+        </tr>
+        <tr>
+          <td>公司秘書</td>
+          <td>必須委任最少一名公司秘書</td>
+          <td>罰款 $50,000+，每日罰款</td>
+        </tr>
+        <tr>
+          <td>SCR 備存</td>
+          <td>備存重要控制人登記冊</td>
+          <td>$25,000+，每日 $2,000</td>
+        </tr>
+        <tr>
+          <td>信託責任</td>
+          <td>董事係公司嘅「受信人」，要以公司利益行事</td>
+          <td>民事責任，可被追究損失</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      「有限責任」保護嘅係你作為股東嘅投資，但唔會免除你作為董事嘅法定責任。
+      呢個係好多人最大嘅誤解。
+    </p>
+  </div>
+
+  <!-- 3. Statutory Records -->
+  <div class="prose-custom" id="statutory-records">
+    <h2>3️⃣ 備存公司紀錄要求 & 罰則</h2>
+
+    <p>
+      根據《公司條例》第 5 分部，每間公司必須備存以下紀錄喺公司註冊地址（或者公司秘書地址）：
+    </p>
+
+    <ul>
+      <li><strong>股東名冊（Register of Members）</strong> — 記錄所有股東嘅姓名、地址、持股量、入股同退股日期</li>
+      <li><strong>董事名冊（Register of Directors）</strong> — 記錄所有董事嘅姓名、地址、身份證號碼、委任日期</li>
+      <li><strong>公司秘書名冊（Register of Secretaries）</strong> — 記錄公司秘書資料</li>
+      <li><strong>重要控制人登記冊（SCR）</strong> — 記錄持有 25% 以上股份或控制權嘅人</li>
+      <li><strong>董事會議紀錄</strong> — 記錄董事會決議內容同日期</li>
+      <li><strong>會計紀錄</strong> — 足夠反映公司財務狀況嘅紀錄（要 keep 7 年）</li>
+    </ul>
+
+    <p>
+      好多人以為公司註冊處會幫你 keep 呢啲紀錄。
+      <strong>錯。</strong>公司註冊處只係登記你申報嘅資料，但詳細嘅股東名冊、會議紀錄、SCR，
+      全部要你自己 keep。
+    </p>
+
+    <div class="callout-danger">
+      <strong>⚠️ 罰則：</strong> 違反備存紀錄規定嘅後果：
+      <ul class="mt-2">
+        <li>公司同每位責任董事：罰款 $25,000</li>
+        <li>持續違反：每日罰款 $2,000</li>
+        <li>公司註冊處可以派人上門查冊，冇得話「我唔知」</li>
+      </ul>
+    </div>
+
+    <p>
+      我嘅建議：用 spreadsheet 或者專門嘅公司秘書 software 去 track 所有紀錄。
+      每個月 check 一次，確保冇漏。如果真係唔想煩，俾 $200-$500 一個月搵秘書公司做，
+      <strong>好過收到罰單先嚟後悔。</strong>
+    </p>
+  </div>
+
+  <!-- 4. SCR -->
+  <div class="prose-custom" id="scr">
+    <h2>4️⃣ 重要控制人登記冊（SCR）— 最多人中招</h2>
+
+    <p>
+      如果話董事責任入面最多人中招嘅，一定係重要控制人登記冊（Significant Controllers Register / SCR）。
+      呢項要求係 2018 年 3 月先開始生效，好多人開咗公司幾年都完全唔知有呢回事。
+    </p>
+
+    <p>
+      SCR 係咩？根據《打擊洗錢及恐怖分子資金籌集條例》（第 615 章），
+      每間香港公司必須備存一份「重要控制人登記冊」，記錄邊啲人直接或間接持有
+      公司 25% 以上嘅股份，或者對公司有重大控制權。
+    </p>
+
+    <div class="callout-warning">
+      <strong>😅 真人真事：</strong> 我身邊超過一半嘅朋友，開咗公司 3-5 年都唔知有 SCR 呢樣嘢。
+      直到有一次佢哋收到公司註冊處嘅查詢信，先知自己違法緊。
+      最慘係有個朋友，佢嘅公司秘書（一間秘書公司）完全冇提過 SCR 嘅要求，
+      佢以為俾咗錢就有人搞掂晒，結果中招先知原來秘書公司冇幫佢整。
+    </div>
+
+    <h3>SCR 要記錄咩？</h3>
+    <ul>
+      <li>重要控制人嘅姓名、地址、身份證號碼</li>
+      <li>成為重要控制人嘅日期</li>
+      <li>對公司嘅控制性質（直接持股、間接持股、定係通過投票權控制）</li>
+      <li>持股比例</li>
+    </ul>
+
+    <p>
+      SCR 仲有一個好多人忽略嘅要求：如果公司嘅股東唔係「重要控制人」
+      （例如創辦人一股都冇，全部股份由一個信託持有），你都要喺 SCR 入面
+      <strong>註明「公司冇任何重要控制人」</strong>。
+      張 form 唔可以就咁空咗佢。
+    </p>
+
+    <div class="callout-danger">
+      <strong>⚠️ 罰則：</strong>
+      <ul class="mt-2">
+        <li>公司同每位責任董事：最高罰款 $25,000</li>
+        <li>持續違反：每日罰款 $2,000</li>
+        <li>明知而提供虛假資料：最高罰款 $300,000 及監禁 2 年</li>
+      </ul>
+    </div>
+
+    <p>
+      點樣整 SCR？官方有一個標準格式嘅範本，你可以喺公司註冊處網站下載。
+      填好後打印出嚟，放喺公司註冊地址就得。每年周年申報嘅時候，
+      記得 check 一下 SCR 資料係咪仲準確。
+    </p>
+  </div>
+
+  <!-- 5. Company Secretary -->
+  <div class="prose-custom" id="company-secretary">
+    <h2>5️⃣ 公司秘書：唔係 optional，係法定要求</h2>
+
+    <p>
+      呢個又係一個極常見嘅誤解。好多人以為「我得一個人做生意，自己搞晒得啦，
+      使咩請公司秘書？」但根據《公司條例》第 474 條：
+    </p>
+
+    <blockquote>
+      「每間公司須有最少一名公司秘書。」
+    </blockquote>
+
+    <p>
+      公司秘書可以係自然人（個人），亦可以係法人團體（一間公司）。
+      如果係個人，佢嘅「通常居住地」必須係香港。
+      如果公司得一個董事，呢個董事唔可以同時做公司秘書。
+    </p>
+
+    <p>
+      公司秘書嘅職責包括：
+    </p>
+    <ul>
+      <li>確保公司準時提交法定文件（周年申報表、變更申報等）</li>
+      <li>備存同更新公司法定紀錄</li>
+      <li>安排董事會會議同股東大會</li>
+      <li>保存會議紀錄</li>
+      <li>確保公司符合《公司條例》規定</li>
+    </ul>
+
+    <div class="callout-danger">
+      <strong>⚠️ 罰則：</strong> 如果公司連續冇公司秘書超過 14 日，公司同每位責任董事
+      都可能被罰款，最高 $50,000，而且可以每日計罰款。
+    </div>
+
+    <p>
+      大部分中小企嘅做法係：搵一間秘書公司做公司秘書，月費約 $150-$500。
+      或者如果你有合伙人，叫合伙人做公司秘書都得（但要確保佢係香港居民）。
+    </p>
+  </div>
+
+  <!-- 6. Annual Return & Tax -->
+  <div class="prose-custom" id="annual-return">
+    <h2>6️⃣ 周年申報表 & 報稅 — 遲交罰款逐日計</h2>
+
+    <h3>周年申報表（Annual Return / NAR1）</h3>
+    <p>
+      每年公司成立周年日之後 42 日內，必須向公司註冊處提交周年申報表（NAR1）。
+      呢份表申報公司嘅基本資料：股東、董事、公司秘書、註冊地址、已發行股本等。
+    </p>
+
+    <p>
+      遲交嘅罰款係遞增嘅：
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>遲交時間</th>
+          <th>罰款</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>唔超過 42 日</td><td>$870</td></tr>
+        <tr><td>超過 42 日但不超過 3 個月</td><td>$1,740</td></tr>
+        <tr><td>超過 3 個月但不超過 6 個月</td><td>$2,610</td></tr>
+        <tr><td>超過 6 個月</td><td>$3,480</td></tr>
+      </tbody>
+    </table>
+
+    <p>
+      $3,480 睇落唔係好多？但如果連續幾年都遲交，罰款係疊加嘅。
+      我識人試過一次過俾 $10,000+ 嘅罰款。
+    </p>
+
+    <h3>報稅 & 審計</h3>
+    <p>
+      收到稅局嘅報稅表（利得稅報稅表 BIR51/BIR52）後，必須喺 1 個月內填交。
+      實際做法係先搵會計師做審計報告，然後連報稅表一齊交。
+    </p>
+
+    <div class="callout-warning">
+      <strong>🤯 真正嘅「痛」：</strong> 如果你唔準時報稅，稅局有權：
+      <ul class="mt-2">
+        <li>發出「估稅通知書」— 稅局幫你「估」你賺咗幾多錢，通常估得仲高過實際</li>
+        <li>加罰款 — 可達欠稅額嘅 5%-200%</li>
+        <li>加利息 — 年利率 8%+（視乎當時利率）</li>
+        <li>向區域法院提出民事起訴追討欠稅</li>
+      </ul>
+    </div>
+
+    <p>
+      最麻煩嘅係，如果連續幾年冇報稅，稅局可能會要求你補交過去 7 年嘅審計報告。
+      7 年嘅審計費加罰款，分分鐘十萬蚊落樓。
+    </p>
+  </div>
+
+  <!-- 7. Personal Liability -->
+  <div class="prose-custom" id="personal-liability">
+    <h2>7️⃣ 董事要「上身」嘅情況</h2>
+
+    <p>
+      呢 part 最重要：有限公司嘅「有限責任」唔係萬能嘅。
+      以下情況下，董事可能要 <strong>個人承擔公司債務或法律責任</strong>：
+    </p>
+
+    <h3>① 個人擔保（Personal Guarantee）</h3>
+    <p>
+      呢個係最常見嘅。申請公司貸款、租寫字樓、開公司戶口部分情況，
+      銀行或業主會要求你簽個人擔保。
+      一旦公司還唔到錢，債主可以追你個人。
+    </p>
+    <p>
+      現實係：新公司好難唔簽個人擔保。但你要知道個風險，
+      千祈唔好以為「有限公司」= 擔保都有限責任。
+    </p>
+
+    <h3>② 欺詐性交易（Fraudulent Trading）</h3>
+    <p>
+      如果公司清盤時發現，董事曾經用公司嚟做欺詐行為
+      （例如：明知冇貨都收客戶錢、呃銀行貸款），
+      法庭可以命令董事個人承擔公司嘅全部或部分債務。
+      呢個係刑事罪行，可以坐監。
+    </p>
+
+    <h3>③ 不當交易（Wrongful Trading）</h3>
+    <p>
+      呢個仲常見。如果公司已經資不抵債（insolvent），
+      但董事仲繼續做生意、繼續簽新合約、繼續收新客錢，
+      清盤人可以向法庭申請，要求董事個人承擔
+      喺資不抵債期間產生嘅新債務。
+    </p>
+
+    <div class="callout-warning">
+      <strong>😅 真人真事：</strong> 我朋友嘅公司 COVID 期間生意差咗好多，但佢唔想咁快結束，
+      繼續簽新單、繼續營運。結果 6 個月後真係頂唔順要清盤。
+      清盤人發現佢喺公司資不抵債之後仲簽咗 3 張新合約，
+      顧客俾咗訂金但公司交唔到貨。最後法庭判佢要個人賠償嗰 3 個客。
+    </div>
+
+    <h3>④ 未繳強積金供款</h3>
+    <p>
+      公司欠 MPF 供款嘅話，受託人可以直接向董事追討。
+      積金局仲有權向董事發出「罰款通知書」。
+    </p>
+
+    <h3>⑤ 欠稅（特定情況）</h3>
+    <p>
+      如果公司清盤時欠稅，稅局喺特定情況下可以
+      向董事或前董事追討欠稅，特別係如果董事
+      有份導致公司無法繳稅嘅行為。
+    </p>
+  </div>
+
+  <!-- 8. Winding Up -->
+  <div class="prose-custom" id="winding-up">
+    <h2>8️⃣ 公司清盤時董事嘅法律風險</h2>
+
+    <p>
+      如果公司最終要清盤（無論係股東自願清盤定債權人申請清盤），
+      清盤人會調查董事嘅行為。呢個調查可以好揪心。
+    </p>
+
+    <h3>清盤人會查咩？</h3>
+    <ul>
+      <li><strong>會計紀錄</strong> — 齊唔齊全？夠唔夠詳細？缺紀錄可以阻礙清盤程序</li>
+      <li><strong>關連交易</strong> — 董事有冇同自己有關連嘅公司做交易，而條件唔公平</li>
+      <li><strong>資產轉移</strong> — 清盤前 6 個月內有冇低於市價轉移資產</li>
+      <li><strong>派息</strong> — 公司資不抵債時仲派息，可以追返</li>
+      <li><strong>董事薪酬</strong> — 公司冇錢時仲俾自己高人工</li>
+    </ul>
+
+    <h3>最多人唔知嘅風險：取消董事資格</h3>
+    <p>
+      如果清盤人發現你嘅行為唔恰當，可以申請法庭取消你嘅董事資格。
+      取消資格期由 2 年到 15 年不等。
+      取消資格期間，你唔可以做任何公司嘅董事、清盤人、接管人或管理人，
+      亦唔可以直接或間接參與公司嘅成立、推廣或管理。
+    </p>
+
+    <p>
+      換句話說，如果你被 cancel 咗 5 年董事資格，呢 5 年你冇得開公司、
+      冇得做董事、冇得自己做生意。對於創業者嚟講，
+      呢個懲罰可能仲嚴重過罰錢。
+    </p>
+  </div>
+
+  <!-- 9. Summary Checklist -->
+  <div class="prose-custom" id="summary">
+    <h2>9️⃣ 董事保命 Checklist</h2>
+
+    <div class="callout-success">
+      <strong>✅ 每個月做：</strong>
+      <ul class="mt-2">
+        <li>☐ 檢查公司註冊處有冇新信件或罰單</li>
+        <li>☐ 確認公司紀錄（SCR、股東名冊）係咪最新</li>
+        <li>☐ 確認公司秘書係咪仲喺度（冇辭職）</li>
+        <li>☐ 檢查公司銀行戶口運作正常</li>
+      </ul>
+    </div>
+
+    <div class="callout-info">
+      <strong>✅ 每年做：</strong>
+      <ul class="mt-2">
+        <li>☐ 準時提交周年申報表（NAR1）— 成立周年日後 42 日內</li>
+        <li>☐ 安排審計 & 報稅（收到報稅表後 1 個月內）</li>
+        <li>☐ 更新 SCR — 核對股東資料係咪準確</li>
+        <li>☐ 更新商業登記證（如果係一年證就要續期）</li>
+        <li>☐ 公司註冊費每年都要交（公司註冊處每年年費）</li>
+      </ul>
+    </div>
+
+    <div class="callout-danger">
+      <strong>✅ 公司有變動時做：</strong>
+      <ul class="mt-2">
+        <li>☐ 董事變更 → 15 日內提交 ND2A</li>
+        <li>☐ 公司秘書變更 → 15 日內提交 ND4</li>
+        <li>☐ 註冊地址變更 → 15 日內提交 NR1</li>
+        <li>☐ 股份轉讓 → 提交 NSC1 + 打釐印</li>
+        <li>☐ 公司名稱變更 → 提交 NNC2 + 換 BR</li>
+      </ul>
+    </div>
+
+    <p>
+      如果你覺得以上嘅嘢好煩 — 我明。我自己 initial 都係咁諗。
+      但比起收到罰款信、稅局估稅通知、或者最嚴重嘅被取消董事資格，
+      用少少時間去搞掂 compliance 一定值得。
+    </p>
+
+    <p>
+      你可以揀：
+    </p>
+    <ol>
+      <li><strong>自己做</strong> — 慳錢，但要花時間了解程序、緊貼法例更新</li>
+      <li><strong>請秘書公司</strong> — $150-$500/月，幫你跟進晒法定要求</li>
+      <li><strong>用 GovFlow 指南</strong> — 自己跟住步驟做，一次過學識晒</li>
+    </ol>
+  </div>
+
+  <!-- FAQ -->
+  <div class="prose-custom" id="faq">
+    <h2>❓ 常見問題</h2>
+
+    <div class="faq-item">
+      <details>
+        <summary>香港有限公司董事有咩法定責任？</summary>
+        <p>根據《公司條例》（第622章），董事嘅法定責任包括：備存公司紀錄（股東名冊、董事名冊、公司秘書名冊、重要控制人登記冊、會議紀錄等）、提交周年申報表（Annual Return）、申報董事/公司秘書變更、確保公司名稱同地址正確、以及準時報稅同交審計報告。唔做嘅話，公司同董事都可能被檢控。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>公司秘書失責（冇公司秘書）有咩後果？</summary>
+        <p>根據《公司條例》，每間香港有限公司必須委任最少一名公司秘書（可以係個人或公司）。如果連續冇公司秘書超過14日，公司同每位責任董事都可能被罰款（最高 $50,000），而且可以每日計罰款。公司秘書唔係optional嘅，係法定要求。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>董事要為公司債務負責嗎？</summary>
+        <p>一般情況下唔需要——有限公司嘅原則係「有限責任」。但有以下例外：你簽咗個人擔保；公司清盤前嘅欺詐性交易；公司喺肯定冇力還款時仲繼續做生意（wrongful trading）；未繳付嘅強積金供款；特定情況下欠稅。建議開公司前了解清楚呢啲風險。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>冇備存重要控制人登記冊（SCR）會被罰嗎？</summary>
+        <p>會。根據《打擊洗錢條例》，所有香港公司必須備存 SCR。違反嘅話，公司同每位責任董事最高可被罰款 $25,000，同埋每日罰款 $2,000。執法部門可以隨時上門查冊。如果你開咗公司幾年都未整 SCR，建議盡快補做。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>遲交周年申報表有咩罰則？</summary>
+        <p>遲交 NAR1 嘅罰款係遞增嘅：遲唔超過42日罰 $870；42日至3個月罰 $1,740；3至6個月罰 $2,610；超過6個月罰 $3,480。罰款係每年計，連續幾年遲交可以疊加。仲有，銀行可能因為你公司紀錄唔好而凍結戶口或要求解釋。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>公司清盤時董事有咩風險？</summary>
+        <p>公司清盤時，清盤人會調查董事嘅行為。如果發現公司喺資不抵債時仲繼續做生意（wrongful trading），董事可能要個人承擔部分債務。如果冇備存足夠會計紀錄，法庭可以取消董事資格（2-15年）。清盤唔係「一筆勾銷」，董事嘅責任會俾人查清楚。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>有限公司係咪一定要做審計？</summary>
+        <p>係。根據《公司條例》，每間香港有限公司每年必須進行審計，由香港會計師公會註冊嘅執業會計師（CPA）審查公司帳目，然後提交審計報告。只有極少數特殊情況（如「小型公司」且股東一致同意可豁免審計，但條件嚴格）可以唔做審計。唔好信人話「有限公司唔使審計」。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>董事可以自己辭職嗎？需要咩程序？</summary>
+        <p>可以。董事辭職需要以書面通知公司，通常需要發信俾董事會。辭職生效後，公司需要喺 15 日內向公司註冊處提交 ND2A 表格申報變更。如果你係唯一董事，辭職前需要確保公司有新董事接替，否則公司會變成「冇董事」嘅狀態，可能導致公司運作停頓。</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="bg-gov-navy text-white rounded-lg p-6 text-center mt-8">
+    <p class="text-lg font-bold">📌 想一次過搞掂公司秘書文件？</p>
+    <p class="text-gray-300 text-sm mb-4">GovFlow 嘅股份轉讓完整指南幫你逐個步驟處理，真實範例對照 + 可下載模板</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="../shareholder-transfer.html" class="inline-block bg-gov-gold text-gov-navy font-bold px-6 py-3 rounded-lg hover-gov-gold transition">
+        免費睇頭兩步 →
+      </a>
+      <a href="../blog/香港公司重要控制人登記冊SCR終極指南.html" class="inline-block bg-gray-700 text-white font-bold px-6 py-3 rounded-lg hover:bg-gray-600 transition">
+        SCR 終極指南 →
+      </a>
+    </div>
+  </div>
+
+</article>
+
+<!-- Footer -->
+<footer class="bg-gov-navy text-gray-400 py-8 mt-8">
+  <div class="max-w-4xl mx-auto px-4 text-center text-sm">
+    <p class="text-gov-gold font-bold text-lg mb-2">GovFlow</p>
+    <p>香港公司流程指南 · 由真實經歷者整理</p>
+    <p class="mt-2">以上內容僅供參考，不構成法律或專業意見。如有具體法律問題，請諮詢執業律師或專業會計師。</p>
+    <p class="mt-2 text-gray-500">《公司條例》及相關法例可能不時更新，建議到公司註冊處網站查閱最新版本。</p>
+    <div class="mt-4">
+      <a href="../index.html" class="hover:text-white mx-2">首頁</a>
+      <a href="../shareholder-transfer.html" class="hover:text-white mx-2">股份轉讓指南</a>
+      <a href="../index.html#blog" class="hover:text-white mx-2">文章</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
