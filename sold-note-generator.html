@@ -32,17 +32,22 @@
       📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅 PDF 檔案
     </div>
 
-    <!-- Demo 參考（始終可見，click 開大圖）-->
+    <!-- Demo 完整範例（inline 顯示，click 開 modal 睇更大）-->
     <div onclick="openTemplateModal()" class="mb-4 bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group">
-      <div class="flex items-center gap-3 p-3 sm:p-4">
-        <div class="w-16 h-12 sm:w-20 sm:h-14 bg-gray-50 rounded-lg overflow-hidden shrink-0 border border-gray-100">
-          <img src="assets/demo/sold-note-preview.png" alt="模板參考" class="w-full h-full object-cover" onerror="this.outerHTML='<div class=w-full h-full flex items-center justify-center text-gray-300 text-lg>🖼️</div>'" />
+      <div class="relative">
+        <img src="assets/demo/sold-note-preview.png" alt="Sold Note 填寫範例"
+             class="w-full object-contain bg-gray-50"
+             onerror="this.outerHTML='<div class=flex items-center justify-center h-40 text-gray-400 bg-gray-50>🖼️ 範例圖片載入失敗</div>'" />
+        <!-- Overlay hover 提示 -->
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition flex items-center justify-center">
+          <span class="opacity-0 group-hover:opacity-100 bg-white/95 text-navy text-sm font-bold px-5 py-2.5 rounded-xl shadow-lg transition flex items-center gap-2">
+            🔍 按此放大檢視
+          </span>
         </div>
-        <div class="min-w-0 flex-1">
-          <p class="font-semibold text-navy text-sm group-hover:text-gold transition">📄 Sold Note 模板參考</p>
-          <p class="text-xs text-gray-400 mt-0.5">填寫時對照呢個格式，確保資料位置正確 — 👆 按此放大</p>
+        <!-- Badge -->
+        <div class="absolute top-3 right-3 bg-navy/80 text-white text-xs font-medium px-3 py-1 rounded-full backdrop-blur-sm">
+          📄 參考範例
         </div>
-        <span class="text-gray-300 group-hover:text-gold transition shrink-0 hidden sm:inline">🔍</span>
       </div>
     </div>
 
