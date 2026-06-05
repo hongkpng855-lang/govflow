@@ -94,7 +94,7 @@
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Sign:</span>
-              <div id="f8" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">親筆簽署後掃描</div>
+              <div id="f8" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]"></div>
             </div>
           </div>
         </div>
@@ -131,7 +131,7 @@
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Sign:</span>
-              <div id="f15" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">親筆簽署後掃描</div>
+              <div id="f15" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]"></div>
             </div>
           </div>
         </div>
@@ -176,14 +176,16 @@
         f5: (document.getElementById('f5').textContent || '').trim(),
         f6: (document.getElementById('f6').textContent || '').trim(),
         f7: (document.getElementById('f7').textContent || '').trim() || dateStr,
-        f8: (document.getElementById('f8').textContent || '').trim() || '(親筆簽署)',
+        // Sign：如果係預設文字「親筆簽署後掃描」，改為底線
+        f8: (function(){const v=(document.getElementById('f8').textContent||'').trim();return(v&&v!=='親筆簽署後掃描')?v:'________________';})(),
         f9: (document.getElementById('f9').textContent || '').trim(),
         f10: (document.getElementById('f10').textContent || '').trim(),
         f11: (document.getElementById('f11').textContent || '').trim(),
         f12: (document.getElementById('f12').textContent || '').trim(),
         f13: (document.getElementById('f13').textContent || '').trim(),
         f14: (document.getElementById('f14').textContent || '').trim() || dateStr,
-        f15: (document.getElementById('f15').textContent || '').trim() || '(親筆簽署)',
+        // Sign：如果係預設文字「親筆簽署後掃描」，改為底線
+        f15: (function(){const v=(document.getElementById('f15').textContent||'').trim();return(v&&v!=='親筆簽署後掃描')?v:'________________';})(),
       };
     }
 
