@@ -5,7 +5,7 @@
   "estimatedTime": "1-2 星期（視乎準備是否充足）",
   "difficulty": "中等",
   "totalSteps": 5,
-  "freeSteps": 0,
+  "freeSteps": 1,
   "price": 149,
   "currency": "HKD",
   "priceComparison": {
@@ -19,7 +19,7 @@
       "stepNumber": 1,
       "title": "簽署股份賣出單（Sold Note）",
       "summary": "賣方記錄轉讓股數、每股作價及總代價，作為交易基礎文件",
-      "isFree": false,
+      "isFree": true,
       "details": "Sold Note 係成個交易嘅起點。好多人都 skip 呢步，覺得「口頭 agreement 就得」，但其實冇一份書面記錄，到後期填轉讓書嘅時候好容易撈亂數字。\n\n我當初就係咁：同買方 WhatsApp 講好價就當搞掂，點知到填 Instrument of Transfer 嗰陣，大家對個股數同作價嘅記憶唔一致，要重新 confirm 一次，浪費咗成個星期。\n\nSold Note 要填嘅嘢：\n- 賣方（Transferor）全名及地址\n- 股份類別（普通股？優先股？）\n- 轉讓股數及每股面值\n- 每股作價及總代價\n- 交易日期\n- 賣方簽署\n\n呢份文件唔使提交俾政府，係俾你自己同買方留底用。但佢好重要，因為之後所有文件嘅數字都要同 Sold Note 一致。\n\n小貼士：即使係親友之間轉讓，都建議做一份 Sold Note。我見過有 case 係親戚之間口頭講好，幾年後反口，搞到要打官司。",
       "documents": [
         {
