@@ -244,7 +244,8 @@
                 <div class="grid sm:grid-cols-2 gap-4">
                   <template x-for="(doc, idx) in s.documents" :key="idx">
                     <template x-if="s.stepNumber === 1">
-                      <div class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition cursor-pointer shadow-sm hover:shadow-md" @click="openDoc(doc)">
+                      <a href="sold-note-generator.html"
+                         class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md">
                         <!-- Demo 小預覽 -->
                         <template x-if="doc.demoImage">
                           <div class="h-32 sm:h-40 bg-gray-100 overflow-hidden relative">
@@ -261,7 +262,7 @@
                             </span>
                           </div>
                         </div>
-                      </div>
+                      </a>
                     </template>
                     <template x-if="s.stepNumber !== 1">
                       <div class="doc-card bg-white border border-gray-200 rounded-xl p-4 hover:border-navy/30 transition cursor-pointer shadow-sm hover:shadow" @click="openDoc(doc)">
