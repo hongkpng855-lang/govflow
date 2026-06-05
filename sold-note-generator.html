@@ -32,22 +32,31 @@
       📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅 PDF 檔案
     </div>
 
-    <!-- Demo 完整範例（inline 顯示，click 開 modal 睇更大）-->
-    <div onclick="openTemplateModal()" class="mb-4 bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group">
-      <div class="relative">
-        <img src="assets/demo/sold-note-preview.png" alt="Sold Note 填寫範例"
-             class="w-full object-contain bg-gray-50"
-             onerror="this.outerHTML='<div class=flex items-center justify-center h-40 text-gray-400 bg-gray-50>🖼️ 範例圖片載入失敗</div>'" />
-        <!-- Overlay hover 提示 -->
-        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition flex items-center justify-center">
-          <span class="opacity-0 group-hover:opacity-100 bg-white/95 text-navy text-sm font-bold px-5 py-2.5 rounded-xl shadow-lg transition flex items-center gap-2">
-            🔍 按此放大檢視
-          </span>
+    <!-- 參考圖片兩幅（預視圖大小，click 開 modal 睇大）-->
+    <div class="grid grid-cols-2 gap-3 mb-4">
+      <!-- REAL DEMO -->
+      <div onclick="openTemplateModal()" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[3/4] bg-gray-50 overflow-hidden">
+          <img src="assets/demo/sold-note-realdemo-1.png" alt="Real Demo"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
         </div>
-        <!-- Badge -->
-        <div class="absolute top-3 right-3 bg-navy/80 text-white text-xs font-medium px-3 py-1 rounded-full backdrop-blur-sm">
-          📄 參考範例
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">REALDEMO</span>
         </div>
+        <div class="absolute top-1.5 right-1.5 bg-white/90 text-navy text-[10px] font-medium px-1.5 py-0.5 rounded shadow-sm">👆</div>
+      </div>
+      <!-- WORD TO PDF -->
+      <div onclick="openTemplateModal()" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[3/4] bg-gray-50 overflow-hidden">
+          <img src="assets/demo/sold-note-wordtopdf-1.png" alt="Word to PDF"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">WORD2PDF</span>
+        </div>
+        <div class="absolute top-1.5 right-1.5 bg-white/90 text-navy text-[10px] font-medium px-1.5 py-0.5 rounded shadow-sm">👆</div>
       </div>
     </div>
 
@@ -71,19 +80,50 @@
       </div>
     </div>
 
-    <!-- Template Modal -->
+    <!-- Template Modal (切換 REALDEMO / WORD2PDF) -->
     <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4" onclick="closeTemplateModal(event)">
       <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
-        <div class="flex justify-between items-center p-4 border-b border-gray-200">
-          <h3 class="font-bold text-navy">📄 Sold Note 模板參考</h3>
-          <button onclick="closeTemplateModal()" class="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+        
+        <!-- Tab buttons -->
+        <div class="flex border-b border-gray-200">
+          <button id="tabRealdemo" onclick="switchModalTab('realdemo')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition">📄 REALDEMO</button>
+          <button id="tabWord2pdf" onclick="switchModalTab('word2pdf')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 WORD2PDF</button>
+          <button onclick="closeTemplateModal()" class="px-4 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
         </div>
-        <div class="p-4">
-          <img src="assets/demo/sold-note-preview.png" alt="Sold Note 模板" class="w-full border border-gray-200 rounded-lg" onerror="this.onerror=null;this.parentElement.innerHTML='<p class=text-red-500>⚠️ 模板圖片未準備好</p>'" />
-          <p class="text-xs text-gray-400 mt-2 text-center">對照呢個格式填寫，確保位置正確</p>
+
+        <!-- REALDEMO -->
+        <div id="modalRealdemo" class="p-4">
+          <img src="assets/demo/sold-note-realdemo-1.png" alt="Real Demo" class="w-full border border-gray-200 rounded-lg" />
+          <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
         </div>
+
+        <!-- WORD2PDF (hidden by default) -->
+        <div id="modalWord2pdf" class="p-4 hidden">
+          <img src="assets/demo/sold-note-wordtopdf-1.png" alt="Word to PDF" class="w-full border border-gray-200 rounded-lg" />
+          <p class="text-xs text-gray-400 mt-2 text-center">空白可編輯模板格式</p>
+        </div>
+
       </div>
     </div>
+
+    <script>
+    function switchModalTab(tab) {
+      document.getElementById('modalRealdemo').classList.toggle('hidden', tab !== 'realdemo');
+      document.getElementById('modalWord2pdf').classList.toggle('hidden', tab !== 'word2pdf');
+      document.getElementById('tabRealdemo').classList.toggle('border-navy', tab === 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('border-transparent', tab !== 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('font-bold', tab === 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('font-semibold', tab !== 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('text-navy', tab === 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('text-gray-400', tab !== 'realdemo');
+      document.getElementById('tabWord2pdf').classList.toggle('border-navy', tab === 'word2pdf');
+      document.getElementById('tabWord2pdf').classList.toggle('border-transparent', tab !== 'word2pdf');
+      document.getElementById('tabWord2pdf').classList.toggle('font-bold', tab === 'word2pdf');
+      document.getElementById('tabWord2pdf').classList.toggle('font-semibold', tab !== 'word2pdf');
+      document.getElementById('tabWord2pdf').classList.toggle('text-navy', tab === 'word2pdf');
+      document.getElementById('tabWord2pdf').classList.toggle('text-gray-400', tab !== 'word2pdf');
+    }
+    </script>
 
     <!-- ═══════ FORM ═══════ -->
     <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px; font-family:'Noto Sans TC',sans-serif;">
