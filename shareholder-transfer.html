@@ -85,6 +85,33 @@
     document.body.style.overflow = '';
   },
 
+  formatDetails(text) {
+    if (!text) return '';
+    const lines = text.split('\n');
+    let html = '';
+    let inList = false;
+    for (const rawLine of lines) {
+      const line = rawLine.trim();
+      if (!line) {
+        if (inList) { html += '</ul>'; inList = false; }
+        continue;
+      }
+      if (line.startsWith('\u2022') || line.startsWith('- ')) {
+        if (!inList) { html += '<ul class=\"list-disc pl-5 mb-2 space-y-1\">'; inList = true; }
+        html += '<li>' + this._e(line.replace(/^[\u2022\-]\s*/, '')) + '</li>';
+      } else {
+        if (inList) { html += '</ul>'; inList = false; }
+        html += '<p class=\"mb-2\">' + this._e(line) + '</p>';
+      }
+    }
+    if (inList) html += '</ul>';
+    return html;
+  },
+  _e(str) {
+    const d = document.createElement('div');
+    d.textContent = str;
+    return d.innerHTML;
+  },
   goToPayment() {
     window.open('https://1714457598663.gumroad.com/l/wkjykk', '_blank');
   }
@@ -234,22 +261,24 @@
               <!-- Details -->
               <div class="bg-white rounded-xl border border-gray-200 p-6 mb-8">
                 <h3 class="font-semibold text-navy text-lg mb-3">詳細說明</h3>
-                <p class="text-gray-700 leading-relaxed" x-text="s.details"></p>
+                <div class="text-gray-700 leading-relaxed space-y-1" x-html="formatDetails(s.details)"></div>
               </div>
 
-              <!-- Documents -->
+              <!-- Documents (範例 + 模板整合為同一按鈕) -->
               <div x-show="s.documents && s.documents.length > 0" class="mb-8">
                 <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
                 <div class="grid sm:grid-cols-2 gap-3">
                   <template x-for="(doc, idx) in s.documents" :key="idx">
-                    <div class="doc-card cursor-pointer" @click="openDoc(doc)">
+                    <div class="doc-card border border-gray-200 rounded-xl p-4 hover:border-navy/30 transition cursor-pointer" @click="openDoc(doc)">
                       <div class="flex items-start gap-3">
-                        <span class="text-xl mt-0.5">📄</span>
-                        <div class="min-w-0">
+                        <span class="text-xl mt-0.5 shrink-0">📄</span>
+                        <div class="min-w-0 flex-1">
                           <p class="font-semibold text-sm text-navy" x-text="doc.name"></p>
-                          <p class="text-xs text-gray-500 mt-0.5" x-text="doc.description"></p>
-                          <div class="flex items-center gap-2 mt-2">
-                            <span class="text-xs text-gold font-medium">👆 按此查看範例</span>
+                          <p class="text-xs text-gray-500 mt-1" x-text="doc.description"></p>
+                          <div class="flex items-center gap-2 mt-3">
+                            <span class="inline-flex items-center gap-1 text-xs font-medium bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition">
+                              📄 檢視範例 PDF
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -368,57 +397,68 @@
     </button>
   </div>
 
-  <!-- ═══════════════ Document Overlay ═══════════════ -->
-  <div x-show="showOverlay" class="doc-overlay" @click.self="closeDoc()">
-    <div class="doc-overlay-content p-6">
-      <div class="flex items-center justify-between mb-4">
-        <h3 class="font-bold text-lg text-navy" x-text="selectedDoc?.name"></h3>
-        <button @click="closeDoc()" class="text-gray-400 hover:text-gray-600 text-xl leading-none">&times;</button>
+  <!-- ═══════════════ Document Overlay (範例 + 模板整合) ═══════════════ -->
+  <div x-show="showOverlay" class="fixed inset-0 bg-black/60 z-50 flex items-start justify-center p-4 overflow-y-auto" @click.self="closeDoc()">
+    <div class="bg-white rounded-xl max-w-2xl w-full shadow-2xl overflow-hidden mt-4 sm:mt-8 mb-8">
+      
+      <!-- Header -->
+      <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+        <h3 class="font-bold text-navy text-base sm:text-lg truncate" x-text="selectedDoc?.name"></h3>
+        <button @click="closeDoc()" class="text-gray-400 hover:text-gray-600 text-2xl leading-none shrink-0 ml-2">&times;</button>
       </div>
 
-      <!-- Demo Image -->
-      <template x-if="selectedDoc?.demoImage">
-        <div class="bg-gray-50 rounded-xl p-4 mb-4 border border-gray-200">
-          <img :src="selectedDoc.demoImage" :alt="selectedDoc.name + ' 填寫範例'"
-               class="w-full rounded-lg shadow-sm"
-               @error="$event.target.closest('div').querySelector('.img-fallback').classList.remove('hidden')"
-          />
-          <p class="text-xs text-gray-400 mt-2">👆 按右鍵 → 另存圖片即可儲存範例</p>
-          <div class="img-fallback hidden text-center py-8 text-gray-400">
-            <p>[範例圖片載入失敗]</p>
+      <div class="p-6">
+
+        <!-- Demo Image (主要) -->
+        <template x-if="selectedDoc?.demoImage">
+          <div class="bg-gray-50 rounded-xl p-4 mb-5 border border-gray-200">
+            <div class="relative">
+              <img :src="selectedDoc.demoImage" :alt="selectedDoc.name + ' 填寫範例'"
+                   class="w-full rounded-lg shadow-sm"
+                   @error="$event.target.closest('div').querySelector('.img-fallback').classList.remove('hidden')"
+              />
+              <div class="img-fallback hidden text-center py-12 text-gray-400 bg-gray-100 rounded-lg">
+                <p class="text-lg mb-2">🖼️</p>
+                <p>[範例圖片載入失敗]</p>
+              </div>
+            </div>
+            <p class="text-xs text-gray-400 mt-2 text-center">👆 按右鍵 → 另存圖片即可儲存範例</p>
           </div>
+        </template>
+
+        <!-- Description + 常見錯誤 -->
+        <div class="mb-5">
+          <p class="text-sm text-gray-600 mb-3" x-text="selectedDoc?.description"></p>
+          <template x-if="selectedDoc?.commonMistakes && selectedDoc.commonMistakes.length > 0">
+            <div class="bg-red-50 border border-red-100 rounded-xl p-4">
+              <h4 class="font-semibold text-red-600 text-sm mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
+              <ul class="text-sm text-gray-700 space-y-1.5">
+                <template x-for="(mistake, idx) in selectedDoc.commonMistakes" :key="idx">
+                  <li class="flex items-start gap-2">
+                    <span class="text-red-400 mt-0.5">•</span>
+                    <span x-text="mistake"></span>
+                  </li>
+                </template>
+              </ul>
+            </div>
+          </template>
         </div>
-      </template>
 
-      <!-- Description -->
-      <p class="text-sm text-gray-600 mb-4" x-text="selectedDoc?.description"></p>
+        <!-- 單一按鈕：下載模板（整合「查看範例」同「下載」為同一動作）-->
+        <template x-if="selectedDoc?.templateFile">
+          <a :href="selectedDoc.templateFile"
+             class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-3.5 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm"
+             @click="closeDoc()">
+            📥 下載可編輯模板（Word / PDF）
+          </a>
+        </template>
+        <template x-if="!selectedDoc?.templateFile">
+          <div class="bg-gray-50 rounded-xl py-4 text-center">
+            <p class="text-xs text-gray-400">（此文件暫無可編輯模板，創辦人將稍後提供）</p>
+          </div>
+        </template>
 
-      <!-- Common Mistakes -->
-      <template x-if="selectedDoc?.commonMistakes && selectedDoc.commonMistakes.length > 0">
-        <div class="risk-callout mb-4">
-          <h4 class="font-semibold text-warning text-sm mb-2">⚠️ 常見錯誤</h4>
-          <ul class="text-sm text-gray-700 space-y-1">
-            <template x-for="(mistake, idx) in selectedDoc.commonMistakes" :key="idx">
-              <li class="flex items-start gap-2">
-                <span class="text-warning">•</span>
-                <span x-text="mistake"></span>
-              </li>
-            </template>
-          </ul>
-        </div>
-      </template>
-
-      <!-- Download -->
-      <template x-if="selectedDoc?.templateFile">
-        <a :href="selectedDoc.templateFile"
-           class="btn-gov btn-gov-success text-sm w-full justify-center"
-           @click="closeDoc()">
-          📥 下載可編輯模板
-        </a>
-      </template>
-      <template x-if="!selectedDoc?.templateFile">
-        <p class="text-xs text-gray-400 text-center">（此文件暫無模板，創辦人將稍後提供）</p>
-      </template>
+      </div>
     </div>
   </div>
 
