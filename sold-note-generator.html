@@ -27,175 +27,232 @@
 
   <div class="max-w-4xl mx-auto px-4 py-6">
 
-    <!-- Instructions -->
     <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-6 text-center text-sm text-gray-700">
-      📄 跟住上面份 PDF 格式，喺下面填資料 → 一鍵生成已填好嘅 PDF
+      📝 填好下面資料 → 㩒「生成 PDF」→ 喺打印對話框揀「另存為 PDF」
     </div>
 
-    <!-- PDF Reference -->
-    <details class="mb-6 bg-white rounded-xl border border-gray-200 shadow-sm">
-      <summary class="px-4 py-3 font-semibold text-navy cursor-pointer hover:bg-gray-50 rounded-xl">👁️ 按此睇 PDF 參考格式</summary>
-      <div class="px-4 pb-4">
-        <img src="assets/demo/sold-note-preview.png" alt="Sold Note 參考格式" class="w-full border border-gray-200 rounded-lg" />
-      </div>
-    </details>
-
-    <!-- ═══════ FILLABLE FORM (exact match to PDF) ═══════ -->
-    <div id="pdf-capture" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px; font-family:'Noto Sans TC',sans-serif;">
-
-      <!-- FORM HEADER -->
+    <!-- ═══════ FORM ═══════ -->
+    <div class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px; font-family:'Noto Sans TC',sans-serif;">
       <div class="bg-navy text-white py-3 px-6 text-center">
         <h1 class="text-lg font-bold text-gold">SOLD NOTE / BOUGHT NOTE</h1>
-        <p class="text-xs text-gray-400 mt-0.5">股份賣出單 / 買入單</p>
+        <p class="text-xs text-gray-400">股份賣出單 / 買入單</p>
       </div>
-
       <div class="p-6 sm:p-8">
 
         <!-- SOLD NOTE -->
         <div class="mb-8">
           <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">SOLD NOTE（買方）</h2>
           <div class="space-y-0">
-            <div class="flex items-start py-3 border-b border-dotted border-gray-300">
-              <span class="text-sm font-medium text-gray-600 w-48 shrink-0 pt-1">Name of Purchaser (Transferee):</span>
-              <div id="f1" contenteditable="true" class="flex-1 px-2 py-1.5 text-sm bg-white rounded min-h-[28px] leading-relaxed">Siu Yan Li</div>
+            <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600">Name of Purchaser (Transferee):</span>
+              <input id="f1" class="border-none bg-transparent px-2 py-0.5 text-sm" value="Siu Yan Li" />
             </div>
-            <div class="flex items-start py-3 border-b border-dotted border-gray-300">
-              <span class="text-sm font-medium text-gray-600 w-48 shrink-0 pt-1">Address:</span>
-              <div id="f2" contenteditable="true" class="flex-1 px-2 py-1.5 text-sm bg-white rounded min-h-[28px] leading-relaxed">北角英皇道 250 號北角城中心 8/F 806 室</div>
+            <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600">Address:</span>
+              <input id="f2" class="border-none bg-transparent px-2 py-0.5 text-sm" value="北角英皇道 250 號北角城中心 8/F 806 室" />
             </div>
-            <div class="flex items-start py-3 border-b border-dotted border-gray-300">
-              <span class="text-sm font-medium text-gray-600 w-48 shrink-0 pt-1">Occupation:</span>
-              <div id="f3" contenteditable="true" class="flex-1 px-2 py-1.5 text-sm bg-white rounded min-h-[28px] leading-relaxed">Business Owner</div>
+            <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600">Occupation:</span>
+              <input id="f3" class="border-none bg-transparent px-2 py-0.5 text-sm" value="Business Owner" />
             </div>
-            <div class="flex items-start py-3 border-b border-dotted border-gray-300">
-              <span class="text-sm font-medium text-gray-600 w-48 shrink-0 pt-1">Name of Company:</span>
-              <div id="f4" contenteditable="true" class="flex-1 px-2 py-1.5 text-sm bg-white rounded min-h-[28px] leading-relaxed">ABC 貿易有限公司</div>
+            <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600">Name of Company:</span>
+              <input id="f4" class="border-none bg-transparent px-2 py-0.5 text-sm" value="ABC 貿易有限公司" />
             </div>
-            <div class="flex items-start py-3 border-b border-dotted border-gray-300">
-              <span class="text-sm font-medium text-gray-600 w-48 shrink-0 pt-1">Number of Shares:</span>
-              <div id="f5" contenteditable="true" class="flex-1 px-2 py-1.5 text-sm bg-white rounded min-h-[28px] leading-relaxed">5,000</div>
+            <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600">Number of Shares:</span>
+              <input id="f5" class="border-none bg-transparent px-2 py-0.5 text-sm" value="5,000" />
             </div>
-            <div class="flex items-start py-3 border-b border-dotted border-gray-300">
-              <span class="text-sm font-medium text-gray-600 w-48 shrink-0 pt-1">Consideration Paid:</span>
-              <div id="f6" contenteditable="true" class="flex-1 px-2 py-1.5 text-sm bg-white rounded min-h-[28px] leading-relaxed">HK$ 50,000.00</div>
+            <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600">Consideration Paid:</span>
+              <input id="f6" class="border-none bg-transparent px-2 py-0.5 text-sm" value="HK$ 50,000.00" />
             </div>
-            <div class="flex items-start py-3 border-b border-dotted border-gray-300">
-              <span class="text-sm font-medium text-gray-600 w-48 shrink-0 pt-1">Dated:</span>
-              <div id="f7" contenteditable="true" class="flex-1 px-2 py-1.5 text-sm bg-white rounded min-h-[28px] leading-relaxed">2026-06-06</div>
+            <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600">Dated:</span>
+              <input id="f7" type="date" class="border-none bg-transparent px-2 py-0.5 text-sm" />
             </div>
-            <div class="flex items-start py-3 border-b border-dotted border-gray-300">
-              <span class="text-sm font-medium text-gray-600 w-48 shrink-0 pt-1">Sign:</span>
-              <div id="f8" contenteditable="true" class="flex-1 px-2 py-1.5 text-sm bg-white rounded min-h-[28px] leading-relaxed text-gray-400 italic">（親筆簽署後掃描貼上）</div>
+            <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600">Sign:</span>
+              <input id="f8" class="border-none bg-transparent px-2 py-0.5 text-sm" placeholder="親筆簽署後掃描" />
             </div>
           </div>
         </div>
 
-        <!-- DASHED SEPARATOR -->
         <div class="border-t-2 border-dashed border-gray-400 my-6"></div>
 
         <!-- BOUGHT NOTE -->
         <div>
           <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">BOUGHT NOTE（賣方）</h2>
           <div class="space-y-0">
-            <div class="flex items-start py-3 border-b border-dotted border-gray-300">
-              <span class="text-sm font-medium text-gray-600 w-48 shrink-0 pt-1">Name of Seller (Transferor):</span>
-              <div id="f9" contenteditable="true" class="flex-1 px-2 py-1.5 text-sm bg-white rounded min-h-[28px] leading-relaxed">Tai Ming Chan</div>
+            <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600">Name of Seller (Transferor):</span>
+              <input id="f9" class="border-none bg-transparent px-2 py-0.5 text-sm" value="Tai Ming Chan" />
             </div>
-            <div class="flex items-start py-3 border-b border-dotted border-gray-300">
-              <span class="text-sm font-medium text-gray-600 w-48 shrink-0 pt-1">Address:</span>
-              <div id="f10" contenteditable="true" class="flex-1 px-2 py-1.5 text-sm bg-white rounded min-h-[28px] leading-relaxed">觀塘開源道 72 號溢財中心 12/F 1208 室</div>
+            <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600">Address:</span>
+              <input id="f10" class="border-none bg-transparent px-2 py-0.5 text-sm" value="觀塘開源道 72 號溢財中心 12/F 1208 室" />
             </div>
-            <div class="flex items-start py-3 border-b border-dotted border-gray-300">
-              <span class="text-sm font-medium text-gray-600 w-48 shrink-0 pt-1">Occupation:</span>
-              <div id="f11" contenteditable="true" class="flex-1 px-2 py-1.5 text-sm bg-white rounded min-h-[28px] leading-relaxed">Business Owner</div>
+            <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600">Occupation:</span>
+              <input id="f11" class="border-none bg-transparent px-2 py-0.5 text-sm" value="Business Owner" />
             </div>
-            <div class="flex items-start py-3 border-b border-dotted border-gray-300">
-              <span class="text-sm font-medium text-gray-600 w-48 shrink-0 pt-1">Number of Shares:</span>
-              <div id="f12" contenteditable="true" class="flex-1 px-2 py-1.5 text-sm bg-white rounded min-h-[28px] leading-relaxed">5,000</div>
+            <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600">Number of Shares:</span>
+              <input id="f12" class="border-none bg-transparent px-2 py-0.5 text-sm" value="5,000" />
             </div>
-            <div class="flex items-start py-3 border-b border-dotted border-gray-300">
-              <span class="text-sm font-medium text-gray-600 w-48 shrink-0 pt-1">Consideration Paid:</span>
-              <div id="f13" contenteditable="true" class="flex-1 px-2 py-1.5 text-sm bg-white rounded min-h-[28px] leading-relaxed">HK$ 50,000.00</div>
+            <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600">Consideration Paid:</span>
+              <input id="f13" class="border-none bg-transparent px-2 py-0.5 text-sm" value="HK$ 50,000.00" />
             </div>
-            <div class="flex items-start py-3 border-b border-dotted border-gray-300">
-              <span class="text-sm font-medium text-gray-600 w-48 shrink-0 pt-1">Dated:</span>
-              <div id="f14" contenteditable="true" class="flex-1 px-2 py-1.5 text-sm bg-white rounded min-h-[28px] leading-relaxed">2026-06-06</div>
+            <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600">Dated:</span>
+              <input id="f14" type="date" class="border-none bg-transparent px-2 py-0.5 text-sm" />
             </div>
-            <div class="flex items-start py-3 border-b border-dotted border-gray-300">
-              <span class="text-sm font-medium text-gray-600 w-48 shrink-0 pt-1">Sign:</span>
-              <div id="f15" contenteditable="true" class="flex-1 px-2 py-1.5 text-sm bg-white rounded min-h-[28px] leading-relaxed text-gray-400 italic">（親筆簽署後掃描貼上）</div>
+            <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600">Sign:</span>
+              <input id="f15" class="border-none bg-transparent px-2 py-0.5 text-sm" placeholder="親筆簽署後掃描" />
             </div>
           </div>
         </div>
 
-        <!-- FOOTER -->
-        <div class="text-center text-xs text-gray-300 border-t border-gray-100 pt-4 mt-6">
-          GovFlow · 示範範例
-        </div>
-
+        <div class="text-center text-xs text-gray-300 border-t border-gray-100 pt-4 mt-6">GovFlow · 示範範例</div>
       </div>
     </div>
 
     <!-- Actions -->
-    <div class="max-w-[800px] mx-auto mt-6">
-      <button onclick="generatePDF()" id="genBtn"
-              class="w-full bg-navy text-white font-bold py-4 px-6 rounded-xl hover:bg-navy-light transition shadow-lg text-lg flex items-center justify-center gap-2">
-        📄 一鍵生成 PDF
+    <div class="max-w-[800px] mx-auto mt-6 flex flex-col sm:flex-row gap-3">
+      <button onclick="printPDF()" id="genBtn"
+              class="flex-1 bg-navy text-white font-bold py-4 px-6 rounded-xl hover:bg-navy-light transition shadow-lg text-lg flex items-center justify-center gap-2">
+        🖨️ 生成 PDF（打印）
       </button>
-      <p id="status" class="text-center text-sm mt-3 hidden"></p>
+      <button onclick="downloadPDF()"
+              class="flex-1 bg-gold text-navy font-bold py-4 px-6 rounded-xl hover:bg-gold-light transition shadow-lg text-lg flex items-center justify-center gap-2">
+        📄 一鍵下載 PDF
+      </button>
     </div>
-
+    <p id="status" class="text-center text-sm mt-3 text-gray-500 hidden"></p>
   </div>
 
   <script>
-    // Set today's date
+    // Set dates
     const today = new Date().toISOString().split('T')[0];
-    document.getElementById('f7').textContent = today;
-    document.getElementById('f14').textContent = today;
+    document.getElementById('f7').value = today;
+    document.getElementById('f14').value = today;
 
-    async function generatePDF() {
-      const btn = document.getElementById('genBtn');
+    // Get all form values
+    function getVals() {
+      return {
+        f1: document.getElementById('f1').value,
+        f2: document.getElementById('f2').value,
+        f3: document.getElementById('f3').value,
+        f4: document.getElementById('f4').value,
+        f5: document.getElementById('f5').value,
+        f6: document.getElementById('f6').value,
+        f7: document.getElementById('f7').value,
+        f8: document.getElementById('f8').value || '________________',
+        f9: document.getElementById('f9').value,
+        f10: document.getElementById('f10').value,
+        f11: document.getElementById('f11').value,
+        f12: document.getElementById('f12').value,
+        f13: document.getElementById('f13').value,
+        f14: document.getElementById('f14').value,
+        f15: document.getElementById('f15').value || '________________',
+      };
+    }
+
+    // Generate print window -> user saves as PDF (most reliable for Chinese)
+    function printPDF() {
+      const v = getVals();
+      const w = window.open('', '_blank');
+      w.document.write(`<!DOCTYPE html><html><head>
+        <meta charset="UTF-8">
+        <title>Sold Note</title>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+          @page { margin: 15mm; size: A4; }
+          * { font-family: 'Noto Sans TC', sans-serif; }
+          body { font-size: 11pt; color: #000; line-height: 1.6; }
+          .header { background: #1B2A4A; color: #C9A84C; text-align: center; padding: 8px 0; font-weight: bold; font-size: 14pt; margin-bottom: 20px; }
+          .subheader { color: #999; font-size: 9pt; }
+          h2 { color: #1B2A4A; font-size: 11pt; border-bottom: 2px solid #1B2A4A; padding-bottom: 3px; margin: 20px 0 12px 0; }
+          .row { display: flex; padding: 4px 0; border-bottom: 1px dotted #ccc; }
+          .label { width: 200px; color: #666; font-weight: 500; flex-shrink: 0; }
+          .value { flex: 1; padding-left: 8px; min-height: 18px; }
+          .sep { border-top: 2px dashed #999; margin: 20px 0; }
+          .footer { text-align: center; color: #ccc; font-size: 8pt; margin-top: 30px; padding-top: 15px; border-top: 1px solid #eee; }
+        </style>
+      </head><body>
+        <div class="header">SOLD NOTE / BOUGHT NOTE<div class="subheader">股份賣出單 / 買入單</div></div>
+
+        <h2>SOLD NOTE（買方）</h2>
+        <div class="row"><span class="label">Name of Purchaser (Transferee):</span><span class="value">${v.f1}</span></div>
+        <div class="row"><span class="label">Address:</span><span class="value">${v.f2}</span></div>
+        <div class="row"><span class="label">Occupation:</span><span class="value">${v.f3}</span></div>
+        <div class="row"><span class="label">Name of Company:</span><span class="value">${v.f4}</span></div>
+        <div class="row"><span class="label">Number of Shares:</span><span class="value">${v.f5}</span></div>
+        <div class="row"><span class="label">Consideration Paid:</span><span class="value">${v.f6}</span></div>
+        <div class="row"><span class="label">Dated:</span><span class="value">${v.f7}</span></div>
+        <div class="row"><span class="label">Sign:</span><span class="value">${v.f8}</span></div>
+
+        <div class="sep"></div>
+
+        <h2>BOUGHT NOTE（賣方）</h2>
+        <div class="row"><span class="label">Name of Seller (Transferor):</span><span class="value">${v.f9}</span></div>
+        <div class="row"><span class="label">Address:</span><span class="value">${v.f10}</span></div>
+        <div class="row"><span class="label">Occupation:</span><span class="value">${v.f11}</span></div>
+        <div class="row"><span class="label">Number of Shares:</span><span class="value">${v.f12}</span></div>
+        <div class="row"><span class="label">Consideration Paid:</span><span class="value">${v.f13}</span></div>
+        <div class="row"><span class="label">Dated:</span><span class="value">${v.f14}</span></div>
+        <div class="row"><span class="label">Sign:</span><span class="value">${v.f15}</span></div>
+
+        <div class="footer">GovFlow · 示範範例</div>
+        <script>window.onload = function() { window.print(); window.close(); }</script>
+      </body></html>`);
+      w.document.close();
+    }
+
+    // Download PDF via jsPDF (image-based fallback)
+    async function downloadPDF() {
+      const btn = document.querySelector('button:last-child');
       const status = document.getElementById('status');
       btn.disabled = true;
       btn.innerHTML = '⏳ 生成中…';
-      status.className = 'text-center text-sm mt-3';
       status.classList.remove('hidden');
+      status.textContent = '';
 
       try {
         const { jsPDF } = window.jspdf;
-        const capture = document.getElementById('pdf-capture');
+        // Temporarily create a capture element
+        const capture = document.createElement('div');
+        capture.innerHTML = document.querySelector('.bg-white.shadow-xl').innerHTML;
+        capture.className = 'bg-white p-6';
+        capture.style.cssText = 'position:fixed;left:-9999px;top:0;width:800px;font-family:"Noto Sans TC",sans-serif;';
+        document.body.appendChild(capture);
 
-        const canvas = await html2canvas(capture, {
-          scale: 2,
-          useCORS: true,
-          backgroundColor: '#ffffff',
-          logging: false,
-        });
+        // Fill values into the clone
+        const v = getVals();
+        const inputs = capture.querySelectorAll('input');
+        inputs.forEach((el, i) => { el.value = Object.values(v)[i] || ''; });
 
-        const imgData = canvas.toDataURL('image/jpeg', 0.92);
-        const pdfW = 210;
-        const pdfH = (canvas.height / canvas.width) * pdfW;
+        await new Promise(r => setTimeout(r, 100));
 
+        const canvas = await html2canvas(capture, { scale: 2, useCORS: true, backgroundColor: '#fff', logging: false });
+        document.body.removeChild(capture);
+
+        const imgData = canvas.toDataURL('image/png');
         const doc = new jsPDF('p', 'mm', 'a4');
-        doc.addImage(imgData, 'JPEG', 0, 0, pdfW, Math.min(pdfH, 297));
-
-        if (pdfH > 297) {
-          doc.addPage();
-          doc.addImage(imgData, 'JPEG', 0, -297, pdfW, pdfH);
-        }
-
+        const pageW = 210;
+        const pageH = (canvas.height / canvas.width) * pageW;
+        doc.addImage(imgData, 'PNG', 0, 0, pageW, Math.min(pageH, 297));
+        if (pageH > 297) { doc.addPage(); doc.addImage(imgData, 'PNG', 0, -297, pageW, pageH); }
         doc.save('Sold_Note_Filled.pdf');
-        btn.innerHTML = '✅ PDF 已下載！';
-        status.textContent = '✅ 成功！請打印簽署。';
-        status.className = 'text-center text-sm mt-3 text-green-600';
-        setTimeout(() => {
-          btn.innerHTML = '📄 一鍵生成 PDF';
-          btn.disabled = false;
-        }, 2000);
 
+        btn.innerHTML = '✅ 已下載！';
+        status.textContent = '✅ 成功！';
+        status.className = 'text-center text-sm mt-3 text-green-600';
+        setTimeout(() => { btn.innerHTML = '📄 一鍵下載 PDF'; btn.disabled = false; }, 2000);
       } catch(e) {
-        console.error(e);
-        btn.innerHTML = '📄 一鍵生成 PDF';
+        btn.innerHTML = '📄 一鍵下載 PDF';
         btn.disabled = false;
         status.textContent = '❌ ' + e.message;
         status.className = 'text-center text-sm mt-3 text-red-500';
