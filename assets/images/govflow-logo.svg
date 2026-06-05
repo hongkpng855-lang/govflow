@@ -1,0 +1,6 @@
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer diamond: gold -->
+  <path d="M14 1L26 14L14 27L2 14L14 1Z" fill="#C9A84C" stroke="#C9A84C" stroke-width="0.5"/>
+  <!-- Inner diamond: navy -->
+  <path d="M14 5L20 14L14 23L8 14L14 5Z" fill="#1B2A4A" stroke="#C9A84C" stroke-width="0.3"/>
+</svg>
