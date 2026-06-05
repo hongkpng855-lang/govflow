@@ -177,22 +177,23 @@
         <title>Sold Note</title>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
         <style>
-          @page { margin: 15mm; size: A4; }
-          * { font-family: 'Noto Sans TC', sans-serif; }
-          body { font-size: 11pt; color: #000; line-height: 1.6; }
-          .header { background: #1B2A4A; color: #C9A84C; text-align: center; padding: 8px 0; font-weight: bold; font-size: 14pt; margin-bottom: 20px; }
-          .subheader { color: #999; font-size: 9pt; }
-          h2 { color: #1B2A4A; font-size: 11pt; border-bottom: 2px solid #1B2A4A; padding-bottom: 3px; margin: 20px 0 12px 0; }
-          .row { display: flex; padding: 4px 0; border-bottom: 1px dotted #ccc; }
-          .label { width: 200px; color: #666; font-weight: 500; flex-shrink: 0; }
-          .value { flex: 1; padding-left: 8px; min-height: 18px; }
-          .sep { border-top: 2px dashed #999; margin: 20px 0; }
-          .footer { text-align: center; color: #ccc; font-size: 8pt; margin-top: 30px; padding-top: 15px; border-top: 1px solid #eee; }
+          @page { margin: 0; size: A4; }
+          * { font-family: 'Noto Sans TC', sans-serif; box-sizing: border-box; }
+          body { font-size: 11pt; color: #000; line-height: 1.5; margin: 0; padding: 0; }
+          .page { width: 210mm; min-height: 297mm; padding: 15mm; }
+          .header { background: #1B2A4A; color: #C9A84C; text-align: center; padding: 10px 0; font-weight: bold; font-size: 16pt; margin: -15mm -15mm 15mm -15mm; }
+          .header .sub { color: #aaa; font-size: 9pt; font-weight: normal; }
+          .section-title { color: #1B2A4A; font-size: 12pt; font-weight: bold; border-bottom: 2px solid #1B2A4A; padding-bottom: 4px; margin: 18px 0 10px 0; }
+          .row { display: flex; padding: 5px 0; border-bottom: 1px dotted #ccc; align-items: flex-start; }
+          .label { width: 195px; color: #555; font-weight: 500; flex-shrink: 0; padding-top: 1px; }
+          .value { flex: 1; padding-left: 10px; min-height: 20px; }
+          .dash { border-top: 2px dashed #999; margin: 18px 0; }
+          .foot { text-align: center; color: #ccc; font-size: 8pt; margin-top: 25px; padding-top: 12px; border-top: 1px solid #eee; }
         </style>
-      </head><body>
-        <div class="header">SOLD NOTE / BOUGHT NOTE<div class="subheader">股份賣出單 / 買入單</div></div>
+      </head><body><div class="page">
+        <div class="header">SOLD NOTE / BOUGHT NOTE<div class="sub">股份賣出單 / 買入單</div></div>
 
-        <h2>SOLD NOTE（買方）</h2>
+        <div class="section-title">SOLD NOTE（買方）</div>
         <div class="row"><span class="label">Name of Purchaser (Transferee):</span><span class="value">${v.f1}</span></div>
         <div class="row"><span class="label">Address:</span><span class="value">${v.f2}</span></div>
         <div class="row"><span class="label">Occupation:</span><span class="value">${v.f3}</span></div>
@@ -202,9 +203,9 @@
         <div class="row"><span class="label">Dated:</span><span class="value">${v.f7}</span></div>
         <div class="row"><span class="label">Sign:</span><span class="value">${v.f8}</span></div>
 
-        <div class="sep"></div>
+        <div class="dash"></div>
 
-        <h2>BOUGHT NOTE（賣方）</h2>
+        <div class="section-title">BOUGHT NOTE（賣方）</div>
         <div class="row"><span class="label">Name of Seller (Transferor):</span><span class="value">${v.f9}</span></div>
         <div class="row"><span class="label">Address:</span><span class="value">${v.f10}</span></div>
         <div class="row"><span class="label">Occupation:</span><span class="value">${v.f11}</span></div>
@@ -213,8 +214,9 @@
         <div class="row"><span class="label">Dated:</span><span class="value">${v.f14}</span></div>
         <div class="row"><span class="label">Sign:</span><span class="value">${v.f15}</span></div>
 
-        <div class="footer">GovFlow · 示範範例</div>
-        <scr" + "ipt>window.onload = function() { window.print(); window.close(); }</scr" + "ipt>
+        <div class="foot">GovFlow · 示範範例</div>
+      </div>
+        <scr" + "ipt>window.onload = function() { setTimeout(function() { window.print(); window.close(); }, 500); }</scr" + "ipt>
       </body></html>`);
       w.document.close();
     }
