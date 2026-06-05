@@ -15,41 +15,31 @@
       theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
     }
   </script>
-  <style>
-    /* 強制打印樣式 */
-    @media print {
-      body * { visibility: hidden; }
-      .print-only, .print-only * { visibility: visible; }
-      .print-only { position: absolute; left: 0; top: 0; width: 100%; }
-      .no-print { display: none !important; }
-      @page { margin: 0; }
-    }
-  </style>
 </head>
 <body class="bg-gray-100 font-sans">
 
-  <nav class="bg-navy text-white sticky top-0 z-50 no-print">
+  <nav class="bg-navy text-white sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="./" class="flex items-center gap-2 font-bold text-lg"><span class="text-gold">◆</span> GovFlow</a>
       <span class="text-sm text-gray-400">Sold Note 填寫工具</span>
     </div>
   </nav>
 
-  <div class="max-w-4xl mx-auto px-4 py-6 no-print">
+  <div class="max-w-4xl mx-auto px-4 py-6">
 
     <!-- Trust Banner -->
     <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
       📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅 PDF 檔案
     </div>
 
-    <!-- Template Reference (用 modal 代替 details，避免 JS 外洩) -->
+    <!-- Template Modal Button -->
     <button onclick="openTemplateModal()"
-            class="mb-4 w-full bg-white border border-gray-200 rounded-xl px-4 py-3 font-semibold text-navy hover:bg-gray-50 transition shadow-sm text-sm flex items-center justify-center gap-2 no-print">
+            class="mb-4 w-full bg-white border border-gray-200 rounded-xl px-4 py-3 font-semibold text-navy hover:bg-gray-50 transition shadow-sm text-sm flex items-center justify-center gap-2">
       👁️ 觀看模板（PDF 參考格式）
     </button>
 
     <!-- Template Modal -->
-    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print" onclick="closeTemplateModal(event)">
+    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4" onclick="closeTemplateModal(event)">
       <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
         <div class="flex justify-between items-center p-4 border-b border-gray-200">
           <h3 class="font-bold text-navy">📄 Sold Note 模板參考</h3>
@@ -62,8 +52,7 @@
       </div>
     </div>
 
-    <!-- ═══════ PDF FORM ═══════ -->
-    <!-- 呢個區塊會被 html2canvas capture，內容必需完全正確 -->
+    <!-- ═══════ FORM ═══════ -->
     <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px; font-family:'Noto Sans TC',sans-serif;">
       <div class="bg-navy text-white py-3 px-6 text-center">
         <h1 class="text-lg font-bold text-gold">SOLD NOTE / BOUGHT NOTE</h1>
@@ -77,35 +66,35 @@
           <div class="space-y-0">
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Name of Purchaser (Transferee):</span>
-              <div id="f1" class="field-val border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Siu Yan Li</div>
+              <div id="f1" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Siu Yan Li</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Address:</span>
-              <div id="f2" class="field-val border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">北角英皇道 250 號北角城中心 8/F 806 室</div>
+              <div id="f2" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">北角英皇道 250 號北角城中心 8/F 806 室</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Occupation:</span>
-              <div id="f3" class="field-val border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Business Owner</div>
+              <div id="f3" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Business Owner</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Name of Company:</span>
-              <div id="f4" class="field-val border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">ABC 貿易有限公司</div>
+              <div id="f4" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">ABC 貿易有限公司</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Number of Shares:</span>
-              <div id="f5" class="field-val border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">5,000</div>
+              <div id="f5" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">5,000</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Consideration Paid:</span>
-              <div id="f6" class="field-val border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">HK$ 50,000.00</div>
+              <div id="f6" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">HK$ 50,000.00</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Dated:</span>
-              <div id="f7" class="field-val font-bold border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]"></div>
+              <div id="f7" contenteditable="true" class="field-date border-none bg-transparent px-2 py-1.5 text-sm font-bold outline-none focus:bg-amber-50 rounded min-h-[28px]"></div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Sign:</span>
-              <div id="f8" class="field-val border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">親筆簽署後掃描</div>
+              <div id="f8" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">親筆簽署後掃描</div>
             </div>
           </div>
         </div>
@@ -118,31 +107,31 @@
           <div class="space-y-0">
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Name of Seller (Transferor):</span>
-              <div id="f9" class="field-val border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Tai Ming Chan</div>
+              <div id="f9" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Tai Ming Chan</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Address:</span>
-              <div id="f10" class="field-val border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">觀塘開源道 72 號溢財中心 12/F 1208 室</div>
+              <div id="f10" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">觀塘開源道 72 號溢財中心 12/F 1208 室</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Occupation:</span>
-              <div id="f11" class="field-val border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Business Owner</div>
+              <div id="f11" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Business Owner</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Number of Shares:</span>
-              <div id="f12" class="field-val border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">5,000</div>
+              <div id="f12" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">5,000</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Consideration Paid:</span>
-              <div id="f13" class="field-val border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">HK$ 50,000.00</div>
+              <div id="f13" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">HK$ 50,000.00</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Dated:</span>
-              <div id="f14" class="field-val font-bold border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]"></div>
+              <div id="f14" contenteditable="true" class="field-date border-none bg-transparent px-2 py-1.5 text-sm font-bold outline-none focus:bg-amber-50 rounded min-h-[28px]"></div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Sign:</span>
-              <div id="f15" class="field-val border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">親筆簽署後掃描</div>
+              <div id="f15" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">親筆簽署後掃描</div>
             </div>
           </div>
         </div>
@@ -151,59 +140,50 @@
       </div>
     </div>
 
-    <!-- Actions (兩組按鈕：行內 capture + print fallback) -->
-    <div class="max-w-[800px] mx-auto mt-6 flex flex-col sm:flex-row gap-3 no-print">
+    <!-- Actions - 只有一鍵下載，無打印預覽 -->
+    <div class="max-w-[800px] mx-auto mt-6">
       <button onclick="downloadPDF()" id="genBtn"
-              class="w-full sm:w-auto flex-1 bg-navy text-white font-bold py-4 px-6 rounded-xl hover:bg-navy-light transition shadow-lg text-lg flex items-center justify-center gap-2">
+              class="w-full bg-navy text-white font-bold py-4 px-6 rounded-xl hover:bg-navy-light transition shadow-lg text-lg flex items-center justify-center gap-2">
         📄 下載 PDF（已填好）
       </button>
-      <button onclick="openPrintWindow()"
-              class="w-full sm:w-auto bg-gray-200 text-gray-700 font-bold py-4 px-6 rounded-xl hover:bg-gray-300 transition shadow text-lg flex items-center justify-center gap-2">
-        🖨️ 打印預覽
-      </button>
     </div>
-    <p id="status" class="text-center text-sm mt-3 text-gray-500 hidden no-print"></p>
+    <p id="status" class="text-center text-sm mt-3 hidden"></p>
   </div>
 
   <script>
-    // ===== 設定日期 =====
+    // ===== 設定日期（用 class .field-date 標記，確保 render 到）=====
     function setDates() {
       const d = new Date();
-      const dateStr = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
-      const f7 = document.getElementById('f7');
-      const f14 = document.getElementById('f14');
-      if (f7 && !f7.getAttribute('data-user-edited')) f7.textContent = dateStr;
-      if (f14 && !f14.getAttribute('data-user-edited')) f14.textContent = dateStr;
+      const y = d.getFullYear();
+      const m = String(d.getMonth()+1).padStart(2,'0');
+      const day = String(d.getDate()).padStart(2,'0');
+      const dateStr = y + '-' + m + '-' + day;
+      document.querySelectorAll('.field-date').forEach(el => {
+        if (!el.textContent.trim()) el.textContent = dateStr;
+      });
     }
     setDates();
 
-    // 追蹤用戶編輯日期
-    document.querySelectorAll('#f7, #f14').forEach(el => {
-      el.addEventListener('input', () => el.setAttribute('data-user-edited', 'true'));
-    });
-
     // ===== Get all form values =====
     function getVals() {
-      const f7 = document.getElementById('f7').textContent.trim();
-      const f14 = document.getElementById('f14').textContent.trim();
-      const d = new Date();
-      const today = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+      const today = new Date();
+      const dateStr = today.getFullYear() + '-' + String(today.getMonth()+1).padStart(2,'0') + '-' + String(today.getDate()).padStart(2,'0');
       return {
-        f1: document.getElementById('f1').textContent.trim(),
-        f2: document.getElementById('f2').textContent.trim(),
-        f3: document.getElementById('f3').textContent.trim(),
-        f4: document.getElementById('f4').textContent.trim(),
-        f5: document.getElementById('f5').textContent.trim(),
-        f6: document.getElementById('f6').textContent.trim(),
-        f7: f7 || today,
-        f8: document.getElementById('f8').textContent.trim() || '(親筆簽署)',
-        f9: document.getElementById('f9').textContent.trim(),
-        f10: document.getElementById('f10').textContent.trim(),
-        f11: document.getElementById('f11').textContent.trim(),
-        f12: document.getElementById('f12').textContent.trim(),
-        f13: document.getElementById('f13').textContent.trim(),
-        f14: f14 || today,
-        f15: document.getElementById('f15').textContent.trim() || '(親筆簽署)',
+        f1: (document.getElementById('f1').textContent || '').trim(),
+        f2: (document.getElementById('f2').textContent || '').trim(),
+        f3: (document.getElementById('f3').textContent || '').trim(),
+        f4: (document.getElementById('f4').textContent || '').trim(),
+        f5: (document.getElementById('f5').textContent || '').trim(),
+        f6: (document.getElementById('f6').textContent || '').trim(),
+        f7: (document.getElementById('f7').textContent || '').trim() || dateStr,
+        f8: (document.getElementById('f8').textContent || '').trim() || '(親筆簽署)',
+        f9: (document.getElementById('f9').textContent || '').trim(),
+        f10: (document.getElementById('f10').textContent || '').trim(),
+        f11: (document.getElementById('f11').textContent || '').trim(),
+        f12: (document.getElementById('f12').textContent || '').trim(),
+        f13: (document.getElementById('f13').textContent || '').trim(),
+        f14: (document.getElementById('f14').textContent || '').trim() || dateStr,
+        f15: (document.getElementById('f15').textContent || '').trim() || '(親筆簽署)',
       };
     }
 
@@ -219,152 +199,106 @@
       }
     }
 
-    // ===== 方法 1：一鍵下載 PDF（jsPDF + html2canvas）=====
+    // ===== 一鍵下載 PDF（clone capture，保證 1 頁輸出）=====
     async function downloadPDF() {
       const btn = document.getElementById('genBtn');
       const status = document.getElementById('status');
       btn.disabled = true;
       btn.innerHTML = '⏳ 生成中…';
+      status.className = 'text-center text-sm mt-3 text-blue-600';
+      status.textContent = '準備中…';
       status.classList.remove('hidden');
-      status.className = 'text-center text-sm mt-3 text-gray-500 no-print';
-      status.textContent = '';
 
       try {
         const { jsPDF } = window.jspdf;
 
-        // 等待字體完全載入
+        // 等字體載入
         await document.fonts.ready;
 
-        // 直接 capture 畫面上的 #pdf-form（唔 clone，避免位置/字體問題）
-        // 先移除 focus style 避免 capture 到奇怪背景
-        document.querySelectorAll('.field-val').forEach(el => el.classList.remove('focus:bg-amber-50'));
+        // 收集當前填寫嘅值
+        const v = getVals();
 
-        const canvas = await html2canvas(document.getElementById('pdf-form'), {
+        // 建立 capture clone（off-screen，但完全複製 HTML）
+        const original = document.getElementById('pdf-form');
+        const clone = document.createElement('div');
+        clone.innerHTML = original.innerHTML;
+        clone.style.cssText = 'position:fixed;left:-9999px;top:0;width:800px;z-index:-1;font-family:"Noto Sans TC",sans-serif;';
+        document.body.appendChild(clone);
+
+        // 將日期注入 clone（field-date class）
+        const today = new Date();
+        const dateStr = today.getFullYear() + '-' + String(today.getMonth()+1).padStart(2,'0') + '-' + String(today.getDate()).padStart(2,'0');
+        clone.querySelectorAll('.field-date').forEach(el => {
+          el.textContent = dateStr;
+        });
+
+        // 注入所有其他欄位嘅值
+        const vMap = { f1:'f1',f2:'f2',f3:'f3',f4:'f4',f5:'f5',f6:'f6',f7:'f7',f8:'f8',f9:'f9',f10:'f10',f11:'f11',f12:'f12',f13:'f13',f14:'f14',f15:'f15' };
+        for (const [id, val] of Object.entries(v)) {
+          const el = clone.querySelector('#' + id);
+          if (el) el.textContent = val;
+        }
+
+        // 等少少時間俾 clone render
+        await new Promise(r => setTimeout(r, 200));
+
+        // capture clone
+        const canvas = await html2canvas(clone, {
           scale: 3,
           useCORS: true,
           backgroundColor: '#ffffff',
           logging: false,
-          // 關鍵：確保字體正確 Render
-          windowWidth: 800,
+          onclone: (doc) => {
+            doc.querySelectorAll('[contenteditable]').forEach(el => {
+              el.style.background = 'transparent';
+            });
+          }
         });
 
-        // 還原 focus style
-        document.querySelectorAll('.field-val').forEach(el => el.classList.add('focus:bg-amber-50'));
+        // 清理 clone
+        document.body.removeChild(clone);
 
+        // 生成 PDF（強制 1 頁 A4）
         const imgData = canvas.toDataURL('image/png');
         const doc = new jsPDF('p', 'mm', 'a4');
         const pageW = 210;
-        const pageH = 297;
-        const imgW = pageW;
-        const imgH = (canvas.height / canvas.width) * pageW;
+        const imgRatio = canvas.height / canvas.width;
+        const imgH = pageW * imgRatio;
 
-        if (imgH <= pageH) {
-          // 一頁搞掂
-          doc.addImage(imgData, 'PNG', 0, 0, imgW, imgH);
+        // 如果內容超過 A4 高度，fit 入一頁
+        const pageH = 297;
+        if (imgH > pageH) {
+          // scale down to fit
+          const scale = pageH / imgH;
+          doc.addImage(imgData, 'PNG', 0, 0, pageW * scale, pageH);
         } else {
-          // 多頁：逐頁切割
-          const yRatio = canvas.height / pageH;
-          for (let p = 0; p * pageH < imgH; p++) {
-            if (p > 0) doc.addPage();
-            const sy = p * pageH / (pageH / pageW) * (canvas.width / pageW); // convert mm → px
-            const sh = Math.min(canvas.height - sy, canvas.width / pageW * pageH);
-            if (sh <= 0) break;
-            // crop canvas
-            const pageCanvas = document.createElement('canvas');
-            pageCanvas.width = canvas.width;
-            pageCanvas.height = sh;
-            const ctx = pageCanvas.getContext('2d');
-            ctx.drawImage(canvas, 0, sy, canvas.width, sh, 0, 0, canvas.width, sh);
-            const pageImgData = pageCanvas.toDataURL('image/png');
-            doc.addImage(pageImgData, 'PNG', 0, 0, imgW, (sh / canvas.width) * pageW);
-          }
+          // 正常一頁置中
+          const yOffset = (pageH - imgH) / 2;
+          doc.addImage(imgData, 'PNG', 0, yOffset, pageW, imgH);
         }
 
         doc.save('Sold_Note_Filled.pdf');
 
         btn.innerHTML = '✅ 已下載！';
+        status.className = 'text-center text-sm mt-3 text-green-600';
         status.textContent = '✅ PDF 已儲存到你的電腦';
-        status.className = 'text-center text-sm mt-3 text-green-600 no-print';
         setTimeout(() => {
           btn.innerHTML = '📄 下載 PDF（已填好）';
           btn.disabled = false;
-        }, 2000);
+          status.classList.add('hidden');
+        }, 2500);
+
       } catch(e) {
+        console.error('PDF generation error:', e);
         btn.innerHTML = '📄 下載 PDF（已填好）';
         btn.disabled = false;
-        status.textContent = '❌ 生成失敗，請試用「打印預覽」: ' + e.message;
-        status.className = 'text-center text-sm mt-3 text-red-500 no-print';
+        status.className = 'text-center text-sm mt-3 text-red-500';
+        status.textContent = '❌ 生成失敗: ' + e.message;
       }
-    }
-
-    // ===== 方法 2：打印預覽（瀏覽器原生，適合中文）=====
-    function openPrintWindow() {
-      const v = getVals();
-      // 用 iframe 代替 window.open，避免彈出被封鎖
-      const iframe = document.createElement('iframe');
-      iframe.style.cssText = 'position:fixed;left:-9999px;top:0;width:1px;height:1px;';
-      document.body.appendChild(iframe);
-
-      const doc = iframe.contentDocument || iframe.contentWindow.document;
-      doc.open();
-      doc.write('<!DOCTYPE html><html><head>');
-      doc.write('<meta charset="UTF-8">');
-      doc.write('<title>Sold Note - 打印預覽</title>');
-      doc.write('<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">');
-      doc.write('<style>');
-      doc.write('@page { margin: 15mm; size: A4; }');
-      doc.write('* { font-family: "Noto Sans TC", sans-serif; box-sizing: border-box; }');
-      doc.write('body { font-size: 11pt; color: #000; line-height: 1.6; margin: 0; padding: 0; }');
-      doc.write('.header { background: #1B2A4A; color: #C9A84C; text-align: center; padding: 10px 0; font-weight: bold; font-size: 16pt; margin: 0 0 15px 0; border-radius: 4px; }');
-      doc.write('.header .sub { color: #aaa; font-size: 9pt; font-weight: normal; }');
-      doc.write('.section-title { color: #1B2A4A; font-size: 12pt; font-weight: bold; border-bottom: 2px solid #1B2A4A; padding-bottom: 4px; margin: 18px 0 10px 0; }');
-      doc.write('.row { display: flex; padding: 6px 0; border-bottom: 1px dotted #ccc; }');
-      doc.write('.label { width: 195px; color: #555; font-weight: 500; flex-shrink: 0; font-size: 10pt; }');
-      doc.write('.value { flex: 1; padding-left: 10px; font-size: 10pt; }');
-      doc.write('.dash { border-top: 2px dashed #999; margin: 18px 0; }');
-      doc.write('.foot { text-align: center; color: #aaa; font-size: 8pt; margin-top: 25px; padding-top: 12px; border-top: 1px solid #eee; }');
-      doc.write('@media print { body { margin: 0; } }');
-      doc.write('</style></head><body>');
-      doc.write('<div class="header">SOLD NOTE / BOUGHT NOTE<div class="sub">股份賣出單 / 買入單</div></div>');
-      doc.write('<div class="section-title">SOLD NOTE（買方）</div>');
-      doc.write('<div class="row"><span class="label">Name of Purchaser (Transferee):</span><span class="value">' + escHtml(v.f1) + '</span></div>');
-      doc.write('<div class="row"><span class="label">Address:</span><span class="value">' + escHtml(v.f2) + '</span></div>');
-      doc.write('<div class="row"><span class="label">Occupation:</span><span class="value">' + escHtml(v.f3) + '</span></div>');
-      doc.write('<div class="row"><span class="label">Name of Company:</span><span class="value">' + escHtml(v.f4) + '</span></div>');
-      doc.write('<div class="row"><span class="label">Number of Shares:</span><span class="value">' + escHtml(v.f5) + '</span></div>');
-      doc.write('<div class="row"><span class="label">Consideration Paid:</span><span class="value">' + escHtml(v.f6) + '</span></div>');
-      doc.write('<div class="row"><span class="label">Dated:</span><span class="value">' + escHtml(v.f7) + '</span></div>');
-      doc.write('<div class="row"><span class="label">Sign:</span><span class="value">' + escHtml(v.f8) + '</span></div>');
-      doc.write('<div class="dash"></div>');
-      doc.write('<div class="section-title">BOUGHT NOTE（賣方）</div>');
-      doc.write('<div class="row"><span class="label">Name of Seller (Transferor):</span><span class="value">' + escHtml(v.f9) + '</span></div>');
-      doc.write('<div class="row"><span class="label">Address:</span><span class="value">' + escHtml(v.f10) + '</span></div>');
-      doc.write('<div class="row"><span class="label">Occupation:</span><span class="value">' + escHtml(v.f11) + '</span></div>');
-      doc.write('<div class="row"><span class="label">Number of Shares:</span><span class="value">' + escHtml(v.f12) + '</span></div>');
-      doc.write('<div class="row"><span class="label">Consideration Paid:</span><span class="value">' + escHtml(v.f13) + '</span></div>');
-      doc.write('<div class="row"><span class="label">Dated:</span><span class="value">' + escHtml(v.f14) + '</span></div>');
-      doc.write('<div class="row"><span class="label">Sign:</span><span class="value">' + escHtml(v.f15) + '</span></div>');
-      doc.write('<div class="foot">GovFlow · 示範範例</div>');
-      doc.write('<script>window.onload=function(){setTimeout(function(){window.print();},800)}<' + '/script>');
-      doc.write('</body></html>');
-      doc.close();
-
-      // 如果係 Chrome/Edge，可以自動打開預覽
-      const status = document.getElementById('status');
-      status.className = 'text-center text-sm mt-3 text-blue-600 no-print';
-      status.textContent = '🖨️ 打印對話框已打開，揀「另存為 PDF」就可以儲存';
-      status.classList.remove('hidden');
-    }
-
-    // ===== HTML Escape（防止 XSS）=====
-    function escHtml(str) {
-      const div = document.createElement('div');
-      div.textContent = str;
-      return div.innerHTML;
     }
   </script>
 
-  <footer class="bg-navy text-white py-8 mt-12 no-print">
+  <footer class="bg-navy text-white py-8 mt-12">
     <div class="max-w-4xl mx-auto px-4 text-center text-xs text-gray-400">
       <p>⚠️ 僅供參考，並不構成法律意見。填寫後請打印簽署。</p>
       <p class="mt-1">&copy; GovFlow</p>
