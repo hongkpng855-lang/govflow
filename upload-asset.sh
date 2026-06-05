@@ -1,5 +1,5 @@
 #!/bin/bash
-# GovFlow Asset Uploader
+# GovFlow Asset Uploader v2
 # 用法：bash upload-asset.sh
 # 幫你 upload 文件模板或示範圖片，自動放啱位置 + 更新 processes.json + deploy
 
@@ -9,23 +9,25 @@ cd "$(dirname "$0")"
 PROJECT_DIR="$(pwd)"
 
 echo "╔══════════════════════════════════════╗"
-echo "║   GovFlow 資產上傳工具              ║"
-echo "║   幫你放好文件 + 自動更新 + 上線     ║"
+echo "║   GovFlow 資產上傳工具 v2           ║"
+echo "║   支援 Word 模板 + 圖片 + PDF 自動轉換 ║"
 echo "╚══════════════════════════════════════╝"
 echo ""
 
 # ── 選擇類型 ──
 echo "你想上傳咩類型嘅文件？"
-echo "  1) 📄 Word 模板（.docx）→ templates/"
-echo "  2) 🖼️ 示範圖片（.svg/.png/.jpg）→ assets/demo/"
-echo "  3) 📂 兩個一齊上傳"
+echo "  1) 📄 Word 模板 (.docx) → templates/"
+echo "  2) 🖼️ 示範圖片 (.png/.jpg) → assets/demo/"
+echo "  3) 📄 PDF 示範 (自動轉 PNG) → assets/demo/"
+echo "  4) 📂 模板 + 示範圖片一齊上傳"
 echo ""
-read -p "輸入選項 (1/2/3): " TYPE
+read -p "輸入選項 (1/2/3/4): " TYPE
 
 case "$TYPE" in
   1) UPLOAD_TYPE="template" ;;
   2) UPLOAD_TYPE="demo" ;;
-  3) UPLOAD_TYPE="both" ;;
+  3) UPLOAD_TYPE="pdf2png" ;;
+  4) UPLOAD_TYPE="both" ;;
   *) echo "❌ 無效選項"; exit 1 ;;
 esac
 
@@ -65,14 +67,13 @@ upload_template() {
     return 1
   fi
 
-  # Get extension
   EXT="${FILE_PATH##*.}"
   DEST="$PROJECT_DIR/templates/${STEP_NAME}.${EXT}"
 
   cp "$FILE_PATH" "$DEST"
   echo "✅ 已複製到 templates/${STEP_NAME}.${EXT}"
 
-  # Update processes.json if needed
+  # Update processes.json
   if command -v python3 &>/dev/null; then
     python3 -c "
 import json
@@ -134,6 +135,57 @@ else:
   fi
 }
 
+# ── PDF 轉 PNG ──
+upload_pdf2png() {
+  echo ""
+  read -p "📄 PDF 檔案路徑（拖放檔案到呢度）: " FILE_PATH
+  FILE_PATH="${FILE_PATH#\'}"
+  FILE_PATH="${FILE_PATH%\'}"
+
+  if [ ! -f "$FILE_PATH" ]; then
+    echo "❌ 檔案唔存在: $FILE_PATH"
+    return 1
+  fi
+
+  # Convert PDF to PNG
+  if command -v pdftoppm &>/dev/null; then
+    echo "⏳ 正在轉換 PDF → PNG..."
+    pdftoppm -png -r 150 "$FILE_PATH" /tmp/govflow-convert
+    CONVERTED="/tmp/govflow-convert-1.png"
+    if [ -f "$CONVERTED" ]; then
+      DEST="$PROJECT_DIR/assets/demo/${STEP_NAME}.png"
+      cp "$CONVERTED" "$DEST"
+      echo "✅ 已轉換並複製到 assets/demo/${STEP_NAME}.png"
+
+      # Update processes.json
+      python3 -c "
+import json
+with open('$PROJECT_DIR/processes.json') as f:
+    d = json.load(f)
+updated = False
+for s in d.get('steps', []):
+    for doc in s.get('documents', []):
+        if 'demoImage' in doc and '${STEP_NAME}' in doc['demoImage']:
+            doc['demoImage'] = 'assets/demo/${STEP_NAME}.png'
+            updated = True
+if updated:
+    with open('$PROJECT_DIR/processes.json', 'w') as f:
+        json.dump(d, f, ensure_ascii=False, indent=2)
+    echo '✅ processes.json 已更新 demo 路徑'
+else:
+    echo 'ℹ️ 冇對應嘅步驟，請手動更新 processes.json'
+"
+      rm -f /tmp/govflow-convert-*.png
+    else:
+      echo "❌ 轉換失敗"
+      return 1
+    fi
+  else
+    echo "❌ 需要 pdftoppm（poppler-utils）先可以轉換 PDF"
+    return 1
+  fi
+}
+
 # ── 執行 ──
 case "$UPLOAD_TYPE" in
   "template")
@@ -142,8 +194,15 @@ case "$UPLOAD_TYPE" in
   "demo")
     upload_demo
     ;;
+  "pdf2png")
+    upload_pdf2png
+    ;;
   "both")
+    echo ""
+    echo "=== 先上傳 Word 模板 ==="
     upload_template
+    echo ""
+    echo "=== 再上傳示範圖片 ==="
     upload_demo
     ;;
 esac
