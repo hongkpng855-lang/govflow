@@ -85,33 +85,7 @@
     document.body.style.overflow = '';
   },
 
-  formatDetails(text) {
-    if (!text) return '';
-    const lines = text.split('\n');
-    let html = '';
-    let inList = false;
-    for (const rawLine of lines) {
-      const line = rawLine.trim();
-      if (!line) {
-        if (inList) { html += '</ul>'; inList = false; }
-        continue;
-      }
-      if (line.startsWith('\u2022') || line.startsWith('- ')) {
-        if (!inList) { html += '<ul class=\"list-disc pl-5 mb-2 space-y-1\">'; inList = true; }
-        html += '<li>' + this._e(line.replace(/^[\u2022\-]\s*/, '')) + '</li>';
-      } else {
-        if (inList) { html += '</ul>'; inList = false; }
-        html += '<p class=\"mb-2\">' + this._e(line) + '</p>';
-      }
-    }
-    if (inList) html += '</ul>';
-    return html;
-  },
-  _e(str) {
-    const d = document.createElement('div');
-    d.textContent = str;
-    return d.innerHTML;
-  },
+
   goToPayment() {
     window.open('https://1714457598663.gumroad.com/l/wkjykk', '_blank');
   }
@@ -261,7 +235,7 @@
               <!-- Details -->
               <div class="bg-white rounded-xl border border-gray-200 p-6 mb-8">
                 <h3 class="font-semibold text-navy text-lg mb-3">詳細說明</h3>
-                <div class="text-gray-700 leading-relaxed space-y-1" x-html="formatDetails(s.details)"></div>
+                <div class="text-gray-700 leading-relaxed whitespace-pre-line text-sm" x-text="s.details"></div>
               </div>
 
               <!-- Documents (範例 + 模板整合為同一按鈕) -->
