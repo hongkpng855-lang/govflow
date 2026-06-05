@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sold Note 生成器 | GovFlow</title>
+  <title>Sold Note PDF 填寫工具 | GovFlow</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -28,242 +27,217 @@
 </head>
 <body class="bg-gray-100 font-sans">
 
-  <!-- Nav -->
   <nav class="bg-navy text-white sticky top-0 z-50">
-    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+    <div class="max-w-5xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="./" class="flex items-center gap-2 font-bold text-lg">
         <span class="text-gold">◆</span> GovFlow
       </a>
-      <span class="text-sm text-gray-400 text-right leading-tight">
-        <span class="block">股份賣出單</span>
-        <span class="block text-xs">Sold Note 生成器</span>
-      </span>
+      <span class="text-sm text-gray-400">Sold Note 填寫工具</span>
     </div>
   </nav>
 
-  <div class="max-w-4xl mx-auto px-4 py-6">
+  <div class="max-w-5xl mx-auto px-4 py-6">
 
-    <!-- Generator Area - looks like the actual document -->
-    <div id="pdf-capture" class="bg-white shadow-xl border border-gray-300 mx-auto" style="max-width:800px;">
-
-      <!-- ══════════ Document Header ══════════ -->
-      <div class="bg-navy text-white py-4 px-6 text-center">
-        <h1 class="text-xl font-bold text-gold">股份賣出單 Sold Note</h1>
-      </div>
-
-      <div class="p-6 sm:p-8">
-
-        <!-- Ref + Date -->
-        <div class="flex justify-between text-sm text-gray-500 mb-6">
-          <div>
-            參考編號：<input id="refNo" class="border-b border-dashed border-gray-400 bg-transparent px-2 w-36 text-center text-navy font-medium" value="SN-2026-001" />
-          </div>
-          <div>
-            日期：<input id="docDate" type="date" class="border-b border-dashed border-gray-400 bg-transparent px-2 text-navy font-medium" />
-          </div>
-        </div>
-
-        <!-- Seller Section -->
-        <div class="bg-gray-50 border border-gray-200 rounded p-4 mb-4">
-          <h2 class="text-sm font-bold text-navy mb-3">賣方資料（Transferor）</h2>
-          <div class="grid sm:grid-cols-2 gap-3">
-            <div>
-              <label class="text-xs text-gray-400 block mb-1">姓名（英文）</label>
-              <input id="transferorName" class="w-full border border-gray-300 rounded px-3 py-2 text-sm" value="Tai Ming Chan" />
-            </div>
-            <div>
-              <label class="text-xs text-gray-400 block mb-1">持股數量</label>
-              <input id="transferorShares" class="w-full border border-gray-300 rounded px-3 py-2 text-sm" value="5,000 股（50%）" />
-            </div>
-            <div class="sm:col-span-2">
-              <label class="text-xs text-gray-400 block mb-1">地址</label>
-              <input id="transferorAddress" class="w-full border border-gray-300 rounded px-3 py-2 text-sm" value="九龍觀塘開源道 72 號溢財中心 12/F 1208 室" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Buyer Section -->
-        <div class="bg-gray-50 border border-gray-200 rounded p-4 mb-4">
-          <h2 class="text-sm font-bold text-navy mb-3">買方資料（Transferee）</h2>
-          <div class="grid sm:grid-cols-2 gap-3">
-            <div>
-              <label class="text-xs text-gray-400 block mb-1">姓名（英文）</label>
-              <input id="transfereeName" class="w-full border border-gray-300 rounded px-3 py-2 text-sm" value="Siu Yan Li" />
-            </div>
-            <div>
-              <label class="text-xs text-gray-400 block mb-1">接收股數</label>
-              <input id="transfereeShares" class="w-full border border-gray-300 rounded px-3 py-2 text-sm" value="5,000 股" />
-            </div>
-            <div class="sm:col-span-2">
-              <label class="text-xs text-gray-400 block mb-1">地址</label>
-              <input id="transfereeAddress" class="w-full border border-gray-300 rounded px-3 py-2 text-sm" value="香港北角英皇道 250 號北角城中心 8/F 806 室" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Transaction Details -->
-        <div class="bg-amber-50 border-2 border-amber-200 rounded p-4 mb-6">
-          <h2 class="text-sm font-bold text-navy mb-3">交易詳情</h2>
-          <div class="grid sm:grid-cols-3 gap-3">
-            <div>
-              <label class="text-xs text-gray-400 block mb-1">股份類別</label>
-              <select id="shareClass" class="w-full border border-gray-300 rounded px-3 py-2 text-sm">
-                <option>普通股 Ordinary Shares</option>
-                <option>優先股 Preference Shares</option>
-              </select>
-            </div>
-            <div>
-              <label class="text-xs text-gray-400 block mb-1">每股面值</label>
-              <input id="parValue" class="w-full border border-gray-300 rounded px-3 py-2 text-sm" value="HK$ 1.00" />
-            </div>
-            <div>
-              <label class="text-xs text-gray-400 block mb-1">轉讓股數</label>
-              <input id="shareQty" type="number" class="w-full border border-gray-300 rounded px-3 py-2 text-sm" value="5000" />
-            </div>
-          </div>
-          <div class="grid sm:grid-cols-2 gap-3 mt-3">
-            <div>
-              <label class="text-xs text-gray-400 block mb-1">每股作價 HK$</label>
-              <input id="pricePerShare" type="number" step="0.01" class="w-full border border-gray-300 rounded px-3 py-2 text-sm" value="10.00" />
-            </div>
-            <div>
-              <label class="text-xs text-gray-400 block mb-1">總代價 HK$</label>
-              <input id="totalPrice" class="w-full border border-gray-300 rounded px-3 py-2 text-sm bg-gray-100 font-bold text-navy" value="50,000.00" readonly />
-            </div>
-          </div>
-        </div>
-
-        <!-- Signatures -->
-        <div class="border-t border-gray-300 pt-4 mb-4">
-          <div class="grid sm:grid-cols-2 gap-6 text-sm">
-            <div>
-              <p class="font-medium text-navy mb-1">賣方簽署</p>
-              <input id="sellerSign" class="w-full border-b border-dashed border-gray-400 bg-transparent px-2 py-1 text-center font-semibold text-gold" placeholder="親筆簽署後掃描" />
-              <p class="text-xs text-gray-400 mt-1">日期：<input id="sellerDate" type="date" class="border-b border-dashed border-gray-300 bg-transparent w-32 text-xs" /></p>
-            </div>
-            <div>
-              <p class="font-medium text-navy mb-1">買方簽署</p>
-              <input id="buyerSign" class="w-full border-b border-dashed border-gray-400 bg-transparent px-2 py-1 text-center font-semibold text-gold" placeholder="親筆簽署後掃描" />
-              <p class="text-xs text-gray-400 mt-1">日期：<input id="buyerDate" type="date" class="border-b border-dashed border-gray-300 bg-transparent w-32 text-xs" /></p>
-            </div>
-          </div>
-          <div class="mt-3 text-xs text-gray-400">
-            見證人：________________ （獨立第三方，唔可以係轉讓人或承讓人）
-          </div>
-        </div>
-
-        <!-- Preview text -->
-        <div class="text-center text-xs text-gray-300 border-t border-gray-100 pt-3">
-          GovFlow · 示範範例
-        </div>
-
-      </div>
-    </div><!-- /pdf-capture -->
-
-    <!-- Actions -->
-    <div class="max-w-[800px] mx-auto mt-6 flex flex-col sm:flex-row gap-3">
-      <button onclick="generatePDF()" id="genBtn"
-              class="flex-1 bg-navy text-white font-bold py-4 px-6 rounded-xl hover:bg-navy-light transition shadow-lg text-lg flex items-center justify-center gap-2">
-        📄 一鍵生成 PDF
-      </button>
-      <button onclick="resetForm()"
-              class="bg-gray-200 text-gray-600 font-medium py-4 px-6 rounded-xl hover:bg-gray-300 transition">
-        🔄 重設
-      </button>
+    <!-- Info -->
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-6 text-center text-sm text-gray-700">
+      📝 填好右邊嘅資料，一鍵生成已填好嘅 <strong>Sold Note PDF</strong>，下載後打印簽署就得。
     </div>
 
-    <div id="status" class="text-center mt-3 text-sm hidden"></div>
+    <div class="grid lg:grid-cols-2 gap-6">
 
+      <!-- ═══ PDF Preview ═══ -->
+      <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+        <div class="bg-navy text-white text-center py-2 text-sm font-semibold">📄 Sold Note PDF 預覽</div>
+        <div class="p-4">
+          <img src="assets/demo/sold-note-preview.png" alt="Sold Note 表格"
+               class="w-full border border-gray-200 rounded-lg shadow-sm"
+               onerror="this.outerHTML='<div class=\'bg-gray-100 rounded-lg p-8 text-center text-gray-400\'>PDF 預覽載入中…</div>'" />
+        </div>
+        <div class="bg-gray-50 px-4 py-2 border-t border-gray-200 text-xs text-gray-400 text-center">
+          基於你提供嘅 Sold Note 官方格式
+        </div>
+      </div>
+
+      <!-- ═══ Form Fields ═══ -->
+      <div>
+        <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+          <h2 class="text-lg font-bold text-navy mb-5">✏️ 填寫資料</h2>
+
+          <!-- SOLD NOTE (Transferee / Buyer) -->
+          <div class="mb-6">
+            <h3 class="text-sm font-bold text-gold bg-gold/10 rounded-lg px-3 py-1.5 mb-3 inline-block">SOLD NOTE（買方）</h3>
+            <div class="space-y-3">
+              <div>
+                <label class="text-xs font-medium text-gray-500">Name of Purchaser (Transferee)</label>
+                <input id="buyerName" class="w-full border-2 border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold transition" value="Siu Yan Li" />
+              </div>
+              <div>
+                <label class="text-xs font-medium text-gray-500">Address</label>
+                <input id="buyerAddress" class="w-full border-2 border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:border-gold" value="北角英皇道 250 號北角城中心 8/F 806 室" />
+              </div>
+              <div>
+                <label class="text-xs font-medium text-gray-500">Occupation</label>
+                <input id="buyerOccupation" class="w-full border-2 border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:border-gold" value="Business Owner" />
+              </div>
+              <div>
+                <label class="text-xs font-medium text-gray-500">Name of Company</label>
+                <input id="companyName" class="w-full border-2 border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:border-gold" value="ABC 貿易有限公司" />
+              </div>
+              <div>
+                <label class="text-xs font-medium text-gray-500">Number of shares</label>
+                <input id="numShares" class="w-full border-2 border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:border-gold" value="5,000" />
+              </div>
+              <div>
+                <label class="text-xs font-medium text-gray-500">Consideration Paid (HK$)</label>
+                <input id="consideration" class="w-full border-2 border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:border-gold" value="50,000.00" />
+              </div>
+              <div>
+                <label class="text-xs font-medium text-gray-500">Date</label>
+                <input id="soldDate" type="date" class="w-full border-2 border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:border-gold" />
+              </div>
+            </div>
+          </div>
+
+          <!-- BOUGHT NOTE (Transferor / Seller) -->
+          <div class="mb-6">
+            <h3 class="text-sm font-bold text-gold bg-gold/10 rounded-lg px-3 py-1.5 mb-3 inline-block">BOUGHT NOTE（賣方）</h3>
+            <div class="space-y-3">
+              <div>
+                <label class="text-xs font-medium text-gray-500">Name of Seller (Transferor)</label>
+                <input id="sellerName" class="w-full border-2 border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:border-gold" value="Tai Ming Chan" />
+              </div>
+              <div>
+                <label class="text-xs font-medium text-gray-500">Address</label>
+                <input id="sellerAddress" class="w-full border-2 border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:border-gold" value="觀塘開源道 72 號溢財中心 12/F 1208 室" />
+              </div>
+              <div>
+                <label class="text-xs font-medium text-gray-500">Occupation</label>
+                <input id="sellerOccupation" class="w-full border-2 border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:border-gold" value="Business Owner" />
+              </div>
+              <div>
+                <label class="text-xs font-medium text-gray-500">Number of shares</label>
+                <input id="sellerShares" class="w-full border-2 border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:border-gold" value="5,000" />
+              </div>
+              <div>
+                <label class="text-xs font-medium text-gray-500">Consideration Paid (HK$)</label>
+                <input id="sellerConsideration" class="w-full border-2 border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:border-gold" value="50,000.00" />
+              </div>
+              <div>
+                <label class="text-xs font-medium text-gray-500">Date</label>
+                <input id="boughtDate" type="date" class="w-full border-2 border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:border-gold" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Generate Button -->
+          <button onclick="fillPDF()" id="genBtn"
+                  class="w-full bg-navy text-white font-bold py-4 px-6 rounded-xl hover:bg-navy-light transition shadow-lg text-lg flex items-center justify-center gap-2">
+            📄 一鍵填入 PDF
+          </button>
+          <p id="status" class="text-center text-sm mt-3 text-gray-500"></p>
+        </div>
+      </div>
+
+    </div>
   </div>
 
+  <!-- Register font for PDF -->
   <script>
-    // Auto-calculate total
-    document.getElementById('shareQty').addEventListener('input', calcTotal);
-    document.getElementById('pricePerShare').addEventListener('input', calcTotal);
-    function calcTotal() {
-      const qty = parseInt(document.getElementById('shareQty').value) || 0;
-      const price = parseFloat(document.getElementById('pricePerShare').value) || 0;
-      const total = qty * price;
-      document.getElementById('totalPrice').value = total.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
-    }
+    // Set today's date
+    document.getElementById('soldDate').valueAsDate = new Date();
+    document.getElementById('boughtDate').valueAsDate = new Date();
 
-    // Set default dates
-    document.getElementById('docDate').valueAsDate = new Date();
-    document.getElementById('sellerDate').valueAsDate = new Date();
-    document.getElementById('buyerDate').valueAsDate = new Date();
-    calcTotal();
-
-    function showStatus(msg, isError) {
-      const el = document.getElementById('status');
-      el.textContent = msg;
-      el.className = 'text-center mt-3 text-sm ' + (isError ? 'text-red-500' : 'text-green-600');
-      el.classList.remove('hidden');
-    }
-
-    async function generatePDF() {
+    async function fillPDF() {
       const btn = document.getElementById('genBtn');
       btn.disabled = true;
-      btn.innerHTML = '⏳ 生成中…';
+      btn.innerHTML = '⏳ 正在生成…';
+      document.getElementById('status').textContent = '';
 
       try {
-        const { jsPDF } = window.jspdf;
-        const capture = document.getElementById('pdf-capture');
+        // Fetch the PDF template
+        const templateUrl = 'templates/sold-note-template.pdf';
+        const resp = await fetch(templateUrl);
+        if (!resp.ok) throw new Error('無法載入 PDF 模板');
+        const pdfBytes = await resp.arrayBuffer();
 
-        // Capture the document as image (browser renders Chinese correctly)
-        const canvas = await html2canvas(capture, {
-          scale: 2,
-          useCORS: true,
-          backgroundColor: '#ffffff',
-          logging: false,
-        });
+        // Load with pdf-lib
+        const { PDFDocument, StandardFonts, rgb } = PDFLib;
+        const pdfDoc = await PDFDocument.load(pdfBytes);
 
-        const imgData = canvas.toDataURL('image/jpeg', 0.95);
-        const imgW = 210; // A4 width in mm
-        const imgH = (canvas.height / canvas.width) * imgW;
+        // Embed font that supports basic Latin characters
+        const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
-        const doc = new jsPDF('p', 'mm', 'a4');
-        doc.addImage(imgData, 'JPEG', 0, 0, imgW, imgH);
+        const pages = pdfDoc.getPages();
+        const page = pages[0];
+        const { height } = page.getSize();
 
-        // If content overflows, add pages
-        if (imgH > 297) {
-          // For now, scale to fit one page
+        // Helper: draw text at position (x from left, y from bottom)
+        // PDF coordinates: (0,0) is bottom-left
+        // A4 = 595 x 842 points
+        function drawField(text, x, y, size) {
+          if (!text) return;
+          page.drawText(String(text), {
+            x: x,
+            y: y,
+            size: size || 10,
+            font: font,
+            color: rgb(0, 0, 0),
+          });
         }
 
-        const fileName = 'Sold_Note_' + (document.getElementById('transferorName').value || 'unknown') + '.pdf';
-        doc.save(fileName);
+        // -- Position Calibration --
+        // The PDF template has labels followed by underscores
+        // We draw text right after the label text
+        // SOLD NOTE section (buyer/transferee) - top half of page
+        const soldStart = height - 128; // after "Name of Purchaser (Transferee):"
+        drawField(document.getElementById('buyerName').value, 198, soldStart, 10);
+        drawField(document.getElementById('buyerAddress').value, 198, soldStart - 20, 10);
+        drawField(document.getElementById('buyerOccupation').value, 198, soldStart - 40, 10);
+        drawField(document.getElementById('companyName').value, 198, soldStart - 60, 10);
+        drawField(document.getElementById('numShares').value, 198, soldStart - 80, 10);
+        drawField(document.getElementById('consideration').value, 198, soldStart - 100, 10);
+        drawField(document.getElementById('soldDate').value, 198, soldStart - 120, 10);
+
+        // BOUGHT NOTE section (seller/transferor) - bottom half after separator
+        const boughtStart = height - 375;
+        drawField(document.getElementById('sellerName').value, 198, boughtStart, 10);
+        drawField(document.getElementById('sellerAddress').value, 198, boughtStart - 20, 10);
+        drawField(document.getElementById('sellerOccupation').value, 198, boughtStart - 40, 10);
+        drawField(document.getElementById('sellerShares').value, 198, boughtStart - 60, 10);
+        drawField(document.getElementById('sellerConsideration').value, 198, boughtStart - 80, 10);
+        drawField(document.getElementById('boughtDate').value, 198, boughtStart - 100, 10);
+
+        // Save
+        const filledPdfBytes = await pdfDoc.save();
+        const blob = new Blob([filledPdfBytes], { type: 'application/pdf' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Sold_Note_Filled.pdf';
+        a.click();
+        URL.revokeObjectURL(url);
 
         btn.innerHTML = '✅ PDF 已下載！';
-        showStatus('✅ 成功生成！檔案已下載');
+        document.getElementById('status').textContent = '✅ 成功生成已填好嘅 PDF！請打印簽署。';
         setTimeout(() => {
-          btn.innerHTML = '📄 一鍵生成 PDF';
+          btn.innerHTML = '📄 一鍵填入 PDF';
           btn.disabled = false;
         }, 2500);
 
       } catch(e) {
         console.error(e);
-        btn.innerHTML = '📄 一鍵生成 PDF';
+        btn.innerHTML = '📄 一鍵填入 PDF';
         btn.disabled = false;
-        showStatus('❌ 生成失敗：' + e.message, true);
+        document.getElementById('status').textContent = '❌ ' + e.message;
       }
-    }
-
-    function resetForm() {
-      document.querySelectorAll('input:not([readonly])').forEach(el => el.value = '');
-      document.getElementById('refNo').value = 'SN-2026-001';
-      document.getElementById('shareClass').selectedIndex = 0;
-      calcTotal();
-      document.getElementById('docDate').valueAsDate = new Date();
-      document.getElementById('sellerDate').valueAsDate = new Date();
-      document.getElementById('buyerDate').valueAsDate = new Date();
-      showStatus('');
     }
   </script>
 
-  <!-- Footer -->
+  <!-- Save a PNG preview of the PDF -->
   <footer class="bg-navy text-white py-8 mt-12">
-    <div class="max-w-4xl mx-auto px-4 text-center text-xs text-gray-400">
-      <p>⚠️ 此工具僅供參考，並不構成法律意見。填寫後請打印簽署，並諮詢專業人士。</p>
-      <p class="mt-1">© GovFlow · 一次性付費 HK$149 解鎖完整指南</p>
+    <div class="max-w-5xl mx-auto px-4 text-center text-xs text-gray-400">
+      <p>⚠️ 此工具僅供參考，並不構成法律意見。填寫後請打印簽署。</p>
+      <p class="mt-1">© GovFlow</p>
     </div>
   </footer>
 </body>
