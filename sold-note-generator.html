@@ -77,7 +77,7 @@
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Dated:</span>
-              <input id="f7" type="date" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none" />
+              <div id="f7" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none"></div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Sign:</span>
@@ -114,7 +114,7 @@
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Dated:</span>
-              <input id="f14" type="date" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none" />
+              <div id="f14" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none"></div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Sign:</span>
@@ -140,8 +140,8 @@
   <script>
     // Set dates
     const today = new Date().toISOString().split('T')[0];
-    document.getElementById('f7').value = today;
-    document.getElementById('f14').value = today;
+    document.getElementById('f7').textContent = today;
+    document.getElementById('f14').textContent = today;
 
     // Get all form values
     function getVals() {
@@ -152,14 +152,14 @@
         f4: document.getElementById('f4').textContent.trim(),
         f5: document.getElementById('f5').textContent.trim(),
         f6: document.getElementById('f6').textContent.trim(),
-        f7: document.getElementById('f7').value || new Date().toISOString().split('T')[0],
+        f7: document.getElementById('f7').textContent.trim() || new Date().toISOString().split('T')[0],
         f8: document.getElementById('f8').textContent.trim() || '________________',
         f9: document.getElementById('f9').textContent.trim(),
         f10: document.getElementById('f10').textContent.trim(),
         f11: document.getElementById('f11').textContent.trim(),
         f12: document.getElementById('f12').textContent.trim(),
         f13: document.getElementById('f13').textContent.trim(),
-        f14: document.getElementById('f14').value || new Date().toISOString().split('T')[0],
+        f14: document.getElementById('f14').textContent.trim() || new Date().toISOString().split('T')[0],
         f15: document.getElementById('f15').textContent.trim() || '________________',
       };
     }
@@ -250,7 +250,7 @@
         const pageW = 210;
         const pageH = (canvas.height / canvas.width) * pageW;
         doc.addImage(imgData, 'PNG', 0, 0, pageW, Math.min(pageH, 297));
-        if (pageH > 297) { doc.addPage(); doc.addImage(imgData, 'PNG', 0, -297, pageW, pageH); }
+        
         doc.save('Sold_Note_Filled.pdf');
 
         btn.innerHTML = '✅ 已下載！';
