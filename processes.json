@@ -5,7 +5,7 @@
   "estimatedTime": "1-2 星期（視乎準備是否充足）",
   "difficulty": "中等",
   "totalSteps": 5,
-  "freeSteps": 2,
+  "freeSteps": 0,
   "price": 149,
   "currency": "HKD",
   "priceComparison": {
@@ -19,7 +19,7 @@
       "stepNumber": 1,
       "title": "簽署股份賣出單（Sold Note）",
       "summary": "賣方記錄轉讓股數、每股作價及總代價，作為交易基礎文件",
-      "isFree": true,
+      "isFree": false,
       "details": "Sold Note 係成個交易嘅起點。好多人都 skip 呢步，覺得「口頭 agreement 就得」，但其實冇一份書面記錄，到後期填轉讓書嘅時候好容易撈亂數字。\n\n我當初就係咁：同買方 WhatsApp 講好價就當搞掂，點知到填 Instrument of Transfer 嗰陣，大家對個股數同作價嘅記憶唔一致，要重新 confirm 一次，浪費咗成個星期。\n\nSold Note 要填嘅嘢：\n- 賣方（Transferor）全名及地址\n- 股份類別（普通股？優先股？）\n- 轉讓股數及每股面值\n- 每股作價及總代價\n- 交易日期\n- 賣方簽署\n\n呢份文件唔使提交俾政府，係俾你自己同買方留底用。但佢好重要，因為之後所有文件嘅數字都要同 Sold Note 一致。\n\n小貼士：即使係親友之間轉讓，都建議做一份 Sold Note。我見過有 case 係親戚之間口頭講好，幾年後反口，搞到要打官司。",
       "documents": [
         {
@@ -43,7 +43,7 @@
       "stepNumber": 2,
       "title": "簽署承讓人確認信（Letter of Transferee of Shares）",
       "summary": "承讓人書面確認接收股份，同意受公司組織章程細則約束",
-      "isFree": true,
+      "isFree": false,
       "details": "呢份信係承讓人（買方）正式確認接收股份嘅文件。簽咗呢封信，代表買方同意成為公司股東，願意受公司嘅組織章程細則（Articles of Association）約束。\n\n我當初完全唔知有呢份文件，以為簽完轉讓書就直接搞掂。點知會計師朋友問我「你買方簽咗 Transferee Letter 未？」我先知道原來仲有呢樣嘢。\n\nLetter of Transferee 要包含：\n- 承讓人（Transferee）全名及地址\n- 接收股份數目及類別\n- 確認同意受公司組織章程細則約束\n- 同意將姓名加入公司股東名冊\n- 承讓人簽署\n\n注意：如果承讓人係一間公司（即係公司買公司股份），要列明公司註冊編號同授權代表簽署。\n\n呢份文件同樣唔使提交俾政府，係公司內部記錄用。但如果你打算之後做銀行貸款或者盡職調查，呢份信係重要嘅 proof。",
       "documents": [
         {
