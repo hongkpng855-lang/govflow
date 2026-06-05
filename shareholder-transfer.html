@@ -244,16 +244,19 @@
                 <div class="grid sm:grid-cols-2 gap-4">
                   <template x-for="(doc, idx) in s.documents" :key="idx">
                     <template x-if="s.stepNumber === 1">
-                      <a href="sold-note-generator.html"
-                         class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md">
-                        <!-- Demo 小預覽 -->
+                      <div class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition cursor-pointer shadow-sm hover:shadow-md">
+                        <!-- Demo 小預覽（click 開 overlay 睇大圖） -->
                         <template x-if="doc.demoImage">
-                          <div class="h-32 sm:h-40 bg-gray-100 overflow-hidden relative">
+                          <div class="h-32 sm:h-40 bg-gray-100 overflow-hidden relative" @click="openDoc(doc)">
                             <img :src="doc.demoImage" :alt="doc.name" class="w-full h-full object-cover" @error="$event.target.closest('div').innerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-sm>🖼️ 範例圖片</div>'" />
+                            <div class="absolute inset-0 bg-black/0 hover:bg-black/10 transition flex items-center justify-center">
+                              <span class="opacity-0 hover:opacity-100 bg-white/90 text-navy text-xs font-bold px-3 py-1.5 rounded-full shadow transition">👁️ 按此放大睇範例</span>
+                            </div>
                             <div class="absolute top-2 right-2 bg-gold text-navy text-xs font-bold px-2 py-0.5 rounded-full shadow">互動工具</div>
                           </div>
                         </template>
-                        <div class="p-4">
+                        <!-- 下方內容（click 去生成器）-->
+                        <a href="sold-note-generator.html" class="block p-4 hover:bg-gray-50 transition">
                           <p class="font-bold text-sm text-navy" x-text="doc.name"></p>
                           <p class="text-xs text-gray-500 mt-1 leading-relaxed" x-text="doc.description"></p>
                           <div class="flex items-center gap-2 mt-3">
@@ -261,8 +264,8 @@
                               🚀 填寫 + 生成 PDF
                             </span>
                           </div>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </template>
                     <template x-if="s.stepNumber !== 1">
                       <div class="doc-card bg-white border border-gray-200 rounded-xl p-4 hover:border-navy/30 transition cursor-pointer shadow-sm hover:shadow" @click="openDoc(doc)">
