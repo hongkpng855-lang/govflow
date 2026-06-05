@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@pdf-lib/fontkit@1.1.1/dist/fontkit.browser.min.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -160,8 +161,9 @@
         if (!resp.ok) throw new Error('無法載入 PDF 模板');
         const pdfBytes = await resp.arrayBuffer();
 
-        // Load with pdf-lib
+        // Load with pdf-lib (register fontkit for custom fonts)
         const { PDFDocument, rgb } = PDFLib;
+        PDFDocument.registerFontkit(fontkit);
         const pdfDoc = await PDFDocument.load(pdfBytes);
 
         // Embed Chinese-supporting font
