@@ -40,7 +40,7 @@
     </details>
 
     <!-- ═══════ FORM ═══════ -->
-    <div class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px; font-family:'Noto Sans TC',sans-serif;">
+    <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px; font-family:'Noto Sans TC',sans-serif;">
       <div class="bg-navy text-white py-3 px-6 text-center">
         <h1 class="text-lg font-bold text-gold">SOLD NOTE / BOUGHT NOTE</h1>
         <p class="text-xs text-gray-400">股份賣出單 / 買入單</p>
@@ -53,35 +53,35 @@
           <div class="space-y-0">
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Name of Purchaser (Transferee):</span>
-              <input id="f1" class="border-none bg-transparent px-2 py-0.5 text-sm" value="Siu Yan Li" />
+              <div id="f1" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Siu Yan Li</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Address:</span>
-              <input id="f2" class="border-none bg-transparent px-2 py-0.5 text-sm" value="北角英皇道 250 號北角城中心 8/F 806 室" />
+              <div id="f2" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">北角英皇道 250 號北角城中心 8/F 806 室</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Occupation:</span>
-              <input id="f3" class="border-none bg-transparent px-2 py-0.5 text-sm" value="Business Owner" />
+              <div id="f3" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Business Owner</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Name of Company:</span>
-              <input id="f4" class="border-none bg-transparent px-2 py-0.5 text-sm" value="ABC 貿易有限公司" />
+              <div id="f4" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">ABC 貿易有限公司</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Number of Shares:</span>
-              <input id="f5" class="border-none bg-transparent px-2 py-0.5 text-sm" value="5,000" />
+              <div id="f5" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">5,000</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Consideration Paid:</span>
-              <input id="f6" class="border-none bg-transparent px-2 py-0.5 text-sm" value="HK$ 50,000.00" />
+              <div id="f6" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">HK$ 50,000.00</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Dated:</span>
-              <input id="f7" type="date" class="border-none bg-transparent px-2 py-0.5 text-sm" />
+              <input id="f7" type="date" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none" />
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Sign:</span>
-              <input id="f8" class="border-none bg-transparent px-2 py-0.5 text-sm" placeholder="親筆簽署後掃描" />
+              <div id="f8" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]" data-placeholder="親筆簽署後掃描">親筆簽署後掃描</div>
             </div>
           </div>
         </div>
@@ -94,31 +94,31 @@
           <div class="space-y-0">
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Name of Seller (Transferor):</span>
-              <input id="f9" class="border-none bg-transparent px-2 py-0.5 text-sm" value="Tai Ming Chan" />
+              <div id="f9" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Tai Ming Chan</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Address:</span>
-              <input id="f10" class="border-none bg-transparent px-2 py-0.5 text-sm" value="觀塘開源道 72 號溢財中心 12/F 1208 室" />
+              <div id="f10" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">觀塘開源道 72 號溢財中心 12/F 1208 室</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Occupation:</span>
-              <input id="f11" class="border-none bg-transparent px-2 py-0.5 text-sm" value="Business Owner" />
+              <div id="f11" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Business Owner</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Number of Shares:</span>
-              <input id="f12" class="border-none bg-transparent px-2 py-0.5 text-sm" value="5,000" />
+              <div id="f12" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">5,000</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Consideration Paid:</span>
-              <input id="f13" class="border-none bg-transparent px-2 py-0.5 text-sm" value="HK$ 50,000.00" />
+              <div id="f13" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">HK$ 50,000.00</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Dated:</span>
-              <input id="f14" type="date" class="border-none bg-transparent px-2 py-0.5 text-sm" />
+              <input id="f14" type="date" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none" />
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Sign:</span>
-              <input id="f15" class="border-none bg-transparent px-2 py-0.5 text-sm" placeholder="親筆簽署後掃描" />
+              <div id="f15" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]" data-placeholder="親筆簽署後掃描">親筆簽署後掃描</div>
             </div>
           </div>
         </div>
@@ -129,13 +129,9 @@
 
     <!-- Actions -->
     <div class="max-w-[800px] mx-auto mt-6 flex flex-col sm:flex-row gap-3">
-      <button onclick="printPDF()" id="genBtn"
-              class="flex-1 bg-navy text-white font-bold py-4 px-6 rounded-xl hover:bg-navy-light transition shadow-lg text-lg flex items-center justify-center gap-2">
-        🖨️ 生成 PDF（打印）
-      </button>
-      <button onclick="downloadPDF()"
-              class="flex-1 bg-gold text-navy font-bold py-4 px-6 rounded-xl hover:bg-gold-light transition shadow-lg text-lg flex items-center justify-center gap-2">
-        📄 一鍵下載 PDF
+      <button onclick="downloadPDF()" id="genBtn"
+              class="w-full bg-navy text-white font-bold py-4 px-6 rounded-xl hover:bg-navy-light transition shadow-lg text-lg flex items-center justify-center gap-2">
+        📄 一鍵生成 PDF
       </button>
     </div>
     <p id="status" class="text-center text-sm mt-3 text-gray-500 hidden"></p>
@@ -150,21 +146,21 @@
     // Get all form values
     function getVals() {
       return {
-        f1: document.getElementById('f1').value,
-        f2: document.getElementById('f2').value,
-        f3: document.getElementById('f3').value,
-        f4: document.getElementById('f4').value,
-        f5: document.getElementById('f5').value,
-        f6: document.getElementById('f6').value,
-        f7: document.getElementById('f7').value,
-        f8: document.getElementById('f8').value || '________________',
-        f9: document.getElementById('f9').value,
-        f10: document.getElementById('f10').value,
-        f11: document.getElementById('f11').value,
-        f12: document.getElementById('f12').value,
-        f13: document.getElementById('f13').value,
-        f14: document.getElementById('f14').value,
-        f15: document.getElementById('f15').value || '________________',
+        f1: document.getElementById('f1').textContent.trim(),
+        f2: document.getElementById('f2').textContent.trim(),
+        f3: document.getElementById('f3').textContent.trim(),
+        f4: document.getElementById('f4').textContent.trim(),
+        f5: document.getElementById('f5').textContent.trim(),
+        f6: document.getElementById('f6').textContent.trim(),
+        f7: document.getElementById('f7').value || new Date().toISOString().split('T')[0],
+        f8: document.getElementById('f8').textContent.trim() || '________________',
+        f9: document.getElementById('f9').textContent.trim(),
+        f10: document.getElementById('f10').textContent.trim(),
+        f11: document.getElementById('f11').textContent.trim(),
+        f12: document.getElementById('f12').textContent.trim(),
+        f13: document.getElementById('f13').textContent.trim(),
+        f14: document.getElementById('f14').value || new Date().toISOString().split('T')[0],
+        f15: document.getElementById('f15').textContent.trim() || '________________',
       };
     }
 
@@ -246,7 +242,7 @@
 
         await new Promise(r => setTimeout(r, 100));
 
-        const canvas = await html2canvas(capture, { scale: 2, useCORS: true, backgroundColor: '#fff', logging: false });
+        const canvas = await html2canvas(capture, { scale: 3, useCORS: true, backgroundColor: '#fff', logging: false, onclone: (doc) => { doc.querySelectorAll('[contenteditable]').forEach(el => { el.style.background = 'transparent'; }); } });
         document.body.removeChild(capture);
 
         const imgData = canvas.toDataURL('image/png');
