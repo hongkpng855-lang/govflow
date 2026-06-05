@@ -12,12 +12,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } },
-          fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] }
-        }
-      }
+      theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
     }
   </script>
 </head>
@@ -34,41 +29,110 @@
 
     <!-- Instructions -->
     <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-6 text-center text-sm text-gray-700">
-      ✏️ 直接喺 PDF 嘅橫線上打字 → 一鍵生成已填好嘅 PDF
+      📄 跟住上面份 PDF 格式，喺下面填資料 → 一鍵生成已填好嘅 PDF
     </div>
 
-    <!-- ═══════ PDF WITH OVERLAY INPUTS ═══════ -->
-    <div id="pdf-capture" class="bg-white shadow-xl border border-gray-300 mx-auto overflow-hidden rounded-lg" style="max-width:800px; font-family:'Noto Sans TC',sans-serif;">
-      <div class="relative w-full" id="pdf-container">
+    <!-- PDF Reference -->
+    <details class="mb-6 bg-white rounded-xl border border-gray-200 shadow-sm">
+      <summary class="px-4 py-3 font-semibold text-navy cursor-pointer hover:bg-gray-50 rounded-xl">👁️ 按此睇 PDF 參考格式</summary>
+      <div class="px-4 pb-4">
+        <img src="assets/demo/sold-note-preview.png" alt="Sold Note 參考格式" class="w-full border border-gray-200 rounded-lg" />
+      </div>
+    </details>
 
-        <!-- The actual PDF as background -->
-        <img id="pdf-bg" src="assets/demo/sold-note-preview.png" alt="Sold Note" class="w-full block" />
+    <!-- ═══════ FILLABLE FORM (exact match to PDF) ═══════ -->
+    <div id="pdf-capture" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px; font-family:'Noto Sans TC',sans-serif;">
 
-        <!-- Input fields overlay - positioned over each underscore line -->
-        <!-- SOLD NOTE section (top half) -->
-        <input id="f1" class="pdf-field" style="position:absolute; top:15.5%; left:48%; width:48%; height:2.5%; border:none; background:transparent; font-size:clamp(9px,1.2vw,13px); color:#000; padding:0 4px; outline:none;" value="Siu Yan Li" />
-        <input id="f2" class="pdf-field" style="position:absolute; top:19%; left:48%; width:48%; height:2.5%; border:none; background:transparent; font-size:clamp(9px,1.2vw,13px); color:#000; padding:0 4px; outline:none;" value="北角英皇道 250 號北角城中心 8/F 806 室" />
-        <input id="f3" class="pdf-field" style="position:absolute; top:22.5%; left:48%; width:48%; height:2.5%; border:none; background:transparent; font-size:clamp(9px,1.2vw,13px); color:#000; padding:0 4px; outline:none;" value="Business Owner" />
-        <input id="f4" class="pdf-field" style="position:absolute; top:26%; left:48%; width:48%; height:2.5%; border:none; background:transparent; font-size:clamp(9px,1.2vw,13px); color:#000; padding:0 4px; outline:none;" value="ABC 貿易有限公司" />
-        <input id="f5" class="pdf-field" style="position:absolute; top:29.5%; left:48%; width:48%; height:2.5%; border:none; background:transparent; font-size:clamp(9px,1.2vw,13px); color:#000; padding:0 4px; outline:none;" value="5,000" />
-        <input id="f6" class="pdf-field" style="position:absolute; top:33%; left:48%; width:48%; height:2.5%; border:none; background:transparent; font-size:clamp(9px,1.2vw,13px); color:#000; padding:0 4px; outline:none;" value="HK$ 50,000.00" />
-        <input id="f7" class="pdf-field" style="position:absolute; top:36.5%; left:48%; width:48%; height:2.5%; border:none; background:transparent; font-size:clamp(9px,1.2vw,13px); color:#000; padding:0 4px; outline:none;" value="2026-06-01" />
-        <input id="f8" class="pdf-field" style="position:absolute; top:40%; left:48%; width:48%; height:2.5%; border:none; background:transparent; font-size:clamp(9px,1.2vw,13px); color:#000; padding:0 4px; outline:none;" placeholder="親筆簽署" />
+      <!-- FORM HEADER -->
+      <div class="bg-navy text-white py-3 px-6 text-center">
+        <h1 class="text-lg font-bold text-gold">SOLD NOTE / BOUGHT NOTE</h1>
+        <p class="text-xs text-gray-400 mt-0.5">股份賣出單 / 買入單</p>
+      </div>
 
-        <!-- BOUGHT NOTE section (bottom half) -->
-        <input id="f9" class="pdf-field" style="position:absolute; top:57%; left:48%; width:48%; height:2.5%; border:none; background:transparent; font-size:clamp(9px,1.2vw,13px); color:#000; padding:0 4px; outline:none;" value="Tai Ming Chan" />
-        <input id="f10" class="pdf-field" style="position:absolute; top:60.5%; left:48%; width:48%; height:2.5%; border:none; background:transparent; font-size:clamp(9px,1.2vw,13px); color:#000; padding:0 4px; outline:none;" value="觀塘開源道 72 號溢財中心 12/F 1208 室" />
-        <input id="f11" class="pdf-field" style="position:absolute; top:64%; left:48%; width:48%; height:2.5%; border:none; background:transparent; font-size:clamp(9px,1.2vw,13px); color:#000; padding:0 4px; outline:none;" value="Business Owner" />
-        <input id="f12" class="pdf-field" style="position:absolute; top:67.5%; left:48%; width:48%; height:2.5%; border:none; background:transparent; font-size:clamp(9px,1.2vw,13px); color:#000; padding:0 4px; outline:none;" value="5,000" />
-        <input id="f13" class="pdf-field" style="position:absolute; top:71%; left:48%; width:48%; height:2.5%; border:none; background:transparent; font-size:clamp(9px,1.2vw,13px); color:#000; padding:0 4px; outline:none;" value="HK$ 50,000.00" />
-        <input id="f14" class="pdf-field" style="position:absolute; top:74.5%; left:48%; width:48%; height:2.5%; border:none; background:transparent; font-size:clamp(9px,1.2vw,13px); color:#000; padding:0 4px; outline:none;" value="2026-06-01" />
-        <input id="f15" class="pdf-field" style="position:absolute; top:78%; left:48%; width:48%; height:2.5%; border:none; background:transparent; font-size:clamp(9px,1.2vw,13px); color:#000; padding:0 4px; outline:none;" placeholder="親筆簽署" />
+      <div class="p-6 sm:p-8">
 
-        <!-- Focus highlight (appears on click) -->
-        <style>
-          .pdf-field:focus { background: rgba(201,168,76,0.15); border-radius: 2px; }
-          .pdf-field:hover { background: rgba(201,168,76,0.08); border-radius: 2px; }
-        </style>
+        <!-- SOLD NOTE -->
+        <div class="mb-8">
+          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">SOLD NOTE（買方）</h2>
+          <div class="space-y-0">
+            <div class="flex items-center py-2 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600 w-48 shrink-0">Name of Purchaser (Transferee):</span>
+              <input id="f1" class="flex-1 bg-transparent border-none px-2 py-0.5 text-sm focus:bg-amber-50 outline-none" value="Siu Yan Li" />
+            </div>
+            <div class="flex items-center py-2 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600 w-48 shrink-0">Address:</span>
+              <input id="f2" class="flex-1 bg-transparent border-none px-2 py-0.5 text-sm focus:bg-amber-50 outline-none" value="北角英皇道 250 號北角城中心 8/F 806 室" />
+            </div>
+            <div class="flex items-center py-2 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600 w-48 shrink-0">Occupation:</span>
+              <input id="f3" class="flex-1 bg-transparent border-none px-2 py-0.5 text-sm focus:bg-amber-50 outline-none" value="Business Owner" />
+            </div>
+            <div class="flex items-center py-2 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600 w-48 shrink-0">Name of Company:</span>
+              <input id="f4" class="flex-1 bg-transparent border-none px-2 py-0.5 text-sm focus:bg-amber-50 outline-none" value="ABC 貿易有限公司" />
+            </div>
+            <div class="flex items-center py-2 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600 w-48 shrink-0">Number of Shares:</span>
+              <input id="f5" class="flex-1 bg-transparent border-none px-2 py-0.5 text-sm focus:bg-amber-50 outline-none" value="5,000" />
+            </div>
+            <div class="flex items-center py-2 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600 w-48 shrink-0">Consideration Paid:</span>
+              <input id="f6" class="flex-1 bg-transparent border-none px-2 py-0.5 text-sm focus:bg-amber-50 outline-none" value="HK$ 50,000.00" />
+            </div>
+            <div class="flex items-center py-2 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600 w-48 shrink-0">Dated:</span>
+              <input type="date" id="f7" class="bg-transparent border-none px-2 py-0.5 text-sm focus:bg-amber-50 outline-none" />
+            </div>
+            <div class="flex items-center py-2 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600 w-48 shrink-0">Sign:</span>
+              <input id="f8" class="flex-1 bg-transparent border-none px-2 py-0.5 text-sm focus:bg-amber-50 outline-none" placeholder="親筆簽署後掃描" />
+            </div>
+          </div>
+        </div>
+
+        <!-- DASHED SEPARATOR -->
+        <div class="border-t-2 border-dashed border-gray-400 my-6"></div>
+
+        <!-- BOUGHT NOTE -->
+        <div>
+          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">BOUGHT NOTE（賣方）</h2>
+          <div class="space-y-0">
+            <div class="flex items-center py-2 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600 w-48 shrink-0">Name of Seller (Transferor):</span>
+              <input id="f9" class="flex-1 bg-transparent border-none px-2 py-0.5 text-sm focus:bg-amber-50 outline-none" value="Tai Ming Chan" />
+            </div>
+            <div class="flex items-center py-2 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600 w-48 shrink-0">Address:</span>
+              <input id="f10" class="flex-1 bg-transparent border-none px-2 py-0.5 text-sm focus:bg-amber-50 outline-none" value="觀塘開源道 72 號溢財中心 12/F 1208 室" />
+            </div>
+            <div class="flex items-center py-2 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600 w-48 shrink-0">Occupation:</span>
+              <input id="f11" class="flex-1 bg-transparent border-none px-2 py-0.5 text-sm focus:bg-amber-50 outline-none" value="Business Owner" />
+            </div>
+            <div class="flex items-center py-2 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600 w-48 shrink-0">Number of Shares:</span>
+              <input id="f12" class="flex-1 bg-transparent border-none px-2 py-0.5 text-sm focus:bg-amber-50 outline-none" value="5,000" />
+            </div>
+            <div class="flex items-center py-2 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600 w-48 shrink-0">Consideration Paid:</span>
+              <input id="f13" class="flex-1 bg-transparent border-none px-2 py-0.5 text-sm focus:bg-amber-50 outline-none" value="HK$ 50,000.00" />
+            </div>
+            <div class="flex items-center py-2 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600 w-48 shrink-0">Dated:</span>
+              <input type="date" id="f14" class="bg-transparent border-none px-2 py-0.5 text-sm focus:bg-amber-50 outline-none" />
+            </div>
+            <div class="flex items-center py-2 border-b border-dotted border-gray-300">
+              <span class="text-sm font-medium text-gray-600 w-48 shrink-0">Sign:</span>
+              <input id="f15" class="flex-1 bg-transparent border-none px-2 py-0.5 text-sm focus:bg-amber-50 outline-none" placeholder="親筆簽署後掃描" />
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="text-center text-xs text-gray-300 border-t border-gray-100 pt-4 mt-6">
+          GovFlow · 示範範例
+        </div>
+
       </div>
     </div>
 
@@ -80,9 +144,14 @@
       </button>
       <p id="status" class="text-center text-sm mt-3 hidden"></p>
     </div>
+
   </div>
 
   <script>
+    // Set dates
+    document.getElementById('f7').valueAsDate = new Date();
+    document.getElementById('f14').valueAsDate = new Date();
+
     async function generatePDF() {
       const btn = document.getElementById('genBtn');
       const status = document.getElementById('status');
@@ -95,17 +164,11 @@
         const { jsPDF } = window.jspdf;
         const capture = document.getElementById('pdf-capture');
 
-        // Temporarily remove focus/background for clean capture
-        document.querySelectorAll('.pdf-field').forEach(el => el.style.background = 'transparent');
-
         const canvas = await html2canvas(capture, {
           scale: 2,
           useCORS: true,
           backgroundColor: '#ffffff',
           logging: false,
-          onclone: (doc) => {
-            doc.querySelectorAll('.pdf-field').forEach(el => el.style.background = 'transparent');
-          }
         });
 
         const imgData = canvas.toDataURL('image/jpeg', 0.92);
