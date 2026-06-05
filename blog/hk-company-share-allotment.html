@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>香港公司股份配發（Allotment）完整指南｜發行新股程序｜GovFlow 網誌</title>
+  <meta name="description" content="股份配發同股份轉讓有咩分別？新股東加入要點做？由親身經歷者分享發行新股嘅完整流程、NSC1 表格填寫、董事決議、以及5個常見伏位。" />
+  <meta property="og:title" content="香港公司股份配發（Allotment）完整指南｜發行新股、增加股本程序與伏位" />
+  <meta property="og:description" content="好多東主混淆股份配發同轉讓，其實係兩個完全唔同程序。新手東主發行新股必讀。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .blog-content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1B2A4A;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f3f4f6;
+    }
+    .blog-content h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1B2A4A;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-content p {
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      color: #4b5563;
+    }
+    .blog-content ul, .blog-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+    .blog-content li {
+      line-height: 1.8;
+      margin-bottom: 0.25rem;
+      color: #4b5563;
+    }
+    .blog-content .table-wrap {
+      overflow-x: auto;
+      margin-bottom: 1.5rem;
+    }
+    .blog-content table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .blog-content th {
+      background: #1B2A4A;
+      color: white;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    .blog-content td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #e5e7eb;
+      color: #4b5563;
+    }
+    .blog-content tr:nth-child(even) td {
+      background: #f9fafb;
+    }
+    .blog-content .flag-item {
+      background: #fef3c7;
+      border-left: 4px solid #C9A84C;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+    .blog-content .flag-item p {
+      margin-bottom: 0;
+    }
+    .blog-content .tip-box {
+      background: #ecfdf5;
+      border-left: 4px solid #10b981;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+    .blog-content .tip-box p {
+      margin-bottom: 0;
+    }
+    .blog-content .warn-box {
+      background: #fef2f2;
+      border-left: 4px solid #ef4444;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+    .blog-content .warn-box p {
+      margin-bottom: 0;
+    }
+    .blog-content strong {
+      color: #1B2A4A;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ Navigation ═══════════════ -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="../index.html" class="flex items-center gap-2.5"><img src="../assets/images/govflow-logo.svg" alt="GovFlow" class="w-7 h-7" /><span class="text-white font-bold text-lg tracking-tight">GovFlow</span></a>
+      <a href="../index.html" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ Article Header ═══════════════ -->
+  <section class="bg-navy text-white py-12 sm:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-sm text-gold mb-4 flex items-center gap-3">
+        <a href="../" class="hover:underline">首頁</a>
+        <span>›</span>
+        <a href="../" class="hover:underline">網誌</a>
+        <span>›</span>
+        <span class="text-white/60">股份配發</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold leading-tight mb-4">
+        🏭 香港公司股份配發（Allotment）完整指南<br />發行新股同股份轉讓係兩回事！
+      </h1>
+      <div class="flex flex-wrap items-center gap-4 text-sm text-white/60">
+        <span>📅 2026 年 6 月 6 日</span>
+        <span>🏷️ 股份配發</span>
+        <span>🏷️ 有限公司營運</span>
+        <span>⏱️ 6 分鐘閱讀</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ Article Content ═══════════════ -->
+  <article class="py-12 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 blog-content">
+
+      <!-- Lead -->
+      <div class="bg-amber-50 border-l-4 border-gold rounded-r-xl p-5 mb-8">
+        <p class="text-base font-semibold text-navy !mb-0">
+          <strong>一句講晒：</strong>股份配發係「公司製造新股份俾人」，同股份轉讓「舊股東俾啲股份人」係兩個完全唔同程序。NSC1 同 Instrument of Transfer 係兩份唔同嘅表，千祈唔好撈亂。
+        </p>
+      </div>
+
+      <p>
+        我有個 friend，佢間 startup 最近有新投資者加入。佢好興奮話：「搞掂啦，簽咗份轉讓書，轉啲股份俾佢就得，收咗錢了！」
+      </p>
+      <p>
+        我心諗：唔係掛？你公司要增資擴股，點解會係做「轉讓」？
+      </p>
+      <p>
+        原來佢完全混淆咗「股份配發（Allotment）」同「股份轉讓（Transfer）」。佢用轉讓嘅程序去做配發嘅事 — 結果 NSC1 冇交、董事決議冇做、公司股本冇增加到，最後要成個程序返轉頭做過。
+      </p>
+      <p>
+        如果你都以為「有新投資者 = 簽轉讓書」，請你即管睇完呢篇先。<strong>呢兩個程序嘅分別，可以話係有限公司文件處理入面最容易搞錯嘅地方。</strong>
+      </p>
+
+      <!-- What is Allotment -->
+      <h2>📌 咩係股份配發（Allotment of Shares）？</h2>
+      <p>
+        股份配發，簡單講就係 <strong>公司「創造」新股份，然後分配俾指定嘅人</strong>。公司嘅已發行股本（Issued Share Capital）會增加，因為市場上多咗新股份。
+      </p>
+      <p>常見出現股份配發嘅情況：</p>
+      <ul>
+        <li>🆕 有新投資者入股（增資擴股）</li>
+        <li>👨‍👩‍👧 創辦人團隊需要增加股本</li>
+        <li>📊 公司發行員工認股權（ESOP / Share Option）</li>
+        <li>💰 以股份代替現金支付（例如顧問費、收購代價）</li>
+        <li>🔄 股份拆細或合併後重新配發</li>
+      </ul>
+
+      <!-- Allotment vs Transfer -->
+      <h2>⚔️ 股份配發 vs 股份轉讓 — 有咩分別？</h2>
+      <p>呢度係最多人撈亂嘅地方。我用一個簡單比喻解釋：</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>🏭 股份配發（Allotment）</th>
+              <th>🔄 股份轉讓（Transfer）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>概念</strong></td>
+              <td>公司整新股份出嚟俾人</td>
+              <td>現有股東將自己啲股份俾另一個人</td>
+            </tr>
+            <tr>
+              <td><strong>公司股本</strong></td>
+              <td>✅ 增加</td>
+              <td>❌ 不變</td>
+            </tr>
+            <tr>
+              <td><strong>參與者</strong></td>
+              <td>公司 + 獲配發人</td>
+              <td>轉讓人 + 承讓人（公司只係登記）</td>
+            </tr>
+            <tr>
+              <td><strong>核心文件</strong></td>
+              <td>NSC1（股本申報表）</td>
+              <td>Instrument of Transfer（轉讓書）</td>
+            </tr>
+            <tr>
+              <td><strong>董事決議</strong></td>
+              <td>✅ 必須有</td>
+              <td>視乎公司章程</td>
+            </tr>
+            <tr>
+              <td><strong>印花稅</strong></td>
+              <td>無（配發本身唔使）</td>
+              <td>✅ 要交（代價 0.2%）</td>
+            </tr>
+            <tr>
+              <td><strong>時間</strong></td>
+              <td>約 1-2 星期</td>
+              <td>視乎政府處理時間</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="flag-item">
+        <p>我朋友就係用咗「轉讓」嘅方式去處理「新投資者加入」，結果公司嘅股本紀錄亂晒，要補做董事決議同 NSC1 去修正。錢就收咗，但係法律上啲股份根本未正式存在過 — <strong>呢個係好大嘅法律風險</strong>，如果出事，投資者可以告佢虛假陳述。</p>
+      </div>
+
+      <!-- When -->
+      <h2>📋 股份配發嘅法定要求</h2>
+      <p>根據《公司條例》（第 622 章），公司進行股份配發時必須符合以下要求：</p>
+
+      <h3>1️⃣ 先要有授權股本（Authorised Share Capital）</h3>
+      <p>公司嘅組織章程細則（Articles of Association）會規定公司嘅<a href="../shareholder-transfer.html" class="text-gold hover:underline">股本</a>上限。如果你打算配發嘅股數超過咗授權股本，就要先通過決議增加授權股本。</p>
+      <div class="tip-box">
+        <p>💡 <strong>實戰貼士：</strong>大多數公司成立嗰陣已經寫咗授權股本係 1,000,000 股（每股 $1），對一般中小企嚟講好夠用。如果你係 startup 準備融資，建議一開始就 set 大啲（例如 10,000,000 股），費事之後又要改章程。</p>
+      </div>
+
+      <h3>2️⃣ 董事決議授權配發</h3>
+      <p>董事會必須通過決議，批准：</p>
+      <ul>
+        <li>配發幾多股</li>
+        <li>配發俾邊個</li>
+        <li>每股作價幾多</li>
+        <li>付款方式（現金 / 其他資產）</li>
+      </ul>
+      <p>如果公司只有一個董事，都要有書面決議記錄。千祈唔好「口頭話得就算」。</p>
+
+      <h3>3️⃣ 同意配發股份通知（Letter of Allotment）</h3>
+      <p>
+        公司向獲配發人發出正式通知，寫明佢獲分配嘅股數、類別同代價。
+        呢份文件唔使交政府，但係要 keep 好。銀行做盡職調查、或者將來賣盤嗰陣會用嚟證明股份嘅來源。
+      </p>
+
+      <h3>4️⃣ 遞交 NSC1（股本申報表）</h3>
+      <p>
+        呢個係最重要的 step。<strong>公司必須喺配發後 1 個月內</strong>向公司註冊處遞交 <code>NSC1 - 股份配發申報表</code>。
+      </p>
+      <p>NSC1 要填：</p>
+      <ul>
+        <li>公司名稱及編號</li>
+        <li>配發日期</li>
+        <li>配發股數及每股面值</li>
+        <li>已繳付金額（全部 / 部分 / 未繳）</li>
+        <li>獲配發人姓名及地址</li>
+        <li>董事簽署</li>
+      </ul>
+      <div class="warn-box">
+        <p>⚠️ <strong>逾期遞交 NSC1 嘅後果：</strong>公司同每名責任人可被罰款 $5,000，而且持續犯罪可以每日再罰 $1,000。我見過有公司遲咗 3 個月先交，夾埋罰咗成 $8,000 幾。</p>
+      </div>
+
+      <h3>5️⃣ 更新公司紀錄</h3>
+      <p>配發完成後，必須更新：</p>
+      <ul>
+        <li>📖 股東名冊（Register of Members）— 加入新股東資料</li>
+        <li>📊 股本申報表紀錄</li>
+        <li>📁 董事決議記錄存入 Minute Book</li>
+      </ul>
+
+      <!-- Step by Step -->
+      <h2>👣 股份配發完整步驟（逐步教學）</h2>
+
+      <h3>Step 1：確認授權股本夠唔夠</h3>
+      <p>Check 公司嘅 Articles of Association，睇吓授權股本仲有冇空間。如果唔夠，要先通過股東決議增加授權股本。</p>
+
+      <h3>Step 2：召開董事會（或簽署書面決議）</h3>
+      <p>就算你係公司唯一董事，都要寫一份董事決議，記錄：</p>
+      <ul>
+        <li>配發股數及類別</li>
+        <li>每股作價</li>
+        <li>獲配發人</li>
+        <li>付款條款</li>
+      </ul>
+
+      <h3>Step 3：發出配發通知書（Letter of Allotment）俾新股東</h3>
+      <p>正式通知新股東獲分配幾多股份，佢要簽收確認。</p>
+
+      <h3>Step 4：收款</h3>
+      <p>新股東根據配發條款支付股款。銀行入數記錄要留底，將來做盡職調查會用到。</p>
+
+      <h3>Step 5：遞交 NSC1 俾公司註冊處</h3>
+      <p>配發後 1 個月內一定要交。可以：</p>
+      <ul>
+        <li>🖥️ <strong>網上提交（eCR）</strong>：最快，$15 費用，即時處理</li>
+        <li>📄 <strong>紙本提交</strong>：去金鐘公司註冊處，$30 費用，4-7 工作日</li>
+      </ul>
+      <div class="tip-box">
+        <p>💡 <strong>我嘅經驗：</strong>強烈建議用 eCR 網上提交，快好多。而且 NSC1 相對簡單，自己 fill form 就得，唔使假手於人。</p>
+      </div>
+
+      <h3>Step 6：更新股東名冊</h3>
+      <p>公司註冊處批咗之後，自己手動 update 公司嘅內部股東名冊。新股東嘅姓名、地址、身份證號碼、持股數目、配發日期全部要記錄清楚。</p>
+
+      <h3>Step 7：發出股票（Share Certificate）</h3>
+      <p>根據《公司條例》，公司要在配發後 2 個月內向新股東發出股票證書。股票要寫明：</p>
+      <ul>
+        <li>公司名稱及編號</li>
+        <li>股東姓名</li>
+        <li>持股數目及類別</li>
+        <li>已繳金額</li>
+        <li>公司印章 + 董事簽署</li>
+      </ul>
+
+      <!-- Common Mistakes -->
+      <h2>🚩 5 個常見伏位（我識嘅人中過）</h2>
+
+      <h3>❌ 伏位 1：混淆配發同轉讓</h3>
+      <p>呢個係最 common 嘅錯誤。公司增資擴股要用配發（NSC1），唔係轉讓（Instrument of Transfer）。如果搞錯咗，公司股本紀錄會唔啱，將來賣盤或者做 due diligence 會好大件事。</p>
+
+      <h3>❌ 伏位 2：忘記喺 1 個月內交 NSC1</h3>
+      <p>配發完成後，好多人就「放低咗」，唔記得交 NSC1。等到年報嗰陣先發現冇交，已經過期幾個月。罰錢事小，問題係如果公司有訴訟或者融資，冇交 NSC1 會俾人質疑股份嘅合法性。</p>
+
+      <h3>❌ 伏位 3：配發作價有問題</h3>
+      <p>股份配發嘅作價有兩個陷阱：</p>
+      <ul>
+        <li><strong>作價太低</strong>：稅局可能視為「股份贈送」，用市值去追討印花稅</li>
+        <li><strong>以資產代價</strong>：如果用非現金資產（例如知識產權、機器）去換股份，要獨立估值，否則填 NSC1 嗰陣會唔知填咩金額</li>
+      </ul>
+      <p>我自己見過一個 case：有人用佢嘅軟件源碼換公司股份，冇做估值，結果 NSC1 上面「已繳金額」填錯，到公司賣嗰陣先俾買家發現，差啲撻訂。</p>
+
+      <h3>❌ 伏位 4：冇發出股票書</h3>
+      <p>好多小公司以為「內部記錄就得啦，使乜正式股票」，但法例規定公司要在 2 個月內發出股票證書。冇做嘅話，新股東嘅權益未正式確立，佢可以告公司。</p>
+
+      <h3>❌ 伏位 5：股份配發後冇通知銀行</h3>
+      <p>新股東加入後，除非佢係董事，否則銀行唔會自動知。如果新股東需要簽公司戶口、或者要更新銀行授權簽署人，一定要主動通知銀行同更新授權。</p>
+      <div class="flag-item">
+        <p>我有個朋友就係咁：配發完股份俾個投資者，以為「搞掂晒」，點知無耐投資者要簽公司文件嗰陣先發現銀行冇佢嘅記錄，要成日去銀行排隊搞授權，搞咗成個月。</p>
+      </div>
+
+      <!-- Cost -->
+      <h2>💰 自己做 vs 俾人做 — 成本比較</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>自己做</th>
+              <th>俾會計師 / 秘書公司做</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>NSC1 費用</td>
+              <td>$15（網上）</td>
+              <td>$15 + 手續費</td>
+            </tr>
+            <tr>
+              <td>董事決議</td>
+              <td>$0（自己寫）</td>
+              <td>$500 - $1,000</td>
+            </tr>
+            <tr>
+              <td>配發通知書</td>
+              <td>$0（用模板）</td>
+              <td>$300 - $500</td>
+            </tr>
+            <tr>
+              <td>股票證書</td>
+              <td>$0（自己印）</td>
+              <td>$200 - $500</td>
+            </tr>
+            <tr>
+              <td>整體收費</td>
+              <td><strong>$15</strong></td>
+              <td><strong>$1,000 - $2,500+</strong></td>
+            </tr>
+            <tr>
+              <td>時間</td>
+              <td>1 日搞掂文件</td>
+              <td>視乎對方效率</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-gray-500">
+        * 以上為大約參考價格，實際收費因應供應商而異。
+      </p>
+
+      <!-- Premium CTA -->
+      <div class="bg-gray-50 rounded-2xl border-2 border-gold/20 p-8 mt-10 mb-6 text-center">
+        <h2 class="!border-b-0 !mt-0 !mb-3">📦 唔想煩？我哋嘅 Step-by-Step 指南幫到你</h2>
+        <p class="text-center">
+          股份配發同轉讓好多文件，如果你唔想逐份搵、逐份對，我哋嘅
+          <strong><a href="../shareholder-transfer.html" class="text-gold hover:underline">《香港有限公司股份轉讓完整指南》</a></strong>
+          幫你搞掂晒所有文件：
+        </p>
+        <ul class="inline-block text-left mb-6">
+          <li>✅ 可編輯嘅 Sold Note 模板</li>
+          <li>✅ Instrument of Transfer 官方格式模板</li>
+          <li>✅ 董事決議範本</li>
+          <li>✅ 每份文件嘅真實填寫範例</li>
+          <li>✅ 常見錯誤 & 伏位全部列晒出嚟</li>
+        </ul>
+        <p class="text-sm text-gray-500 mb-6">
+          <strong>頭 1 步係完全免費</strong>，你可以睇吓係咪你要嘅嘢。
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="../shareholder-transfer.html" class="btn-gov btn-gov-preview justify-center">
+            免費睇 Step 1 →
+          </a>
+          <a href="https://1714457598663.gumroad.com/l/wkjykk" target="_blank" class="btn-gov btn-gov-buy justify-center btn-gov-pulse">
+            🔓 完整解鎖 HK$149
+          </a>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <h2>📝 總結</h2>
+      <p>股份配發同股份轉讓係兩個完全唔同嘅程序，千祈唔好撈亂。以下是你要記住嘅重點：</p>
+      <ol>
+        <li><strong>配發 = 公司整新股份</strong>（NSC1），<strong>轉讓 = 舊股東俾人</strong>（Instrument of Transfer）</li>
+        <li>配發後 <strong>1 個月內</strong>要交 NSC1，逾期有罰款</li>
+        <li>董事決議係必須嘅，唔好 skip</li>
+        <li>配發完成後 2 個月內要發出股票證書</li>
+        <li>新股東加入後要主動通知銀行</li>
+        <li>配發作價要有合理根據，避免稅局挑戰</li>
+      </ol>
+      <p>
+        處理公司文件最緊要係有系統。我中過嘅伏，你唔使再中一次。
+      </p>
+
+      <!-- Disclaimer -->
+      <div class="text-xs text-gray-400 mt-8 pt-6 border-t border-gray-100 leading-relaxed">
+        <p class="!mb-1"><em>本文由 GovFlow 創辦人撰寫，一個親身經歷過香港公司秘書文件流程嘅香港人。所有內容皆為真實經歷，並非律師意見，如有具體法律問題請諮詢執業律師或專業公司秘書。</em></p>
+      </div>
+
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2 mt-6">
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#股份配發</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#有限公司</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#公司秘書</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#NSC1</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#香港創業</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#GovFlow</span>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ═══════════════ Related CTA ═══════════════ -->
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-bold gov-heading mb-3">
+        想睇完整流程？
+      </h2>
+      <p class="text-gray-500 mb-6">
+        由填表到提交，逐個步驟教你點做，附送可下載文件模板
+      </p>
+      <a href="../shareholder-transfer.html" class="btn-gov btn-gov-preview">
+        免費睇 Step 1 →
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════ Footer ═══════════════ -->
+  <footer class="gov-footer py-12">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-2 text-white font-bold text-lg">
+          <img src="../assets/images/govflow-logo.svg" alt="GovFlow" class="w-7 h-7" /> GovFlow
+        </div>
+        <div class="text-sm text-gray-400">
+          <a href="../" class="hover:underline">返回首頁</a>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
+        <p class="mb-2">
+          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          如有具體法律問題，請諮詢執業律師或專業公司秘書。
+        </p>
+        <p>© 2025 GovFlow. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
