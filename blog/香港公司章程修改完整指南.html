@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>香港公司章程（Article of Association）修改完整指南｜特別決議、提交程序｜GovFlow</title>
+  <meta name="description" content="公司章程（AoA）修改完整流程：特別決議點樣通過、NR1幾時交、公司註冊處審批要幾耐、同埋最常見嘅修改原因。由真實經歷者分享。" />
+  <meta property="og:title" content="香港公司章程（Article of Association）修改完整指南 | GovFlow" />
+  <meta property="og:description" content="公司章程修改完整流程：特別決議點樣通過、NR1幾時交、公司註冊處審批要幾耐。由真實經歷者分享。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="../assets/js/app.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- ═══════════════ Navigation ═══════════════ -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="../index.html" class="flex items-center gap-2.5">
+        <img src="../assets/images/govflow-logo.svg" alt="GovFlow" class="w-7 h-7" />
+        <span class="text-white font-bold text-lg tracking-tight">GovFlow</span>
+      </a>
+      <a href="../index.html#blog" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ Article Header ═══════════════ -->
+  <header class="bg-gradient-to-b from-navy to-navy-light text-white py-12 sm:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center gap-2 text-xs text-gold/80 mb-4">
+        <span class="bg-gold/20 px-3 py-1 rounded-full font-semibold">有限公司營運</span>
+        <span>·</span>
+        <span>📅 2026.06.06</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold leading-tight mb-4">
+        香港公司章程（Article of Association）修改完整指南
+      </h1>
+      <p class="text-lg text-gray-300 leading-relaxed max-w-2xl">
+        以為章程係註冊嗰陣填完就算？好多人唔知公司發展緊嘅時候其實要改好多次章程。
+        由特別決議點樣通過、NR1 點樣交，到公司註冊處審批流程，逐個步驟話你知。
+      </p>
+      <div class="flex flex-wrap gap-2 mt-6 text-sm text-gray-400">
+        <span>✍️ 由真實經歷者整理</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════ Table of Contents ═══════════════ -->
+  <section class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-6">
+      <h2 class="font-bold text-navy mb-3 text-sm uppercase tracking-wider">📑 文章目錄</h2>
+      <nav class="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
+        <a href="#what-is-aoa" class="text-gray-600 hover:text-gold transition">1. 公司章程（AoA）係咩？</a>
+        <a href="#when-to-change" class="text-gray-600 hover:text-gold transition">2. 咩時候要改章程？</a>
+        <a href="#legal-requirements" class="text-gray-600 hover:text-gold transition">3. 修改嘅法律規定</a>
+        <a href="#special-resolution" class="text-gray-600 hover:text-gold transition">4. 特別決議點樣通過？</a>
+        <a href="#filing-nr1" class="text-gray-600 hover:text-gold transition">5. 提交 NR1 文件</a>
+        <a href="#cr-processing" class="text-gray-600 hover:text-gold transition">6. 公司註冊處審批流程</a>
+        <a href="#after-approval" class="text-gray-600 hover:text-gold transition">7. 批准後要做嘅事</a>
+        <a href="#checklist" class="text-gray-600 hover:text-gold transition">✅ 修改章程完整 Checklist</a>
+        <a href="#common-mistakes" class="text-gray-600 hover:text-gold transition">⚠️ 常見錯誤</a>
+        <a href="#faq" class="text-gray-600 hover:text-gold transition">❓ FAQ</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ═══════════════ Article Content ═══════════════ -->
+  <article class="py-10 sm:py-14">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 prose prose-gray max-w-none">
+
+      <!-- Section 1 -->
+      <section id="what-is-aoa">
+        <h2 class="text-2xl font-bold text-navy mb-4">1. 公司章程（AoA）係咩？</h2>
+
+        <div class="bg-amber-50 border-l-4 border-amber-400 p-4 mb-6 rounded-r-lg">
+          <p class="text-sm text-amber-800 font-medium">💡 一句講晒</p>
+          <p class="text-sm text-amber-700">公司章程（Articles of Association, AoA）係公司嘅內部憲法，話俾人知你間公司點樣運作——股東會點開、董事有咩權力、股份點樣發行、股息點樣派。</p>
+        </div>
+
+        <p class="mb-4">
+          好多第一次開公司嘅朋友以為公司章程只係註冊嗰陣填一次就算，之後就掉埋一邊唔理。
+        </p>
+        <p class="mb-4">
+          但係當公司發展緊嘅時候——有新投資者加入、想發行新股、想限制董事權力、或者想改公司名——好多時你都<strong class="text-navy">要先改公司章程先可以合法咁做</strong>。
+        </p>
+        <p class="mb-6">
+          <strong class="text-navy">唔改章程就做</strong>？輕則做嘅決定冇法律效力，重則董事要負上個人法律責任。
+        </p>
+
+        <div class="bg-gray-50 rounded-xl p-5 mb-6 border border-gray-200">
+          <h3 class="font-bold text-navy mb-2">公司章程包含嘅主要內容</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2"><span class="text-gold shrink-0">📌</span><span><strong>股份類別同權利</strong> — 普通股、優先股、投票權、股息權</span></li>
+            <li class="flex items-start gap-2"><span class="text-gold shrink-0">📌</span><span><strong>董事權力同限制</strong> — 董事會組成、決策權限、借貸限制</span></li>
+            <li class="flex items-start gap-2"><span class="text-gold shrink-0">📌</span><span><strong>股東會程序</strong> — 點樣召開、投票權點計、書面決議門檻</span></li>
+            <li class="flex items-start gap-2"><span class="text-gold shrink-0">📌</span><span><strong>股息政策</strong> — 股息點樣宣布同派發</span></li>
+            <li class="flex items-start gap-2"><span class="text-gold shrink-0">📌</span><span><strong>股份轉讓限制</strong> — 例如私人公司嘅轉讓限制條文</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="when-to-change" class="mt-12">
+        <h2 class="text-2xl font-bold text-navy mb-4">2. 咩時候要改章程？</h2>
+
+        <p class="mb-4">根據我嘅經驗同身邊朋友嘅案例，以下係最常見需要改章程嘅情況：</p>
+
+        <div class="grid gap-4 mb-6">
+          <div class="bg-white rounded-xl p-5 border border-gray-200">
+            <div class="flex items-start gap-3">
+              <span class="text-2xl shrink-0">🏢</span>
+              <div>
+                <h3 class="font-bold text-navy mb-1">引入新投資者</h3>
+                <p class="text-sm text-gray-600">投資者通常要求公司章程加入優先股條款、反攤薄條款、否決權（Veto Rights）等。標準嘅 AoA 冇呢啲條款，一定要改。</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl p-5 border border-gray-200">
+            <div class="flex items-start gap-3">
+              <span class="text-2xl shrink-0">🔄</span>
+              <div>
+                <h3 class="font-bold text-navy mb-1">更改公司名稱</h3>
+                <p class="text-sm text-gray-600">公司改名後，章程第一頁嘅公司名當然要跟住改（雖然一般係改名流程一部分）。</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl p-5 border border-gray-200">
+            <div class="flex items-start gap-3">
+              <span class="text-2xl shrink-0">📊</span>
+              <div>
+                <h3 class="font-bold text-navy mb-1">發行新股／股份配發</h3>
+                <p class="text-sm text-gray-600">如果章程原本嘅授權股本（Authorised Share Capital）唔夠，或者想發行新類別股份，要先改章程增加股本。</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl p-5 border border-gray-200">
+            <div class="flex items-start gap-3">
+              <span class="text-2xl shrink-0">⚖️</span>
+              <div>
+                <h3 class="font-bold text-navy mb-1">改變董事權力</h3>
+                <p class="text-sm text-gray-600">例如想限制董事可以借貸嘅金額上限、或者改變董事會法定人數。</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl p-5 border border-gray-200">
+            <div class="flex items-start gap-3">
+              <span class="text-2xl shrink-0">📋</span>
+              <div>
+                <h3 class="font-bold text-navy mb-1">更新公司宗旨（Objects Clause）</h3>
+                <p class="text-sm text-gray-600">舊公司可能有限制性嘅宗旨條款，如果公司想開展新業務，可能要改章程。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-red-50 border-l-4 border-red-400 p-4 mb-6 rounded-r-lg">
+          <p class="text-sm text-red-800 font-medium">⚠️ 我嘅親身教訓</p>
+          <p class="text-sm text-red-700">我試過以為「改少少嘢啫，唔使咁大陣仗」，直接 skip 咗特別決議就做咗決定。後來被會計師發現，話所有相關決定都冇法律效力，要重新嚟過。嗰陣先發現——<strong>公司章程唔係廢紙，係真係有法律約束力㗎。</strong></p>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="legal-requirements" class="mt-12">
+        <h2 class="text-2xl font-bold text-navy mb-4">3. 修改嘅法律規定</h2>
+
+        <p class="mb-4">根據《公司條例》（第622章）第622條：</p>
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-6">
+          <p class="text-sm text-gray-700 italic">「公司可藉特別決議修訂其章程細則。」</p>
+        </div>
+
+        <p class="mb-4">關鍵規定：</p>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-2"><span class="text-gold shrink-0 font-bold">1.</span><span><strong class="text-navy">一定要用「特別決議」（Special Resolution）</strong> — 普通決議唔夠，一定要 75% 以上嘅投票權贊成。</span></li>
+          <li class="flex items-start gap-2"><span class="text-gold shrink-0 font-bold">2.</span><span><strong class="text-navy">無限公司或者擔保有限公司都適用</strong> — 任何根據公司條例註冊嘅公司都係同一套程序。</span></li>
+          <li class="flex items-start gap-2"><span class="text-gold shrink-0 font-bold">3.</span><span><strong class="text-navy">修改後要提交公司註冊處</strong> — 唔交 NR1 等於冇改過。</span></li>
+          <li class="flex items-start gap-2"><span class="text-gold shrink-0 font-bold">4.</span><span><strong class="text-navy">法院有權推翻</strong> — 如果修改對股東不合理地不公平，股東可以申請法院推翻。</span></li>
+          <li class="flex items-start gap-2"><span class="text-gold shrink-0 font-bold">5.</span><span><strong class="text-navy">唔可以違反公司條例</strong> — 章程嘅條款唔可以同《公司條例》抵觸，否則無效。</span></li>
+        </ul>
+
+        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 rounded-r-lg">
+          <p class="text-sm text-blue-800 font-medium">💡 一人公司都要做</p>
+          <p class="text-sm text-blue-700">即使你係一人公司，全部股份自己揸，改章程都<strong>必須</strong>跟足程序：開股東會（或者簽書面決議）→ 通過特別決議 → 提交 NR1。唔可以因為得自己一個就 skip。</p>
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="special-resolution" class="mt-12">
+        <h2 class="text-2xl font-bold text-navy mb-4">4. 特別決議點樣通過？</h2>
+
+        <p class="mb-4">特別決議係修改章程嘅關鍵一步。程序係：</p>
+
+        <div class="space-y-6 mb-6">
+          <div class="bg-white rounded-xl p-5 border border-gray-200">
+            <div class="flex items-start gap-3">
+              <span class="bg-navy text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0 font-bold text-sm">1</span>
+              <div>
+                <h3 class="font-bold text-navy mb-1">撰寫決議內容</h3>
+                <p class="text-sm text-gray-600">清楚寫明想修改邊條章程、改成點樣。最好有對照表：原文（Existing）vs 新文（Proposed）。</p>
+                <div class="mt-3 bg-gray-50 rounded-lg p-3 text-xs font-mono text-gray-700">
+                  <p class="font-semibold text-navy mb-1">決議範例：</p>
+                  <p>「茲決議刪除章程第5條（股份轉讓限制），並以附件所載新章程第5條取代。」</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-5 border border-gray-200">
+            <div class="flex items-start gap-3">
+              <span class="bg-navy text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0 font-bold text-sm">2</span>
+              <div>
+                <h3 class="font-bold text-navy mb-1">發出會議通知</h3>
+                <p class="text-sm text-gray-600">至少要 <strong>14 日</strong> 前通知所有股東（如果係私人公司，章程可能有唔同規定）。通知要列明：</p>
+                <ul class="mt-2 text-sm text-gray-600 space-y-1 ml-4 list-disc">
+                  <li>會議日期、時間、地點</li>
+                  <li>決議嘅詳細內容（唔可以只寫「討論修改章程」就要人投票）</li>
+                  <li>清楚話俾股東知呢個係特別決議</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-5 border border-gray-200">
+            <div class="flex items-start gap-3">
+              <span class="bg-navy text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0 font-bold text-sm">3</span>
+              <div>
+                <h3 class="font-bold text-navy mb-1">召開股東會</h3>
+                <p class="text-sm text-gray-600">會議上：
+                </p>
+                <ul class="mt-2 text-sm text-gray-600 space-y-1 ml-4 list-disc">
+                  <li>解釋點解要改章程</li>
+                  <li>逐條討論修改內容（如果有爭議）</li>
+                  <li>進行投票</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-5 border border-gray-200">
+            <div class="flex items-start gap-3">
+              <span class="bg-navy text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0 font-bold text-sm">4</span>
+              <div>
+                <h3 class="font-bold text-navy mb-1">通過特別決議</h3>
+                <p class="text-sm text-gray-600">獲得 <strong>不少於 75%</strong> 嘅投票權贊成。如果股東係一人公司，一個人簽書面決議就得，但一樣要清楚寫明係特別決議。</p>
+                <div class="mt-3 bg-amber-50 rounded-lg p-3 text-xs text-amber-800">
+                  <span class="font-semibold">⚠️ 書面決議注意</span>：如果係書面決議代替股東會，<strong>所有有投票權嘅股東都必須簽署</strong>，唔可以有人冇簽。
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-5 border border-gray-200">
+            <div class="flex items-start gap-3">
+              <span class="bg-navy text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0 font-bold text-sm">5</span>
+              <div>
+                <h3 class="font-bold text-navy mb-1">記錄決議</h3>
+                <p class="text-sm text-gray-600">將通過嘅特別決議記錄喺公司會議紀錄（Minutes），簽署確認。決議文本要保留喺公司註冊辦事處。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="filing-nr1" class="mt-12">
+        <h2 class="text-2xl font-bold text-navy mb-4">5. 提交 NR1 文件</h2>
+
+        <p class="mb-4">特別決議通過之後，下一步就係提交文件俾公司註冊處。</p>
+
+        <div class="bg-gold/10 border-2 border-gold/30 rounded-xl p-5 mb-6">
+          <h3 class="font-bold text-navy mb-3">需要提交嘅文件</h3>
+          <div class="space-y-3">
+            <div class="flex items-start gap-2">
+              <span class="text-gold shrink-0 font-bold">📄</span>
+              <div>
+                <p class="font-medium text-navy">NR1 表格</p>
+                <p class="text-sm text-gray-600">《修訂章程細則通知書》（Notice of Amendment of Articles）。要填寫公司編號、修改日期、修改內容摘要。</p>
+                <p class="text-xs text-gray-400 mt-1">費用：HK$65（提交費）</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-gold shrink-0 font-bold">📄</span>
+              <div>
+                <p class="font-medium text-navy">修改後嘅公司章程（完整版）</p>
+                <p class="text-sm text-gray-600">提交經修改嘅完整章程，唔可以淨係交修改部分。</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-gold shrink-0 font-bold">📄</span>
+              <div>
+                <p class="font-medium text-navy">特別決議副本</p>
+                <p class="text-sm text-gray-600">會議記錄或者書面決議嘅副本。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-5 mb-6 border border-gray-200">
+          <h3 class="font-bold text-navy mb-2">提交方式</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2"><span class="text-gold shrink-0">💻</span><span><strong>網上提交</strong>（推薦）— 用公司註冊處嘅 eCR 系統，最快最方便</span></li>
+            <li class="flex items-start gap-2"><span class="text-gold shrink-0">📬</span><span><strong>親身提交</strong> — 金鐘道66號金鐘道政府合署高座14樓</span></li>
+            <li class="flex items-start gap-2"><span class="text-gold shrink-0">📮</span><span><strong>郵寄</strong> — 同上地址，但郵寄處理時間較長</span></li>
+          </ul>
+        </div>
+
+        <div class="bg-red-50 border-l-4 border-red-400 p-4 mb-6 rounded-r-lg">
+          <p class="text-sm text-red-800 font-medium">⚠️ 重要時限</p>
+          <p class="text-sm text-red-700">特別決議通過後 <strong>15 日內</strong> 必須提交 NR1。逾期提交公司註冊處會接受，但可能要求解釋點解遲交。</p>
+        </div>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="cr-processing" class="mt-12">
+        <h2 class="text-2xl font-bold text-navy mb-4">6. 公司註冊處審批流程</h2>
+
+        <p class="mb-4">提交 NR1 後，公司註冊處會審查文件：</p>
+
+        <div class="grid gap-4 mb-6">
+          <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-gray-200">
+            <span class="text-2xl shrink-0">⏱️</span>
+            <div>
+              <p class="font-bold text-navy">審批時間</p>
+              <p class="text-sm text-gray-600">一般 <strong>4-7 個工作天</strong>。網上提交會快啲（約 3-5 個工作天），郵寄會耐啲。</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-gray-200">
+            <span class="text-2xl shrink-0">✅</span>
+            <div>
+              <p class="font-bold text-navy">審批通過</p>
+              <p class="text-sm text-gray-600">公司註冊處會發出確認信，表示修改已登記。章程修改由該日起生效。</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-gray-200">
+            <span class="text-2xl shrink-0">❌</span>
+            <div>
+              <p class="font-bold text-navy">被退回</p>
+              <p class="text-sm text-gray-600">如果文件有問題（例如格式唔啱、內容抵觸公司條例），公司註冊處會退件並要求修正。修正後重新提交即可。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-amber-50 border-l-4 border-amber-400 p-4 mb-6 rounded-r-lg">
+          <p class="text-sm text-amber-800 font-medium">💡 實戰貼士：先 check 再交</p>
+          <p class="text-sm text-amber-700">提交之前，最好俾你嘅公司秘書或者會計師過一過目。一來確保修改內容唔抵觸《公司條例》，二來確認 NR1 填寫冇錯。被退件雖然可以再交，但係會拖時間同影響形象。</p>
+        </div>
+      </section>
+
+      <!-- Section 7 -->
+      <section id="after-approval" class="mt-12">
+        <h2 class="text-2xl font-bold text-navy mb-4">7. 批准後要做嘅事</h2>
+
+        <p class="mb-4">公司註冊處確認登記後，唔好以為就完咗。仲有以下功夫要做：</p>
+
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-3 bg-white p-4 rounded-xl border border-gray-200">
+            <span class="text-xl shrink-0">📚</span>
+            <div>
+              <p class="font-bold text-navy">公司紀錄更新</p>
+              <p class="text-sm text-gray-600">將經修改嘅章程放入公司法定紀錄冊（Statutory Records），取代舊版本。保留舊版本作歷史記錄。</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3 bg-white p-4 rounded-xl border border-gray-200">
+            <span class="text-xl shrink-0">🏦</span>
+            <div>
+              <p class="font-bold text-navy">通知銀行</p>
+              <p class="text-sm text-gray-600">如果修改影響咗董事權限或者公司借貸權力，要通知銀行，更新簽名授權安排。</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3 bg-white p-4 rounded-xl border border-gray-200">
+            <span class="text-xl shrink-0">🤝</span>
+            <div>
+              <p class="font-bold text-navy">通知商業夥伴</p>
+              <p class="text-sm text-gray-600">例如公司改名、董事權力變更等，要通知主要客戶、供應商、合作夥伴。</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3 bg-white p-4 rounded-xl border border-gray-200">
+            <span class="text-xl shrink-0">📄</span>
+            <div>
+              <p class="font-bold text-navy">更新公司印章（如有）</p>
+              <p class="text-sm text-gray-600">如果公司改名，公司印章（Company Chop）要重新造。</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ══════ Checklist Section ══════ -->
+      <section id="checklist" class="mt-12">
+        <h2 class="text-2xl font-bold text-navy mb-4">✅ 修改章程完整 Checklist</h2>
+
+        <div class="bg-white border-2 border-gold/30 rounded-xl p-6 mb-6">
+          <p class="text-sm text-gray-500 mb-4">跟住呢張清單做，唔會漏：</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border-2 border-gray-300 shrink-0"></span>
+              <span class="text-sm">確定修改範圍：邊啲章程要改？點解要改？</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border-2 border-gray-300 shrink-0"></span>
+              <span class="text-sm">撰寫決議內容（對照表形式）</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border-2 border-gray-300 shrink-0"></span>
+              <span class="text-sm">發出 14 日會議通知（或所有股東簽書面決議）</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border-2 border-gray-300 shrink-0"></span>
+              <span class="text-sm">召開股東會 / 簽署書面決議</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border-2 border-gray-300 shrink-0"></span>
+              <span class="text-sm">確認獲得至少 75% 投票權贊成</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border-2 border-gray-300 shrink-0"></span>
+              <span class="text-sm">記錄決議喺會議紀錄</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border-2 border-gray-300 shrink-0"></span>
+              <span class="text-sm">15 日內提交 NR1 + 修改後章程 + 決議副本俾公司註冊處</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border-2 border-gray-300 shrink-0"></span>
+              <span class="text-sm">等公司註冊處確認登記（4-7 個工作天）</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border-2 border-gray-300 shrink-0"></span>
+              <span class="text-sm">更新公司法定紀錄冊</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border-2 border-gray-300 shrink-0"></span>
+              <span class="text-sm">通知銀行、合作夥伴、更新印章（如適用）</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════ Common Mistakes ══════ -->
+      <section id="common-mistakes" class="mt-12">
+        <h2 class="text-2xl font-bold text-navy mb-4">⚠️ 常見錯誤</h2>
+
+        <div class="space-y-4 mb-6">
+          <div class="bg-red-50 rounded-xl p-5 border border-red-200">
+            <div class="flex items-start gap-3">
+              <span class="text-red-500 text-xl shrink-0">❌</span>
+              <div>
+                <p class="font-bold text-navy">用普通決議代替特別決議</p>
+                <p class="text-sm text-gray-600">以為超過 50% 就得，結果個修改係無效嘅。特別決議一定要至少 75%。</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-red-50 rounded-xl p-5 border border-red-200">
+            <div class="flex items-start gap-3">
+              <span class="text-red-500 text-xl shrink-0">❌</span>
+              <div>
+                <p class="font-bold text-navy">冇交 NR1 以為改咗</p>
+                <p class="text-sm text-gray-600">特別決議通過咗但冇提交 NR1，法律上章程冇改過。日後打官司或者做盡職調查會發現唔對路。</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-red-50 rounded-xl p-5 border border-red-200">
+            <div class="flex items-start gap-3">
+              <span class="text-red-500 text-xl shrink-0">❌</span>
+              <div>
+                <p class="font-bold text-navy">遲交 NR1</p>
+                <p class="text-sm text-gray-600">明知 15 日限期，但係「等得閒先處理」，結果過咗幾個月先交。雖然公司註冊處未必罰款，但係有記錄顯示你唔守法。</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-red-50 rounded-xl p-5 border border-red-200">
+            <div class="flex items-start gap-3">
+              <span class="text-red-500 text-xl shrink-0">❌</span>
+              <div>
+                <p class="font-bold text-navy">修改內容抵觸《公司條例》</p>
+                <p class="text-sm text-gray-600">例如想加入「董事唔使申報利益衝突」之類嘅條款——呢啲係《公司條例》規定咗嘅權利，章程唔可以剝奪。</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-red-50 rounded-xl p-5 border border-red-200">
+            <div class="flex items-start gap-3">
+              <span class="text-red-500 text-xl shrink-0">❌</span>
+              <div>
+                <p class="font-bold text-navy">冇保留舊版本章程</p>
+                <p class="text-sm text-gray-600">改章程後丟咗舊版本，日後要查返當年嘅規定就冇記錄。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════ FAQ Section ══════ -->
+      <section id="faq" class="mt-12">
+        <h2 class="text-2xl font-bold text-navy mb-4">❓ 常見問題</h2>
+
+        <div class="space-y-4 mb-6">
+          <details class="bg-white rounded-xl p-5 border border-gray-200 cursor-pointer">
+            <summary class="font-semibold text-navy cursor-pointer">改公司章程要幾耐？</summary>
+            <div class="mt-3 text-sm text-gray-600 space-y-2">
+              <p>最快流程：書面決議（1日）+ 提交 NR1（15日內）+ 審批（4-7個工作天）= 約2-3星期。</p>
+              <p>如果要開股東會，要加14日通知期，總共約4-5星期。</p>
+            </div>
+          </details>
+          <details class="bg-white rounded-xl p-5 border border-gray-200 cursor-pointer">
+            <summary class="font-semibold text-navy cursor-pointer">改公司章程要俾幾多錢？</summary>
+            <div class="mt-3 text-sm text-gray-600 space-y-2">
+              <p>NR1 提交費 HK$65。如果搵公司秘書或者律師幫手，另加服務費（約 HK$2,000 - $5,000 視乎複雜程度）。</p>
+              <p>自己搞：淨係俾 HK$65。</p>
+            </div>
+          </details>
+          <details class="bg-white rounded-xl p-5 border border-gray-200 cursor-pointer">
+            <summary class="font-semibold text-navy cursor-pointer">一人公司都要跟足程序？</summary>
+            <div class="mt-3 text-sm text-gray-600">
+              <p>係。即使你係唯一股東兼唯一董事，法律上都要通過特別決議（可以係書面決議）同提交 NR1。程序上唔可以因為得自己一個就 skip。</p>
+            </div>
+          </details>
+          <details class="bg-white rounded-xl p-5 border border-gray-200 cursor-pointer">
+            <summary class="font-semibold text-navy cursor-pointer">改章程後新章程幾時生效？</summary>
+            <div class="mt-3 text-sm text-gray-600">
+              <p>特別決議通過當日生效，唔係等公司註冊處批咗先生效。但係唔提交 NR1 嘅話，公司註冊處嘅記錄唔會更新，日後會有麻煩。</p>
+            </div>
+          </details>
+          <details class="bg-white rounded-xl p-5 border border-gray-200 cursor-pointer">
+            <summary class="font-semibold text-navy cursor-pointer">股東唔同意修改點算？</summary>
+            <div class="mt-3 text-sm text-gray-600 space-y-2">
+              <p>如果持有不少於 5% 投票權嘅股東唔同意修改，可以向法院申請推翻條修改。法院會睇修改係咪對股東不公平或者壓迫性。</p>
+              <p>所以最好喺修改前同所有股東溝通清楚，盡量達成共識。</p>
+            </div>
+          </details>
+          <details class="bg-white rounded-xl p-5 border border-gray-200 cursor-pointer">
+            <summary class="font-semibold text-navy cursor-pointer">可以改啲咩？有冇限制？</summary>
+            <div class="mt-3 text-sm text-gray-600 space-y-2">
+              <p>基本上章程入面嘅大部分條款都可以改，但係以下限制：</p>
+              <ul class="list-disc ml-4 space-y-1 mt-2">
+                <li>唔可以違反《公司條例》</li>
+                <li>唔可以剝奪法院對某啲事項嘅管轄權</li>
+                <li>唔可以對股東構成不合理嘅不公平</li>
+                <li>如果係私人公司，加入公眾公司嘅條款會自動觸發轉為公眾公司嘅規定</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ═══════════════ CTA Section ═══════════════ -->
+      <section class="mt-12 bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-white text-center">
+        <h2 class="text-2xl font-bold mb-3">📖 更多公司營運指南</h2>
+        <p class="text-gray-300 mb-6 max-w-lg mx-auto">
+          我哋仲有其他香港公司營運嘅實戰指南，全部由真實經歷者整理，幫你避開所有陷阱。
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="../index.html" class="inline-flex items-center justify-center px-6 py-3 bg-gold text-navy font-bold rounded-xl hover:bg-gold/90 transition">
+            睇更多指南 →
+          </a>
+          <a href="../shareholder-transfer.html" class="inline-flex items-center justify-center px-6 py-3 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition border border-white/20">
+            股份轉讓指南
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </article>
+
+  <!-- ═══════════════ Footer ═══════════════ -->
+  <footer class="bg-navy py-12 mt-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-2 text-white font-bold text-lg">
+          <img src="../assets/images/govflow-logo.svg" alt="GovFlow" class="w-5 h-5 inline-block" /> GovFlow
+        </div>
+        <div class="text-sm text-gray-400">
+          香港公司秘書文件指南
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
+        <p class="mb-2">
+          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          如有具體法律問題，請諮詢執業律師或專業公司秘書。
+        </p>
+        <p>© 2025 GovFlow. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
