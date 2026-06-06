@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港有限公司股東墊款（股東貸款）終極指南 — 稅務陷阱、公司法規定、點樣正規化？ | GovFlow</title>
+<meta name="description" content="香港有限公司股東墊款終極指南：股東借錢俾公司 vs 公司借錢俾股東嘅稅務分別、公司法第622章規定、董事貸款申報要求、常見踩坑實例。由真實經歷者整理，唔好因為「自己公司」就亂碌數。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gold { color: #C9A84C; }
+  .border-gold { border-color: #C9A84C; }
+  .hover:bg-gold/90 { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"股東墊款（股東貸款）同公司借錢俾股東有咩分別？","acceptedAnswer":{"@type":"Answer","text":"股東墊款係股東借錢俾公司（股東對公司嘅貸款），屬於公司嘅負債。公司借錢俾股東（包括董事貸款）係公司借錢俾個人，屬於公司嘅資產。兩者嘅稅務處理完全相反：股東墊款嘅利息係公司嘅開支可以扣稅；董事貸款嘅利息收入係公司嘅收入要報稅。公司法對董事貸款有嚴格限制，尤其係金額較大嘅貸款需要股東批准。"}},
+    {"@type":"Question","name":"股東墊款嘅利息要點樣定？唔收利息得唔得？","acceptedAnswer":{"@type":"Answer","text":"稅局可以根據「轉移定價」原則，對冇收息或利息偏低嘅關聯方貸款作出調整。如果股東墊款唔收利息，稅局可能視為公司獲得咗「推定利益」（Deemed Benefit），從而唔容許公司扣除相關嘅利息開支。建議用香港銀行同業拆息（HIBOR）加 1-3% 作為參考利率，同埋簽署正式嘅貸款協議。"}},
+    {"@type":"Question","name":"公司借錢俾股東（董事貸款）有咩限制？","acceptedAnswer":{"@type":"Answer","text":"根據《公司條例》第 486-490 條，公司向董事或相聯人士提供貸款有嚴格限制：1) 貸款金額不得超過公司資產淨值嘅 5%；2) 必須由公司股東會通過普通決議批准；3) 必須備存在公司註冊地址俾股東查閱；4) 董事必須申報利益衝突。違反規定嘅貸款可以係無效嘅，董事可能要賠償公司損失。"}},
+    {"@type":"Question","name":"股東墊款可以當做股本嗎？點樣轉換？","acceptedAnswer":{"@type":"Answer","text":"可以。股東墊款可以通過「債轉股」（Debt-to-Equity Swap）轉換為公司股份。程序係：1) 股東會通過決議增發股份；2) 雙方同意以貸款金額作為股份認購款；3) 向公司註冊處申報股份配發（Form NSC1）。好處係可以降低公司嘅資產負債比率，改善財務報表。但要注意可能產生印花稅（千分之二點六）同資本稅。"}},
+    {"@type":"Question","name":"股東從公司攞錢（股東往來戶口）要報稅嗎？","acceptedAnswer":{"@type":"Answer","text":"要。股東從公司攞錢（透過股東往來戶口 / Director's Current Account）如果係用作股東嘅私人用途，稅局會視為股東嘅收入或者公司嘅股息。如果公司條數係「董事往來戶口」有借方餘額（公司欠股東），而呢筆錢係用咗嚟股東私人用途，稅局有權徵收利得稅或者視為股息收入。每年審計都要披露呢啲往來戶口嘅結餘。"}}
+  ]
+}
+</script>
+<!-- Open Graph -->
+<meta property="og:title" content="香港有限公司股東墊款（股東貸款）終極指南 — 稅務陷阱、公司法規定、點樣正規化？">
+<meta property="og:description" content="股東墊款 vs 董事貸款稅務分別、公司法第622章規定、踩坑實例。由真實經歷者整理，唔好因為「自己公司」就亂碌數。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://govflow.hk/blog/香港有限公司股東墊款董事貸款終極指南.html">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="../index.html" class="flex items-center gap-2.5"><img src="../assets/images/govflow-logo.svg" alt="GovFlow" class="w-7 h-7" /><span class="text-white font-bold text-lg tracking-tight">GovFlow</span></a>
+      <a href="../index.html" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+<!-- Article Header -->
+<section class="bg-navy text-white py-12">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="flex items-center space-x-2 text-gold text-sm mb-3">
+      <span>💰 股東貸款</span>
+      <span>·</span>
+      <span>14 分鐘閱讀</span>
+      <span>·</span>
+      <span>2026 年 6 月</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-4">
+      香港有限公司股東墊款（股東貸款）終極指南<br>
+      <span class="text-gold text-xl sm:text-2xl font-normal">股東借錢俾公司 vs 公司借錢俾股東，稅務分別你要知</span>
+    </h1>
+    <p class="text-gray-300 text-lg max-w-3xl">
+      自己公司，開張初期梗係自己墊住先。但原來股東墊款同董事貸款嘅稅務處理完全唔同，
+      搞錯隨時俾稅局追討利息收入。呢篇文由自己中過招嘅經歷出發，幫你搞清楚所有玩法。
+    </p>
+  </div>
+</section>
+
+<!-- Article Content -->
+<article class="max-w-4xl mx-auto px-4 py-8">
+
+  <!-- Table of Contents -->
+  <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+    <h2 class="text-xl font-bold text-gov-navy mb-4">📋 本文目錄</h2>
+    <ul class="space-y-2">
+      <li><a href="#my-story" class="toc-item text-gray-700 hover:text-gold no-underline">1️⃣ 我點樣中招：以為「自己公司」就亂碌數</a></li>
+      <li><a href="#basics" class="toc-item text-gray-700 hover:text-gold no-underline">2️⃣ 股東墊款基本概念 — 兩個方向搞清楚</a></li>
+      <li><a href="#tax-implications" class="toc-item text-gray-700 hover:text-gold no-underline">3️⃣ 稅務處理：一個往左走，一個往右走</a></li>
+      <li><a href="#director-loan" class="toc-item text-gray-700 hover:text-gold no-underline">4️⃣ 董事貸款 — 公司法嘅嚴格限制（第 486-490 條）</a></li>
+      <li><a href="#current-account" class="toc-item text-gray-700 hover:text-gold no-underline">5️⃣ 股東往來戶口（Director's Current Account）管理</a></li>
+      <li><a href="#formalize" class="toc-item text-gray-700 hover:text-gold no-underline">6️⃣ 點樣正規化股東墊款？實戰步驟</a></li>
+      <li><a href="#debt-to-equity" class="toc-item text-gray-700 hover:text-gold no-underline">7️⃣ 債轉股（Debt-to-Equity Swap）實戰</a></li>
+      <li><a href="#common-mistakes" class="toc-item text-gray-700 hover:text-gold no-underline">8️⃣ 最常見嘅 5 個踩坑位</a></li>
+      <li><a href="#comparison" class="toc-item text-gray-700 hover:text-gold no-underline">9️⃣ 股東墊款 vs 增資 vs 股息 vs 董事袍金 — 全面比較</a></li>
+      <li><a href="#faq" class="toc-item text-gray-700 hover:text-gold no-underline">❓ 常見問題</a></li>
+    </ul>
+  </div>
+
+  <!-- 1. My Story -->
+  <div class="prose-custom" id="my-story">
+    <h2>1️⃣ 我點樣中招：以為「自己公司」就亂碌數</h2>
+
+    <p>
+      話說我開公司第二年，生意開始上軌道，但 cash flow 一時時緊張。
+      有時公司唔夠錢找數，我就自己碌卡找住先；有時公司有錢剩，我又碌返出嚟俾自己用。
+      我當時諗：「有限公司係我嘅，啲錢都係我嘅，碌嚟碌去有咩問題？」
+    </p>
+
+    <p>
+      直到年尾會計師同我做審計，佢睇住我盤數皺眉頭：「喂，你個 Director's Current Account 有幾十萬嘅借方數喎。
+      稅局會當呢啲係你嘅私人利益，可能要報稅㗎。」
+    </p>
+
+    <div class="callout-warning">
+      <strong>😅 真人真事：</strong> 我另一個朋友仲大鑊。佢開咗公司三年，
+      公司賺錢嘅時候佢就碌錢出嚟買車買樓，完全冇還。
+      結果稅局查數，將佢碌出嚟嘅錢全部當做「推定股息」（Deemed Dividend），
+      追返三年嘅利得稅加利息，成 $200,000+。
+      最慘係佢啲錢已經使咗，冇得還返俾公司，結果公司要核數師出保留意見。
+    </div>
+
+    <p>
+      所以唔好以為有限公司係自己嘅，啲錢就可以隨便調。
+      有限公司係一個獨立嘅法律實體，你同公司之間嘅資金往來，
+      稅局同公司註冊處都睇得好緊。以下我會逐項拆解所有你要知嘅嘢。
+    </p>
+  </div>
+
+  <!-- 2. Basics -->
+  <div class="prose-custom" id="basics">
+    <h2>2️⃣ 股東墊款基本概念 — 兩個方向搞清楚</h2>
+
+    <p>首先我哋要搞清楚「股東墊款」呢個 term 其實涵蓋兩個方向：</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>方向</th>
+          <th>術語</th>
+          <th>會計處理</th>
+          <th>公司法規管</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>股東 → 公司</td>
+          <td>股東墊款 / 股東貸款<br>（Shareholder Loan / Director's Loan）</td>
+          <td>公司資產負債表「其他應付款項」<br>（負債）</td>
+          <td>冇特別限制，屬於正常商業安排</td>
+        </tr>
+        <tr>
+          <td>公司 → 股東</td>
+          <td>董事貸款 / 股東借款<br>（Director's Advance / Shareholder Advance）</td>
+          <td>公司資產負債表「其他應收款項」<br>（資產）</td>
+          <td><strong>嚴格限制</strong>（公司條例第 486-490 條）</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>簡單講：</p>
+    <ul>
+      <li><strong>你借錢俾公司</strong>（股東墊款）— 你係債主，公司係借款人。大致上冇問題，但要注意稅務安排。</li>
+      <li><strong>公司借錢俾你</strong>（董事貸款）— 公司係債主，你係借款人。呢個稅局同公司法都睇得好緊。</li>
+    </ul>
+
+    <p>
+      好多人混淆呢兩個概念，以為「碌嚟碌去都係同一盤數」。
+      但喺會計同稅務上，呢兩個方向嘅處理完全唔同。
+    </p>
+  </div>
+
+  <!-- 3. Tax Implications -->
+  <div class="prose-custom" id="tax-implications">
+    <h2>3️⃣ 稅務處理：一個往左走，一個往右走</h2>
+
+    <p>呢度係最多人中招嘅位。股東墊款同董事貸款嘅稅務處理係完全相反嘅：</p>
+
+    <h3>情況一：你借錢俾公司（股東墊款）</h3>
+    <ul>
+      <li><strong>如果你收利息</strong>：公司俾你嘅利息係公司嘅開支，可以用嚟扣稅（但公司要報稅局 IR56 表格，代扣利息稅）</li>
+      <li><strong>如果你唔收利息</strong>：一般冇即時稅務影響，但稅局可以用「轉移定價」調整</li>
+      <li><strong>你還錢</strong>：公司還錢俾你係正常還款，冇稅務影響</li>
+    </ul>
+
+    <div class="callout-info">
+      <strong>💡 小貼士：</strong> 如果你借俾公司嘅錢唔收利息，稅局可能話呢個唔係「公平交易」（Arm's Length Transaction），
+      從而唔俾公司扣除相關嘅融資成本（如果公司有其他借款）。建議收返 market rate 嘅利息（大約 HIBOR + 2-3%），
+      寫份正式貸款協議。
+    </div>
+
+    <h3>情況二：公司借錢俾你（董事貸款）</h3>
+    <ul>
+      <li><strong>如果你俾利息</strong>：公司收到嘅利息係公司嘅收入，要報利得稅</li>
+      <li><strong>如果你唔俾利息</strong>：稅局可以將公司借俾你嘅錢當做「推定股息」（Deemed Dividend），追收利得稅</li>
+      <li><strong>如果係短期周轉</strong>：一般要係「正常營運需要」，唔可以超過公司嘅會計年度</li>
+    </ul>
+
+    <div class="callout-danger">
+      <strong>⚠️ 重點：</strong> 如果你從公司碌咗一筆錢出嚟自己用，而公司又冇向你收利息，
+      稅局有權將呢筆錢當做你嘅個人收入或者股息收入。
+      最壞情況係：公司俾唔到呢筆數嘅利得稅（因為俾人追返），
+      最後要你自己食咗佢。
+    </div>
+
+    <h3>轉移定價（Transfer Pricing）注意</h3>
+    <p>
+      香港 2018 年實施咗《稅務（修訂）（第 6 號）條例》，正式引入轉移定價規則。
+      關聯方之間嘅貸款如果冇收足利息，或者利息唔合理，
+      稅局可以作出調整，將「合理利息」當做公司嘅收入。
+      如果你公司年度營業額超過 $1,000 萬，仲要準備轉移定價文件。
+    </p>
+  </div>
+
+  <!-- 4. Director Loan -->
+  <div class="prose-custom" id="director-loan">
+    <h2>4️⃣ 董事貸款 — 公司法嘅嚴格限制（第 486-490 條）</h2>
+
+    <p>
+      如果話稅務係 IRS（稅局）嘅問題，咁公司法嘅限制就係公司註冊處嘅問題。
+      根據《公司條例》第 486 至 490 條，公司向董事或相聯人士提供貸款有嚴格限制。
+    </p>
+
+    <h3>適用範圍</h3>
+    <p>以下情況全部受規管：</p>
+    <ul>
+      <li>公司向董事提供貸款</li>
+      <li>公司向董事嘅「相聯人士」（配偶、子女、信託、關聯公司）提供貸款</li>
+      <li>公司為董事嘅貸款提供擔保</li>
+      <li>公司向董事提供信貸（Credit Facility）</li>
+    </ul>
+
+    <h3>主要限制</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>規定</th>
+          <th>內容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>金額上限</td>
+          <td>貸款金額不得超過公司資產淨值（Net Assets）嘅 5%</td>
+        </tr>
+        <tr>
+          <td>股東批准</td>
+          <td>必須由公司股東會通過普通決議（Simple Majority）批准</td>
+        </tr>
+        <tr>
+          <td>披露要求</td>
+          <td>貸款詳情必須備存喺公司註冊地址，俾股東查閱</td>
+        </tr>
+        <tr>
+          <td>利益申報</td>
+          <td>涉及嘅董事必須申報利益衝突，唔可以投票</td>
+        </tr>
+        <tr>
+          <td>豁免情況</td>
+          <td>如果貸款係「正常營運需要」（例如公司俾董事一張公司信用卡做商務開支），可以豁免</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout-danger">
+      <strong>⚠️ 違反後果：</strong>
+      <ul class="mt-2">
+        <li>該貸款可以係 <strong>無效</strong>嘅（公司可以追討返）</li>
+        <li>批准該貸款嘅董事要 <strong>個人賠償</strong>公司損失</li>
+        <li>董事可能被罰款 $150,000</li>
+        <li>如果公司清盤，清盤人會追究呢啲貸款</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 5. Director's Current Account -->
+  <div class="prose-custom" id="current-account">
+    <h2>5️⃣ 股東往來戶口（Director's Current Account）管理</h2>
+
+    <p>
+      喺香港中小企嘅會計實務入面，有一個好重要嘅帳戶叫「董事往來戶口」
+      （Director's Current Account / DCA），或者叫「股東往來戶口」
+      （Shareholder's Current Account）。
+    </p>
+
+    <p>
+      呢個帳戶記錄公司同股東/董事之間嘅非貿易資金往來，包括：
+    </p>
+
+    <ul>
+      <li>股東墊款俾公司嘅資金</li>
+      <li>公司代股東支付嘅私人開支（例如私人保險、旅行費用）</li>
+      <li>股東代公司支付嘅開支（例如公司貨款、租金）</li>
+      <li>公司俾股東嘅借款</li>
+      <li>股息分配（未正式宣告前嘅預支）</li>
+    </ul>
+
+    <h3>點樣管理先合規？</h3>
+    <ol>
+      <li><strong>記錄每一筆：</strong> 每次有資金往來都要清楚記錄日期、金額、原因。唔好就咁「碌卡」唔留 record。</li>
+      <li><strong>分開貿易同非貿易：</strong> 公司收貨、俾貨款係貿易往來，唔應該擺入 DCA。</li>
+      <li><strong>定期結算：</strong> 最少每年一次（年結日之前）清理 DCA 結餘。借方（公司欠你）嘅話可以還返；貸方（你欠公司）嘅話要還俾公司或者正式化做貸款/股息。</li>
+      <li><strong>用正式協議：</strong> 如果 DCA 有長期餘額，應該簽份正式貸款協議，列明還款條款同利率。</li>
+    </ol>
+
+    <div class="callout-warning">
+      <strong>😅 又係真人真事：</strong> 我第一次做審計嗰年，會計師見到我盤數 DCA 有成 $120,000 嘅貸方結餘
+      （即係我欠公司 $120,000），即刻問我：「呢筆錢你打算點還？」
+      我當時 O 嘴，因為啲錢已經用咗嚟交租同買生活用品。
+      最後要叫會計師幫我做份「股息宣告文件」同「貸款協議」，
+      先至搞得掂盤數。額外俾多 $3,000 會計費。
+    </div>
+  </div>
+
+  <!-- 6. How to Formalize -->
+  <div class="prose-custom" id="formalize">
+    <h2>6️⃣ 點樣正規化股東墊款？實戰步驟</h2>
+
+    <p>如果你同公司有資金往來，以下係正規化嘅步驟：</p>
+
+    <h3>如果你借錢俾公司（股東墊款）</h3>
+    <ol>
+      <li><strong>簽署貸款協議：</strong> 寫一份正式嘅 Loan Agreement，列明貸款金額、利率、還款期、違約條款。雙方簽署，各自 keep 一份。</li>
+      <li><strong>設定合理利息：</strong> 建議用 HIBOR + 2-3% 作為參考。你可以用 1 個月 HIBOR（2026 年大約 3.5-4%）加 2%，即係大約 5.5-6% 年利率。</li>
+      <li><strong>記錄入數：</strong> 每次資金轉帳要清楚記錄，最好用公司戶口直接轉帳，唔好現金往來。</li>
+      <li><strong>年結披露：</strong> 審計報告要披露關聯方交易，包括股東墊款嘅金額同利率。</li>
+      <li><strong>準時還款：</strong> 到期還款要按協議執行，唔好拖。如果要續期，要簽補充協議。</li>
+    </ol>
+
+    <h3>如果公司借錢俾你（董事貸款）</h3>
+    <ol>
+      <li><strong>確認有冇超過資產淨值 5%：</strong> 如果超過，一定要開股東會批准。</li>
+      <li><strong>開股東會決議：</strong> 就算冇超過，都建議開個股東會，記錄批准。自己簽自己都得（如果你係唯一股東）。</li>
+      <li><strong>簽署貸款協議：</strong> 同上面一樣，但要注意條款要公平。</li>
+      <li><strong>支付利息：</strong> 一定要俾 market rate 利息。唔俾嘅話稅局會調整。</li>
+      <li><strong>定期還款：</strong> 最好每個月仲少少，唔好一期過到期先還。</li>
+    </ol>
+
+    <div class="callout-success">
+      <strong>✅ 貸款協議範本包括：</strong>
+      <ul class="mt-2">
+        <li>雙方名稱同地址</li>
+        <li>貸款金額（大寫 + 細寫）</li>
+        <li>利率（固定或浮動，浮動嘅要列明基準）</li>
+        <li>還款期（逐期還定係到期一次過還）</li>
+        <li>提前還款條款</li>
+        <li>違約條款（逾期利率）</li>
+        <li>管轄法律（香港法律）</li>
+        <li>雙方簽署 + 日期</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 7. Debt to Equity -->
+  <div class="prose-custom" id="debt-to-equity">
+    <h2>7️⃣ 債轉股（Debt-to-Equity Swap）實戰</h2>
+
+    <p>
+      如果你借咗好多錢俾公司（例如開業初期墊咗 $500,000），
+      而公司暫時冇錢還俾你，一個好常見嘅做法係「債轉股」
+      — 將你嘅貸款轉為公司股份。
+    </p>
+
+    <h3>點解要做債轉股？</h3>
+    <ul>
+      <li><strong>改善公司資產負債表：</strong> 將負債變為權益，公司嘅負債比率會好睇好多</li>
+      <li><strong>銀行借錢容易啲：</strong> 銀行見到公司 debt-to-equity ratio 靚仔啲，願意借錢</li>
+      <li><strong>簡化稅務：</strong> 唔使再煩利息收入/支出嘅問題</li>
+      <li><strong>為將來融資做準備：</strong> 投資者見到股本結構清晰，更容易 invest</li>
+    </ul>
+
+    <h3>債轉股程序</h3>
+    <ol>
+      <li><strong>評估貸款金額：</strong> 確認貸款金額同利息（如果有利息未付，要計返總數）</li>
+      <li><strong>決定每股價格：</strong> 要決定新股份嘅發行價。可以係面值（$1.00）或者溢價發行。</li>
+      <li><strong>股東會決議：</strong> 通過決議增加股本、配發新股份俾你。</li>
+      <li><strong>簽署文件：</strong> 簽署債轉股協議、股份認購書。</li>
+      <li><strong>申報公司註冊處：</strong> 提交 <strong>Form NSC1</strong>（股份配發申報書），限期係配發後 1 個月內。</li>
+      <li><strong>更新股東名冊：</strong> 更新公司嘅股東名冊同股份登記。</li>
+    </ol>
+
+    <div class="callout-info">
+      <strong>💡 成本考慮：</strong> 債轉股涉及以下成本：
+      <ul class="mt-2">
+        <li><strong>資本稅（Capital Duty）：</strong> 增加股本嘅千分之一（$1,000 增加股本收 $1）</li>
+        <li><strong>印花稅：</strong> 如果涉及股份轉讓（唔係新配發），要俾千分之二點六嘅印花稅</li>
+        <li><strong>會計/法律費：</strong> 視乎複雜程度，大約 $2,000-$5,000</li>
+      </ul>
+    </div>
+
+    <p>
+      債轉股係一個好 common 嘅公司重組工具，適合 startup 同中小企。
+      如果你公司有打算融資或者賣盤，債轉股可以令股權結構更清晰。
+    </p>
+  </div>
+
+  <!-- 8. Common Mistakes -->
+  <div class="prose-custom" id="common-mistakes">
+    <h2>8️⃣ 最常見嘅 5 個踩坑位</h2>
+
+    <div class="callout-danger">
+      <strong>❌ 錯誤 #1：以為「公司係我嘅，啲錢都係我嘅」</strong>
+      <p class="mt-2">有限公司係獨立法律實體，你同公司之間嘅資金往來係「關聯方交易」，
+      唔係你自己同自己嘅錢。稅局、公司註冊處、銀行都係咁睇。唔好因為公司係你嘅，
+      就覺得可以隨便碌錢出嚟。</p>
+    </div>
+
+    <div class="callout-danger">
+      <strong>❌ 錯誤 #2：冇簽貸款協議</strong>
+      <p class="mt-2">口頭協議係冇法律效力嘅。如果冇書面貸款協議，萬一公司清盤，
+      清盤人可能將你嘅「墊款」當做股東出資（Equity Contribution），
+      唔係貸款。咁樣你排喺債權人嘅最後，可能一毫子都收唔返。</p>
+    </div>
+
+    <div class="callout-danger">
+      <strong>❌ 錯誤 #3：DCA 結餘太大唔清理</strong>
+      <p class="mt-2">年結日 DCA 有大量貸方結餘（你欠公司錢）？
+      稅局會問點解。審計師會出保留意見。銀行可能唔借錢俾你。
+      建議每年年結前清理 DCA，至少將非商業性質嘅往來還清。</p>
+    </div>
+
+    <div class="callout-danger">
+      <strong>❌ 錯誤 #4：董事貸款冇股東批准</strong>
+      <p class="mt-2">就算你係 100% 股東，法例都要求你開會（即使係書面決議）去批准董事貸款。
+      唔做嘅話，呢筆貸款可能係無效嘅。尤其係買樓按揭嗰啲大數，
+      一定要有正式嘅董事會同股東會紀錄。</p>
+    </div>
+
+    <div class="callout-danger">
+      <strong>❌ 錯誤 #5：收利息亂收或者唔收</strong>
+      <p class="mt-2">收得太高：稅局可能話係隱藏股息；收得太低或者唔收：稅局用轉移定價調整。
+      Market rate 係最安全嘅。唔好求其寫個數，要根據銀行利率合理訂定。</p>
+    </div>
+  </div>
+
+  <!-- 9. Comparison -->
+  <div class="prose-custom" id="comparison">
+    <h2>9️⃣ 股東墊款 vs 增資 vs 股息 vs 董事袍金 — 全面比較</h2>
+
+    <p>好多東主唔清楚：究竟應該用邊種方式同公司有資金往來最抵？以下係比較表：</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>方式</th>
+          <th>方向</th>
+          <th>稅務效果</th>
+          <th>適合情況</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>股東墊款</strong></td>
+          <td>你 → 公司</td>
+          <td>你收利息要報個人稅；公司俾利息可以扣稅</td>
+          <td>短期周轉、公司需要資金但未想增加股本</td>
+        </tr>
+        <tr>
+          <td><strong>增資（股本）</strong></td>
+          <td>你 → 公司</td>
+          <td>冇即時稅務影響（但將來賣股份要俾利得稅/印花稅）</td>
+          <td>長期投資、需要改善資產負債表</td>
+        </tr>
+        <tr>
+          <td><strong>董事貸款</strong></td>
+          <td>公司 → 你</td>
+          <td>你俾利息公司要報利得稅；唔俾利息有稅務風險</td>
+          <td>短期周轉（1 年內還清）</td>
+        </tr>
+        <tr>
+          <td><strong>股息（Dividend）</strong></td>
+          <td>公司 → 你</td>
+          <td>香港冇股息稅，完全免稅</td>
+          <td>公司有累積利潤，你想攞錢出嚟</td>
+        </tr>
+        <tr>
+          <td><strong>董事袍金</strong></td>
+          <td>公司 → 你</td>
+          <td>你嘅個人薪俸稅（最高 15%）；公司可以扣稅</td>
+          <td>你幫公司做嘢，想有穩定收入</td>
+        </tr>
+        <tr>
+          <td><strong>償還墊款</strong></td>
+          <td>公司 → 你</td>
+          <td>純粹還款，冇稅務影響</td>
+          <td>公司有錢時還返你之前墊嘅錢</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout-success">
+      <strong>💰 性價比之王：</strong> 如果你想從公司攞錢出嚟，<strong>股息</strong>係最抵嘅，
+      因為香港係「地域來源徵稅」，股息完全免稅。
+      但注意：公司必須有「可供分派利潤」（Distributable Profits），
+      同埋要正式開會宣告股息。
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="prose-custom" id="faq">
+    <h2>❓ 常見問題</h2>
+
+    <div class="faq-item">
+      <details>
+        <summary>股東墊款可以唔收利息嗎？稅局會點睇？</summary>
+        <p>可以，但稅局有權根據轉移定價規則作出調整。如果公司有其他借款（例如銀行貸款），
+        稅局可能唔俾公司扣除嗰啲利息，因為你向股東嘅零息貸款「取代」咗銀行貸款。
+        建議收 HIBOR + 2-3% 嘅市場利率，簽正式協議。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>公司借錢俾股東買樓，得唔得？</summary>
+        <p>理論上得，但要嚴格遵守《公司條例》第 486-490 條：金額唔超過資產淨值 5%、
+        股東會批准、披露。不過實際上極少公司會咁做，
+        因為銀行見到盤數有「董事貸款買樓」會即刻紅旗。多數人會用股息或者董事袍金方式處理。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>股東墊款可以當做公司嘅股本嗎？</summary>
+        <p>可以透過債轉股程序處理。但要注意：如果係貸款，公司有法定責任還錢；
+        如果係股本，公司冇責任退還。債轉股通常要開股東會決議，同埋向公司註冊處申報 Form NSC1。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>年結時 DCA 有結餘，會計師會點處理？</summary>
+        <p>借方結餘（公司欠你）：正常披露為「其他應付款項 — 關聯方」。
+        貸方結餘（你欠公司）：會計師會要求你提供書面解釋，同埋確認還款計劃。
+        如果金額大而且冇還款計劃，可能要做撥備（Impairment），甚至影響審計意見。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>有限公司股東墊款嘅利息點樣報稅？</summary>
+        <p>如果你俾公司嘅貸款有收利息：你個人要喺報稅表申報利息收入（作為「利息收入」或「業務收入」）。
+        公司可以扣除俾你嘅利息開支（但要交 IR56 表格同扣稅）。
+        通常建議利息唔好太高，避免稅局挑戰。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>如果公司清盤，股東墊款排第幾？</summary>
+        <p>股東墊款屬於「無抵押債權人」（Unsecured Creditor），排名喺有抵押債權人（銀行）、
+        優先債權人（員工、稅局）之後，但喺股東之前。如果清盤人認為你嘅「墊款」其實係股本，
+        佢可以將你 downgrade 去股東層級，最後先找數。所以一定要有正式貸款協議同還款紀錄。</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="bg-navy text-white rounded-lg p-8 mt-12 text-center">
+    <h3 class="text-2xl font-bold mb-4">📖 想睇更多香港公司實戰指南？</h3>
+    <p class="text-gray-300 mb-6 max-w-xl mx-auto">
+      GovFlow 有超過 25 篇由真實經歷者撰寫嘅香港公司指南，
+      涵蓋開公司、報稅、審計、董事責任、員工安排等全方位內容。
+    </p>
+    <a href="../index.html" class="inline-block bg-gov-gold text-navy font-bold px-8 py-3 rounded-lg hover:bg-yellow-500 transition">
+      瀏覽全部指南 →
+    </a>
+  </div>
+</article>
+
+<!-- Footer -->
+<footer class="bg-navy text-gray-400 py-8 mt-8">
+  <div class="max-w-4xl mx-auto px-4 text-center text-sm">
+    <p class="mb-2">© 2026 GovFlow. 內容由真實經歷者整理，僅供參考，唔構成法律或會計意見。</p>
+    <p>如有特定情況，請諮詢專業會計師或律師。</p>
+  </div>
+</footer>
+
+</body>
+</html>
