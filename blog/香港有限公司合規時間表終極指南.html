@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港有限公司合規時間表終極指南 — 每年幾時要做咩一次過睇晒 | GovFlow</title>
+<meta name="description" content="香港有限公司每年有咩合規 deadline？NAR1、報稅、BR 續期、審計、重要控制人登記冊更新 — 一文整合全年合規時間表，附月份對照表同罰款金額，唔再怕漏 deadline。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gold { color: #C9A84C; }
+  .border-gold { border-color: #C9A84C; }
+  .hover:bg-gold/90 { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+  .month-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  .deadline-highlight { background: #1B2A4A; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; display: inline-block; font-size: 0.8rem; font-weight: 700; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"香港有限公司每年一定要做嘅合規事項有邊啲？","acceptedAnswer":{"@type":"Answer","text":"主要分為四類：(1) 商業登記續期（每年一次）；(2) 周年申報表 NAR1（每年一次，公司成立周年日後 42 日內）；(3) 審計報告（成立後 18 個月內第一次，之後每年一次）；(4) 利得稅報稅表（由稅局發出後 1 個月內提交）。"}},
+    {"@type":"Question","name":"有限公司商業登記續期幾時要搞？","acceptedAnswer":{"@type":"Answer","text":"商業登記證有效期一年，到期前 1 個月會收到續期通知。收到後要喺有效期屆滿後 1 個月內續期，可以親身去灣仔稅局、郵寄或網上 eTAX 辦理。費用：HK$2,150（2025/26年度）。"}},
+    {"@type":"Question","name":"NAR1 周年申報表幾時交？遲交罰幾多？","acceptedAnswer":{"@type":"Answer","text":"NAR1 喺公司成立周年日後 42 日內提交。遲交罰款：逾期唔超過 3 個月 HK$870；3-6 個月 HK$1,740；6-9 個月 HK$2,610；超過 9 個月 HK$3,480。嚴重遲交可能會俾公司註冊處檢控。"}},
+    {"@type":"Question","name":"有限公司第一次審計幾時要做？","acceptedAnswer":{"@type":"Answer","text":"新公司成立後 18 個月內要完成第一次審計，之後每個財政年度都要做。審計報告要連同利得稅報稅表一齊提交俾稅局。即使公司冇營運（Dormant），都要提交審計報告或董事聲明。"}},
+    {"@type":"Question","name":"有限公司報稅 deadline 係幾時？","acceptedAnswer":{"@type":"Answer","text":"稅局會發出報稅表（BIR51），通常喺每年 4 月第一個工作日發出。提交期限係發出後 1 個月內。如果委託稅務代表（會計師），可申請延期。一般延至 8 月中（非 x 區）或 11 月中（x 區），最長可延至 5-8 個月。"}},
+    {"@type":"Question","name":"重要控制人登記冊（SCR）每年要更新幾次？","acceptedAnswer":{"@type":"Answer","text":"法例冇規定每年更新次數，但要求喺重要控制人資料變更後 7 日內更新。公司應該每年最少檢查一次 SCR 資料是否仍然準確，尤其喺周年申報前建議核對一次。"}},
+    {"@type":"Question","name":"公司有營運但冇做審計會有咩後果？","acceptedAnswer":{"@type":"Answer","text":"可能面臨罰款 HK$5,000 至 HK$100,000，董事個人可能要負法律責任。稅局有權重新評稅，甚至展開調查。建議即使公司冇營運，都提交 Dormant Status 通知或做審計。"}}
+  ]
+}
+</script>
+<!-- Open Graph -->
+<meta property="og:title" content="香港有限公司合規時間表終極指南 — 每年幾時要做咩一次過睇晒">
+<meta property="og:description" content="NAR1、報稅、BR續期、審計、SCR更新 — 一文整合全年合規時間表，附月份對照表同罰款金額。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hongkpng855-lang.github.io/govflow/blog/香港有限公司合規時間表終極指南.html">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="../index.html" class="flex items-center gap-2.5"><img src="../assets/images/govflow-logo.svg" alt="GovFlow" class="w-7 h-7" /><span class="text-white font-bold text-lg tracking-tight">GovFlow</span></a>
+      <a href="index.html" class="text-sm text-gray-400 hover:text-gold transition">← 返回網誌</a>
+    </div>
+  </nav>
+
+<!-- Article Header -->
+<section class="bg-navy text-white py-12">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="flex items-center space-x-2 text-gold text-sm mb-3">
+      <span>📅 公司合規</span>
+      <span>·</span>
+      <span>8 分鐘閱讀</span>
+      <span>·</span>
+      <span>2026 年 6 月</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-4">
+      香港有限公司合規時間表終極指南<br>
+      <span class="text-gold text-xl sm:text-2xl font-normal">每年幾時要做咩，一次過睇晒</span>
+    </h1>
+    <p class="text-gray-300 text-lg max-w-3xl">
+      開咗有限公司之後，每年有咩 deadline？NAR1 幾時交？BR 續期點搞？審計報告要幾時準備好？
+      我第一年開公司完全冇概念，結果差啲遲交 NAR1 俾人罰錢。呢篇文章幫你整合晒全年合規時間表。
+    </p>
+  </div>
+</section>
+
+<!-- Article Content -->
+<article class="max-w-4xl mx-auto px-4 py-8">
+
+  <!-- Price Comparison Banner -->
+  <div class="bg-navy text-white rounded-lg p-4 sm:p-6 mb-8 flex flex-col sm:flex-row items-center justify-between">
+    <div>
+      <span class="text-gold font-bold text-sm">💰 節省比較</span>
+      <p class="text-lg font-bold mt-1">會計公司 Compliance 套餐 <span class="line-through text-gray-400">$3,000+/年</span> → <span class="text-gold text-xl">自己做只需了解 deadline</span></p>
+      <p class="text-sm text-gray-300 mt-1">了解 deadline 就唔使俾人食價，自己做順序合理就得</p>
+    </div>
+    <a href="../shareholder-transfer.html" class="bg-gov-gold text-gov-navy font-bold px-6 py-3 rounded-lg mt-3 sm:mt-0 hover-gov-gold transition whitespace-nowrap">
+      睇股份轉讓完整指南 →
+    </a>
+  </div>
+
+  <!-- Table of Contents -->
+  <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+    <h2 class="text-xl font-bold text-gov-navy mb-4">📋 本文目錄</h2>
+    <ul class="space-y-2">
+      <li><a href="#overview" class="toc-item text-gray-700 hover:text-gold no-underline">📊 全年合規事項總覽</a></li>
+      <li><a href="#monthly" class="toc-item text-gray-700 hover:text-gold no-underline">🗓️ 逐月時間表</a></li>
+      <li><a href="#nar1" class="toc-item text-gray-700 hover:text-gold no-underline">1️⃣ NAR1 周年申報表</a></li>
+      <li><a href="#br" class="toc-item text-gray-700 hover:text-gold no-underline">2️⃣ 商業登記（BR）續期</a></li>
+      <li><a href="#audit" class="toc-item text-gray-700 hover:text-gold no-underline">3️⃣ 審計報告</a></li>
+      <li><a href="#tax" class="toc-item text-gray-700 hover:text-gold no-underline">4️⃣ 利得稅報稅</a></li>
+      <li><a href="#scr" class="toc-item text-gray-700 hover:text-gold no-underline">5️⃣ 重要控制人登記冊（SCR）</a></li>
+      <li><a href="#other" class="toc-item text-gray-700 hover:text-gold no-underline">6️⃣ 其他合規事項</a></li>
+      <li><a href="#penalty" class="toc-item text-gray-700 hover:text-gold no-underline">💰 遲交罰款一覽表</a></li>
+      <li><a href="#calendar" class="toc-item text-gray-700 hover:text-gold no-underline">📅 個人化 Checklist</a></li>
+      <li><a href="#faq" class="toc-item text-gray-700 hover:text-gold no-underline">❓ 常見問題</a></li>
+    </ul>
+  </div>
+
+  <!-- Intro -->
+  <div class="prose-custom">
+    <p>
+      我仲好記得開公司第一年嘅混亂。每年 4 月收到稅局封信，打開見到「利得稅報稅表」，即刻心跳加速。
+      再隔幾個月收到商業登記續期通知，之後又收到公司註冊處嘅 NAR1 通知⋯⋯
+    </p>
+    <p>
+      問題係：<strong>呢啲 deadline 全部都唔同月份、唔同機構、唔同罰則。</strong>
+      第一年我全部靠會計師提我，但每次提親都係額外收費。😅
+    </p>
+    <p>
+      後尾我自己做咗個合規時間表，每月 check 一次就唔會漏。
+      呢篇文章同你分享呢個時間表，希望幫你慳返每年俾會計師「提你交表」嘅費用。
+    </p>
+  </div>
+
+  <!-- Overview -->
+  <div class="prose-custom" id="overview">
+    <h2>📊 全年合規事項總覽</h2>
+    
+    <p>
+      香港有限公司每年主要有以下 4 大合規事項：
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>事項</th>
+          <th>負責機構</th>
+          <th>頻率</th>
+          <th>罰款風險</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><strong>NAR1 周年申報表</strong></td>
+          <td>公司註冊處</td>
+          <td>每年一次</td>
+          <td><span class="deadline-highlight">🔥 HK$870 - $3,480</span></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><strong>商業登記續期</strong></td>
+          <td>商業登記署 / 稅局</td>
+          <td>每年一次</td>
+          <td>HK$300 罰款起</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><strong>審計報告</strong></td>
+          <td>核數師 + 稅局</td>
+          <td>每年一次</td>
+          <td>最高 HK$100,000</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><strong>利得稅報稅</strong></td>
+          <td>稅務局</td>
+          <td>每年一次</td>
+          <td>最高 HK$10,000 + 3倍稅款</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      另外仲有幾個「長期合規」事項，雖然冇固定 deadline，但都要持續跟進：
+    </p>
+    <ul>
+      <li>重要控制人登記冊（SCR）— 有變更就要 7 日內 update</li>
+      <li>公司法定紀錄（股東名冊、董事名冊、會議記錄）— 要 keep 住更新</li>
+      <li>公司註冊地址 — 如有變更要即時通知</li>
+      <li>董事／公司秘書變更 — 變更後 15 日內申報</li>
+    </ul>
+  </div>
+
+  <!-- Monthly Timeline -->
+  <div class="prose-custom" id="monthly">
+    <h2>🗓️ 逐月時間表</h2>
+
+    <p>
+      以下時間表係假設公司財政年度係 1-12 月，成立日期係 1 月 1 日。
+      你嘅時間會因應公司成立日期同財政年度而唔同。
+      我會喺後面教你點樣計算自己公司嘅 deadline。
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>月份</th>
+          <th>要做咩</th>
+          <th>備註</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1 月</strong></td>
+          <td>準備年度財務資料<br>通知核數師安排審計</td>
+          <td>上年度結束後 3 個月內開始準備</td>
+        </tr>
+        <tr>
+          <td><strong>2 月</strong></td>
+          <td>整理帳目文件俾核數師</td>
+          <td>銀行月結單、發票、收據、合約</td>
+        </tr>
+        <tr>
+          <td><strong>3 月</strong></td>
+          <td>跟進審計進度<br>準備 NAR1 資料</td>
+          <td>審計通常需時 2-4 星期</td>
+        </tr>
+        <tr>
+          <td><strong>4 月</strong></td>
+          <td><span class="deadline-highlight">⚠️ 稅局寄出報稅表</span><br>準備報稅資料</td>
+          <td>4 月第一個工作日稅局寄出 BIR51</td>
+        </tr>
+        <tr>
+          <td><strong>5 月</strong></td>
+          <td><span class="deadline-highlight">⚠️ 報稅表提交死線</span><br>商業登記續期到期</td>
+          <td>一般提交期限：發出後 1 個月內</td>
+        </tr>
+        <tr>
+          <td><strong>6 月</strong></td>
+          <td>確定獲批延期（如有）<br>準備周年申報</td>
+          <td>記實獲批延期嘅新 deadline</td>
+        </tr>
+        <tr>
+          <td><strong>7 月</strong></td>
+          <td><span class="deadline-highlight">⚠️ NAR1 提交</span><br>（如成立日期係 1 月）</td>
+          <td>成立周年日後 42 日內</td>
+        </tr>
+        <tr>
+          <td><strong>8 月</strong></td>
+          <td>非 x 區公司報稅延期死線<br>核對 SCR 紀錄</td>
+          <td>通常延至 8 月中</td>
+        </tr>
+        <tr>
+          <td><strong>9 月</strong></td>
+          <td>預備下年度預算<br>檢查所有文件是否齊全</td>
+          <td>核對公司註冊處紀錄</td>
+        </tr>
+        <tr>
+          <td><strong>10 月</strong></td>
+          <td>x 區公司報稅延期死線<br>更新公司法定紀錄</td>
+          <td>通常延至 11 月中</td>
+        </tr>
+        <tr>
+          <td><strong>11 月</strong></td>
+          <td>準備下年度續期<br>檢查 BR 到期日</td>
+          <td>如果 BR 係年尾到期，準備續期</td>
+        </tr>
+        <tr>
+          <td><strong>12 月</strong></td>
+          <td>年度會計結帳準備<br>整理全年單據</td>
+          <td>為下年度審計做準備</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout-info">
+      <strong>💡 點樣計自己公司嘅 deadline：</strong> 最簡單嘅方法係 download 公司註冊處嘅電子提示服務（e-Reminder），佢會喺 NAR1 到期前自動 email 提你。
+      或者用以下公式：
+      <ul>
+        <li><strong>NAR1 死線</strong> = 公司成立日期 + 11 個月 + 42 日</li>
+        <li><strong>BR 續期</strong> = BR 證上嘅到期日（有效期屆滿後仲有 1 個月寬限期）</li>
+        <li><strong>報稅死線</strong> = 報稅表發出日期 + 1 個月（或獲批延長嘅日期）</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 1. NAR1 -->
+  <div class="prose-custom" id="nar1">
+    <h2>1️⃣ NAR1 周年申報表</h2>
+
+    <p>
+      NAR1（Annual Return）係公司每年都要向公司註冊處提交嘅申報表，匯報公司最新狀況，
+      包括股東、董事、公司秘書、註冊地址、股本結構等資料。
+    </p>
+
+    <h3>幾時要交？</h3>
+    <p>
+      公司成立周年日後 <strong>42 日內</strong>提交。
+    </p>
+    <ul>
+      <li>例如：公司係 2025 年 1 月 15 日成立</li>
+      <li>周年日：2026 年 1 月 15 日</li>
+      <li>死線：2026 年 2 月 26 日（1 月 15 日 + 42 日）</li>
+    </ul>
+
+    <div class="callout-danger">
+      <strong>⚠️ 罰款：</strong> NAR1 遲交罰款係每級遞增嘅：
+      <ul>
+        <li>唔超過 3 個月：<strong>HK$870</strong></li>
+        <li>超過 3 個月但不超過 6 個月：<strong>HK$1,740</strong></li>
+        <li>超過 6 個月但不超過 9 個月：<strong>HK$2,610</strong></li>
+        <li>超過 9 個月：<strong>HK$3,480</strong></li>
+      </ul>
+      <p class="mt-2">而且，公司註冊處而家嘅系統會自動 detect 邊啲公司逾期未交，罰款係會自動發出嘅。</p>
+    </div>
+
+    <h3>費用</h3>
+    <p>提交 NAR1 嘅登記費係 <strong>HK$105</strong>（2025/26 年度費用）。</p>
+
+    <h3>點樣提交？</h3>
+    <ol>
+      <li><strong>網上提交（最推薦）</strong> — 用公司註冊處嘅 eCR 系統，最快最平</li>
+      <li><strong>親身提交</strong> — 去金鐘道 66 號金鐘道政府合署</li>
+      <li><strong>郵寄</strong> — 寄去公司註冊處</li>
+    </ol>
+
+    <div class="callout-warning">
+      <strong>😅 我嘅失誤：</strong> 第一次交 NAR1，我以為同報稅一樣係每年 4 月搞。
+      結果係按公司成立日期計，我搞錯咗成個月。好彩發現得早，趕得切 deadline。
+    </div>
+  </div>
+
+  <!-- 2. BR -->
+  <div class="prose-custom" id="br">
+    <h2>2️⃣ 商業登記（BR）續期</h2>
+
+    <p>
+      商業登記證係每年都需要續期嘅。注意：<strong>商業登記同公司註冊係兩個獨立嘅系統</strong>，
+      即使你唔做生意，只要公司仍然存在，都要續期商業登記。
+    </p>
+
+    <h3>幾時要續期？</h3>
+    <p>商業登記證有效期一年，到期前 1 個月稅局會寄續期通知俾你。
+     收到通知後，喺有效期屆滿後 <strong>1 個月內</strong>辦理續期就得。
+    </p>
+
+    <h3>費用</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th>費用</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>商業登記證年費（2025/26）</td>
+          <td><strong>HK$2,150</strong></td>
+        </tr>
+        <tr>
+          <td>遲交附加費</td>
+          <td>HK$300</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>點樣續期？</h3>
+    <ol>
+      <li><strong>網上續期（最推薦）</strong> — 用稅務易（eTAX）帳戶，幾分鐘搞掂</li>
+      <li><strong>親身去稅局</strong> — 灣仔稅務大樓</li>
+      <li><strong>郵寄</strong> — 寄支票同續期通知去稅局</li>
+    </ol>
+
+    <div class="callout-info">
+      <strong>💡 小貼士：</strong> 建議設立 eTAX 帳戶，可以網上 check 商業登記到期日、網上交費、下載電子版商業登記證。
+      之後續期完全唔使排隊。
+    </div>
+  </div>
+
+  <!-- 3. Audit -->
+  <div class="prose-custom" id="audit">
+    <h2>3️⃣ 審計報告</h2>
+
+    <p>
+      根據香港《公司條例》，所有有限公司（除咗部分細規模公司有豁免）每年都要做審計。
+      審計報告係由獨立核數師對公司財務報表嘅意見，證明帳目真實公平。
+    </p>
+
+    <h3>幾時要做？</h3>
+    <ul>
+      <li><strong>第一次審計</strong>：公司成立後 18 個月內</li>
+      <li><strong>之後每年</strong>：每個財政年度結束後 6 個月內完成（但實際死線係報稅 deadline）</li>
+    </ul>
+
+    <h3>審計流程時間表</h3>
+    <ol>
+      <li><strong>財政年度結束後 1-2 個月</strong>：整理帳目文件（銀行月結單、發票、收據、合約）</li>
+      <li><strong>財政年度結束後 2-4 個月</strong>：將帳目交俾核數師</li>
+      <li><strong>財政年度結束後 4-6 個月</strong>：核數師進行審計工作</li>
+      <li><strong>財政年度結束後 6 個月</strong>：取得審計報告</li>
+    </ol>
+
+    <div class="callout-warning">
+      <strong>😅 我學到嘅教訓：</strong> 審計唔係一日做完嘅。核數師需要你嘅銀行月結單、發票、合約、董事會議記錄等文件。
+      如果你好似我咁，一年到尾先嚟搵單，核數師可能要等你好耐，最後 deadline 到咗先急急交表。
+      建議每個月整理一次單據，到年尾就唔使慌。
+    </div>
+
+    <h3>如果公司冇營運（Dormant）</h3>
+    <p>
+      如果公司成個財政年度都冇業務活動，可以考慮申請 Dormant Status。
+      但即使係 Dormant，仍然要提交審計報告或董事聲明（視乎情況）。
+      建議同會計師確認你公司是否符合 Dormant 要求。
+    </p>
+  </div>
+
+  <!-- 4. Tax -->
+  <div class="prose-custom" id="tax">
+    <h2>4️⃣ 利得稅報稅</h2>
+
+    <p>
+      有限公司每年都要向稅務局提交利得稅報稅表（BIR51），連同審計報告一併提交。
+    </p>
+
+    <h3>幾時要交？</h3>
+    <ul>
+      <li><strong>稅局發出報稅表</strong>：每年 4 月第一個工作日（大批量發出）</li>
+      <li><strong>一般提交期限</strong>：發出後 <strong>1 個月內</strong>提交</li>
+      <li><strong>新公司</strong>：成立後約 18 個月先收到第一份報稅表</li>
+    </ul>
+
+    <h3>提交期限延期</h3>
+    <p>
+      如果委託稅務代表（持牌會計師／稅務師），可以申請延期提交：
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>情況</th>
+          <th>延期至</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>非 x 區公司（一般稅務局界定）</td>
+          <td>約 8 月 15 日</td>
+        </tr>
+        <tr>
+          <td>x 區公司</td>
+          <td>約 11 月 15 日</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout-danger">
+      <strong>⚠️ 遲交罰則：</strong>
+      <ul>
+        <li>首次遲交：罰款 HK$1,200 - HK$5,000</li>
+        <li>重複遲交：罰款最高 HK$10,000 + 被稅局評定稅款（可能冇咗扣稅項目）</li>
+        <li>嚴重情況：稅局可展開調查，最高罰款 HK$10,000 及加收 3 倍稅款</li>
+      </ul>
+    </div>
+
+    <h3>報稅需要咩文件？</h3>
+    <ol>
+      <li>BIR51 報稅表（已填好）</li>
+      <li>審計報告（由核數師簽署）</li>
+      <li>財務報表（資產負債表、損益表）</li>
+      <li>稅項計算表</li>
+    </ol>
+
+    <div class="callout-info">
+      <strong>💡 慳時間貼士：</strong> 稅局而家有 eTAX 平台，可以網上提交報稅表。
+      但注意，審計報告仍然需要正本，網上提交嘅係掃描版本。
+      建議搵個可靠嘅會計師幫手報稅，尤其係第一次報稅，好多細節唔係自己搞得掂。
+    </div>
+  </div>
+
+  <!-- 5. SCR -->
+  <div class="prose-custom" id="scr">
+    <h2>5️⃣ 重要控制人登記冊（SCR）</h2>
+
+    <p>
+      SCR（Significant Controllers Register）係《公司條例》要求每間有限公司都要備存嘅登記冊，
+      記錄公司嘅「重要控制人」（即持股 25% 以上或有重大控制權嘅人士）。
+    </p>
+
+    <h3>幾時要更新？</h3>
+    <div class="callout-danger">
+      <strong>⚠️ 法定時限：</strong> 重要控制人資料變更後 <strong>7 日內</strong>必須更新 SCR 紀錄。
+      違反嘅話，公司負責人最高罰款 HK$25,000 及每日罰款 HK$700。
+    </div>
+
+    <p>
+      雖然冇「每年固定更新」嘅規定，但我建議你：
+    </p>
+    <ul>
+      <li><strong>每年最少 check 一次</strong> — 最好喺提交 NAR1 之前核對 SCR 資料</li>
+      <li><strong>股權變動後立即更新</strong> — 股份轉讓、配發新股、回購股份後都要 update</li>
+      <li><strong>董事變更後都要留意</strong> — 如果董事同時係重要控制人，變更時都要 update</li>
+    </ul>
+
+    <p>
+      SCR 係公司自己 keep 嘅紀錄，唔使提交俾政府。
+      但執法機構（警務處、海關、ICAC）有權查閱，如果紀錄唔 update 隨時中招。
+    </p>
+  </div>
+
+  <!-- Other -->
+  <div class="prose-custom" id="other">
+    <h2>6️⃣ 其他合規事項</h2>
+
+    <p>
+      除咗以上 4 大合規事項，仲有幾個嘢要留意：
+    </p>
+
+    <h3>公司註冊地址變更</h3>
+    <p>
+      搬地址後要同時通知公司註冊處（NR1 表格）同商業登記署。
+      唔同機構要分別通知，唔好以為通知咗一邊就搞掂。
+    </p>
+
+    <h3>董事／公司秘書變更</h3>
+    <ul>
+      <li>委任或辭任董事：提交 ND2A 表格，變更後 15 日內</li>
+      <li>委任或辭任公司秘書：提交 ND2A 表格</li>
+      <li>董事個人資料變更（地址、姓名等）：提交 ND2B 表格</li>
+    </ul>
+
+    <h3>股份變更</h3>
+    <ul>
+      <li>股份轉讓：提交 NSC1 表格（轉讓後 30 日內）</li>
+      <li>股份配發（發行新股）：提交 NSC1 表格</li>
+      <li>股份回購：提交 NSC5 表格</li>
+    </ul>
+
+    <h3>公司名稱變更</h3>
+    <p>通過特別決議後，提交 NNC2 表格。公司註冊處批准後，再通知商業登記署更新 BR。</p>
+
+    <h3>公司解散／撤銷註冊</h3>
+    <p>唔再營運嘅話，要正式申請撤銷註冊（Strike-off），而唔係就咁唔理。
+      唔理嘅話每年 BR 續期會繼續收費，NAR1 遲交會繼續罰款，最後公司被除名都仲有責任。</p>
+  </div>
+
+  <!-- Penalty Table -->
+  <div class="prose-custom" id="penalty">
+    <h2>💰 遲交罰款一覽表</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>事項</th>
+          <th>遲交期限</th>
+          <th>罰款金額</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="4"><strong>NAR1 周年申報表</strong></td>
+          <td>唔超過 3 個月</td>
+          <td>HK$870</td>
+        </tr>
+        <tr>
+          <td>3-6 個月</td>
+          <td>HK$1,740</td>
+        </tr>
+        <tr>
+          <td>6-9 個月</td>
+          <td>HK$2,610</td>
+        </tr>
+        <tr>
+          <td>超過 9 個月</td>
+          <td>HK$3,480</td>
+        </tr>
+        <tr>
+          <td><strong>商業登記遲續期</strong></td>
+          <td>逾期</td>
+          <td>HK$300</td>
+        </tr>
+        <tr>
+          <td rowspan="2"><strong>利得稅報稅表</strong></td>
+          <td>首次遲交</td>
+          <td>HK$1,200 - HK$5,000</td>
+        </tr>
+        <tr>
+          <td>重複遲交</td>
+          <td>HK$10,000 + 3 倍稅款</td>
+        </tr>
+        <tr>
+          <td><strong>SCR 未更新</strong></td>
+          <td>變更後 7 日後</td>
+          <td>HK$25,000 + 每日 HK$700</td>
+        </tr>
+        <tr>
+          <td><strong>董事變更未申報</strong></td>
+          <td>變更後 15 日後</td>
+          <td>HK$5,000 起</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout-danger">
+      <strong>🔥 最大鑊嘅係：</strong> 以上罰款可以疊加！如果你一年內 NAR1 遲交、BR 遲續期、報稅遲交，
+      隨時俾成萬蚊罰款。唔好諗住一間公司俾幾次罰款冇所謂，公司註冊處係會紀錄嘅。
+    </div>
+  </div>
+
+  <!-- Personal Checklist -->
+  <div class="prose-custom" id="calendar">
+    <h2>📅 個人化 Checklist</h2>
+
+    <p>
+      唔同公司嘅成立日期同財政年度唔同，以下係一個通用嘅 Checklist。
+      建議 print 出嚟，或者 set 喺電話 reminder 度。
+    </p>
+
+    <div class="bg-navy text-white rounded-lg p-6 my-4">
+      <h3 class="text-gold text-lg font-bold mb-3">📋 每年合規 Checklist</h3>
+      
+      <h4 class="text-gold mt-4 mb-2">📌 每個月做</h4>
+      <ul class="space-y-2">
+        <li class="flex items-start">
+          <span class="text-gold mr-2">☐</span>
+          <span>整理單據、銀行月結單（唔好堆到年尾）</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-gold mr-2">☐</span>
+          <span>檢查公司郵件（尤其係政府機構寄嚟嘅信）</span>
+        </li>
+      </ul>
+
+      <h4 class="text-gold mt-4 mb-2">📌 每季做</h4>
+      <ul class="space-y-2">
+        <li class="flex items-start">
+          <span class="text-gold mr-2">☐</span>
+          <span>核對公司重要控制人（SCR）紀錄是否仍然準確</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-gold mr-2">☐</span>
+          <span>檢查 BR 到期日（確保仲有足夠時間續期）</span>
+        </li>
+      </ul>
+
+      <h4 class="text-gold mt-4 mb-2">📌 每年必做</h4>
+      <ul class="space-y-2">
+        <li class="flex items-start">
+          <span class="text-gold mr-2">☐</span>
+          <span><strong>NAR1</strong> — 成立周年日後 42 日內提交</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-gold mr-2">☐</span>
+          <span><strong>BR 續期</strong> — 收到續期通知後 1 個月內搞掂</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-gold mr-2">☐</span>
+          <span><strong>審計報告</strong> — 每年財政年度結束後 6 個月內準備好</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-gold mr-2">☐</span>
+          <span><strong>利得稅報稅</strong> — 收到 BIR51 後 1 個月內提交（或已申請延期）</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-gold mr-2">☐</span>
+          <span><strong>SCR</strong> — 最少 check 一次，確保紀錄準確</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-gold mr-2">☐</span>
+          <span><strong>法定紀錄</strong> — 檢查股東名冊、董事名冊、會議記錄是否完整</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="callout-success">
+      <strong>✅ 建議：</strong> 喺電話 set 每年重複嘅提醒：
+      <ul>
+        <li>「公司成立日期前 2 個月」— 開始準備 NAR1</li>
+        <li>「BR 到期前 2 個月」— 準備續期費用</li>
+        <li>「每年 3 月」— 準備審計文件</li>
+        <li>「每年 4 月」— 留意稅局報稅表</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8 my-8 text-center border-2 border-gold">
+    <span class="bg-gov-gold text-gov-navy text-xs font-bold px-3 py-1 rounded-full">🔥 相關指南</span>
+    <h2 class="text-2xl font-bold text-gov-navy mt-3 mb-2">需要處理股份轉讓？</h2>
+    <p class="text-gray-600 mb-2">由真實經歷者整理，逐 step 教你準備文件、填表格、交印花稅</p>
+    <div class="flex items-center justify-center space-x-2 text-sm text-gray-500 mb-4">
+      <span>📄 5 步驟</span>
+      <span>·</span>
+      <span>📥 可下載模板</span>
+      <span>·</span>
+      <span>🖼️ 範例對照</span>
+    </div>
+    <div class="text-gold text-lg font-bold mb-4">
+      <span class="line-through text-gray-400">$1,000+</span> → 只需 <span class="text-3xl">HK$149</span> 一次性
+    </div>
+    <a href="../shareholder-transfer.html" class="inline-block bg-navy text-white font-bold px-8 py-4 rounded-lg hover:bg-blue-900 transition text-lg">
+      即睇股份轉讓完整指南 →
+    </a>
+    <p class="text-xs text-gray-400 mt-3">一次性付款 · 永久存取 · 附送可編輯 Word 模板</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="prose-custom" id="faq">
+    <h2>❓ 常見問題</h2>
+
+    <div class="faq-item">
+      <details>
+        <summary>香港有限公司每年一定要做嘅合規事項有邊啲？</summary>
+        <p>主要分為四類：(1) 商業登記續期（每年一次）；(2) 周年申報表 NAR1（每年一次，公司成立周年日後 42 日內）；(3) 審計報告（成立後 18 個月內第一次，之後每年一次）；(4) 利得稅報稅表（由稅局發出後 1 個月內提交）。另外仲有 SCR 更新、法定紀錄維護等持續性合規要求。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>NAR1 同 BR 續期有咩分別？</summary>
+        <p>NAR1 係俾公司註冊處嘅周年申報，匯報公司股東、董事等資料，費用 HK$105。BR 續期係俾商業登記署嘅商業登記證續期，費用 HK$2,150。兩者係完全獨立嘅系統，唔可以互相替代。NAR1 死線係成立周年日後 42 日內；BR 到期日睇商業登記證上嘅日期。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>公司冇營運（Dormant）係咪唔使審計？</summary>
+        <p>唔一定。即使公司係 Dormant，如果公司條例要求做審計（例如唔符合「小型公司」嘅豁免條件），仍然需要做審計或提交董事聲明。建議同會計師確認你公司是否符合豁免條件，唔好自己假設唔使做。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>報稅可以自己搞嗎？定一定要搵會計師？</summary>
+        <p>法例冇規定一定要搵會計師報稅，你可以自己填報稅表。但實務上建議第一次報稅搵會計師幫手，因為有限公司報稅表（BIR51）比個人報稅複雜好多，包括稅務調整、折舊計算、利息收入等。會計師費用一般 HK$3,000-$8,000，視乎公司規模。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>NAR1 遲交咗點算？仲有冇得救？</summary>
+        <p>有得救！即使過咗 deadline，都應該盡快提交。罰款會按遲交時間自動計算。建議立即喺 eCR 系統補交，罰款會喺系統入面自動顯示，可以網上俾埋罰款。愈遲交罰得愈多，所以一發現就即刻處理。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>公司要 keep 文件幾耐？</summary>
+        <p>根據公司條例，審計報告、財務報表、會議記錄等文件要保留至少 7 年。稅務文件（報稅表、稅單、收據等）建議保留至少 7 年（稅局可追溯 6-7 年）。股權相關文件（轉讓書、股東名冊）建議永久保留，因為涉及公司擁有權嘅歷史記錄。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>每年合規事項邊個最容易漏？</summary>
+        <p>根據我嘅經驗同身邊朋友嘅分享，最常見漏咗嘅係：(1) SCR 更新（以為唔重要）；(2) BR 續期（同 NAR1 搞亂咗，以為係同一樣嘢）；(3) 審計報告（以為冇營運就唔使做）。建議 set 電話提醒，或者俾多少少錢叫會計師幫你 track 住。</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="bg-navy text-white rounded-lg p-6 text-center mt-8">
+    <p class="text-lg font-bold">需要處理股份轉讓或其他公司流程？</p>
+    <p class="text-gray-300 text-sm mb-4">完整指南 + 範例對照 + 可下載模板，由經歷者整理</p>
+    <a href="../shareholder-transfer.html" class="inline-block bg-gov-gold text-gov-navy font-bold px-8 py-3 rounded-lg hover-gov-gold transition">
+      睇完整指南 →
+    </a>
+  </div>
+
+</article>
+
+<!-- Footer -->
+<footer class="bg-navy text-gray-400 py-8 mt-8">
+  <div class="max-w-4xl mx-auto px-4 text-center text-sm">
+    <p class="text-gold font-bold text-lg mb-2">GovFlow</p>
+    <p>香港公司流程指南 · 由真實經歷者整理</p>
+    <p class="mt-2">以上內容僅供參考，不構成法律或專業意見。如有疑問請諮詢專業會計師或律師。</p>
+    <div class="mt-4">
+      <a href="../index.html" class="hover:text-white mx-2">首頁</a>
+      <a href="../shareholder-transfer.html" class="hover:text-white mx-2">股份轉讓指南</a>
+      <a href="index.html" class="hover:text-white mx-2">網誌</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
