@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港公司集團架構終極指南 — 控股公司、子公司、關聯公司分別與稅務安排 2026 | GovFlow</title>
+<meta name="description" content="由東主角度講解香港集團架構點樣搭：控股公司與子公司分別、利潤分配、稅務安排、實例分析。唔使律師樓都搞得明，自己話事慳幾千蚊顧問費。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gold { color: #C9A84C; }
+  .border-gold { border-color: #C9A84C; }
+  .hover:bg-gold\/90 { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .price-comparison { background: linear-gradient(135deg, #1B2A4A, #2a4066); color: white; padding: 1.5rem; border-radius: 1rem; margin: 1.5rem 0; text-align: center; }
+  .prose-custom .price-comparison .original { text-decoration: line-through; color: rgba(255,255,255,0.6); font-size: 1.1rem; }
+  .prose-custom .price-comparison .govflow-price { color: #C9A84C; font-size: 2rem; font-weight: 800; }
+  .prose-custom .step-card { background: white; border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1.25rem; margin: 1rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .prose-custom .step-card .step-num { display: inline-block; background: #1B2A4A; color: white; width: 28px; height: 28px; text-align: center; border-radius: 50%; font-weight: 700; font-size: 0.9rem; line-height: 28px; margin-right: 0.5rem; }
+  .prose-custom .chart-box { background: #f0f4ff; border: 1px solid #c8d6e5; border-radius: 1rem; padding: 1.5rem; margin: 1.5rem 0; text-align: center; }
+  .prose-custom .chart-box .level { display: inline-block; background: #1B2A4A; color: white; padding: 0.5rem 1.5rem; border-radius: 0.5rem; font-weight: 600; margin: 0.25rem; }
+  .prose-custom .chart-box .level.sub { background: #2a4066; }
+  .prose-custom .chart-box .arrow { font-size: 1.5rem; color: #C9A84C; margin: 0.25rem 0; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"控股公司同子公司有咩分別？","acceptedAnswer":{"@type":"Answer","text":"控股公司（Holding Company）係持有其他公司股份嘅公司，本身可以冇業務。子公司（Subsidiary）係被控股公司控制嘅公司，控股公司持有超過50%股權。控股公司負責制定集團策略，子公司負責實際營運。關鍵係：每間子公司係獨立法律實體，各自承擔債務責任。"}},
+    {"@type":"Question","name":"開集團公司可以慳稅嗎？","acceptedAnswer":{"@type":"Answer","text":"集團架構本身唔會直接減稅，但可以有以下稅務優勢：(1) 子公司利潤可以透過股息上繳控股公司，香港唔徵收股息稅；(2) 集團可以靈活安排利潤喺不同子公司之間，善用各公司嘅稅務優惠；(3) 控股公司可以持有海外子公司，利用香港嘅外地收入豁免徵稅（FSIE）制度。注意：必須有商業實質，唔可以純粹為避稅。"}},
+    {"@type":"Question","name":"子公司嘅債務會唔會影響控股公司？","acceptedAnswer":{"@type":"Answer","text":"一般情況下唔會。子公司係獨立法律實體，其債務由子公司自己承擔，債權人無權向控股公司追討。呢個就係「有限責任」嘅核心原則。但如果控股公司為子公司嘅債務提供咗擔保（Guarantee），或者有欺詐行為，法庭可能「揭開公司面紗」，要求控股公司負責。"}},
+    {"@type":"Question","name":"集團架構最少要幾多間公司？","acceptedAnswer":{"@type":"Answer","text":"最少2間：一間控股公司（Holding Company）+ 一間營運子公司（Operating Subsidiary）。實際上好多中小企東主由1間公司起步，到業務擴展到第二個範疇時，先開多一間子公司，再用同一班股東持有兩間公司嘅股份。咁樣唔一定要有正式嘅控股公司。"}},
+    {"@type":"Question","name":"關聯公司同子公司有咩唔同？","acceptedAnswer":{"@type":"Answer","text":"關聯公司（Associated Company）係指由同一班股東/董事控制嘅多間公司，但彼此之間冇母公司-子公司嘅股權控制關係。例如：你開咗A公司同B公司，兩間你都係最大股東，但A唔持有B嘅股份。關聯公司之間嘅交易要留意轉讓定價（Transfer Pricing）規定。"}}
+  ]
+}
+</script>
+<!-- Open Graph -->
+<meta property="og:title" content="香港公司集團架構終極指南 — 控股公司、子公司、關聯公司分別與稅務安排">
+<meta property="og:description" content="由東主角度講解香港集團架構點樣搭：控股公司與子公司分別、利潤分配、稅務安排、實例分析。自己話事慳幾千蚊顧問費。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://govflow.hk/blog/香港公司集團架構控股子公司終極指南.html">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="../index.html" class="flex items-center gap-2.5"><img src="../assets/images/govflow-logo.svg" alt="GovFlow" class="w-7 h-7" /><span class="text-white font-bold text-lg tracking-tight">GovFlow</span></a>
+      <a href="../index.html" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+<!-- Article Header -->
+<div class="bg-navy text-white py-10">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="text-sm text-gold mb-3">📄 文章 · 2026年6月6日</div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-3">香港公司集團架構終極指南</h1>
+    <p class="text-lg text-gray-300 leading-relaxed">控股公司、子公司、關聯公司有咩分別？點樣搭先最慳稅？用真實案例話你知，唔使律師樓都搞得明。</p>
+    <div class="flex flex-wrap gap-3 mt-4 text-sm">
+      <span class="bg-gov-gold text-gov-navy px-3 py-1 rounded-full font-semibold">集團架構</span>
+      <span class="bg-gov-gold text-gov-navy px-3 py-1 rounded-full font-semibold">控股公司</span>
+      <span class="bg-gov-gold text-gov-navy px-3 py-1 rounded-full font-semibold">子公司</span>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<main class="max-w-4xl mx-auto px-4 py-8">
+
+  <!-- Price Comparison -->
+  <div class="prose-custom mb-8">
+    <div class="price-comparison">
+      <p class="text-sm mb-1">💡 律師樓/會計師樓集團架構規劃費用</p>
+      <p class="original">HK$8,000 – HK$30,000</p>
+      <p class="text-lg mt-1">自己理解基本原理後再搵專業意見</p>
+      <p class="govflow-price">節省 70% 以上</p>
+      <p class="text-sm mt-2">先識基本概念，唔怕俾人坤 👇</p>
+    </div>
+  </div>
+
+  <!-- Table of Contents -->
+  <div class="bg-white rounded-xl shadow-md p-6 mb-8 border border-gray-100">
+    <h2 class="text-xl font-bold text-gov-navy mb-4">📑 目錄</h2>
+    <ul class="space-y-2 text-gov-navy">
+      <li><a href="#intro" class="toc-item block"><span class="font-bold">1.</span> 我點解要寫呢篇文</a></li>
+      <li><a href="#basics" class="toc-item block"><span class="font-bold">2.</span> 基本概念：控股公司、子公司、關聯公司</a></li>
+      <li><a href="#why" class="toc-item block"><span class="font-bold">3.</span> 點解要 set 集團架構？3 個真實好處</a></li>
+      <li><a href="#structure" class="toc-item block"><span class="font-bold">4.</span> 常見集團架構模式（附圖解）</a></li>
+      <li><a href="#tax" class="toc-item block"><span class="font-bold">5.</span> 集團架構下的稅務安排</a></li>
+      <li><a href="#steps" class="toc-item block"><span class="font-bold">6.</span> 由一間公司變集團嘅 Step-by-step</a></li>
+      <li><a href="#common-mistakes" class="toc-item block"><span class="font-bold">7.</span> 常見錯誤（我親身見過嘅）</a></li>
+      <li><a href="#when-not" class="toc-item block"><span class="font-bold">8.</span> 咩情況下唔需要 set 集團架構</a></li>
+      <li><a href="#faq" class="toc-item block"><span class="font-bold">9.</span> FAQ 常見問題</a></li>
+    </ul>
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose-custom">
+
+    <!-- Section 1 -->
+    <section id="intro">
+      <h2>1. 我點解要寫呢篇文</h2>
+      <p>如果你開咗香港有限公司一段時間，業務開始穩定，甚至開咗第二個生意方向，你可能會諗：「應唔應該開多一間公司嚟做新業務？」</p>
+      <p>或者你見到身邊啲朋友搞集團公司、控股公司，好似好威好專業，但你又唔知實際上係咩一回事。</p>
+      <p>我當年就係咁。</p>
+      <p>開第一間公司嗰陣乜都唔識，得一個生意。後來擴展到第二個業務，我順手就開多一間公司，用同一個股東名單。結果幾年後先知，原來我可以 set 控股公司架構，可以更有效地保護資產、慳稅、甚至將來賣盤都容易啲。</p>
+
+      <div class="callout-warning">
+        <strong>⚠️ 真實經驗：</strong>我當初冇 set 集團架構，結果其中一間公司被人告，另一間公司嘅資產理論上都有風險——雖然係獨立法律實體，但同一班股東嘅情況下，銀行同供應商睇你成個 group 嘅信譽，一間出事會影響晒。
+      </div>
+
+      <p>呢篇文我會用最白話嘅方式，由基本概念講起，到實際點樣搭集團架構，再講稅務安排。目標係令你以後聽到「集團公司」呢四個字唔會覺得高深，反而知道點樣運用。</p>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="basics">
+      <h2>2. 基本概念：控股公司、子公司、關聯公司</h2>
+      <p>先搞清楚最基本嘅用詞，唔好俾人嚇親。</p>
+
+      <h3>控股公司（Holding Company）</h3>
+      <p>控股公司嘅唯一目的就係「持有其他公司嘅股份」。佢本身可以冇業務、冇收入、冇員工，就係手揸住其他公司嘅股票。控股公司通常持有子公司超過 50% 嘅股權，咁先有「控制權」。</p>
+
+      <div class="step-card">
+        <p><strong>例子：</strong>你開咗一間公司叫「A Holdings Limited」，呢間公司乜都唔做，淨係持有「B 貿易有限公司」同「C 科技有限公司」各 100% 股份。A Holdings 就係控股公司，B 同 C 就係子公司。</p>
+      </div>
+
+      <h3>子公司（Subsidiary）</h3>
+      <p>子公司係被控股公司控制嘅公司。控股公司持股超過 50% 就叫「附屬公司」；持股 100% 就叫「全資附屬公司」（Wholly-owned Subsidiary）。</p>
+      <p>最重要嘅一點：<strong>每間子公司都係獨立嘅法律實體</strong>。佢哋各自有自己嘅銀行戶口、自己嘅合同、自己嘅債務。子公司欠債，原則上債主追唔到控股公司或者其他子公司。</p>
+
+      <h3>關聯公司（Associated Company / Sister Company）</h3>
+      <p>關聯公司係指由同一班股東/董事控制嘅多間公司，但彼此之間冇母公司-子公司嘅股權關係。即係同一班人開咗 A 公司同 B 公司，但 A 唔持有 B 股份，B 亦唔持有 A 股份。</p>
+
+      <div class="step-card">
+        <p><strong>例子：</strong>你個人持有「A 餐飲有限公司」同「B 零售有限公司」各 100% 股份。A 同 B 就係關聯公司，因為你係共同股東，但 A 同 B 之間冇互相持股。</p>
+      </div>
+
+      <div class="callout-info">
+        <strong>💡 快速記憶：</strong><br>
+        • 控股公司 → 持有其他公司股份嗰間（上面嗰間）<br>
+        • 子公司 → 被持有股份嗰間（下面嗰間）<br>
+        • 關聯公司 → 同一老細但冇互相持股嘅公司（打橫嘅關係）
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="why">
+      <h2>3. 點解要 set 集團架構？3 個真實好處</h2>
+
+      <h3>好處 1：資產保護（最重要）</h3>
+      <p>呢個係最大嘅好處。如果你得 1 間公司，所有業務、資產、風險都喺埋一齊。萬一其中一個業務出事（例如被人告、供應商追數、租約糾紛），你成間公司嘅資產都會受影響。</p>
+      <p>但如果唔同業務分開子公司，A 子公司出事，B 子公司嘅資產係獨立嘅，完全唔會俾人凍結或追討。</p>
+
+      <div class="callout-success">
+        <strong>✅ 真實案例：</strong>我有個朋友做飲食業，一間公司做餐廳（高風險），另一間公司 hold 緊佢嘅物業（低風險）。後來餐廳被人告食物中毒，好在物業嗰間公司完全冇事，因為係獨立子公司。
+      </div>
+
+      <h3>好處 2：將來的靈活性（賣盤/集資）</h3>
+      <p>如果你將來想賣其中一個業務，或者俾新股東入股，有集團架構會方便好多。你可以直接賣子公司嘅股份，完全唔影響其他業務。如果得 1 間公司，你要抽起某個業務嘅資產，手續會複雜好多。</p>
+
+      <div class="step-card">
+        <p><strong>例子：</strong>你有 App 開發業務同顧問業務。有間大公司想收購你嘅 App 業務。如果分咗子公司，直接賣子公司股份就得。如果冇分，你要「業務轉讓」（Business Transfer），要逐個 contract 轉名、通知客戶，麻煩好多。</p>
+      </div>
+
+      <h3>好處 3：稅務規劃空間</h3>
+      <p>集團架構可以讓你更靈活安排利潤。例如：一間子公司賺錢、另一間蝕錢，集團可以考慮利潤轉移嘅安排。控股公司可以收子公司嘅股息，而香港冇股息稅。持有海外業務嘅控股公司仲可以用外地收入豁免徵稅（FSIE）制度。</p>
+
+      <div class="callout-warning">
+        <strong>⚠️ 注意：</strong>稅務安排一定要有商業實質（Commercial Substance），唔可以純粹為咗避稅而 set 架構。稅局會睇你有冇實際營運、有冇員工、有冇辦公室。否則會被視為濫用安排，追討返稅款。
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section id="structure">
+      <h2>4. 常見集團架構模式</h2>
+      <p>以下係香港中小企最常見嘅幾種集團架構，你可以根據自己情況揀適合嘅：</p>
+
+      <h3>模式一：一間控股 + 多間營運子公司（最推薦）</h3>
+      <div class="chart-box">
+        <div class="level">你（個人股東）</div>
+        <div class="arrow">⬇ 100%</div>
+        <div class="level">控股有限公司（Holding Company）</div>
+        <div class="arrow">⬇ 100%</div>
+        <div class="level sub">子公司 A（餐飲）</div>
+        <div class="level sub" style="margin-left: 1rem;">子公司 B（物業）</div>
+        <div class="level sub" style="margin-left: 1rem;">子公司 C（電商）</div>
+      </div>
+      <p><strong>適合：</strong>有多個業務方向、想將來賣盤、或者想保護資產嘅東主。</p>
+
+      <h3>模式二：同一股東持有多間關聯公司（最簡單）</h3>
+      <div class="chart-box">
+        <div class="level">你（個人股東）</div>
+        <div class="arrow">⬇ 100%</div>
+        <div class="level sub">公司 A（業務 1）</div>
+        <div style="margin: 0.25rem 0;">── 關聯關係 ──</div>
+        <div class="level sub">公司 B（業務 2）</div>
+      </div>
+      <p><strong>適合：</strong>業務簡單、唔諗住賣盤、想慳成本嘅創業初期。注意：冇控股公司嘅話，將來要賣一間公司，要你自己個人賣股，稅務上可能冇咁著數。</p>
+
+      <h3>模式三：控股公司 + 海外子公司（跨境集團）</h3>
+      <div class="chart-box">
+        <div class="level">你（個人股東）</div>
+        <div class="arrow">⬇ 100%</div>
+        <div class="level">香港控股公司</div>
+        <div class="arrow">⬇</div>
+        <div class="level sub">香港營運公司</div>
+        <div class="level sub" style="margin-left: 1rem;">海外子公司（例如 BVI / Singapore）</div>
+      </div>
+      <p><strong>適合：</strong>有跨境業務、海外客戶或供應鏈，想利用香港嘅 FSIE 稅務優惠。</p>
+    </section>
+
+    <!-- Section 5 -->
+    <section id="tax">
+      <h2>5. 集團架構下的稅務安排</h2>
+      <p>呢 part 比較 technical，我會盡量講得白啲。</p>
+
+      <h3>股息上繳（Dividend Upstream）</h3>
+      <p>子公司賺咗錢，可以派股息俾控股公司。香港冇股息稅，所以控股公司收到股息係免稅嘅。控股公司再將資金分配俾其他子公司，或者用嚟投資新業務。</p>
+
+      <div class="step-card">
+        <p><strong>實例：</strong>子公司 A 賺咗 HK$100 萬，派息 HK$80 萬俾控股公司。控股公司收到 HK$80 萬完全唔使繳稅，然後可以將呢筆錢注入子公司 B 做擴展資金。</p>
+      </div>
+
+      <h3>集團虧損抵銷（Group Relief）</h3>
+      <p>香港目前冇正式嘅「集團虧損寬免」制度，即係一間子公司嘅虧損通常唔可以直接抵銷另一間子公司嘅利潤。但可以透過以下方式安排：</p>
+      <ul>
+        <li>集團內部借貸：賺錢嘅公司借錢俾蝕錢嘅公司，利息收入可以平衡利潤</li>
+        <li>服務費安排：控股公司向子公司收取管理費，將利潤由賺錢公司轉移到控股公司</li>
+        <li>成本分攤：共同成本（如辦公室、IT 系統）按合理比例分攤</li>
+      </ul>
+
+      <div class="callout-danger">
+        <strong>⚠️ 重要提醒：</strong>所有集團內部交易都要符合「公平原則」（Arm's Length Principle），即係定價要同市場價格一致。稅局好重視轉讓定價（Transfer Pricing），如果發現集團內部交易價格唔合理，可以調整稅款兼罰款。
+      </div>
+
+      <h3>外地收入豁免徵稅（FSIE）</h3>
+      <p>2023 年開始，香港實施咗 FSIE 制度。簡單講：控股公司收到嘅境外股息、利息、處置收益，如果符合特定條件（有經濟實質、有足夠員工、有營運開支），可以豁免繳利得稅。</p>
+      <p>呢個對於有海外子公司嘅集團架構嚟講好重要，因為可以將海外利潤匯返香港而唔使交稅。</p>
+    </section>
+
+    <!-- Section 6 -->
+    <section id="steps">
+      <h2>6. 由一間公司變集團嘅 Step-by-step</h2>
+      <p>如果你目前得 1 間公司，想 set 集團架構，以下係大致步驟：</p>
+
+      <div class="step-card">
+        <p><span class="step-num">1</span> <strong>成立控股公司</strong> — 開一間新有限公司做控股公司，股東同你現有公司嘅股東一致。最好用同一班股東同董事。</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">2</span> <strong>將現有公司股份轉俾控股公司</strong> — 你將個人持有嘅現有公司股份，轉讓俾控股公司。呢步涉及股份轉讓（Share Transfer），需要簽 Instrument of Transfer 同俾印花稅。</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">3</span> <strong>更新公司紀錄</strong> — 現有公司嘅股東名冊要更新，顯示控股公司係新股東。董事會要通過決議確認股份轉讓。</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">4</span> <strong>開新業務用子公司</strong> — 以後開新業務，直接由控股公司出資成立新嘅全資子公司，唔再用自己個人名義開公司。</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">5</span> <strong>整理內部協議</strong> — 控股公司同子公司之間要有服務協議、管理費協議等，確保有商業實質，稅局唔會質疑。</p>
+      </div>
+
+      <div class="callout-info">
+        <strong>💡 貼士：</strong>Step 2 嘅股份轉讓要俾印花稅（轉讓代價嘅 0.2%），所以最好趁公司股份價值低嘅時候做。如果公司已經好值錢（例如有物業或大量現金），印花稅會好金，建議先搵會計師計清楚。
+      </div>
+    </section>
+
+    <!-- Section 7 -->
+    <section id="common-mistakes">
+      <h2>7. 常見錯誤（我親身見過嘅）</h2>
+
+      <div class="callout-danger">
+        <strong>❌ 錯誤 1：以為開咗控股公司就可以自動保護資產</strong>
+        <p>控股公司架構唔係「自動保護」機制。如果子公司簽約嗰陣，對方要求控股公司做擔保人（Personal Guarantee），咁控股公司都要負責。好多銀行貸款都會要求控股公司做擔保，咁就冇咗資產保護嘅作用。</p>
+      </div>
+
+      <div class="callout-danger">
+        <strong>❌ 錯誤 2：控股公司冇商業實質</strong>
+        <p>控股公司淨係得個名，冇辦公室、冇員工、冇銀行戶口、冇董事會議。咁樣稅局唔會承認呢個集團架構，FSIE 免稅用唔到，銀行開戶都難。控股公司最起碼要有：銀行戶口、董事、registered address、每年做返啲董事會會議紀錄。</p>
+      </div>
+
+      <div class="callout-danger">
+        <strong>❌ 錯誤 3：集團內部交易亂咁定價</strong>
+        <p>「子公司 A 收子公司 B HK$100 萬顧問費，但其實係同一班人做」— 稅局一查就知有問題。所有集團內部交易一定要有合約、有合理定價、有實際服務。否則會被視為「利潤轉移」，追討稅款。</p>
+      </div>
+
+      <div class="callout-danger">
+        <strong>❌ 錯誤 4：忘記申報關聯公司資料</strong>
+        <p>如果你有多間關聯公司，喺稅務申報時要披露關聯交易。公司註冊處嘅重要控制人登記冊（SCR）都要記錄每一間公司嘅「重大控制人」。忽略呢啲申報要求，可能會被罰款。</p>
+      </div>
+
+      <div class="callout-danger">
+        <strong>❌ 錯誤 5：為慳稅而 set 集團架構，但冇實際商業需要</strong>
+        <p>稅局唔傻。如果你 set 集團架構純粹為咗將利潤由一間公司搬到另一間，而冇實際商業原因（例如：業務多元化、風險管理、將來賣盤），稅局可以無視你嘅集團安排，直接按實際情況評稅。</p>
+      </div>
+    </section>
+
+    <!-- Section 8 -->
+    <section id="when-not">
+      <h2>8. 咩情況下唔需要 set 集團架構</h2>
+      <p>集團架構唔係適合所有人。以下情況你可能唔需要：</p>
+
+      <div class="step-card">
+        <p><span class="step-num">🔍</span> <strong>你得一個業務</strong> — 如果得一盤生意，冇打算擴展到第二個方向，一間公司就夠</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">🔍</span> <strong>業務低風險</strong> — 如果你嘅生意冇乜訴訟風險（例如：顧問公司、Freelance 平台），資產保護嘅需求唔大</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">🔍</span> <strong>唔打算賣盤</strong> — 如果你打算一直自己營運到退休，唔打算引入投資者或賣盤，集團架構嘅靈活性優勢用唔著</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">🔍</span> <strong>公司啱啱起步</strong> — 頭 1-2 年集中火力做好業務先，集團架構係「有規模之後」先考慮嘅嘢</p>
+      </div>
+
+      <div class="callout-success">
+        <strong>✅ 建議：</strong>如果你嘅年收入低於 HK$500 萬，或者業務好簡單（得一兩個客戶），集中火力搞生意好過搞架構。到業務擴展到第二個方向、或者年收入過千萬，先認真考慮集團架構。
+      </div>
+    </section>
+
+    <!-- Section 9 -->
+    <section id="faq">
+      <h2>9. FAQ 常見問題</h2>
+
+      <div class="faq-item">
+        <details>
+          <summary>控股公司同子公司之間嘅交易要報稅嗎？</summary>
+          <p>要。控股公司同子公司之間嘅交易（例如管理費、貸款利息、服務費）屬於關聯交易，要按公平原則定價，並喺利得稅報稅表中申報。如果交易價格唔合理，稅局有權調整。香港有轉讓定價文件規定，符合特定條件嘅公司要備存轉讓定價文件。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>開控股公司要幾多資本？</summary>
+          <p>香港有限公司嘅最低股本係 HK$1，所以理論上開控股公司唔需要好多資本。但實際上，控股公司要有足夠資金去持有子公司股份、支付營運開支（公司秘書費、註冊地址費、報稅費）。建議至少準備 HK$10,000 作為初期營運資金。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>子公司嘅利潤點樣上繳俾控股公司？</summary>
+          <p>主要透過派發股息（Dividend）。子公司董事會通過派息決議，將利潤以股息形式派俾股東（即控股公司）。香港冇股息稅，所以控股公司收到股息唔使交稅。控股公司可以將呢啲資金用嚟投資新業務、或者再派息俾你個人。注意：派息要符合公司細則同《公司條例》嘅要求，公司要有足夠嘅可分派利潤（Distributable Profits）。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>集團公司嘅審計點樣安排？</summary>
+          <p>每間子公司同控股公司都需要獨立做審計（如果符合審計門檻）。即係如果你有 1 間控股 + 3 間子公司，總共要做 4 份審計報告。審計費會隨公司數量增加。不過，如果係中小型集團，可以搵同一間會計師樓做，通常會俾 discount。另外，如果集團符合特定條件，可以準備「集團賬目」（Group Accounts），展示集團整體財務狀況。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>集團公司嘅公司秘書點安排？</summary>
+          <p>每間香港有限公司都要有公司秘書。集團架構下，你可以：(1) 每間公司各自請唔同嘅公司秘書；(2) 由同一間秘書公司處理晒所有公司嘅秘書工作（通常更抵）。好多秘書公司提供「集團套餐」，一次過處理幾間公司嘅周年申報、商業登記續期、會議紀錄等。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>海外公司可以做控股公司嗎？</summary>
+          <p>可以。好多香港公司用 BVI（英屬維爾京群島）或者 Cayman Islands 公司做控股公司，特別係打算將來上市或者有國際投資者。BVI 控股公司嘅好處係：零稅率（只要唔喺香港營運）、高度私隱（股東資料唔公開）、彈性高。但要注意：2024 年起 BVI 實施咗經濟實質規定，控股公司都要符合特定申報要求。</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="mt-10">
+      <div class="callout-info" style="background: #1B2A4A; border-left-color: #C9A84C; color: white;">
+        <strong style="color: #C9A84C;">📝 總結一句：</strong>
+        <p class="mt-2">集團架構係工具，唔係目標。唔好為咗威或者覺得「專業」就去 set，要真係有商業需要先值得做。如果你有多個業務方向、想保護資產、或者打算將來賣盤，集團架構可以幫你慳稅同慳麻煩。否則，一間公司做好一個業務，其實已經好夠。</p>
+      </div>
+
+      <div class="text-center mt-8">
+        <p class="text-gray-500 text-sm">有問題？可以搵我哋問 — GovFlow 編輯部</p>
+        <p class="text-gray-400 text-xs mt-2">* 以上內容係根據個人經驗整理，唔構成專業法律或稅務意見。重大決策建議搵註冊會計師或律師確認。</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-navy text-white mt-12 py-6">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <p class="text-sm text-gray-400">© 2026 GovFlow. 由真實經歷者整理，畀香港公司東主嘅免費 guides。</p>
+    <p class="text-xs text-gray-500 mt-1">香港公司集團架構終極指南 · 最後更新 2026 年 6 月</p>
+  </div>
+</footer>
+
+</body>
+</html>
