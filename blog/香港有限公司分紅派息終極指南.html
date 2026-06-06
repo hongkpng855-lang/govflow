@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>香港有限公司分紅派息終極指南｜股息政策、稅務處理、實戰流程｜GovFlow 網誌</title>
+  <meta name="description" content="公司賺咗錢點樣派俾股東？股息同董事袍金有咩分別？派息要唔要開會？稅局點樣處理股息收入？由親身經歷者分享香港有限公司分紅派息嘅完整流程、法律規定同稅務貼士。" />
+  <meta name="keywords" content="股息, 分紅, 派息, Dividend, 有限公司, 利得稅, 董事決議, 香港公司" />
+  <meta property="og:title" content="香港有限公司分紅派息終極指南 — 股息政策、稅務處理、實戰流程" />
+  <meta property="og:description" content="公司賺咗錢點樣派俾股東？股息同董事袍金有咩分別？派息要唔要開會？稅局點樣處理股息收入？由親身經歷者分享派息嘅完整流程。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://hongkpng855-lang.github.io/govflow/blog/香港有限公司分紅派息終極指南.html" />
+  <meta property="og:image" content="../assets/demo/og-blog-dividend.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .blog-content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1B2A4A;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f3f4f6;
+    }
+    .blog-content h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1B2A4A;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-content p {
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      color: #374151;
+    }
+    .blog-content ul, .blog-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #374151;
+    }
+    .blog-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    .blog-content blockquote {
+      border-left: 4px solid #C9A84C;
+      background: #fefce8;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+      font-style: normal;
+    }
+    .blog-content blockquote p {
+      margin-bottom: 0;
+      color: #92400e;
+    }
+    .blog-content .tip-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .blog-content .tip-box p {
+      margin-bottom: 0.25rem;
+    }
+    .blog-content .warn-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .blog-content .warn-box p {
+      margin-bottom: 0.25rem;
+    }
+    .blog-content .gold-box {
+      background: #fefce8;
+      border: 1px solid #fde68a;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .blog-content .gold-box p {
+      margin-bottom: 0.25rem;
+    }
+    .blog-content strong {
+      color: #1B2A4A;
+    }
+    .blog-content a {
+      color: #C9A84C;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    .blog-content a:hover {
+      color: #b89420;
+    }
+    .blog-content .table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+    .blog-content table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .blog-content table th {
+      background: #1B2A4A;
+      color: white;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    .blog-content table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .blog-content table tr:nth-child(even) td {
+      background: #f9fafb;
+    }
+    .blog-nav a {
+      transition: all 0.2s ease;
+    }
+    .blog-nav a:hover {
+      color: #C9A84C;
+    }
+  </style>
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港有限公司分紅派息終極指南 — 股息政策、稅務處理、實戰流程",
+    "description": "公司賺咗錢點樣派俾股東？股息同董事袍金有咩分別？派息要唔要開會？稅局點樣處理股息收入？由親身經歷者分享香港有限公司分紅派息嘅完整流程、法律規定同稅務貼士。",
+    "author": { "@type": "Organization", "name": "GovFlow" },
+    "datePublished": "2026-06-06",
+    "inLanguage": "zh-HK"
+  }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="../index.html" class="flex items-center gap-2.5"><img src="../assets/images/govflow-logo.svg" alt="GovFlow" class="w-7 h-7" /><span class="text-white font-bold text-lg tracking-tight">GovFlow</span></a>
+      <a href="../index.html" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+  <!-- ═══ Article Header ═══ -->
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+      <div class="flex flex-wrap items-center gap-2 text-sm text-gray-400 mb-4">
+        <a href="../" class="hover:text-gold transition-colors">Home</a>
+        <span>/</span>
+        <a href="../index.html#blog" class="hover:text-gold transition-colors">網誌</a>
+        <span>/</span>
+        <span class="text-gray-600">分紅派息</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-4">
+        香港有限公司分紅派息終極指南
+      </h1>
+      <p class="text-lg text-gray-500 leading-relaxed mb-5">
+        公司賺咗錢，點樣合法派俾股東？股息同董事袍金有咩分別？
+        派息要唔要開會？稅局點樣處理股息收入？
+        分紅比例點定先唔會踩到法律紅線？
+        一個經歷過派息安排嘅 SME 東主同你拆解所有細節。
+      </p>
+      <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400">
+        <span>📅 2026 年 6 月 6 日</span>
+        <span>📝 真實經歷者</span>
+        <span>🏷️ 股息 · 分紅 · 稅務 · 公司管治</span>
+        <span>⏱️ 閱讀需時 12 分鐘</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ Article Content ═══ -->
+  <article class="py-8 sm:py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row gap-10">
+
+        <!-- Sidebar TOC (Desktop) -->
+        <aside class="hidden lg:block w-64 shrink-0">
+          <div class="sticky top-24">
+            <h4 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">目錄</h4>
+            <nav class="space-y-1.5 text-sm blog-nav">
+              <a href="#intro" class="block text-gray-500 hover:text-navy transition-colors">開場白</a>
+              <a href="#basics" class="block text-gray-500 hover:text-navy transition-colors">① 股息係咩？基本概念</a>
+              <a href="#legal" class="block text-gray-500 hover:text-navy transition-colors">② 法律規定</a>
+              <a href="#types" class="block text-gray-500 hover:text-navy transition-colors">③ 股息類型</a>
+              <a href="#process" class="block text-gray-500 hover:text-navy transition-colors">④ 實戰流程</a>
+              <a href="#tax" class="block text-gray-500 hover:text-navy transition-colors">⑤ 稅務影響</a>
+              <a href="#vs-director" class="block text-gray-500 hover:text-navy transition-colors">⑥ 股息 vs 董事袍金</a>
+              <a href="#mistakes" class="block text-gray-500 hover:text-navy transition-colors">常見錯誤</a>
+              <a href="#faq" class="block text-gray-500 hover:text-navy transition-colors">常見問題 FAQ</a>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 min-w-0 blog-content">
+
+          <!-- ───────── Intro ───────── -->
+          <section id="intro">
+            <p class="text-lg text-gray-600 font-medium leading-relaxed">
+              公司第一年埋數，賺咗 80 萬。我心諗：「正呀，賺錢梗係分錢啦！」
+              正當我想將 80 萬由公司戶口轉晒去自己戶口嘅時候，我嘅會計師打嚟：
+            </p>
+            <p>
+              「喂，你想點派？股息定係董事袍金？如果係股息，你有冇開董事會決議？
+              公司留唔留儲備？股東之間點分？你有冇睇過公司章程點寫？」
+            </p>
+            <p>
+              我嗰陣先知 — <strong>原來派錢俾自己都有咁多學問</strong>。
+              唔係話公司賺咗錢，你就可以隨意將佢變成自己嘅錢。
+              如果派息程序唔啱，輕則會計數亂晒，重則俾稅局 challenge 甚至違反《公司條例》。
+            </p>
+            <p>
+              如果你都諗緊或者準備緊公司分紅，呢篇文幫你一次過搞清所有嘢。
+            </p>
+            <div class="gold-box">
+              <p class="font-semibold text-amber-800">💰 一句講晒</p>
+              <p class="text-sm text-amber-700">
+                派股息唔係「公司有錢就派得」。你一定要跟足公司章程嘅程序：
+                先確認有足夠嘅可分派利潤（Distributable Profits），
+                再出董事決議（Written Resolution），然後先可以合法派息。
+                程序錯咗，你收嘅錢可能被視為非法分派（Unlawful Distribution），
+                要承擔法律責任。
+              </p>
+            </div>
+          </section>
+
+          <!-- ───────── Section 1 ───────── -->
+          <section id="basics">
+            <h2>① 股息（Dividend）係咩？基本概念</h2>
+            <p>
+              股息（Dividend），簡單講就係<strong>公司將賺到嘅利潤，按照股東持股比例分俾股東</strong>。
+            </p>
+            <h3>股息嘅本質</h3>
+            <p>
+              你作為公司股東，公司賺錢之後可以選擇：
+            </p>
+            <ul>
+              <li><strong>保留利潤</strong>：將錢留喺公司擴張業務、投資</li>
+              <li><strong>派發股息</strong>：將利潤分俾股東</li>
+            </ul>
+            <p>
+              但要注意：<strong>股息係從「可分派利潤（Distributable Profits）」度派嘅</strong>。
+              如果公司冇賺錢或者蝕緊錢，理論上係唔可以派股息嘅。
+            </p>
+            <div class="warn-box">
+              <p class="font-semibold text-red-800">⚠️ 重要底線</p>
+              <p class="text-sm text-red-700">
+                股息只可以從「累計已變現利潤（Accumulated Realised Profits）」減去「累計已變現虧損」之後嘅剩餘度派。
+                簡單講：公司要真係賺咗錢先派得。借錢嚟派息係違法嘅，
+                公司清盤時清盤人可以追討返啲錢。
+              </p>
+            </div>
+          </section>
+
+          <!-- ───────── Section 2 ───────── -->
+          <section id="legal">
+            <h2>② 《公司條例》對派息嘅規定</h2>
+            <p>
+              香港《公司條例》（第 622 章）對派息有明確嘅規定，
+              唔係話公司有錢就可以亂派。
+            </p>
+
+            <h3>2.1 可分派利潤測試（Distributable Profits Test）</h3>
+            <p>
+              根據《公司條例》s.6 及 s.297，公司只能從<strong>可分派利潤</strong>中派發股息。
+              可分派利潤嘅計算方法：
+            </p>
+            <div class="gold-box">
+              <p class="font-semibold text-amber-800">公式</p>
+              <p class="text-sm text-amber-700">
+                可分派利潤 = 累計已變現利潤 − 累計已變現虧損<br />
+                （Accumulated Realised Profits − Accumulated Realised Losses）
+              </p>
+            </div>
+            <p>
+              換句話講，即使今年賺咗錢，如果以前蝕過錢未補返，都可能派唔到息。
+              呢條數通常由核數師（Auditor）幫你計。
+            </p>
+
+            <h3>2.2 公司章程（Articles of Association）嘅規定</h3>
+            <p>
+              每間公司嘅章程都<strong>必須清楚列明派息相關嘅權力同程序</strong>。
+              一般嚟講會包括：
+            </p>
+            <ul>
+              <li><strong>派息權力</strong>：董事會有權決定是否派發中期股息（Interim Dividend），股東大會可批准末期股息（Final Dividend）</li>
+              <li><strong>派息比例</strong>：按照股東持股比例（按面值計算，唔係按出資金額）</li>
+              <li><strong>派息形式</strong>：現金股息、股份股息（Scrip Dividend）、實物股息</li>
+              <li><strong>派息日期</strong>：記錄日期（Record Date）同支付日期（Payment Date）</li>
+            </ul>
+            <p>
+              如果你用公司註冊處嘅<strong>樣本公司章程（Model Articles）</strong>，
+              其中第 69 至 73 條就係講派息嘅。一般 SME 用呢個版本都夠。
+            </p>
+
+            <h3>2.3 特別情況：償付能力測試（Solvency Test）</h3>
+            <p>
+              雖然私人公司一般用「可分派利潤測試」，但某啲情況下（例如股份贖回、資本減少），
+              公司可能需要通過<strong>償付能力測試（Solvency Test）</strong>先可以進行分派。
+              呢個測試要求董事簽署一份法定聲明，確認公司喺未來 12 個月內有能力償還債務。
+            </p>
+            <blockquote>
+              <p>
+                「我 friend 間公司由細做到大，有一年賺咗 500 萬就派咗 450 萬股息出去。
+                點知第二個年度突然有 major client 走數，公司現金流斷裂。
+                因為之前派得太多，公司冇足夠營運資金，最終要揾股東『回水』。
+                所以我嘅建議係：派息唔好派盡，點都要留返 2-3 個月營運資金喺公司。」
+              </p>
+            </blockquote>
+          </section>
+
+          <!-- ───────── Section 3 ───────── -->
+          <section id="types">
+            <h2>③ 股息嘅主要類型</h2>
+            <p>
+              了解唔同股息類型，可以幫你稅務規劃更有效：
+            </p>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>類型</th>
+                    <th>時間</th>
+                    <th>決定機構</th>
+                    <th>特點</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>中期股息</strong><br />Interim Dividend</td>
+                    <td>年中（財政年度內）</td>
+                    <td>董事會</td>
+                    <td>唔使股東會批准，董事會可直接宣派</td>
+                  </tr>
+                  <tr>
+                    <td><strong>末期股息</strong><br />Final Dividend</td>
+                    <td>年結後</td>
+                    <td>股東大會</td>
+                    <td>需要股東喺 AGM 上批准，由董事會建議金額</td>
+                  </tr>
+                  <tr>
+                    <td><strong>股份股息</strong><br />Scrip Dividend</td>
+                    <td>任何時候</td>
+                    <td>董事會 + 股東</td>
+                    <td>唔派現金，改派新股。唔影響現金流但會 dilution</td>
+                  </tr>
+                  <tr>
+                    <td><strong>特別股息</strong><br />Special Dividend</td>
+                    <td>非經常性</td>
+                    <td>董事會 + 股東</td>
+                    <td>一次性，例如出售資產後分紅</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>
+              一般 SME 最常用嘅係<strong>中期股息</strong>同<strong>末期股息</strong>。
+              如果你係 100% 獨資股東，中期股息嘅靈活性最高。
+            </p>
+          </section>
+
+          <!-- ───────── Section 4 ───────── -->
+          <section id="process">
+            <h2>④ 派息實戰流程（Step by Step）</h2>
+            <p>
+              以下係香港私人有限公司最常見嘅派息流程，我用一個簡單案例嚟說明：
+            </p>
+            <div class="tip-box">
+              <p class="font-semibold text-blue-800">📋 案例假設</p>
+              <p class="text-sm text-blue-700">
+                你係公司唯一股東兼董事。公司 2025 年年結後稅後利潤 HK$500,000，
+                你打算派 HK$300,000 股息俾自己。
+              </p>
+            </div>
+
+            <h3>Step 1：確認可分派利潤</h3>
+            <p>
+              首先要確認公司有足夠嘅可分派利潤。<strong>建議用經審計嘅賬目</strong>，
+              確保數字準確。如果同核數師確認過先派，就最穩陣。
+            </p>
+            <p>
+              本例：公司累計可分派利潤 = $500,000，計劃派 $300,000，足夠。
+            </p>
+
+            <h3>Step 2：召開董事會 / 簽署書面決議</h3>
+            <p>
+              董事會要正式決定派息。如果你係唯一董事，可以係：
+            </p>
+            <ul>
+              <li><strong>中期股息</strong>：董事簽署書面決議（Written Resolution）即可</li>
+              <li><strong>末期股息</strong>：需要股東大會（或書面決議）批准</li>
+            </ul>
+            <p>
+              決議內容要包括：
+            </p>
+            <ul>
+              <li>每股派息金額（例如普通股每股派 HK$3）</li>
+              <li>記錄日期（Record Date）：邊一日持貨嘅股東先有得派</li>
+              <li>支付日期（Payment Date）：幾時過數</li>
+              <li>派息形式（現金 / 股份）</li>
+            </ul>
+
+            <h3>Step 3：製作會議記錄（Minutes）</h3>
+            <p>
+              就算你係唯一股東，都應該出返份正式嘅<strong>書面決議記錄</strong>。
+              內容包含：
+            </p>
+            <ul>
+              <li>會議日期（或書面決議簽署日期）</li>
+              <li>與會董事</li>
+              <li>決議內容（派息金額、日期等）</li>
+              <li>出席董事簽署</li>
+            </ul>
+            <p>
+              呢份記錄係法律文件，要保存喺公司嘅法定記錄冊（Statutory Records）入面。
+            </p>
+
+            <h3>Step 4：過數俾股東</h3>
+            <p>
+              喺支付日期當日，由公司戶口轉賬到股東嘅個人戶口。
+              <strong>記得喺 Transfer Note 備註寫明「Dividend Payment」</strong>，方便會計入賬。
+            </p>
+
+            <h3>Step 5：會計入賬</h3>
+            <p>
+              會計入賬好重要。一般分錄係：
+            </p>
+            <ul>
+              <li>Dr. 保留盈利（Retained Earnings）/ Dividend Declared：HK$300,000</li>
+              <li>Cr. 銀行存款（Bank）：HK$300,000</li>
+            </ul>
+            <p>
+              如果有多個股東，仲要分開記錄每個股東收咗幾多股息。
+            </p>
+
+            <h3>Step 6：更新公司記錄</h3>
+            <p>
+              將董事決議、會議記錄等文件存檔喺公司嘅法定記錄冊。
+              如果派息影響到股份面值（例如 Scrip Dividend），仲要更新成員登記冊（Register of Members）。
+            </p>
+          </section>
+
+          <!-- ───────── Section 5 ───────── -->
+          <section id="tax">
+            <h2>⑤ 稅務影響：股息點樣報稅？</h2>
+            <p>
+              好多人對股息嘅稅務處理有誤解，尤其係覺得「公司派息俾我，我要交稅」。
+              等我同你拆清楚：
+            </p>
+
+            <h3>公司層面（利得稅）</h3>
+            <p>
+              <strong>派發股息唔可以扣稅</strong>。公司嘅利得稅係按應評稅利潤計算嘅，
+              股息係從稅後利潤度派嘅，所以唔可以當做開支扣稅。
+            </p>
+            <p>
+              簡單講：公司先交完利得稅（16.5% 利潤稅率，首 HK$2,000,000 利潤半年 8.25%），
+              然後先可以將剩低嘅利潤派俾股東。
+            </p>
+
+            <h3>股東個人層面（薪俸稅 / 個人入息課稅）</h3>
+            <p>
+              <strong>香港唔徵收股息稅（Dividend Tax）！</strong>
+            </p>
+            <p>
+              根據香港稅務制度，<strong>股息收入唔需要報稅</strong>。
+              無論你係香港居民定係非香港居民，收股息都<strong>唔使交稅</strong>。
+              呢個係香港稅制嘅一大優點。
+            </p>
+            <p>
+              但有一點要注意：如果稅局認為你<strong>利用派息嚟逃避薪俸稅</strong>，
+              （例如本來應該出糧俾自己但改派股息），稅局有權根據「實質重於形式」原則重新定性。
+            </p>
+
+            <h3>非香港股東嘅股息</h3>
+            <p>
+              如果股東係非香港居民，香港派發嘅股息<strong>同樣唔需要扣繳預提稅（Withholding Tax）</strong>。
+              但股東要自己睇返佢所屬國家會唔會將呢筆股息當做海外收入徵稅。
+            </p>
+
+            <div class="tip-box">
+              <p class="font-semibold text-blue-800">💡 稅務小貼士</p>
+              <p class="text-sm text-blue-700">
+                如果你係公司唯一董事兼股東，每年嘅收入分配最好同會計師傾清楚：
+                出幾多糧、派幾多息、收幾多董事袍金，每一種都有唔同嘅稅務效果。
+                股息雖然免稅，但公司已經交咗利得稅先派得，
+                所以要整體考慮稅務效率。
+              </p>
+            </div>
+          </section>
+
+          <!-- ───────── Section 6 ───────── -->
+          <section id="vs-director">
+            <h2>⑥ 股息 vs 董事袍金（Director's Fee）vs 薪金</h2>
+            <p>
+              好多 SME 東主混淆「股息」、「董事袍金」同「薪金」三種收入。
+              其實佢哋有完全唔同嘅法律同稅務效果：
+            </p>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>項目</th>
+                    <th>股息</th>
+                    <th>董事袍金</th>
+                    <th>薪金</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>來源</strong></td>
+                    <td>稅後利潤分配</td>
+                    <td>公司開支</td>
+                    <td>公司開支</td>
+                  </tr>
+                  <tr>
+                    <td><strong>扣稅（公司）</strong></td>
+                    <td>❌ 不可扣稅</td>
+                    <td>✅ 可扣利得稅</td>
+                    <td>✅ 可扣利得稅</td>
+                  </tr>
+                  <tr>
+                    <td><strong>收稅（個人）</strong></td>
+                    <td>✅ 免稅</td>
+                    <td>⚠️ 要報薪俸稅</td>
+                    <td>⚠️ 要報薪俸稅</td>
+                  </tr>
+                  <tr>
+                    <td><strong>法定程序</strong></td>
+                    <td>董事/股東決議</td>
+                    <td>董事決議</td>
+                    <td>僱傭合約</td>
+                  </tr>
+                  <tr>
+                    <td><strong>MPF</strong></td>
+                    <td>❌ 唔使</td>
+                    <td>⚠️ 視乎有冇僱傭關係</td>
+                    <td>✅ 要供款</td>
+                  </tr>
+                  <tr>
+                    <td><strong>適合邊種情況</strong></td>
+                    <td>公司賺錢，想慳個人稅</td>
+                    <td>定期董事薪酬</td>
+                    <td>有實際工作 / 要強積金供款</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>
+              你可以混搭使用嚟做稅務規劃，<strong>但一定要有合理商業理由</strong>，
+              唔好俾稅局認為係避稅安排。
+            </p>
+          </section>
+
+          <!-- ───────── Common Mistakes ───────── -->
+          <section id="mistakes">
+            <h2>⚠️ 常見錯誤（我踩過嘅坑）</h2>
+
+            <div class="warn-box">
+              <p class="font-semibold text-red-800">❌ 錯誤 1：冇開會就派息</p>
+              <p class="text-sm text-red-700">
+                我自己第一個錯誤。公司賺咗錢就直接由公司戶口轉錢俾自己，
+                冇開董事會決議。會計師話俾我知咁樣做嘅後果：
+                如果公司將來俾人清盤，清盤人可以 challenge 呢筆錢係「非法分派」，
+                要求我個人回水。<br /><br />
+                <strong>正確做法：</strong>派息前一定要出返書面決議，簽署、記錄、存檔。
+              </p>
+            </div>
+
+            <div class="warn-box">
+              <p class="font-semibold text-red-800">❌ 錯誤 2：公司蝕緊錢都派息</p>
+              <p class="text-sm text-red-700">
+                有朋友開餐廳，疫情期間蝕咗兩年，但因為股東 pressure，
+                佢照派股息出嚟。結果核數師出咗 qualified opinion，
+                話公司喺「累計虧損」嘅情況下仍然派息，違反公司條例。
+                最終董事要自己承擔責任。<br /><br />
+                <strong>正確做法：</strong>確認公司有可分派利潤先好派，
+                如果唔確定就問核數師。
+              </p>
+            </div>
+
+            <div class="warn-box">
+              <p class="font-semibold text-red-800">❌ 錯誤 3：股息同董事借貸混埋一齊</p>
+              <p class="text-sm text-red-700">
+                好多東主嘅公司戶口有「借支」俾董事嘅記錄，年尾會計師埋數嗰陣，
+                問呢啲係「董事借貸」定係「預付股息」。
+                如果冇清楚記錄，稅局可能 challenge 呢筆錢嘅性質。<br /><br />
+                <strong>正確做法：</strong>董事借貸同股息係兩件事，各自要有獨立記錄。
+                唔好由公司直接轉錢俾自己然後年尾先話「當係股息」。
+              </p>
+            </div>
+
+            <div class="warn-box">
+              <p class="font-semibold text-red-800">❌ 錯誤 4：股東之間分紅比例唔跟持股比例</p>
+              <p class="text-sm text-red-700">
+                如果你同 partner 合夥開公司，你 60% 佢 40%。
+                有一年你覺得自己出力多啲，想分 70% 股息。
+                除非公司章程有特別規定，否則股息一定要按持股比例派。
+                唔跟比例嘅話，partner 可以 challenge 你。<br /><br />
+                <strong>正確做法：</strong>除非章程另有規定，股息按持股比例派。
+                想唔跟比例？可以改章程或者用董事袍金方式調整。
+              </p>
+            </div>
+
+            <div class="warn-box">
+              <p class="font-semibold text-red-800">❌ 錯誤 5：派完息冇留營運資金</p>
+              <p class="text-sm text-red-700">
+                見過太多 case：公司一有錢賺就派晒出去，之後要俾供應商、交租嗰陣先發現唔夠錢。
+                公司要問股東「借錢」周轉，好諷刺。<br /><br />
+                <strong>正確做法：</strong>派息前考慮未來 3-6 個月嘅現金流需求，
+                至少留返足夠營運資金。
+              </p>
+            </div>
+          </section>
+
+          <!-- ───────── FAQ ───────── -->
+          <section id="faq">
+            <h2>🙋 常見問題（FAQ）</h2>
+
+            <div class="space-y-4">
+              <div class="bg-white rounded-lg border border-gray-200 p-5">
+                <p class="font-semibold text-navy mb-2">Q: 股息每個月派都得？</p>
+                <p class="text-sm text-gray-600">
+                  A: 可以。法律上冇限制派息頻率，只要每次都有足夠嘅可分派利潤就得。
+                  但每月派息嘅行政成本好高（每次都要做決議、記錄、會計入賬），
+                  一般 SME 建議一季或者半年派一次。
+                </p>
+              </div>
+
+              <div class="bg-white rounded-lg border border-gray-200 p-5">
+                <p class="font-semibold text-navy mb-2">Q: 股息一定要用現金派？</p>
+                <p class="text-sm text-gray-600">
+                  A: 唔一定。可以用：
+                  （1）現金 — 最常見<br />
+                  （2）股份（Scrip Dividend）— 派新股代替現金<br />
+                  （3）實物 — 例如派公司持有嘅資產／股票<br />
+                  如果唔係現金派息，要確保估值公允。
+                </p>
+              </div>
+
+              <div class="bg-white rounded-lg border border-gray-200 p-5">
+                <p class="font-semibold text-navy mb-2">Q: 公司有股東貸款未還，可以派息嗎？</p>
+                <p class="text-sm text-gray-600">
+                  A: 可以，但要小心。如果公司有股東貸款（Shareholder Loan）未還，
+                  理論上只要公司有可分派利潤，仍然可以派息。
+                  但如果你同時係借款人（即公司欠你錢），又同時係股東收息，
+                  建議喺派息前先處理好貸款關係，避免「左手交右手」嘅質疑。
+                </p>
+              </div>
+
+              <div class="bg-white rounded-lg border border-gray-200 p-5">
+                <p class="font-semibold text-navy mb-2">Q: 派息要唔要向公司註冊處申報？</p>
+                <p class="text-sm text-gray-600">
+                  A: 一般唔需要。派息唔係公司註冊處嘅申報事項。
+                  但如果股息係用 Scrip Dividend（發行新股代替現金），
+                  就要向公司註冊處提交 <strong>NSC1</strong>（股份配發申報表）。
+                  所以要 Scrip Dividend 嘅話要另外加呢一步。
+                </p>
+              </div>
+
+              <div class="bg-white rounded-lg border border-gray-200 p-5">
+                <p class="font-semibold text-navy mb-2">Q: 派錯咗息可以撤回嗎？</p>
+                <p class="text-sm text-gray-600">
+                  A: 一般唔可以。股息一經合法宣派，就成為股東嘅應收權益（Debt），
+                  公司冇權單方面撤回。如果係錯誤派發（例如違反公司條例），
+                  公司可以追討返，但要有法律依據。
+                  所以派息前一定要 double check 程序同金額。
+                </p>
+              </div>
+
+              <div class="bg-white rounded-lg border border-gray-200 p-5">
+                <p class="font-semibold text-navy mb-2">Q: 外國股東收息要交稅嗎？</p>
+                <p class="text-sm text-gray-600">
+                  A: 香港唔收股息稅，所以公司派息俾外國股東都唔使扣稅。
+                  但外國股東要自己睇返佢所屬國家嘅稅法。
+                  例如中國內地居民股東，根據內地稅法，
+                  可能要就香港公司股息繳納個人所得稅（20%，但有稅收協定優惠）。
+                  建議外國股東自行諮詢稅務顧問。
+                </p>
+              </div>
+
+              <div class="bg-white rounded-lg border border-gray-200 p-5">
+                <p class="font-semibold text-navy mb-2">Q: 新成立公司可以派息嗎？</p>
+                <p class="text-sm text-gray-600">
+                  A: 只要公司有可分派利潤就可以。新公司如果第一年就賺錢，
+                  理論上可以派息。但實務上好多新公司頭幾年會選擇保留利潤，
+                  用嚟擴張業務。另外要注意：如果公司冇做審計（Audit），
+                  派息前最好同會計師確認可分派利潤嘅計算方法。
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ───────── Conclusion ───────── -->
+          <section class="mt-12 border-t border-gray-200 pt-8">
+            <h2>總結：派息 Checklist</h2>
+            <p>
+              派股息唔複雜，但一定要跟程序。以下係每次派息前嘅 6 步 Checklist：
+            </p>
+            <ol class="list-decimal pl-5 space-y-2">
+              <li><strong>✅ 確認有足夠嘅可分派利潤</strong>（最好問會計師/核數師）</li>
+              <li><strong>✅ 睇公司章程</strong>，確認派息程序冇違反規定</li>
+              <li><strong>✅ 出董事書面決議</strong>（或召開董事會），記錄派息安排</li>
+              <li><strong>✅ 製作會議記錄</strong>，清楚列明每股金額、記錄日期及支付日期</li>
+              <li><strong>✅ 按持股比例過數</strong>，備註寫「Dividend」</li>
+              <li><strong>✅ 保存所有文件</strong>：決議、記錄、銀行轉賬記錄，以備日後查核</li>
+            </ol>
+            <div class="gold-box mt-6">
+              <p class="font-semibold text-amber-800">📌 最後一句</p>
+              <p class="text-sm text-amber-700">
+                股息係你公司成功嘅回報，但派得唔啱程序可以變成一場噩夢。
+                跟足程序、留足現金、問清楚會計師 — 咁你就可以安心收錢。
+              </p>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══ Footer ═══ -->
+  <footer class="bg-navy py-12 mt-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-2 text-white font-bold text-lg">
+          <img src="../assets/images/govflow-logo.svg" alt="GovFlow" class="w-7 h-7" /> GovFlow
+        </div>
+        <div class="text-sm text-gray-400">
+          香港公司秘書文件指南
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
+        <p class="mb-2">
+          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          如有具體法律問題，請諮詢執業律師或專業公司秘書。
+        </p>
+        <p>© 2026 GovFlow. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
