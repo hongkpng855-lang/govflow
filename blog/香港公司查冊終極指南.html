@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港公司查冊終極指南（Company Search）— 免費 vs 收費查冊完整教學 | GovFlow</title>
+<meta name="description" content="香港公司查冊完整教學：公司註冊處網上查冊、ICRIS 查冊、查公司董事股東資料、查公司地址、查公司狀況。自己查公司資料，唔俾人呃！附真實案例同 due diligence checklist。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gold { color: #C9A84C; }
+  .border-gold { border-color: #C9A84C; }
+  .hover\:bg-gold\/90 { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"香港公司查冊係咩？點樣查？","acceptedAnswer":{"@type":"Answer","text":"香港公司查冊係指透過公司註冊處嘅網上查冊系統（e-Registry / ICRIS）查閱香港有限公司嘅公開資料，包括公司名稱、註冊編號、成立日期、董事名單、股東名單、公司秘書、註冊地址、押記記錄等。可以免費查基本資料，詳細報告每次收費 HK$17-80。"}},
+    {"@type":"Question","name":"查公司資料要幾多錢？","acceptedAnswer":{"@type":"Answer","text":"公司註冊處嘅收費：免費查公司名稱同狀況；查閱公司基本資料（董事、股東、秘書、地址等）HK$17；查閱公司押記記錄 HK$17；訂購文件影像（如周年申報表、公司章程）每份 HK$10-30；查冊報告（已整合嘅報告）HK$80。另外可以透過第三方平台如 HKMA 嘅 CRS 系統查冊，費用參考公司註冊處官方網站。"}},
+    {"@type":"Question","name":"可唔可以查人哋公司嘅董事同股東資料？","acceptedAnswer":{"@type":"Answer","text":"可以。公司註冊處嘅查冊系統可以查到有限公司嘅現任董事姓名、委任日期，以及股東名冊（包括股東姓名、持股數量、持股類別）。但要注意：股東名冊只顯示唔記名股東資料，如果股東係透過代理人持有，代理人才會出現在名冊上。另外記名股份嘅轉讓紀錄唔會即時更新。"}},
+    {"@type":"Question","name":"公司查冊點樣預防被騙？","acceptedAnswer":{"@type":"Answer","text":"查冊時要留意以下紅旗：1) 公司名稱同實際營運名稱唔一致；2) 公司註冊地址係虛擬辦公室或者秘書公司地址；3) 董事名單異常頻繁變更；4) 公司成立好短時間但聲稱有多年歷史；5) 公司狀態唔係「仍收錄」（現存）而係「已告解散」或「撤銷註冊」；6) 公司押記記錄異常多（顯示公司不斷借貸）。遇到以上情況要格外小心。"}},
+    {"@type":"Question","name":"香港公司查冊有冇免費方法？","acceptedAnswer":{"@type":"answer","text":"有公司註冊處嘅「網上查冊中心」可以免費查公司基本資料如公司名稱、公司類型、成立日期、公司狀況、最新周年申報表年份。但要查董事、股東、公司秘書、註冊地址等詳細資料就需要付費，每次 HK$17。第三方平台如 OpenCorporates 都有部分香港公司嘅公開資料，但更新可能唔夠即時。"}},
+    {"@type":"Question","name":"查公司地址有用嗎？點樣解讀？","acceptedAnswer":{"@type":"Answer","text":"非常有用。公司註冊地址係法定地址，所有政府信件都會寄去呢個地址。如果你查到公司註冊地址係秘書公司、會計公司或者虛擬辦公室地址，代表呢間公司可能冇實際營運地址。咁唔一定係壞事（好多公司用虛擬辦公室），但如果你要做大額交易，建議要求對方提供實際營運地址證明。"}}
+  ]
+}
+</script>
+<!-- Open Graph -->
+<meta property="og:title" content="香港公司查冊終極指南（Company Search）— 免費 vs 收費查冊完整教學">
+<meta property="og:description" content="香港公司查冊完整教學：公司註冊處網上查冊、ICRIS 查冊、查公司董事股東資料、查公司地址、查公司狀況。自己查公司資料，唔俾人呃！附真實案例同 Due Diligence Checklist。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://govflow.hk/blog/香港公司查冊終極指南.html">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="../index.html" class="flex items-center gap-2.5"><img src="../assets/images/govflow-logo.svg" alt="GovFlow" class="w-7 h-7" /><span class="text-white font-bold text-lg tracking-tight">GovFlow</span></a>
+      <a href="../index.html" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+<!-- Article Header -->
+<section class="bg-navy text-white py-12">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="flex items-center space-x-2 text-gold text-sm mb-3">
+      <span>🔍 Due Diligence</span>
+      <span>·</span>
+      <span>10 分鐘閱讀</span>
+      <span>·</span>
+      <span>2026 年 6 月 7 日</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-4">香港公司查冊終極指南（Company Search）</h1>
+    <p class="text-lg text-gray-300 leading-relaxed">自己查公司資料，預防被呃、核實合作夥伴、了解競爭對手。公司註冊處查冊完整教學，附 due diligence checklist。</p>
+    <div class="mt-6 flex items-center gap-3 text-sm text-gray-400">
+      <span>✍️ GovFlow 編輯部</span>
+      <span>·</span>
+      <span>📅 2026 年 6 月 7 日</span>
+    </div>
+  </div>
+</section>
+
+<!-- Table of Contents + Content -->
+<section class="max-w-4xl mx-auto px-4 py-8">
+  <div class="lg:grid lg:grid-cols-4 lg:gap-8">
+
+    <!-- Sidebar TOC (Desktop) -->
+    <aside class="hidden lg:block col-span-1">
+      <div class="sticky top-20 bg-white rounded-lg shadow-sm p-4 border border-gray-200">
+        <h3 class="font-bold text-navy text-sm mb-3">📋 目錄</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#intro" class="toc-item text-gray-600 hover:text-gold block">點解要查公司資料？</a></li>
+          <li><a href="#what" class="toc-item text-gray-600 hover:text-gold block">查冊可以查到咩？</a></li>
+          <li><a href="#how" class="toc-item text-gray-600 hover:text-gold block">點樣查？（step-by-step）</a></li>
+          <li><a href="#fee" class="toc-item text-gray-600 hover:text-gold block">收費一覽</a></li>
+          <li><a href="#scam" class="toc-item text-gray-600 hover:text-gold block">查冊防騙指南</a></li>
+          <li><a href="#thirdparty" class="toc-item text-gray-600 hover:text-gold block">第三方查冊平台</a></li>
+          <li><a href="#checklist" class="toc-item text-gray-600 hover:text-gold block">Due Diligence Checklist</a></li>
+          <li><a href="#faq" class="toc-item text-gray-600 hover:text-gold block">常見問題 FAQ</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="lg:col-span-3">
+
+      <article class="prose-custom bg-white rounded-lg shadow-sm p-6 sm:p-8">
+
+        <div class="callout-info">
+          <strong>📌 一句總結：</strong>香港公司查冊係做生意嘅基本盤 — 簽約前查一查，幾十蚊就可以避免幾十萬嘅損失。唔好懶！查冊唔係唔信人，係對自己嘅生意負責。
+        </div>
+
+        <!-- 1. Intro -->
+        <h2 id="intro">點解要查公司資料？我親身經歷話你知</h2>
+        <p>幾年前我打算同一間「貿易公司」合作，對方話自己係香港註冊有限公司，做咗十幾年生意的，website 睇落好專業，報價亦好合理。我冇查冊就簽咗約，俾咗三成訂金 HK$80,000。結果⋯⋯對方收咗錢之後就消失咗。</p>
+        <p>後來我透過公司註冊處查冊，先發現原來呢間公司成立咗唔夠三個月，註冊地址係一間秘書公司，董事得一個而且同名單上嘅負責人完全唔同。我俾人呃咗。</p>
+        <p>自此之後，我同任何新公司合作之前一定會查冊。查冊只需要幾分鐘、幾十蚊，但係可以幫你避免幾十萬嘅損失。以下係我整合嘅公司查冊完整教學。</p>
+
+        <h3>邊啲情況下一定要查公司資料？</h3>
+        <ul>
+          <li><strong>簽約前：</strong>核實對方公司真係存在、公司狀態正常、董事資料同簽約人一致</li>
+          <li><strong>俾訂金或預付款前：</strong>確認公司成立咗一段時間、唔係新開冇耐就收大額訂金</li>
+          <li><strong>做供應商審核：</strong>了解供應商嘅財務狀況（押記記錄反映借貸情況）</li>
+          <li><strong>合夥做生意：</strong>核實 partner 嘅董事/股東背景</li>
+          <li><strong>收購公司：</strong>全面 due diligence 嘅基本盤</li>
+          <li><strong>買公司貨／投資：</strong>確認公司股權結構同法律狀況</li>
+          <li><strong>收到不明來歷嘅 invoice：</strong>確認對方係咪真係一間註冊公司</li>
+        </ul>
+
+        <!-- 2. What You Can Search -->
+        <h2 id="what">公司查冊可以查到啲咩？</h2>
+        <p>香港公司註冊處嘅查冊系統（ICRIS / e-Registry）可以查到有限公司嘅以下公開資料：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>資料類別</th>
+              <th>詳細內容</th>
+              <th>收費</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>公司基本資料</td>
+              <td>公司名稱（中英文）、公司編號、公司類型、成立日期、公司狀況</td>
+              <td>免費</td>
+            </tr>
+            <tr>
+              <td>現任董事名單</td>
+              <td>董事姓名（英文）、委任日期、地址（部分顯示）</td>
+              <td>HK$17</td>
+            </tr>
+            <tr>
+              <td>公司秘書資料</td>
+              <td>公司秘書姓名、委任日期</td>
+              <td>HK$17</td>
+            </tr>
+            <tr>
+              <td>股東名冊</td>
+              <td>股東姓名、持股數量、股份類別</td>
+              <td>HK$17</td>
+            </tr>
+            <tr>
+              <td>註冊地址</td>
+              <td>公司嘅註冊辦事處地址</td>
+              <td>HK$17</td>
+            </tr>
+            <tr>
+              <td>押記記錄（Charge）</td>
+              <td>公司嘅抵押、借貸、擔保記錄</td>
+              <td>HK$17</td>
+            </tr>
+            <tr>
+              <td>周年申報表（NAR1）</td>
+              <td>過去提交嘅周年申報表文件影像</td>
+              <td>每份 HK$30</td>
+            </tr>
+            <tr>
+              <td>公司章程</td>
+              <td>公司組織章程細則（Articles of Association）</td>
+              <td>每份 HK$20</td>
+            </tr>
+            <tr>
+              <td>公司改名記錄</td>
+              <td>公司曾經用過嘅名稱</td>
+              <td>免費 / 包含在基本查冊</td>
+            </tr>
+            <tr>
+              <td>公司清盤/解散記錄</td>
+              <td>公司是否正在清盤、已解散或撤銷註冊</td>
+              <td>免費（基本資料顯示）</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout-warning">
+          <strong>⚠️ 注意：</strong>查冊顯示嘅股東名冊係「成員登記冊」（Register of Members），顯示嘅係喺公司紀錄上嘅股東，唔一定係最終實益擁有人（Beneficial Owner）。如果股東係透過代理人（Nominee）持有股份，股東名冊上只會顯示代理人嘅名。
+        </div>
+
+        <!-- 3. How to Search -->
+        <h2 id="how">點樣查公司資料？（Step-by-Step）</h2>
+
+        <h3>方法一：公司註冊處「網上查冊中心」（最官方）</h3>
+        <p>呢個係公司註冊處官方嘅查冊系統，資料最齊全、更新最快。</p>
+        <ol>
+          <li><strong>去公司註冊處網站：</strong>https://www.e-services.cr.gov.hk/</li>
+          <li><strong>揀「網上查冊」（Online Search）</strong> — 唔使 login 都查到基本資料</li>
+          <li><strong>選擇查冊方式：</strong>
+            <ul>
+              <li>公司名稱搜尋（輸入全名或關鍵字）</li>
+              <li>公司編號搜尋（最準確）</li>
+              <li>董事/股東姓名搜尋（如果你想查一個人係咪好多間公司嘅董事）</li>
+            </ul>
+          </li>
+          <li><strong>睇基本資料（免費）：</strong>顯示公司名稱、編號、類型、成立日期、公司狀況</li>
+          <li><strong>付費查詳細資料：</strong>揀「訂購文件影像」或「查閱公司資料」— 可以用信用卡 / 繳費靈俾錢（HK$17 起）</li>
+          <li><strong>下載報告：</strong>付費後可以即時睇同下載 PDF 報告</li>
+        </ol>
+
+        <div class="callout-success">
+          <strong>✅ 小貼士：</strong>如果你要頻繁查冊，可以開一個公司註冊處嘅「綜合註冊資訊系統」（ICRIS）帳戶，每次登入就可以查，唔使每次俾錢時再填資料。開戶係免費嘅。
+        </div>
+
+        <h3>方法二：公司註冊處「查冊易」手機 App</h3>
+        <p>公司註冊處有手機 App 「CR e-Search」（查冊易），可以喺 iOS / Android 下載。功能同網站差唔多，適合冇電腦嘅時候用。</p>
+
+        <h3>方法三：親身去金鐘查冊</h3>
+        <p>如果你想睇實體文件或者唔方便網上付款，可以去公司註冊處嘅公眾查冊處：</p>
+        <ul>
+          <li><strong>地址：</strong>香港金鐘道 66 號金鐘政府合署 14 樓</li>
+          <li><strong>辦公時間：</strong>星期一至五 9:00 - 17:30（星期六、日及公眾假期休息）</li>
+          <li><strong>費用：</strong>同網上一樣，但可以俾現金或 EPS</li>
+          <li><strong>好處：</strong>有職員幫手，適合第一次查冊唔熟流程嘅人</li>
+        </ul>
+
+        <!-- 4. Fee -->
+        <h2 id="fee">查冊費用一覽</h2>
+        <p>公司註冊處嘅收費其實好平，比起你俾人呃嘅損失，呢啲係微不足道嘅成本：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>費用（HK$）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>查公司基本資料（名稱、狀況、成立日期）</td>
+              <td>免費</td>
+            </tr>
+            <tr>
+              <td>查公司詳細資料（董事、股東、秘書、地址）</td>
+              <td>17</td>
+            </tr>
+            <tr>
+              <td>查公司押記記錄</td>
+              <td>17</td>
+            </tr>
+            <tr>
+              <td>查閱文件影像（例如 NAR1、Annual Return）</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>訂購公司章程（Articles of Association）</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>公司查冊報告（整合版）</td>
+              <td>80</td>
+            </tr>
+            <tr>
+              <td>董事/股東索引查冊（以人查公司）</td>
+              <td>27</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout-info">
+          <strong>💡 一般建議：</strong>平時合作前只要查「公司詳細資料」（HK$17）就夠，睇董事名單、股東結構、註冊地址同公司狀況。如果係大額交易或者收購合併，先至要買埋押記記錄同文件影像。
+        </div>
+
+        <!-- 5. Anti-scam -->
+        <h2 id="scam">查冊防騙指南 — 睇呢 6 個紅旗</h2>
+        <p>我同你分享我學到嘅嘢：查冊唔係淨係查公司存在就夠，要識得睇細節。以下係 6 個最常見嘅紅旗：</p>
+
+        <h3>🚩 紅旗 1：公司狀況唔係「仍收錄」（現存）</h3>
+        <p>公司狀況有好多種：</p>
+        <ul>
+          <li><strong>仍收錄（現存）</strong> — ✅ 正常營運中嘅公司</li>
+          <li><strong>已告解散</strong> — ❌ 已經冇咗，唔好同佢做生意</li>
+          <li><strong>撤銷註冊</strong> — ❌ 已經被除名</li>
+          <li><strong>正在清盤</strong> — ❌ 準備收檔，可能係走佬前嘅操作</li>
+          <li><strong>休止活動</strong> — ⚠️ 公司冇營運，但未解散</li>
+        </ul>
+        <p>記住：就算對方話「公司係新註冊嘅」，都要睇下公司狀況係咪正常。好多人會用「已告解散」嘅公司名繼續呃人。</p>
+
+        <h3>🚩 紅旗 2：公司成立好短時間但聲稱有多年經驗</h3>
+        <p>查冊可以睇到公司嘅成立日期。如果對方話自己「做咗十幾年生意」，但查冊顯示公司成立咗唔夠一年，呢個就係好大嘅警號。不過要注意：公司可以改名，所以最好同時查公司嘅改名記錄，確認呢間公司唔係「新殼舊酒」。</p>
+
+        <h3>🚩 紅旗 3：註冊地址係秘書公司／虛擬辦公室</h3>
+        <p>公司註冊地址係法定地址，所有政府信件都會寄去呢個地址。如果查到地址係秘書公司、會計公司、或者共用嘅服務式辦公室地址，代表呢間公司可能冇實際營運地址。唔一定係問題（好多公司用秘書公司地址），但如果你要做大額交易，建議要求對方提供實際營運地址證明。</p>
+
+        <h3>🚩 紅旗 4：董事名單異常頻繁變更</h3>
+        <p>你可以查公司嘅周年申報表記錄，睇下每年嘅董事名單有冇大變動。如果一間公司每年都換晒啲董事，或者董事係啲「掛名董事」（Nominee Director），就要小心。</p>
+
+        <h3>🚩 紅旗 5：押記記錄異常多</h3>
+        <p>押記記錄（Charge）反映公司將資產抵押俾銀行或其他債權人借貸。如果一間公司有大量押記記錄、押記金額異常高，代表公司可能有財務問題。當然，正常嘅公司都會有銀行貸款，但係如果押記記錄數量同金額異常高，就要深入了解。</p>
+
+        <h3>🚩 紅旗 6：董事同時係大量公司嘅董事</h3>
+        <p>你可以用公司註冊處嘅「董事索引查冊」（HK$27），以一個人嘅姓名搜尋佢係幾多間公司嘅董事。如果一個人係 30-40 間公司嘅董事，佢好大機會係秘書公司嘅「掛名董事」，唔係真正嘅公司負責人。如果真正嘅負責人唔肯做董事而用掛名董事，你要問清楚原因。</p>
+
+        <div class="callout-danger">
+          <strong>🔴 真實案例：</strong>我朋友開印刷廠，接咗一個 HK$200,000 嘅訂單，對方話係「香港註冊公司」。佢冇查冊就開始做，做完之後對方收咗貨但冇找數。後來先查到呢間公司喺簽約前幾日先成立，註冊地址係秘書公司，董事係一個「專業董事」（掛名）。真正嘅負責人完全搵唔到。HK$200,000 就咁冇咗。
+        </div>
+
+        <!-- 6. Third-party Platforms -->
+        <h2 id="thirdparty">第三方查冊平台（方便但有限制）</h2>
+        <p>除咗公司註冊處官方系統，仲有啲第三方平台提供香港公司查冊服務：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>平台</th>
+              <th>優點</th>
+              <th>缺點</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>OpenCorporates</strong><br>（opencorporates.com）</td>
+              <td>免費、全球公司資料、整合多個司法管轄區</td>
+              <td>香港資料更新唔夠即時（可能遲 1-3 個月）、唔夠詳細</td>
+            </tr>
+            <tr>
+              <td><strong>Webb-Site</strong><br>（webb-site.com）</td>
+              <td>免費，有公司結構圖、關聯公司分析、股權追蹤</td>
+              <td>主要focus上市公司，私人公司資料有限</td>
+            </tr>
+            <tr>
+              <td><strong>公司註冊處 e-Registry</strong><br>（官方）</td>
+              <td>最 update（即時更新）、資料最齊全</td>
+              <td>要俾錢、操作介面比較 old-school</td>
+            </tr>
+            <tr>
+              <td><strong>商業登記署</strong><br>（稅局網站）</td>
+              <td>可以查商業登記證（BR）資料</td>
+              <td>只有商業登記資料，唔包括董事/股東</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout-warning">
+          <strong>⚠️ 重要提醒：</strong>第三方平台嘅資料可能滯後或者唔完整。做重要決策時，一定以公司註冊處官方查冊結果為準，唔好貪方便用第三方平台就算。
+        </div>
+
+        <!-- 7. Checklist -->
+        <h2 id="checklist">Due Diligence Checklist（合作前必睇）</h2>
+        <p>同新公司合作前，建議做晒以下查冊步驟。做一次大約 HK$100-150，但係可以幫你避免大額損失：</p>
+
+        <div class="callout-info">
+          <strong>✅ Due Diligence Checklist</strong>
+          <ol style="margin-top: 0.5rem;">
+            <li><strong>查公司基本資料（免費）</strong> — 確認公司名稱、編號、公司狀況係「仍收錄（現存）」</li>
+            <li><strong>查公司詳細資料（HK$17）</strong> — 確認董事名單、股東結構、公司秘書、註冊地址</li>
+            <li><strong>核對簽約人身份</strong> — 合約簽署人嘅名係咪喺董事名單上？如果唔係，有冇授權書？</li>
+            <li><strong>查公司成立日期</strong> — 同對方聲稱嘅營運年資對比</li>
+            <li><strong>查公司改名記錄（免費）</strong> — 公司係咪最近先改名？</li>
+            <li><strong>查註冊地址（HK$17）</strong> — 地址係實體辦公室定秘書公司？</li>
+            <li><strong>查押記記錄（HK$17）</strong> — 公司有冇異常嘅借貸情況？</li>
+            <li><strong>查最後提交嘅周年申報表（HK$30）</strong> — 公司係咪準時交 annual return？如果成日遲交，代表公司合規意識差或者營運有問題</li>
+            <li><strong>做董事索引查冊（HK$27）</strong> — 如果董事係好多公司嘅掛名董事，要求真正負責人出現</li>
+            <li><strong>Google 公司名 + 董事名</strong> — 有冇負面新聞、法院案件、破產記錄？</li>
+          </ol>
+          <p style="margin-top: 0.5rem;"><strong>總成本：約 HK$91-150（20 分鐘內做得晒）</strong></p>
+        </div>
+
+        <!-- 8. FAQ -->
+        <h2 id="faq">常見問題（FAQ）</h2>
+
+        <div class="faq-item">
+          <details>
+            <summary>查公司查冊係咪侵犯私隱？任何人都可以查？</summary>
+            <p>公司查冊係法定嘅公開資料制度，任何人都可以查。根據《公司條例》，有限公司嘅董事、股東、公司秘書等資料必須公開，目的係保障商業交易嘅透明度同公眾利益。所以香港有限公司嘅董事同意做董事嘅時候，已經知道佢嘅資料會公開。唔同於無限公司（獨資/合夥），有限公司嘅資料係完全公開嘅。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>可唔可以查無限公司（獨資/合夥）嘅資料？</summary>
+            <p>有限度。無限公司（獨資經營、合夥業務）嘅資料係由商業登記署管理，唔係公司註冊處。你可以透過稅局嘅商業登記查冊系統查商業登記證號碼、業務名稱、業務地址同業務性質，但係查唔到東主/合夥人嘅詳細資料。所以無限公司嘅透明度比有限公司低好多。如果你同無限公司做大額交易，建議要求對方提供東主身份證明同參考其他商譽資料。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>查唔查到我間公司有冇畀人起訴／有冇官司在身？</summary>
+            <p>公司查冊查唔到訴訟記錄。法院案件要透過司法機構嘅「綜合法院案件處理系統」（Integrated Court Case Management System, iCMS）查冊。另外，公司如果被清盤，清盤令會顯示喺公司註冊處嘅記錄中。破產管理署亦有破產查冊系統。如果你擔心對方公司有法律糾紛，建議同時查法院系統。<br><br>捷榮嘅做法：Google「[公司名] 訴訟」、「[公司名] 判決書」，睇下有冇媒體報道或法院公告。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>公司董事拒絕提供身份證號碼，正常嗎？</summary>
+            <p>正常。公司查冊顯示嘅董事資料包括姓名同地址（部分），但唔包括身份證號碼或護照號碼。如果對方願意提供董事姓名同地址俾你核對公司註冊處記錄，已經足夠。如果對方連董事姓名都唔肯俾你，或者俾嘅名同公司註冊處記錄唔一致，呢個就係好大嘅警號。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>如果間公司係海外公司（非香港註冊），可以點查？</summary>
+            <p>如果間公司係喺香港以外註冊（如英屬維爾京群島 BVI、開曼群島、新加坡、英國等），公司註冊處查唔到佢嘅資料。你可以：</p>
+            <ul>
+              <li>要求對方提供當地公司註冊處嘅「公司註冊證明書」（Certificate of Incorporation）同「良好存續證明」（Certificate of Good Standing）</li>
+              <li>查當地公司註冊處嘅網上查冊系統（如有）</li>
+              <li>BVI / 開曼等離岸中心嘅公司資料通常唔公開，要透過註冊代理人查</li>
+              <li>要求對方提供董事聲明同股東名冊嘅認證副本</li>
+            </ul>
+            <p>如果你同離岸公司做生意，建議更謹慎，最好要求對方提供銀行 reference letter。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>查公司嘅押記記錄（Charge）可以睇到咩？</summary>
+            <p>押記記錄顯示公司將資產抵押俾債權人（通常係銀行）攞貸款。記錄包括：</p>
+            <ul>
+              <li>押記類型（如浮動押記、固定押記）</li>
+              <li>押記日期</li>
+              <li>債權人名稱（抵押俾邊個）</li>
+              <li>抵押資產描述</li>
+              <li>押記金額（部分顯示）</li>
+              <li>償還狀態（是否已解除）</li>
+            </ul>
+            <p>如果一間公司有大量未解除嘅押記記錄，代表公司嘅資產已經抵押出去，財務彈性有限。如果係新成立嘅公司但已經有押記記錄，代表公司一開始就借錢營運，風險比較高。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>公司成立日期同商業登記證日期唔同，點解？</summary>
+            <p>正常情況。有限公司嘅「公司成立日期」係公司註冊處發出公司註冊證明書嘅日期，而「商業登記證生效日期」係商業登記署發出 BR 嘅日期。兩者有機會相差幾日到幾星期。如果你見到兩個日期相差好遠（例如幾個月），就要問清楚：可能係公司成立咗好耐先開始商業登記，呢個係唔正常嘅情況。</p>
+          </details>
+        </div>
+
+      </article>
+
+      <!-- Bottom CTA -->
+      <div class="bg-navy text-white rounded-lg shadow-lg p-6 sm:p-8 mt-8 text-center">
+        <h3 class="text-xl font-bold mb-2">🔍 想做更多 Due Diligence？</h3>
+        <p class="text-gray-300 mb-4">我哋嘅合規指南涵蓋公司查冊、董事變更、股權結構等所有公司營運範疇。</p>
+        <a href="../index.html" class="inline-block bg-gold text-navy font-bold px-6 py-3 rounded-lg hover:bg-yellow-400 transition">睇更多指南</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-navy text-gray-400 py-8 mt-12">
+  <div class="max-w-4xl mx-auto px-4 text-center text-sm">
+    <p class="mb-2">© 2026 GovFlow.hk — 由真實經歷者整理嘅香港公司流程指南</p>
+    <p>本文章僅供參考，唔構成法律或專業意見。重要交易前請諮詢合資格專業人士。</p>
+  </div>
+</footer>
+</body>
+</html>
