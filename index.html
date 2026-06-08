@@ -179,11 +179,11 @@
             <span class="inline-flex items-center gap-1.5 text-sm bg-navy/5 text-navy font-medium px-4 py-2 rounded-full">⏱️ 1-2 星期</span>
             <span class="inline-flex items-center gap-1.5 text-sm bg-green-50 text-green-700 font-medium px-4 py-2 rounded-full">🆓 全部免費</span>
           </div>
-          <div class="flex flex-col sm:flex-row gap-3">
-            <a href="shareholder-transfer.html" class="btn-gov btn-gov-buy flex-1 justify-center btn-gov-pulse">
+          <div class="flex flex-col sm:flex-row gap-2">
+            <a href="shareholder-transfer.html" class="btn-gov btn-gov-buy flex-1 justify-center text-sm py-2.5">
               📖 免費睇全部 5 個步驟 →
             </a>
-            <a href="https://buymeacoffee.com/govflow" target="_blank" class="btn-gov btn-gov-preview flex-1 justify-center">
+            <a href="https://buymeacoffee.com/govflow" target="_blank" class="btn-gov btn-gov-preview flex-1 justify-center text-sm py-2.5">
               ☕ 請咖啡支持
             </a>
           </div>
@@ -191,44 +191,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ═══════════════ Email Collection Section ═══════════════ -->
-  <section class="py-16 bg-white">
-    <div class="max-w-2xl mx-auto px-4 text-center">
-      <div class="text-3xl mb-3">📬</div>
-      <h2 class="text-2xl sm:text-3xl font-bold gov-heading mb-2">
-        想收到更多免費指南？
-      </h2>
-      <p class="text-gray-500 mb-6 max-w-md mx-auto">
-        留低 email，之後有新流程指南（公司註銷、商業登記、董事變更等）會第一時間通知你
-      </p>
-      <form id="emailForm" class="max-w-sm mx-auto flex gap-2" onsubmit="event.preventDefault(); submitHomeEmail()">
-        <input type="email" id="homeEmail" placeholder="your@email.com" required
-               class="flex-1 border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold"
-        />
-        <button type="submit"
-                class="bg-navy text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-navy-light transition text-sm">
-          訂閱
-        </button>
-      </form>
-      <p id="emailSuccess" class="text-green-600 font-semibold text-sm mt-3 hidden">✅ 多謝！有新指南會通知你 📬</p>
-    </div>
-  </section>
-
-  <script>
-    function submitHomeEmail() {
-      const email = document.getElementById('homeEmail').value.trim();
-      if (email && email.includes('@')) {
-        const emails = JSON.parse(localStorage.getItem('govflow_emails') || '[]');
-        if (!emails.includes(email)) {
-          emails.push(email);
-          localStorage.setItem('govflow_emails', JSON.stringify(emails));
-        }
-        document.getElementById('emailForm').classList.add('hidden');
-        document.getElementById('emailSuccess').classList.remove('hidden');
-      }
-    }
-  </script>
 
   <!-- ═══════════════ Blog Section ═══════════════ -->
   <section class="py-16 bg-gray-50">
@@ -321,46 +283,6 @@
             </div>
           </div>
         </a>
-        <a href="blog/香港公司章程修改完整指南.html" class="block bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
-          <div class="flex items-start gap-4">
-            <div class="text-3xl shrink-0 mt-1">📜</div>
-            <div>
-              <div class="flex items-center gap-2 mb-1">
-                <span class="text-xs font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">新</span>
-              </div>
-              <h3 class="font-bold text-lg text-navy group-hover:text-gold transition-colors mb-2">
-                香港公司章程（Article of Association）修改完整指南｜特別決議、NR1、審批流程全面睇
-              </h3>
-              <p class="text-sm text-gray-500 mb-3">
-                以為章程係註冊嗰陣填完就算？引入投資者、發新股、改公司名都要先改章程。由特別決議點樣通過到公司註冊處審批，逐個步驟話你知。附10項修改Checklist。
-              </p>
-              <div class="flex items-center text-xs text-gray-400 gap-3">
-                <span>📅 2026.06.06</span>
-                <span>🏷️ 有限公司營運 · 公司條例</span>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="blog/香港公司董事會議紀錄終極指南.html" class="block bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
-          <div class="flex items-start gap-4">
-            <div class="text-3xl shrink-0 mt-1">📋</div>
-            <div>
-              <div class="flex items-center gap-2 mb-1">
-                <span class="text-xs font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">新</span>
-              </div>
-              <h3 class="font-bold text-lg text-navy group-hover:text-gold transition-colors mb-2">
-                香港公司董事會議紀錄（Board Minutes）終極指南｜寫法、法律規定、必備條款全面睇
-              </h3>
-              <p class="text-sm text-gray-500 mb-3">
-                董事會議紀錄係法定要求，唔寫得唔得？點樣寫先符合公司條例？一人公司都要寫？由親身經歷者分享 Board Minutes 嘅所有須知，附書面決議範本同 6 個常見錯誤。
-              </p>
-              <div class="flex items-center text-xs text-gray-400 gap-3">
-                <span>📅 2026.06.06</span>
-                <span>🏷️ 公司條例 · 董事責任 · 公司秘書 · Minutes</span>
-              </div>
-            </div>
-          </div>
-        </a>
       </div>
       <div class="text-center mt-8">
         <a href="blog/index.html" class="inline-flex items-center gap-2 text-sm font-semibold text-navy bg-white border-2 border-navy/20 hover:border-gold/40 hover:text-gold transition rounded-xl px-6 py-3 shadow-sm">
@@ -430,7 +352,7 @@
           如有具體法律問題，請諮詢執業律師或專業公司秘書。
         </p>
         <p>© 2025 GovFlow. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v1.0.0 · 48ffef7</p>
+        <p class="mt-2 opacity-40">v1.0.0 · 52ddff6</p>
       </div>
     </div>
   </footer>
