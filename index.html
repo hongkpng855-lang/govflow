@@ -92,33 +92,50 @@
   </section>
 
   <!-- ═══════════════ How It Works ═══════════════ -->
-  <section id="how-it-works" class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-12 gov-heading">
+  <section id="how-it-works" class="py-20 bg-gray-50 relative overflow-hidden">
+    <!-- Background decorative blobs -->
+    <div class="absolute -top-12 left-1/4 w-48 h-48 rounded-full bg-gold/5 blur-2xl"></div>
+    <div class="absolute top-1/2 -right-16 w-52 h-52 rounded-full bg-navy/[0.03] blur-2xl"></div>
+    <div class="absolute bottom-8 left-10 w-36 h-36 rounded-full bg-gold/5 blur-2xl"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-14 gov-heading">
         點樣運作？
       </h2>
-      <div class="grid sm:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-gold">1</span>
+
+      <div class="relative">
+        <!-- Card 1 - tilt left, bigger -->
+        <div class="relative w-full sm:w-[55%] sm:-rotate-2 hover:rotate-0 transition-transform duration-300 mb-6 sm:mb-0">
+          <div class="bg-white rounded-2xl shadow-lg shadow-gold/5 p-6 sm:p-8 border border-gray-100">
+            <div class="w-14 h-14 rounded-full bg-gold/20 flex items-center justify-center mb-4">
+              <span class="text-2xl font-bold text-gold">1</span>
+            </div>
+            <h3 class="font-bold text-xl mb-2 gov-heading">睇步驟</h3>
+            <p class="text-gray-500">Step-by-step 指南，逐個步驟解釋要做咩</p>
+            <span class="inline-block mt-3 text-xs font-semibold text-gold bg-gold/10 px-3 py-1 rounded-full">全部免費 🆓</span>
           </div>
-          <h3 class="font-bold text-lg mb-2 gov-heading">睇步驟</h3>
-          <p class="text-gray-500 text-sm">Step-by-step 指南，逐個步驟解釋要做咩</p>
-          <p class="text-xs text-gold font-semibold mt-2">全部免費 🆓</p>
         </div>
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-gold">2</span>
+
+        <!-- Card 2 - tilt right, offset right, slightly smaller -->
+        <div class="relative w-full sm:w-[45%] sm:ml-auto sm:-mt-16 sm:rotate-3 hover:rotate-0 transition-transform duration-300 mb-6 sm:mb-0">
+          <div class="bg-white rounded-2xl shadow-lg shadow-gold/5 p-6 sm:p-8 border border-gray-100">
+            <div class="w-12 h-12 rounded-full bg-navy/10 flex items-center justify-center mb-4">
+              <span class="text-xl font-bold" style="color:#1B2A4A">2</span>
+            </div>
+            <h3 class="font-bold text-lg mb-2 gov-heading">睇範例</h3>
+            <p class="text-gray-500 text-sm">每份文件有真實填寫範例，對住填就唔會錯</p>
           </div>
-          <h3 class="font-bold text-lg mb-2 gov-heading">睇範例</h3>
-          <p class="text-gray-500 text-sm">每份文件有真實填寫範例，對住填就唔會錯</p>
         </div>
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-gold">3</span>
+
+        <!-- Card 3 - tilt left, offset left bottom -->
+        <div class="relative w-full sm:w-[50%] sm:-ml-4 sm:-mt-10 sm:-rotate-1 hover:rotate-0 transition-transform duration-300">
+          <div class="bg-white rounded-2xl shadow-lg shadow-gold/5 p-6 sm:p-8 border border-gray-100 ring-1 ring-gold/10">
+            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-gold/30 to-gold/10 flex items-center justify-center mb-4">
+              <span class="text-2xl font-bold text-gold">3</span>
+            </div>
+            <h3 class="font-bold text-xl mb-2 gov-heading">下載模板</h3>
+            <p class="text-gray-500">可編輯 Word 模板，直接改資料就用得</p>
           </div>
-          <h3 class="font-bold text-lg mb-2 gov-heading">下載模板</h3>
-          <p class="text-gray-500 text-sm">可編輯 Word 模板，直接改資料就用得</p>
         </div>
       </div>
     </div>
