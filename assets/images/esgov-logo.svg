@@ -1,30 +1,21 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background white fill -->
-  <rect width="32" height="32" rx="0" fill="white"/>
-  <!-- Roof pediment: gold triangle with navy outline -->
-  <path d="M1.5 12C1.5 10.8954 2.39543 10 3.5 10H3.5L14.5 1.5C15.3284 0.833333 16.6716 0.833333 17.5 1.5L28.5 10C29.6046 10 30.5 10.8954 30.5 12V13C30.5 13.8284 29.8284 14.5 29 14.5H3C2.17157 14.5 1.5 13.8284 1.5 13V12Z" fill="#C4A84B" stroke="#1A2744" stroke-width="2" stroke-linejoin="round"/>
-  <!-- Entablature (horizontal bar under roof) -->
-  <rect x="1" y="12" width="30" height="4" rx="1" fill="#1A2744"/>
-  <!-- Left column - capital -->
-  <rect x="5" y="14" width="6" height="3" rx="1" fill="#1A2744"/>
-  <!-- Left column - shaft (navy outline + gold fill) -->
-  <rect x="6" y="17" width="4" height="9" rx="1" stroke="#1A2744" stroke-width="2" fill="#C4A84B"/>
-  <!-- Left column - base -->
-  <rect x="5" y="25.5" width="6" height="3" rx="1" fill="#1A2744"/>
-  <!-- Right column - capital -->
-  <rect x="21" y="14" width="6" height="3" rx="1" fill="#1A2744"/>
-  <!-- Right column - shaft (navy outline + gold fill) -->
-  <rect x="22" y="17" width="4" height="9" rx="1" stroke="#1A2744" stroke-width="2" fill="#C4A84B"/>
-  <!-- Right column - base -->
-  <rect x="21" y="25.5" width="6" height="3" rx="1" fill="#1A2744"/>
-  <!-- Foundation (bottom bar) -->
-  <rect x="1" y="28" width="30" height="3" rx="1" fill="#1A2744"/>
-  <!-- Document: white rectangle with navy outline -->
-  <rect x="10" y="16" width="12" height="13" rx="1.5" fill="white" stroke="#1A2744" stroke-width="2"/>
-  <!-- Document folded corner (top-right) -->
-  <path d="M18 17L18 16L19 16L19 17L18 17Z" fill="#1A2744"/>
-  <path d="M18 16L22 16L22 20L18 16Z" fill="#1A2744"/>
-  <path d="M18 16L22 20L21 20L18 17L18 16Z" fill="#C4A84B"/>
+  <!-- Roof pediment -->
+  <path d="M1.5 12C1.5 10.8954 2.39543 10 3.5 10L14.5 1.5C15.3284 0.833333 16.6716 0.833333 17.5 1.5L28.5 10C29.6046 10 30.5 10.8954 30.5 12V13C30.5 13.8284 29.8284 14.5 29 14.5H3C2.17157 14.5 1.5 13.8284 1.5 13V12Z" fill="#C9A84C" stroke="#C9A84C" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Entablature -->
+  <rect x="1" y="12" width="30" height="4" rx="1" fill="#C9A84C"/>
+  <!-- Left column -->
+  <rect x="5" y="14" width="6" height="3" rx="1" fill="#C9A84C"/>
+  <rect x="6" y="17" width="4" height="9" rx="1" stroke="#C9A84C" stroke-width="2"/>
+  <rect x="5" y="25.5" width="6" height="3" rx="1" fill="#C9A84C"/>
+  <!-- Right column -->
+  <rect x="21" y="14" width="6" height="3" rx="1" fill="#C9A84C"/>
+  <rect x="22" y="17" width="4" height="9" rx="1" stroke="#C9A84C" stroke-width="2"/>
+  <rect x="21" y="25.5" width="6" height="3" rx="1" fill="#C9A84C"/>
+  <!-- Foundation -->
+  <rect x="1" y="28" width="30" height="3" rx="1" fill="#C9A84C"/>
+  <!-- Document with folded corner -->
+  <path d="M10 17C10 15.8954 10.8954 15 12 15H19L22 18V27C22 28.1046 21.1046 29 20 29H12C10.8954 29 10 28.1046 10 27V17Z" fill="#1B2A4A" stroke="#C9A84C" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M19 15L22 18H19V15Z" fill="#C9A84C"/>
   <!-- Checkmark -->
-  <path d="M20 19L15.5 25L12 22" stroke="#1A2744" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 20L15.5 26L12 23" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
