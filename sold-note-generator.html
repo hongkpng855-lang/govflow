@@ -18,6 +18,26 @@
 </head>
 <body class="bg-gray-100 font-sans">
 
+  <style>
+    .editable-field {
+      background: #fffbeb;
+      border: 1px solid rgba(201, 168, 76, 0.25);
+      cursor: text;
+      transition: all 0.15s ease;
+      outline: none;
+      font-family: inherit;
+    }
+    .editable-field:hover {
+      background: #fef3c7;
+      border-color: rgba(201, 168, 76, 0.5);
+    }
+    .editable-field:focus {
+      background: #fde68a;
+      border-color: #C9A84C;
+      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+    }
+  </style>
+
   <nav class="bg-navy text-white sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="./" class="flex items-center gap-2.5"><img src="assets/images/govflow-logo.svg" alt="GovFlow" class="w-7 h-7" /><span class="text-white font-bold text-lg tracking-tight">GovFlow</span></a>
@@ -137,35 +157,35 @@
           <div class="space-y-0">
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Name of Purchaser (Transferee):</span>
-              <div id="f1" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Siu Yan Li</div>
+              <div id="f1" contenteditable="true" class="editable-field px-2 py-1.5 text-sm rounded min-h-[28px]">Siu Yan Li</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Address:</span>
-              <div id="f2" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">北角英皇道 250 號北角城中心 8/F 806 室</div>
+              <div id="f2" contenteditable="true" class="editable-field px-2 py-1.5 text-sm rounded min-h-[28px]">北角英皇道 250 號北角城中心 8/F 806 室</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Occupation:</span>
-              <div id="f3" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Business Owner</div>
+              <div id="f3" contenteditable="true" class="editable-field px-2 py-1.5 text-sm rounded min-h-[28px]">Business Owner</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Name of Company:</span>
-              <div id="f4" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">ABC 貿易有限公司</div>
+              <div id="f4" contenteditable="true" class="editable-field px-2 py-1.5 text-sm rounded min-h-[28px]">ABC 貿易有限公司</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Number of Shares:</span>
-              <div id="f5" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">5,000</div>
+              <div id="f5" contenteditable="true" class="editable-field px-2 py-1.5 text-sm rounded min-h-[28px]">5,000</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Consideration Paid:</span>
-              <div id="f6" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">HK$ 50,000.00</div>
+              <div id="f6" contenteditable="true" class="editable-field px-2 py-1.5 text-sm rounded min-h-[28px]">HK$ 50,000.00</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Dated:</span>
-              <div id="f7" contenteditable="true" class="field-date border-none bg-transparent px-2 py-1.5 text-sm font-bold outline-none focus:bg-amber-50 rounded min-h-[28px]"></div>
+              <div id="f7" contenteditable="true" class="field-date editable-field px-2 py-1.5 text-sm font-bold rounded min-h-[28px]"></div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Sign:</span>
-              <div id="f8" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]"></div>
+              <div id="f8" contenteditable="true" class="editable-field px-2 py-1.5 text-sm rounded min-h-[28px]"></div>
             </div>
           </div>
         </div>
@@ -178,31 +198,31 @@
           <div class="space-y-0">
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Name of Seller (Transferor):</span>
-              <div id="f9" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Tai Ming Chan</div>
+              <div id="f9" contenteditable="true" class="editable-field px-2 py-1.5 text-sm rounded min-h-[28px]">Tai Ming Chan</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Address:</span>
-              <div id="f10" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">觀塘開源道 72 號溢財中心 12/F 1208 室</div>
+              <div id="f10" contenteditable="true" class="editable-field px-2 py-1.5 text-sm rounded min-h-[28px]">觀塘開源道 72 號溢財中心 12/F 1208 室</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Occupation:</span>
-              <div id="f11" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">Business Owner</div>
+              <div id="f11" contenteditable="true" class="editable-field px-2 py-1.5 text-sm rounded min-h-[28px]">Business Owner</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Number of Shares:</span>
-              <div id="f12" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">5,000</div>
+              <div id="f12" contenteditable="true" class="editable-field px-2 py-1.5 text-sm rounded min-h-[28px]">5,000</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Consideration Paid:</span>
-              <div id="f13" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]">HK$ 50,000.00</div>
+              <div id="f13" contenteditable="true" class="editable-field px-2 py-1.5 text-sm rounded min-h-[28px]">HK$ 50,000.00</div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Dated:</span>
-              <div id="f14" contenteditable="true" class="field-date border-none bg-transparent px-2 py-1.5 text-sm font-bold outline-none focus:bg-amber-50 rounded min-h-[28px]"></div>
+              <div id="f14" contenteditable="true" class="field-date editable-field px-2 py-1.5 text-sm font-bold rounded min-h-[28px]"></div>
             </div>
             <div class="grid grid-cols-[180px_1fr] py-2.5 border-b border-dotted border-gray-300">
               <span class="text-sm font-medium text-gray-600">Sign:</span>
-              <div id="f15" contenteditable="true" class="border-none bg-transparent px-2 py-1.5 text-sm outline-none focus:bg-amber-50 rounded min-h-[28px]"></div>
+              <div id="f15" contenteditable="true" class="editable-field px-2 py-1.5 text-sm rounded min-h-[28px]"></div>
             </div>
           </div>
         </div>
