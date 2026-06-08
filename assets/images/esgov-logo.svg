@@ -1,9 +1,9 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Shield (gov) -->
-  <path d="M16 2L28 8.5V16C28 23 22.5 29 16 31C9.5 29 4 23 4 16V8.5L16 2Z" fill="#1B2A4A" stroke="#C9A84C" stroke-width="1.8" stroke-linejoin="round"/>
-  <!-- Document (paperwork) -->
-  <rect x="10.5" y="10" width="11" height="12.5" rx="1.5" fill="#C9A84C"/>
-  <rect x="11.5" y="11" width="9" height="10.5" rx="1" fill="#1B2A4A"/>
-  <!-- Checkmark (easy) -->
-  <path d="M19 13L14.5 20L12 18" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Government building (gov) - simple gold outline -->
+  <path d="M2 12L16 2L30 12" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="6" y="12" width="20" height="16" rx="1" stroke="#C9A84C" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Door / document area (paperwork) -->
+  <rect x="11" y="18" width="10" height="10" rx="1" fill="#C9A84C"/>
+  <!-- Checkmark on document (easy) -->
+  <path d="M18.5 20.5L15.5 25.5L13 23.5" stroke="#1B2A4A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
