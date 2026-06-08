@@ -1,32 +1,25 @@
 {
   "processId": "shareholder-transfer",
   "title": "香港有限公司股份轉讓完整指南",
-  "description": "由真實經歷者整理，5份文件搞掂股份轉讓，避開補交陷阱",
-  "estimatedTime": "1-2 星期（視乎準備是否充足）",
-  "difficulty": "中等",
   "totalSteps": 5,
-  "freeSteps": 1,
-  "price": 149,
+  "freeSteps": 5,
+  "price": 0,
   "currency": "HKD",
-  "priceComparison": {
-    "benchmark": 1000,
-    "benchmarkLabel": "會計公司行政費",
-    "savings": "85%",
-    "note": "自行準備文件，唔使俾人食價"
-  },
+  "donateMessage": "如果呢份指南幫到你，可以請我飲杯咖啡 ☕",
   "steps": [
     {
       "stepNumber": 1,
-      "title": "簽署股份賣出單（Sold Note）",
-      "summary": "賣方記錄轉讓股數、每股作價及總代價，作為交易基礎文件",
+      "title": "簽署股份賣出單（Sold Note / Bought Note）",
+      "summary": "記錄轉讓股數、作價及交易條款，雙方確認",
       "isFree": true,
-      "details": "呢份係交易基礎文件，唔使交政府。\n\n⚠️ 唔好做嘅事：\n• 唔好口頭 agreement 就算 → 之後數字亂晒籠\n• 唔好 skip 每股作價 → 計印花稅要返轉頭\n• 親友轉讓都要做 → 幾年後反口冇證據\n\n✅ 一定要做：\n• 股份類別分開列（普通股／優先股）\n• 日期同轉讓書 match\n• 之後每份文件數字都要對得返",
+      "details": "第一份文件，記錄雙方交易細節。份文件 confirm 咗之後先簽正式轉讓書。\n\n⚠️ 唔好做嘅事：\n• 唔好 skip 呢一步 → 冇 Sold Note，口頭 agreement 就到填轉讓書嗰陣數字亂晒龍\n• 股份類別唔好寫錯 → 普通股同優先股要分開列明，唔可以溝埋\n• 唔好只寫總額 → 要分開寫每股作價同總額，否則計印花稅要返轉頭計\n• 日期唔好寫錯 → 交易日期同之後嘅轉讓書日期要 match\n\n✅ 一定要做：\n• 雙方簽署確認約定\n• 列明每股作價同總代價\n• 保留簽署副本作記錄",
       "documents": [
         {
           "name": "股份賣出單（Sold Note）",
-          "description": "記錄轉讓股數、作價及交易條款，雙方確認用",
-          "demoImage": "assets/demo/step1-soldnote.png",
+          "description": "記錄轉讓股數、作價及交易條款，雙方確認用。可使用互動工具直接填寫並一鍵生成 PDF。",
+          "demoImage": "assets/demo/sold-note-realdemo-1.png",
           "templateFile": "templates/sold-note.docx",
+          "hasGenerator": true,
           "commonMistakes": [
             "冇做 Sold Note — 口頭 agreement 就算，到填轉讓書嗰陣數字亂晒龍",
             "股份類別寫錯 — 普通股同優先股要分開列明，唔可以溝埋",
@@ -43,7 +36,7 @@
       "stepNumber": 2,
       "title": "簽署承讓人確認信（Letter of Transferee of Shares）",
       "summary": "承讓人書面確認接收股份，同意受公司組織章程細則約束",
-      "isFree": false,
+      "isFree": true,
       "details": "承讓人確認接收股份，內部記錄用。\n\n⚠️ 唔好做嘅事：\n• 唔好 skip 呢份 → 內部記錄唔完整，貸款會出事\n• 公司買股份要有授權代表簽署 → 否則文件失效\n\n✅ 一定要做：\n• 寫明同意邊個版本嘅 Articles of Association\n• 承讓人地址同身份證一致\n• 公司買股份要列公司註冊編號 + 授權代表",
       "documents": [
         {
@@ -67,7 +60,7 @@
       "stepNumber": 3,
       "title": "簽署股份轉讓書（Instrument of Transfer）",
       "summary": "正式轉讓文件，轉讓人同承讓人雙方簽署，係提交政府嘅核心文件",
-      "isFree": false,
+      "isFree": true,
       "details": "核心文件，要交政府。格式錯即時退回。\n\n⚠️ 唔好做嘅事：\n• 唔好 download 通用模板 → 官方唔收，成個流程遲一個月\n• 公司名唔好寫錯 → 「Limited」漏咗即退\n• 見證人唔好搵親戚 → 被質疑獨立性\n• 日期唔好倒填 → 邏輯唔通被質疑\n\n✅ 一定要做：\n• 用公司註冊處認可格式\n• 雙方親筆簽署 + 見證人（獨立第三方）\n• 公司名同商業登記證 100% 一致\n• 部分轉讓列明：轉讓前 → 轉讓股數 → 轉讓後",
       "documents": [
         {
@@ -94,7 +87,7 @@
       "stepNumber": 4,
       "title": "準備 6 個月內審計報告（Audit Report）",
       "summary": "提交最近期嘅審計報告，用於印花稅計算及證明公司財務狀況",
-      "isFree": false,
+      "isFree": true,
       "details": "稅局用呢份報告計印花稅。作價太低會補稅。\n\n⚠️ 唔好做嘅事：\n• 唔好以為跟 Sold Note 作價就得 → 低過資產淨值要補稅\n• 唔好用過期報告 → 超過 6 個月稅局唔收\n• 公司未做審計唔好唔理 → 管理帳目都得\n\n✅ 一定要做：\n• 審計報告要 6 個月內\n• 冇 audit → 準備管理帳目 + 董事簽署\n• 印花稅 = 代價 0.2%（最低 $5）\n• 新公司可出「董事聲明」代替",
       "documents": [
         {
@@ -119,7 +112,7 @@
       "stepNumber": 5,
       "title": "提交 NAR1 及完成後續申報",
       "summary": "向公司註冊處提交周年申報表，更新股東及股本資料",
-      "isFree": false,
+      "isFree": true,
       "details": "最後申報步驟。唔交或遲交會罰錢。\n\n⚠️ 唔好做嘅事：\n• 唔好以為搞掂轉讓書就完 → 仲要交 NAR1\n• 唔好逾期 → 罰 $870，越耐越罰得多\n• 唔好用舊年董事資料 → 被要求解釋\n\n✅ 一定要做：\n• 成立周年日後 42 日內交\n• 股東資料同轉讓書 match\n• 網上提交最快（eCR 系統）\n• 費用：登記費 $105\n• 轉讓同 annual return 時間差太遠就主動提交",
       "documents": [
         {
@@ -141,5 +134,13 @@
         "資料唔一致 = 被公司註冊處要求補充解釋"
       ]
     }
-  ]
+  ],
+  "finalDonate": {
+    "title": "幫到你嗎？請我飲杯咖啡 ☕",
+    "message": "呢份指南係我親身經歷整理，全部免費公開。如果幫到你節省時間同金錢，可以請我飲杯咖啡支持下，等我繼續製作更多免費指南！",
+    "goalMessage": "目標：100 次支持下載後，我會擴展到更多流程指南 🎯",
+    "buyMeACoffeeUrl": "https://buymeacoffee.com/govflow",
+    "emailCollectionTitle": "📬 想收到更多免費指南？",
+    "emailCollectionMessage": "留低 email，之後有新指南（公司註銷、商業登記、董事變更等）會通知你"
+  }
 }
