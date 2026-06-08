@@ -45,6 +45,7 @@
   showEmail: false,
   email: '',
   emailSubmitted: false,
+  _pendingDoc: null,
 
   async init() {
     try {
@@ -77,6 +78,14 @@
   },
 
   openDoc(doc) {
+    // Email gate before viewing templates/docs
+    const emailDone = localStorage.getItem('govflow_email_done');
+    if (!emailDone) {
+      this.showOverlay = false;
+      this.openEmail();
+      this._pendingDoc = doc;
+      return;
+    }
     this.selectedDoc = doc;
     this.showOverlay = true;
     document.body.style.overflow = 'hidden';
@@ -105,19 +114,30 @@
 
   closeEmail() {
     this.showEmail = false;
+    this._pendingDoc = null;
     document.body.style.overflow = '';
   },
 
   submitEmail() {
     if (this.email && this.email.includes('@')) {
-      // Store in localStorage
       const emails = JSON.parse(localStorage.getItem('govflow_emails') || '[]');
       if (!emails.includes(this.email)) {
         emails.push(this.email);
         localStorage.setItem('govflow_emails', JSON.stringify(emails));
       }
+      localStorage.setItem('govflow_email_done', 'true');
       this.emailSubmitted = true;
-      // Optional: send to a simple webhook/endpoint
+      // If there's a pending doc, open it after email submit
+      if (this._pendingDoc) {
+        const doc = this._pendingDoc;
+        this._pendingDoc = null;
+        setTimeout(() => {
+          this.closeEmail();
+          this.selectedDoc = doc;
+          this.showOverlay = true;
+          document.body.style.overflow = 'hidden';
+        }, 300);
+      }
     }
   }
 }">
@@ -446,7 +466,7 @@
     <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" @click.stop>
       <div class="text-3xl mb-3">📬</div>
       <h3 class="text-lg font-bold text-navy mb-2">想收到更多免費指南？</h3>
-      <p class="text-sm text-gray-500 mb-5">留低 email，之後有新指南（公司註銷、商業登記、董事變更等）會通知你</p>
+      <p class="text-sm text-gray-500 mb-5">先留低 email，之後有新指南會通知你，然後繼續睇內容</p>
       <div x-show="!emailSubmitted" class="flex flex-col gap-3">
         <input type="email" x-model="email" placeholder="your@email.com"
                class="border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold"
@@ -454,7 +474,7 @@
         <button @click="submitEmail()"
                 class="bg-navy text-white font-semibold py-2.5 rounded-xl hover:bg-navy-light transition text-sm"
                 :disabled="!email.includes('@')">
-          📬 訂閱通知
+          📥 繼續睇內容
         </button>
       </div>
       <div x-show="emailSubmitted" class="text-green-600 font-semibold text-sm py-4">

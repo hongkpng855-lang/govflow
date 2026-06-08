@@ -300,8 +300,37 @@
       }
     }
 
+    // ===== Email Gate（下載前收集 email）=====
+    function checkEmailGate() {
+      const done = localStorage.getItem('govflow_email_done');
+      if (done) return true;
+      document.getElementById('emailGateModal').classList.remove('hidden');
+      document.getElementById('emailGateModal').classList.add('flex');
+      return false;
+    }
+
+    function submitDownloadEmail() {
+      const email = document.getElementById('downloadEmail').value.trim();
+      if (!email || !email.includes('@')) return;
+      const emails = JSON.parse(localStorage.getItem('govflow_emails') || '[]');
+      if (!emails.includes(email)) {
+        emails.push(email);
+        localStorage.setItem('govflow_emails', JSON.stringify(emails));
+      }
+      localStorage.setItem('govflow_email_done', 'true');
+      document.getElementById('emailGateModal').classList.add('hidden');
+      document.getElementById('emailGateModal').classList.remove('flex');
+      downloadPDF();
+    }
+
+    function closeEmailGate() {
+      document.getElementById('emailGateModal').classList.add('hidden');
+      document.getElementById('emailGateModal').classList.remove('flex');
+    }
+
     // ===== 一鍵下載 PDF（clone capture，保證 1 頁輸出）=====
     async function downloadPDF() {
+      if (!checkEmailGate()) return;
       const btn = document.getElementById('genBtn');
       const status = document.getElementById('status');
       btn.disabled = true;
@@ -407,6 +436,25 @@
       }
     }
   </script>
+
+  <!-- ═════ Email Gate Modal（下載前收集 email）═════ -->
+  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" onclick="event.stopPropagation()">
+      <div class="text-3xl mb-3">📬</div>
+      <h3 class="text-lg font-bold text-navy mb-2">下載前留低 email</h3>
+      <p class="text-sm text-gray-500 mb-5">之後有新指南會通知你（公司註銷、商業登記、董事變更等）</p>
+      <div class="flex flex-col gap-3">
+        <input type="email" id="downloadEmail" placeholder="your@email.com"
+               class="border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold"
+        />
+        <button onclick="submitDownloadEmail()"
+                class="bg-navy text-white font-semibold py-2.5 rounded-xl hover:bg-navy-light transition text-sm">
+          📥 繼續下載 PDF
+        </button>
+        <button onclick="closeEmailGate()" class="text-xs text-gray-400 hover:text-gray-600 transition">唔住，稍後先</button>
+      </div>
+    </div>
+  </div>
 
   <footer class="bg-navy text-white py-8 mt-12">
     <div class="max-w-4xl mx-auto px-4 text-center text-xs text-gray-400">
