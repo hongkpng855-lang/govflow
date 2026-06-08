@@ -17,7 +17,7 @@
         {
           "name": "股份賣出單（Sold Note）",
           "description": "記錄轉讓股數、作價及交易條款，雙方確認用。可使用互動工具直接填寫並一鍵生成 PDF。",
-          "demoImage": "assets/demo/sold-note-realdemo-1.png",
+          "demoImage": "assets/demo/sold-note-realdemo-1.png?v=9.0",
           "templateFile": "templates/sold-note.docx",
           "hasGenerator": true,
           "commonMistakes": [
