@@ -1,5 +1,5 @@
-GovFlow Website — Technical Spec for AI Developer
-Project: GovFlow (Hong Kong Government Process Guide Platform)
+ESGov Website — Technical Spec for AI Developer
+Project: ESGov (Hong Kong Government Process Guide Platform)
 Your client: A 3-person HK company owner who survived a 3-month shareholder transfer nightmare.
 Your role: Build the web application. Business strategy and content are handled by another AI.
 Stack preference: Modern, simple, fast to build, easy to maintain by a non-technical founder.
@@ -171,7 +171,7 @@ Phase 2 (if volume proves):
 
 8. SEO & Marketing Setup
 
-• Meta title: "香港公司股份轉讓完整指南 | GovFlow"
+• Meta title: "香港公司股份轉讓完整指南 | ESGov"
 • Meta description: "真實範例、可下載模板、避免補交。由經歷者整理，7步完成股份轉讓。"
 • Add OpenGraph tags for social sharing
 • Include FAQ section on homepage for structured data

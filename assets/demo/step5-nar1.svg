@@ -34,5 +34,5 @@
   <rect x="50" y="530" width="700" height="35" fill="#FFF3E0" stroke="#FFB74D" stroke-width="1" rx="3"/>
   <text x="60" y="552" fill="#E65100" font-size="11">登記費：HK$ 105 ｜ 逾期登記費（42 日後）：HK$ 870 ｜ 請按時提交</text>
   <!-- Footer -->
-  <text x="680" y="605" fill="#CCC" font-size="10" text-anchor="end">示範範例 · GovFlow</text>
+  <text x="680" y="605" fill="#CCC" font-size="10" text-anchor="end">示範範例 · ESGov</text>
 </svg>

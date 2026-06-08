@@ -1,4 +1,4 @@
-# GovFlow — 香港政府流程指南平台
+# ESGov — 香港政府流程指南平台
 
 一個為香港老闆而設嘅公司秘書文件指南平台。由真實經歷者整理，逐個步驟帶你完成文件程序。
 
@@ -19,7 +19,7 @@
 ## 專案結構
 
 ```
-govflow/
+esgov/
 ├── index.html                  # 首頁
 ├── shareholder-transfer.html   # 股份轉讓流程詳情頁
 ├── processes.json              # ⭐ 內容資料（創辦人編輯呢個檔）
@@ -28,7 +28,7 @@ govflow/
 │   ├── js/app.js               # Alpine.js 應用邏輯
 │   └── demo/                   # 範例圖片放呢度
 ├── templates/                  # 可下載 Word 模板放呢度
-└── govflow_flow.txt            # 原始技術規格
+└── esgov_flow.txt            # 原始技術規格
 ```
 
 ## 創辦人手冊
@@ -82,4 +82,4 @@ govflow/
 
 ---
 
-*由 GovFlow 開發者維護*
+*由 ESGov 開發者維護*

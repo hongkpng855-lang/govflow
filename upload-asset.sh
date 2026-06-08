@@ -1,5 +1,5 @@
 #!/bin/bash
-# GovFlow Asset Uploader v2
+# ESGov Asset Uploader v2
 # 用法：bash upload-asset.sh
 # 幫你 upload 文件模板或示範圖片，自動放啱位置 + 更新 processes.json + deploy
 
@@ -9,7 +9,7 @@ cd "$(dirname "$0")"
 PROJECT_DIR="$(pwd)"
 
 echo "╔══════════════════════════════════════╗"
-echo "║   GovFlow 資產上傳工具 v2           ║"
+echo "║   ESGov 資產上傳工具 v2           ║"
 echo "║   支援 Word 模板 + 圖片 + PDF 自動轉換 ║"
 echo "╚══════════════════════════════════════╝"
 echo ""
@@ -150,8 +150,8 @@ upload_pdf2png() {
   # Convert PDF to PNG
   if command -v pdftoppm &>/dev/null; then
     echo "⏳ 正在轉換 PDF → PNG..."
-    pdftoppm -png -r 150 "$FILE_PATH" /tmp/govflow-convert
-    CONVERTED="/tmp/govflow-convert-1.png"
+    pdftoppm -png -r 150 "$FILE_PATH" /tmp/esgov-convert
+    CONVERTED="/tmp/esgov-convert-1.png"
     if [ -f "$CONVERTED" ]; then
       DEST="$PROJECT_DIR/assets/demo/${STEP_NAME}.png"
       cp "$CONVERTED" "$DEST"
@@ -175,7 +175,7 @@ if updated:
 else:
     echo 'ℹ️ 冇對應嘅步驟，請手動更新 processes.json'
 "
-      rm -f /tmp/govflow-convert-*.png
+      rm -f /tmp/esgov-convert-*.png
     else:
       echo "❌ 轉換失敗"
       return 1

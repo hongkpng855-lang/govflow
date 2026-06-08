@@ -34,5 +34,5 @@
   <rect x="50" y="530" width="700" height="40" fill="#E8F5E9" stroke="#A5D6A7" stroke-width="1" rx="3"/>
   <text x="60" y="553" fill="#2E7D32" font-size="11">印花稅欄（由稅務局蓋印）　　應繳稅額：HK$ 100.00（0.2%）　　繳交日期：______</text>
   <!-- Footer -->
-  <text x="680" y="605" fill="#CCC" font-size="10" text-anchor="end">示範範例 · GovFlow</text>
+  <text x="680" y="605" fill="#CCC" font-size="10" text-anchor="end">示範範例 · ESGov</text>
 </svg>

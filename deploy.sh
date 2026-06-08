@@ -1,5 +1,5 @@
 #!/bin/bash
-# GovFlow Deploy Script
+# ESGov Deploy Script
 # Usage: ./deploy.sh "commit message"
 # Generates version.json with git hash, then commits & pushes
 

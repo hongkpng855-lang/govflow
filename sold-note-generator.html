@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sold Note PDF 填寫工具 | GovFlow</title>
+  <title>Sold Note PDF 填寫工具 | ESGov</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -40,7 +40,7 @@
 
   <nav class="bg-navy text-white sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
-      <a href="./" class="flex items-center gap-2.5"><img src="assets/images/govflow-logo.svg" alt="GovFlow" class="w-7 h-7" /><span class="text-white font-bold text-lg tracking-tight">GovFlow</span></a>
+      <a href="./" class="flex items-center gap-2.5"><img src="assets/images/esgov-logo.svg" alt="ESGov" class="w-7 h-7" /><span class="text-white font-bold text-lg tracking-tight">ESGov</span></a>
       <a href="./" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
     </div>
   </nav>
@@ -302,7 +302,7 @@
 
     // ===== Email Gate（下載前收集 email）=====
     function checkEmailGate() {
-      const done = localStorage.getItem('govflow_email_done');
+      const done = localStorage.getItem('esgov_email_done');
       if (done) return true;
       document.getElementById('emailGateModal').classList.remove('hidden');
       document.getElementById('emailGateModal').classList.add('flex');
@@ -312,12 +312,12 @@
     function submitDownloadEmail() {
       const email = document.getElementById('downloadEmail').value.trim();
       if (!email || !email.includes('@')) return;
-      const emails = JSON.parse(localStorage.getItem('govflow_emails') || '[]');
+      const emails = JSON.parse(localStorage.getItem('esgov_emails') || '[]');
       if (!emails.includes(email)) {
         emails.push(email);
-        localStorage.setItem('govflow_emails', JSON.stringify(emails));
+        localStorage.setItem('esgov_emails', JSON.stringify(emails));
       }
-      localStorage.setItem('govflow_email_done', 'true');
+      localStorage.setItem('esgov_email_done', 'true');
       document.getElementById('emailGateModal').classList.add('hidden');
       document.getElementById('emailGateModal').classList.remove('flex');
       downloadPDF();
@@ -413,7 +413,7 @@
         doc.setTextColor(180, 180, 180);
         doc.setFontSize(18);
         doc.setFont('helvetica', 'normal');
-        doc.text('GovFlow', pageW - 10, pageH - 10, { align: 'right', baseline: 'bottom' });
+        doc.text('ESGov', pageW - 10, pageH - 10, { align: 'right', baseline: 'bottom' });
         doc.restoreGraphicsState();
 
         doc.save('Sold_Note_Filled.pdf');
@@ -459,7 +459,7 @@
   <footer class="bg-navy text-white py-8 mt-12">
     <div class="max-w-4xl mx-auto px-4 text-center text-xs text-gray-400">
       <p>⚠️ 僅供參考，並不構成法律意見。填寫後請打印簽署。</p>
-      <p class="mt-1">&copy; GovFlow</p>
+      <p class="mt-1">&copy; ESGov</p>
       <p class="mt-2 opacity-40">v8.5</p>
     </div>
   </footer>

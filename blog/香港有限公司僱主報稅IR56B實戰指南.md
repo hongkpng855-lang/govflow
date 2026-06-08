@@ -29,7 +29,7 @@
 自己做？只要跟啱步驟，一個下午搞掂。
 
 想睇完整版（逐格填表教學 + MPF 核對 + 離職申報流程）？
-👉 [**免費睇完整文章 →**](https://hongkpng855-lang.github.io/govflow/blog/香港有限公司僱主報稅IR56B實戰指南.html)
+👉 [**免費睇完整文章 →**](https://hongkpng855-lang.github.io/esgov/blog/香港有限公司僱主報稅IR56B實戰指南.html)
 
 *📅 發佈日期：2026 年 6 月 5 日*
-*🏷️ #僱主報稅 #IR56B #有限公司 #公司秘書 #香港稅務 #GovFlow*
+*🏷️ #僱主報稅 #IR56B #有限公司 #公司秘書 #香港稅務 #ESGov*

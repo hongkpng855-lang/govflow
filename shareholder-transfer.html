@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>香港有限公司股份轉讓完整指南 | GovFlow</title>
+  <title>香港有限公司股份轉讓完整指南 | ESGov</title>
   <meta name="description" content="真實範例、可下載模板、避免補交。由經歷者整理，5份文件搞掂股份轉讓。" />
-  <meta property="og:title" content="香港有限公司股份轉讓完整指南 | GovFlow" />
+  <meta property="og:title" content="香港有限公司股份轉讓完整指南 | ESGov" />
   <meta property="og:description" content="真實範例、可下載模板、避免補交。由經歷者整理，5份文件搞掂股份轉讓。" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="zh_HK" />
@@ -79,7 +79,7 @@
 
   openDoc(doc) {
     // Email gate before viewing templates/docs
-    const emailDone = localStorage.getItem('govflow_email_done');
+    const emailDone = localStorage.getItem('esgov_email_done');
     if (!emailDone) {
       this.showOverlay = false;
       this.openEmail();
@@ -120,12 +120,12 @@
 
   submitEmail() {
     if (this.email && this.email.includes('@')) {
-      const emails = JSON.parse(localStorage.getItem('govflow_emails') || '[]');
+      const emails = JSON.parse(localStorage.getItem('esgov_emails') || '[]');
       if (!emails.includes(this.email)) {
         emails.push(this.email);
-        localStorage.setItem('govflow_emails', JSON.stringify(emails));
+        localStorage.setItem('esgov_emails', JSON.stringify(emails));
       }
-      localStorage.setItem('govflow_email_done', 'true');
+      localStorage.setItem('esgov_email_done', 'true');
       this.emailSubmitted = true;
       // If there's a pending doc, open it after email submit
       if (this._pendingDoc) {
@@ -155,7 +155,7 @@
   <div class="sticky-header bg-navy text-white shadow-lg" x-init="init()">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex items-center justify-between h-14 sm:h-16">
-        <a href="./" class="flex items-center gap-2.5 shrink-0"><img src="assets/images/govflow-logo.svg" alt="GovFlow" class="w-7 h-7" /><span class="text-white font-bold text-lg tracking-tight">GovFlow</span></a>
+        <a href="./" class="flex items-center gap-2.5 shrink-0"><img src="assets/images/esgov-logo.svg" alt="ESGov" class="w-7 h-7" /><span class="text-white font-bold text-lg tracking-tight">ESGov</span></a>
         <div class="flex items-center gap-2 min-w-0 ml-3 pl-3 border-l border-white/20">
           <a href="./" class="text-gold shrink-0 hover:text-gold-light transition text-sm sm:text-base">←</a>
           <h1 class="text-sm sm:text-base font-semibold truncate text-white/90">
@@ -429,10 +429,10 @@
           <div class="text-center text-sm text-gray-400">
             <p>覺得有用？分享俾朋友 👇</p>
             <div class="flex items-center justify-center gap-3 mt-2">
-              <a href="https://wa.me/?text=香港有限公司股份轉讓完整指南，全部免費！https://hongkpng855-lang.github.io/govflow/shareholder-transfer.html" target="_blank"
+              <a href="https://wa.me/?text=香港有限公司股份轉讓完整指南，全部免費！https://hongkpng855-lang.github.io/esgov/shareholder-transfer.html" target="_blank"
                  class="text-green-500 hover:text-green-600 font-semibold">WhatsApp</a>
               <span class="text-gray-300">|</span>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://hongkpng855-lang.github.io/govflow/shareholder-transfer.html" target="_blank"
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://hongkpng855-lang.github.io/esgov/shareholder-transfer.html" target="_blank"
                  class="text-blue-500 hover:text-blue-600 font-semibold">Facebook</a>
             </div>
           </div>
@@ -561,7 +561,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
         <div class="flex items-center gap-2 text-white font-bold">
-          <img src="assets/images/govflow-logo.svg" alt="GovFlow" class="w-5 h-5 inline-block" /><span class="ml-1.5 font-semibold">GovFlow</span>
+          <img src="assets/images/esgov-logo.svg" alt="ESGov" class="w-5 h-5 inline-block" /><span class="ml-1.5 font-semibold">ESGov</span>
         </div>
         <div class="flex items-center gap-4">
           <button @click="openDonate()" class="text-sm text-gold hover:text-gold-light transition">☕ 請咖啡</button>
@@ -570,7 +570,7 @@
       </div>
       <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
         <p>⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。</p>
-        <p class="mt-1">© 2025 GovFlow. All rights reserved.</p>
+        <p class="mt-1">© 2025 ESGov. All rights reserved.</p>
         <p class="mt-2 opacity-40">v1.0.0 · 全部免費 🆓</p>
       </div>
     </div>
