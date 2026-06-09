@@ -314,7 +314,16 @@
 
     function submitDownloadEmail() {
       const email = document.getElementById('downloadEmail').value.trim();
-      if (!email || !email.includes('@')) return;
+      if (!email || !email.includes('@')) {
+        alert('請輸入有效嘅電郵地址');
+        return;
+      }
+      fetch('https://script.google.com/macros/s/AKfycbx8TaSMGDi47GEjQAb1cQ05HhcaumK1s7aT3FreCKYem-ybVwly5-BSVTU15EOJmJjdzA/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, page: 'sold-note-generator' })
+      }).catch(function(){});
       const emails = JSON.parse(localStorage.getItem('esgov_emails') || '[]');
       if (!emails.includes(email)) {
         emails.push(email);
