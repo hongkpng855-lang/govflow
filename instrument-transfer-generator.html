@@ -446,19 +446,15 @@
           doc.addImage(imgData, 'PNG', 0, yOffset, pageW, imgH);
         }
 
-        // ===== 跨頁斜水印 =====
+        // ===== 跨頁斜水印（英文 only，helvetica 唔支援中文）=====
         doc.saveGraphicsState();
         doc.setGState(new window.jspdf.GState({ opacity: 0.12 }));
         doc.setTextColor(180, 180, 180);
         doc.setFontSize(48);
         doc.setFont('helvetica', 'bold');
-        // 斜線排列：左上到右下 3 個水印
         doc.text('ESGov', 20, 60, { angle: -30 });
-        doc.text('示範範例', 20, 80, { angle: -30 });
         doc.text('ESGov', 80, 160, { angle: -30 });
-        doc.text('示範範例', 80, 180, { angle: -30 });
         doc.text('ESGov', 140, 260, { angle: -30 });
-        doc.text('示範範例', 140, 280, { angle: -30 });
         doc.restoreGraphicsState();
 
         doc.save('Instrument_Transfer_Filled.pdf');

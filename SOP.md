@@ -206,3 +206,35 @@
 ---
 
 *SOP 版本: 1.0 · 2026-06-04*
+
+---
+
+## 📋 Wordtopdf 製作流程（Generator Demo 圖片）
+
+每次製作/更新 Generator 嘅 Demo 圖（wordtopdf）時：
+
+### 1. 製作流程
+1. 根據用戶提供嘅最新 Word 模板，製作 HTML 模擬版
+2. 用 Chromium headless cap 圖生成 PNG（2x scale 確保清晰）
+3. 圖片必須包含 **水印**（右下角「示範範例 · ESGov」）
+4. 儲存到 `assets/demo/{product-id}-wordtopdf.png`
+5. 將生成好嘅 PNG **原件副本** 傳俾用戶確認
+
+### 2. Generator PDF 水印規範
+所有 generator 下載嘅 PDF 必須有：
+- **跨頁斜水印**：半透明（12% opacity）灰字「ESGov · 示範範例」
+- 斜線排列，左上至右下分佈
+- 不能遮蓋主要內容（水印放底層）
+- 顏色：`rgb(180,180,180)`
+
+### 3. Demo 圖片水印規範
+- 所有 `assets/demo/` 嘅 product demo 圖必須有水印
+- 位置：右下角
+- 文字：「示範範例 · ESGov」
+- 顏色：淺灰半透明
+
+### 4. 驗收清單
+- [ ] 已將原件副本 send 俾用戶
+- [ ] Demo 圖有水印（右下角「示範範例 · ESGov」）
+- [ ] Generator PDF 有跨頁斜水印
+- [ ] 水印透明度合適（唔遮內容但又清晰可見）
