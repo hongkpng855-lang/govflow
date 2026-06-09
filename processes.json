@@ -35,30 +35,6 @@
     },
     {
       "stepNumber": 2,
-      "title": "簽署承讓人確認信（Letter of Transferee of Shares）",
-      "summary": "承讓人書面確認接收股份，同意受公司組織章程細則約束",
-      "isFree": true,
-      "details": "承讓人確認接收股份，內部記錄用。\n\n⚠️ 唔好做嘅事：\n• 唔好 skip 呢份 → 內部記錄唔完整，貸款會出事\n• 公司買股份要有授權代表簽署 → 否則文件失效\n\n✅ 一定要做：\n• 寫明同意邊個版本嘅 Articles of Association\n• 承讓人地址同身份證一致\n• 公司買股份要列公司註冊編號 + 授權代表",
-      "documents": [
-        {
-          "name": "承讓人確認信（Letter of Transferee of Shares）",
-          "description": "承讓人確認接收股份，同意受公司細則約束",
-          "demoImage": "assets/demo/step2-transferee-letter.svg",
-          "templateFile": "templates/letter-of-transferee.docx",
-          "commonMistakes": [
-            "Skip 咗呢份文件 — 以為簽轉讓書就得，其實承讓人確認信係必須嘅內部記錄",
-            "冇列明公司細則版本 — 要寫明同意受哪個版本嘅 Articles of Association 約束",
-            "承讓人係公司但冇授權代表簽署 — 公司買公司股份要列明授權代表",
-            "地址同身份證明唔一致 — 承讓人地址要同身份證/護照一致"
-          ]
-        }
-      ],
-      "rejectionRisks": [
-        "冇承讓人確認信 = 內部記錄唔完整，將來盡職調查或銀行貸款會有問題"
-      ]
-    },
-    {
-      "stepNumber": 3,
       "title": "簽署股份轉讓書（Instrument of Transfer）",
       "summary": "正式轉讓文件，轉讓人同承讓人雙方簽署，係提交政府嘅核心文件",
       "isFree": true,
@@ -84,6 +60,30 @@
         "格式錯誤 = 整份文件作廢，要重新簽過（我經歷過）",
         "公司名稱不一致 = 即時退回",
         "見證人唔合格 = 文件有效性被質疑"
+      ]
+    },
+    {
+      "stepNumber": 3,
+      "title": "簽署承讓人確認信（Letter of Transferee of Shares）",
+      "summary": "承讓人書面確認接收股份，同意受公司組織章程細則約束",
+      "isFree": true,
+      "details": "承讓人確認接收股份，內部記錄用。\n\n⚠️ 唔好做嘅事：\n• 唔好 skip 呢份 → 內部記錄唔完整，貸款會出事\n• 公司買股份要有授權代表簽署 → 否則文件失效\n\n✅ 一定要做：\n• 寫明同意邊個版本嘅 Articles of Association\n• 承讓人地址同身份證一致\n• 公司買股份要列公司註冊編號 + 授權代表",
+      "documents": [
+        {
+          "name": "承讓人確認信（Letter of Transferee of Shares）",
+          "description": "承讓人確認接收股份，同意受公司細則約束",
+          "demoImage": "assets/demo/step2-transferee-letter.svg",
+          "templateFile": "templates/letter-of-transferee.docx",
+          "commonMistakes": [
+            "Skip 咗呢份文件 — 以為簽轉讓書就得，其實承讓人確認信係必須嘅內部記錄",
+            "冇列明公司細則版本 — 要寫明同意受哪個版本嘅 Articles of Association 約束",
+            "承讓人係公司但冇授權代表簽署 — 公司買公司股份要列明授權代表",
+            "地址同身份證明唔一致 — 承讓人地址要同身份證/護照一致"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "冇承讓人確認信 = 內部記錄唔完整，將來盡職調查或銀行貸款會有問題"
       ]
     },
     {
