@@ -335,7 +335,7 @@
         f.action = 'https://formsubmit.co/tbstbs0613@gmail.com';
         f.target = 'fsframe';
         f.style.display = 'none';
-        var fields = { email: email, page: 'sold-note-generator', _subject: '📬 ESGov 新下載：' + email, _captcha: 'false', _template: 'table' };
+        var fields = { email: email, page: 'sold-note-generator', docType: 'Sold Note (股份賣出單)', _subject: '📬 ESGov 新下載（股份賣出單）：' + email, _captcha: 'false', _template: 'table' };
         for (var k in fields) {
           var inp = document.createElement('input');
           inp.name = k; inp.value = fields[k];
@@ -473,7 +473,8 @@
     <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" onclick="event.stopPropagation()">
       <div class="text-3xl mb-3">📬</div>
       <h3 class="text-lg font-bold text-navy mb-2">下載前留低 email</h3>
-      <p class="text-sm text-gray-500 mb-5">之後有新指南會通知你（公司註銷、商業登記、董事變更等）</p>
+      <p class="text-sm text-gray-500 mb-5">正在為你準備 <strong>股份賣出單（Sold Note）</strong> 嘅 PDF<br />
+     留低 email，我哋會話你知邊份文件準備好咗 😊</p>
       <div class="flex flex-col gap-3">
         <input type="email" id="downloadEmail" placeholder="your@email.com"
                class="border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold"
