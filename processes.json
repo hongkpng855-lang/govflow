@@ -66,7 +66,7 @@
         {
           "name": "股份轉讓書（Instrument of Transfer）",
           "description": "公司註冊處認可格式，雙方簽署嘅正式轉讓文件",
-          "demoImage": "assets/demo/step3-instrument.svg",
+          "demoImage": "assets/demo/step3-instrument.png?v=9.0",
           "templateFile": "templates/instrument-of-transfer.docx",
           "commonMistakes": [
             "用錯格式 — 上網 download 通用模板，官方唔收，我錯過兩次先識",
