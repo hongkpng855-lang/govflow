@@ -35,6 +35,8 @@
       transition: all 0.15s ease;
       outline: none;
       font-family: inherit;
+      color: #1a1a1a;
+      font-size: 14px;
     }
     .editable-field:hover {
       background: #fef3c7;
@@ -100,7 +102,7 @@
         <span class="text-lg mt-0.5 shrink-0">📄</span>
         <div>
           <p class="font-semibold text-navy text-sm">股份轉讓書（Instrument of Transfer）</p>
-          <p class="text-xs text-gray-500 mt-0.5">公司註冊處認可格式，雙方簽署嘅正式轉讓文件</p>
+          <p class="text-xs text-gray-700 mt-0.5">公司註冊處認可格式，雙方簽署嘅正式轉讓文件</p>
         </div>
       </div>
       <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
@@ -160,59 +162,59 @@
     </script>
 
     <!-- ═══════ FORM ═══════ -->
-    <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px; font-family:'Noto Sans TC',sans-serif;">
+    <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px; font-family:'Times New Roman','Noto Sans TC',serif;">
       <div class="bg-navy text-white py-3 px-6 text-center">
         <h1 class="text-lg font-bold text-gold">INSTRUMENT OF TRANSFER</h1>
-        <p class="text-xs text-gray-400">股份轉讓書</p>
+        <p class="text-xs text-gray-300">股份轉讓書</p>
       </div>
-      <div class="p-6 sm:p-8" style="font-family:'Times New Roman',serif;">
+      <div class="p-6 sm:p-8">
         <h1 class="text-xl font-bold text-center text-navy uppercase tracking-wide mb-6" style="border-bottom:2px solid #1B2A4A;padding-bottom:10px;">INSTRUMENT OF TRANSFER</h1>
 
         <div class="space-y-1">
           <div class="mb-4">
-            <div class="text-xs text-gray-400 italic mb-0.5">Company Name</div>
+            <div class="text-xs text-gray-700 font-medium mb-0.5">Company Name</div>
             <div id="f1" contenteditable="true" class="editable-field w-full px-3 py-2 text-sm rounded min-h-[32px]"></div>
           </div>
           <div class="mb-4">
-            <div class="text-xs text-gray-400 italic mb-0.5">I (We) — Full Name of Transferor(s)</div>
+            <div class="text-xs text-gray-700 font-medium mb-0.5">I (We) — Full Name of Transferor(s)</div>
             <div id="f2" contenteditable="true" class="editable-field w-full px-3 py-2 text-sm rounded min-h-[32px]"></div>
           </div>
           <div class="mb-4">
-            <div class="text-xs text-gray-400 italic mb-0.5">Address of Transferor(s)</div>
+            <div class="text-xs text-gray-700 font-medium mb-0.5">Address of Transferor(s)</div>
             <div id="f3" contenteditable="true" class="editable-field w-full px-3 py-2 text-sm rounded min-h-[32px]"></div>
           </div>
           <div class="mb-4">
-            <div class="text-xs text-gray-400 italic mb-0.5">In consideration of the Sum of</div>
+            <div class="text-xs text-gray-700 font-medium mb-0.5">In consideration of the Sum of</div>
             <div id="f4" contenteditable="true" class="editable-field w-full px-3 py-2 text-sm rounded min-h-[32px]"></div>
           </div>
           <div class="mb-4">
-            <div class="text-xs text-gray-400 italic mb-0.5">Paid to me (us) by — Name in Full of Transferee</div>
+            <div class="text-xs text-gray-700 font-medium mb-0.5">Paid to me (us) by — Name in Full of Transferee</div>
             <div id="f5" contenteditable="true" class="editable-field w-full px-3 py-2 text-sm rounded min-h-[32px]"></div>
           </div>
           <div class="mb-4">
-            <div class="text-xs text-gray-400 italic mb-0.5">Occupation</div>
+            <div class="text-xs text-gray-700 font-medium mb-0.5">Occupation</div>
             <div id="f6" contenteditable="true" class="editable-field w-full px-3 py-2 text-sm rounded min-h-[32px]"></div>
           </div>
           <div class="mb-4">
-            <div class="text-xs text-gray-400 italic mb-0.5">Full Address of Transferee</div>
+            <div class="text-xs text-gray-700 font-medium mb-0.5">Full Address of Transferee</div>
             <div id="f7" contenteditable="true" class="editable-field w-full px-3 py-2 text-sm rounded min-h-[32px]"></div>
           </div>
 
-          <p class="text-sm text-gray-600 italic my-3 leading-relaxed">(hereinafter called "the said Transferee") do hereby transfer to the said Transferee the</p>
+          <p class="text-sm text-gray-800 my-3 leading-relaxed">(hereinafter called "the said Transferee") do hereby transfer to the said Transferee the</p>
 
           <div class="mb-4">
-            <div class="text-xs text-gray-400 italic mb-0.5">Number of Ordinary Shares</div>
+            <div class="text-xs text-gray-700 font-medium mb-0.5">Number of Ordinary Shares</div>
             <div id="f8" contenteditable="true" class="editable-field w-full px-3 py-2 text-sm rounded min-h-[32px]"></div>
           </div>
           <div class="mb-4">
-            <div class="text-xs text-gray-400 italic mb-0.5">Share Numbers standing in the Register of the Company</div>
+            <div class="text-xs text-gray-700 font-medium mb-0.5">Share Numbers standing in the Register of the Company</div>
             <div id="f9" contenteditable="true" class="editable-field w-full px-3 py-2 text-sm rounded min-h-[32px]"></div>
           </div>
 
-          <p class="text-sm text-gray-600 italic my-3 leading-relaxed">to hold unto the said Transferee his Executors, Administrators or Assigns, subject to the several conditions upon which I (We) hold the same at the time of execution hereof. And I (we) the said Transferee do hereby agree to take the said Shares subject to the same conditions.</p>
+          <p class="text-sm text-gray-800 my-3 leading-relaxed">to hold unto the said Transferee his Executors, Administrators or Assigns, subject to the several conditions upon which I (We) hold the same at the time of execution hereof. And I (we) the said Transferee do hereby agree to take the said Shares subject to the same conditions.</p>
 
           <div class="mb-4">
-            <div class="text-xs text-gray-400 italic mb-0.5">Date — Witness our hands the &nbsp;&nbsp;&nbsp;&nbsp; day of</div>
+            <div class="text-xs text-gray-700 font-medium mb-0.5">Date — Witness our hands the &nbsp;&nbsp;&nbsp;&nbsp; day of</div>
             <div id="f10" contenteditable="true" class="field-date editable-field w-full px-3 py-2 text-sm rounded min-h-[32px]"></div>
           </div>
 
@@ -222,30 +224,30 @@
             <div>
               <h3 class="text-sm font-bold text-navy mb-2">Witness to Signature of Transferor</h3>
               <div class="mb-3">
-                <div class="text-xs text-gray-400 italic mb-0.5">Name</div>
+                <div class="text-xs text-gray-700 font-medium mb-0.5">Name</div>
                 <div id="f11" contenteditable="true" class="editable-field w-full px-3 py-1.5 text-sm rounded min-h-[28px]"></div>
               </div>
               <div class="mb-3">
-                <div class="text-xs text-gray-400 italic mb-0.5">Address</div>
+                <div class="text-xs text-gray-700 font-medium mb-0.5">Address</div>
                 <div id="f12" contenteditable="true" class="editable-field w-full px-3 py-1.5 text-sm rounded min-h-[28px]"></div>
               </div>
               <div class="mb-3">
-                <div class="text-xs text-gray-400 italic mb-0.5">Sign</div>
+                <div class="text-xs text-gray-700 font-medium mb-0.5">Sign</div>
                 <div id="f13" contenteditable="true" class="editable-field w-full px-3 py-1.5 text-sm rounded min-h-[28px]"></div>
               </div>
             </div>
             <div>
               <h3 class="text-sm font-bold text-navy mb-2">Witness to Signature of Transferee</h3>
               <div class="mb-3">
-                <div class="text-xs text-gray-400 italic mb-0.5">Name</div>
+                <div class="text-xs text-gray-700 font-medium mb-0.5">Name</div>
                 <div id="f14" contenteditable="true" class="editable-field w-full px-3 py-1.5 text-sm rounded min-h-[28px]"></div>
               </div>
               <div class="mb-3">
-                <div class="text-xs text-gray-400 italic mb-0.5">Address</div>
+                <div class="text-xs text-gray-700 font-medium mb-0.5">Address</div>
                 <div id="f15" contenteditable="true" class="editable-field w-full px-3 py-1.5 text-sm rounded min-h-[28px]"></div>
               </div>
               <div class="mb-3">
-                <div class="text-xs text-gray-400 italic mb-0.5">Sign</div>
+                <div class="text-xs text-gray-700 font-medium mb-0.5">Sign</div>
                 <div id="f16" contenteditable="true" class="editable-field w-full px-3 py-1.5 text-sm rounded min-h-[28px]"></div>
               </div>
             </div>
