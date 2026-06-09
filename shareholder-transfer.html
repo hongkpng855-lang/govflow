@@ -309,8 +309,8 @@
             <div x-show="s.documents && s.documents.length > 0" class="mb-8">
               <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
               <div class="grid sm:grid-cols-2 gap-4">
-                <template x-for="(doc, idx) in s.documents" :key="idx">
-                  <template x-if="s.stepNumber === 1">
+                <template x-if="s.stepNumber === 1">
+                  <template x-for="(doc, idx) in s.documents" :key="idx">
                     <a href="sold-note-generator.html"
                        class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md">
                       <template x-if="doc.demoImage">
@@ -330,7 +330,9 @@
                       </div>
                     </a>
                   </template>
-                  <template x-if="s.stepNumber !== 1">
+                </template>
+                <template x-if="s.stepNumber !== 1">
+                  <template x-for="(doc, idx) in s.documents" :key="idx">
                     <div class="doc-card bg-white border border-gray-200 rounded-xl p-4 hover:border-navy/30 transition cursor-pointer shadow-sm hover:shadow" @click="openDoc(doc)">
                       <div class="flex items-start gap-3">
                         <span class="text-2xl mt-0.5 shrink-0">📄</span>
