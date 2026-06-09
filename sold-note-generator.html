@@ -318,12 +318,14 @@
         alert('請輸入有效嘅電郵地址');
         return;
       }
-      fetch('https://script.google.com/macros/s/AKfycbx8TaSMGDi47GEjQAb1cQ05HhcaumK1s7aT3FreCKYem-ybVwly5-BSVTU15EOJmJjdzA/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email, page: 'sold-note-generator' })
-      }).catch(function(){});
+      // 寄到 Google Apps Script（text/plain 避開 CORS preflight）
+      var scriptUrl = 'https://script.google.com/macros/s/AKfycbx8TaSMGDi47GEjQAb1cQ05HhcaumK1s7aT3FreCKYem-ybVwly5-BSVTU15EOJmJjdzA/exec';
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', scriptUrl, true);
+      xhr.setRequestHeader('Content-Type', 'text/plain;charset=utf-8');
+      xhr.withCredentials = false;
+      xhr.send(JSON.stringify({ email: email, page: 'sold-note-generator' }));
+      // Save local + continue
       const emails = JSON.parse(localStorage.getItem('esgov_emails') || '[]');
       if (!emails.includes(email)) {
         emails.push(email);
