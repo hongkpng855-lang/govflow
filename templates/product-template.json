@@ -1,0 +1,41 @@
+{
+  "processId": "xxx",
+  "title": "香港有限公司XXX完整指南",
+  "description": "由真實經歷者整理，X份文件搞掂XXX，避開補交陷阱",
+  "estimatedTime": "X-Y 星期",
+  "difficulty": "容易 / 中等 / 困難",
+  "totalSteps": 5,
+  "freeSteps": 2,
+  "price": 149,
+  "currency": "HKD",
+  "priceComparison": {
+    "benchmark": 1000,
+    "benchmarkLabel": "會計公司行政費",
+    "savings": "85%",
+    "note": "自行準備文件，唔使俾人食價"
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "準備XXX文件",
+      "summary": "一句講晒呢步做咩",
+      "isFree": true,
+      "details": "白話文廣東話詳細說明，用「你」/「我」口吻，有真實經歷故事。\n\n要包含：\n- 文件係咩\n- 點解要做\n- 常見錯誤（我點樣錯過）\n- 正確做法\n- 特別注意事項",
+      "documents": [
+        {
+          "name": "文件正式名稱",
+          "description": "文件用途簡介",
+          "demoImage": "assets/demo/step1-filename.svg",
+          "templateFile": "templates/filename.docx",
+          "commonMistakes": [
+            "錯誤 1：XXX",
+            "錯誤 2：XXX"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "風險 1：XXX → 後果"
+      ]
+    }
+  ]
+}

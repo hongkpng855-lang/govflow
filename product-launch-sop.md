@@ -1,122 +1,105 @@
 # ESGov 新產品上線 SOP
 
-## 分階段執行流程
+## 核心原則
+
+**每個新產品跟返產品 1（股份轉讓指南）嘅 format 做 template。**
+
+產品 1 嘅每個 Step 有以下 format：
+
+### Step Format（跟產品 1）
+```
+每個 Step =
+  1. 詳細說明（白話文 + 真實經歷）
+  2. 所需文件 card（跟 Step 1 嘅互動工具 format / Step 2-5 嘅文件 format）
+  3. Demo 範例圖片（真實案例 + 可修改文件/Word to PDF）
+  4. 常見錯誤列表
+```
+
+### Step 1 Format（互動工具版本）
+```
+┌─────────────────────────────────┐
+│  [真實案例圖]    [可修改文件圖]    │  ← 兩張並排
+│         🏷️ 互動工具             │
+├─────────────────────────────────┤
+│  文件名稱                        │
+│  文件描述                        │
+│  🚀 填寫 + 生成 PDF              │  ← link 去 generator
+└─────────────────────────────────┘
+```
+**需要：**
+- `{step}-realdemo.png?v=9.0` — 真實填寫範例（user 提供）
+- `{step}-wordtopdf.png?v=9.0` — 可編輯文件範本（需要製作）
+- `{product-id}-generator.html` — 互動填寫工具頁
+- `processes.json` → `hasGenerator: true`
+
+### Step 2-5 Format（文件版本）
+```
+┌─────────────────────────────────┐
+│  📄 文件名稱                     │
+│  文件描述                        │
+│  👁️ 檢視範例 PDF                 │  ← click 開 overlay
+└─────────────────────────────────┘
+```
+**需要：**
+- `{step}-realdemo.png?v=9.0` — 真實範例圖（user 提供）
+- `processes.json` → `hasGenerator: false`
+- 無 generator page
 
 ---
 
 ## Phase A：產品內容準備
 
-**目標：準備好產品資料同內容**
-
-- [ ] 確認產品名稱（e.g.「香港公司股份轉讓完整指南」）
-- [ ] 確認步驟數量（Step 1-5）
-- [ ] 收集每步所需文件清單
-- [ ] 撰寫 Step 1-5 嘅詳細內容（白話文、真實經歷）
-- [ ] 準備範例圖片 / 可下載模板
-- [ ] 更新 `processes.json`
-- [ ] 建立新 HTML 頁（copy 現有 template）
-- [ ] 更新首頁 featured card
-- [ ] Deploy
-
----
+- [ ] Copy `processes.json` 嘅產品 1 區塊做 template
+- [ ] Copy `shareholder-transfer.html` → `{product-id}.html` 改內容
+- [ ] 如需 generator：copy `sold-note-generator.html` → `{product-id}-generator.html`
+- [ ] 更新 `index.html` featured card（copy 現有 card 改 link + title）
+- [ ] 每步準備 demo 圖片（realdemo + wordtopdf）
+- [ ] 確認 interaction tool 有 `hasGenerator: true`
 
 ## Phase B：SEO 關鍵字研究
+- [ ] 確定 1 主關鍵字 + 2-3 related keywords
+- [ ] Keyword research via Google Suggest
 
-**目標：找出產品相關嘅主要關鍵字**
-
-- [ ] 用 Google Search Console 睇 existing keywords
-- [ ] 用 Google Suggest（打關鍵字睇 autocomplete）
-- [ ] 睇競爭對手 page title
-- [ ] 確定 1 個主關鍵字 + 2-3 個 related keywords
-- [ ] 記錄落 keyword tracker
-
-| 關鍵字 | 搜尋量（估算） | 競爭度 | 目標頁 |
-|--------|-------------|-------|-------|
-| e.g. 香港公司股份轉讓 | 高 | 中 | shareholder-transfer.html |
-
----
-
-## Phase C：On-Page SEO 優化
-
-**目標：針對關鍵字優化頁面元素**
-
-### C1 — Meta Data
-- [ ] `<title>`：`ESGov | [主關鍵字] | [副標題]`（50-60 chars）
-- [ ] `<meta description>`：含主關鍵字 + CTA（120-160 chars）
-- [ ] `<link rel="canonical">`：指向正確 URL
-- [ ] Open Graph tags（og:title, og:description, og:url, og:image）
-
-### C2 — 內容結構
-- [ ] 只有一個 `<h1>`，含主關鍵字
-- [ ] `<h2>` / `<h3>` 自然含 related keywords
-- [ ] 內容大約 800-1500 字
-- [ ] 圖片全部有 `alt`（含關鍵字）
-- [ ] 內文自然重複主關鍵字 3-5 次
-
-### C3 — Internal Linking
-- [ ] 喺相關 blog 文章加 link 去新產品頁
-- [ ] 喺新產品頁加 link 去相關 blog
-- [ ] Anchor text 用自然描述（唔好用「按這裡」）
-
-### C4 — Structured Data
-- [ ] FAQPage JSON-LD（如有 FAQ）
-- [ ] Product schema（如有價錢）
-
----
+## Phase C：On-Page SEO
+- [ ] title, description, canonical, OG tags
+- [ ] 內容 keyword optimization
+- [ ] Internal linking
 
 ## Phase D：技術部署
+- [ ] `python3 scripts/generate-sitemap.py`
+- [ ] `python3 scripts/seo-checker.py`
+- [ ] `bash deploy.sh "message" vX.Y`
+- [ ] Browser visual check（見下面 Verification SOP）
+- [ ] Google Search Console submit URL
 
-**目標：確保技術上 correctly deployed**
-
-- [ ] 行 `python3 scripts/generate-sitemap.py` 更新 sitemap
-- [ ] 行 `python3 scripts/seo-checker.py` 確認冇 error
-- [ ] Deploy 上線
-- [ ] 提交新 URL 去 Google Search Console →「要求索引編制」
-- [ ] 檢查 Google Search Console 有冇 error
-
----
-
-## Phase E：追蹤 & 優化（上線後）
-
-**目標：監察成效，持續改善**
-
-### 第 1 週
-- [ ] Check Google Search Console 新頁面有冇被 index
-- [ ] 如果有 error → 修正
-
-### 第 2-4 週
-- [ ] 睇 Search Console「成效」：曝光次數、點擊率、平均排名
-- [ ] Check 邊個 keyword 帶最多 traffic
-- [ ] 如果排名唔理想 → 改善內容 / 加 internal links
-
-### 每月
-- [ ] 更新 sitemap
-- [ ] 檢查 Search Console「涵蓋範圍」
-- [ ] 比較 keyword 排名變化
+## Phase E：追蹤優化
+- [ ] 第 1-4 週 monitor Search Console
 
 ---
 
-## 📐 新產品快速 Checklist
+## ✅ Deployment Verification SOP（每次 deploy 後必做）
 
-```
-□ Phase A: 內容準備
-□ Phase B: 關鍵字研究
-□ Phase C1: Meta Data
-□ Phase C2: 內容結構
-□ Phase C3: Internal Linking
-□ Phase C4: Structured Data
-□ Phase D: 技術部署
-□ Phase E: 追蹤優化
-```
+**Step 1 — Server check**
+- [ ] File accessible（200 OK）
+- [ ] processes.json path 正確
+- [ ] version.json 已更新
+
+**Step 2 — Browser visual check**
+- [ ] 開 browser 去受影響頁面
+- [ ] 檢查對應元素是否 visible（snapshot / screenshot）
+- [ ] 如係圖片 → 確認 `<img>` 有載入
+- [ ] 如係 interactive → 實際 click 一次
+
+**Step 3 — 先確認正常，再話完成**
 
 ---
 
-## 相關檔案
+## 參考 template
 
-| 檔案 | 用途 |
-|------|------|
-| `SEO-SOP.md` | Google 曝光操作指南 |
-| `scripts/seo-checker.py` | 全站 SEO 健康檢查 |
-| `scripts/generate-sitemap.py` | 自動生成 sitemap.xml |
-| `~/.openclaw/workspace/AGENTS.md` | Agent 開發指引（含 SEO checklist） |
-| `~/.openclaw/workspace/skills/esgov-seo/SKILL.md` | SEO 完整技能檔案 |
+| File | Source |
+|------|--------|
+| `processes.json` | Copy 產品 1 嘅 JSON block 改資料 |
+| `{product-id}.html` | Copy `shareholder-transfer.html` |
+| `{product-id}-generator.html` | Copy `sold-note-generator.html` |
+| `index.html` featured card | Copy 現有 card 改 href |
+| `assets/demo/*.png` | user 提供 realdemo / 自己製作 wordtopdf |

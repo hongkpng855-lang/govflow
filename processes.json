@@ -25,7 +25,8 @@
             "股份類別寫錯 — 普通股同優先股要分開列明，唔可以溝埋",
             "冇寫每股作價 — 只寫總額，到計印花稅嗰陣要返轉頭計",
             "日期寫錯 — 交易日期同轉讓書日期要 match"
-          ]
+          ],
+          "generatorUrl": "sold-note-generator.html"
         }
       ],
       "rejectionRisks": [
@@ -65,7 +66,7 @@
       "documents": [
         {
           "name": "股份轉讓書（Instrument of Transfer）",
-          "description": "公司註冊處認可格式，雙方簽署嘅正式轉讓文件",
+          "description": "公司註冊處認可格式，雙方簽署嘅正式轉讓文件。可使用互動工具直接填寫並一鍵生成 PDF。",
           "demoImage": "assets/demo/step3-instrument.png?v=9.0",
           "templateFile": "templates/instrument-of-transfer.docx",
           "commonMistakes": [
@@ -74,7 +75,9 @@
             "日期倒填 — 轉讓日期唔可以早過 Sold Note 日期，邏輯唔通",
             "簽署位置錯 — 轉讓人同承讓人調轉咗簽",
             "見證人資格不符 — 見證人係轉讓人嘅親戚，被質疑獨立性"
-          ]
+          ],
+          "hasGenerator": true,
+          "generatorUrl": "instrument-transfer-generator.html"
         }
       ],
       "rejectionRisks": [

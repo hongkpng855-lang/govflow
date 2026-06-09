@@ -309,9 +309,9 @@
             <div x-show="s.documents && s.documents.length > 0" class="mb-8">
               <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
               <div class="grid sm:grid-cols-2 gap-4">
-                <template x-if="s.stepNumber === 1">
+                <template x-if="s.stepNumber === 1 || doc?.hasGenerator">
                   <template x-for="(doc, idx) in s.documents" :key="idx">
-                    <a href="sold-note-generator.html"
+                    <a :href="doc?.generatorUrl || "#""
                        class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md">
                       <template x-if="doc.demoImage">
                         <div class="h-32 sm:h-40 bg-gray-100 overflow-hidden relative">
@@ -541,7 +541,7 @@
 
         <!-- Download template -->
         <template x-if="currentStep === 1">
-          <a href="sold-note-generator.html"
+          <a :href="doc?.generatorUrl || "#""
              class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-4 px-6 rounded-xl hover:bg-gold-light transition shadow text-base"
              @click="closeDoc()">
             🚀 前往 Sold Note PDF 生成器 — 填資料、一鍵生成
