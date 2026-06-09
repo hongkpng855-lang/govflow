@@ -29,7 +29,7 @@
 **需要：**
 - `{step}-realdemo.png?v=9.0` — 真實填寫範例（user 提供）
 - `{step}-wordtopdf.png?v=9.0` — 可編輯文件範本（需要製作）
-- `{product-id}-generator.html` — 互動填寫工具頁
+- `{product-id}-generator.html` — **根據真實文件重新設計 form layout**，唔可以就咁 copy 改 label
 - `processes.json` → `hasGenerator: true`
 
 ### Step 2-5 Format（文件版本）
