@@ -32,4 +32,7 @@
   <text x="60" y="463" fill="#333" font-size="12">簽署：<tspan fill="#C9A84C" font-style="italic">張志強</tspan>（執業會計師）　　日期：2026-04-15</text>
   <text x="400" y="463" fill="#333" font-size="12">簽署：<tspan fill="#C9A84C" font-style="italic">陳美玲</tspan>（執業會計師）　　日期：2026-04-15</text>
   <text x="680" y="585" fill="#CCC" font-size="10" text-anchor="end">示範範例 · ESGov</text>
+<text x="50" y="80" transform="rotate(-25,50,80)" font-size="28" fill="rgba(0,0,0,0.08)" font-weight="bold" font-family="Arial">ESGov</text>
+<text x="120" y="220" transform="rotate(-25,120,220)" font-size="28" fill="rgba(0,0,0,0.08)" font-weight="bold" font-family="Arial">ESGov</text>
+<text x="50" y="360" transform="rotate(-25,50,360)" font-size="28" fill="rgba(0,0,0,0.08)" font-weight="bold" font-family="Arial">ESGov</text>
 </svg>

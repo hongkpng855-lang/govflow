@@ -35,4 +35,7 @@
   <text x="60" y="480" fill="#666" font-size="11">見證人簽署：<tspan fill="#C9A84C" font-style="italic">張偉明</tspan>（會計師 · 牌照號碼：CP12345）</text>
   <!-- Footer -->
   <text x="680" y="570" fill="#CCC" font-size="10" text-anchor="end">示範範例 · ESGov</text>
+<text x="50" y="80" transform="rotate(-25,50,80)" font-size="28" fill="rgba(0,0,0,0.08)" font-weight="bold" font-family="Arial">ESGov</text>
+<text x="120" y="220" transform="rotate(-25,120,220)" font-size="28" fill="rgba(0,0,0,0.08)" font-weight="bold" font-family="Arial">ESGov</text>
+<text x="50" y="360" transform="rotate(-25,50,360)" font-size="28" fill="rgba(0,0,0,0.08)" font-weight="bold" font-family="Arial">ESGov</text>
 </svg>

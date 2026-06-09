@@ -35,4 +35,7 @@
   <text x="60" y="553" fill="#2E7D32" font-size="11">印花稅欄（由稅務局蓋印）　　應繳稅額：HK$ 100.00（0.2%）　　繳交日期：______</text>
   <!-- Footer -->
   <text x="680" y="605" fill="#CCC" font-size="10" text-anchor="end">示範範例 · ESGov</text>
+<text x="50" y="80" transform="rotate(-25,50,80)" font-size="28" fill="rgba(0,0,0,0.08)" font-weight="bold" font-family="Arial">ESGov</text>
+<text x="120" y="220" transform="rotate(-25,120,220)" font-size="28" fill="rgba(0,0,0,0.08)" font-weight="bold" font-family="Arial">ESGov</text>
+<text x="50" y="360" transform="rotate(-25,50,360)" font-size="28" fill="rgba(0,0,0,0.08)" font-weight="bold" font-family="Arial">ESGov</text>
 </svg>

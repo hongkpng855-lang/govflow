@@ -35,4 +35,7 @@
   <text x="60" y="552" fill="#E65100" font-size="11">登記費：HK$ 105 ｜ 逾期登記費（42 日後）：HK$ 870 ｜ 請按時提交</text>
   <!-- Footer -->
   <text x="680" y="605" fill="#CCC" font-size="10" text-anchor="end">示範範例 · ESGov</text>
+<text x="50" y="80" transform="rotate(-25,50,80)" font-size="28" fill="rgba(0,0,0,0.08)" font-weight="bold" font-family="Arial">ESGov</text>
+<text x="120" y="220" transform="rotate(-25,120,220)" font-size="28" fill="rgba(0,0,0,0.08)" font-weight="bold" font-family="Arial">ESGov</text>
+<text x="50" y="360" transform="rotate(-25,50,360)" font-size="28" fill="rgba(0,0,0,0.08)" font-weight="bold" font-family="Arial">ESGov</text>
 </svg>
