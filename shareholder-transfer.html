@@ -540,8 +540,8 @@
         </div>
 
         <!-- Download template -->
-        <template x-if="currentStep === 1">
-          <a :href="doc?.generatorUrl || '#'"
+        <template x-if="currentStep === 1 && selectedDoc?.generatorUrl">
+          <a :href="selectedDoc.generatorUrl"
              class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-4 px-6 rounded-xl hover:bg-gold-light transition shadow text-base"
              @click="closeDoc()">
             🚀 前往 Sold Note PDF 生成器 — 填資料、一鍵生成
