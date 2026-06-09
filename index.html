@@ -35,7 +35,7 @@
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
-<body>
+<body x-data="{ showDonate: false }">
 
   <!-- ═══════════════ Navigation ═══════════════ -->
   <nav class="bg-navy text-white sticky top-0 z-50">
@@ -95,7 +95,7 @@
         <!-- Donate hint in hero -->
         <div class="mt-8 text-center">
           <div class="inline-flex items-center gap-2 bg-white/10 border border-gold/20 rounded-full px-5 py-2 text-sm text-gray-300">
-            ☕ 全部免費 · 如果幫到你，可以<a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="text-gold font-semibold hover:underline">請我飲杯咖啡</a>支持下
+            ☕ 全部免費 · 如果幫到你，可以<a href="#" @click.prevent="showDonate = true" class="text-gold font-semibold hover:underline">請我飲杯咖啡</a>支持下
           </div>
         </div>
 
@@ -192,7 +192,7 @@
             <a href="shareholder-transfer.html" class="btn-gov btn-gov-buy flex-1 justify-center text-sm py-2.5">
               📖 免費睇全部 5 個步驟 →
             </a>
-            <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="btn-gov btn-gov-preview flex-1 justify-center text-sm py-2.5">
+            <a href="#" @click.prevent="showDonate = true" class="btn-gov btn-gov-preview flex-1 justify-center text-sm py-2.5">
               ☕ 請咖啡支持
             </a>
           </div>
@@ -364,7 +364,7 @@
           <img src="assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
         </div>
         <div class="text-sm text-gray-400 flex items-center gap-3">
-          <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="hover:text-gold transition">☕ 請咖啡</a>
+          <a href="#" @click.prevent="showDonate = true" class="hover:text-gold transition">☕ 請咖啡</a>
           <span class="opacity-30">|</span>
           <span>全部免費 🆓</span>
         </div>
@@ -379,6 +379,25 @@
       </div>
     </div>
   </footer>
+
+  <!-- ═══════════════ Donate Modal ═══════════════ -->
+  <div x-show="showDonate" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" @click.self="showDonate = false">
+    <div class="bg-white rounded-xl max-w-md w-full shadow-2xl p-6 sm:p-8 text-center" @click.stop>
+      <div class="text-5xl mb-4">☕</div>
+      <h3 class="text-xl font-bold text-navy mb-3">幫到你嗎？請我飲杯咖啡</h3>
+      <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+        呢份指南係我親身經歷整理，完全免費公開。<br />
+        如果幫到你節省時間同金錢，<br />
+        可以透過 Buy Me a Coffee 支持下我 ☕
+      </p>
+      <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
+         class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-3.5 px-8 rounded-xl hover:bg-gold-light transition shadow-lg text-lg">
+        ☕ 請我飲咖啡
+      </a>
+      <p class="text-xs text-gray-400 mt-3">每個支持都幫助我製作更多免費指南 🎯</p>
+      <button @click="showDonate = false" class="mt-4 text-sm text-gray-400 hover:text-gray-600 transition">或者直接關閉，繼續睇內容 →</button>
+    </div>
+  </div>
 
   <!-- FAQ Structured Data -->
   <script type="application/ld+json">
