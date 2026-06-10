@@ -205,7 +205,7 @@
 
 ---
 
-*SOP 版本: 2.0 · 2026-06-10*
+*SOP 版本: 3.0 · 2026-06-11*
 
 ---
 
@@ -270,7 +270,15 @@
 2. 為每個 step 寫 content（title + summary + details + common mistakes）
 3. 製作 processes.json 完整區塊（copy step 1 嘅格式做 template）
 4. 建立產品 HTML 頁（copy shareholder-transfer.html 做基礎）
-5. 如有 generator 需要，建立 generator HTML（copy sold-note-generator）
+5. **Generator 製作：任何 Step 都可以有 Generator**（唔限 Step 1）
+   - 見 `product-launch-sop.md` →「Generator 製作流程」詳細步驟
+   - 已實現嘅 Generator 基準：`letter-of-transferee-generator.html`（最新）
+   - 亦可以參考：`sold-note-generator.html`、`instrument-transfer-generator.html`
+   - 每個 generator 需要：
+     - Generator HTML 頁面（copy 現有 generator → 改 form layout）
+     - `processes.json` → document 加 `hasGenerator: true` + `generatorUrl`
+     - `deploy.sh` → 加新頁到 ALLOWED_PAGES
+     - `scripts/generate-sitemap.py` → 加新頁到 PRIORITY
 
 ### Phase 4：文件製作（Templates & Images）
 1. 從官方 source download 表格作為 template 基礎
