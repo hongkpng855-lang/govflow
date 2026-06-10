@@ -67,18 +67,19 @@
       "title": "簽署承讓人確認信（Letter of Transferee of Shares）",
       "summary": "承讓人書面確認接收股份，同意受公司組織章程細則約束",
       "isFree": true,
-      "details": "承讓人確認接收股份，內部記錄用。\n\n⚠️ 唔好做嘅事：\n• 唔好 skip 呢份 → 內部記錄唔完整，貸款會出事\n• 公司買股份要有授權代表簽署 → 否則文件失效\n\n✅ 一定要做：\n• 寫明同意邊個版本嘅 Articles of Association\n• 承讓人地址同身份證一致\n• 公司買股份要列公司註冊編號 + 授權代表",
+      "details": "承讓人確認接收股份，內部記錄用。封信係向印花稅署（Stamp Duty Office）發出，確認股份轉讓嘅詳情。\n\n呢封信主要用嚟確認最多 3 點（根據實際情況，涵蓋需要嘅點數）：\n\n**第 1 點：股票買賣協議確認**\n呢個係股票買賣協議嘅核證副本；如果冇嘅話，請由買方或賣方以書面確認。\n呢封信就係嗰份書面確認。\n\n**第 2 點（按需要）：（你話你唔記得咗）**\n\n**第 3 點（按需要）：（你話你唔記得咗）**\n\n⚠️ 唔好做嘅事：\n• 唔好 skip 呢份 → 內部記錄唔完整，貸款會出事\n• 公司買股份要有授權代表簽署 → 否則文件失效\n• 唔好亂填 3 點 — 根據實際情況填寫需要嘅點數，唔係全部要填\n\n✅ 一定要做：\n• 寫明公司名同股份轉讓詳情\n• 承讓人地址同身份證一致\n• 公司買股份要列公司註冊編號 + 授權代表\n• 夾附公司組織章程細則（Memorandum and Articles of Association）",
       "documents": [
         {
           "name": "承讓人確認信（Letter of Transferee of Shares）",
-          "description": "承讓人確認接收股份，同意受公司細則約束",
-          "demoImage": "assets/demo/step2-transferee-letter.svg",
+          "description": "向印花稅署發出嘅確認信，確認股份轉讓詳情",
+          "demoImage": "assets/demo/step2-transferee-realdemo.png",
           "templateFile": "templates/letter-of-transferee.docx",
           "commonMistakes": [
             "Skip 咗呢份文件 — 以為簽轉讓書就得，其實承讓人確認信係必須嘅內部記錄",
-            "冇列明公司細則版本 — 要寫明同意受哪個版本嘅 Articles of Association 約束",
+            "冇列明 3 點確認事項 — 至少要涵蓋交易確認呢一點",
             "承讓人係公司但冇授權代表簽署 — 公司買公司股份要列明授權代表",
-            "地址同身份證明唔一致 — 承讓人地址要同身份證/護照一致"
+            "地址同身份證明唔一致 — 承讓人地址要同身份證/護照一致",
+            "冇夾附公司章程 — 信件本身註明要附上 Memorandum and Articles of Association"
           ]
         }
       ],
