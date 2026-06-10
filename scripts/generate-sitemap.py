@@ -17,6 +17,8 @@ PRIORITY = {
     'index.html': 1.0,
     'shareholder-transfer.html': 0.9,
     'sold-note-generator.html': 0.8,
+    'instrument-transfer-generator.html': 0.8,
+    'letter-of-transferee-generator.html': 0.8,
 }
 
 urlset = Element('urlset', xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')

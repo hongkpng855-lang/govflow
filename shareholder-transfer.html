@@ -517,22 +517,22 @@
           </template>
         </div>
 
-        <!-- Download template -->
-        <template x-if="currentStep === 1 && selectedDoc?.generatorUrl">
+        <!-- Download/Generator button based on doc type -->
+        <template x-if="selectedDoc?.generatorUrl">
           <a :href="selectedDoc.generatorUrl"
              class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-4 px-6 rounded-xl hover:bg-gold-light transition shadow text-base"
              @click="closeDoc()">
-            🚀 前往 Sold Note PDF 生成器 — 填資料、一鍵生成
+            🚀 前往 PDF 生成器 — 填資料、一鍵生成
           </a>
         </template>
-        <template x-if="currentStep !== 1 && selectedDoc?.templateFile">
+        <template x-if="!selectedDoc?.generatorUrl && selectedDoc?.templateFile">
           <a :href="selectedDoc.templateFile"
              class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-3.5 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm"
              @click="closeDoc()">
             📥 下載可編輯模板（Word / PDF）
           </a>
         </template>
-        <template x-if="currentStep !== 1 && !selectedDoc?.templateFile">
+        <template x-if="!selectedDoc?.generatorUrl && !selectedDoc?.templateFile">
           <div class="bg-gray-50 rounded-xl py-4 text-center">
             <p class="text-xs text-gray-400">（此文件暫無可編輯模板，創辦人將稍後提供）</p>
           </div>
@@ -557,7 +557,7 @@
       <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
         <p>⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。</p>
         <p class="mt-1">© 2025 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v9.2 · 全部免費 🆓 🆓</p>
+        <p class="mt-2 opacity-40">v9.3 · 全部免費 🆓 🆓</p>
       </div>
     </div>
   </footer>

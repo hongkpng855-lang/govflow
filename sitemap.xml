@@ -10,7 +10,13 @@
     <loc>https://esgov.org/instrument-transfer-generator.html</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://esgov.org/letter-of-transferee-generator.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://esgov.org/shareholder-transfer.html</loc>

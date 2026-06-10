@@ -72,7 +72,7 @@
         {
           "name": "承讓人確認信（Letter of Transferee of Shares）",
           "description": "向印花稅署發出嘅確認信，確認股份轉讓詳情",
-          "demoImage": "assets/demo/step2-transferee-realdemo.png?v=9.0",
+          "demoImage": "assets/demo/step2-transferee-realdemo.png?v=9.2",
           "templateFile": "templates/letter-of-transferee.docx",
           "commonMistakes": [
             "Skip 咗呢份文件 — 以為簽轉讓書就得，其實承讓人確認信係必須嘅內部記錄",
@@ -81,7 +81,8 @@
             "地址同身份證明唔一致 — 承讓人地址要同身份證/護照一致",
             "冇夾附公司章程 — 信件本身註明要附上 Memorandum and Articles of Association"
           ],
-          "hasGenerator": false
+          "hasGenerator": true,
+          "generatorUrl": "letter-of-transferee-generator.html"
         }
       ],
       "rejectionRisks": [
