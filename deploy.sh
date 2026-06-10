@@ -12,6 +12,20 @@ cd "$(dirname "$0")"
 MSG="${1:-Auto deploy}"
 VERSION="${2}"
 
+# 🛡️ Safety check: detect new HTML pages not yet approved
+if [ -z "$SKIP_SAFETY" ]; then
+  # Known allowed product HTML pages
+  ALLOWED_PAGES="index.html shareholder-transfer.html sold-note-generator.html instrument-transfer-generator.html"
+  for f in *.html; do
+    if ! echo "$ALLOWED_PAGES" | grep -q "$f"; then
+      echo "⚠️  Unrecognised HTML page detected: $f"
+      echo "   Run with SKIP_SAFETY=1 to bypass, or remove the file first."
+      echo "   Aborting deploy."
+      exit 1
+    fi
+  done
+fi
+
 # Get current version from index.html (format: vX.Y)
 CURRENT_VER=$(grep -oP 'class="mt-2 opacity-40">\Kv[0-9]+\.[0-9]+' index.html | head -1)
 NEW_VER="${VERSION:-$CURRENT_VER}"
