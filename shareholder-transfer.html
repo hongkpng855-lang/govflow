@@ -309,6 +309,7 @@
             <div class="mb-8">
               <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
               <div class="grid sm:grid-cols-2 gap-4">
+                <div class="text-xs text-blue-600 font-bold mb-2">🔍 DOCS COUNT: <span x-text="s.documents ? s.documents.length : 0"></span></div>
                 <template x-for="(doc, idx) in s.documents" :key="idx">
                   <div @click="openDoc(doc)" class="doc-card bg-white border border-gray-200 rounded-xl p-4 hover:border-navy/30 transition cursor-pointer shadow-sm hover:shadow">
                     <div class="flex items-start gap-3">
