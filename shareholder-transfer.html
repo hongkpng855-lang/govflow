@@ -281,7 +281,7 @@
                class="fade-in-up">
 
             <!-- Step Header -->
-            <div x-show="s.documents <div class="mb-8"><div class="mb-8"> s.documents.length > 0" class="mb-8">
+            <div x-show="s.documents <div class="mb-8"><div class="mb-8"> s.documents.length >= 1" class="mb-8">
               <div class="flex items-center gap-3 mb-2">
                 <span class="w-10 h-10 rounded-full bg-gold text-navy flex items-center justify-center font-bold text-lg">
                   <span x-text="s.stepNumber"></span>
@@ -306,12 +306,23 @@
             </div>
 
             <!-- Documents -->
-            <div x-show="s.documents <div class="mb-8"><div class="mb-8"> s.documents.length > 0" class="mb-8">
+            <div x-show="s.documents <div class="mb-8"><div class="mb-8"> s.documents.length >= 1" class="mb-8">
               <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
               <div class="grid sm:grid-cols-2 gap-4">
                 <template x-for="(doc, idx) in s.documents" :key="idx">
-                  <div class="p-4 bg-white rounded-xl border border-green-300 text-green-700 text-sm font-bold text-center">
-                    ✅ DOC RENDERED: <span x-text="doc.name"></span>
+                  <div class="doc-card bg-white border border-gray-200 rounded-xl p-4 hover:border-navy/30 transition cursor-pointer shadow-sm hover:shadow" @click="openDoc(doc)">
+                    <div class="flex items-start gap-3">
+                      <span class="text-2xl mt-0.5 shrink-0">📄</span>
+                      <div class="min-w-0 flex-1">
+                        <p class="font-semibold text-sm text-navy" x-text="doc.name"></p>
+                        <p class="text-xs text-gray-500 mt-1" x-text="doc.description"></p>
+                        <div class="flex items-center gap-2 mt-3">
+                          <span class="inline-flex items-center gap-1 text-xs font-medium bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition">
+                            👁️ 檢視範例 PDF
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </template>
               </div>
