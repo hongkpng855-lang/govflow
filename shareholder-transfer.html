@@ -281,7 +281,7 @@
                class="fade-in-up">
 
             <!-- Step Header -->
-            <div class="mb-8">
+            <div x-show="s.documents <div class="mb-8"><div class="mb-8"> s.documents.length > 0" class="mb-8">
               <div class="flex items-center gap-3 mb-2">
                 <span class="w-10 h-10 rounded-full bg-gold text-navy flex items-center justify-center font-bold text-lg">
                   <span x-text="s.stepNumber"></span>
@@ -306,9 +306,10 @@
             </div>
 
             <!-- Documents -->
-            <div class="mb-8">
+            <div x-show="s.documents <div class="mb-8"><div class="mb-8"> s.documents.length > 0" class="mb-8">
               <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
               <div class="grid sm:grid-cols-2 gap-4">
+                              <div class="grid sm:grid-cols-2 gap-4">
                 <template x-if="s.stepNumber === 1 || (s.documents[0] && s.documents[0].hasGenerator)">
                   <template x-for="(doc, idx) in s.documents" :key="idx">
                     <a :href="doc['generatorUrl'] || '#'"
@@ -316,7 +317,6 @@
                       <template x-if="doc.demoImage">
                         <div class="h-32 sm:h-40 bg-gray-100 overflow-hidden relative">
                           <img :src="doc.demoImage" :alt="doc.name" class="w-full h-full object-cover" @error="$event.target.closest('div').innerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-sm>🖼️ 範例圖片</div>'" />
-                          <div class="absolute top-2 right-2 bg-gold text-navy text-xs font-bold px-2 py-0.5 rounded-full shadow">互動工具</div>
                         </div>
                       </template>
                       <div class="p-4">
@@ -350,6 +350,10 @@
                   </template>
                 </template>
               </div>
+            </div>
+
+            <!-- debug counter -->
+            <div style="display:none" x-text="'docs=' + s.documents.length"></div>
             </div>
 
             <!-- Rejection Risks -->
