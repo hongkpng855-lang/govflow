@@ -186,7 +186,7 @@
 
   <!-- ═══════════════ Mobile Step Scroll ═══════════════ -->
   <div class="sm:hidden bg-white border-b border-gray-200 step-tabs shadow-sm">
-    <div class="flex gap-1 p-2" x-show="steps.length >= 1">
+    <div class="flex gap-1 p-2" x-show="steps.length">
       <template x-for="s in steps" :key="s.stepNumber">
         <button
           class="step-nav-item flex flex-col items-center gap-0 px-3 py-1.5 rounded-lg text-[11px] font-medium leading-tight transition min-w-[52px]"
@@ -306,7 +306,7 @@
             </div>
 
             <!-- Documents -->
-            <div x-show="s.documents && s.documents.length >= 1" class="mb-8">
+            <div x-show="s.documents && s.documents.length" class="mb-8">
               <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
               <div class="grid sm:grid-cols-2 gap-4">
                 <template x-for="(doc, idx) in s.documents" :key="idx">
@@ -329,7 +329,7 @@
             </div>
 
             <!-- Rejection Risks -->
-            <div x-show="s.rejectionRisks && s.rejectionRisks.length >= 1" class="risk-callout mb-8">
+            <div x-show="s.rejectionRisks && s.rejectionRisks.length" class="risk-callout mb-8">
               <h4 class="font-semibold text-warning mb-2 flex items-center gap-2">
                 ⚠️ 常見錯誤導致補交
               </h4>
