@@ -333,18 +333,9 @@
                 </template>
                 <template x-if="s.stepNumber !== 1 && !s.documents[0].hasGenerator">
                   <template x-for="(doc, idx) in s.documents" :key="idx">
-                    <div class="doc-card bg-white border border-gray-200 rounded-xl p-4 hover:border-navy/30 transition cursor-pointer shadow-sm hover:shadow" @click="openDoc(s.documents[idx])">
-                      <div class="flex items-start gap-3">
-                        <span class="text-2xl mt-0.5 shrink-0">📄</span>
-                        <div class="min-w-0 flex-1">
-                          <p class="font-semibold text-sm text-navy" x-text="doc.name"></p>
-                          <p class="text-xs text-gray-500 mt-1" x-text="doc.description"></p>
-                          <div class="flex items-center gap-2 mt-3">
-                            <span class="inline-flex items-center gap-1 text-xs font-medium bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition">
-                              👁️ 檢視範例 PDF
-                            </span>
-                          </div>
-                        </div>
+                    <div class="doc-card bg-white border-2 border-gold/30 rounded-xl p-4 hover:border-gold/60 transition cursor-pointer shadow-sm hover:shadow-md" @click="openDoc(s.documents[idx])">
+                      <div class="p-4">
+                        <p class="font-bold text-sm text-navy" x-text="doc.name"></p>
                       </div>
                     </div>
                   </template>
