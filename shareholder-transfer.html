@@ -331,7 +331,7 @@
                     </a>
                   </template>
                 </template>
-                <template x-if="s.stepNumber !== 1 && !s.documents[0].hasGenerator">
+                <template x-if="s.stepNumber !== 1 && s.documents[0].hasGenerator != true">
                   <template x-for="(doc, idx) in s.documents" :key="idx">
                     <div class="doc-card bg-white border-2 border-gold/30 rounded-xl p-4 hover:border-gold/60 transition cursor-pointer shadow-sm hover:shadow-md" @click="openDoc(s.documents[idx])">
                       <div class="p-4">
