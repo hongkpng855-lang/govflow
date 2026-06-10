@@ -309,10 +309,11 @@
             <div x-show="s.documents <div class="mb-8"><div class="mb-8"> s.documents.length > 0" class="mb-8">
               <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
               <div class="grid sm:grid-cols-2 gap-4">
-                              <div class="grid sm:grid-cols-2 gap-4">
-                <template x-if="s.stepNumber === 1 || (s.documents[0] && s.documents[0].hasGenerator)">
-                  <template x-for="(doc, idx) in s.documents" :key="idx">
+                <template x-for="(doc, idx) in s.documents" :key="idx">
+                  <div>
+                    <!-- generator steps: image + link -->
                     <a :href="doc['generatorUrl'] || '#'"
+                       x-show="s.stepNumber === 1 || (doc && doc.hasGenerator)"
                        class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md">
                       <template x-if="doc.demoImage">
                         <div class="h-32 sm:h-40 bg-gray-100 overflow-hidden relative">
@@ -329,11 +330,10 @@
                         </div>
                       </div>
                     </a>
-                  </template>
-                </template>
-                <template x-if="s.stepNumber !== 1 && !(s.documents[0] && s.documents[0].hasGenerator)">
-                  <template x-for="(doc, idx) in s.documents" :key="idx">
-                    <div class="doc-card bg-white border border-gray-200 rounded-xl p-4 hover:border-navy/30 transition cursor-pointer shadow-sm hover:shadow" @click="openDoc(doc)">
+                    <!-- non-generator steps: icon + click overlay -->
+                    <div class="doc-card bg-white border border-gray-200 rounded-xl p-4 hover:border-navy/30 transition cursor-pointer shadow-sm hover:shadow"
+                         x-show="s.stepNumber !== 1 && !(doc && doc.hasGenerator)"
+                         @click="openDoc(doc)">
                       <div class="flex items-start gap-3">
                         <span class="text-2xl mt-0.5 shrink-0">📄</span>
                         <div class="min-w-0 flex-1">
@@ -347,14 +347,9 @@
                         </div>
                       </div>
                     </div>
-                  </template>
+                  </div>
                 </template>
               </div>
-            </div>
-
-            <!-- debug counter -->
-            <div style="display:none" x-text="'docs=' + s.documents.length"></div>
-            </div>
 
             <!-- Rejection Risks -->
             <div x-show="s.rejectionRisks && s.rejectionRisks.length > 0" class="risk-callout mb-8">
