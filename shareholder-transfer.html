@@ -310,8 +310,9 @@
               <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
               <div class="grid sm:grid-cols-2 gap-4">
                 <template x-for="(doc, idx) in s.documents" :key="idx">
-                  <!-- Generator steps: image preview + link -->
-                  <a :href="doc['generatorUrl'] || '#'"
+                  <div>
+                    <!-- Generator steps: image preview + link -->
+                    <a :href="doc['generatorUrl'] || '#'"
                      x-show="s.stepNumber === 1 || (doc && doc.hasGenerator)"
                      class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md">
                     <template x-if="doc.demoImage">
