@@ -310,7 +310,7 @@
               <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
               <div class="grid sm:grid-cols-2 gap-4">
                 <template x-for="(doc, idx) in s.documents" :key="idx">
-                  <a :href="doc['generatorUrl'] || '#'" @click.prevent="!doc['generatorUrl'] && openDoc(s.documents[idx])"
+                  <a :href="doc['generatorUrl'] || '#'" @click="doc['generatorUrl'] || (openDoc(s.documents[idx]), false)"
                      class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md">
                     <template x-if="doc.demoImage">
                       <div class="h-32 sm:h-40 bg-gray-100 overflow-hidden relative">
@@ -415,10 +415,10 @@
           <div class="text-center text-sm text-gray-400">
             <p>覺得有用？分享俾朋友 👇</p>
             <div class="flex items-center justify-center gap-3 mt-2">
-              <a href="https://wa.me/?text=香港有限公司股份轉讓完整指南，全部免費！https://hongkpng855-lang.github.io/esgov/shareholder-transfer.html" target="_blank"
+              <a href="https://wa.me/?text=香港有限公司股份轉讓完整指南，全部免費！https://esgov.org/shareholder-transfer.html" target="_blank"
                  class="text-green-500 hover:text-green-600 font-semibold">WhatsApp</a>
               <span class="text-gray-300">|</span>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://hongkpng855-lang.github.io/esgov/shareholder-transfer.html" target="_blank"
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://esgov.org/shareholder-transfer.html" target="_blank"
                  class="text-blue-500 hover:text-blue-600 font-semibold">Facebook</a>
             </div>
           </div>
@@ -557,7 +557,7 @@
       <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
         <p>⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。</p>
         <p class="mt-1">© 2025 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v9.0 · 全部免費 🆓 🆓</p>
+        <p class="mt-2 opacity-40">v9.1 · 全部免費 🆓 🆓</p>
       </div>
     </div>
   </footer>
