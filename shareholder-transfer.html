@@ -311,10 +311,9 @@
               <div class="grid sm:grid-cols-2 gap-4">
                 <template x-for="(doc, idx) in s.documents" :key="idx">
                   <div x-show="s.stepNumber === 1 || s.documents[0].hasGenerator"
-                       x-data="{openDoc: function(){ window.openDoc(s.documents[idx]); }}"
-                       :href="doc['generatorUrl'] || '#'"
+                       
                        class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md"
-                       @click="if(doc['generatorUrl']) window.location=doc['generatorUrl']; else openDoc(s.documents[idx]);">
+                       :href="doc['generatorUrl'] || '#'" @click.prevent="!doc['generatorUrl'] && openDoc(s.documents[idx])">
                     <template x-if="doc.demoImage">
                       <div class="h-32 sm:h-40 bg-gray-100 overflow-hidden relative">
                         <img :src="doc.demoImage" :alt="doc.name" class="w-full h-full object-cover" @error="$event.target.closest('div').innerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-sm>🖼️ 範例圖片</div>'" />
