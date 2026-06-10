@@ -57,11 +57,9 @@
     try {
       const r = await fetch('processes.json?v=9.0');
       if (!r.ok) throw new Error('HTTP '+r.status);
-      const data = await r.json();
-      const found = Array.isArray(data) ? data.find(p => p.processId === 'shareholder-transfer') : data;
-      if (!found) throw new Error('Process not found');
-      this.processData = found;
-      this.totalSteps = found.totalSteps;
+      const j = await r.json();
+      this.processData = j;
+      this.totalSteps = j.totalSteps;
     } catch(e) {
       this.error = '無法載入內容，請重新整理頁面';
       console.error('Load error:', e);

@@ -1,586 +1,149 @@
-[
-  {
-    "processId": "shareholder-transfer",
-    "title": "香港有限公司股份轉讓完整指南",
-    "totalSteps": 5,
-    "freeSteps": 5,
-    "price": 0,
-    "currency": "HKD",
-    "donateMessage": "如果呢份指南幫到你，可以請我飲杯咖啡 ☕",
-    "steps": [
-      {
-        "stepNumber": 1,
-        "title": "簽署股份賣出單（Sold Note / Bought Note）",
-        "summary": "記錄轉讓股數、作價及交易條款，雙方確認",
-        "isFree": true,
-        "details": "第一份文件，記錄雙方交易細節。份文件 confirm 咗之後先簽正式轉讓書。\n\n⚠️ 唔好做嘅事：\n• 唔好 skip 呢一步 → 冇 Sold Note，口頭 agreement 就到填轉讓書嗰陣數字亂晒龍\n• 股份類別唔好寫錯 → 普通股同優先股要分開列明，唔可以溝埋\n• 唔好只寫總額 → 要分開寫每股作價同總額，否則計印花稅要返轉頭計\n• 日期唔好寫錯 → 交易日期同之後嘅轉讓書日期要 match\n\n✅ 一定要做：\n• 雙方簽署確認約定\n• 列明每股作價同總代價\n• 保留簽署副本作記錄",
-        "documents": [
-          {
-            "name": "股份賣出單（Sold Note）",
-            "description": "記錄轉讓股數、作價及交易條款，雙方確認用。可使用互動工具直接填寫並一鍵生成 PDF。",
-            "demoImage": "assets/demo/sold-note-realdemo-1.png?v=9.0",
-            "templateFile": "templates/sold-note.docx",
-            "hasGenerator": true,
-            "commonMistakes": [
-              "冇做 Sold Note — 口頭 agreement 就算，到填轉讓書嗰陣數字亂晒龍",
-              "股份類別寫錯 — 普通股同優先股要分開列明，唔可以溝埋",
-              "冇寫每股作價 — 只寫總額，到計印花稅嗰陣要返轉頭計",
-              "日期寫錯 — 交易日期同轉讓書日期要 match"
-            ],
-            "generatorUrl": "sold-note-generator.html"
-          }
-        ],
-        "rejectionRisks": [
-          "數字唔一致 = Sold Note 同 Instrument of Transfer 對唔上，要重新確認"
-        ]
-      },
-      {
-        "stepNumber": 2,
-        "title": "簽署股份轉讓書（Instrument of Transfer）",
-        "summary": "正式轉讓文件，轉讓人同承讓人雙方簽署，係提交政府嘅核心文件",
-        "isFree": true,
-        "details": "核心文件，要交政府。格式錯即時退回。\n\n⚠️ 唔好做嘅事：\n• 唔好 download 通用模板 → 官方唔收，成個流程遲一個月\n• 公司名唔好寫錯 → 「Limited」漏咗即退\n• 見證人唔好搵親戚 → 被質疑獨立性\n• 日期唔好倒填 → 邏輯唔通被質疑\n\n✅ 一定要做：\n• 用公司註冊處認可格式\n• 雙方親筆簽署 + 見證人（獨立第三方）\n• 公司名同商業登記證 100% 一致\n• 部分轉讓列明：轉讓前 → 轉讓股數 → 轉讓後",
-        "documents": [
-          {
-            "name": "股份轉讓書（Instrument of Transfer）",
-            "description": "公司註冊處認可格式，雙方簽署嘅正式轉讓文件。可使用互動工具直接填寫並一鍵生成 PDF。",
-            "demoImage": "assets/demo/step3-instrument.png?v=9.0",
-            "templateFile": "templates/instrument-of-transfer.docx",
-            "commonMistakes": [
-              "用錯格式 — 上網 download 通用模板，官方唔收，我錯過兩次先識",
-              "公司名唔一致 — 商業登記證寫 'Limited' 你寫 'Ltd'，即時退回",
-              "日期倒填 — 轉讓日期唔可以早過 Sold Note 日期，邏輯唔通",
-              "簽署位置錯 — 轉讓人同承讓人調轉咗簽",
-              "見證人資格不符 — 見證人係轉讓人嘅親戚，被質疑獨立性"
-            ],
-            "hasGenerator": true,
-            "generatorUrl": "instrument-transfer-generator.html"
-          }
-        ],
-        "rejectionRisks": [
-          "格式錯誤 = 整份文件作廢，要重新簽過（我經歷過）",
-          "公司名稱不一致 = 即時退回",
-          "見證人唔合格 = 文件有效性被質疑"
-        ]
-      },
-      {
-        "stepNumber": 3,
-        "title": "簽署承讓人確認信（Letter of Transferee of Shares）",
-        "summary": "承讓人書面確認接收股份，同意受公司組織章程細則約束",
-        "isFree": true,
-        "details": "承讓人確認接收股份，內部記錄用。\n\n⚠️ 唔好做嘅事：\n• 唔好 skip 呢份 → 內部記錄唔完整，貸款會出事\n• 公司買股份要有授權代表簽署 → 否則文件失效\n\n✅ 一定要做：\n• 寫明同意邊個版本嘅 Articles of Association\n• 承讓人地址同身份證一致\n• 公司買股份要列公司註冊編號 + 授權代表",
-        "documents": [
-          {
-            "name": "承讓人確認信（Letter of Transferee of Shares）",
-            "description": "承讓人確認接收股份，同意受公司細則約束",
-            "demoImage": "assets/demo/step2-transferee-letter.svg",
-            "templateFile": "templates/letter-of-transferee.docx",
-            "commonMistakes": [
-              "Skip 咗呢份文件 — 以為簽轉讓書就得，其實承讓人確認信係必須嘅內部記錄",
-              "冇列明公司細則版本 — 要寫明同意受哪個版本嘅 Articles of Association 約束",
-              "承讓人係公司但冇授權代表簽署 — 公司買公司股份要列明授權代表",
-              "地址同身份證明唔一致 — 承讓人地址要同身份證/護照一致"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "冇承讓人確認信 = 內部記錄唔完整，將來盡職調查或銀行貸款會有問題"
-        ]
-      },
-      {
-        "stepNumber": 4,
-        "title": "準備 6 個月內審計報告（Audit Report）",
-        "summary": "提交最近期嘅審計報告，用於印花稅計算及證明公司財務狀況",
-        "isFree": true,
-        "details": "稅局用呢份報告計印花稅。作價太低會補稅。\n\n⚠️ 唔好做嘅事：\n• 唔好以為跟 Sold Note 作價就得 → 低過資產淨值要補稅\n• 唔好用過期報告 → 超過 6 個月稅局唔收\n• 公司未做審計唔好唔理 → 管理帳目都得\n\n✅ 一定要做：\n• 審計報告要 6 個月內\n• 冇 audit → 準備管理帳目 + 董事簽署\n• 印花稅 = 代價 0.2%（最低 $5）\n• 新公司可出「董事聲明」代替",
-        "documents": [
-          {
-            "name": "6個月內審計報告（Audit Report）",
-            "description": "由核數師簽署嘅公司財務報告，用於證明股份價值",
-            "demoImage": "assets/demo/step4-audit.svg",
-            "templateFile": "templates/audit-report-sample.docx",
-            "commonMistakes": [
-              "審計報告過咗 6 個月 — 稅局有權要求最新嘅財務資料，要重新出報告",
-              "冇核對資產淨值 — 作價寫得太低，稅局用 audit report 重新估值，要補稅",
-              "用舊年嘅報告 — 公司財務狀況可能有重大變動，要用最新嘅",
-              "公司未做審計就唔理 — 可以用管理帳目代替，但要有董事簽署確認"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "審計報告過期 = 稅局可能要求最新財務資料，延遲處理",
-          "作價同報告唔符 = 被稅局重新估值，要補交印花稅差額"
-        ]
-      },
-      {
-        "stepNumber": 5,
-        "title": "提交 NAR1 及完成後續申報",
-        "summary": "向公司註冊處提交周年申報表，更新股東及股本資料",
-        "isFree": true,
-        "details": "最後申報步驟。唔交或遲交會罰錢。\n\n⚠️ 唔好做嘅事：\n• 唔好以為搞掂轉讓書就完 → 仲要交 NAR1\n• 唔好逾期 → 罰 $870，越耐越罰得多\n• 唔好用舊年董事資料 → 被要求解釋\n\n✅ 一定要做：\n• 成立周年日後 42 日內交\n• 股東資料同轉讓書 match\n• 網上提交最快（eCR 系統）\n• 費用：登記費 $105\n• 轉讓同 annual return 時間差太遠就主動提交",
-        "documents": [
-          {
-            "name": "NAR1（周年申報表）",
-            "description": "向公司註冊處申報公司最新狀況，包括股東及股本變更",
-            "demoImage": "assets/demo/step5-nar1.svg",
-            "templateFile": "templates/form-nar1.docx",
-            "commonMistakes": [
-              "以為唔使交 NAR1 — 轉讓完成後要更新公司紀錄，唔交會罰錢",
-              "逾期提交 — 成立周年日後 42 日內要交，遲交罰 HK$870",
-              "資料同轉讓書唔一致 — NAR1 嘅股東資料要同轉讓書 match",
-              "董事資料過期 — NAR1 嘅董事資料要係最新，唔可以用舊年嘅",
-              "冇簽署就交 — NAR1 要有董事簽署，網上提交都要數碼簽署"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "逾期提交 NAR1 = 公司註冊處罰款 HK$870，遲交越耐罰得越多",
-          "資料唔一致 = 被公司註冊處要求補充解釋"
-        ]
-      }
-    ],
-    "finalDonate": {
-      "title": "幫到你嗎？請我飲杯咖啡 ☕",
-      "message": "呢份指南係我親身經歷整理，全部免費公開。如果幫到你節省時間同金錢，可以請我飲杯咖啡支持下，等我繼續製作更多免費指南！",
-      "goalMessage": "目標：100 次支持下載後，我會擴展到更多流程指南 🎯",
-      "buyMeACoffeeUrl": "https://buymeacoffee.com/esgov",
-      "emailCollectionTitle": "想我哋提供咩指南？",
-      "emailCollectionMessage": "可以通知我哋，話俾我哋知你想睇咩文件 😊"
-    }
-  },
-  {
-    "processId": "company-dissolution",
-    "title": "香港有限公司撤銷註冊（公司註銷）完整指南",
-    "totalSteps": 5,
-    "freeSteps": 5,
-    "price": 0,
-    "currency": "HKD",
-    "donateMessage": "如果呢份指南幫到你，可以請我飲杯咖啡 ☕",
-    "steps": [
-      {
-        "stepNumber": 1,
-        "title": "確認撤銷資格及取得股東書面同意",
-        "summary": "核對公司是否符合撤銷註冊嘅 6 大法定條件，取得全體股東書面同意",
-        "isFree": true,
-        "details": "第一件事，你要確認你間公司係咪合資格申請撤銷註冊。根據《公司條例》第 750(2) 條，一定要同時符合 6 個條件：公司過去 3 個月冇營運、所有股東書面同意、冇未清債務、已處理晒所有資產、唔係公眾公司/銀行/保險類別、已取得稅務局不反對通知書。\n\n最伏嘅位係「以為自己合資格」。我見過有人公司停咗一年，點知仲有個銀行戶口有 00，解散之後嗰 00 就變咗政府嘅。亦有人唔記得仲有未收嘅應收賬款，結果要搞到上法庭申請恢復公司註冊先追得返。\n\n⚠️ 唔好做嘅事：\n• 唔好 skip 股東同意 → 一定要書面，口頭唔算\n• 唔好以為停咗業就自動合資格 → 要逐項 check\n• 唔好忽略資產 → 銀行戶口、應收賬款、按金全部要清\n\n✅ 一定要做：\n• 開股東會議取得書面同意\n• 核對公司類型（私人有限公司先得）\n• Check 過去 3 個月冇任何營運記錄\n• 關閉銀行戶口、清走所有資產",
-        "documents": [
-          {
-            "name": "股東書面同意書",
-            "description": "全體股東書面簽署同意撤銷公司註冊，係申請嘅必要文件",
-            "demoImage": "assets/demo/dissolution-step1.svg",
-            "templateFile": "templates/dissolution-resolution.docx",
-            "commonMistakes": [
-              "口頭同意當書面 — 公司註冊處要白紙黑字簽名先收",
-              "唔記得有一位股東冇簽 — 全部股東都要簽，唔可以 majority 就算",
-              "冇列明公司名同決議日期 — 文件有效性被質疑"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "唔符合條件就申請 = 被公司註冊處退回，浪費時間"
-        ]
-      },
-      {
-        "stepNumber": 2,
-        "title": "向稅務局申請不反對撤銷公司註冊通知書（IR1263）",
-        "summary": "填妥 IR1263 表格，向稅務局申請《不反對撤銷公司註冊通知書》，費用 HK70",
-        "isFree": true,
-        "details": "呢步係向稅務局申請「唔反對你撤銷公司」。稅務局會 check 你過去 7 年所有報稅事項係咪齊全，有冇未清稅款。\n\n申請費用 HK70，唔理批唔批都唔會退還。稅務局嘅服務水平係 21 個工作日內回覆。\n\n最常見嘅死因係「以爲 NIL 報稅唔使交」。就算公司冇營運、冇收入，都要照交 NIL 報稅表。漏交一份，稅務局就唔會出「不反對通知書」，成個申請卡死。\n\n⚠️ 唔好做嘅事：\n• 唔好 skip NIL 報稅 → 過去 7 年所有年度都要交齊\n• 唔好逾期遞交 → 唔反對通知書有效期得 3 個月\n• 唔好交錯 cheque → 抬頭「香港特別行政區政府」\n\n✅ 一定要做：\n• 確認所有年度報稅表已交（包括 NIL）\n• 繳清所有未付稅款\n• 確保商業登記費已繳至最近期",
-        "documents": [
-          {
-            "name": "IR1263 不反對撤銷公司註冊通知書申請表",
-            "description": "向稅務局申請不反對撤銷公司註冊，費用 HK70，需連同支票遞交",
-            "demoImage": "assets/demo/dissolution-step2.svg",
-            "templateFile": "templates/ir1263-form.pdf",
-            "commonMistakes": [
-              "漏交 NIL 報稅表 — 過去 7 年所有年度都要交齊，稅局會逐份對",
-              "支票寫錯抬頭 — 一定要寫「香港特別行政區政府」",
-              "冇留夠 21 個工作天審批時間 — 想快都冇得快"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "稅局發現未清稅務 = 唔出「不反對通知書」，要搞掂晒再申請過"
-        ]
-      },
-      {
-        "stepNumber": 3,
-        "title": "向公司註冊處提交 NDR1 撤銷註冊申請",
-        "summary": "取得不反對通知書後 3 個月內，提交 NDR1 表格，費用 HK20，過期要重新申請",
-        "isFree": true,
-        "details": "收到稅務局嘅「不反對通知書」之後，你只有 3 個月時間向公司註冊處提交 NDR1 表格。過期就要重新申請過，再俾多次 HK70。\n\nNDR1 費用 HK20，連同之前嘅 70，政府總費用係 HK90。可以郵寄或親身去金鐘道政府合署 14 樓遞交。\n\n⚠️ 唔好做嘅事：\n• 唔好過咗 3 個月限期 → 通知書會失效，要重新申請\n• 唔好遺失通知書正本 → 印本提交要正本，電子提交要核證副本\n\n✅ 一定要做：\n• 喺 3 個月內提交 NDR1\n• 夾埋不反對通知書正本\n• 準備好 HK20 申請費",
-        "documents": [
-          {
-            "name": "NDR1 撤銷註冊申請書（私人公司或擔保有限公司）",
-            "description": "向公司註冊處提交嘅正式撤銷註冊申請表格，費用 HK20",
-            "demoImage": "assets/demo/dissolution-step3.svg",
-            "templateFile": "templates/form-ndr1.pdf",
-            "commonMistakes": [
-              "不反對通知書過期 — 3 個月內一定要提交，否則要重新申請",
-              "表格簽錯人 — 要由董事或公司秘書簽署",
-              "冇附上通知書正本 — 印本提交必須要正本"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "通知書過期 = 要重新申請 IR1263，再俾多次 HK70"
-        ]
-      },
-      {
-        "stepNumber": 4,
-        "title": "等待刊憲及公司解散程序",
-        "summary": "公司註冊處刊登兩次憲報公告，3 個月無人反對後公司正式解散，全程約 6-9 個月",
-        "isFree": true,
-        "details": "提交 NDR1 之後，公司註冊處會進行審批，刊登第一次憲報公告。之後有 3 個月嘅「冷靜期」俾人提出反對。如果冇人反對，就會刊登第二次憲報公告，公司喺當日正式解散。\n\n成個程序一般需時 6 至 9 個月。期間公司嘅法律地位仍然存在，所以所有法定義務（包括商業登記續期、周年申報表）都要繼續履行。\n\n⚠️ 唔好做嘅事：\n• 唔好以爲提交咗就唔使理 → BR 到期要續，NAR1 到期要交\n• 唔好喺呢段時間開新業務 → 會俾人質疑你「冇營運」嘅聲明\n\n✅ 一定要做：\n• 保持 BR 有效至正式解散日\n• 留意公司註冊處嘅信件\n• 如地址有變，通知公司註冊處",
-        "documents": [
-          {
-            "name": "公司解散期間注意事項清單",
-            "description": "解散期間需要繼續履行嘅法定義務清單，避免被罰款",
-            "demoImage": "assets/demo/dissolution-step4.svg",
-            "templateFile": "templates/dissolution-checklist.docx",
-            "commonMistakes": [
-              "以為提交咗就唔使理 — BR 到期要續，過期會被罰款",
-              "冇 check 憲報公告 — 錯過咗公告都唔知",
-              "地址改變冇通知 — 收唔到公司註冊處嘅重要信件"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "有人喺 3 個月內提出反對 = 程序暫停，要處理反對理由"
-        ]
-      },
-      {
-        "stepNumber": 5,
-        "title": "取消商業登記及保存公司紀錄",
-        "summary": "解散後填寫 IR1313 取消商業登記，保存公司會計紀錄至少 7 年",
-        "isFree": true,
-        "details": "公司正式解散後，你仲要做多兩件事：第一，填寫 IR1313 表格通知稅局商業登記署取消商業登記（要喺停業後 1 個月內通知）。第二，根據《稅務條例》第 51C 條，公司嘅業務同會計紀錄要保留至少 7 年，即使公司已經解散。\n\n⚠️ 唔好做嘅事：\n• 唔好以爲解散咗就掉晒啲文件 → 法律要求保留 7 年\n• 唔好唔取消商業登記 → 稅局會繼續寄報稅表俾你\n\n✅ 一定要做：\n• 填 IR1313 取消商業登記\n• 保存所有公司文件至少 7 年\n• 通知銀行、供應商等相關方公司已解散",
-        "documents": [
-          {
-            "name": "IR1313 取消商業登記通知書",
-            "description": "向稅務局商業登記署通知公司已解散，取消商業登記",
-            "demoImage": "assets/demo/dissolution-step5.svg",
-            "templateFile": "templates/dissolution-checklist.docx",
-            "commonMistakes": [
-              "冇取消商業登記 — 稅局會繼續寄商業登記續期通知",
-              "過早銷毁文件 — 法律要求保留 7 年，違反可被罰款",
-              "冇通知銀行戶口已取消 — 可能有未結算交易"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "未取消商業登記 = 稅局會當公司仍然存在，繼續發出報稅表"
-        ]
-      }
-    ],
-    "finalDonate": {
-      "title": "幫到你嗎？請我飲杯咖啡 ☕",
-      "message": "由真實經歷者整理，全部免費公開。如果幫到你節省時間同金錢，可以請我飲杯咖啡支持下！",
-      "goalMessage": "每個支持都幫助我繼續製作更多免費指南 🎯",
-      "buyMeACoffeeUrl": "https://buymeacoffee.com/esgov",
-      "emailCollectionTitle": "想我哋提供咩指南？",
-      "emailCollectionMessage": "可以通知我哋，話俾我哋知你想睇咩文件 😊"
+{
+  "processId": "shareholder-transfer",
+  "title": "香港有限公司股份轉讓完整指南",
+  "totalSteps": 5,
+  "freeSteps": 5,
+  "price": 0,
+  "currency": "HKD",
+  "donateMessage": "如果呢份指南幫到你，可以請我飲杯咖啡 ☕",
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "簽署股份賣出單（Sold Note / Bought Note）",
+      "summary": "記錄轉讓股數、作價及交易條款，雙方確認",
+      "isFree": true,
+      "details": "第一份文件，記錄雙方交易細節。份文件 confirm 咗之後先簽正式轉讓書。\n\n⚠️ 唔好做嘅事：\n• 唔好 skip 呢一步 → 冇 Sold Note，口頭 agreement 就到填轉讓書嗰陣數字亂晒龍\n• 股份類別唔好寫錯 → 普通股同優先股要分開列明，唔可以溝埋\n• 唔好只寫總額 → 要分開寫每股作價同總額，否則計印花稅要返轉頭計\n• 日期唔好寫錯 → 交易日期同之後嘅轉讓書日期要 match\n\n✅ 一定要做：\n• 雙方簽署確認約定\n• 列明每股作價同總代價\n• 保留簽署副本作記錄",
+      "documents": [
+        {
+          "name": "股份賣出單（Sold Note）",
+          "description": "記錄轉讓股數、作價及交易條款，雙方確認用。可使用互動工具直接填寫並一鍵生成 PDF。",
+          "demoImage": "assets/demo/sold-note-realdemo-1.png?v=9.0",
+          "templateFile": "templates/sold-note.docx",
+          "hasGenerator": true,
+          "commonMistakes": [
+            "冇做 Sold Note — 口頭 agreement 就算，到填轉讓書嗰陣數字亂晒龍",
+            "股份類別寫錯 — 普通股同優先股要分開列明，唔可以溝埋",
+            "冇寫每股作價 — 只寫總額，到計印花稅嗰陣要返轉頭計",
+            "日期寫錯 — 交易日期同轉讓書日期要 match"
+          ],
+          "generatorUrl": "sold-note-generator.html"
+        }
+      ],
+      "rejectionRisks": [
+        "數字唔一致 = Sold Note 同 Instrument of Transfer 對唔上，要重新確認"
+      ]
     },
-    "priceComparison": {
-      "benchmark": 5000,
-      "benchmarkLabel": "會計公司收費",
-      "savings": "85-90%",
-      "note": "自己搞掂政府費用只需 HK90"
+    {
+      "stepNumber": 2,
+      "title": "簽署股份轉讓書（Instrument of Transfer）",
+      "summary": "正式轉讓文件，轉讓人同承讓人雙方簽署，係提交政府嘅核心文件",
+      "isFree": true,
+      "details": "核心文件，要交政府。格式錯即時退回。\n\n⚠️ 唔好做嘅事：\n• 唔好 download 通用模板 → 官方唔收，成個流程遲一個月\n• 公司名唔好寫錯 → 「Limited」漏咗即退\n• 見證人唔好搵親戚 → 被質疑獨立性\n• 日期唔好倒填 → 邏輯唔通被質疑\n\n✅ 一定要做：\n• 用公司註冊處認可格式\n• 雙方親筆簽署 + 見證人（獨立第三方）\n• 公司名同商業登記證 100% 一致\n• 部分轉讓列明：轉讓前 → 轉讓股數 → 轉讓後",
+      "documents": [
+        {
+          "name": "股份轉讓書（Instrument of Transfer）",
+          "description": "公司註冊處認可格式，雙方簽署嘅正式轉讓文件。可使用互動工具直接填寫並一鍵生成 PDF。",
+          "demoImage": "assets/demo/step3-instrument.png?v=9.0",
+          "templateFile": "templates/instrument-of-transfer.docx",
+          "commonMistakes": [
+            "用錯格式 — 上網 download 通用模板，官方唔收，我錯過兩次先識",
+            "公司名唔一致 — 商業登記證寫 'Limited' 你寫 'Ltd'，即時退回",
+            "日期倒填 — 轉讓日期唔可以早過 Sold Note 日期，邏輯唔通",
+            "簽署位置錯 — 轉讓人同承讓人調轉咗簽",
+            "見證人資格不符 — 見證人係轉讓人嘅親戚，被質疑獨立性"
+          ],
+          "hasGenerator": true,
+          "generatorUrl": "instrument-transfer-generator.html"
+        }
+      ],
+      "rejectionRisks": [
+        "格式錯誤 = 整份文件作廢，要重新簽過（我經歷過）",
+        "公司名稱不一致 = 即時退回",
+        "見證人唔合格 = 文件有效性被質疑"
+      ]
+    },
+    {
+      "stepNumber": 3,
+      "title": "簽署承讓人確認信（Letter of Transferee of Shares）",
+      "summary": "承讓人書面確認接收股份，同意受公司組織章程細則約束",
+      "isFree": true,
+      "details": "承讓人確認接收股份，內部記錄用。\n\n⚠️ 唔好做嘅事：\n• 唔好 skip 呢份 → 內部記錄唔完整，貸款會出事\n• 公司買股份要有授權代表簽署 → 否則文件失效\n\n✅ 一定要做：\n• 寫明同意邊個版本嘅 Articles of Association\n• 承讓人地址同身份證一致\n• 公司買股份要列公司註冊編號 + 授權代表",
+      "documents": [
+        {
+          "name": "承讓人確認信（Letter of Transferee of Shares）",
+          "description": "承讓人確認接收股份，同意受公司細則約束",
+          "demoImage": "assets/demo/step2-transferee-letter.svg",
+          "templateFile": "templates/letter-of-transferee.docx",
+          "commonMistakes": [
+            "Skip 咗呢份文件 — 以為簽轉讓書就得，其實承讓人確認信係必須嘅內部記錄",
+            "冇列明公司細則版本 — 要寫明同意受哪個版本嘅 Articles of Association 約束",
+            "承讓人係公司但冇授權代表簽署 — 公司買公司股份要列明授權代表",
+            "地址同身份證明唔一致 — 承讓人地址要同身份證/護照一致"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "冇承讓人確認信 = 內部記錄唔完整，將來盡職調查或銀行貸款會有問題"
+      ]
+    },
+    {
+      "stepNumber": 4,
+      "title": "準備 6 個月內審計報告（Audit Report）",
+      "summary": "提交最近期嘅審計報告，用於印花稅計算及證明公司財務狀況",
+      "isFree": true,
+      "details": "稅局用呢份報告計印花稅。作價太低會補稅。\n\n⚠️ 唔好做嘅事：\n• 唔好以為跟 Sold Note 作價就得 → 低過資產淨值要補稅\n• 唔好用過期報告 → 超過 6 個月稅局唔收\n• 公司未做審計唔好唔理 → 管理帳目都得\n\n✅ 一定要做：\n• 審計報告要 6 個月內\n• 冇 audit → 準備管理帳目 + 董事簽署\n• 印花稅 = 代價 0.2%（最低 $5）\n• 新公司可出「董事聲明」代替",
+      "documents": [
+        {
+          "name": "6個月內審計報告（Audit Report）",
+          "description": "由核數師簽署嘅公司財務報告，用於證明股份價值",
+          "demoImage": "assets/demo/step4-audit.svg",
+          "templateFile": "templates/audit-report-sample.docx",
+          "commonMistakes": [
+            "審計報告過咗 6 個月 — 稅局有權要求最新嘅財務資料，要重新出報告",
+            "冇核對資產淨值 — 作價寫得太低，稅局用 audit report 重新估值，要補稅",
+            "用舊年嘅報告 — 公司財務狀況可能有重大變動，要用最新嘅",
+            "公司未做審計就唔理 — 可以用管理帳目代替，但要有董事簽署確認"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "審計報告過期 = 稅局可能要求最新財務資料，延遲處理",
+        "作價同報告唔符 = 被稅局重新估值，要補交印花稅差額"
+      ]
+    },
+    {
+      "stepNumber": 5,
+      "title": "提交 NAR1 及完成後續申報",
+      "summary": "向公司註冊處提交周年申報表，更新股東及股本資料",
+      "isFree": true,
+      "details": "最後申報步驟。唔交或遲交會罰錢。\n\n⚠️ 唔好做嘅事：\n• 唔好以為搞掂轉讓書就完 → 仲要交 NAR1\n• 唔好逾期 → 罰 $870，越耐越罰得多\n• 唔好用舊年董事資料 → 被要求解釋\n\n✅ 一定要做：\n• 成立周年日後 42 日內交\n• 股東資料同轉讓書 match\n• 網上提交最快（eCR 系統）\n• 費用：登記費 $105\n• 轉讓同 annual return 時間差太遠就主動提交",
+      "documents": [
+        {
+          "name": "NAR1（周年申報表）",
+          "description": "向公司註冊處申報公司最新狀況，包括股東及股本變更",
+          "demoImage": "assets/demo/step5-nar1.svg",
+          "templateFile": "templates/form-nar1.docx",
+          "commonMistakes": [
+            "以為唔使交 NAR1 — 轉讓完成後要更新公司紀錄，唔交會罰錢",
+            "逾期提交 — 成立周年日後 42 日內要交，遲交罰 HK$870",
+            "資料同轉讓書唔一致 — NAR1 嘅股東資料要同轉讓書 match",
+            "董事資料過期 — NAR1 嘅董事資料要係最新，唔可以用舊年嘅",
+            "冇簽署就交 — NAR1 要有董事簽署，網上提交都要數碼簽署"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "逾期提交 NAR1 = 公司註冊處罰款 HK$870，遲交越耐罰得越多",
+        "資料唔一致 = 被公司註冊處要求補充解釋"
+      ]
     }
-  },
-  {
-    "processId": "director-change",
-    "title": "香港有限公司董事變更（辭任/委任）完整指南",
-    "totalSteps": 5,
-    "freeSteps": 5,
-    "price": 0,
-    "currency": "HKD",
-    "donateMessage": "如果呢份指南幫到你，可以請我飲杯咖啡 ☕",
-    "steps": [
-      {
-        "stepNumber": 1,
-        "title": "董事辭職信/委任書及董事會決議",
-        "summary": "辭任或委任董事需準備書面文件，通過董事會決議確認",
-        "isFree": true,
-        "details": "無論係董事辭任定係委任新董事，第一步都係準備內部文件。\n\n董事辭任：\n• 辭任董事要發出書面辭職信，列明生效日期\n• 按照公司組織章程細則（AA）規定嘅通知期\n• 公司要召開董事會會議或通過書面決議確認\n\n委任新董事：\n• 公司可以通過普通決議或董事會決定任命新董事\n• 要確認候選人符合董事資格：年滿 18 歲、未被取消董事資格\n• 至少一位董事必須係自然人\n\n⚠️ 唔好做嘅事：\n• 董事辭任唔好口頭就算 → 一定要書面\n• 唔好唔理 AA 嘅通知期 → 否則辭職無效\n• 唔好委任未滿 18 歲嘅人 → 違法\n\n✅ 一定要做：\n• 董事辭職信要有簽署同日期\n• 董事會決議要記錄喺公司會議紀錄\n• 確認新董事同意出任",
-        "documents": [
-          {
-            "name": "董事辭職信模板",
-            "description": "董事辭任嘅標準書面通知格式，包含聲明根據公司細則正式辭任",
-            "demoImage": "assets/demo/director-step1.svg",
-            "templateFile": "templates/director-resignation-letter.docx",
-            "commonMistakes": [
-              "口頭辭職就算 — 冇書面紀錄，日後法律責任唔清唔楚",
-              "冇跟 AA 通知期 — 組織章程細則可能有特定通知期要求",
-              "辭職生效日期唔清楚 — 引起日後爭議"
-            ]
-          },
-          {
-            "name": "董事委任書模板",
-            "description": "記錄新董事委任嘅內部文件，包括委任條件同生效日期",
-            "demoImage": "assets/demo/director-step1b.svg",
-            "templateFile": "templates/director-appointment-letter.docx",
-            "commonMistakes": [
-              "新董事未確認願意出任 — 要預先取得同意",
-              "冇確認董事資格 — 被取消資格嘅人唔可以出任董事",
-              "冇記錄喺會議紀錄 — 內部紀錄唔完整"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "冇書面辭職紀錄 = 日後法律責任爭議",
-          "董事資格不符 = 公司註冊處拒絕註冊"
-        ]
-      },
-      {
-        "stepNumber": 2,
-        "title": "提交 ND2A 通知公司註冊處（15 日內）",
-        "summary": "董事變更後 15 日內向公司註冊處提交 ND2A 表格，費用全免",
-        "isFree": true,
-        "details": "公司註冊處嘅 deadline 好短 — 董事委任或停任後 15 日內就要申報。\n\n填寫 ND2A 表格（更改公司秘書及董事通知書），申報委任/停任詳情。\n\nND2A 係用嚟申報：\n• 董事委任（Appointment）\n• 董事停任/辭任（Cessation）\n• 公司秘書變更\n\n可以網上提交（eCR 系統）或郵寄/親身遞交。\n\n費用：免費（唔使錢）。\n\n⚠️ 唔好做嘅事：\n• 唔好超過 15 日 — 逾期提交公司註冊處有權檢控\n• 唔好填錯董事姓名或身份證號碼 — 要同身份證明文件一致\n• 辭任董事認為公司唔會申報 → 可以自己直接遞交通知書俾公司註冊處\n\n✅ 一定要做：\n• 董事變更後 15 日內提交\n• 核對所有資料準確無誤\n• 保留提交確認文件",
-        "documents": [
-          {
-            "name": "ND2A 更改公司秘書及董事通知書",
-            "description": "向公司註冊處申報董事委任/停任嘅標準表格，費用全免",
-            "demoImage": "assets/demo/director-step2.svg",
-            "templateFile": "templates/form-nd2a.docx",
-            "commonMistakes": [
-              "逾期提交 — 董事變更後 15 日內必須申報，逾期公司註冊處有權檢控",
-              "董事姓名或身份證號碼填錯 — 要同身份證明文件 100% 一致",
-              "辭任董事以為公司會幫手申報 — 如果公司唔申報，自己可以直接遞交",
-              "用舊版表格 — 要用公司註冊處最新版本"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "逾期提交 ND2A = 公司註冊處可檢控，最高罰款 HK$25,000",
-          "資料錯誤 = 公司註冊處要求更正，重新申報"
-        ]
-      },
-      {
-        "stepNumber": 3,
-        "title": "更新公司董事名冊（Register of Directors）",
-        "summary": "公司內部必須備存董事名冊，記錄現任及前任董事資料",
-        "isFree": true,
-        "details": "公司註冊處嘅申報（ND2A）做咗之後，你仲要更新公司內部嘅董事名冊。\n\n根據《公司條例》，公司必須備存董事名冊（Register of Directors），記錄：\n• 所有現任董事嘅全名、地址、身份證號碼\n• 委任日期\n• 辭任/停任日期及原因\n\n董事名冊係法定紀錄，必須存放喺公司註冊辦事處或指定地點。\n執法機關有權查閱。\n\n⚠️ 唔好做嘅事：\n• 唔好以為交咗 ND2A 就完 — 內部名冊都要更新\n• 唔好只更新而唔保留舊紀錄 — 前任董事資料都要保留\n• 唔好將名冊放喺非註冊地址而又唔通知公司註冊處\n\n✅ 一定要做：\n• 立即更新董事名冊\n• 保留完整變更紀錄\n• 如名冊存放地址唔係註冊辦事處，要提交 NR2 通知公司註冊處",
-        "documents": [
-          {
-            "name": "董事名冊模板",
-            "description": "公司法定董事名冊格式，記錄現任及前任董事詳細資料",
-            "demoImage": "assets/demo/director-step3.svg",
-            "templateFile": "templates/register-of-directors.docx",
-            "commonMistakes": [
-              "交咗 ND2A 就唔更新內部名冊 — 法例要求備存嘅係公司內部名冊",
-              "冇保留前任董事紀錄 — 即使已辭任，紀錄都要保留",
-              "名冊存放地址冇通知公司註冊處 — 如唔係註冊地址要交 NR2"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "未備存董事名冊 = 違反公司條例，最高罰款 HK$25,000",
-          "資料過時不更新 = 有誤導性，可能被檢控"
-        ]
-      },
-      {
-        "stepNumber": 4,
-        "title": "更新重要控制人登記冊（如有需要）",
-        "summary": "董事變更影響公司控制權時，需同步更新 SCR",
-        "isFree": true,
-        "details": "董事變更有時會影響公司嘅重要控制人登記冊（SCR）。\n\n如果董事變更影響以下情況，就要更新 SCR：\n• 董事變更導致某人獲得委任或罷免過半數董事嘅權利\n• 新董事對公司有重大影響力或控制權\n• 董事變更影響股東持股比例（如同時涉及股份變動）\n\n通常董事變更唔一定會影響 SCR，但如果：\n• 辭任/委任嘅董事亦係股東，持股超過 25%\n• 新董事有權委任過半數董事\n\n就需要同步更新 SCR。\n\n⚠️ 唔好做嘅事：\n• 唔好以為所有董事變更都要更新 SCR — 只係影響控制權嗰啲先要\n• 唔好忽略 SCR 更新 — 違規可被罰款最高 HK$25,000\n\n✅ 一定要做：\n• 判斷董事變更有冇影響控制權\n• 如有需要，15 天內更新 SCR\n• 確保指定代表知悉變更",
-        "documents": [
-          {
-            "name": "SCR 更新記錄模板",
-            "description": "重要控制人登記冊變更記錄表，適用於股權變動或控制權變更",
-            "demoImage": "assets/demo/director-step4.svg",
-            "templateFile": "templates/scr-update.docx",
-            "commonMistakes": [
-              "以為所有董事變更都要更新 SCR — 淨係影響控制權嗰啲先要",
-              "忽略 SCR 更新 — 違規最高罰款 HK$25,000 + 每日罰款 HK$700",
-              "唔知 SCR 要指定代表 — 公司要委任至少一名指定代表"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "SCR 未更新 = 違規最高罰款 HK$25,000 + 每日 HK$700"
-        ]
-      },
-      {
-        "stepNumber": 5,
-        "title": "通知銀行及其他相關方",
-        "summary": "董事變更後需通知銀行、供應商、合作夥伴等相關方",
-        "isFree": true,
-        "details": "董事變更唔單止要搞政府嗰邊，仲要通知其他相關方。\n\n✅ 一定要通知嘅：\n• 公司銀行 → 更新簽署授權同聯絡人\n• 公司秘書 → 更新公司紀錄\n• 核數師 → 知會變更\n\n建議通知嘅：\n• 主要供應商同客戶\n• 合作夥伴\n• 業主（如有租約）\n• 保險公司\n\n⚠️ 唔好做嘅事：\n• 唔好以為政府搞掂就得 — 銀行戶口簽署授權冇更新會用唔到\n• 唔好拖 — 銀行通常要求董事變更後 14-30 日內通知\n\n✅ 一定要做：\n• 更新銀行簽署授權\n• 更新公司網站同商業名片\n• 通知相關政府部門（如牌照機構）\n• 確保公司印章保管妥當",
-        "documents": [
-          {
-            "name": "董事變更通知清單及銀行更新表",
-            "description": "董事變更後需要通知嘅所有相關方清單，包括銀行簽署授權更新",
-            "demoImage": "assets/demo/director-step5.svg",
-            "templateFile": "templates/director-change-checklist.docx",
-            "commonMistakes": [
-              "冇更新銀行簽署授權 — 公司戶口用唔到，引致營運問題",
-              "冇通知公司秘書 — 公司秘書唔知董事變更，影響文件簽署",
-              "公司網站同社交媒體冇更新 — 俾人覺得唔專業",
-              "印章保管不善 — 離職董事可能仲有公司印章"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "銀行未更新簽署授權 = 公司資金動用受阻",
-          "牌照機構未通知 = 可能影響牌照有效性"
-        ]
-      }
-    ],
-    "finalDonate": {
-      "title": "幫到你嗎？請我飲杯咖啡 ☕",
-      "message": "呢份指南係我親身經歷整理，全部免費公開。如果幫到你節省時間同金錢，可以請我飲杯咖啡支持下，等我繼續製作更多免費指南！",
-      "goalMessage": "目標：100 次支持下載後，我會擴展到更多流程指南 🎯",
-      "buyMeACoffeeUrl": "https://buymeacoffee.com/esgov",
-      "emailCollectionTitle": "想我哋提供咩指南？",
-      "emailCollectionMessage": "可以通知我哋，話俾我哋知你想睇咩文件 😊"
-    }
-  },
-  {
-    "processId": "scr-register",
-    "title": "香港有限公司重要控制人登記冊（SCR）建立及維護完整指南",
-    "totalSteps": 5,
-    "freeSteps": 5,
-    "price": 0,
-    "currency": "HKD",
-    "donateMessage": "如果呢份指南幫到你，可以請我飲杯咖啡 ☕",
-    "steps": [
-      {
-        "stepNumber": 1,
-        "title": "識別公司嘅重要控制人",
-        "summary": "確認所有符合「重要控制人」定義嘅個人或法人實體",
-        "isFree": true,
-        "details": "第一步最重要，因為識錯人之後做嘅所有嘢都係錯嘅。\n\n根據《公司條例》，如果一個人符合以下 5 個條件嘅任何一個，就係公司嘅「重要控制人」：\n\n1️⃣ 直接或間接持有公司 25% 以上嘅已發行股份\n2️⃣ 直接或間接持有公司 25% 以上嘅表決權\n3️⃣ 直接或間接有權委任或罷免公司董事局過半數成員\n4️⃣ 對公司發揮或行使重大影響力或控制權\n5️⃣ 對某信託或商號嘅活動有重大影響力，而該信託/商號對公司有上述控制權\n\n⚠️ 2026 年最新修訂重點：一定要「穿透」最終自然人！如果公司股東係 BVI 公司，你要穿到最底層，識別出實際控制嗰間 BVI 嘅自然人。\n\n⚠️ 唔好做嘅事：\n• 唔好只登記公司股東名冊上面嘅人 — 可能有股東係代名人\n• 唔好忽略「重大影響力」呢個條件 — 就算持股唔到 25%，對公司有實際控制權都要登記\n\n✅ 一定要做：\n• 審查股東名冊、公司章程、股東協議\n• 向疑似重要控制人發出書面通知\n• 穿透任何離岸公司結構，識別最終自然人",
-        "documents": [
-          {
-            "name": "重要控制人識別通知書模板",
-            "description": "向疑似重要控制人發出嘅書面通知，要求提供相關資料以確認身份",
-            "demoImage": "assets/demo/scr-step1.svg",
-            "templateFile": "templates/scr-notice.docx",
-            "commonMistakes": [
-              "只登記股東名冊上嘅人 — 忽略咗代名人持股嘅情況",
-              "冇穿透離岸公司結構 — 2026 年修訂要求識別最終自然人",
-              "忽略「重大影響力」條件 — 就算持股少過 25% 可能都要登記",
-              "冇發出書面通知 — 公司有責任主動識別重要控制人"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "未識別重要控制人 = 被視為未履行盡職查詢義務，可被罰款 HK$25,000"
-        ]
-      },
-      {
-        "stepNumber": 2,
-        "title": "準備重要控制人登記冊（SCR）",
-        "summary": "根據識別結果，建立正式嘅重要控制人登記冊，記錄所有詳情",
-        "isFree": true,
-        "details": "確認咗所有重要控制人之後，就要建立正式嘅登記冊。\n\n登記冊必須包含以下資料：\n• 重要控制人嘅姓名\n• 通訊地址（唔可以用郵政信箱）\n• 身份證號碼或護照號碼（同簽發國家）\n• 成為須登記人士嘅日期\n• 對公司控制嘅性質（符合邊個條件）\n\n如果公司冇任何重要控制人（例如股權極度分散），都要喺登記冊記錄：「公司經合理查詢後，確認無重要控制人」，並註明查詢日期。\n\n登記冊可以用實體或電子形式備存。\n\n⚠️ 唔好做嘅事：\n• 唔好填寫不完整資料 → 每項資料都要填晒\n• 唔好忽略通訊地址 — 唔可以用郵政信箱\n• 公司冇重要控制人唔好唔寫理由 — 要記錄查詢結果\n\n✅ 一定要做：\n• 完整記錄每個重要控制人嘅所有資料\n• 列明控制性質（符合邊個條件）\n• 定期核對資料準確性",
-        "documents": [
-          {
-            "name": "重要控制人登記冊（SCR）範本",
-            "description": "完整嘅重要控制人登記冊格式範本，包括個人及法人重要控制人記錄",
-            "demoImage": "assets/demo/scr-step2.svg",
-            "templateFile": "templates/scr-register-template.docx",
-            "commonMistakes": [
-              "資料填寫唔完整 — 每項資料都要填寫，漏填可被視為不合規",
-              "通訊地址用郵政信箱 — 法例要求實體通訊地址",
-              "冇記錄公司冇重要控制人嘅情況 — 要寫明「經合理查詢後確認無重要控制人」",
-              "冇列明控制性質 — 要清楚記錄係基於邊個條件被識別"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "登記冊資料不完整 = 不合規，可被罰款",
-          "冇記錄查詢過程 = 被質疑未履行盡職查詢義務"
-        ]
-      },
-      {
-        "stepNumber": 3,
-        "title": "委任指定代表（Designated Representative）",
-        "summary": "公司必須委任至少一名指定代表，負責與執法機關聯絡",
-        "isFree": true,
-        "details": "指定代表係公司同執法機關之間嘅溝通橋樑。如果執法機關要求查閱 SCR，指定代表要協助提供。\n\n指定代表必須係以下三類之一：\n1️⃣ 公司嘅股東、董事或僱員（必須係香港居民）\n2️⃣ 會計專業人士或法律專業人士\n3️⃣ 信託或公司服務持牌人（TCSP）\n\n建議由公司董事或公司秘書兼任，唔需要另外俾錢。但如果公司冇香港居民做董事/員工，就要委託 TCSP 持牌人。\n\n⚠️ 2026 年最新修訂：指定代表必須能夠喺執法人員要求後嘅合理時間內（通常 1 小時內）提供 SCR 登記冊。\n\n⚠️ 唔好做嘅事：\n• 唔好唔委任指定代表 — 違法\n• 唔好委任非香港居民 — 唔符合資格\n• 指定代表人唔喺香港 — 執法人員要求時無法及時回應\n\n✅ 一定要做：\n• 記錄指定代表嘅姓名、身份、聯絡電話同電郵\n• 確保指定代表清楚自己嘅職責\n• 定期確認聯絡資料仍然有效",
-        "documents": [
-          {
-            "name": "指定代表委任記錄模板",
-            "description": "公司委任 SCR 指定代表嘅內部記錄文件",
-            "demoImage": "assets/demo/scr-step3.svg",
-            "templateFile": "templates/scr-designated-rep.docx",
-            "commonMistakes": [
-              "冇委任指定代表 — 違反公司條例，可被罰款",
-              "委任非香港居民做指定代表 — 唔符合法定資格",
-              "指定代表唔知道自己嘅職責 — 執法人員要求時無法回應",
-              "指定代表聯絡資料過期 — 執法人員聯絡唔到"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "未委任指定代表 = 違規，最高罰款 HK$25,000",
-          "指定代表未能及時提供 SCR = 2026 年新規下可被處罰"
-        ]
-      },
-      {
-        "stepNumber": 4,
-        "title": "存放登記冊及通知公司註冊處（NR2）",
-        "summary": "將 SCR 存放於指定地址，如非註冊辦事處需提交 NR2 通知",
-        "isFree": true,
-        "details": "登記冊備存好之後，就要決定放喺邊。\n\n一般情況下，SCR 可以放喺：\n• 公司註冊辦事處（最常見）\n• 香港境內嘅指定地點\n\n如果存放地址唔係公司嘅註冊辦事處：\n• 必須喺 15 天內提交 NR2 表格通知公司註冊處\n• 通知成員登記冊（包括 SCR）嘅備存地址\n\n⚠️ 唔好做嘅事：\n• 唔好將 SCR 放喺香港境外 — 一定唔得\n• 唔好搬咗地址唔通知公司註冊處 — 要喺 15 天內交 NR2\n• 唔好將 SCR 同其他公司文件撈亂 — 要獨立成冊\n\n✅ 一定要做：\n• 確保 SCR 妥善存放，防止未經授權查閱\n• 如果存放地址有變，15 天內通知公司註冊處\n• 可以紙本或電子形式備存\n• 確保執法機關可以查閱",
-        "documents": [
-          {
-            "name": "NR2 成員登記冊備存地點通知書",
-            "description": "向公司註冊處申報 SCR 存放地址嘅標準表格",
-            "demoImage": "assets/demo/scr-step4.svg",
-            "templateFile": "templates/form-nr2.docx",
-            "commonMistakes": [
-              "將 SCR 放喺香港境外 — 違反公司條例",
-              "搬咗地址冇通知公司註冊處 — 逾期提交 NR2 可被罰款",
-              "SCR 同其他公司文件混放 — 執法人員查閱時難以提供",
-              "冇妥善保護 SCR 資料 — 含有敏感個人資料，要防止未經授權查閱"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "SCR 存放地址不當 = 違規罰款",
-          "搬地址未通知 = 逾期罰款 HK$25,000"
-        ]
-      },
-      {
-        "stepNumber": 5,
-        "title": "定期更新及維護 SCR",
-        "summary": "股權變動後 7 天內更新，定期審查確保資料準確",
-        "isFree": true,
-        "details": "SCR 唔係整一次就完 — 你要定期更新同維護。\n\n必須更新 SCR 嘅情況：\n• 股份轉讓 → 7 天內更新\n• 新股發行 → 影響持股比例就要更新\n• 董事變更影響控制權 → 立即更新\n• 重要控制人資料變更（姓名、地址等）→ 立即更新\n• 指定代表變更 → 立即更新\n\n建議每季度審查一次股權結構同表決權分佈。\n\n⚠️ 罰則好重：\n• 未履行 SCR 責任：最高罰款 HK$25,000\n• 持續違規：每日罰款 HK$700\n• 嚴重情況：最高監禁 2 年\n\n⚠️ 唔好做嘅事：\n• 唔好整完就唔理 — SCR 要持續維護\n• 唔好等年度審計先更新 — 銀行 KYC 可能隨時要求查閱\n\n✅ 一定要做：\n• 每季度審查 SCR 資料\n• 股權變動後 7 天內更新\n• 確保銀行盡職調查時可以隨時提供\n• 保留完整更新紀錄",
-        "documents": [
-          {
-            "name": "SCR 更新紀錄表",
-            "description": "記錄 SCR 每次變更嘅日期、內容同更新人，方便審計同查閱",
-            "demoImage": "assets/demo/scr-step5.svg",
-            "templateFile": "templates/scr-change-log.docx",
-            "commonMistakes": [
-              "整完 SCR 就唔再理 — 股權變動後 7 天內要更新",
-              "以為年度審計先處理就得 — 銀行 KYC 可以隨時要求查閱",
-              "忽略咗股份轉讓對 SCR 嘅影響 — 轉讓後持股比例可能改變重要控制人身份",
-              "冇保留更新紀錄 — 被查時無法證明已履行更新責任"
-            ]
-          }
-        ],
-        "rejectionRisks": [
-          "SCR 未及時更新 = 最高罰款 HK$25,000 + 每日 HK$700",
-          "銀行 KYC 發現 SCR 不合規 = 影響銀行戶口穩定性",
-          "嚴重違規 = 最高監禁 2 年"
-        ]
-      }
-    ],
-    "finalDonate": {
-      "title": "幫到你嗎？請我飲杯咖啡 ☕",
-      "message": "呢份指南係我親身經歷整理，全部免費公開。如果幫到你節省時間同金錢，可以請我飲杯咖啡支持下，等我繼續製作更多免費指南！",
-      "goalMessage": "目標：100 次支持下載後，我會擴展到更多流程指南 🎯",
-      "buyMeACoffeeUrl": "https://buymeacoffee.com/esgov",
-      "emailCollectionTitle": "想我哋提供咩指南？",
-      "emailCollectionMessage": "可以通知我哋，話俾我哋知你想睇咩文件 😊"
-    }
+  ],
+  "finalDonate": {
+    "title": "幫到你嗎？請我飲杯咖啡 ☕",
+    "message": "呢份指南係我親身經歷整理，全部免費公開。如果幫到你節省時間同金錢，可以請我飲杯咖啡支持下，等我繼續製作更多免費指南！",
+    "goalMessage": "目標：100 次支持下載後，我會擴展到更多流程指南 🎯",
+    "buyMeACoffeeUrl": "https://buymeacoffee.com/esgov",
+    "emailCollectionTitle": "想我哋提供咩指南？",
+    "emailCollectionMessage": "可以通知我哋，話俾我哋知你想睇咩文件 😊"
   }
-]
+}

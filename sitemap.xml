@@ -1,398 +1,356 @@
 <?xml version="1.0" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://esgov.org/company-dissolution.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://esgov.org/director-change.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://esgov.org/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://esgov.org/instrument-transfer-generator.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://esgov.org/scr-register.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/shareholder-transfer.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://esgov.org/sold-note-generator.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/hk-company-first-year-checklist.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/hk-company-share-allotment.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/share-transfer-mistakes.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/公司秘書辭任更換指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/商業登記續期全攻略.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/有限公司周年申報表.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/有限公司審計核數實戰指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/有限公司撤銷註冊終止營運指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://esgov.org/blog/有限公司更換核數師終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/董事公司秘書變更指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/轉股東後必做5件事.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港中小企AI自動化工具終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司Invoice收據法律要求終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司僱傭條例EmploymentOrdinance終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司利得稅報稅及審計完整指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司印花稅厘印費終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司商標註冊終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司強積金MPF安排終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司文件公證認證加簽終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司查冊終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司盡職審查DueDiligence終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司章程修改完整指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司股份證明書ShareCertificate終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司股東協議終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司董事地址保護終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司董事會議紀錄終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司重要控制人登記冊SCR終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司開銀行戶口2026實戰指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司集團架構控股子公司終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港公司電子簽署終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港創業者個人財務管理終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司僱主報稅IR56B實戰指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司公司印章CompanyChop終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司公司秘書外判vsDIY終極比較指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司公司秘書職責終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司分紅派息終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司合規時間表終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司員工股權激勵計劃ESOP終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司商業保險終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司政府資助BUD_TVP_EMF終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司更改公司名稱流程2026.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司法定紀錄StatutoryRecords終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司清盤終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司減資終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司第一次請人終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司股份回購終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司股東墊款董事貸款終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司股東大會AGM暨書面決議終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://esgov.org/blog/香港有限公司股東股權糾紛終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司董事借貸終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司董事法律責任終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司董事袍金vs薪金稅務比較指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司董事辭任終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司註冊地址變更指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://esgov.org/blog/香港有限公司資料私隱合規終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://esgov.org/blog/香港有限公司違反公司條例罰則終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港有限公司開公司設立註冊終極指南2026.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://esgov.org/blog/香港虛擬銀行公司戶口開戶終極指南.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
