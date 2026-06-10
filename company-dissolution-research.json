@@ -1,0 +1,98 @@
+{
+  "researchDate": "2026-06-10",
+  "productId": "company-dissolution",
+  "productTitle": "香港有限公司撤銷註冊（公司註銷）完整指南",
+
+  "sourcesCompared": [
+    "gov.hk — 香港政府一站通",
+    "cr.gov.hk — 公司註冊處 FAQ",
+    "patcpa.com.hk — 2026 更新攻略",
+    "osome.com — 註銷公司指南",
+    "acaccountinghk.com — 撤銷公司註冊服務",
+    "setuphk.com — 註銷公司流程",
+    "globalcoreltd.com — 2026 懶人包",
+    "chinglink.com — 註銷指南",
+    "fastlane-global.com — 條件全攻略",
+    "vitaliberta.hk — 如何結束香港公司"
+  ],
+
+  "confirmedProcess": {
+    "totalSteps": 5,
+    "step1": {
+      "title": "確認資格及準備內部決議",
+      "summary": "核對公司是否符合撤銷註冊 6 大條件，召開股東會議取得全體成員書面同意",
+      "officialRequirements": [
+        "停業超過 3 個月或從未開始營運",
+        "所有股東書面同意",
+        "無未清債務/訴訟",
+        "已處理所有資產（銀行戶口清空、物業轉走）",
+        "非公眾公司/銀行/保險/信託類別",
+        "已繳清所有稅項及商業登記費"
+      ],
+      "documents": ["股東書面同意書", "董事決議書"],
+      "templates": ["dissolution-resolution.docx"]
+    },
+    "step2": {
+      "title": "向稅務局申請不反對通知書",
+      "summary": "填妥 IR1263 表格，向稅務局申請《不反對撤銷公司註冊通知書》，費用 HK$270",
+      "keyDetails": "稅務局審批需約 21 個工作日，會查核過去 7 年所有報稅事項是否齊備",
+      "officialForms": ["IR1263"],
+      "templates": ["irc3113-form.docx"],
+      "cost": "HK$270（不獲退還）"
+    },
+    "step3": {
+      "title": "向公司註冊處提交撤銷申請",
+      "summary": "取得不反對通知書後 3 個月內，提交 NDR1 表格及通知書正本，費用 HK$420",
+      "officialForms": ["NDR1"],
+      "templates": ["form-ndr1.docx"],
+      "cost": "HK$420（不獲退還）",
+      "deadline": "不反對通知書發出後 3 個月內必須提交"
+    },
+    "step4": {
+      "title": "等待刊憲及解散程序",
+      "summary": "公司註冊處刊登兩次憲報公告，等待 3 個月無人反對後公司正式解散",
+      "timeline": "第一份憲報 → 3 個月冷靜期 → 第二份憲報 → 正式解散（約 6-9 個月）"
+    },
+    "step5": {
+      "title": "完成後續事項及保存記錄",
+      "summary": "取消商業登記（IR1313 表格）、關閉銀行戶口、保存公司紀錄 7 年",
+      "keyDetails": "解散前 BR 續證仍有效，須保持有效至正式解散日",
+      "documents": ["IR1313 取消商業登記表格"],
+      "templates": ["dissolution-checklist.docx"]
+    }
+  },
+
+  "painPointsFromForums": [
+    {"pain": "以為一申請撤銷註冊就唔使理 BR 同 NAR1，結果解散期間欠交罰款", "source": "patcpa.com.hk"},
+    {"pain": "銀行戶口有幾百蚊未清，解散後資產變無主財物歸政府", "source": "多個來源"},
+    {"pain": "漏交一個年度 NIL 報稅，被 IRD 卡住唔出「不反對通知書」", "source": "patcpa + osome"},
+    {"pain": "不反對通知書 3 個月內冇提交 NDR1，成個申請要重新嚟過", "source": "patcpa.com.hk"},
+    {"pain": "解散過程中商業登記證到期，冇續期結果被罰款", "source": "多個來源"}
+  ],
+
+  "marketComparison": {
+    "accountingFirmCost": "$3,000 - $8,000",
+    "governmentCost": "HK$690（IR1263 HK$270 + NDR1 HK$420）",
+    "totalDIYCost": "約 HK$690 + BR 續期費（如適用）",
+    "potentialSavings": "85-90%"
+  },
+
+  "realExamplesCollected": [
+    {"file": "templates/NDR1_fillable.pdf", "type": "官方表格（可填寫）", "source": "cr.gov.hk"},
+    {"file": "templates/IR1263.pdf", "type": "官方表格", "source": "ird.gov.hk"},
+    {"file": "templates/IRC3113.pdf", "type": "官方指引", "source": "ird.gov.hk"},
+    {"file": "templates/ND2A_Specimen-c.pdf", "type": "填寫範例", "source": "cr.gov.hk"},
+    {"file": "templates/Guidelines_scr_c.doc", "type": "官方指引含範例", "source": "cr.gov.hk"},
+    {"file": "templates/scr-sample-buildubiz.doc", "type": "行業範例", "source": "build-u-biz.com"}
+  ],
+
+  "sopForResearch": {
+    "step1": "用 web_search 搜尋 10 個關鍵字（中文+英文），每組取前 10 結果",
+    "step2": "從結果中揀選 8-10 個獨立網站（唔計同一 domain），用 web_fetch 取流程",
+    "step3": "比對各網站嘅步驟數、順序、費用、所需文件",
+    "step4": "如 80% 以上網站流程一致 → 確認流程有效",
+    "step5": "搜尋討論區（lihkg、discuss）+ 經驗分享 blog，收集真實案例、陷阱、罰款經歷",
+    "step6": "整合成統一產品內容",
+    "keyValidation": "最少 cross-check 8 個獨立來源，官方來源（gov.hk/cr.gov.hk）優先"
+  }
+}

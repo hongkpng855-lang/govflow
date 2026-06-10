@@ -224,16 +224,46 @@
 - 註冊地址變更（Change of Registered Address）
 - 商業登記更新（Business Registration Update）
 
-### Phase 2：資料搜集（Research）
-1. 上公司註冊處官網（cr.gov.hk）搵相關表格同指引
-2. 上稅局網站（ird.gov.hk）搵相關要求（如涉及）
-3. Google 搜尋「[流程名] 程序」、「[流程名] 費用」收集市場資料
-4. 搜尋「[流程名] 範例」、「[流程名] sample」收集真實案例
-5. 記錄：
-   - 所需文件清單（indentify as many official forms as possible）
-   - 每個文件嘅官方格式要求
-   - 市場價格（會計公司收費 vs DIY 費用）
-   - 常見錯誤 / 麻煩位（from forum discussion）
+### Phase 2：資料搜集（Research）— 詳細爬蟲 SOP
+
+#### Step 2.1 — 搜尋流程（搵 8-10 個來源）
+1. 用 web_search 搜尋最少 3 組關鍵字（中文 + 英文）：
+   - `香港 [流程名] 流程 步驟`
+   - `Hong Kong [process name] procedure steps`
+   - `[流程名] 條件 費用 所需文件`
+2. 每組取前 10 結果，揀 8-10 個 **唔同 domain** 嘅獨立網站
+   - 優先採集：gov.hk、cr.gov.hk（官方）
+   - 然後：accounting firm 網站（patcpa、osome、acaccountinghk 等）
+   - 最後：創業/商業資訊網站
+3. 用 web_fetch 取得每個網站嘅完整流程內文
+
+#### Step 2.2 — 比對確認流程
+- 比較各網站嘅：步驟數、順序、費用、所需文件清單
+- **確認標準**：如果 80% 以上網站流程一致 → 流程有效
+- 如有差異：以官方來源（gov.hk / cr.gov.hk / ird.gov.hk）爲準
+
+#### Step 2.3 — 搜尋真實案例同痛點
+1. 搜尋討論區：`[流程名] 經歷 陷阱 中伏 罰款 site:lihkg.com OR site:discuss.com.hk`
+2. 搜尋經驗分享：`[流程名] 經驗分享 犯錯 被退回`
+3. 記錄每個痛點（原文引用）+ 來源
+4. 搜尋真實範例：
+   - `[流程名] 範例 樣本`
+   - `[流程名] specimen sample filled`
+   - 去 cr.gov.hk 搵 Specimen / fillable 版本
+
+#### Step 2.4 — 搜集官方表格
+- cr.gov.hk：搵相關表格（PDF + Word fillable 版本）
+- ird.gov.hk：搵稅局相關表格（IR1263、IRC3113 等）
+- 用 curl / web_fetch 直接 download
+
+#### Step 2.5 — 記錄市場價格
+- Google「[流程名] 報價 會計公司」
+- 取最低市場報價做比較基準
+- 記錄政府費用總和
+
+#### 完成 Output
+- 將所有 findings 整合成一個 JSON research file：`{product-id}-research.json`
+- 格式參考 `company-dissolution-research.json`
 
 ### Phase 3：內容製作（Content Creation）
 1. 決定總 steps（一般 5-7 步，每步對應一份核心文件）
