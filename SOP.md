@@ -205,7 +205,54 @@
 
 ---
 
-*SOP 版本: 1.0 · 2026-06-04*
+*SOP 版本: 2.0 · 2026-06-10*
+
+---
+
+## 📋 新產品研發流程（Product Expansion SOP）
+
+當需要研發新產品時，跟以下步驟自動執行：
+
+### Phase 1：產品揀選（選定流程）
+選擇同類別嘅公司秘書/政府流程，例如：
+- 公司註銷（Dissolution / Deregistration）
+- 董事變更 / 辭任（Change / Resignation of Director）
+- 公司改名（Change of Company Name）
+- 股份配發（Allotment of Shares）
+- 重要控制人登記冊（SCR / Significant Controllers Register）
+- 公司秘書變更（Change of Company Secretary）
+- 註冊地址變更（Change of Registered Address）
+- 商業登記更新（Business Registration Update）
+
+### Phase 2：資料搜集（Research）
+1. 上公司註冊處官網（cr.gov.hk）搵相關表格同指引
+2. 上稅局網站（ird.gov.hk）搵相關要求（如涉及）
+3. Google 搜尋「[流程名] 程序」、「[流程名] 費用」收集市場資料
+4. 搜尋「[流程名] 範例」、「[流程名] sample」收集真實案例
+5. 記錄：
+   - 所需文件清單（indentify as many official forms as possible）
+   - 每個文件嘅官方格式要求
+   - 市場價格（會計公司收費 vs DIY 費用）
+   - 常見錯誤 / 麻煩位（from forum discussion）
+
+### Phase 3：內容製作（Content Creation）
+1. 決定總 steps（一般 5-7 步，每步對應一份核心文件）
+2. 為每個 step 寫 content（title + summary + details + common mistakes）
+3. 製作 processes.json 完整區塊（copy step 1 嘅格式做 template）
+4. 建立產品 HTML 頁（copy shareholder-transfer.html 做基礎）
+5. 如有 generator 需要，建立 generator HTML（copy sold-note-generator）
+
+### Phase 4：文件製作（Templates & Images）
+1. 從官方 source download 表格作為 template 基礎
+2. 如需 Word 模板：製作可編輯 .docx
+3. 如需 demo 圖：製作範例 screenshot（遮蓋個人資料）
+4. 如需 wordtopdf 圖：跟 Wordtopdf 製作流程
+
+### Phase 5：儲存（Save for Review）
+- 所有檔案放喺 /mnt/c/Users/hongk/Desktop/esgov/ 對應目錄
+- processes.json → 加新產品區塊但 mark 爲 `"isActive": false`
+- HTML 頁面 → 建立但唔 deploy
+- 完成後整理一份清單俾用戶 review
 
 ---
 

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500">
+  <rect width="400" height="500" fill="#f8f6f0" rx="8"/>
+  <rect x="20" y="20" width="360" height="460" rx="6" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <text x="200" y="60" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="700" fill="#1B2A4A">公司解散前清單</text>
+  <line x1="60" y1="80" x2="340" y2="80" stroke="#C9A84C" stroke-width="1"/>
+  <rect x="60" y="100" width="280" height="25" rx="3" fill="#e8f5e9"/>
+  <text x="75" y="117" font-family="system-ui" font-size="11" fill="#2e7d32">☑ 銀行戶口餘額已提取並關閉戶口</text>
+  <rect x="60" y="130" width="280" height="25" rx="3" fill="#fff8e1"/>
+  <text x="75" y="147" font-family="system-ui" font-size="11" fill="#f57f17">☐ 商業登記已取消</text>
+  <rect x="60" y="160" width="280" height="25" rx="3" fill="#fff8e1"/>
+  <text x="75" y="177" font-family="system-ui" font-size="11" fill="#f57f17">☐ 不反對通知書已獲取</text>
+  <rect x="60" y="190" width="280" height="25" rx="3" fill="#fff8e1"/>
+  <text x="75" y="207" font-family="system-ui" font-size="11" fill="#f57f17">☐ NDR1 已提交</text>
+  <rect x="60" y="220" width="280" height="25" rx="3" fill="#fff8e1"/>
+  <text x="75" y="237" font-family="system-ui" font-size="11" fill="#f57f17">☐ 公司印章已處理</text>
+  <rect x="60" y="250" width="280" height="25" rx="3" fill="#fff8e1"/>
+  <text x="75" y="267" font-family="system-ui" font-size="11" fill="#f57f17">☐ 會計紀錄已備份（保留7年）</text>
+  <rect x="60" y="280" width="280" height="25" rx="3" fill="#fff8e1"/>
+  <text x="75" y="297" font-family="system-ui" font-size="11" fill="#f57f17">☐ 租約/合約已處理</text>
+  <rect x="60" y="310" width="280" height="25" rx="3" fill="#fff8e1"/>
+  <text x="75" y="327" font-family="system-ui" font-size="11" fill="#f57f17">☐ 客戶/供應商已通知</text>
+  <text x="200" y="390" text-anchor="middle" font-family="system-ui" font-size="11" fill="#999">📋 逐一核對，確保解散前處理好所有事項</text>
+</svg>

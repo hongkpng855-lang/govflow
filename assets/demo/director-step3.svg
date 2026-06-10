@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500">
+  <rect width="400" height="500" fill="#f8f6f0" rx="8"/>
+  <rect x="20" y="20" width="360" height="460" rx="6" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <text x="200" y="60" text-anchor="middle" font-family="system-ui" font-size="13" font-weight="700" fill="#1B2A4A">董事名冊（Register of Directors）</text>
+  <line x1="60" y1="80" x2="340" y2="80" stroke="#C9A84C" stroke-width="1"/>
+  <text x="60" y="105" font-family="system-ui" font-size="11" fill="#666">公司名稱：ABC Limited</text>
+  <rect x="55" y="120" width="290" height="20" rx="3" fill="#1B2A4A" opacity="0.1"/>
+  <text x="70" y="134" font-family="system-ui" font-size="10" font-weight="600" fill="#1B2A4A">姓名</text>
+  <text x="170" y="134" font-family="system-ui" font-size="10" font-weight="600" fill="#1B2A4A">委任日期</text>
+  <text x="270" y="134" font-family="system-ui" font-size="10" font-weight="600" fill="#1B2A4A">狀況</text>
+  <line x1="55" y1="140" x2="345" y2="140" stroke="#1B2A4A" stroke-width="0.5" opacity="0.3"/>
+  <text x="70" y="158" font-family="system-ui" font-size="10" fill="#555">陳大文</text>
+  <text x="170" y="158" font-family="system-ui" font-size="10" fill="#555">01/01/2020</text>
+  <text x="270" y="158" font-family="system-ui" font-size="10" fill="#2e7d32">現任</text>
+  <line x1="55" y1="165" x2="345" y2="165" stroke="#ccc" stroke-width="0.5"/>
+  <text x="70" y="183" font-family="system-ui" font-size="10" fill="#999">（待填）</text>
+  <text x="170" y="183" font-family="system-ui" font-size="10" fill="#999">__/__/____</text>
+  <text x="270" y="183" font-family="system-ui" font-size="10" fill="#999">—</text>
+  <line x1="55" y1="190" x2="345" y2="190" stroke="#ccc" stroke-width="0.5"/>
+  <text x="60" y="230" font-family="system-ui" font-size="11" fill="#666">備註：前任董事紀錄亦需保留</text>
+  <text x="60" y="260" font-family="system-ui" font-size="11" fill="#666">名冊存放地址：註冊辦事處</text>
+</svg>

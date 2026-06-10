@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500">
+  <rect width="400" height="500" fill="#f8f6f0" rx="8"/>
+  <rect x="20" y="20" width="360" height="460" rx="6" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <text x="200" y="60" text-anchor="middle" font-family="system-ui" font-size="13" font-weight="700" fill="#1B2A4A">表格 ND2A</text>
+  <text x="200" y="80" text-anchor="middle" font-family="system-ui" font-size="10" font-weight="600" fill="#666">更改公司秘書及董事通知書</text>
+  <line x1="60" y1="95" x2="340" y2="95" stroke="#C9A84C" stroke-width="1"/>
+  <text x="60" y="125" font-family="system-ui" font-size="11" fill="#666">公司名稱：ABC Limited</text>
+  <text x="60" y="155" font-family="system-ui" font-size="11" fill="#666">公司註冊編號：________</text>
+  <text x="60" y="190" font-family="system-ui" font-size="11" font-weight="600" fill="#333">申報類型（選擇一項）：</text>
+  <text x="75" y="215" font-family="system-ui" font-size="11" fill="#555">☐ 董事委任（Appointment）</text>
+  <text x="75" y="240" font-family="system-ui" font-size="11" fill="#555">☐ 董事停任（Cessation）</text>
+  <text x="75" y="265" font-family="system-ui" font-size="11" fill="#555">☐ 公司秘書變更</text>
+  <text x="60" y="305" font-family="system-ui" font-size="11" fill="#666">變更生效日期：________</text>
+  <text x="60" y="340" font-family="system-ui" font-size="11" fill="#666">新董事/辭任董事姓名：________</text>
+  <rect x="60" y="370" width="280" height="25" rx="4" fill="#C9A84C" opacity="0.15"/>
+  <text x="200" y="388" text-anchor="middle" font-family="system-ui" font-size="10" fill="#1B2A4A">⚠️ 變更後 15 日內提交 · 免費</text>
+  <text x="60" y="425" font-family="system-ui" font-size="11" fill="#666">提交日期：________</text>
+</svg>
