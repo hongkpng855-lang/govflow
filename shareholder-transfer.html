@@ -310,39 +310,41 @@
               <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
               <div class="grid sm:grid-cols-2 gap-4">
                 <template x-for="(doc, idx) in s.documents" :key="idx">
-                  <!-- Generator steps: image preview + link -->
-                  <a :href="doc['generatorUrl'] || '#'"
-                     x-show="s.stepNumber === 1 || (doc && doc.hasGenerator)"
-                     class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md">
-                    <template x-if="doc.demoImage">
-                      <div class="h-32 sm:h-40 bg-gray-100 overflow-hidden relative">
-                        <img :src="doc.demoImage" :alt="doc.name" class="w-full h-full object-cover" @error="$event.target.closest('div').innerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-sm>🖼️ 範例圖片</div>'" />
-                        <div class="absolute top-2 right-2 bg-gold text-navy text-xs font-bold px-2 py-0.5 rounded-full shadow">互動工具</div>
-                      </div>
-                    </template>
-                    <div class="p-4">
-                      <p class="font-bold text-sm text-navy" x-text="doc.name"></p>
-                      <p class="text-xs text-gray-500 mt-1 leading-relaxed" x-text="doc.description"></p>
-                      <div class="flex items-center gap-2 mt-3">
-                        <span class="inline-flex items-center gap-1.5 text-xs font-bold bg-gold text-navy px-4 py-2 rounded-lg hover:bg-gold-light transition shadow-sm">
-                          🚀 填寫 + 生成 PDF
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                  <!-- Non-generator steps: icon + click to view -->
-                  <div class="doc-card bg-white border border-gray-200 rounded-xl p-4 hover:border-navy/30 transition cursor-pointer shadow-sm hover:shadow"
-                       x-show="s.stepNumber !== 1 && !(doc && doc.hasGenerator)"
-                       @click="openDoc(doc)">
-                    <div class="flex items-start gap-3">
-                      <span class="text-2xl mt-0.5 shrink-0">📄</span>
-                      <div class="min-w-0 flex-1">
-                        <p class="font-semibold text-sm text-navy" x-text="doc.name"></p>
-                        <p class="text-xs text-gray-500 mt-1" x-text="doc.description"></p>
+                  <div>
+                    <!-- Generator steps: image preview + link -->
+                    <a :href="doc['generatorUrl'] || '#'"
+                       x-show="s.stepNumber === 1 || (doc && doc.hasGenerator)"
+                       class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md">
+                      <template x-if="doc.demoImage">
+                        <div class="h-32 sm:h-40 bg-gray-100 overflow-hidden relative">
+                          <img :src="doc.demoImage" :alt="doc.name" class="w-full h-full object-cover" @error="$event.target.closest('div').innerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-sm>🖼️ 範例圖片</div>'" />
+                          <div class="absolute top-2 right-2 bg-gold text-navy text-xs font-bold px-2 py-0.5 rounded-full shadow">互動工具</div>
+                        </div>
+                      </template>
+                      <div class="p-4">
+                        <p class="font-bold text-sm text-navy" x-text="doc.name"></p>
+                        <p class="text-xs text-gray-500 mt-1 leading-relaxed" x-text="doc.description"></p>
                         <div class="flex items-center gap-2 mt-3">
-                          <span class="inline-flex items-center gap-1 text-xs font-medium bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition">
-                            👁️ 檢視範例 PDF
+                          <span class="inline-flex items-center gap-1.5 text-xs font-bold bg-gold text-navy px-4 py-2 rounded-lg hover:bg-gold-light transition shadow-sm">
+                            🚀 填寫 + 生成 PDF
                           </span>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- Non-generator steps: icon + click to view -->
+                    <div class="doc-card bg-white border border-gray-200 rounded-xl p-4 hover:border-navy/30 transition cursor-pointer shadow-sm hover:shadow"
+                         x-show="s.stepNumber !== 1 && !(doc && doc.hasGenerator)"
+                         @click="openDoc(doc)">
+                      <div class="flex items-start gap-3">
+                        <span class="text-2xl mt-0.5 shrink-0">📄</span>
+                        <div class="min-w-0 flex-1">
+                          <p class="font-semibold text-sm text-navy" x-text="doc.name"></p>
+                          <p class="text-xs text-gray-500 mt-1" x-text="doc.description"></p>
+                          <div class="flex items-center gap-2 mt-3">
+                            <span class="inline-flex items-center gap-1 text-xs font-medium bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition">
+                              👁️ 檢視範例 PDF
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
