@@ -502,6 +502,12 @@
         <!-- Description + 常見錯誤 -->
         <div class="mb-5">
           <p class="text-sm text-gray-600 mb-3" x-text="selectedDoc?.description"></p>
+          <template x-if="selectedDoc?.officialFormUrl">
+            <a :href="selectedDoc.officialFormUrl" target="_blank"
+               class="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 mb-3 transition">
+              📄 查看官方表格（公司註冊處）
+            </a>
+          </template>
           <template x-if="selectedDoc?.commonMistakes && selectedDoc.commonMistakes.length > 0">
             <div class="bg-red-50 border border-red-100 rounded-xl p-4">
               <h4 class="font-semibold text-red-600 text-sm mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
@@ -557,7 +563,7 @@
       <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
         <p>⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。</p>
         <p class="mt-1">© 2025 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v9.5 · 全部免費 🆓 🆓</p>
+        <p class="mt-2 opacity-40">v9.6 · 全部免費 🆓 🆓</p>
       </div>
     </div>
   </footer>

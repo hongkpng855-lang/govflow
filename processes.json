@@ -124,15 +124,16 @@
         {
           "name": "NAR1（周年申報表）",
           "description": "向公司註冊處申報公司最新狀況，包括股東及股本變更",
-          "demoImage": "assets/demo/step5-nar1.svg",
-          "templateFile": "templates/form-nar1.docx",
+          "demoImage": "assets/demo/step5-nar1.png",
+          "templateFile": "templates/NAR1_official.pdf",
           "commonMistakes": [
             "以為唔使交 NAR1 — 轉讓完成後要更新公司紀錄，唔交會罰錢",
             "逾期提交 — 成立周年日後 42 日內要交，遲交罰 HK$870",
             "資料同轉讓書唔一致 — NAR1 嘅股東資料要同轉讓書 match",
             "董事資料過期 — NAR1 嘅董事資料要係最新，唔可以用舊年嘅",
             "冇簽署就交 — NAR1 要有董事簽署，網上提交都要數碼簽署"
-          ]
+          ],
+          "officialFormUrl": "https://www.cr.gov.hk/tc/companies_ordinance/docs/NAR1_fillable.pdf"
         },
         {
           "name": "NSC1（股份配發申請書）【如有需要】",
