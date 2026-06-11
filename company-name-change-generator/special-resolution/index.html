@@ -59,17 +59,21 @@
 
   <!-- Reference Images -->
   <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
-    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+    <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
       <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
         <img src="/assets/demo/special-resolution.png?v=9.0" alt="真實案例" class="w-full h-full object-contain" onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
       </div>
-      <div class="p-2 text-center text-xs text-gray-500 font-medium">真實範例</div>
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+        <span class="text-white text-xs font-bold drop-shadow-sm">真實案例</span>
+      </div>
     </div>
-    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+    <div onclick="openTemplateModal('word2pdf')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
       <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
         <img src="/assets/demo/special-resolution-blank.png?v=9.0" alt="可修改文件" class="w-full h-full object-contain" onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
       </div>
-      <div class="p-2 text-center text-xs text-gray-500 font-medium">可修改文件</div>
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+        <span class="text-white text-xs font-bold drop-shadow-sm">可修改文件</span>
+      </div>
     </div>
   </div>
 
@@ -198,8 +202,52 @@
   </div>
 </footer>
 
+<!-- Template Modal -->
+<div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print" onclick="closeTemplateModal(event)">
+  <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
+    <div class="flex border-b border-gray-200">
+      <button id="tabRealdemo" onclick="switchModalTab('realdemo')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition">📄 真實案例</button>
+      <button id="tabWord2pdf" onclick="switchModalTab('word2pdf')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 可修改文件</button>
+      <button onclick="closeTemplateModal()" class="px-4 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+    </div>
+    <div id="modalRealdemo" class="p-4">
+      <img src="/assets/demo/special-resolution.png?v=9.0" alt="真實案例" class="w-full border border-gray-200 rounded-lg" />
+      <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
+    </div>
+    <div id="modalWord2pdf" class="p-4 hidden">
+      <img src="/assets/demo/special-resolution-blank.png?v=9.0" alt="空白範本" class="w-full border border-gray-200 rounded-lg" />
+      <p class="text-xs text-gray-400 mt-2 text-center">空白可編輯模板格式</p>
+    </div>
+  </div>
+</div>
+
 <script>
 function getVal(id) { return document.getElementById(id).value; }
+
+// Template Modal
+function openTemplateModal(tab) {
+  document.getElementById('templateModal').classList.remove('hidden');
+  document.getElementById('templateModal').classList.add('flex');
+  switchModalTab(tab);
+}
+function closeTemplateModal(e) {
+  if (e && e.target !== e.currentTarget) return;
+  document.getElementById('templateModal').classList.add('hidden');
+  document.getElementById('templateModal').classList.remove('flex');
+}
+function switchModalTab(tab) {
+  ['Realdemo','Word2pdf'].forEach(t => {
+    const panel = document.getElementById('modal' + t);
+    const btn = document.getElementById('tab' + t);
+    if (t.toLowerCase() === tab) {
+      panel.classList.remove('hidden');
+      btn.className = 'flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition';
+    } else {
+      panel.classList.add('hidden');
+      btn.className = 'flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition';
+    }
+  });
+}
 
 function updatePDFContent() {
   const coEn = getVal('companyEn');
