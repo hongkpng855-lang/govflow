@@ -94,15 +94,16 @@
       "title": "準備 6 個月內審計報告（Audit Report）",
       "summary": "提交最近期嘅審計報告，用於印花稅計算及證明公司財務狀況",
       "isFree": true,
-      "details": "稅局用呢份報告計印花稅。作價太低會補稅。\n\n⚠️ 唔好做嘅事：\n• 唔好以為跟 Sold Note 作價就得 → 低過資產淨值要補稅\n• 唔好用過期報告 → 超過 6 個月稅局唔收\n• 公司未做審計唔好唔理 → 管理帳目都得\n\n✅ 一定要做：\n• 審計報告要 6 個月內\n• 冇 audit → 準備管理帳目 + 董事簽署\n• 印花稅 = 代價 0.2%（最低 $5）\n• 新公司可出「董事聲明」代替",
+      "details": "⚠️ 重要：審計報告必須由香港嘅**執業會計師 / 核數師**簽署，唔可以自己整。下面嘅範例只供參考格式，唔係叫你照抄。\n\n稅局用呢份報告計印花稅。作價太低會補稅。\n\n⚠️ 唔好做嘅事：\n• 唔好自己寫審計報告 → 必須由執業會計師簽署，否則稅局唔收\n• 唔好以為跟 Sold Note 作價就得 → 低過資產淨值要補稅\n• 唔好用過期報告 → 超過 6 個月稅局唔收\n• 公司未做審計唔好唔理 → 管理帳目都得，但要董事簽署\n\n✅ 一定要做：\n• **揾執業會計師**幫手出報告\n• 審計報告要 6 個月內\n• 冇 audit → 準備管理帳目 + 董事簽署\n• 印花稅 = 代價 0.2%（最低 $5）\n• 新公司可出「董事聲明」代替",
       "documents": [
         {
           "name": "6個月內審計報告（Audit Report）",
           "description": "由核數師簽署嘅公司財務報告，用於證明股份價值",
-          "demoImage": "assets/demo/step4-audit.svg",
-          "templateFile": "templates/audit-report-sample.docx",
+          "demoImage": "assets/demo/step4-audit.png",
+          "templateFile": "templates/audit-report-sample.pdf",
           "generatorUrl": "audit-report-generator.html",
           "commonMistakes": [
+            "自己寫審計報告 — 審計報告必須由執業會計師簽署，自己寫稅局一定唔收",
             "審計報告過咗 6 個月 — 稅局有權要求最新嘅財務資料，要重新出報告",
             "冇核對資產淨值 — 作價寫得太低，稅局用 audit report 重新估值，要補稅",
             "用舊年嘅報告 — 公司財務狀況可能有重大變動，要用最新嘅",

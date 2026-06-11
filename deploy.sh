@@ -52,7 +52,7 @@ EOF
 
 # Update version badge in footers (inside the <p> tags only)
 # Pattern: mt-2 opacity-40">vX.Y ...
-sed -i "s|\(mt-2 opacity-40\">\)v[0-9.]\+|\1${NEW_VER}|g" index.html shareholder-transfer.html sold-note-generator.html instrument-transfer-generator.html letter-of-transferee-generator.html
+sed -i "s|\\(mt-2 opacity-40\\\">\\)v[0-9.]\\+|\\1${NEW_VER}|g" index.html shareholder-transfer.html sold-note-generator.html instrument-transfer-generator.html letter-of-transferee-generator.html nar1-generator.html nsc1-generator.html audit-report-generator.html
 
 git add -A
 git commit -m "${MSG}"
