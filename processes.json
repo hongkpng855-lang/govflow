@@ -134,20 +134,20 @@
             "資料同轉讓書唔一致 — NAR1 嘅股東資料要同轉讓書 match",
             "董事資料過期 — NAR1 嘅董事資料要係最新，唔可以用舊年嘅",
             "冇簽署就交 — NAR1 要有董事簽署，網上提交都要數碼簽署"
-          ],
-          "officialFormUrl": "https://www.cr.gov.hk/tc/companies_ordinance/docs/NAR1_fillable.pdf"
+          ]
         },
         {
           "name": "NSC1（股份配發申請書）【如有需要】",
           "description": "如公司曾增加股本但未反映於章程細則或 NAR1，須一併提交最近一份已遞交公司註冊處嘅 NSC1 副本，證明股本變更已正規申報",
-          "demoImage": "assets/demo/step5-nsc1.svg",
-          "templateFile": "templates/form-nsc1.docx",
+          "demoImage": "assets/demo/step5-nsc1.png",
+          "templateFile": "templates/NSC1_official.pdf",
           "generatorUrl": "nsc1-generator.html",
           "commonMistakes": [
             "公司曾增加股本但冇提交 NSC1 — 股本記錄唔完整，公司註冊處會追問",
             "以為 NAR1 反映咗就算 — 如果章程細則未更新，NSC1 係必需嘅佐證",
             "用咗 draft 版本 — NSC1 必須係已遞交公司註冊處嘅正式申報版本"
-          ]
+          ],
+          "officialFormUrl": "https://www.cr.gov.hk/sc/companies_ordinance/docs/NSC1_fillable.pdf"
         }
       ],
       "rejectionRisks": [
