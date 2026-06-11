@@ -100,7 +100,7 @@
           "name": "6個月內審計報告（Audit Report）",
           "description": "由核數師簽署嘅公司財務報告，用於證明股份價值",
           "demoImage": "assets/demo/step4-audit.png",
-          "templateFile": "templates/audit-report-sample.pdf",
+          "templateFile": "templates/audit-report-sample.docx",
           "generatorUrl": "audit-report-generator.html",
           "commonMistakes": [
             "自己寫審計報告 — 審計報告必須由執業會計師簽署，自己寫稅局一定唔收",
