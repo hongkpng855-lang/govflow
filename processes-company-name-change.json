@@ -1,0 +1,74 @@
+{
+  "processId": "company-name-change",
+  "title": "香港有限公司更改名稱完整指南",
+  "totalSteps": 5,
+  "freeSteps": 5,
+  "price": 0,
+  "currency": "HKD",
+  "donateMessage": "如果呢份指南幫到你，可以請我飲杯咖啡 ☕",
+  "isActive": false,
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "查冊公司名 + 檢查商標",
+      "summary": "確認新公司名未被註冊，檢查商標衝突",
+      "isFree": true,
+      "details": "第一步：上公司註冊處 e-Services Portal（www.e-services.cr.gov.hk）做免費查冊。用「Exact Name Search」模式輸入心儀嘅公司名，睇下有冇撞名。\n\n同一時間，去知識產權署嘅商標檢索系統（esearch.ipd.gov.hk）查下新名有冇侵犯他人註冊商標。\n\n⚠️ 公司註冊處唔會幫你 check 商標 — 佢哋只 check 公司名有冇同 existing company 撞名。商標嗰 part 你要自己搞掂。\n\n⚠️ 如果個名同現有公司「太過相似」（例如差一個字、同音），都會被 reject。\n\n⚠️ 記得 check 埋 domain 名 — 公司名改咗但 domain 俾人註冊咗就麻煩。\n\n✅ 查冊係免費嘅，唔好 skip 呢步。"
+    },
+    {
+      "stepNumber": 2,
+      "title": "通過特別決議（Special Resolution）",
+      "summary": "股東/董事通過更改公司名稱嘅特別決議",
+      "isFree": true,
+      "details": "公司需要通過一份特別決議（Special Resolution），決議內容包括：\n- 舊公司名\n- 新公司名\n- 通過日期\n- 授權董事辦理後續手續\n\n決議可以喺股東大會通過，或者由全體股東書面同意。\n\n✅ 通過後，決議你自己 keep 就得，唔使交俾公司註冊處。\n⚠️ 但要喺通過後 15 日內交 Form NNC2！錯過 deadline 會被罰款。",
+      "documents": [
+        {
+          "name": "特別決議（Special Resolution）",
+          "description": "股東通過更改公司名稱嘅決議記錄，公司內部保留",
+          "demoImage": "/assets/demo/special-resolution.png",
+          "commonMistakes": [
+            "通過後超過 15 日先交 NNC2 — 公司註冊處會罰款",
+            "決議寫錯公司名或日期 — 要重新再通過一次",
+            "以為要交決議俾 CR — 只需要交 Form NNC2，決議自己 keep",
+            "冇董事簽署 — 決議要董事簽署先有效"
+          ]
+        }
+      ]
+    },
+    {
+      "stepNumber": 3,
+      "title": "遞交 Form NNC2 去公司註冊處",
+      "summary": "遞交更改公司名稱通知書，繳費 HK$295",
+      "isFree": true,
+      "details": "填寫 Form NNC2「更改公司名稱通知書」（Notice of Change of Company Name），連同 HK$295 費用遞交去公司註冊處。\n\n有兩種遞交方式：\n🖥️ **電子提交**（e-Services Portal）→ 1 小時內出證書，電郵通知\n📄 **實體提交** → 親身去金鐘道政府合署 14/F，4 個工作天出證書\n\n⚠️ **重要：2024 年起已經用新 Form NNC2，舊嘅 Form R1 已經停用！** 用錯 form 會被 reject。\n\n如果新名被 reject，可以申請退回 HK$55（其餘費用唔退得）。",
+      "documents": [
+        {
+          "name": "Form NNC2（更改公司名稱通知書）",
+          "description": "公司註冊處指定表格，需在通過特別決議後 15 日內提交",
+          "demoImage": "/assets/demo/special-resolution.png",
+          "officialFormUrl": "https://www.cr.gov.hk/en/forms/specified.htm",
+          "commonMistakes": [
+            "仲用舊 Form R1 — 2014 年後已經改咗用 NNC2",
+            "網上提交冇提前開 e-Services Portal account — 要預先登記",
+            "交咗錢先發現名唔得 — 最好事先查冊確認",
+            "唔知電子證書同實體有同等效力 — 電子都得，唔使刻意去金鐘"
+          ]
+        }
+      ]
+    },
+    {
+      "stepNumber": 4,
+      "title": "領取改名證書 + 更新商業登記",
+      "summary": "收到 Certificate of Change of Name，CR 自動通知稅局",
+      "isFree": true,
+      "details": "公司註冊處會發出「更改名稱證書（Certificate of Incorporation on Change of Name）」。\n\n⏱ 電子提交：1 小時內收到電郵通知（PDF 證書）\n⏱ 實體提交：4 個工作天（fax 通知，親身去拎）\n\n**公司改名後，CR 會自動通知稅局！** 你唔需要自己去商業登記署 update。CR 會喺下個工作天傳送資料俾 IRD，IRD 會發出更新嘅商業登記證。\n\n⚠️ 但如果公司有 **商業登記名稱（Business Name）** 同公司名唔同，就要另外用 Form IRC 3110A 通知稅局，限期 1 個月內。\n\n收到證書後記得：\n• 影印多份 certified true copy 俾銀行用\n• 準備去訂造新公司印\n\n⚠️ 唔好以爲 CR 會自動 update 晒所有嘢 — 稅局係自動，但銀行、供應商、MPF、保險全部要自己通知。\n\n⚠️ 商業登記名稱（Business Name）同公司名唔同嘅話，要另外用 IRC 3110A 通知稅局。\n\n⚠️ 電子證書同實體證書有同等法律效力，唔使刻意去金鐘拎實體。"
+    },
+    {
+      "stepNumber": 5,
+      "title": "更新銀行、供應商、公司紀錄",
+      "summary": "全方位更新所有用舊公司名嘅地方",
+      "isFree": true,
+      "details": "公司改名後，以下各項要逐個更新：\n\n🏦 **銀行戶口** — 帶改名證書 + 董事決議 + 新公司印親自去分行\n     唔可以用網上銀行搞，一定要親身去\n\n🔏 **公司印（Company Chop）** — 重新訂造\n\n🌐 **公司網站、Email Domain** — 更新名稱\n\n📇 **名片、信紙、發票** — 全部要換\n\n💰 **MPF 強積金** — 通知受託人填 form\n\n📄 **保險單** — 通知保險公司更新\n\n✍️ **合約／協議** — 通知對方更新公司名\n\n®️ **商標、知識產權** — 如已註冊商標要 update\n\n📱 **Google Play / Apple Developer** — 更新開發者帳戶\n\n🎫 **SFC / 旅行社等牌照** — 逐個牌照機構通知\n\n⚠️ 以爲銀行會自動更新？一定要親身去分行搞。\n⚠️ 海外資產（內地商標、離岸公司）要逐個 jurisdiction 搞。\n⚠️ 冇通知債權人/債務人嘅話，人哋用舊名開票俾你，銀行可能唔收。\n⚠️ 以爲改咗名就 automatically 全部 update？所有供應商、合約都要自己通知。"
+    }
+  ]
+}
