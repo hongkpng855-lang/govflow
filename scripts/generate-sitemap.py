@@ -23,6 +23,8 @@ PRIORITY = {
     '/nar1-generator/': 0.8,
     '/nsc1-generator/': 0.8,
     '/company-name-change/': 0.7,
+    '/company-name-change-generator/special-resolution/': 0.8,
+    '/company-name-change-generator/nnc2/': 0.8,
 }
 
 urlset = Element('urlset', xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
@@ -53,6 +55,8 @@ for dirpath, dirnames, filenames in os.walk(ROOT):
             url_path = url_path.replace('/index.html', '')
             if url_path == 'index.html':
                 url_path = ''
+            else:
+                url_path = url_path + '/'  # Add trailing slash for folder URLs
         
         full_url = f'{BASE_URL}/{url_path}'
         priority = PRIORITY.get(url_path, 0.5)

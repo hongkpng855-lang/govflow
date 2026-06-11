@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 特別決議（更改公司名稱）PDF 填寫工具 — 一鍵生成已填好 PDF</title>
+  <meta name="description" content="香港公司更改名稱特別決議（Special Resolution）PDF 線上填寫工具。直接喺網頁填好公司名、公司編號、新名稱、董事資料等，一鍵生成已填好嘅 PDF 檔案。真實範例對照，完全免費。即用即生成，適合中小企東主同公司秘書使用。" />
+  <meta property="og:title" content="ESGov | 特別決議（更改公司名稱）PDF 填寫工具 — 一鍵生成已填好 PDF" />
+  <meta property="og:description" content="香港公司更改名稱特別決議（Special Resolution）PDF 線上填寫工具。直接填資料，一鍵生成已填好嘅 PDF，真實範例對照，完全免費。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_HK" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['"Noto Serif TC"', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/company-name-change-generator/special-resolution" />
+  <meta property="og:url" content="https://esgov.org/company-name-change-generator/special-resolution" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <style>
+    .editable-field {
+      background: #fffbeb;
+      border: 1px solid rgba(201, 168, 76, 0.25);
+      cursor: text;
+      transition: all 0.15s ease;
+      outline: none;
+      font-family: inherit;
+    }
+    .editable-field:hover {
+      background: #fef3c7;
+      border-color: rgba(201, 168, 76, 0.5);
+    }
+    .editable-field:focus {
+      background: #fde68a;
+      border-color: #C9A84C;
+      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+    }
+
+    /* Document preview styling — matches the legal format */
+    .doc-preview {
+      font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+      line-height: 1.8;
+    }
+    .doc-preview .resolution-text {
+      border-left: 3px solid #1B2A4A;
+      padding: 16px 20px;
+      margin: 12px 0;
+      background: #fafafa;
+    }
+    .doc-preview .signature-line {
+      display: flex;
+      align-items: center;
+      margin: 8px 0;
+    }
+    .doc-preview .signature-line .label {
+      width: 140px;
+      flex-shrink: 0;
+    }
+    .doc-preview .signature-line .line {
+      border-bottom: 1px solid #333;
+      flex: 1;
+      height: 1px;
+      margin: 0 12px;
+    }
+    .doc-preview .signature-line .value {
+      width: 220px;
+      text-align: center;
+    }
+    .certify-box {
+      background: #f0f4ff;
+      border: 1px solid #d0d8e8;
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 12px;
+    }
+
+    /* Print-friendly adjustments */
+    @media print {
+      .no-print { display: none !important; }
+      .doc-preview { box-shadow: none !important; border: 1px solid #ccc !important; }
+    }
+  </style>
+
+  <!-- Nav -->
+  <nav class="bg-navy text-white sticky top-0 z-50 no-print">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/company-name-change" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回指南</a>
+    </div>
+  </nav>
+
+  <div class="max-w-4xl mx-auto px-4 py-6">
+
+    <!-- Trust Banner -->
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700 no-print">
+      📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅特別決議 PDF 檔案
+    </div>
+
+    <!-- Donate hint -->
+    <div class="text-center mb-4 no-print">
+      <span class="inline-flex items-center gap-1.5 text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-full px-3 py-1">
+        ☕ 全部免費 · 整理不易，<a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="font-semibold text-gold hover:underline">請咖啡支持</a>
+      </span>
+    </div>
+
+    <!-- 參考圖片兩幅 -->
+    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto no-print">
+      <!-- 真實案例 -->
+      <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/special-resolution.png?v=9.0" alt="真實案例"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">真實案例</span>
+        </div>
+      </div>
+      <!-- 可修改文件 -->
+      <div onclick="openTemplateModal('word2pdf')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/special-resolution-blank.png?v=9.0" alt="可修改文件"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">可修改文件</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 文件說明 + 常見錯誤 -->
+    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm no-print">
+      <div class="flex items-start gap-3 mb-3">
+        <span class="text-lg mt-0.5 shrink-0">📄</span>
+        <div>
+          <p class="font-semibold text-navy text-sm">特別決議（Special Resolution）— 更改公司名稱</p>
+          <p class="text-xs text-gray-500 mt-0.5">根據《公司條例》第 564 條通過，用於公司改名第一關</p>
+        </div>
+      </div>
+      <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
+        <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
+        <ul class="text-xs text-gray-700 space-y-1.5">
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>未通過特別決議就直接遞交 NNC2 — 公司註冊處會退件</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>新名稱未經公司註冊處查冊確認可用就去改名</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>決議日期同 NNC2 遞交日期唔吻合</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>董事簽署後冇註明簽署日期</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>中文名同英文名格式唔一致（Ltd./Limited）</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Template Modal -->
+    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print" onclick="closeTemplateModal(event)">
+      <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
+        <div class="flex border-b border-gray-200">
+          <button id="tabRealdemo" onclick="switchModalTab('realdemo')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition">📄 真實案例</button>
+          <button id="tabWord2pdf" onclick="switchModalTab('word2pdf')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 可修改文件</button>
+          <button onclick="closeTemplateModal()" class="px-4 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+        </div>
+        <div id="modalRealdemo" class="p-4">
+          <img src="/assets/demo/special-resolution.png?v=9.0" alt="真實案例" class="w-full border border-gray-200 rounded-lg" />
+          <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
+        </div>
+        <div id="modalWord2pdf" class="p-4 hidden">
+          <img src="/assets/demo/special-resolution-blank.png?v=9.0" alt="空白範本" class="w-full border border-gray-200 rounded-lg" />
+          <p class="text-xs text-gray-400 mt-2 text-center">空白可編輯模板格式</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═════ FORM with embedded document preview ═════ -->
+    <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px; font-family:'Noto Sans TC','Noto Serif TC',sans-serif;">
+
+      <!-- Preview Header -->
+      <div class="bg-navy text-white py-3 px-6 text-center">
+        <h1 class="sr-only">特別決議 PDF 填寫工具 - ESGov</h1>
+        <div class="text-lg font-bold text-gold">特別決議</div>
+        <p class="text-xs text-gray-400">SPECIAL RESOLUTION — Company Name Change</p>
+      </div>
+
+      <div class="p-6 sm:p-8">
+
+        <!-- ═════ Form Inputs ═════ -->
+        <div class="mb-8 border-b border-gray-200 pb-6">
+          <h2 class="text-base font-bold text-navy flex items-center gap-2 mb-4">
+            <span class="w-6 h-6 rounded-full bg-navy text-white text-xs flex items-center justify-center">1</span>
+            填寫公司資料
+          </h2>
+          <div class="space-y-3">
+            <div>
+              <label class="block text-xs font-semibold text-gray-600 mb-1">Company Name (English) <span class="text-red-400">*</span></label>
+              <input type="text" id="f_company_en" value="THOUSANDFOLD PROFITS LIMITED"
+                     class="editable-field w-full px-3 py-2 text-sm rounded-lg" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-600 mb-1">Company Name (Chinese) <span class="text-gray-400">(optional)</span></label>
+              <input type="text" id="f_company_cn" value="千倍利潤有限公司"
+                     class="editable-field w-full px-3 py-2 text-sm rounded-lg" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-600 mb-1">Company Number <span class="text-red-400">*</span></label>
+              <input type="text" id="f_company_no" value="12345678"
+                     class="editable-field w-full px-3 py-2 text-sm rounded-lg" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-600 mb-1">Date of Resolution <span class="text-red-400">*</span></label>
+              <input type="date" id="f_resolution_date"
+                     class="editable-field w-full px-3 py-2 text-sm rounded-lg" />
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-8 border-b border-gray-200 pb-6">
+          <h2 class="text-base font-bold text-navy flex items-center gap-2 mb-4">
+            <span class="w-6 h-6 rounded-full bg-navy text-white text-xs flex items-center justify-center">2</span>
+            新公司名稱
+          </h2>
+          <div class="space-y-3">
+            <div>
+              <label class="block text-xs font-semibold text-gray-600 mb-1">New Company Name (English) <span class="text-red-400">*</span></label>
+              <input type="text" id="f_new_en" value="BILLION PROFITS LIMITED"
+                     class="editable-field w-full px-3 py-2 text-sm rounded-lg" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-600 mb-1">New Company Name (Chinese) <span class="text-gray-400">(optional)</span></label>
+              <input type="text" id="f_new_cn" value="億倍利潤有限公司"
+                     class="editable-field w-full px-3 py-2 text-sm rounded-lg" />
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-8 border-b border-gray-200 pb-6">
+          <h2 class="text-base font-bold text-navy flex items-center gap-2 mb-4">
+            <span class="w-6 h-6 rounded-full bg-navy text-white text-xs flex items-center justify-center">3</span>
+            董事資料（簽署人）
+          </h2>
+          <div class="space-y-3">
+            <div>
+              <label class="block text-xs font-semibold text-gray-600 mb-1">Director Name (English) <span class="text-red-400">*</span></label>
+              <input type="text" id="f_dir_en" value="Lee Fung Ying"
+                     class="editable-field w-full px-3 py-2 text-sm rounded-lg" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-600 mb-1">Director Name (Chinese) <span class="text-gray-400">(optional)</span></label>
+              <input type="text" id="f_dir_cn" value="李鳳英"
+                     class="editable-field w-full px-3 py-2 text-sm rounded-lg" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-600 mb-1">Signature Date <span class="text-red-400">*</span></label>
+              <input type="date" id="f_sign_date"
+                     class="editable-field w-full px-3 py-2 text-sm rounded-lg" />
+            </div>
+          </div>
+        </div>
+
+        <!-- ═════ Document Preview (shown below form) ═════ -->
+        <div class="mb-4">
+          <h2 class="text-base font-bold text-navy flex items-center gap-2 mb-4">
+            <span class="w-6 h-6 rounded-full bg-navy text-white text-xs flex items-center justify-center">4</span>
+            文件預覽
+          </h2>
+        </div>
+
+        <div class="doc-preview border-2 border-gray-200 rounded-lg p-8 sm:p-10 bg-white shadow-inner" style="font-size:13px;">
+
+          <!-- Header -->
+          <div class="text-center mb-8 border-b-2 border-double border-gray-400 pb-5">
+            <h2 class="text-xl font-bold tracking-wide" style="font-family:'Noto Serif TC',serif;">特別決議</h2>
+            <h3 class="text-base font-semibold tracking-wider mt-1" style="font-family:'Noto Serif TC',serif;">SPECIAL RESOLUTION</h3>
+            <p class="text-xs text-gray-500 mt-2">
+              （根據《公司條例》第 564 條通過）<br />
+              (Passed under Section 564 of the Companies Ordinance, Cap. 622)
+            </p>
+          </div>
+
+          <!-- Company Details -->
+          <div class="space-y-2 mb-6">
+            <p><strong>公司名稱（Company Name）：</strong><span id="pv_company_en">THOUSANDFOLD PROFITS LIMITED</span><br /><span id="pv_company_cn">千倍利潤有限公司</span></p>
+            <p><strong>公司編號（Company Number）：</strong><span id="pv_company_no">12345678</span></p>
+            <p><strong>日期（Date）：</strong><span id="pv_resolution_date">【Date】</span></p>
+          </div>
+
+          <!-- Resolution -->
+          <div class="mb-6">
+            <h4 class="font-bold mb-2" style="font-size:13px;">決議（Resolution）</h4>
+            <div class="resolution-text">
+              <p class="mb-2"><strong>「茲決議通過以下特別決議：</strong></p>
+              <p style="text-indent:2em; margin-bottom:8px;">
+                將公司名稱由 <strong><span id="pv_company_en_resolve">THOUSANDFOLD PROFITS LIMITED</span></strong>
+                （<span id="pv_company_cn_resolve">千倍利潤有限公司</span>）
+                更改為 <strong><span id="pv_new_en_resolve">BILLION PROFITS LIMITED</span></strong>
+                （<span id="pv_new_cn_resolve">億倍利潤有限公司</span>），
+                並授權本公司任何一名董事辦理所有必要手續，包括但不限於向公司註冊處遞交更改公司名稱通知書（表格 NNC2）及辦理一切相關事宜。
+              </p>
+              <p><strong>」</strong></p>
+              <p class="mt-3 italic text-gray-700">
+                <em>IT WAS RESOLVED as a Special Resolution that the name of the company be changed from
+                <strong><span id="pv_company_en_resolve2">THOUSANDFOLD PROFITS LIMITED</span></strong>
+                to <strong><span id="pv_new_en_resolve2">BILLION PROFITS LIMITED</span></strong>
+                and that any one director of the company be authorised to do all such acts and things as may be necessary to give effect to the foregoing resolution.</em>
+              </p>
+            </div>
+          </div>
+
+          <!-- Meta -->
+          <div class="mb-6 text-sm space-y-1">
+            <p><strong>決議性質：</strong>特別決議（Special Resolution）</p>
+            <p><strong>通過方式：</strong>書面決議（Written Resolution）</p>
+            <p><strong>通過門檻：</strong>不少於 75% 有表決權成員通過</p>
+          </div>
+
+          <!-- Signature Area -->
+          <div class="mt-10 mb-6">
+            <div class="signature-line">
+              <span class="label text-sm">主席簽署：</span>
+              <span class="line"></span>
+              <span class="value text-sm font-semibold"><span id="pv_dir_en">Lee Fung Ying</span><br /><span id="pv_dir_cn">李鳳英</span></span>
+            </div>
+            <div class="signature-line mt-3">
+              <span class="label text-sm">日期：</span>
+              <span class="line"></span>
+              <span class="value text-sm"><span id="pv_sign_date">【Signature Date】</span></span>
+            </div>
+          </div>
+
+          <!-- Certification -->
+          <div class="certify-box">
+            <strong>證明（Certification）：</strong><br />
+            本人，<span id="pv_dir_cn_cert">李鳳英</span>，為 <span id="pv_company_cn_cert">千倍利潤有限公司</span> 之董事，謹此證明上述決議已於 <span id="pv_resolution_date_cert">【Date】</span> 按照公司組織章程細則之規定作為特別決議正式通過。<br /><br />
+            I, <span id="pv_dir_en_cert">Lee Fung Ying</span>, a director of <span id="pv_company_en_cert">THOUSANDFOLD PROFITS LIMITED</span>, hereby certify that the above resolution was duly passed as a special resolution on <span id="pv_resolution_date_cert_en">【Date】</span> in accordance with the company's articles of association.
+          </div>
+
+          <!-- Footer -->
+          <div class="mt-6 pt-4 border-t border-dashed border-gray-300 text-xs text-gray-400 text-center">
+            <em>Generated by ESGov — 僅供參考，並不構成法律意見。填寫後請打印簽署。</em>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="max-w-[800px] mx-auto mt-6 no-print">
+      <button onclick="downloadPDF()" id="genBtn"
+              class="w-full bg-navy text-white font-bold py-4 px-6 rounded-xl hover:bg-navy-light transition shadow-lg text-lg flex items-center justify-center gap-2">
+        📄 下載 PDF（已填好）
+      </button>
+    </div>
+    <p id="status" class="text-center text-sm mt-3 hidden"></p>
+  </div>
+
+  <script>
+    // ===== Set default dates =====
+    function setDefaultDates() {
+      const d = new Date();
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      const dateStr = y + '-' + m + '-' + day;
+      const resDate = document.getElementById('f_resolution_date');
+      const signDate = document.getElementById('f_sign_date');
+      if (resDate && !resDate.value) resDate.value = dateStr;
+      if (signDate && !signDate.value) signDate.value = dateStr;
+    }
+    setDefaultDates();
+
+    // ===== Format date for display (Chinese format) =====
+    function formatDateCN(dateStr) {
+      if (!dateStr) return '【Date】';
+      const parts = dateStr.split('-');
+      if (parts.length !== 3) return dateStr;
+      return parts[0] + ' 年 ' + parseInt(parts[1]) + ' 月 ' + parseInt(parts[2]) + ' 日';
+    }
+
+    // ===== Format date for English display =====
+    const MONTHS = ['January','February','March','April','May','June',
+                    'July','August','September','October','November','December'];
+    function formatDateEN(dateStr) {
+      if (!dateStr) return '【Date】';
+      const parts = dateStr.split('-');
+      if (parts.length !== 3) return dateStr;
+      const m = parseInt(parts[1]);
+      const d = parseInt(parts[2]);
+      return d + ' ' + MONTHS[m - 1] + ' ' + parts[0];
+    }
+
+    // ===== Live preview update =====
+    function updatePreview() {
+      // Get form values
+      const companyEn = document.getElementById('f_company_en').value.trim() || 'THOUSANDFOLD PROFITS LIMITED';
+      const companyCn = document.getElementById('f_company_cn').value.trim() || '';
+      const companyNo = document.getElementById('f_company_no').value.trim() || '12345678';
+      const resolutionDate = document.getElementById('f_resolution_date').value || '';
+      const newEn = document.getElementById('f_new_en').value.trim() || 'BILLION PROFITS LIMITED';
+      const newCn = document.getElementById('f_new_cn').value.trim() || '';
+      const dirEn = document.getElementById('f_dir_en').value.trim() || 'Lee Fung Ying';
+      const dirCn = document.getElementById('f_dir_cn').value.trim() || '';
+      const signDate = document.getElementById('f_sign_date').value || '';
+
+      const dateCN = formatDateCN(resolutionDate);
+      const signDateCN = formatDateCN(signDate);
+      const dateEN = formatDateEN(resolutionDate);
+      const signDateEN = formatDateEN(signDate);
+
+      // Update preview fields
+      document.getElementById('pv_company_en').textContent = companyEn;
+      document.getElementById('pv_company_cn').textContent = companyCn;
+      document.getElementById('pv_company_no').textContent = companyNo;
+      document.getElementById('pv_resolution_date').textContent = dateCN;
+
+      document.getElementById('pv_company_en_resolve').textContent = companyEn;
+      document.getElementById('pv_company_cn_resolve').textContent = companyCn;
+      document.getElementById('pv_new_en_resolve').textContent = newEn;
+      document.getElementById('pv_new_cn_resolve').textContent = newCn;
+
+      document.getElementById('pv_company_en_resolve2').textContent = companyEn;
+      document.getElementById('pv_new_en_resolve2').textContent = newEn;
+
+      document.getElementById('pv_dir_en').textContent = dirEn;
+      document.getElementById('pv_dir_cn').textContent = dirCn;
+      document.getElementById('pv_sign_date').textContent = signDateCN;
+
+      document.getElementById('pv_dir_cn_cert').textContent = dirCn || dirEn;
+      document.getElementById('pv_company_cn_cert').textContent = companyCn || companyEn;
+      document.getElementById('pv_resolution_date_cert').textContent = dateCN;
+
+      document.getElementById('pv_dir_en_cert').textContent = dirEn;
+      document.getElementById('pv_company_en_cert').textContent = companyEn;
+      document.getElementById('pv_resolution_date_cert_en').textContent = dateEN;
+    }
+
+    // ===== Attach live preview listeners to all form inputs =====
+    document.addEventListener('DOMContentLoaded', function() {
+      const inputs = [
+        'f_company_en', 'f_company_cn', 'f_company_no',
+        'f_resolution_date', 'f_new_en', 'f_new_cn',
+        'f_dir_en', 'f_dir_cn', 'f_sign_date'
+      ];
+      inputs.forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) {
+          el.addEventListener('input', updatePreview);
+          el.addEventListener('change', updatePreview);
+        }
+      });
+      // Initial preview update
+      updatePreview();
+    });
+
+    // ===== Template Modal =====
+    function openTemplateModal(tab) {
+      document.getElementById('templateModal').classList.remove('hidden');
+      document.getElementById('templateModal').classList.add('flex');
+      if (tab && typeof switchModalTab === 'function') switchModalTab(tab);
+    }
+    function closeTemplateModal(e) {
+      if (!e || e.target === document.getElementById('templateModal')) {
+        document.getElementById('templateModal').classList.add('hidden');
+        document.getElementById('templateModal').classList.remove('flex');
+      }
+    }
+    function switchModalTab(tab) {
+      document.getElementById('modalRealdemo').classList.toggle('hidden', tab !== 'realdemo');
+      document.getElementById('modalWord2pdf').classList.toggle('hidden', tab !== 'word2pdf');
+      document.getElementById('tabRealdemo').classList.toggle('border-navy', tab === 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('border-transparent', tab !== 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('font-bold', tab === 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('font-semibold', tab !== 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('text-navy', tab === 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('text-gray-400', tab !== 'realdemo');
+      document.getElementById('tabWord2pdf').classList.toggle('border-navy', tab === 'word2pdf');
+      document.getElementById('tabWord2pdf').classList.toggle('border-transparent', tab !== 'word2pdf');
+      document.getElementById('tabWord2pdf').classList.toggle('font-bold', tab === 'word2pdf');
+      document.getElementById('tabWord2pdf').classList.toggle('font-semibold', tab !== 'word2pdf');
+      document.getElementById('tabWord2pdf').classList.toggle('text-navy', tab === 'word2pdf');
+      document.getElementById('tabWord2pdf').classList.toggle('text-gray-400', tab !== 'word2pdf');
+    }
+
+    // ===== Email Gate =====
+    function checkEmailGate() {
+      const done = localStorage.getItem('esgov_email_done');
+      if (done) return true;
+      document.getElementById('emailGateModal').classList.remove('hidden');
+      document.getElementById('emailGateModal').classList.add('flex');
+      return false;
+    }
+    function submitDownloadEmail() {
+      const email = document.getElementById('downloadEmail').value.trim();
+      if (!email || !email.includes('@')) {
+        alert('⚠️ 請輸入有效嘅電郵地址');
+        return;
+      }
+      try {
+        var iframe = document.createElement('iframe');
+        iframe.name = 'fsframe';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        var f = document.createElement('form');
+        f.method = 'POST';
+        f.action = 'https://formsubmit.co/tbstbs0613@gmail.com';
+        f.target = 'fsframe';
+        f.style.display = 'none';
+        var fields = { email: email, page: 'special-resolution-generator', docType: 'Special Resolution (特別決議)', _subject: '📬 ESGov 新下載（特別決議）：' + email, _captcha: 'false', _template: 'table' };
+        for (var k in fields) {
+          var inp = document.createElement('input');
+          inp.name = k; inp.value = fields[k];
+          f.appendChild(inp);
+        }
+        document.body.appendChild(f);
+        f.submit();
+        setTimeout(function(){ document.body.removeChild(f); document.body.removeChild(iframe); }, 1000);
+      } catch(e) {}
+      localStorage.setItem('esgov_email_done', 'true');
+      document.getElementById('emailGateModal').classList.add('hidden');
+      document.getElementById('emailGateModal').classList.remove('flex');
+      setTimeout(function(){ downloadPDF(); }, 100);
+    }
+    function closeEmailGate() {
+      document.getElementById('emailGateModal').classList.add('hidden');
+      document.getElementById('emailGateModal').classList.remove('flex');
+    }
+
+    // ===== Get all form values for clone injection =====
+    function getVals() {
+      return {
+        company_en: document.getElementById('f_company_en').value.trim() || 'THOUSANDFOLD PROFITS LIMITED',
+        company_cn: document.getElementById('f_company_cn').value.trim() || '',
+        company_no: document.getElementById('f_company_no').value.trim() || '12345678',
+        resolution_date: document.getElementById('f_resolution_date').value || '',
+        new_en: document.getElementById('f_new_en').value.trim() || 'BILLION PROFITS LIMITED',
+        new_cn: document.getElementById('f_new_cn').value.trim() || '',
+        dir_en: document.getElementById('f_dir_en').value.trim() || 'Lee Fung Ying',
+        dir_cn: document.getElementById('f_dir_cn').value.trim() || '',
+        sign_date: document.getElementById('f_sign_date').value || '',
+      };
+    }
+
+    // ===== Inject values into a clone =====
+    function injectIntoClone(cloneRoot, v) {
+      var dateCN = formatDateCN(v.resolution_date);
+      var signDateCN = formatDateCN(v.sign_date);
+      var dateEN = formatDateEN(v.resolution_date);
+      var signDateEN = formatDateEN(v.sign_date);
+
+      setCloneText(cloneRoot, 'pv_company_en', v.company_en);
+      setCloneText(cloneRoot, 'pv_company_cn', v.company_cn);
+      setCloneText(cloneRoot, 'pv_company_no', v.company_no);
+      setCloneText(cloneRoot, 'pv_resolution_date', dateCN);
+
+      setCloneText(cloneRoot, 'pv_company_en_resolve', v.company_en);
+      setCloneText(cloneRoot, 'pv_company_cn_resolve', v.company_cn);
+      setCloneText(cloneRoot, 'pv_new_en_resolve', v.new_en);
+      setCloneText(cloneRoot, 'pv_new_cn_resolve', v.new_cn);
+
+      setCloneText(cloneRoot, 'pv_company_en_resolve2', v.company_en);
+      setCloneText(cloneRoot, 'pv_new_en_resolve2', v.new_en);
+
+      setCloneText(cloneRoot, 'pv_dir_en', v.dir_en);
+      setCloneText(cloneRoot, 'pv_dir_cn', v.dir_cn);
+      setCloneText(cloneRoot, 'pv_sign_date', signDateCN);
+
+      setCloneText(cloneRoot, 'pv_dir_cn_cert', v.dir_cn || v.dir_en);
+      setCloneText(cloneRoot, 'pv_company_cn_cert', v.company_cn || v.company_en);
+      setCloneText(cloneRoot, 'pv_resolution_date_cert', dateCN);
+
+      setCloneText(cloneRoot, 'pv_dir_en_cert', v.dir_en);
+      setCloneText(cloneRoot, 'pv_company_en_cert', v.company_en);
+      setCloneText(cloneRoot, 'pv_resolution_date_cert_en', dateEN);
+    }
+
+    function setCloneText(root, id, val) {
+      var el = root.querySelector('#' + id);
+      if (el) el.textContent = val;
+    }
+
+    // ===== One-click PDF download =====
+    async function downloadPDF() {
+      if (!checkEmailGate()) return;
+      const btn = document.getElementById('genBtn');
+      const status = document.getElementById('status');
+      btn.disabled = true;
+      btn.innerHTML = '⏳ 生成中…';
+      status.className = 'text-center text-sm mt-3 text-blue-600';
+      status.textContent = '準備中…';
+      status.classList.remove('hidden');
+
+      try {
+        const { jsPDF } = window.jspdf;
+
+        // Wait for fonts
+        await document.fonts.ready;
+
+        // Collect current values
+        const v = getVals();
+
+        // Build capture clone
+        const original = document.getElementById('pdf-form');
+        const clone = document.createElement('div');
+        clone.innerHTML = original.innerHTML;
+        clone.style.cssText = 'position:fixed;left:-9999px;top:0;width:800px;z-index:-1;font-family:"Noto Sans TC","Noto Serif TC",sans-serif;';
+        document.body.appendChild(clone);
+
+        // Remove interactive elements from clone (form inputs, labels, buttons, steps)
+        clone.querySelectorAll('input').forEach(function(el) { el.remove(); });
+        clone.querySelectorAll('label').forEach(function(el) { el.remove(); });
+        // Remove step headings (h2 with step circles)
+        clone.querySelectorAll('.doc-preview').forEach(function(el) {
+          // Only keep the doc-preview area, remove the form sections above
+        });
+        // Actually, let's just keep the doc-preview and its parents but strip everything else
+        // Better approach: we need the full styled doc but without form inputs
+        // Let's just hide form sections and keep doc-preview
+        var formSections = clone.querySelectorAll('.mb-8.border-b');
+        formSections.forEach(function(el) { el.style.display = 'none'; });
+        // Remove the step 4 heading too
+        var stepFour = clone.querySelector('h2:has(span)');
+        // Simpler: just remove all siblings before doc-preview
+        var docPreview = clone.querySelector('.doc-preview');
+        if (docPreview) {
+          var parent = docPreview.parentNode;
+          var children = parent.children;
+          for (var i = children.length - 1; i >= 0; i--) {
+            if (children[i] !== docPreview && !children[i].classList.contains('mb-4')) {
+              // Keep the mb-4 wrapping the "文件預覽" heading, remove others
+            }
+          }
+        }
+
+        // Wait a bit for clone render
+        await new Promise(function(r) { setTimeout(r, 200); });
+
+        // Capture just the doc-preview area instead of whole form
+        var captureTarget = clone.querySelector('.doc-preview');
+        if (!captureTarget) captureTarget = clone;
+
+        // Inject values into clone
+        injectIntoClone(clone, v);
+
+        await new Promise(function(r) { setTimeout(r, 100); });
+
+        // Capture
+        const canvas = await html2canvas(captureTarget, {
+          scale: 3,
+          useCORS: true,
+          backgroundColor: '#ffffff',
+          logging: false,
+        });
+
+        // Clean up clone
+        document.body.removeChild(clone);
+
+        // Generate PDF
+        const imgData = canvas.toDataURL('image/png');
+        const doc = new jsPDF('p', 'mm', 'a4');
+        const pageW = 210;
+        const imgRatio = canvas.height / canvas.width;
+        const imgH = pageW * imgRatio;
+        const pageH = 297;
+
+        if (imgH > pageH) {
+          const scale = pageH / imgH;
+          doc.addImage(imgData, 'PNG', 0, 0, pageW * scale, pageH);
+        } else {
+          const yOffset = (pageH - imgH) / 2;
+          doc.addImage(imgData, 'PNG', 0, yOffset, pageW, imgH);
+        }
+
+        // Cross-page watermark
+        doc.saveGraphicsState();
+        doc.setGState(new window.jspdf.GState({ opacity: 0.10 }));
+        doc.setTextColor(180, 180, 180);
+        doc.setFontSize(48);
+        doc.setFont('helvetica', 'bold');
+        doc.text('ESGov', 20, 60, { angle: -30 });
+        doc.text('ESGov', 80, 160, { angle: -30 });
+        doc.text('ESGov', 140, 260, { angle: -30 });
+        doc.restoreGraphicsState();
+
+        doc.save('Special_Resolution_Filled.pdf');
+
+        btn.innerHTML = '✅ 已下載！';
+        status.className = 'text-center text-sm mt-3 text-green-600';
+        status.textContent = '✅ PDF 已儲存到你的電腦';
+        setTimeout(function() {
+          btn.innerHTML = '📄 下載 PDF（已填好）';
+          btn.disabled = false;
+          status.classList.add('hidden');
+        }, 2500);
+
+      } catch(e) {
+        console.error('PDF generation error:', e);
+        btn.innerHTML = '📄 下載 PDF（已填好）';
+        btn.disabled = false;
+        status.className = 'text-center text-sm mt-3 text-red-500';
+        status.textContent = '❌ 生成失敗: ' + e.message;
+      }
+    }
+  </script>
+
+  <!-- ═════ Email Gate Modal ═════ -->
+  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print">
+    <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" onclick="event.stopPropagation()">
+      <div class="text-3xl mb-3">📬</div>
+      <h3 class="text-lg font-bold text-navy mb-2">下載前留低 email</h3>
+      <p class="text-sm text-gray-500 mb-5">正在為你準備 <strong>特別決議（Special Resolution）</strong> 嘅 PDF<br />
+      留低 email，我哋會話你知邊份文件準備好咗 😊</p>
+      <div class="flex flex-col gap-3">
+        <input type="email" id="downloadEmail" placeholder="your@email.com"
+               class="border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold"
+        />
+        <button onclick="submitDownloadEmail()"
+                class="bg-navy text-white font-semibold py-2.5 rounded-xl hover:bg-navy-light transition text-sm">
+          📥 繼續下載 PDF
+        </button>
+        <button onclick="closeEmailGate()" class="text-xs text-gray-400 hover:text-gray-600 transition">唔住，稍後先</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-navy text-white py-8 mt-12 no-print">
+    <div class="max-w-4xl mx-auto px-4 text-center text-xs text-gray-400">
+      <p>⚠️ 僅供參考，並不構成法律意見。填寫後請打印簽署。</p>
+      <p class="mt-1">&copy; ESGov</p>
+      <p class="mt-2 opacity-40">v11.0</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ESGov 特別決議（更改公司名稱）PDF 填寫工具",
+    "description": "香港公司更改名稱特別決議（Special Resolution）PDF 線上填寫工具。直接填資料，一鍵生成已填好嘅 PDF。",
+    "url": "https://esgov.org/company-name-change-generator/special-resolution",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All",
+    "author": { "@type": "Organization", "name": "ESGov" }
+  }
+  </script>
+
+</body>
+</html>

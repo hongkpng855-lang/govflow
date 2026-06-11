@@ -7,7 +7,13 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://esgov.org/audit-report-generator</loc>
+    <loc>https://esgov.org/assets/demo/special-resolution.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://esgov.org/audit-report-generator/</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -421,37 +427,55 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://esgov.org/instrument-transfer-generator</loc>
+    <loc>https://esgov.org/company-name-change/</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://esgov.org/letter-of-transferee-generator</loc>
+    <loc>https://esgov.org/company-name-change-generator/nnc2/</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://esgov.org/nar1-generator</loc>
+    <loc>https://esgov.org/company-name-change-generator/special-resolution/</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://esgov.org/nsc1-generator</loc>
+    <loc>https://esgov.org/instrument-transfer-generator/</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://esgov.org/shareholder-transfer</loc>
+    <loc>https://esgov.org/letter-of-transferee-generator/</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://esgov.org/sold-note-generator</loc>
+    <loc>https://esgov.org/nar1-generator/</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://esgov.org/nsc1-generator/</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://esgov.org/shareholder-transfer/</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://esgov.org/sold-note-generator/</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

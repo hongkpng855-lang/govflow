@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | Form NNC2 更改公司名稱通知書 PDF 填寫工具 — 一鍵生成已填好 PDF</title>
+  <meta name="description" content="香港公司更改名稱 Form NNC2（Notice of Change of Company Name）PDF 線上填寫工具。直接喺網頁填好公司原名稱、新名稱、公司編號、特別決議日期，一鍵生成已填好嘅 NNC2 PDF 檔案。真實範例對照，完全免費，即用即生成，適合中小企東主同公司秘書使用。" />
+  <meta property="og:title" content="ESGov | Form NNC2 更改公司名稱通知書 PDF 填寫工具 — 一鍵生成已填好 PDF" />
+  <meta property="og:description" content="香港公司更改名稱 Form NNC2 PDF 線上填寫工具。直接填資料，一鍵生成已填好嘅 PDF，真實範例對照，完全免費。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_HK" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/nnc2-generator" />
+  <meta property="og:url" content="https://esgov.org/nnc2-generator" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
+  <style>
+    /* Editable field styling — matches sold-note-generator pattern */
+    .editable-field {
+      background: #fffbeb;
+      border: 1px solid rgba(201, 168, 76, 0.25);
+      cursor: text;
+      transition: all 0.15s ease;
+      outline: none;
+      font-family: inherit;
+    }
+    .editable-field:hover {
+      background: #fef3c7;
+      border-color: rgba(201, 168, 76, 0.5);
+    }
+    .editable-field:focus {
+      background: #fde68a;
+      border-color: #C9A84C;
+      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+    }
+    /* Government-style NNC2 form */
+    .nnc2-form {
+      font-family: 'Noto Sans TC', 'Arial', sans-serif;
+      line-height: 1.4;
+    }
+    .nnc2-form .field-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #374151;
+      letter-spacing: 0.02em;
+    }
+    .nnc2-form .gov-header {
+      background: #1B2A4A;
+      color: white;
+      padding: 10px 16px;
+      text-align: center;
+    }
+    .nnc2-form .gov-header h2 {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .nnc2-form .gov-header p {
+      font-size: 10px;
+      opacity: 0.75;
+      margin-top: 1px;
+    }
+    .nnc2-form .declaration-box {
+      border: 1.5px solid #1B2A4A;
+      border-radius: 6px;
+      padding: 12px 14px;
+      background: #f9fafb;
+    }
+    .nnc2-form .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #1B2A4A;
+      border-bottom: 2px solid #1B2A4A;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+    }
+    /* For input boxes that mimic government form fields */
+    .gov-input-box {
+      border: 1px solid #d1d5db;
+      background: #fffbeb;
+      padding: 4px 8px;
+      min-height: 28px;
+      font-size: 13px;
+      outline: none;
+      transition: all 0.15s ease;
+      cursor: text;
+      font-family: inherit;
+      border-radius: 3px;
+    }
+    .gov-input-box:hover {
+      border-color: rgba(201, 168, 76, 0.5);
+      background: #fef3c7;
+    }
+    .gov-input-box:focus {
+      border-color: #C9A84C;
+      background: #fde68a;
+      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+    }
+    /* Form row helper */
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .form-row .label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #374151;
+      text-align: right;
+      padding-right: 6px;
+    }
+    .instruction-text {
+      font-size: 10px;
+      color: #6b7280;
+      line-height: 1.3;
+    }
+    /* Print styling for PDF capture */
+    @media print {
+      body { background: white; }
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- ═══════════ Nav ═══════════ -->
+  <nav class="bg-navy text-white sticky top-0 z-50 no-print">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5">
+        <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" onerror="this.outerHTML='<span class=text-gold font-bold text-lg>ES</span><span class=text-white>Gov</span>'" />
+        <span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+      </a>
+      <a href="/company-name-change?step=1" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">
+        ← 返回指南
+      </a>
+    </div>
+  </nav>
+
+  <div class="max-w-4xl mx-auto px-4 py-6">
+
+    <!-- ═════ Trust Banner ═════ -->
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700 no-print">
+      📝 填好下面 NNC2 表格資料 → 㩒「下載 PDF」→ 直接下載已填好嘅 PDF 檔案
+    </div>
+
+    <!-- ═════ Donate Hint ═════ -->
+    <div class="text-center mb-4 no-print">
+      <span class="inline-flex items-center gap-1.5 text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-full px-3 py-1">
+        ☕ 全部免費 · 整理不易，<a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="font-semibold text-gold hover:underline">請咖啡支持</a>
+      </span>
+    </div>
+
+    <!-- ═════ Reference Images (NN2 specimen previews) ═════ -->
+    <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto no-print">
+      <div onclick="openTemplateModal('specimen1')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/nnc2-specimen-1.png?v=9.0" alt="NNC2 範例 1"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 範例1</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">範例 1</span>
+        </div>
+      </div>
+      <div onclick="openTemplateModal('specimen2')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/nnc2-specimen-2.png?v=9.0" alt="NNC2 範例 2"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 範例2</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">範例 2</span>
+        </div>
+      </div>
+      <div onclick="openTemplateModal('specimen3')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/nnc2-specimen-3.png?v=9.0" alt="NNC2 範例 3"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 範例3</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">範例 3</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═════ Form Description + Common Mistakes ═════ -->
+    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm no-print">
+      <div class="flex items-start gap-3 mb-3">
+        <span class="text-lg mt-0.5 shrink-0">📄</span>
+        <div>
+          <p class="font-semibold text-navy text-sm">Form NNC2 — 更改公司名稱通知書</p>
+          <p class="text-xs text-gray-500 mt-0.5">Notice of Change of Company Name（《公司條例》第 107(2) 條）</p>
+        </div>
+      </div>
+      <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
+        <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
+        <ul class="text-xs text-gray-700 space-y-1.5">
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>公司編號寫錯 — 一定要對清楚 CR 嘅周年申報表</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>新名稱同公司條例抵觸 — 例如太相似被拒絕</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>特別決議日期唔啱 — 必須係通過改名決議嘅確實日期</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>超過 15 日先提交 — 特別決議後 15 日內要交 NNC2</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>費用錯誤 — 提交 NNC2 費用 HK$295</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ═════ Template Modal ═════ -->
+    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print" onclick="closeTemplateModal(event)">
+      <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
+        <div class="flex border-b border-gray-200">
+          <button id="tabSpecimen1" onclick="switchModalTab('specimen1')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition">📄 範例 1</button>
+          <button id="tabSpecimen2" onclick="switchModalTab('specimen2')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 範例 2</button>
+          <button id="tabSpecimen3" onclick="switchModalTab('specimen3')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 範例 3</button>
+          <button onclick="closeTemplateModal()" class="px-4 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+        </div>
+        <div id="modalSpecimen1" class="p-4">
+          <img src="/assets/demo/nnc2-specimen-1.png?v=9.0" alt="NNC2 範例 1" class="w-full border border-gray-200 rounded-lg" />
+          <p class="text-xs text-gray-400 mt-2 text-center">NNC2 填寫範例（資料已模糊處理）</p>
+        </div>
+        <div id="modalSpecimen2" class="p-4 hidden">
+          <img src="/assets/demo/nnc2-specimen-2.png?v=9.0" alt="NNC2 範例 2" class="w-full border border-gray-200 rounded-lg" />
+          <p class="text-xs text-gray-400 mt-2 text-center">NNC2 填寫範例（資料已模糊處理）</p>
+        </div>
+        <div id="modalSpecimen3" class="p-4 hidden">
+          <img src="/assets/demo/nnc2-specimen-3.png?v=9.0" alt="NNC2 範例 3" class="w-full border border-gray-200 rounded-lg" />
+          <p class="text-xs text-gray-400 mt-2 text-center">NNC2 填寫範例（資料已模糊處理）</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═════ MAIN NNC2 FORM ═════ -->
+    <div id="pdf-form" class="nnc2-form bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px;">
+
+      <!-- Government-style header -->
+      <div class="gov-header">
+        <div class="flex items-center justify-center gap-3 mb-1">
+          <span class="text-gold text-lg" style="font-size:22px;">🏛️</span>
+          <div>
+            <h2>FORM NNC2</h2>
+            <p>Notice of Change of Company Name<br/>更改公司名稱通知書</p>
+          </div>
+        </div>
+        <p style="font-size:9px; opacity:0.6; margin-top:4px;">
+          (Section 107(2) of the Companies Ordinance (Cap. 622) / 《公司條例》(第622章) 第107(2)條)
+        </p>
+      </div>
+
+      <!-- Form body -->
+      <div class="p-5 sm:p-6">
+
+        <!-- ═══ SECTION A: Current Company Details ═══ -->
+        <div class="mb-5">
+          <div class="section-title">A. 現有公司名稱 / Current Company Name</div>
+          <div class="space-y-2">
+            <div class="form-row">
+              <span class="label">Name (English):</span>
+              <div id="f_old_en" contenteditable="true" class="gov-input-box">Thousandfold Profits Limited</div>
+            </div>
+            <div class="form-row">
+              <span class="label">Name (Chinese):</span>
+              <div id="f_old_zh" contenteditable="true" class="gov-input-box">（如有的話 / if any）</div>
+            </div>
+            <div class="form-row">
+              <span class="label">Company Number:</span>
+              <div id="f_company_no" contenteditable="true" class="gov-input-box">1234567</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ SECTION B: New Company Name ═══ -->
+        <div class="mb-5">
+          <div class="section-title">B. 新公司名稱 / New Company Name</div>
+          <div class="space-y-2">
+            <div class="form-row">
+              <span class="label">Name (English):</span>
+              <div id="f_new_en" contenteditable="true" class="gov-input-box">Billion Profits Limited</div>
+            </div>
+            <div class="form-row">
+              <span class="label">Name (Chinese):</span>
+              <div id="f_new_zh" contenteditable="true" class="gov-input-box">（如有的話 / if any）</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ SECTION C: Abbreviated Name (Optional) ═══ -->
+        <div class="mb-5">
+          <div class="section-title">C. 簡稱 / Abbreviated Name（可選 / Optional）</div>
+          <div class="space-y-2">
+            <div class="form-row">
+              <span class="label">Abbrev. (English):</span>
+              <div id="f_abbr_en" contenteditable="true" class="gov-input-box">（如有的話 / if any）</div>
+            </div>
+            <div class="form-row">
+              <span class="label">Abbrev. (Chinese):</span>
+              <div id="f_abbr_zh" contenteditable="true" class="gov-input-box">（如有的話 / if any）</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ SECTION D: Special Resolution Date ═══ -->
+        <div class="mb-5">
+          <div class="section-title">D. 特別決議詳情 / Special Resolution Details</div>
+          <div class="space-y-2">
+            <div class="form-row">
+              <span class="label">Date of Special Resolution:</span>
+              <div id="f_sr_date" contenteditable="true" class="gov-input-box field-date font-semibold"></div>
+            </div>
+          </div>
+          <p class="instruction-text mt-1">
+            * 特別決議必須在提交本表格前 15 日內通過 / The special resolution must be passed within 15 days before submitting this form.
+          </p>
+        </div>
+
+        <!-- ═══ SECTION E: Declaration ═══ -->
+        <div class="mb-5">
+          <div class="section-title">E. 聲明 / Declaration</div>
+          <div class="declaration-box text-xs text-gray-700 leading-relaxed">
+            <p class="font-semibold text-navy mb-1">茲證明 / I hereby certify that:</p>
+            <ol class="list-decimal list-inside space-y-0.5">
+              <li>上述公司已通過特別決議，決議將公司名稱更改為上述新名稱。/ The above company has passed a special resolution to change its name to the new name stated above.</li>
+              <li>該特別決議已按照《公司條例》第 107(1) 條獲通過。/ The special resolution was passed in accordance with section 107(1) of the Companies Ordinance.</li>
+              <li>本通知書內所載的資料均屬真實及正確。/ The information contained in this notice is true and correct.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- ═══ SECTION F: Signature ═══ -->
+        <div class="mb-4">
+          <div class="section-title">F. 簽署 / Signatures</div>
+          <div class="space-y-3">
+            <div class="form-row">
+              <span class="label">Name of Director / Officer:</span>
+              <div id="f_director_name" contenteditable="true" class="gov-input-box">CHAN Tai Man</div>
+            </div>
+            <div class="form-row">
+              <span class="label">Signature:</span>
+              <div id="f_signature" contenteditable="true" class="gov-input-box" style="font-family:'Brush Script MT',cursive;font-size:16px;">Chan Tai Man</div>
+            </div>
+            <div class="form-row">
+              <span class="label">Date:</span>
+              <div id="f_date" contenteditable="true" class="gov-input-box field-date font-semibold"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ Footer ═══ -->
+        <div class="text-center border-t border-gray-200 pt-3 mt-4">
+          <p class="text-[9px] text-gray-400">
+            Form NNC2 - Companies Registry, Hong Kong Special Administrative Region<br/>
+            Prescribed fee: HK$295 | 須於特別決議通過後 15 日內提交
+          </p>
+        </div>
+
+      </div><!-- /p-6 -->
+    </div><!-- /#pdf-form -->
+
+    <!-- ═════ Download Actions ═════ -->
+    <div class="max-w-[800px] mx-auto mt-6 no-print">
+      <button onclick="downloadPDF()" id="genBtn"
+              class="w-full bg-navy text-white font-bold py-4 px-6 rounded-xl hover:bg-navy-light transition shadow-lg text-lg flex items-center justify-center gap-2">
+        📄 下載 PDF（已填好 NNC2）
+      </button>
+    </div>
+    <p id="status" class="text-center text-sm mt-3 hidden no-print"></p>
+
+  </div><!-- /.container -->
+
+  <!-- ════════════════════════════════════════════════ -->
+  <!--  JAVASCRIPT                                     -->
+  <!-- ════════════════════════════════════════════════ -->
+  <script>
+    // ===== Set default date on all .field-date elements =====
+    function setDates() {
+      const d = new Date();
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      const dateStr = y + '-' + m + '-' + day;
+      document.querySelectorAll('.field-date').forEach(function(el) {
+        if (!el.textContent.trim()) el.textContent = dateStr;
+      });
+    }
+    setDates();
+
+    // ===== Get all form values =====
+    function getVals() {
+      var today = new Date();
+      var dateStr = today.getFullYear() + '-' +
+        String(today.getMonth() + 1).padStart(2, '0') + '-' +
+        String(today.getDate()).padStart(2, '0');
+      return {
+        f_old_en: (document.getElementById('f_old_en').textContent || '').trim(),
+        f_old_zh: (document.getElementById('f_old_zh').textContent || '').trim(),
+        f_company_no: (document.getElementById('f_company_no').textContent || '').trim(),
+        f_new_en: (document.getElementById('f_new_en').textContent || '').trim(),
+        f_new_zh: (document.getElementById('f_new_zh').textContent || '').trim(),
+        f_abbr_en: (document.getElementById('f_abbr_en').textContent || '').trim(),
+        f_abbr_zh: (document.getElementById('f_abbr_zh').textContent || '').trim(),
+        f_sr_date: (document.getElementById('f_sr_date').textContent || '').trim() || dateStr,
+        f_director_name: (document.getElementById('f_director_name').textContent || '').trim(),
+        f_signature: (document.getElementById('f_signature').textContent || '').trim(),
+        f_date: (document.getElementById('f_date').textContent || '').trim() || dateStr,
+      };
+    }
+
+    // ===== Template Modal =====
+    function openTemplateModal(tab) {
+      document.getElementById('templateModal').classList.remove('hidden');
+      document.getElementById('templateModal').classList.add('flex');
+      if (tab && typeof switchModalTab === 'function') switchModalTab(tab);
+    }
+    function closeTemplateModal(e) {
+      if (!e || e.target === document.getElementById('templateModal')) {
+        document.getElementById('templateModal').classList.add('hidden');
+        document.getElementById('templateModal').classList.remove('flex');
+      }
+    }
+    function switchModalTab(tab) {
+      // Hide all
+      ['specimen1', 'specimen2', 'specimen3'].forEach(function(t) {
+        document.getElementById('modal' + t.charAt(0).toUpperCase() + t.slice(1)).classList.toggle('hidden', t !== tab);
+        var btn = document.getElementById('tab' + t.charAt(0).toUpperCase() + t.slice(1));
+        if (t === tab) {
+          btn.className = 'flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition';
+        } else {
+          btn.className = 'flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition';
+        }
+      });
+    }
+
+    // ===== Email Gate (before download) =====
+    function checkEmailGate() {
+      var done = localStorage.getItem('esgov_email_done');
+      if (done) return true;
+      document.getElementById('emailGateModal').classList.remove('hidden');
+      document.getElementById('emailGateModal').classList.add('flex');
+      return false;
+    }
+
+    function submitDownloadEmail() {
+      var email = document.getElementById('downloadEmail').value.trim();
+      if (!email || !email.includes('@')) {
+        alert('⚠️ 請輸入有效嘅電郵地址');
+        return;
+      }
+      try {
+        var iframe = document.createElement('iframe');
+        iframe.name = 'fsframe';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        var f = document.createElement('form');
+        f.method = 'POST';
+        f.action = 'https://formsubmit.co/tbstbs0613@gmail.com';
+        f.target = 'fsframe';
+        f.style.display = 'none';
+        var fields = {
+          email: email,
+          page: 'nnc2-generator',
+          docType: 'Form NNC2 (更改公司名稱通知書)',
+          _subject: '📬 ESGov 新下載（NNC2）：' + email,
+          _captcha: 'false',
+          _template: 'table'
+        };
+        for (var k in fields) {
+          var inp = document.createElement('input');
+          inp.name = k;
+          inp.value = fields[k];
+          f.appendChild(inp);
+        }
+        document.body.appendChild(f);
+        f.submit();
+        setTimeout(function() {
+          document.body.removeChild(f);
+          document.body.removeChild(iframe);
+        }, 1000);
+      } catch (e) {}
+      localStorage.setItem('esgov_email_done', 'true');
+      document.getElementById('emailGateModal').classList.add('hidden');
+      document.getElementById('emailGateModal').classList.remove('flex');
+      setTimeout(function() { downloadPDF(); }, 100);
+    }
+
+    function closeEmailGate() {
+      document.getElementById('emailGateModal').classList.add('hidden');
+      document.getElementById('emailGateModal').classList.remove('flex');
+    }
+
+    // ===== One-click PDF download =====
+    async function downloadPDF() {
+      if (!checkEmailGate()) return;
+      var btn = document.getElementById('genBtn');
+      var status = document.getElementById('status');
+      btn.disabled = true;
+      btn.innerHTML = '⏳ 生成中…';
+      status.className = 'text-center text-sm mt-3 text-blue-600';
+      status.textContent = '準備中…';
+      status.classList.remove('hidden');
+
+      try {
+        var jsPDF = window.jspdf.jsPDF;
+
+        // Wait for fonts
+        await document.fonts.ready;
+
+        // Collect current form values
+        var v = getVals();
+
+        // Create off-screen clone for capture
+        var original = document.getElementById('pdf-form');
+        var clone = document.createElement('div');
+        clone.innerHTML = original.innerHTML;
+        clone.style.cssText = 'position:fixed;left:-9999px;top:0;width:800px;z-index:-1;font-family:"Noto Sans TC",sans-serif;';
+        document.body.appendChild(clone);
+
+        // Inject field values into clone
+        var vMap = {
+          f_old_en: 'f_old_en',
+          f_old_zh: 'f_old_zh',
+          f_company_no: 'f_company_no',
+          f_new_en: 'f_new_en',
+          f_new_zh: 'f_new_zh',
+          f_abbr_en: 'f_abbr_en',
+          f_abbr_zh: 'f_abbr_zh',
+          f_sr_date: 'f_sr_date',
+          f_director_name: 'f_director_name',
+          f_signature: 'f_signature',
+          f_date: 'f_date'
+        };
+        for (var id in vMap) {
+          var el = clone.querySelector('#' + vMap[id]);
+          if (el) el.textContent = v[id];
+        }
+
+        // Also set dates on field-date elements in clone
+        var today = new Date();
+        var dateStr = today.getFullYear() + '-' +
+          String(today.getMonth() + 1).padStart(2, '0') + '-' +
+          String(today.getDate()).padStart(2, '0');
+        clone.querySelectorAll('.field-date').forEach(function(el) {
+          if (!el.textContent.trim()) el.textContent = dateStr;
+        });
+
+        // Small delay for clone to render
+        await new Promise(function(r) { setTimeout(r, 200); });
+
+        // Capture the clone with html2canvas
+        var canvas = await html2canvas(clone, {
+          scale: 3,
+          useCORS: true,
+          backgroundColor: '#ffffff',
+          logging: false,
+          onclone: function(doc) {
+            doc.querySelectorAll('[contenteditable]').forEach(function(el) {
+              el.style.background = 'transparent';
+            });
+          }
+        });
+
+        // Remove clone
+        document.body.removeChild(clone);
+
+        // Generate PDF (single A4 page)
+        var imgData = canvas.toDataURL('image/png');
+        var doc = new jsPDF('p', 'mm', 'a4');
+        var pageW = 210;
+        var imgRatio = canvas.height / canvas.width;
+        var imgH = pageW * imgRatio;
+        var pageH = 297;
+
+        if (imgH > pageH) {
+          // Scale down to fit
+          var scale = pageH / imgH;
+          doc.addImage(imgData, 'PNG', 0, 0, pageW * scale, pageH);
+        } else {
+          // Center vertically
+          var yOffset = (pageH - imgH) / 2;
+          doc.addImage(imgData, 'PNG', 0, yOffset, pageW, imgH);
+        }
+
+        // ===== Watermark (ESGov branding) =====
+        doc.saveGraphicsState();
+        doc.setGState(new window.jspdf.GState({ opacity: 0.10 }));
+        doc.setTextColor(180, 180, 180);
+        doc.setFontSize(48);
+        doc.setFont('helvetica', 'bold');
+        doc.text('ESGov', 20, 60, { angle: -30 });
+        doc.text('ESGov', 80, 160, { angle: -30 });
+        doc.text('ESGov', 140, 260, { angle: -30 });
+        doc.restoreGraphicsState();
+
+        doc.save('NNC2_Change_of_Company_Name_Filled.pdf');
+
+        btn.innerHTML = '✅ 已下載！';
+        status.className = 'text-center text-sm mt-3 text-green-600';
+        status.textContent = '✅ PDF 已儲存到你的電腦';
+        setTimeout(function() {
+          btn.innerHTML = '📄 下載 PDF（已填好 NNC2）';
+          btn.disabled = false;
+          status.classList.add('hidden');
+        }, 2500);
+
+      } catch (e) {
+        console.error('PDF generation error:', e);
+        btn.innerHTML = '📄 下載 PDF（已填好 NNC2）';
+        btn.disabled = false;
+        status.className = 'text-center text-sm mt-3 text-red-500';
+        status.textContent = '❌ 生成失敗: ' + e.message;
+      }
+    }
+  </script>
+
+  <!-- ═════ Email Gate Modal ═════ -->
+  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print">
+    <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" onclick="event.stopPropagation()">
+      <div class="text-3xl mb-3">📬</div>
+      <h3 class="text-lg font-bold text-navy mb-2">下載前留低 email</h3>
+      <p class="text-sm text-gray-500 mb-5">
+        正在為你準備 <strong>Form NNC2（更改公司名稱通知書）</strong> 嘅 PDF<br />
+        留低 email，我哋會話你知邊份文件準備好咗 😊
+      </p>
+      <div class="flex flex-col gap-3">
+        <input type="email" id="downloadEmail" placeholder="your@email.com"
+               class="border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold"
+        />
+        <button onclick="submitDownloadEmail()"
+                class="bg-navy text-white font-semibold py-2.5 rounded-xl hover:bg-navy-light transition text-sm">
+          📥 繼續下載 PDF
+        </button>
+        <button onclick="closeEmailGate()" class="text-xs text-gray-400 hover:text-gray-600 transition">唔住，稍後先</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════ Footer ═════ -->
+  <footer class="bg-navy text-white py-8 mt-12 no-print">
+    <div class="max-w-4xl mx-auto px-4 text-center text-xs text-gray-400">
+      <p>⚠️ 僅供參考，並不構成法律意見。填寫後請打印簽署並提交至公司註冊處。</p>
+      <p class="mt-1">&copy; ESGov</p>
+      <p class="mt-2 opacity-40">v1.0</p>
+    </div>
+  </footer>
+
+  <!-- ═════ JSON-LD Structured Data ═════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ESGov",
+    "url": "https://esgov.org",
+    "logo": "https://esgov.org/assets/images/esgov-logo.png"
+  }
+  </script>
+</body>
+</html>
