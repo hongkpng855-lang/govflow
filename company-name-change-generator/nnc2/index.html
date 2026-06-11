@@ -43,14 +43,14 @@
 </head>
 <body class="bg-gray-100 font-sans">
 
-  <!-- ═══════ Nav ═══════ -->
+  <!-- ═══════════ Nav ═══════════ -->
   <nav class="bg-navy text-white sticky top-0 z-50 no-print">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5">
         <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" onerror="this.outerHTML='<span class=text-gold font-bold text-lg>ES</span><span class=text-white>Gov</span>'" />
         <span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
       </a>
-      <a href="/company-name-change?step=3" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">
+      <a href="/company-name-change?step=1" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">
         ← 返回指南
       </a>
     </div>
@@ -59,8 +59,8 @@
   <div class="max-w-4xl mx-auto px-4 py-6">
 
     <!-- ═════ Trust Banner ═════ -->
-    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700 no-print">
-      📋 以下係 Form NNC2 嘅詳細填寫指引 + 政府官方表格下載連結
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700 no-print">
+      📋 NNC2 係公司註冊處嘅官方表格 — 㩒下面掣去政府官網下載最新版本
     </div>
 
     <!-- ═════ Donate Hint ═════ -->
@@ -70,222 +70,158 @@
       </span>
     </div>
 
-    <!-- ═════ Hero ═════ -->
-    <div class="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 shadow-sm mb-6">
-      <div class="flex items-start gap-4 mb-4">
-        <span class="text-3xl mt-1 shrink-0">📋</span>
+    <!-- ═════ Reference Images (NN2 specimen previews) ═════ -->
+    <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto no-print">
+      <div onclick="openTemplateModal('specimen1')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/nnc2-specimen-1.png?v=9.0" alt="NNC2 範例 1"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 範例1</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">範例 1</span>
+        </div>
+      </div>
+      <div onclick="openTemplateModal('specimen2')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/nnc2-specimen-2.png?v=9.0" alt="NNC2 範例 2"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 範例2</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">範例 2</span>
+        </div>
+      </div>
+      <div onclick="openTemplateModal('specimen3')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/nnc2-specimen-3.png?v=9.0" alt="NNC2 範例 3"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 範例3</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">範例 3</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═════ Form Description + Common Mistakes ═════ -->
+    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm no-print">
+      <div class="flex items-start gap-3 mb-3">
+        <span class="text-lg mt-0.5 shrink-0">📄</span>
         <div>
-          <h1 class="text-2xl sm:text-3xl font-bold text-navy mb-2">Form NNC2 — 更改公司名稱通知書</h1>
-          <p class="text-gray-500 text-sm">Notice of Change of Company Name（《公司條例》第 107(2) 條）</p>
+          <p class="font-semibold text-navy text-sm">Form NNC2 — 更改公司名稱通知書</p>
+          <p class="text-xs text-gray-500 mt-0.5">Notice of Change of Company Name（《公司條例》第 107(2) 條）</p>
         </div>
       </div>
-      <p class="text-gray-700 leading-relaxed text-sm mb-4">
-        NNC2 係公司註冊處嘅指定表格，用於通知政府公司已通過更改名稱嘅特別決議。<br class="hidden sm:inline" />
-        通過特別決議後，你必須喺 <strong class="text-red-600">15 日內</strong>提交呢份表格。
-      </p>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-        <div class="bg-gray-50 rounded-xl p-3">
-          <div class="text-xl font-bold text-navy">HK$295</div>
-          <div class="text-xs text-gray-500">提交費用</div>
-        </div>
-        <div class="bg-gray-50 rounded-xl p-3">
-          <div class="text-xl font-bold text-red-600">15 日</div>
-          <div class="text-xs text-gray-500">提交限期</div>
-        </div>
-        <div class="bg-gray-50 rounded-xl p-3">
-          <div class="text-xl font-bold text-navy">🖥️ / 📄</div>
-          <div class="text-xs text-gray-500">電子或實體</div>
-        </div>
-        <div class="bg-gray-50 rounded-xl p-3">
-          <div class="text-xl font-bold text-green-600">1 小時</div>
-          <div class="text-xs text-gray-500">電子出證書</div>
-        </div>
+      <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
+        <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
+        <ul class="text-xs text-gray-700 space-y-1.5">
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>公司編號寫錯 — 一定要對清楚 CR 嘅周年申報表</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>新名稱同公司條例抵觸 — 例如太相似被拒絕</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>特別決議日期唔啱 — 必須係通過改名決議嘅確實日期</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>超過 15 日先提交 — 特別決議後 15 日內要交 NNC2</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>費用錯誤 — 提交 NNC2 費用 HK$295</li>
+        </ul>
       </div>
     </div>
 
-    <!-- ═════ Reference Images (NNC2 specimen previews) ═════ -->
-    <div class="mb-6">
-      <h2 class="font-bold text-navy text-lg mb-3">📸 真實範例參考</h2>
-      <p class="text-xs text-gray-500 mb-3">㩒落去可以放大睇清楚</p>
-      <div class="grid grid-cols-3 gap-2 sm:gap-3 max-w-lg mx-auto no-print">
-        <div onclick="openTemplateModal('specimen1')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-          <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-            <img src="/assets/demo/nnc2-specimen-1.png?v=9.0" alt="NNC2 範例 1"
-                 class="w-full h-full object-contain"
-                 onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 範例1</div>'" />
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-            <span class="text-white text-xs font-bold drop-shadow-sm">範例 1</span>
-          </div>
+    <!-- ═════ Template Modal ═════ -->
+    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print" onclick="closeTemplateModal(event)">
+      <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
+        <div class="flex border-b border-gray-200">
+          <button id="tabSpecimen1" onclick="switchModalTab('specimen1')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition">📄 範例 1</button>
+          <button id="tabSpecimen2" onclick="switchModalTab('specimen2')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 範例 2</button>
+          <button id="tabSpecimen3" onclick="switchModalTab('specimen3')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 範例 3</button>
+          <button onclick="closeTemplateModal()" class="px-4 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
         </div>
-        <div onclick="openTemplateModal('specimen2')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-          <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-            <img src="/assets/demo/nnc2-specimen-2.png?v=9.0" alt="NNC2 範例 2"
-                 class="w-full h-full object-contain"
-                 onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 範例2</div>'" />
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-            <span class="text-white text-xs font-bold drop-shadow-sm">範例 2</span>
-          </div>
+        <div id="modalSpecimen1" class="p-4">
+          <img src="/assets/demo/nnc2-specimen-1.png?v=9.0" alt="NNC2 範例 1" class="w-full border border-gray-200 rounded-lg" />
+          <p class="text-xs text-gray-400 mt-2 text-center">NNC2 填寫範例（資料已模糊處理）</p>
         </div>
-        <div onclick="openTemplateModal('specimen3')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-          <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-            <img src="/assets/demo/nnc2-specimen-3.png?v=9.0" alt="NNC2 範例 3"
-                 class="w-full h-full object-contain"
-                 onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 範例3</div>'" />
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-            <span class="text-white text-xs font-bold drop-shadow-sm">範例 3</span>
-          </div>
+        <div id="modalSpecimen2" class="p-4 hidden">
+          <img src="/assets/demo/nnc2-specimen-2.png?v=9.0" alt="NNC2 範例 2" class="w-full border border-gray-200 rounded-lg" />
+          <p class="text-xs text-gray-400 mt-2 text-center">NNC2 填寫範例（資料已模糊處理）</p>
+        </div>
+        <div id="modalSpecimen3" class="p-4 hidden">
+          <img src="/assets/demo/nnc2-specimen-3.png?v=9.0" alt="NNC2 範例 3" class="w-full border border-gray-200 rounded-lg" />
+          <p class="text-xs text-gray-400 mt-2 text-center">NNC2 填寫範例（資料已模糊處理）</p>
         </div>
       </div>
     </div>
 
-    <!-- ═════ Filling Guide ═════ -->
-    <div class="bg-white border border-gray-200 rounded-xl p-5 sm:p-6 shadow-sm mb-6">
-      <h2 class="font-bold text-navy text-lg mb-4 flex items-center gap-2">
-        <span>✍️</span> 填寫指引
-      </h2>
-      <div class="space-y-4 text-sm text-gray-700">
-        <div class="flex items-start gap-3">
-          <span class="w-6 h-6 rounded-full bg-navy text-white text-xs flex items-center justify-center shrink-0 mt-0.5">A</span>
-          <div>
-            <p class="font-semibold text-navy">現有公司名稱</p>
-            <p class="text-xs text-gray-500">填寫公司嘅英文名（必須以「Limited」結尾）同中文名（如有的話）。公司名要同公司註冊證書 100% 一致。</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="w-6 h-6 rounded-full bg-navy text-white text-xs flex items-center justify-center shrink-0 mt-0.5">B</span>
-          <div>
-            <p class="font-semibold text-navy">新公司名稱</p>
-            <p class="text-xs text-gray-500">填寫擬採用嘅新公司名。記住要先查冊確認冇撞名，否則 CR 會 reject。</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="w-6 h-6 rounded-full bg-navy text-white text-xs flex items-center justify-center shrink-0 mt-0.5">C</span>
-          <div>
-            <p class="font-semibold text-navy">簡稱（可選）</p>
-            <p class="text-xs text-gray-500">如果有公司簡稱可以填，冇嘅 skip 就得。</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="w-6 h-6 rounded-full bg-navy text-white text-xs flex items-center justify-center shrink-0 mt-0.5">D</span>
-          <div>
-            <p class="font-semibold text-navy">特別決議詳情</p>
-            <p class="text-xs text-gray-500">填寫通過改名決議嘅確實日期。記住：必須喺決議後 15 日內提交。</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="w-6 h-6 rounded-full bg-navy text-white text-xs flex items-center justify-center shrink-0 mt-0.5">E</span>
-          <div>
-            <p class="font-semibold text-navy">聲明 + F. 簽署</p>
-            <p class="text-xs text-gray-500">董事/秘書簽署確認資料正確。公司註冊處會核對簽署同公司紀錄。</p>
-          </div>
-        </div>
+    <!-- ═════ Quick Facts ═════ -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+      <div class="bg-white border border-gray-200 rounded-xl p-3 text-center shadow-sm">
+        <div class="text-xl font-bold text-navy">HK$295</div>
+        <div class="text-xs text-gray-500">提交費用</div>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-3 text-center shadow-sm">
+        <div class="text-xl font-bold text-red-600">15 日</div>
+        <div class="text-xs text-gray-500">提交限期</div>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-3 text-center shadow-sm">
+        <div class="text-xl font-bold text-navy">🖥️/📄</div>
+        <div class="text-xs text-gray-500">電子或實體</div>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-3 text-center shadow-sm">
+        <div class="text-xl font-bold text-green-600">~1 小時</div>
+        <div class="text-xs text-gray-500">電子出證書</div>
       </div>
     </div>
 
-    <!-- ═════ Common Mistakes ═════ -->
-    <div class="bg-red-50 border border-red-200 rounded-xl p-5 sm:p-6 mb-6">
-      <h3 class="font-semibold text-red-600 text-sm mb-3 flex items-center gap-1">⚠️ 常見錯誤</h3>
-      <ul class="text-sm text-gray-700 space-y-2">
-        <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span><strong>仲用舊 Form R1</strong> — 2014 年已經改用 NNC2，用錯表格即刻退回</li>
-        <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span><strong>公司編號寫錯</strong> — 一定要對清楚 CR 嘅周年申報表</li>
-        <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span><strong>新名稱同現有公司太相似</strong> — CR 會 reject，要重新申請</li>
-        <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span><strong>特別決議日期錯</strong> — 必須係通過改名決議嘅確實日期</li>
-        <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span><strong>超過 15 日先提交</strong> — 特別決議後 15 日內要交，逾期罰款</li>
-        <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span><strong>費用錯誤</strong> — NNC2 費用係 HK$295</li>
-        <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span><strong>未預先開 e-Services Portal Account</strong> — 網上提交要預先登記</li>
-      </ul>
-    </div>
-
-    <!-- ═════ CTA: Go to Gov Website ═════ -->
-    <div class="bg-gradient-to-r from-navy to-navy-light rounded-xl p-6 sm:p-8 text-center shadow-lg mb-6">
+    <!-- ═════ Gov Download CTA ═════ -->
+    <div class="bg-navy rounded-xl p-6 sm:p-8 text-center shadow-lg mb-6 no-print">
       <div class="text-4xl mb-3">🏛️</div>
-      <h2 class="text-xl font-bold text-white mb-2">前往政府官網下載 NNC2</h2>
+      <h2 class="text-xl font-bold text-white mb-2">下載官方 NNC2 表格</h2>
       <p class="text-gray-300 text-sm mb-5 max-w-lg mx-auto">
-        Form NNC2 係公司註冊處嘅官方表格，直接喺政府網站下載最新版本，保證格式正確。
+        Form NNC2 係公司註冊處嘅官方表格。直接去政府網站下載最新版本，保證格式正確。
       </p>
       <a href="https://www.cr.gov.hk/en/forms/specified.htm"
          target="_blank" rel="noopener noreferrer"
          class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-3.5 px-8 rounded-xl hover:bg-gold-light transition shadow-lg text-base">
         🏛️ 前往公司註冊處官網下載 →
       </a>
-      <div class="mt-4 flex flex-wrap justify-center gap-2 text-xs text-gray-400">
-        <span class="bg-white/10 rounded-full px-3 py-1">🔗 即時連結</span>
-        <span class="bg-white/10 rounded-full px-3 py-1">📄 最新版本</span>
-        <span class="bg-white/10 rounded-full px-3 py-1">✅ 官方認可</span>
-      </div>
     </div>
 
-    <!-- ═════ Submission Methods ═════ -->
-    <div class="grid sm:grid-cols-2 gap-4 mb-6">
-      <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-        <div class="text-2xl mb-2">🖥️</div>
-        <h3 class="font-bold text-navy text-sm mb-2">電子提交（推薦）</h3>
-        <ul class="text-xs text-gray-600 space-y-1.5">
-          <li class="flex items-start gap-1.5">• 用 e-Services Portal 網上提交</li>
-          <li class="flex items-start gap-1.5">• ⏱ 約 1 小時內出證書（電郵通知）</li>
-          <li class="flex items-start gap-1.5">• 需預先登記 e-Services Account</li>
-          <li class="flex items-start gap-1.5">• 電子證書有同等法律效力</li>
-        </ul>
-      </div>
-      <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-        <div class="text-2xl mb-2">📄</div>
-        <h3 class="font-bold text-navy text-sm mb-2">實體提交</h3>
-        <ul class="text-xs text-gray-600 space-y-1.5">
-          <li class="flex items-start gap-1.5">• 親身去金鐘道政府合署 14/F</li>
-          <li class="flex items-start gap-1.5">• ⏱ 約 4 個工作天出證書</li>
-          <li class="flex items-start gap-1.5">• 可郵寄提交（處理時間更長）</li>
-          <li class="flex items-start gap-1.5">• 需親身去拎證書</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- ═════ Related: Special Resolution Generator ═════ -->
-    <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 sm:p-6 mb-6 no-print">
-      <div class="flex items-start gap-3">
-        <span class="text-2xl mt-0.5 shrink-0">📝</span>
+    <!-- ═════ NNC2 Guidance ═════ -->
+    <div class="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm mb-6">
+      <div class="flex items-start gap-3 mb-3">
+        <span class="text-lg mt-0.5 shrink-0">📄</span>
         <div>
-          <h3 class="font-semibold text-navy text-sm mb-1">未通過特別決議？</h3>
-          <p class="text-xs text-gray-600 mb-3">
-            提交 NNC2 之前，你需要先通過一份特別決議（Special Resolution）。用我哋嘅互動工具一鍵生成已填好嘅決議文件。
-          </p>
-          <a href="/company-name-change-generator/special-resolution" class="inline-flex items-center gap-1.5 bg-navy text-white font-semibold text-xs px-4 py-2.5 rounded-xl hover:bg-navy-light transition shadow-sm">
-            📝 去特別決議 Generator →
-          </a>
+          <p class="font-semibold text-navy text-sm">Form NNC2 填寫須知</p>
+          <p class="text-xs text-gray-500 mt-0.5">Notice of Change of Company Name（《公司條例》第 107(2) 條）</p>
+        </div>
+      </div>
+      <div class="space-y-3 text-sm text-gray-700">
+        <div class="flex items-start gap-2">
+          <span class="w-5 h-5 rounded-full bg-navy text-white text-xs flex items-center justify-center shrink-0 mt-0.5">A</span>
+          <div><span class="font-semibold">現有公司名稱</span><span class="text-xs text-gray-500 ml-1">— 英文名必須以「Limited」結尾，同公司註冊證書 100% 一致</span></div>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="w-5 h-5 rounded-full bg-navy text-white text-xs flex items-center justify-center shrink-0 mt-0.5">B</span>
+          <div><span class="font-semibold">新公司名稱</span><span class="text-xs text-gray-500 ml-1">— 先查冊確認冇撞名，否則 CR 會 reject</span></div>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="w-5 h-5 rounded-full bg-navy text-white text-xs flex items-center justify-center shrink-0 mt-0.5">C</span>
+          <div><span class="font-semibold">簡稱（可選）</span><span class="text-xs text-gray-500 ml-1">— 冇嘅 skip 就得</span></div>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="w-5 h-5 rounded-full bg-navy text-white text-xs flex items-center justify-center shrink-0 mt-0.5">D</span>
+          <div><span class="font-semibold">特別決議日期</span><span class="text-xs text-gray-500 ml-1">— 必須喺決議後 15 日內提交</span></div>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="w-5 h-5 rounded-full bg-navy text-white text-xs flex items-center justify-center shrink-0 mt-0.5">E+F</span>
+          <div><span class="font-semibold">聲明 + 簽署</span><span class="text-xs text-gray-500 ml-1">— 董事/秘書簽署確認資料正確</span></div>
         </div>
       </div>
     </div>
 
+    <!-- ═════ Form Description + Common Mistakes ═════ -->
+
   </div><!-- /.container -->
 
-  <!-- ═════ Template Modal ═════ -->
-  <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print" onclick="closeTemplateModal(event)">
-    <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
-      <div class="flex border-b border-gray-200">
-        <button id="tabSpecimen1" onclick="switchModalTab('specimen1')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition">📄 範例 1</button>
-        <button id="tabSpecimen2" onclick="switchModalTab('specimen2')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 範例 2</button>
-        <button id="tabSpecimen3" onclick="switchModalTab('specimen3')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 範例 3</button>
-        <button onclick="closeTemplateModal()" class="px-4 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
-      </div>
-      <div id="modalSpecimen1" class="p-4">
-        <img src="/assets/demo/nnc2-specimen-1.png?v=9.0" alt="NNC2 範例 1" class="w-full border border-gray-200 rounded-lg" />
-        <p class="text-xs text-gray-400 mt-2 text-center">NNC2 填寫範例（資料已模糊處理）</p>
-      </div>
-      <div id="modalSpecimen2" class="p-4 hidden">
-        <img src="/assets/demo/nnc2-specimen-2.png?v=9.0" alt="NNC2 範例 2" class="w-full border border-gray-200 rounded-lg" />
-        <p class="text-xs text-gray-400 mt-2 text-center">NNC2 填寫範例（資料已模糊處理）</p>
-      </div>
-      <div id="modalSpecimen3" class="p-4 hidden">
-        <img src="/assets/demo/nnc2-specimen-3.png?v=9.0" alt="NNC2 範例 3" class="w-full border border-gray-200 rounded-lg" />
-        <p class="text-xs text-gray-400 mt-2 text-center">NNC2 填寫範例（資料已模糊處理）</p>
-      </div>
-    </div>
-  </div>
-
   <!-- ════════════════════════════════════════════════ -->
-  <!--  JAVASCRIPT (modal only, no PDF generation)    -->
+  <!--  JAVASCRIPT                                     -->
   <!-- ════════════════════════════════════════════════ -->
   <script>
     // ===== Template Modal =====
@@ -301,6 +237,7 @@
       }
     }
     function switchModalTab(tab) {
+      // Hide all
       ['specimen1', 'specimen2', 'specimen3'].forEach(function(t) {
         document.getElementById('modal' + t.charAt(0).toUpperCase() + t.slice(1)).classList.toggle('hidden', t !== tab);
         var btn = document.getElementById('tab' + t.charAt(0).toUpperCase() + t.slice(1));
@@ -314,7 +251,7 @@
   </script>
 
   <!-- ═════ Footer ═════ -->
-  <footer class="bg-navy text-white py-8 mt-6 no-print">
+  <footer class="bg-navy text-white py-8 mt-12 no-print">
     <div class="max-w-4xl mx-auto px-4 text-center text-xs text-gray-400">
       <p>⚠️ 僅供參考，並不構成法律意見。填寫後請打印簽署並提交至公司註冊處。</p>
       <p class="mt-1">&copy; ESGov</p>
