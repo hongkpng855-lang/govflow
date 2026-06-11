@@ -49,6 +49,7 @@ case "$STEP_NUM" in
   3) STEP_NAME="step3-instrument" ;;
   4) STEP_NAME="step4-audit" ;;
   5) STEP_NAME="step5-nar1" ;;
+  6) STEP_NAME="step5-nsc1" ;;
   *)
     read -p "輸入自訂文件名稱（無空格，e.g. annual-return）: " CUSTOM_NAME
     STEP_NAME="$CUSTOM_NAME"
