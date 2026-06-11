@@ -4,44 +4,71 @@
 
 **每個新產品跟返產品 1（股份轉讓指南）嘅 format 做 template。**
 
-### Step Format（跟產品 1）
-```
-每個 Step =
-  1. 詳細說明（白話文 + 真實經歷）
-  2. 所需文件 card（如有 Generator 用互動工具格式，冇就用文件格式）
-  3. Demo 範例圖片（真實案例 + 可修改文件/Word to PDF）
-  4. 常見錯誤列表
-```
+### Generator 頁面 — 兩種模式
 
-### 互動工具格式（任何 Step 都可以有 Generator）
+所有文件都要有獨立 Generator 頁面，分兩種模式：
+
+#### 模式 A：🚀 互動填寫（編輯線上嘅版本）
+
+適用於需要填寫後生成 PDF 嘅文件（Step 1-3）。
+
 ```
 ┌─────────────────────────────────┐
-│  [真實案例圖]    [可修改文件圖]    │  ← 兩張並排
+│  [真實案例圖]    [可修改文件圖]    │  ← 兩張並排 + modal 放大
 │         🏷️ 互動工具              │
 ├─────────────────────────────────┤
-│  文件名稱                        │
-│  文件描述                        │
-│  🚀 填寫 + 生成 PDF              │  ← link 去 generator
+│  文件說明 + 常見錯誤             │
+├─────────────────────────────────┤
+│  線上可編輯表單 (contenteditable)│  ← 跟 Word template layout
+│  [field 1], [field 2], ...      │
+├─────────────────────────────────┤
+│  🚀 下載 PDF（一鍵生成）          │  ← jsPDF + html2canvas
 └─────────────────────────────────┘
 ```
-**需要：**
-- `{step}-realdemo.png?v=9.x` — 真實填寫範例（已 blur/watermark）
-- `{step}-wordtopdf.png?v=9.x` — 可編輯文件範本（空白模板 screenshot）
-- `{product-id}-generator.html` — **根據真實文件重新設計 form layout**
-- `processes.json` → `hasGenerator: true` + `generatorUrl`
 
-### 文件格式（冇 Generator）
+**需要：**
+- `{step}-realdemo.png` — 真實填寫範例
+- `{step}-wordtopdf.png` — 空白模板 screenshot
+- `{product-id}-generator.html` — **互動表單（contenteditable fields）**
+- `processes.json` → `hasGenerator: true` + `generatorUrl`
+- 卡面顯示：**🚀 填寫 + 生成 PDF**
+
+#### 模式 B：👁️ 範例+下載（淨係連結去官方嘅文件版本）
+
+適用於政府官方表格或第三方文件唔需要互動填寫（Step 4-5）。
+
 ```
 ┌─────────────────────────────────┐
-│  📄 文件名稱                     │
-│  文件描述                        │
-│  👁️ 檢視範例 PDF                 │  ← click 開 overlay
+│         🖼️ 範例圖片              │  ← 官方 PDF 截圖 / SVG
+├─────────────────────────────────┤
+│  文件說明 + 常見錯誤             │
+├─────────────────────────────────┤
+│  📥 下載官方 fillable PDF        │  ← 官方表格下載
+│  📄 查看官方表格（公司註冊處）    │  ← 官網連結
+│  ← 返回完整指南                  │
 └─────────────────────────────────┘
 ```
+
 **需要：**
-- `{step}-realdemo.png?v=9.x` — 真實範例圖
-- `processes.json` → `hasGenerator: false`（default）
-- 無 generator page
+- `{step}-demo.png` 或 `{step}-demo.svg` — 示範圖片（官方 PDF 截圖優先）
+- `templates/{filename}.pdf` 或 `.docx` — 可供下載嘅模板
+- `processes.json` → `generatorUrl`（有但 `hasGenerator` 唔 set / `false`）
+- 卡面顯示：**👁️ 檢視範例 PDF**
+
+---
+
+## 兩種模式比較
+
+| 特性 | 模式 A 🚀 互動填寫 | 模式 B 👁️ 範例+下載 |
+|------|:---:|:---:|
+| 線上編輯表單 | ✅ | ❌ |
+| 一鍵生成 PDF | ✅ | ❌ |
+| 官方表格下載 | ❌（用自訂 template） | ✅ |
+| 官方網站連結 | ❌ | ✅ |
+| `hasGenerator` | `true` | 唔 set |
+| `generatorUrl` | `{id}-generator.html` | `{id}-generator.html` |
+| 卡面按鈕 | 🚀 填寫 + 生成 PDF | 👁️ 檢視範例 PDF |
+| 示例 | Sold Note, Instrument, Letter | Audit Report, NAR1, NSC1 |
 
 ---
 
@@ -55,9 +82,11 @@
 
 ## Generator 製作流程（詳細）
 
-當需要為某個 Step 製作 Generator 時，跟以下步驟：
+當需要為某個 Step 製作 Generator 時，先決定用 **模式 A（互動填寫）** 定 **模式 B（範例+下載）**。
 
-### Step 1 — 分析 Word 模板
+### 模式 A：互動填寫 Generator（Sold Note, Instrument, Letter 模式）
+
+#### Step 1 — 分析 Word 模板
 ```bash
 python3 -c "
 from docx import Document
@@ -140,14 +169,38 @@ return {
 ### Step 5 — 更新 sitemap.py
 - 加新頁到 `PRIORITY` dict（generator 統一 priority `0.8`）
 
-### Step 6 — 更新 overlay 邏輯（如有需要）
-- `shareholder-transfer.html` 嘅 overlay 已自動支援任何有 `generatorUrl` 嘅 step
-- 預設 template 邏輯：
+### 模式 B：範例+下載 Generator（Audit Report, NAR1, NSC1 模式）
+
+#### Step 1 — Copy 現有 Generator 做 Template
+- Copy `nar1-generator.html` → `{product-id}-generator.html`
+
+#### Step 2 — 修改以下部分
+- **Head meta tags**：title, description, OG, canonical
+- **Navigation**：back link → 指向產品頁
+- **Trust Banner**：改為對應嘅說明文字
+- **Demo 圖片**：`src="assets/demo/{step}-demo.png"`
+  - 優先使用官方 PDF 第一頁截圖（`pdftoppm -png -r 150 -f 1 -l 1`）
+  - 如果冇官方 PDF，用自製 SVG
+- **文件說明 + 常見錯誤**：從 `processes.json` copy 對應內容
+- **下載按鈕**：`href="templates/{filename}.pdf"`（官方 fillable PDF）
+- **官方表格連結**：指向 cr.gov.hk 或其他政府網站（如適用）
+
+#### Step 3 — 更新 processes.json
+- 該文件嘅 document 加：
+  ```json
+  "generatorUrl": "{product-id}-generator.html",
+  "templateFile": "templates/{filename}.pdf",
+  "officialFormUrl": "https://...（如有）"
   ```
-  有 generatorUrl → 「🚀 前往 PDF 生成器」
-  冇 generatorUrl + 有 templateFile → 「📥 下載可編輯模板」
-  兩樣都冇 → 「（此文件暫無可編輯模板）」
-  ```
+- 唔好 set `hasGenerator`（留空 = false）
+
+#### Step 4 — 更新 deploy.sh + sitemap.py（同模式 A）
+
+### 卡面顯示邏輯（shareholder-transfer.html）
+- `hasGenerator == true` + `generatorUrl` → **🚀 填寫 + 生成 PDF**（模式 A）
+- `generatorUrl` 有但 `hasGenerator` 唔 set → **👁️ 檢視範例 PDF**（模式 B）
+- 冇 `generatorUrl` + 有 `templateFile` → **📥 下載可編輯模板**（overlay 內）
+- 兩樣都冇 → 「（此文件暫無可編輯模板）」
 
 ---
 
@@ -197,8 +250,9 @@ return {
 |------|--------|
 | `processes.json` | Copy 產品嘅 JSON block 改資料 |
 | `{product-id}.html` | Copy `shareholder-transfer.html` |
-| `{product-id}-generator.html` | Copy `letter-of-transferee-generator.html`（最新基準） |
+| `{product-id}-generator.html`（模式 A 🚀） | Copy `sold-note-generator.html`（互動填寫） |
+| `{product-id}-generator.html`（模式 B 👁️） | Copy `nar1-generator.html`（範例+下載） |
 | `index.html` featured card | Copy 現有 card 改 href |
-| `assets/demo/*.png` | 用戶提供 realdemo / 自己製作 wordtopdf |
+| `assets/demo/*.png` | 用戶提供 realdemo / `pdftoppm` 官方 PDF 截圖 |
 | `deploy.sh` | 加新 HTML 到 ALLOWED_PAGES |
 | `scripts/generate-sitemap.py` | 加新 HTML 到 PRIORITY |
