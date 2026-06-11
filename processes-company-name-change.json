@@ -26,6 +26,7 @@
           "name": "特別決議（Special Resolution）",
           "description": "股東通過更改公司名稱嘅決議記錄，公司內部保留",
           "demoImage": "/assets/demo/special-resolution.png",
+          "templateFile": "/assets/demo/nnc2-specimen.pdf",
           "commonMistakes": [
             "通過後超過 15 日先交 NNC2 — 公司註冊處會罰款",
             "決議寫錯公司名或日期 — 要重新再通過一次",
@@ -44,8 +45,9 @@
       "documents": [
         {
           "name": "Form NNC2（更改公司名稱通知書）",
-          "description": "公司註冊處指定表格，需在通過特別決議後 15 日內提交",
-          "demoImage": "/assets/demo/special-resolution.png",
+          "description": "公司註冊處指定表格，需在通過特別決議後 15 日內提交，可網上填寫或下載 PDF",
+          "demoImage": "/assets/demo/nnc2-demo.png",
+          "templateFile": "/assets/demo/nnc2-fillable.pdf",
           "officialFormUrl": "https://www.cr.gov.hk/en/forms/specified.htm",
           "commonMistakes": [
             "仲用舊 Form R1 — 2014 年後已經改咗用 NNC2",
