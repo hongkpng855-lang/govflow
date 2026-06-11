@@ -1,7 +1,7 @@
 {
-  "version": "9.6",
-  "commit": "fab3391",
+  "version": "9.7",
+  "commit": "9bbf571",
   "date": "2026-06-11",
-  "build": "20260611-2228",
+  "build": "20260611-2246",
   "env": "github-pages"
 }
