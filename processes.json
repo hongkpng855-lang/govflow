@@ -99,7 +99,7 @@
         {
           "name": "6個月內審計報告（Audit Report）",
           "description": "由核數師簽署嘅公司財務報告，用於證明股份價值",
-          "demoImage": "assets/demo/step4-audit.png",
+          "demoImage": "assets/demo/step4-audit.jpg",
           "templateFile": "templates/audit-report-sample.docx",
           "generatorUrl": "audit-report-generator.html",
           "commonMistakes": [
