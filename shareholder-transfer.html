@@ -40,7 +40,7 @@
 </head>
 <body x-data="{
   processData: null,
-  currentStep: new URLSearchParams(window.location.search).get('step') || 1,
+  currentStep: Number(new URLSearchParams(window.location.search).get('step')) || 1,
   totalSteps: 5,
   isLoading: true,
   error: null,
@@ -563,7 +563,7 @@
       <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
         <p>⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。</p>
         <p class="mt-1">© 2025 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v9.17 · 全部免費 🆓 🆓</p>
+        <p class="mt-2 opacity-40">v9.18 · 全部免費 🆓 🆓</p>
       </div>
     </div>
   </footer>
