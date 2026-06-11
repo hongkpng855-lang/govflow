@@ -17,8 +17,8 @@
         {
           "name": "股份賣出單（Sold Note）",
           "description": "記錄轉讓股數、作價及交易條款，雙方確認用。可使用互動工具直接填寫並一鍵生成 PDF。",
-          "demoImage": "assets/demo/sold-note-realdemo-1.png?v=9.0",
-          "templateFile": "templates/sold-note.docx",
+          "demoImage": "/assets/demo/sold-note-realdemo-1.png?v=9.0",
+          "templateFile": "/templates/sold-note.docx",
           "hasGenerator": true,
           "commonMistakes": [
             "冇做 Sold Note — 口頭 agreement 就算，到填轉讓書嗰陣數字亂晒龍",
@@ -43,8 +43,8 @@
         {
           "name": "股份轉讓書（Instrument of Transfer）",
           "description": "公司註冊處認可格式，雙方簽署嘅正式轉讓文件。可使用互動工具直接填寫並一鍵生成 PDF。",
-          "demoImage": "assets/demo/step3-instrument.png?v=9.0",
-          "templateFile": "templates/instrument-of-transfer.docx",
+          "demoImage": "/assets/demo/step3-instrument.png?v=9.0",
+          "templateFile": "/templates/instrument-of-transfer.docx",
           "commonMistakes": [
             "用錯格式 — 上網 download 通用模板，官方唔收，我錯過兩次先識",
             "公司名唔一致 — 商業登記證寫 'Limited' 你寫 'Ltd'，即時退回",
@@ -72,8 +72,8 @@
         {
           "name": "承讓人確認信（Letter of Transferee of Shares）",
           "description": "向印花稅署發出嘅確認信，確認股份轉讓詳情",
-          "demoImage": "assets/demo/step2-transferee-realdemo.png?v=9.2",
-          "templateFile": "templates/letter-of-transferee.docx",
+          "demoImage": "/assets/demo/step2-transferee-realdemo.png?v=9.2",
+          "templateFile": "/templates/letter-of-transferee.docx",
           "commonMistakes": [
             "Skip 咗呢份文件 — 以為簽轉讓書就得，其實承讓人確認信係必須嘅內部記錄",
             "冇列明 3 點確認事項 — 至少要涵蓋交易確認呢一點",
@@ -99,8 +99,8 @@
         {
           "name": "6個月內審計報告（Audit Report）",
           "description": "由核數師簽署嘅公司財務報告，用於證明股份價值",
-          "demoImage": "assets/demo/step4-audit.jpg",
-          "templateFile": "assets/demo/step4-audit.jpg",
+          "demoImage": "/assets/demo/step4-audit.jpg",
+          "templateFile": "/assets/demo/step4-audit.jpg",
           "generatorUrl": "/audit-report-generator",
           "commonMistakes": [
             "自己寫審計報告 — 審計報告必須由執業會計師簽署，自己寫稅局一定唔收",
@@ -126,8 +126,8 @@
         {
           "name": "NAR1（周年申報表）",
           "description": "向公司註冊處申報公司最新狀況，包括股東及股本變更",
-          "demoImage": "assets/demo/step5-nar1.png",
-          "templateFile": "templates/NAR1_official.pdf",
+          "demoImage": "/assets/demo/step5-nar1.png",
+          "templateFile": "/templates/NAR1_official.pdf",
           "officialFormUrl": "https://www.cr.gov.hk/tc/companies_ordinance/docs/NAR1_fillable.pdf",
           "generatorUrl": "/nar1-generator",
           "commonMistakes": [
@@ -141,8 +141,8 @@
         {
           "name": "NSC1（股份配發申請書）【如有需要】",
           "description": "如公司曾增加股本但未反映於章程細則或 NAR1，須一併提交最近一份已遞交公司註冊處嘅 NSC1 副本，證明股本變更已正規申報",
-          "demoImage": "assets/demo/step5-nsc1.png",
-          "templateFile": "templates/NSC1_official.pdf",
+          "demoImage": "/assets/demo/step5-nsc1.png",
+          "templateFile": "/templates/NSC1_official.pdf",
           "generatorUrl": "/nsc1-generator",
           "commonMistakes": [
             "公司曾增加股本但冇提交 NSC1 — 股本記錄唔完整，公司註冊處會追問",
