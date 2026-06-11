@@ -14,11 +14,15 @@ OUTPUT = os.path.join(ROOT, 'sitemap.xml')
 
 # Priority mapping
 PRIORITY = {
-    'index.html': 1.0,
+    '': 1.0,
     '/shareholder-transfer/': 0.9,
     '/sold-note-generator/': 0.8,
     '/instrument-transfer-generator/': 0.8,
     '/letter-of-transferee-generator/': 0.8,
+    '/audit-report-generator/': 0.8,
+    '/nar1-generator/': 0.8,
+    '/nsc1-generator/': 0.8,
+    '/company-name-change/': 0.7,
 }
 
 urlset = Element('urlset', xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
