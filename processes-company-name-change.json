@@ -47,12 +47,11 @@
       "documents": [
         {
           "name": "Form NNC2（更改公司名稱通知書）",
-          "description": "公司註冊處指定表格，需在通過特別決議後 15 日內提交，可網上填寫或下載 PDF",
+          "description": "公司註冊處指定表格，需在通過特別決議後 15 日內提交。可前往政府官網下載最新版本，亦可用 e-Services Portal 網上提交",
           "demoImage": "/assets/demo/nnc2-demo.png",
           "templateFile": "/assets/demo/nnc2-fillable.pdf",
-          "hasGenerator": true,
-          "generatorUrl": "/company-name-change-generator/nnc2",
           "officialFormUrl": "https://www.cr.gov.hk/en/forms/specified.htm",
+          "guideUrl": "/company-name-change-generator/nnc2",
           "commonMistakes": [
             "仲用舊 Form R1 — 2014 年後已經改咗用 NNC2",
             "網上提交冇提前開 e-Services Portal account — 要預先登記",
