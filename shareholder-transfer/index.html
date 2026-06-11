@@ -55,7 +55,7 @@
 
   async init() {
     try {
-      const r = await fetch('processes.json?v=9.0');
+      const r = await fetch('/processes.json?v=9.0');
       if (!r.ok) throw new Error('HTTP '+r.status);
       const j = await r.json();
       this.processData = j;
@@ -563,7 +563,7 @@
       <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
         <p>⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。</p>
         <p class="mt-1">© 2025 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v10.1 · 全部免費 🆓 🆓</p>
+        <p class="mt-2 opacity-40">v10.2 · 全部免費 🆓 🆓</p>
       </div>
     </div>
   </footer>
