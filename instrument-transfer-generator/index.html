@@ -18,9 +18,9 @@
       theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
     }
   </script>
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="canonical" href="https://esgov.org/instrument-transfer-generator" />
   <meta property="og:url" content="https://esgov.org/instrument-transfer-generator" />
   <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
@@ -51,7 +51,7 @@
 
   <nav class="bg-navy text-white sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
-      <a href="./" class="flex items-center gap-2.5"><img src="assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="./" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
       <a href="/shareholder-transfer?step=2" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回指南</a>
     </div>
   </nav>
@@ -75,7 +75,7 @@
       <!-- 真實案例 -->
       <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
         <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-          <img src="assets/demo/step3-instrument.png?v=9.0" alt="真實案例"
+          <img src="/assets/demo/step3-instrument.png?v=9.0" alt="真實案例"
                class="w-full h-full object-contain"
                onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
         </div>
@@ -86,7 +86,7 @@
       <!-- 可修改文件 -->
       <div onclick="openTemplateModal('word2pdf')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
         <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-          <img src="assets/demo/step3-instrument-wordtopdf.png?v=9.0" alt="可修改文件"
+          <img src="/assets/demo/step3-instrument-wordtopdf.png?v=9.0" alt="可修改文件"
                class="w-full h-full object-contain"
                onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
         </div>
@@ -129,13 +129,13 @@
 
         <!-- REAL DEMO -->
         <div id="modalRealdemo" class="p-4">
-          <img src="assets/demo/step3-instrument.png?v=9.0" alt="Real Demo" class="w-full border border-gray-200 rounded-lg" />
+          <img src="/assets/demo/step3-instrument.png?v=9.0" alt="Real Demo" class="w-full border border-gray-200 rounded-lg" />
           <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
         </div>
 
         <!-- WORD2PDF (hidden by default) -->
         <div id="modalWord2pdf" class="p-4 hidden">
-          <img src="assets/demo/step3-instrument-wordtopdf.png?v=9.0" alt="Word to PDF" class="w-full border border-gray-200 rounded-lg" />
+          <img src="/assets/demo/step3-instrument-wordtopdf.png?v=9.0" alt="Word to PDF" class="w-full border border-gray-200 rounded-lg" />
           <p class="text-xs text-gray-400 mt-2 text-center">空白可編輯模板格式</p>
         </div>
 
@@ -503,7 +503,7 @@
     <div class="max-w-4xl mx-auto px-4 text-center text-xs text-gray-400">
       <p>⚠️ 僅供參考，並不構成法律意見。填寫後請打印簽署。</p>
       <p class="mt-1">&copy; ESGov</p>
-      <p class="mt-2 opacity-40">v10.0</p>
+      <p class="mt-2 opacity-40">v10.1</p>
     </div>
   </footer>
 
