@@ -49,7 +49,7 @@
 
   <nav class="bg-navy text-white sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
-      <a href="./" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
       <a href="/shareholder-transfer?step=1" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回指南</a>
     </div>
   </nav>
@@ -259,7 +259,7 @@
   </div>
 
   <script>
-    / ===== 設定日期（用 class .field-date 標記，確保 render 到）=====
+    // ===== 設定日期（用 class .field-date 標記，確保 render 到）=====
     function setDates() {
       const d = new Date();
       const y = d.getFullYear();
@@ -272,7 +272,7 @@
     }
     setDates();
 
-    / ===== Get all form values =====
+    // ===== Get all form values =====
     function getVals() {
       const today = new Date();
       const dateStr = today.getFullYear() + '-' + String(today.getMonth()+1).padStart(2,'0') + '-' + String(today.getDate()).padStart(2,'0');
@@ -284,7 +284,7 @@
         f5: (document.getElementById('f5').textContent || '').trim(),
         f6: (document.getElementById('f6').textContent || '').trim(),
         f7: (document.getElementById('f7').textContent || '').trim() || dateStr,
-        / Sign：如果係預設文字「親筆簽署後掃描」，改為底線
+        // Sign：如果係預設文字「親筆簽署後掃描」，改為底線
         f8: (function(){const v=(document.getElementById('f8').textContent||'').trim();return(v&&v!=='親筆簽署後掃描')?v:'________________';})(),
         f9: (document.getElementById('f9').textContent || '').trim(),
         f10: (document.getElementById('f10').textContent || '').trim(),
@@ -292,12 +292,12 @@
         f12: (document.getElementById('f12').textContent || '').trim(),
         f13: (document.getElementById('f13').textContent || '').trim(),
         f14: (document.getElementById('f14').textContent || '').trim() || dateStr,
-        / Sign：如果係預設文字「親筆簽署後掃描」，改為底線
+        // Sign：如果係預設文字「親筆簽署後掃描」，改為底線
         f15: (function(){const v=(document.getElementById('f15').textContent||'').trim();return(v&&v!=='親筆簽署後掃描')?v:'________________';})(),
       };
     }
 
-    / ===== 模板 Modal =====
+    // ===== 模板 Modal =====
     function openTemplateModal(tab) {
       document.getElementById('templateModal').classList.remove('hidden');
       document.getElementById('templateModal').classList.add('flex');
@@ -310,7 +310,7 @@
       }
     }
 
-    / ===== Email Gate（下載前收集 email）=====
+    // ===== Email Gate（下載前收集 email）=====
     function checkEmailGate() {
       const done = localStorage.getItem('esgov_email_done');
       if (done) return true;
@@ -325,7 +325,7 @@
         alert('⚠️ 請輸入有效嘅電郵地址');
         return;
       }
-      / Send email via FormSubmit — hidden iframe + form (captcha disabled)
+      // Send email via FormSubmit — hidden iframe + form (captcha disabled)
       try {
         var iframe = document.createElement('iframe');
         iframe.name = 'fsframe';
@@ -346,7 +346,7 @@
         f.submit();
         setTimeout(function(){ document.body.removeChild(f); document.body.removeChild(iframe); }, 1000);
       } catch(e) {}
-      / Mark done + start download
+      // Mark done + start download
       localStorage.setItem('esgov_email_done', 'true');
       document.getElementById('emailGateModal').classList.add('hidden');
       document.getElementById('emailGateModal').classList.remove('flex');
@@ -358,7 +358,7 @@
       document.getElementById('emailGateModal').classList.remove('flex');
     }
 
-    / ===== 一鍵下載 PDF（clone capture，保證 1 頁輸出）=====
+    // ===== 一鍵下載 PDF（clone capture，保證 1 頁輸出）=====
     async function downloadPDF() {
       if (!checkEmailGate()) return;
       const btn = document.getElementById('genBtn');
@@ -372,37 +372,37 @@
       try {
         const { jsPDF } = window.jspdf;
 
-        / 等字體載入
+        // 等字體載入
         await document.fonts.ready;
 
-        / 收集當前填寫嘅值
+        // 收集當前填寫嘅值
         const v = getVals();
 
-        / 建立 capture clone（off-screen，但完全複製 HTML）
+        // 建立 capture clone（off-screen，但完全複製 HTML）
         const original = document.getElementById('pdf-form');
         const clone = document.createElement('div');
         clone.innerHTML = original.innerHTML;
         clone.style.cssText = 'position:fixed;left:-9999px;top:0;width:800px;z-index:-1;font-family:"Noto Sans TC",sans-serif;';
         document.body.appendChild(clone);
 
-        / 將日期注入 clone（field-date class）
+        // 將日期注入 clone（field-date class）
         const today = new Date();
         const dateStr = today.getFullYear() + '-' + String(today.getMonth()+1).padStart(2,'0') + '-' + String(today.getDate()).padStart(2,'0');
         clone.querySelectorAll('.field-date').forEach(el => {
           el.textContent = dateStr;
         });
 
-        / 注入所有其他欄位嘅值
+        // 注入所有其他欄位嘅值
         const vMap = { f1:'f1',f2:'f2',f3:'f3',f4:'f4',f5:'f5',f6:'f6',f7:'f7',f8:'f8',f9:'f9',f10:'f10',f11:'f11',f12:'f12',f13:'f13',f14:'f14',f15:'f15' };
         for (const [id, val] of Object.entries(v)) {
           const el = clone.querySelector('#' + id);
           if (el) el.textContent = val;
         }
 
-        / 等少少時間俾 clone render
+        // 等少少時間俾 clone render
         await new Promise(r => setTimeout(r, 200));
 
-        / capture clone
+        // capture clone
         const canvas = await html2canvas(clone, {
           scale: 3,
           useCORS: true,
@@ -415,29 +415,29 @@
           }
         });
 
-        / 清理 clone
+        // 清理 clone
         document.body.removeChild(clone);
 
-        / 生成 PDF（強制 1 頁 A4）
+        // 生成 PDF（強制 1 頁 A4）
         const imgData = canvas.toDataURL('image/png');
         const doc = new jsPDF('p', 'mm', 'a4');
         const pageW = 210;
         const imgRatio = canvas.height / canvas.width;
         const imgH = pageW * imgRatio;
 
-        / 如果內容超過 A4 高度，fit 入一頁
+        // 如果內容超過 A4 高度，fit 入一頁
         const pageH = 297;
         if (imgH > pageH) {
-          / scale down to fit
+          // scale down to fit
           const scale = pageH / imgH;
           doc.addImage(imgData, 'PNG', 0, 0, pageW * scale, pageH);
         } else {
-          / 正常一頁置中
+          // 正常一頁置中
           const yOffset = (pageH - imgH) / 2;
           doc.addImage(imgData, 'PNG', 0, yOffset, pageW, imgH);
         }
 
-        / ===== 跨頁斜水印（英文 only，helvetica 唔支援中文）=====
+        // ===== 跨頁斜水印（英文 only，helvetica 唔支援中文）=====
         doc.saveGraphicsState();
         doc.setGState(new window.jspdf.GState({ opacity: 0.12 }));
         doc.setTextColor(180, 180, 180);

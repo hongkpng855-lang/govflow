@@ -66,7 +66,7 @@
 
   <nav class="bg-navy text-white sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
-      <a href="./" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
       <a href="/shareholder-transfer?step=3" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回指南</a>
     </div>
   </nav>
@@ -318,17 +318,17 @@
   </div>
 
   <script>
-    / ===== Option toggles =====
+    // ===== Option toggles =====
     let selectedOption = null;
     function toggleOption(id) {
       const num = id.replace('opt','');
-      / Deselect all
+      // Deselect all
       document.querySelectorAll('.option-box').forEach(box => box.classList.remove('selected'));
       document.querySelectorAll('.option-box span:first-child').forEach(s => {
         s.classList.remove('bg-gold', 'text-white', 'border-gold');
         s.classList.add('border-gray-300');
       });
-      / Hide all details
+      // Hide all details
       document.getElementById('opt2Details').classList.add('hidden');
       document.getElementById('opt3Details').classList.add('hidden');
 
@@ -348,7 +348,7 @@
       if (num === '3') document.getElementById('opt3Details').classList.remove('hidden');
     }
 
-    / ===== 設定日期 =====
+    // ===== 設定日期 =====
     function setDates() {
       const d = new Date();
       const y = d.getFullYear();
@@ -361,7 +361,7 @@
     }
     setDates();
 
-    / ===== Get all form values =====
+    // ===== Get all form values =====
     function getVals() {
       const d = new Date();
       const dateStr = String(d.getDate()).padStart(2,'0') + ' ' + ['January','February','March','April','May','June','July','August','September','October','November','December'][d.getMonth()] + ' ' + d.getFullYear();
@@ -381,7 +381,7 @@
       };
     }
 
-    / ===== 模板 Modal =====
+    // ===== 模板 Modal =====
     function openTemplateModal(tab) {
       document.getElementById('templateModal').classList.remove('hidden');
       document.getElementById('templateModal').classList.add('flex');
@@ -394,7 +394,7 @@
       }
     }
 
-    / ===== Email Gate =====
+    // ===== Email Gate =====
     function checkEmailGate() {
       const done = localStorage.getItem('esgov_email_done');
       if (done) return true;
@@ -440,7 +440,7 @@
       document.getElementById('emailGateModal').classList.remove('flex');
     }
 
-    / ===== 一鍵下載 PDF =====
+    // ===== 一鍵下載 PDF =====
     async function downloadPDF() {
       if (!checkEmailGate()) return;
       const btn = document.getElementById('genBtn');
@@ -462,7 +462,7 @@
         clone.style.cssText = 'position:fixed;left:-9999px;top:0;width:800px;z-index:-1;font-family:"Times New Roman","Noto Sans TC",serif;';
         document.body.appendChild(clone);
 
-        / Inject values
+        // Inject values
         clone.querySelectorAll('.field-date').forEach(el => { el.textContent = v.fDate; });
         const vMap = { f1:'f1',f2:'f2',f3:'f3',f4:'f4',f5:'f5',f6:'f6',f7:'f7',f8:'f8' };
         for (const [id, val] of Object.entries(v)) {
@@ -501,7 +501,7 @@
           doc.addImage(imgData, 'PNG', 0, yOffset, pageW, imgH);
         }
 
-        / Watermark
+        // Watermark
         doc.saveGraphicsState();
         doc.setGState(new window.jspdf.GState({ opacity: 0.12 }));
         doc.setTextColor(180, 180, 180);
