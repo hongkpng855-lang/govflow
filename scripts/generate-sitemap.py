@@ -15,10 +15,10 @@ OUTPUT = os.path.join(ROOT, 'sitemap.xml')
 # Priority mapping
 PRIORITY = {
     'index.html': 1.0,
-    'shareholder-transfer.html': 0.9,
-    'sold-note-generator.html': 0.8,
-    'instrument-transfer-generator.html': 0.8,
-    'letter-of-transferee-generator.html': 0.8,
+    '/shareholder-transfer/': 0.9,
+    '/sold-note-generator/': 0.8,
+    '/instrument-transfer-generator/': 0.8,
+    '/letter-of-transferee-generator/': 0.8,
 }
 
 urlset = Element('urlset', xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
@@ -40,6 +40,10 @@ for dirpath, dirnames, filenames in os.walk(ROOT):
         else:
             url_path = f'{rel_dir}/{fn}'
         
+        # Skip old redirect stubs at root (e.g. shareholder-transfer.html)
+        if rel_dir == '.' and fn != 'index.html':
+            continue
+        
         # Clean up index.html
         if fn == 'index.html':
             url_path = url_path.replace('/index.html', '')
@@ -47,7 +51,7 @@ for dirpath, dirnames, filenames in os.walk(ROOT):
                 url_path = ''
         
         full_url = f'{BASE_URL}/{url_path}'
-        priority = PRIORITY.get(fn, 0.5)
+        priority = PRIORITY.get(url_path, 0.5)
         
         url = SubElement(urlset, 'url')
         loc = SubElement(url, 'loc')

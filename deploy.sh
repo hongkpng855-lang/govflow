@@ -15,7 +15,7 @@ VERSION="${2}"
 # 🛡️ Safety check: detect new HTML pages not yet approved
 if [ -z "$SKIP_SAFETY" ]; then
   # Known allowed product HTML pages
-  ALLOWED_PAGES="index.html shareholder-transfer.html sold-note-generator.html instrument-transfer-generator.html letter-of-transferee-generator.html nar1-generator.html nsc1-generator.html audit-report-generator.html"
+  ALLOWED_PAGES="index.html shareholder-transfer/index.html sold-note-generator/index.html instrument-transfer-generator/index.html letter-of-transferee-generator/index.html nar1-generator/index.html nsc1-generator/index.html audit-report-generator/index.html"
   for f in *.html; do
     if ! echo "$ALLOWED_PAGES" | grep -q "$f"; then
       echo "⚠️  Unrecognised HTML page detected: $f"
@@ -52,7 +52,7 @@ EOF
 
 # Update version badge in footers (inside the <p> tags only)
 # Pattern: mt-2 opacity-40">vX.Y ...
-sed -i "s|\\(mt-2 opacity-40\\\">\\)v[0-9.]\\+|\\1${NEW_VER}|g" index.html shareholder-transfer.html sold-note-generator.html instrument-transfer-generator.html letter-of-transferee-generator.html nar1-generator.html nsc1-generator.html audit-report-generator.html
+sed -i "s|\\(mt-2 opacity-40\\\">\\)v[0-9.]\\+|\\1${NEW_VER}|g" index.html shareholder-transfer/index.html sold-note-generator/index.html instrument-transfer-generator/index.html letter-of-transferee-generator/index.html nar1-generator/index.html nsc1-generator/index.html audit-report-generator/index.html
 
 git add -A
 git commit -m "${MSG}"

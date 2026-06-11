@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港公司股份轉讓完整指南（5個步驟＋文件範例）</title>
+  <meta name="description" content="香港公司股份轉讓完整指南：由真實經歷者整理，5個步驟搞掂股份轉讓。含 Sold Note、Letter of Transferee、Instrument of Transfer、審計報告、NAR1 完整範例。可下載 Word 模板對照填寫，避免被公司註冊處補交。全部免費公開，唔使俾會計公司賺幾千蚊。" />
+  <meta property="og:title" content="香港有限公司股份轉讓完整指南 | ESGov" />
+  <meta property="og:description" content="真實範例、可下載模板、避免補交。由經歷者整理，5份文件搞掂股份轉讓。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_HK" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="assets/js/app.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/shareholder-transfer" />
+  <meta property="og:url" content="https://esgov.org/shareholder-transfer" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
+</head>
+<body x-data="{
+  processData: null,
+  currentStep: Number(new URLSearchParams(window.location.search).get('step')) || 1,
+  totalSteps: 5,
+  isLoading: true,
+  error: null,
+  activeMobileTab: 1,
+  selectedDoc: null,
+  showOverlay: false,
+  showDonate: false,
+  showEmail: false,
+  email: '',
+  emailSubmitted: false,
+  _pendingDoc: null,
+
+  async init() {
+    try {
+      const r = await fetch('processes.json?v=9.0');
+      if (!r.ok) throw new Error('HTTP '+r.status);
+      const j = await r.json();
+      this.processData = j;
+      this.totalSteps = j.totalSteps;
+    } catch(e) {
+      this.error = '無法載入內容，請重新整理頁面';
+      console.error('Load error:', e);
+    } finally {
+      this.isLoading = false;
+    }
+  },
+
+  get steps() { return this.processData?.steps || []; },
+  get currentStepData() { return this.steps.find(s => s.stepNumber === this.currentStep) || null; },
+  get progressPercent() { return (this.currentStep / this.totalSteps) * 100; },
+
+  goToStep(n) {
+    if (n >= 1 && n <= this.totalSteps) {
+      this.currentStep = n;
+      this.activeMobileTab = n;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    if (n === this.totalSteps) {
+      setTimeout(() => { this.showDonate = true; }, 800);
+    }
+  },
+
+  openDoc(doc) {
+    / Email gate before viewing templates/docs
+    const emailDone = localStorage.getItem('esgov_email_done');
+    if (!emailDone) {
+      this.showOverlay = false;
+      this.openEmail();
+      this._pendingDoc = doc;
+      return;
+    }
+    this.selectedDoc = doc;
+    this.showOverlay = true;
+    document.body.style.overflow = 'hidden';
+  },
+
+  closeDoc() {
+    this.showOverlay = false;
+    this.selectedDoc = null;
+    document.body.style.overflow = '';
+  },
+
+  openDonate() {
+    this.showDonate = true;
+    document.body.style.overflow = 'hidden';
+  },
+
+  closeDonate() {
+    this.showDonate = false;
+    document.body.style.overflow = '';
+  },
+
+  openEmail() {
+    this.showEmail = true;
+    document.body.style.overflow = 'hidden';
+  },
+
+  closeEmail() {
+    this.showEmail = false;
+    this._pendingDoc = null;
+    document.body.style.overflow = '';
+  },
+
+  submitEmail() {
+    if (this.email && this.email.includes('@')) {
+      const emails = JSON.parse(localStorage.getItem('esgov_emails') || '[]');
+      if (!emails.includes(this.email)) {
+        emails.push(this.email);
+        localStorage.setItem('esgov_emails', JSON.stringify(emails));
+      }
+      localStorage.setItem('esgov_email_done', 'true');
+      this.emailSubmitted = true;
+      / If there's a pending doc, open it after email submit
+      if (this._pendingDoc) {
+        const doc = this._pendingDoc;
+        this._pendingDoc = null;
+        setTimeout(() => {
+          this.closeEmail();
+          this.selectedDoc = doc;
+          this.showOverlay = true;
+          document.body.style.overflow = 'hidden';
+        }, 300);
+      }
+    }
+  }
+}">
+
+  <!-- First 100 banner (top of page, before nav) -->
+  <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-200">
+    <div class="max-w-6xl mx-auto px-4 py-2 text-center">
+      <p class="text-xs sm:text-sm font-semibold text-blue-800">
+        🎯 頭 100 次下載完全免費 &middot; 之後會考慮轉為收費模式，而家把握機會！
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Sticky Header ═══════════════ -->
+  <div class="sticky-header bg-navy text-white shadow-lg" x-init="init()">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14 sm:h-16">
+        <a href="./" class="flex items-center gap-2.5 shrink-0"><img src="assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+        <div class="flex items-center gap-2 min-w-0 ml-3 pl-3 border-l border-white/20">
+          <a href="./" class="text-gold shrink-0 hover:text-gold-light transition text-sm sm:text-base">←</a>
+          <h1 class="text-sm sm:text-base font-semibold truncate text-white/90">
+            香港有限公司股份轉讓完整指南
+          </h1>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <span class="text-xs text-gray-300 hidden sm:inline truncate max-w-[200px]">
+            <span x-text="(currentStepData?.title.split('（')[0] || currentStepData?.title || '').substring(0, 20)"></span>
+          </span>
+          <button @click="openDonate()" class="text-xs bg-gold/20 text-gold px-2 py-1 rounded-full whitespace-nowrap hover:bg-gold/30 transition">
+            ☕ 請咖啡
+          </button>
+        </div>
+      </div>
+      <!-- Progress bar -->
+      <div class="progress-bar mb-2">
+        <div class="progress-fill" :style="'width: ' + progressPercent + '%'"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Mobile Step Scroll ═══════════════ -->
+  <div class="sm:hidden bg-white border-b border-gray-200 step-tabs shadow-sm">
+    <div class="flex gap-1 p-2" x-show="steps.length > 0">
+      <template x-for="s in steps" :key="s.stepNumber">
+        <button
+          class="step-nav-item flex flex-col items-center gap-0 px-3 py-1.5 rounded-lg text-[11px] font-medium leading-tight transition min-w-[52px]"
+          :class="{
+            'active bg-navy text-white shadow-md': currentStep === s.stepNumber,
+            'bg-gray-50 text-gray-500 border border-gray-200': currentStep !== s.stepNumber
+          }"
+          @click="goToStep(s.stepNumber)"
+        >
+          <span class="font-bold text-sm" x-text="s.stepNumber"></span>
+          <span class="text-[10px] text-center leading-[1.1]" x-text="(s.title.split('（')[0] || s.title).substring(0, 6)"></span>
+          <span class="text-[10px]">🆓</span>
+        </button>
+      </template>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Main Content ═══════════════ -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+    <div class="flex gap-8">
+
+      <!-- Desktop Sidebar -->
+      <aside class="hidden sm:block w-64 shrink-0">
+        <nav class="sticky top-32">
+          <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 px-4">
+            全部步驟（全部免費 🆓）
+          </div>
+          <div class="space-y-0.5">
+          <template x-for="s in steps" :key="s.stepNumber">
+            <button
+              class="step-nav-item w-full text-left px-4 py-2.5 rounded-xl text-sm flex items-center gap-3 transition border border-transparent"
+              :class="{
+                'bg-navy text-white shadow-sm border-gold/30': currentStep === s.stepNumber,
+                'hover:bg-gray-50 hover:border-gray-200': currentStep !== s.stepNumber
+              }"
+              @click="goToStep(s.stepNumber)"
+            >
+              <span
+                class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 transition"
+                :class="{
+                  'bg-gold text-navy': currentStep === s.stepNumber,
+                  'bg-gray-200 text-gray-500': currentStep !== s.stepNumber
+                }"
+                x-text="s.stepNumber"
+              ></span>
+              <div class="min-w-0 flex-1">
+                <span class="block text-xs font-medium leading-snug" x-text="s.title.split('（')[0] || s.title"></span>
+                <span class="block text-[10px] mt-0.5 text-green-600">🆓 免費</span>
+              </div>
+            </button>
+          </template>
+          </div>
+
+          <!-- Sidebar Donate CTA -->
+          <div class="mt-6 bg-amber-50 rounded-xl p-4 border border-amber-200">
+            <p class="text-xs text-gray-600 mb-3 leading-relaxed">
+              🤝 呢份指南全部免費公開。<br />
+              如果幫到你，可以請我飲杯咖啡 ☕
+            </p>
+            <button @click="openDonate()" class="w-full bg-gold text-navy font-bold text-sm py-2.5 rounded-xl hover:bg-gold-light transition shadow-sm">
+              ☕ 請我飲咖啡
+            </button>
+          </div>
+
+          <!-- Sidebar Email CTA -->
+          <div class="mt-3 bg-white rounded-xl p-4 border border-gray-200">
+            <p class="text-xs text-gray-500 mb-2">📬 有新指南通知你？</p>
+            <button @click="openEmail()" class="w-full text-xs font-semibold text-navy bg-gray-100 py-2 rounded-xl hover:bg-gray-200 transition">
+              留低 email →
+            </button>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- ═══════════════ Content Area ═══════════════ -->
+      <main id="step-content" class="flex-1 min-w-0">
+
+        <!-- Loading -->
+        <div x-show="isLoading" class="text-center py-20">
+          <div class="w-8 h-8 border-4 border-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p class="text-gray-500 text-sm">載入中…</p>
+        </div>
+
+        <!-- Error -->
+        <div x-show="error" class="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
+          <p class="text-red-700" x-text="error"></p>
+        </div>
+
+        <!-- Step Content -->
+        <template x-for="s in steps" :key="s.stepNumber">
+          <div x-show="!isLoading && !error && currentStep === s.stepNumber"
+               class="fade-in-up">
+
+            <!-- Step Header -->
+            <div class="mb-8">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="w-10 h-10 rounded-full bg-gold text-navy flex items-center justify-center font-bold text-lg">
+                  <span x-text="s.stepNumber"></span>
+                </span>
+                <span class="text-sm text-green-600 font-semibold">🆓 免費步驟</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-bold gov-heading mb-2" x-text="s.title"></h2>
+              <p class="text-gray-500" x-text="s.summary"></p>
+
+              <!-- Donate micro-text -->
+              <div class="mt-3 flex items-center gap-2 text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
+                <span class="shrink-0">☕</span>
+                <span>整理不易，支持下？</span>
+                <button @click="openDonate()" class="font-semibold text-gold hover:text-gold-light underline ml-auto shrink-0">請咖啡</button>
+              </div>
+            </div>
+
+            <!-- Details -->
+            <div class="bg-white rounded-xl border border-gray-200 p-6 mb-8">
+              <h3 class="font-semibold text-navy text-lg mb-3">詳細說明</h3>
+              <div class="text-gray-700 leading-relaxed whitespace-pre-line text-sm" x-text="s.details"></div>
+            </div>
+
+                        <!-- Documents -->
+            <div x-show="s.documents && s.documents.length >= 1" class="mb-8">
+              <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <template x-for="(doc, idx) in s.documents" :key="idx">
+                  <a :href="doc['generatorUrl'] || '#'" @click="doc['generatorUrl'] || (openDoc(s.documents[idx]), false)"
+                     class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md">
+                    <template x-if="doc.demoImage">
+                      <div class="h-32 sm:h-40 bg-gray-100 overflow-hidden relative">
+                        <img :src="doc.demoImage" :alt="doc.name" class="w-full h-full object-cover" @error="$event.target.closest('div').innerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-sm>🖼️ 範例圖片</div>'" />
+                        <div x-show="doc.hasGenerator" class="absolute top-2 right-2 bg-gold text-navy text-xs font-bold px-2 py-0.5 rounded-full shadow">互動工具</div>
+                      </div>
+                    </template>
+                    <div class="p-4">
+                      <p class="font-bold text-sm text-navy" x-text="doc.name"></p>
+                      <p class="text-xs text-gray-500 mt-1 leading-relaxed" x-text="doc.description"></p>
+                      <div class="flex items-center gap-2 mt-3">
+                        <span x-show="doc.hasGenerator" class="inline-flex items-center gap-1.5 text-xs font-bold bg-gold text-navy px-4 py-2 rounded-lg hover:bg-gold-light transition shadow-sm">🚀 填寫 + 生成 PDF</span>
+                        <span x-show="!doc.hasGenerator" class="inline-flex items-center gap-1 text-xs font-medium bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition">👁️ 檢視範例 PDF</span>
+                      </div>
+                    </div>
+                  </a>
+                </template>
+              </div>
+            </div>
+<!-- Rejection Risks -->
+            <div x-show="s.rejectionRisks && s.rejectionRisks.length >= 1" class="risk-callout mb-8">
+              <h4 class="font-semibold text-warning mb-2 flex items-center gap-2">
+                ⚠️ 常見錯誤導致補交
+              </h4>
+              <ul class="text-sm text-gray-700 space-y-1">
+                <template x-for="(risk, idx) in s.rejectionRisks" :key="idx">
+                  <li class="flex items-start gap-2">
+                    <span class="text-warning mt-0.5">•</span>
+                    <span x-text="risk"></span>
+                  </li>
+                </template>
+              </ul>
+            </div>
+
+            <!-- Step Navigation Buttons -->
+            <div class="flex justify-between items-center mt-8 mb-4">
+              <button
+                x-show="s.stepNumber > 1"
+                @click="goToStep(s.stepNumber - 1)"
+                class="btn-gov btn-gov-dark text-sm"
+              >
+                ← 上一步
+              </button>
+              <div x-show="s.stepNumber === 1 || s.stepNumber === totalSteps"></div>
+              <button
+                x-show="s.stepNumber < totalSteps"
+                @click="goToStep(s.stepNumber + 1)"
+                class="btn-gov btn-gov-dark text-sm"
+              >
+                下一步 →
+              </button>
+            </div>
+
+          </div>
+        </template>
+
+        <!-- ═══ Final Section (shown on last step) ═══ -->
+        <div x-show="!isLoading && !error && currentStep === totalSteps" class="mt-8 mb-12">
+          <!-- Step-by-step plan recap -->
+          <div class="bg-navy text-white rounded-xl p-6 sm:p-8 text-center mb-6">
+            <div class="text-4xl mb-4">🎉</div>
+            <h3 class="text-xl font-bold mb-2">搞掂晒！5 個步驟全部完成</h3>
+            <p class="text-gray-300 text-sm max-w-md mx-auto">
+              你而家有齊晒所有資料同範例，可以放心提交文件俾政府。
+            </p>
+          </div>
+
+          <!-- Donate CTA -->
+          <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-300 rounded-xl p-6 sm:p-8 text-center mb-6 shadow-md">
+            <div class="text-4xl mb-3">☕</div>
+            <h3 class="text-xl font-bold text-navy mb-2" x-text="processData?.finalDonate?.title || '幫到你嗎？請我飲杯咖啡'"></h3>
+            <p class="text-sm text-gray-600 max-w-lg mx-auto mb-4" x-text="processData?.finalDonate?.message || '免費公開全部內容，支持下我繼續製作更多指南！'"></p>
+            <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
+               class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-3.5 px-8 rounded-xl hover:bg-gold-light transition shadow-lg text-lg btn-gov-pulse">
+              ☕ 請我飲咖啡
+            </a>
+            <p class="text-xs text-gray-400 mt-3" x-text="processData?.finalDonate?.goalMessage || '每個支持都幫助我繼續製作更多免費指南 🎯'"></p>
+          </div>
+
+          <!-- Email Collection -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 text-center mb-6 shadow-sm">
+            <div class="text-3xl mb-3">📬</div>
+            <h3 class="text-lg font-bold text-navy mb-2" x-text="processData?.finalDonate?.emailCollectionTitle || '📬 想收到更多免費指南？'"></h3>
+            <p class="text-sm text-gray-500 mb-4 max-w-md mx-auto" x-text="processData?.finalDonate?.emailCollectionMessage || '留低 email，之後有新指南會通知你'"></p>
+
+            <div x-show="!emailSubmitted" class="max-w-sm mx-auto flex gap-2">
+              <input type="email" x-model="email" placeholder="your@email.com"
+                     class="flex-1 border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold"
+              />
+              <button @click="submitEmail()"
+                      class="bg-navy text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-navy-light transition text-sm"
+                      :disabled="!email.includes('@')">
+                訂閱
+              </button>
+            </div>
+            <div x-show="emailSubmitted" class="text-green-600 font-semibold text-sm">
+              ✅ 多謝！有新指南會通知你 📬
+            </div>
+          </div>
+
+          <!-- Share -->
+          <div class="text-center text-sm text-gray-400">
+            <p>覺得有用？分享俾朋友 👇</p>
+            <div class="flex items-center justify-center gap-3 mt-2">
+              <a href="https://wa.me/?text=香港有限公司股份轉讓完整指南，全部免費！https://esgov.org/shareholder-transfer" target="_blank"
+                 class="text-green-500 hover:text-green-600 font-semibold">WhatsApp</a>
+              <span class="text-gray-300">|</span>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://esgov.org/shareholder-transfer" target="_blank"
+                 class="text-blue-500 hover:text-blue-600 font-semibold">Facebook</a>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Donate Modal ═══════════════ -->
+  <div x-show="showDonate" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" @click.self="closeDonate()">
+    <div class="bg-white rounded-xl max-w-md w-full shadow-2xl p-6 sm:p-8 text-center" @click.stop>
+      <div class="text-5xl mb-4">☕</div>
+      <h3 class="text-xl font-bold text-navy mb-3">幫到你嗎？請我飲杯咖啡</h3>
+      <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+        呢份指南係我親身經歷整理，完全免費公開。<br />
+        如果幫到你節省時間同金錢，<br />
+        可以透過 Buy Me a Coffee 支持下我 ☕
+      </p>
+      <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
+         class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-3.5 px-8 rounded-xl hover:bg-gold-light transition shadow-lg text-lg">
+        ☕ 請我飲咖啡
+      </a>
+      <p class="text-xs text-gray-400 mt-3">每個支持都幫助我製作更多免費指南 🎯</p>
+      <button @click="closeDonate()" class="mt-4 text-sm text-gray-400 hover:text-gray-600 transition">或者直接關閉，繼續睇內容 →</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Email Collection Modal ═══════════════ -->
+  <div x-show="showEmail" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" @click.self="closeEmail()">
+    <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" @click.stop>
+      <div class="text-3xl mb-3">📬</div>
+      <h3 class="text-lg font-bold text-navy mb-2">想收到更多免費指南？</h3>
+      <p class="text-sm text-gray-500 mb-5">先留低 email，之後有新指南會通知你，然後繼續睇內容</p>
+      <div x-show="!emailSubmitted" class="flex flex-col gap-3">
+        <input type="email" x-model="email" placeholder="your@email.com"
+               class="border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold"
+        />
+        <button @click="submitEmail()"
+                class="bg-navy text-white font-semibold py-2.5 rounded-xl hover:bg-navy-light transition text-sm"
+                :disabled="!email.includes('@')">
+          📥 繼續睇內容
+        </button>
+      </div>
+      <div x-show="emailSubmitted" class="text-green-600 font-semibold text-sm py-4">
+        ✅ 多謝！有新指南會通知你 📬
+      </div>
+      <button @click="closeEmail()" class="mt-3 text-xs text-gray-400 hover:text-gray-600 transition">關閉</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Document Overlay ═══════════════ -->
+  <div x-show="showOverlay" class="fixed inset-0 bg-black/60 z-50 flex items-start justify-center p-4 overflow-y-auto" @click.self="closeDoc()">
+    <div class="bg-white rounded-xl max-w-2xl w-full shadow-2xl overflow-hidden mt-4 sm:mt-8 mb-8">
+
+      <!-- Header -->
+      <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+        <h3 class="font-bold text-navy text-base sm:text-lg truncate" x-text="selectedDoc?.name"></h3>
+        <button @click="closeDoc()" class="text-gray-400 hover:text-gray-600 text-2xl leading-none shrink-0 ml-2">&times;</button>
+      </div>
+
+      <div class="p-6">
+
+        <!-- Demo Image -->
+        <template x-if="selectedDoc?.demoImage">
+          <div class="bg-gray-50 rounded-xl p-4 mb-5 border border-gray-200">
+            <div class="relative">
+              <img :src="selectedDoc.demoImage" :alt="selectedDoc.name + ' 填寫範例'"
+                   class="w-full rounded-lg shadow-sm"
+                   @error="$event.target.closest('div').querySelector('.img-fallback').classList.remove('hidden')"
+              />
+              <div class="img-fallback hidden text-center py-12 text-gray-400 bg-gray-100 rounded-lg">
+                <p class="text-lg mb-2">🖼️</p>
+                <p>[範例圖片載入失敗]</p>
+              </div>
+            </div>
+            <p class="text-xs text-gray-400 mt-2 text-center">👆 按右鍵 → 另存圖片即可儲存範例</p>
+          </div>
+        </template>
+
+        <!-- Description + 常見錯誤 -->
+        <div class="mb-5">
+          <p class="text-sm text-gray-600 mb-3" x-text="selectedDoc?.description"></p>
+          <template x-if="selectedDoc?.officialFormUrl">
+            <a :href="selectedDoc.officialFormUrl" target="_blank"
+               class="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 mb-3 transition">
+              📄 查看官方表格（公司註冊處）
+            </a>
+          </template>
+          <template x-if="selectedDoc?.commonMistakes && selectedDoc.commonMistakes.length > 0">
+            <div class="bg-red-50 border border-red-100 rounded-xl p-4">
+              <h4 class="font-semibold text-red-600 text-sm mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
+              <ul class="text-sm text-gray-700 space-y-1.5">
+                <template x-for="(mistake, idx) in selectedDoc.commonMistakes" :key="idx">
+                  <li class="flex items-start gap-2">
+                    <span class="text-red-400 mt-0.5">•</span>
+                    <span x-text="mistake"></span>
+                  </li>
+                </template>
+              </ul>
+            </div>
+          </template>
+        </div>
+
+        <!-- Download/Generator button based on doc type -->
+        <template x-if="selectedDoc?.generatorUrl">
+          <a :href="selectedDoc.generatorUrl"
+             class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-4 px-6 rounded-xl hover:bg-gold-light transition shadow text-base"
+             @click="closeDoc()">
+            🚀 前往 PDF 生成器 — 填資料、一鍵生成
+          </a>
+        </template>
+        <template x-if="!selectedDoc?.generatorUrl && selectedDoc?.templateFile">
+          <a :href="selectedDoc.templateFile"
+             class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-3.5 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm"
+             @click="closeDoc()">
+            📥 下載可編輯模板（Word / PDF）
+          </a>
+        </template>
+        <template x-if="!selectedDoc?.generatorUrl && !selectedDoc?.templateFile">
+          <div class="bg-gray-50 rounded-xl py-4 text-center">
+            <p class="text-xs text-gray-400">（此文件暫無可編輯模板，創辦人將稍後提供）</p>
+          </div>
+        </template>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Footer ═══════════════ -->
+  <footer class="gov-footer py-8 sm:py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
+        <div class="flex items-center gap-2 text-white font-bold">
+          <img src="assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" /><span class="ml-1.5 font-semibold"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+        </div>
+        <div class="flex items-center gap-4">
+          <button @click="openDonate()" class="text-sm text-gold hover:text-gold-light transition">☕ 請咖啡</button>
+          <a href="./" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
+        <p>⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。</p>
+        <p class="mt-1">© 2025 ESGov. All rights reserved.</p>
+        <p class="mt-2 opacity-40">v9.18 · 全部免費 🆓 🆓</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Site + Logo Structured Data (for Google Search) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ESGov",
+    "url": "https://esgov.org",
+    "logo": "https://esgov.org/assets/images/esgov-logo.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ESGov",
+    "url": "https://esgov.org",
+    "logo": "https://esgov.org/assets/images/esgov-logo.png"
+  }
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "股份轉讓需要咩文件？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "一般需要 5 份文件：股份賣出單（Sold Note）、承讓人確認信、轉讓文書（Instrument of Transfer）、審計報告、周年申報表（NAR1）。全部範例同模板可以喺 ESGov 免費下載。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "股份轉讓要幾耐？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "一般 1-2 星期，視乎文件準備速度同印花稅處理時間。最快可 3-5 個工作日完成。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "股份轉讓費用係幾多？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "會計公司收費一般 $1,000 起。ESGov 提供免費指南同範例，自己搞掂唔使俾人賺。印花稅按轉讓金額 0.2% 計算。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "股份轉讓後要做咩？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "更新股東名冊、發出新股份證明書、更新重要控制人登記冊、通知公司註冊處（如有董事變更）、處理印花稅。ESGov 嘅 Step-by-step 指南會逐個步驟話你知。"
+        }
+      }
+    ]
+  }
+  </script>
+
+</body>
+</html>
