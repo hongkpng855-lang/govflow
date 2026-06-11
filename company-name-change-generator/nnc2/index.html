@@ -11,8 +11,11 @@
   <meta property="og:locale" content="zh_HK" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="/assets/js/app.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -41,7 +44,7 @@
     }
   </style>
 </head>
-<body class="bg-gray-100 font-sans">
+<body>
 
   <!-- ═══════ Nav ═══════ -->
   <nav class="bg-navy text-white sticky top-0 z-50 no-print">
@@ -70,8 +73,8 @@
       </span>
     </div>
 
-    <!-- ═════ Main Card (Product 1 Mode B pattern) ═════ -->
-    <div class="bg-white rounded-xl max-w-2xl mx-auto w-full shadow-2xl overflow-hidden mb-6">
+    <!-- ═════ NNC2 Document Card (copied from Product 1 overlay HTML) ═════ -->
+    <div class="bg-white rounded-xl max-w-2xl w-full shadow-2xl overflow-hidden mx-auto">
 
       <!-- Header -->
       <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
@@ -83,7 +86,7 @@
         <!-- Subtitle -->
         <p class="text-xs text-gray-500 mb-4">Notice of Change of Company Name（《公司條例》第 107(2) 條）</p>
 
-        <!-- Demo Images (3 specimens) -->
+        <!-- Demo Images -->
         <div class="bg-gray-50 rounded-xl p-4 mb-5 border border-gray-200">
           <div class="grid grid-cols-3 gap-2 sm:gap-3">
             <div onclick="openTemplateModal('specimen1')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
@@ -121,11 +124,11 @@
         </div>
 
         <!-- Description -->
-        <p class="text-sm text-gray-600 mb-4">
+        <p class="text-sm text-gray-600 mb-3">
           NNC2 係公司註冊處嘅指定表格（《公司條例》第 107(2) 條），用於通知政府公司已通過更改名稱嘅特別決議。通過特別決議後，必須喺 <strong class="text-red-600">15 日內</strong>提交，費用 <strong>HK$295</strong>。
         </p>
 
-        <!-- Quick facts -->
+        <!-- Quick facts (mini, bg-gray-50 cards like Product 1 overlay) -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-5">
           <div class="bg-gray-50 rounded-xl p-2.5 text-center">
             <div class="text-base font-bold text-navy">HK$295</div>
@@ -145,65 +148,37 @@
           </div>
         </div>
 
-        <!-- Official Form Link (Product 1 pattern) -->
+        <!-- ═══ from Product 1: officialFormUrl link pattern ═══ -->
         <div class="mb-5">
-          <h3 class="font-semibold text-navy text-sm mb-2">📄 官方表格</h3>
           <a href="https://www.cr.gov.hk/en/forms/specified.htm" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 transition">
+             class="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 mb-3 transition">
             📄 查看官方表格（公司註冊處）
           </a>
           <p class="text-xs text-gray-400 mt-1">直接喺政府網站下載最新版本 NNC2，保證格式正確</p>
         </div>
 
-        <!-- Filling Guide -->
-        <div class="mb-5">
-          <h3 class="font-semibold text-navy text-sm mb-3">✍️ 填寫指引</h3>
-          <div class="space-y-2 text-sm text-gray-700">
-            <div class="flex items-start gap-2">
-              <span class="w-5 h-5 rounded-full bg-navy text-white text-xs flex items-center justify-center shrink-0 mt-0.5">A</span>
-              <div><span class="font-semibold">現有公司名稱</span><span class="text-xs text-gray-500 ml-1">— 英文名必須以「Limited」結尾，同公司註冊證書 100% 一致</span></div>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="w-5 h-5 rounded-full bg-navy text-white text-xs flex items-center justify-center shrink-0 mt-0.5">B</span>
-              <div><span class="font-semibold">新公司名稱</span><span class="text-xs text-gray-500 ml-1">— 先查冊確認冇撞名，否則 CR 會 reject</span></div>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="w-5 h-5 rounded-full bg-navy text-white text-xs flex items-center justify-center shrink-0 mt-0.5">C</span>
-              <div><span class="font-semibold">簡稱（可選）</span><span class="text-xs text-gray-500 ml-1">— 冇嘅 skip 就得</span></div>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="w-5 h-5 rounded-full bg-navy text-white text-xs flex items-center justify-center shrink-0 mt-0.5">D</span>
-              <div><span class="font-semibold">特別決議日期</span><span class="text-xs text-gray-500 ml-1">— 必須喺決議後 15 日內提交</span></div>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="w-5 h-5 rounded-full bg-navy text-white text-xs flex items-center justify-center shrink-0 mt-0.5">E+F</span>
-              <div><span class="font-semibold">聲明 + 簽署</span><span class="text-xs text-gray-500 ml-1">— 董事/秘書簽署確認資料正確</span></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Common Mistakes (Product 1 pattern) -->
+        <!-- ═══ from Product 1: common mistakes pattern ═══ -->
         <div class="mb-5">
           <div class="bg-red-50 border border-red-100 rounded-xl p-4">
             <h4 class="font-semibold text-red-600 text-sm mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
             <ul class="text-sm text-gray-700 space-y-1.5">
-              <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">•</span><span>仲用舊 Form R1 — 2014 年已經改用 NNC2，用錯表格即刻退回</span></li>
-              <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">•</span><span>公司編號寫錯 — 一定要對清楚 CR 嘅周年申報表</span></li>
-              <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">•</span><span>新名稱同現有公司太相似 — CR 會 reject，要重新申請</span></li>
-              <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">•</span><span>特別決議日期錯 — 必須係通過改名決議嘅確實日期</span></li>
-              <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">•</span><span>超過 15 日先提交 — 特別決議後 15 日內要交，逾期罰款</span></li>
-              <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">•</span><span>未預先開 e-Services Portal Account — 網上提交要預先登記</span></li>
+              <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">•</span>仲用舊 Form R1 — 2014 年已經改用 NNC2，用錯表格即刻退回</li>
+              <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">•</span>公司編號寫錯 — 一定要對清楚 CR 嘅周年申報表</li>
+              <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">•</span>新名稱同現有公司太相似 — CR 會 reject，要重新申請</li>
+              <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">•</span>特別決議日期錯 — 必須係通過改名決議嘅確實日期</li>
+              <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">•</span>超過 15 日先提交 — 特別決議後 15 日內要交，逾期罰款</li>
+              <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">•</span>未預先開 e-Services Portal Account — 網上提交要預先登記</li>
             </ul>
           </div>
         </div>
 
-        <!-- Primary CTA Button (Product 1 download pattern) -->
+        <!-- ═══ from Product 1: download button pattern (no generator, no template → go to official form) ═══ -->
         <a href="https://www.cr.gov.hk/en/forms/specified.htm" target="_blank" rel="noopener noreferrer"
            class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-3.5 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm">
           🏛️ 前往公司註冊處官網下載 NNC2
         </a>
 
-        <!-- Submission info -->
+        <!-- ═══ Submission methods (Product 1 style bg-gray-50 cards) ═══ -->
         <div class="mt-4 grid grid-cols-2 gap-3">
           <div class="bg-gray-50 rounded-xl p-3">
             <h4 class="font-semibold text-navy text-xs mb-1">🖥️ 電子提交（推薦）</h4>
@@ -227,7 +202,7 @@
     </div>
 
     <!-- ═════ Related: Special Resolution Generator ═════ -->
-    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 sm:p-5 max-w-2xl mx-auto mb-6 no-print">
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 sm:p-5 max-w-2xl mx-auto mt-6 no-print">
       <div class="flex items-start gap-3">
         <span class="text-2xl mt-0.5 shrink-0">📝</span>
         <div>
@@ -244,7 +219,7 @@
 
   </div><!-- /.container -->
 
-  <!-- ═════ Template Modal ═════ -->
+  <!-- ═════ Template Modal (for image zoom) ═════ -->
   <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print" onclick="closeTemplateModal(event)">
     <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
       <div class="flex border-b border-gray-200">
@@ -268,9 +243,6 @@
     </div>
   </div>
 
-  <!-- ════════════════════════════════════════════════ -->
-  <!--  JAVASCRIPT (modal only)                        -->
-  <!-- ════════════════════════════════════════════════ -->
   <script>
     function openTemplateModal(tab) {
       document.getElementById('templateModal').classList.remove('hidden');
@@ -297,11 +269,22 @@
   </script>
 
   <!-- ═════ Footer ═════ -->
-  <footer class="bg-navy text-white py-8 mt-6 no-print">
-    <div class="max-w-4xl mx-auto px-4 text-center text-xs text-gray-400">
-      <p>⚠️ 僅供參考，並不構成法律意見。填寫後請打印簽署並提交至公司註冊處。</p>
-      <p class="mt-1">&copy; ESGov</p>
-      <p class="mt-2 opacity-40">v1.1 · 指引模式</p>
+  <footer class="gov-footer py-8 sm:py-12 no-print">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
+        <div class="flex items-center gap-2 text-white font-bold">
+          <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" /><span class="ml-1.5 font-semibold"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="text-sm text-gold hover:text-gold-light transition">☕ 請咖啡</a>
+          <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
+        <p>⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。</p>
+        <p class="mt-1">&copy; ESGov</p>
+        <p class="mt-2 opacity-40">v1.1 · 指引模式</p>
+      </div>
     </div>
   </footer>
 
