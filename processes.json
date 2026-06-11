@@ -101,6 +101,7 @@
           "description": "由核數師簽署嘅公司財務報告，用於證明股份價值",
           "demoImage": "assets/demo/step4-audit.svg",
           "templateFile": "templates/audit-report-sample.docx",
+          "generatorUrl": "audit-report-generator.html",
           "commonMistakes": [
             "審計報告過咗 6 個月 — 稅局有權要求最新嘅財務資料，要重新出報告",
             "冇核對資產淨值 — 作價寫得太低，稅局用 audit report 重新估值，要補稅",

@@ -15,7 +15,7 @@ VERSION="${2}"
 # 🛡️ Safety check: detect new HTML pages not yet approved
 if [ -z "$SKIP_SAFETY" ]; then
   # Known allowed product HTML pages
-  ALLOWED_PAGES="index.html shareholder-transfer.html sold-note-generator.html instrument-transfer-generator.html letter-of-transferee-generator.html nar1-generator.html nsc1-generator.html"
+  ALLOWED_PAGES="index.html shareholder-transfer.html sold-note-generator.html instrument-transfer-generator.html letter-of-transferee-generator.html nar1-generator.html nsc1-generator.html audit-report-generator.html"
   for f in *.html; do
     if ! echo "$ALLOWED_PAGES" | grep -q "$f"; then
       echo "⚠️  Unrecognised HTML page detected: $f"
