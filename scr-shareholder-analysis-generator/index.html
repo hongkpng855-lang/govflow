@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ESGov | 股權結構分析表 Word 生成工具 — 填資料即出已填好 Word</title>
-  <meta name="description" content="香港公司重要控制人登記冊 SCR 股權結構分析表 Word 生成工具。直接喺網頁填好公司名稱、股東資料、持股比例，一鍵下載已填好嘅 Word 檔案。完全免費。" />
+  <meta name="description" content="香港公司 SCR 股權結構分析表 Word 生成工具。直接填公司名稱、股東資料、持股比例同投票權安排，系統自動分析潛在重要控制人並標記。一鍵下載已填好嘅股權結構分析表 Word 檔案，幫你整理股東結構同關連關係，為識別重要控制人做好準備。完全免費公開。" />
   <meta property="og:title" content="ESGov | 股權結構分析表 Word 生成工具" />
   <meta property="og:description" content="填公司股權資料，一鍵下載已填好 Word 檔案。完全免費。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,6 +21,8 @@
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="canonical" href="https://esgov.org/scr-shareholder-analysis-generator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_HK" />
   <meta property="og:url" content="https://esgov.org/scr-shareholder-analysis-generator" />
   <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
   <script type="application/ld+json">
@@ -31,6 +33,30 @@
     "description": "香港公司 SCR 股權結構分析表 Word 生成工具，填資料即出已填好 Word。完全免費。",
     "url": "https://esgov.org/scr-shareholder-analysis-generator"
   }
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "重要控制人登記冊 (SCR) 完整指南",
+      "item": "https://esgov.org/significant-controllers-register"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "股權結構分析表 Word 生成工具",
+      "item": "https://esgov.org/scr-shareholder-analysis-generator"
+    }
+  ]
+}
   </script>
 </head>
 <body class="bg-gray-100 font-sans">
@@ -264,7 +290,31 @@
   th { background: #1B2A4A; color: white; }
   .footer { margin-top: 30px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 11px; color: #888; text-align: center; }
   .total { font-weight: bold; margin-top: 10px; text-align: right; }
-</style></head>
+</style>  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "重要控制人登記冊 (SCR) 完整指南",
+      "item": "https://esgov.org/significant-controllers-register"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "股權結構分析表 Word 生成工具",
+      "item": "https://esgov.org/scr-shareholder-analysis-generator"
+    }
+  ]
+}
+  </script>
+</head>
 <body>
 <h1>股權結構分析表</h1>
 <p style="text-align:right;font-size:12px;color:#666;">製表日期：${date}</p>
