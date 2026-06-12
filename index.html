@@ -37,7 +37,22 @@
   <link rel="canonical" href="https://esgov.org" />
   <meta property="og:url" content="https://esgov.org" />
   <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
-</head>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    }
+  ]
+}
+  </script>
+  </head>
 <body x-data="{ showDonate: false }">
 
   <!-- ═══════════════ Navigation ═══════════════ -->
@@ -476,7 +491,7 @@
           如有具體法律問題，請諮詢執業律師或專業公司秘書。
         </p>
         <p>© 2025 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v10.6</p>
+        <p class="mt-2 opacity-40">v10.7</p>
       </div>
     </div>
   </footer>
