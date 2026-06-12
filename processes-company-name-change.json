@@ -6,7 +6,7 @@
   "price": 0,
   "currency": "HKD",
   "donateMessage": "如果呢份指南幫到你，可以請我飲杯咖啡 ☕",
-  "isActive": false,
+  "isActive": true,
   "steps": [
     {
       "stepNumber": 1,
