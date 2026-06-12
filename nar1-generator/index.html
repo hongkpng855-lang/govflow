@@ -58,12 +58,15 @@
     <!-- ══ Page Title ══ -->
     <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">NAR1 周年申報表 PDF 官方表格 — 公司註冊處可填寫表格</h1>
 
-    <!-- 範例圖片 -->
-    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm mb-4 max-w-lg mx-auto">
+    <!-- 範例圖片（可點擊放大） -->
+    <div onclick="openTemplateModal('nar1')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm mb-4 max-w-lg mx-auto cursor-pointer hover:border-gold/40 transition group relative">
       <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
         <img src="/assets/demo/step5-nar1.png" alt="NAR1 周年申報表填寫範例"
              class="w-full h-full object-contain"
              onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+        <span class="text-white text-xs font-bold drop-shadow-sm">NAR1 範例</span>
       </div>
     </div>
 
@@ -106,6 +109,33 @@
     </div>
 
   </div>
+
+  <!-- ═════ Template Modal (for image zoom) ═════ -->
+  <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print" onclick="closeTemplateModal(event)">
+    <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+        <h3 class="font-bold text-navy text-base">NAR1 周年申報表範例</h3>
+        <button onclick="closeTemplateModal()" class="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+      </div>
+      <div class="p-4">
+        <img src="/assets/demo/step5-nar1.png" alt="NAR1 範例" class="w-full border border-gray-200 rounded-lg" />
+        <p class="text-xs text-gray-400 mt-2 text-center">NAR1 填寫範例（資料已模糊處理）</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openTemplateModal(tab) {
+      document.getElementById('templateModal').classList.remove('hidden');
+      document.getElementById('templateModal').classList.add('flex');
+    }
+    function closeTemplateModal(e) {
+      if (!e || e.target === document.getElementById('templateModal')) {
+        document.getElementById('templateModal').classList.add('hidden');
+        document.getElementById('templateModal').classList.remove('flex');
+      }
+    }
+  </script>
 
   <footer class="bg-navy text-white py-8 mt-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

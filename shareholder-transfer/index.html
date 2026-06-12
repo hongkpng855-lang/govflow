@@ -415,16 +415,6 @@
             </div>
           </div>
 
-          <!-- Share -->
-          <div class="text-center text-sm text-gray-400">
-            <p>覺得有用？分享俾朋友 👇</p>
-            <div class="flex items-center justify-center gap-3 mt-2">
-              <a href="https://wa.me/?text=香港有限公司股份轉讓完整指南，全部免費！https://esgov.org/shareholder-transfer" target="_blank"
-                 class="text-green-500 hover:text-green-600 font-semibold">WhatsApp</a>
-              <span class="text-gray-300">|</span>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://esgov.org/shareholder-transfer" target="_blank"
-                 class="text-blue-500 hover:text-blue-600 font-semibold">Facebook</a>
-            </div>
           </div>
         </div>
 
@@ -432,11 +422,25 @@
     </div>
   </div>
 
+  <!-- ═══════════════ Share (通用底部) ═══════════════ -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
+    <div class="text-center text-sm text-gray-400">
+      <p>覺得有用？分享俾朋友 👇</p>
+      <div class="flex items-center justify-center gap-3 mt-2">
+        <a href="https://wa.me/?text=香港有限公司股份轉讓完整指南，全部免費！https://esgov.org/shareholder-transfer" target="_blank"
+           class="text-green-500 hover:text-green-600 font-semibold">WhatsApp</a>
+        <span class="text-gray-300">|</span>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://esgov.org/shareholder-transfer" target="_blank"
+           class="text-blue-500 hover:text-blue-600 font-semibold">Facebook</a>
+      </div>
+    </div>
+  </div>
+
   <!-- ═══════════════ Donate Modal ═══════════════ -->
   <div x-show="showDonate" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" @click.self="closeDonate()">
-    <div class="bg-white rounded-xl max-w-md w-full shadow-2xl p-6 sm:p-8 text-center" @click.stop>
-      <div class="text-5xl mb-4">☕</div>
-      <h3 class="text-xl font-bold text-navy mb-3">幫到你嗎？請我飲杯咖啡</h3>
+    <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-4 sm:p-6 text-center" @click.stop>
+      <div class="text-4xl mb-3">☕</div>
+      <h3 class="text-lg font-bold text-navy mb-2">幫到你嗎？請我飲杯咖啡</h3>
       <p class="text-sm text-gray-600 mb-6 leading-relaxed">
         呢份指南係我親身經歷整理，完全免費公開。<br />
         如果幫到你節省時間同金錢，<br />
