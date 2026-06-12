@@ -58,6 +58,10 @@ for dirpath, dirnames, filenames in os.walk(ROOT):
             else:
                 url_path = url_path + '/'  # Add trailing slash for folder URLs
         
+        # Strip .html extension for clean URLs (GitHub Pages serves without .html)
+        if url_path.endswith('.html') and url_path != '':
+            url_path = url_path[:-5]  # Remove .html
+        
         full_url = f'{BASE_URL}/{url_path}'
         priority = PRIORITY.get(url_path, 0.5)
         
