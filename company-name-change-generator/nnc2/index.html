@@ -3,29 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ESGov | Form NNC2 更改公司名稱通知書 — 官方表格 + 填寫指引</title>
-  <meta name="description" content="香港公司更改名稱 Form NNC2（Notice of Change of Company Name）詳細填寫指引。含政府官方表格連結、填寫步驟、常見錯誤、真實範例圖片。唔使再俾會計公司賺幾千蚊，你自己都搞得掂。" />
-  <meta property="og:title" content="ESGov | Form NNC2 更改公司名稱通知書 — 官方表格 + 填寫指引" />
-  <meta property="og:description" content="Form NNC2 填寫指引：政府官方表格連結、填寫步驟、常見錯誤、真實範例對照。免費公開。" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="zh_HK" />
+  <title>ESGov | Form NNC2 更改公司名稱通知書 PDF 範例 + 下載 — 公司註冊處官方表格</title>
+  <meta name="description" content="香港公司更改名稱 Form NNC2（Notice of Change of Company Name）真實填寫範例 + 政府官方表格下載。更改公司名稱通知書，必須喺特別決議後 15 日內提交。費用 HK$295。免費公開。"/>
+  <meta property="og:title" content="ESGov | Form NNC2 更改公司名稱通知書 PDF 範例 + 下載" />
+  <meta property="og:description" content="香港公司更改名稱 Form NNC2 真實範例 + 政府官方表格下載。免費公開。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
-            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
-          },
-          fontFamily: {
-            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
-          }
-        }
-      }
+      theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
     }
   </script>
   <link rel="icon" type="image/png" href="/favicon.png" />
@@ -34,295 +22,114 @@
   <link rel="canonical" href="https://esgov.org/nnc2-generator" />
   <meta property="og:url" content="https://esgov.org/nnc2-generator" />
   <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
-  <style>
-    /* Editable field styling — matches sold-note-generator pattern */
-    .editable-field {
-      background: #fffbeb;
-      border: 1px solid rgba(201, 168, 76, 0.25);
-      cursor: text;
-      transition: all 0.15s ease;
-      outline: none;
-      font-family: inherit;
-    }
-    .editable-field:hover {
-      background: #fef3c7;
-      border-color: rgba(201, 168, 76, 0.5);
-    }
-    .editable-field:focus {
-      background: #fde68a;
-      border-color: #C9A84C;
-      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
-    }
-    /* Government-style NNC2 form */
-    .nnc2-form {
-      font-family: 'Noto Sans TC', 'Arial', sans-serif;
-      line-height: 1.4;
-    }
-    .nnc2-form .field-label {
-      font-size: 11px;
-      font-weight: 600;
-      color: #374151;
-      letter-spacing: 0.02em;
-    }
-    .nnc2-form .gov-header {
-      background: #1B2A4A;
-      color: white;
-      padding: 10px 16px;
-      text-align: center;
-    }
-    .nnc2-form .gov-header h2 {
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-    }
-    .nnc2-form .gov-header p {
-      font-size: 10px;
-      opacity: 0.75;
-      margin-top: 1px;
-    }
-    .nnc2-form .declaration-box {
-      border: 1.5px solid #1B2A4A;
-      border-radius: 6px;
-      padding: 12px 14px;
-      background: #f9fafb;
-    }
-    .nnc2-form .section-title {
-      font-size: 12px;
-      font-weight: 700;
-      color: #1B2A4A;
-      border-bottom: 2px solid #1B2A4A;
-      padding-bottom: 3px;
-      margin-bottom: 10px;
-    }
-    /* For input boxes that mimic government form fields */
-    .gov-input-box {
-      border: 1px solid #d1d5db;
-      background: #fffbeb;
-      padding: 4px 8px;
-      min-height: 28px;
-      font-size: 13px;
-      outline: none;
-      transition: all 0.15s ease;
-      cursor: text;
-      font-family: inherit;
-      border-radius: 3px;
-    }
-    .gov-input-box:hover {
-      border-color: rgba(201, 168, 76, 0.5);
-      background: #fef3c7;
-    }
-    .gov-input-box:focus {
-      border-color: #C9A84C;
-      background: #fde68a;
-      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
-    }
-    /* Form row helper */
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 6px;
-    }
-    .form-row .label {
-      font-size: 12px;
-      font-weight: 600;
-      color: #374151;
-      text-align: right;
-      padding-right: 6px;
-    }
-    .instruction-text {
-      font-size: 10px;
-      color: #6b7280;
-      line-height: 1.3;
-    }
-    /* Print styling for PDF capture */
-    @media print {
-      body { background: white; }
-      .no-print { display: none !important; }
-    }
-  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "NNC2 更改公司名稱通知書 PDF 官方表格",
+    "description": "香港公司 NNC2 更改公司名稱通知書 PDF 官方表格。免費下載。",
+    "url": "https://esgov.org/nnc2-generator"
+  }
+  </script>
 </head>
 <body class="bg-gray-100 font-sans">
 
-  <!-- ═══════════ Nav ═══════════ -->
-  <nav class="bg-navy text-white sticky top-0 z-50 no-print">
+  <nav class="bg-navy text-white sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
-      <a href="/" class="flex items-center gap-2.5">
-        <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" onerror="this.outerHTML='<span class=text-gold font-bold text-lg>ES</span><span class=text-white>Gov</span>'" />
-        <span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
-      </a>
-      <a href="/company-name-change?step=1" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">
-        ← 返回指南
-      </a>
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/company-name-change?step=3" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回指南</a>
     </div>
   </nav>
 
   <div class="max-w-4xl mx-auto px-4 py-6">
 
-    <!-- ═════ Trust Banner ═════ -->
-    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700 no-print">
-      📋 NNC2 係公司註冊處嘅官方表格，㩒下面掣去政府官網下載最新版本
+    <!-- Trust Banner -->
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
+      📄 睇範例 → 下載官方 NNC2 → 填寫提交公司註冊處
     </div>
 
-    <!-- ═════ Donate Hint ═════ -->
-    <div class="text-center mb-4 no-print">
+    <!-- Donate hint -->
+    <div class="text-center mb-4">
       <span class="inline-flex items-center gap-1.5 text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-full px-3 py-1">
         ☕ 全部免費 · 整理不易，<a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="font-semibold text-gold hover:underline">請咖啡支持</a>
       </span>
     </div>
 
-    <!-- ═════ Reference Images (NN2 specimen previews) ═════ -->
-    <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto no-print">
-      <div onclick="openTemplateModal('specimen1')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-          <img src="/assets/demo/nnc2-specimen-1.png?v=9.0" alt="NNC2 範例 1"
-               class="w-full h-full object-contain"
-               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 範例1</div>'" />
+    <!-- ══ Page Title ══ -->
+    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">Form NNC2 更改公司名稱通知書 PDF 官方表格 — 公司註冊處可填寫表格</h1>
+
+    <!-- 範例圖片 -->
+    <div class="max-w-lg mx-auto mb-4">
+      <div class="grid grid-cols-3 gap-2">
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+          <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+            <img src="/assets/demo/nnc2-specimen-1.png?v=9.0" alt="NNC2 範例 1"
+                 class="w-full h-full object-contain"
+                 onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+          </div>
         </div>
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-          <span class="text-white text-xs font-bold drop-shadow-sm">範例 1</span>
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+          <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+            <img src="/assets/demo/nnc2-specimen-2.png?v=9.0" alt="NNC2 範例 2"
+                 class="w-full h-full object-contain"
+                 onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+          </div>
         </div>
-      </div>
-      <div onclick="openTemplateModal('specimen2')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-          <img src="/assets/demo/nnc2-specimen-2.png?v=9.0" alt="NNC2 範例 2"
-               class="w-full h-full object-contain"
-               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 範例2</div>'" />
-        </div>
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-          <span class="text-white text-xs font-bold drop-shadow-sm">範例 2</span>
-        </div>
-      </div>
-      <div onclick="openTemplateModal('specimen3')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-          <img src="/assets/demo/nnc2-specimen-3.png?v=9.0" alt="NNC2 範例 3"
-               class="w-full h-full object-contain"
-               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 範例3</div>'" />
-        </div>
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-          <span class="text-white text-xs font-bold drop-shadow-sm">範例 3</span>
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+          <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+            <img src="/assets/demo/nnc2-specimen-3.png?v=9.0" alt="NNC2 範例 3"
+                 class="w-full h-full object-contain"
+                 onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- ═════ Form Description + Common Mistakes ═════ -->
-    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm no-print">
+    <!-- 文件說明 + 常見錯誤 -->
+    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
       <div class="flex items-start gap-3 mb-3">
         <span class="text-lg mt-0.5 shrink-0">📄</span>
         <div>
-          <p class="font-semibold text-navy text-sm">Form NNC2 — 更改公司名稱通知書</p>
-          <p class="text-xs text-gray-500 mt-0.5">Notice of Change of Company Name（《公司條例》第 107(2) 條）</p>
+          <p class="font-semibold text-navy text-sm">Form NNC2（更改公司名稱通知書）</p>
+          <p class="text-xs text-gray-500 mt-0.5">Notice of Change of Company Name（《公司條例》第 107(2) 條）— 費用 HK$295，特別決議後 15 日內提交</p>
         </div>
       </div>
+      <h2 class="font-semibold text-navy text-base mb-2 mt-4">⚠️ 常見錯誤與注意事項</h2>
       <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
         <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
         <ul class="text-xs text-gray-700 space-y-1.5">
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>仲用舊 Form R1 — 2014 年已經改用 NNC2，用錯表格即刻退回</li>
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>公司編號寫錯 — 一定要對清楚 CR 嘅周年申報表</li>
-          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>新名稱同公司條例抵觸 — 例如太相似被拒絕</li>
-          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>特別決議日期唔啱 — 必須係通過改名決議嘅確實日期</li>
-          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>超過 15 日先提交 — 特別決議後 15 日內要交 NNC2</li>
-          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>費用錯誤 — 提交 NNC2 費用 HK$295</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>特別決議日期錯 — 必須係通過改名決議嘅確實日期</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>超過 15 日先提交 — 特別決議後 15 日內要交，逾期罰款</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>未預先開 e-Services Portal Account — 網上提交要預先登記</li>
         </ul>
       </div>
     </div>
 
-    <!-- ═════ Template Modal ═════ -->
-    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print" onclick="closeTemplateModal(event)">
-      <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
-        <div class="flex border-b border-gray-200">
-          <button id="tabSpecimen1" onclick="switchModalTab('specimen1')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition">📄 範例 1</button>
-          <button id="tabSpecimen2" onclick="switchModalTab('specimen2')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 範例 2</button>
-          <button id="tabSpecimen3" onclick="switchModalTab('specimen3')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 範例 3</button>
-          <button onclick="closeTemplateModal()" class="px-4 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
-        </div>
-        <div id="modalSpecimen1" class="p-4">
-          <img src="/assets/demo/nnc2-specimen-1.png?v=9.0" alt="NNC2 範例 1" class="w-full border border-gray-200 rounded-lg" />
-          <p class="text-xs text-gray-400 mt-2 text-center">NNC2 填寫範例（資料已模糊處理）</p>
-        </div>
-        <div id="modalSpecimen2" class="p-4 hidden">
-          <img src="/assets/demo/nnc2-specimen-2.png?v=9.0" alt="NNC2 範例 2" class="w-full border border-gray-200 rounded-lg" />
-          <p class="text-xs text-gray-400 mt-2 text-center">NNC2 填寫範例（資料已模糊處理）</p>
-        </div>
-        <div id="modalSpecimen3" class="p-4 hidden">
-          <img src="/assets/demo/nnc2-specimen-3.png?v=9.0" alt="NNC2 範例 3" class="w-full border border-gray-200 rounded-lg" />
-          <p class="text-xs text-gray-400 mt-2 text-center">NNC2 填寫範例（資料已模糊處理）</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ═════ NNC2 Guide Section (Mode B) ═════ -->
-    <div class="bg-white border border-gray-200 rounded-xl p-5 sm:p-6 shadow-sm max-w-[800px] mx-auto mb-4">
-      <div class="flex items-start gap-3 mb-3">
-        <span class="text-lg mt-0.5 shrink-0">📄</span>
-        <div>
-          <p class="font-semibold text-navy text-sm">Form NNC2 — 更改公司名稱通知書</p>
-          <p class="text-xs text-gray-500 mt-0.5">Notice of Change of Company Name（《公司條例》第 107(2) 條）</p>
-        </div>
-      </div>
-      <p class="text-sm text-gray-600 mb-4">
-        NNC2 係公司註冊處嘅指定表格，用於通知政府公司已通過更改名稱嘅特別決議。通過特別決議後，必須喺 <strong class="text-red-600">15 日內</strong>提交，費用 <strong>HK$295</strong>。
-      </p>
-      <a href="https://www.cr.gov.hk/en/forms/specified.htm" target="_blank" rel="noopener noreferrer"
-         class="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 mb-4 transition">
-        📄 查看官方表格（公司註冊處）
+    <!-- Download + Official Link + Back -->
+    <div class="space-y-3">
+      <a href="https://www.cr.gov.hk/en/forms/specified.htm" target="_blank"
+         class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-4 px-6 rounded-xl hover:bg-navy-light transition shadow text-base">
+        🏛️ 前往公司註冊處官網下載 NNC2
       </a>
-      <a href="https://www.cr.gov.hk/en/forms/specified.htm" target="_blank" rel="noopener noreferrer"
-         class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-4 px-6 rounded-xl hover:bg-navy-light transition shadow-lg text-lg">
-        🏛️ 前往政府官網下載 NNC2
+      <a href="https://www.cr.gov.hk/en/forms/specified.htm" target="_blank"
+         class="w-full flex items-center justify-center gap-2 bg-white border border-blue-300 text-blue-700 font-semibold py-3 px-6 rounded-xl hover:bg-blue-50 transition text-sm">
+        📄 查看官方表格（公司註冊處網站）
+      </a>
+      <a href="/company-name-change?step=3"
+         class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+        ← 返回更改公司名稱完整指南
       </a>
     </div>
 
-  </div><!-- /.container -->
+  </div>
 
-  <!-- ════════════════════════════════════════════════ -->
-  <!--  JAVASCRIPT                                     -->
-  <!-- ════════════════════════════════════════════════ -->
-  <script>
-    // ===== Template Modal =====
-    function openTemplateModal(tab) {
-      document.getElementById('templateModal').classList.remove('hidden');
-      document.getElementById('templateModal').classList.add('flex');
-      if (tab && typeof switchModalTab === 'function') switchModalTab(tab);
-    }
-    function closeTemplateModal(e) {
-      if (!e || e.target === document.getElementById('templateModal')) {
-        document.getElementById('templateModal').classList.add('hidden');
-        document.getElementById('templateModal').classList.remove('flex');
-      }
-    }
-    function switchModalTab(tab) {
-      // Hide all
-      ['specimen1', 'specimen2', 'specimen3'].forEach(function(t) {
-        document.getElementById('modal' + t.charAt(0).toUpperCase() + t.slice(1)).classList.toggle('hidden', t !== tab);
-        var btn = document.getElementById('tab' + t.charAt(0).toUpperCase() + t.slice(1));
-        if (t === tab) {
-          btn.className = 'flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition';
-        } else {
-          btn.className = 'flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition';
-        }
-      });
-    }
-  </script>
-
-  <!-- ═════ Footer ═════ -->
-  <footer class="bg-navy text-white py-8 mt-12 no-print">
+  <footer class="bg-navy text-white py-6 mt-8">
     <div class="max-w-4xl mx-auto px-4 text-center text-xs text-gray-400">
-      <p>⚠️ 僅供參考，並不構成法律意見。填寫後請打印簽署並提交至公司註冊處。</p>
+      <p>⚠️ 僅供參考，並不構成法律意見。</p>
       <p class="mt-1">&copy; ESGov</p>
-      <p class="mt-2 opacity-40">v1.1 · 指引模式</p>
     </div>
   </footer>
-
-  <!-- ═════ JSON-LD Structured Data ═════ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "ESGov",
-    "url": "https://esgov.org",
-    "logo": "https://esgov.org/assets/images/esgov-logo.png"
-  }
-  </script>
 </body>
 </html>
