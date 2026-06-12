@@ -374,24 +374,24 @@
         <!-- ═══ Final Section (shown on last step) ═══ -->
         <div x-show="!isLoading && !error && currentStep === totalSteps" class="mt-8 mb-12">
           <!-- Step-by-step plan recap -->
-          <div class="bg-navy text-white rounded-xl p-6 sm:p-8 text-center mb-6">
-            <div class="text-4xl mb-4">🎉</div>
-            <h3 class="text-xl font-bold mb-2">搞掂晒！5 個步驟全部完成</h3>
-            <p class="text-gray-300 text-sm max-w-md mx-auto">
+          <div class="bg-navy text-white rounded-xl p-4 sm:p-5 text-center mb-4">
+            <div class="text-3xl mb-2">🎉</div>
+            <h3 class="text-lg font-bold mb-1">搞掂晒！5 個步驟全部完成</h3>
+            <p class="text-gray-300 text-xs max-w-md mx-auto">
               你而家有齊晒所有資料同範例，可以放心提交文件俾政府。
             </p>
           </div>
 
           <!-- Donate CTA -->
-          <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-300 rounded-xl p-6 sm:p-8 text-center mb-6 shadow-md">
-            <div class="text-4xl mb-3">☕</div>
-            <h3 class="text-xl font-bold text-navy mb-2" x-text="processData?.finalDonate?.title || '幫到你嗎？請我飲杯咖啡'"></h3>
-            <p class="text-sm text-gray-600 max-w-lg mx-auto mb-4" x-text="processData?.finalDonate?.message || '免費公開全部內容，支持下我繼續製作更多指南！'"></p>
+          <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 text-center mb-4 shadow-sm">
+            <div class="text-3xl mb-2">☕</div>
+            <h3 class="text-base font-bold text-navy mb-1" x-text="processData?.finalDonate?.title || '幫到你嗎？請我飲杯咖啡'"></h3>
+            <p class="text-xs text-gray-600 max-w-lg mx-auto mb-3" x-text="processData?.finalDonate?.message || '免費公開全部內容，支持下我繼續製作更多指南！'"></p>
             <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
-               class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-3.5 px-8 rounded-xl hover:bg-gold-light transition shadow-lg text-lg btn-gov-pulse">
+               class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
               ☕ 請我飲咖啡
             </a>
-            <p class="text-xs text-gray-400 mt-3" x-text="processData?.finalDonate?.goalMessage || '每個支持都幫助我繼續製作更多免費指南 🎯'"></p>
+            <p class="text-xs text-gray-400 mt-2" x-text="processData?.finalDonate?.goalMessage || '每個支持都幫助我繼續製作更多免費指南 🎯'"></p>
           </div>
 
           <!-- Email Collection -->
@@ -419,20 +419,6 @@
         </div>
 
       </main>
-    </div>
-  </div>
-
-  <!-- ═══════════════ Share (通用底部) ═══════════════ -->
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
-    <div class="text-center text-sm text-gray-400">
-      <p>覺得有用？分享俾朋友 👇</p>
-      <div class="flex items-center justify-center gap-3 mt-2">
-        <a href="https://wa.me/?text=香港有限公司股份轉讓完整指南，全部免費！https://esgov.org/shareholder-transfer" target="_blank"
-           class="text-green-500 hover:text-green-600 font-semibold">WhatsApp</a>
-        <span class="text-gray-300">|</span>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://esgov.org/shareholder-transfer" target="_blank"
-           class="text-blue-500 hover:text-blue-600 font-semibold">Facebook</a>
-      </div>
     </div>
   </div>
 
@@ -557,26 +543,29 @@
   </div>
 
   <!-- ═══════════════ Footer ═══════════════ -->
-  <footer class="gov-footer py-8 sm:py-12">
+  <footer class="gov-footer py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
-        <div class="flex items-center gap-2 text-white font-bold">
-          <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" /><span class="ml-1.5 font-semibold"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-2 text-white font-bold text-xl">
+          <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
         </div>
-        <div class="flex items-center gap-4">
-          <button @click="openDonate()" class="text-sm text-gold hover:text-gold-light transition">☕ 請咖啡</button>
-          <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+        <div class="text-sm text-gray-400 flex items-center gap-3">
+          <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="hover:text-gold transition">☕ 請咖啡</a>
+          <span class="opacity-30">|</span>
+          <span>全部免費 🆓</span>
         </div>
       </div>
-      <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
-        <p>⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。</p>
-        <p class="mt-1">© 2025 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v10.5 · 全部免費 🆓 🆓</p>
+      <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
+        <p class="mb-2">
+          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          如有具體法律問題，請諮詢執業律師或專業公司秘書。
+        </p>
+        <p>© 2025 ESGov. All rights reserved.</p>
+        <p class="mt-2 opacity-40">v10.6</p>
       </div>
     </div>
   </footer>
-
-  <!-- Site + Logo Structured Data (for Google Search) -->
+<!-- Site + Logo Structured Data (for Google Search) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
   <script>
     tailwind.config = {
       theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
@@ -48,25 +49,22 @@
       📄 睇範例 → 下載可供參考的空白模板 → 如曾增加股本須一併提交
     </div>
 
-    <!-- Donate hint -->
-    <div class="text-center mb-4">
-      <span class="inline-flex items-center gap-1.5 text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-full px-3 py-1">
-        ☕ 全部免費 · 整理不易，<a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="font-semibold text-gold hover:underline">請咖啡支持</a>
-      </span>
-    </div>
+
 
     <!-- ══ Page Title ══ -->
     <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">NSC1 股份配發申請書 PDF 官方表格 — 公司註冊處可填寫表格</h1>
 
     <!-- 範例圖片（可點擊放大） -->
-    <div onclick="openTemplateModal('nsc1')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm mb-4 max-w-lg mx-auto cursor-pointer hover:border-gold/40 transition group relative">
-      <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-        <img src="/assets/demo/step5-nsc1.png" alt="NSC1 股份配發申請書填寫範例"
-             class="w-full h-full object-contain"
-             onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
-      </div>
-      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-        <span class="text-white text-xs font-bold drop-shadow-sm">NSC1 範例</span>
+    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
+      <div onclick="openTemplateModal('nsc1')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/step5-nsc1.png" alt="NSC1 股份配發申請書填寫範例"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">NSC1 範例</span>
+        </div>
       </div>
     </div>
 
@@ -93,7 +91,7 @@
     <!-- Download + Official Link + Back -->
     <div class="space-y-3">
       <a href="/templates/NSC1_official.pdf" download
-         class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-4 px-6 rounded-xl hover:bg-navy-light transition shadow text-base">
+         class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm">
         📥 下載官方 NSC1 fillable PDF（公司註冊處）
       </a>
       <a href="https://www.cr.gov.hk/sc/companies_ordinance/docs/NSC1_fillable.pdf" target="_blank"
@@ -133,23 +131,32 @@
         document.getElementById('templateModal').classList.remove('flex');
       }
     }
-  </script>
-
-  <footer class="bg-navy text-white py-8 mt-12">
+  </script>    <!-- Donate button -->
+    <div class="text-center mb-4">
+      <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
+         class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+        ☕ 請咖啡
+      </a>
+    </div>
+  <footer class="gov-footer py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
-        <div class="flex items-center gap-2 text-white font-bold">
-          <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" />
-          <span class="ml-1.5 font-semibold"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-2 text-white font-bold text-xl">
+          <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
         </div>
-        <div class="flex items-center gap-4">
-          <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="text-sm text-gold hover:text-gold-light transition">☕ 請咖啡</a>
-          <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+        <div class="text-sm text-gray-400 flex items-center gap-3">
+          <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="hover:text-gold transition">☕ 請咖啡</a>
+          <span class="opacity-30">|</span>
+          <span>全部免費 🆓</span>
         </div>
       </div>
-      <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
-        <p>⚠️ 僅供參考，並不構成法律意見。</p>
-        <p class="mt-1">&copy; ESGov</p>
+      <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
+        <p class="mb-2">
+          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          如有具體法律問題，請諮詢執業律師或專業公司秘書。
+        </p>
+        <p>© 2025 ESGov. All rights reserved.</p>
+        <p class="mt-2 opacity-40">v10.6</p>
       </div>
     </div>
   </footer>

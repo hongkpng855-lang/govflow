@@ -152,7 +152,8 @@
         <span class="inline-block text-xs font-semibold tracking-widest uppercase text-gold bg-gold/10 px-4 py-1.5 rounded-full mb-3">🔥 精選產品</span>
       </div>
 
-      <div class="max-w-2xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- ═══ Card 1: Share Transfer ═══ -->
         <div class="bg-white rounded-2xl shadow-xl shadow-gold/10 border-2 border-gold/20 p-8 sm:p-10 hover:shadow-2xl hover:border-gold/40 transition-all duration-300">
           <div class="flex items-center gap-2 text-sm text-green-600 font-semibold mb-3">
             <span class="bg-gold/20 px-3 py-1 rounded-full">人氣最高</span>
@@ -201,10 +202,20 @@
           </div>
         </div>
 
-        <!-- ═══ Card 2: Company Name Change ═══ -->
-        <div class="bg-white rounded-2xl shadow-xl shadow-gold/10 border-2 border-gold/20 p-8 sm:p-10 hover:shadow-2xl hover:border-gold/40 transition-all duration-300 mt-6">
+        <!-- ═══ Card 2: Company Name Change (製作中) ═══ -->
+        <div class="relative overflow-hidden bg-white rounded-2xl shadow-xl shadow-gold/10 border-2 border-gold/20 p-8 sm:p-10 transition-all duration-300">
+
+          <!-- Blur overlay -->
+          <div class="absolute inset-0 z-10 flex flex-col items-center justify-center backdrop-blur-sm bg-white/30 rounded-2xl">
+            <div class="bg-navy/90 text-white px-6 py-4 rounded-2xl shadow-xl text-center">
+              <div class="text-3xl mb-1">🛠️</div>
+              <div class="font-bold text-lg">製作中</div>
+              <div class="text-sm text-white/70 mt-1">即將推出</div>
+            </div>
+          </div>
+
           <div class="flex items-center gap-2 text-sm text-blue-600 font-semibold mb-3">
-            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full border border-blue-200">🎯 新推出</span>
+            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full border border-blue-200">🛠️ 製作中</span>
             <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full border border-green-200">全部免費 🆓</span>
           </div>
           <h2 class="text-2xl sm:text-3xl font-bold gov-heading mb-3">
@@ -233,7 +244,7 @@
             <span class="inline-flex items-center gap-1.5 text-xs bg-green-50 text-green-700 font-medium px-3 py-1.5 rounded-full">🆓 全部免費</span>
           </div>
           <div class="flex flex-col sm:flex-row gap-2">
-            <a href="/company-name-change" class="btn-gov btn-gov-buy flex-1 justify-center text-sm py-2.5">
+            <a href="/company-name-change" class="btn-gov btn-gov-buy flex-1 justify-center text-sm py-2.5 opacity-50 cursor-not-allowed" onclick="return false">
               📖 免費睇全部 5 個步驟 →
             </a>
           </div>
@@ -454,7 +465,7 @@
           <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
         </div>
         <div class="text-sm text-gray-400 flex items-center gap-3">
-          <a href="#" @click.prevent="showDonate = true" class="hover:text-gold transition">☕ 請咖啡</a>
+          <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="hover:text-gold transition">☕ 請咖啡</a>
           <span class="opacity-30">|</span>
           <span>全部免費 🆓</span>
         </div>
@@ -465,7 +476,7 @@
           如有具體法律問題，請諮詢執業律師或專業公司秘書。
         </p>
         <p>© 2025 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v10.5</p>
+        <p class="mt-2 opacity-40">v10.6</p>
       </div>
     </div>
   </footer>

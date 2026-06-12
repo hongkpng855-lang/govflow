@@ -33,7 +33,7 @@ today = datetime.date.today().isoformat()
 
 for dirpath, dirnames, filenames in os.walk(ROOT):
     # Skip .git, scripts, assets, templates
-    skip = {'.git', 'scripts', 'templates', 'node_modules'}
+    skip = {'.git', 'scripts', 'templates', 'node_modules', 'assets'}
     dirnames[:] = [d for d in dirnames if d not in skip]
     
     for fn in filenames:

@@ -6,6 +6,14 @@
 
 ## 核心原則
 
+### 🚨 黃金規則：先問後做（Agent 必須遵守）
+
+當 user 講「X都要這樣」或任何含糊指示，**必須先確認具體邊個部分**先郁手。
+- ❌ 錯：user 話「產品二都要這樣」→ Agent 自己估係 subtitle 定 button width
+- ✅ 對：user 話「產品二都要這樣」→ 問「你指邊個部分？button width、subtitle、定全部？」
+
+任何 UI 改動（移除元素、改位置、改 spacing）前，必須先問 user 確認，唔好擅自執行。
+
 每部 Step 都要有 **3 種內容**：
 
 | # | 內容類型 | processes.json 字段 | 免費 (Step 1-2) | 付費 (Step 3-7) |
@@ -192,6 +200,7 @@
 
 ## 品質 Check List（每個 Step 出街前對）
 
+- [ ] **🚨 Agent：改任何 UI 前有問清楚 user 指示**
 - [ ] `title` 具體明確（唔係「第一步」咁 hea）
 - [ ] `summary` 吸引、有價值（免費用戶會見到）
 - [ ] `details` 用口語廣東話、有真實經歷

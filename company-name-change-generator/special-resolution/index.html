@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
@@ -24,6 +25,15 @@
   <link rel="canonical" href="https://esgov.org/company-name-change-generator/special-resolution" />
   <meta property="og:url" content="https://esgov.org/company-name-change-generator/special-resolution" />
   <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "特別決議 PDF 填寫工具（更改公司名稱）",
+    "description": "香港公司改名特別決議 PDF 線上填寫工具。直接填公司名、新名、董事資料，一鍵生成已填好嘅 PDF。完全免費。",
+    "url": "https://esgov.org/company-name-change-generator/special-resolution"
+  }
+  </script>
 </head>
 <body class="bg-gray-100 font-sans">
 
@@ -50,12 +60,7 @@
     📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅 PDF 檔案
   </div>
 
-  <!-- Donate hint -->
-  <div class="text-center mb-4">
-    <span class="inline-flex items-center gap-1.5 text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-full px-3 py-1">
-      ☕ 全部免費 · 整理不易，<a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="font-semibold text-gold hover:underline">請咖啡支持</a>
-    </span>
-  </div>
+
 
   <!-- Reference Images -->
   <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
@@ -134,13 +139,27 @@
   </div>
 
   <!-- Download Button -->
-  <div class="text-center">
-    <button onclick="checkEmailGate()" class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-3.5 px-10 rounded-xl hover:bg-gold-light transition shadow-lg text-lg btn-gov-pulse">
+  <div class="mt-6">
+    <button onclick="checkEmailGate()" class="w-full bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm flex items-center justify-center gap-2">
       📄 下載 PDF（已填好）
     </button>
-    <p class="text-xs text-gray-400 mt-2">一鍵生成已填好資料嘅 PDF，直接下載</p>
   </div>
 
+  <!-- Back button -->
+  <div class="text-center mt-4">
+    <a href="/company-name-change?step=2"
+       class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+      ← 返回更改公司名稱完整指南
+    </a>
+  </div>
+
+  <!-- Donate button -->
+  <div class="text-center mb-4 mt-4">
+    <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
+       class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+      ☕ 請咖啡
+    </a>
+  </div>
 </div>
 
 <!-- ═════ Email Gate Modal（下載前收集 email）═════ -->
@@ -166,7 +185,7 @@
 <!-- Hidden PDF Content Template -->
 <div id="pdf-content">
   <div style="text-align:center;margin-bottom:40px;border-bottom:3px double #333;padding-bottom:20px;">
-    <h1 id="pdf-title" style="font-size:22px;margin:0 0 5px 0;">特別決議</h1>
+    <div id="pdf-title" style="font-size:22px;margin:0 0 5px 0;font-weight:bold;">特別決議</div>
     <h2 style="font-size:18px;margin:0;font-weight:normal;">SPECIAL RESOLUTION</h2>
     <p style="font-size:12px;margin:10px 0 0 0;color:#666;">（根據《公司條例》第 564 條通過）</p>
   </div>
@@ -204,24 +223,28 @@
   </div>
 </div>
 
-<!-- Footer -->
-<footer class="bg-navy text-white py-8 mt-8">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
-      <div class="flex items-center gap-2 text-white font-bold">
-        <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" /><span class="ml-1.5 font-semibold"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+  <footer class="gov-footer py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-2 text-white font-bold text-xl">
+          <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+        </div>
+        <div class="text-sm text-gray-400 flex items-center gap-3">
+          <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="hover:text-gold transition">☕ 請咖啡</a>
+          <span class="opacity-30">|</span>
+          <span>全部免費 🆓</span>
+        </div>
       </div>
-      <div class="flex items-center gap-4">
-        <button onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="text-sm text-gold hover:text-gold-light transition">☕ 請咖啡</button>
-        <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
+        <p class="mb-2">
+          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          如有具體法律問題，請諮詢執業律師或專業公司秘書。
+        </p>
+        <p>© 2025 ESGov. All rights reserved.</p>
+        <p class="mt-2 opacity-40">v10.6</p>
       </div>
     </div>
-    <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
-      <p>© 2026 ESGov · 免費香港公司文件指南</p>
-    </div>
-  </div>
-</footer>
-
+  </footer>
 <!-- Template Modal -->
 <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print" onclick="closeTemplateModal(event)">
   <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">

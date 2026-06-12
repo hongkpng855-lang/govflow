@@ -85,9 +85,15 @@ issues_found = 0
 for dirpath, dirnames, filenames in os.walk(ROOT):
     if '.git' in dirpath: continue
     if 'scripts' in dirpath: continue
+    if 'assets' in dirpath: continue
     for fn in filenames:
         if not fn.endswith('.html'): continue
         fp = os.path.join(dirpath, fn)
+        # Skip redirect stubs
+        with open(fp, 'r', encoding='utf-8') as f:
+            first_line = f.read(200)
+        if 'http-equiv="refresh"' in first_line or "http-equiv='refresh'" in first_line:
+            continue
         issues = check_file(fp)
         total += 1
         if issues:
