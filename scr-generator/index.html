@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 重要控制人登記冊 (SCR) PDF 填寫工具 — 一鍵生成已填好 PDF</title>
+  <meta name="description" content="香港公司重要控制人登記冊 (SCR) PDF 線上填寫工具。直接喺網頁填好公司資料同每位重要控制人資料，一鍵生成已填好嘅 SCR 登記冊 PDF。可添加多位控制人，選擇控制性質，完全免費。即用即生成，適合中小企東主同公司秘書使用。" />
+  <meta property="og:title" content="ESGov | 重要控制人登記冊 (SCR) PDF 填寫工具 — 一鍵生成已填好 PDF" />
+  <meta property="og:description" content="香港公司重要控制人登記冊 (SCR) PDF 線上填寫工具。直接填資料，一鍵生成已填好嘅 PDF，完全免費。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/scr-generator" />
+  <meta property="og:url" content="https://esgov.org/scr-generator" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "重要控制人登記冊 PDF 填寫工具",
+    "description": "香港公司重要控制人登記冊 (SCR) PDF 線上填寫工具。直接喺網頁填好公司資料同每位重要控制人資料，一鍵生成已填好嘅 SCR 登記冊 PDF。完全免費。",
+    "url": "https://esgov.org/scr-generator"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "重要控制人登記冊",
+      "item": "https://esgov.org/significant-controllers-register"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SCR 登記冊生成器",
+      "item": "https://esgov.org/scr-generator"
+    }
+  ]
+}
+  </script>
+  <style>
+    .field-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .field-label { width: 180px; font-size: 13px; font-weight: 600; color: #1B2A4A; text-align: right; flex-shrink: 0; }
+    .field-input { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: #fffbeb; font-family: inherit; outline: none; transition: all 0.15s; }
+    .field-input:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); background: #fef3c7; }
+    .field-select { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: white; font-family: inherit; outline: none; }
+    .field-select:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <nav class="bg-navy text-white sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/significant-controllers-register?step=4" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回指南</a>
+    </div>
+  </nav>
+
+  <div class="max-w-4xl mx-auto px-4 py-6">
+
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
+      📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅 SCR 登記冊 PDF
+    </div>
+
+    <!-- 參考圖片兩幅 -->
+    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
+      <!-- 真實案例 -->
+      <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/scr-register-realdemo.png" alt="真實案例"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 真實範例（準備中）</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">真實案例</span>
+        </div>
+      </div>
+      <!-- 可修改文件 -->
+      <div onclick="openTemplateModal('word2pdf')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/scr-register-template.png" alt="可修改文件"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 模板（準備中）</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">可修改文件</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 文件說明 + 常見錯誤 -->
+    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
+      <div class="flex items-start gap-3 mb-3">
+        <span class="text-lg mt-0.5 shrink-0">📄</span>
+        <div>
+          <p class="font-semibold text-navy text-sm">重要控制人登記冊（SCR Register）</p>
+          <p class="text-xs text-gray-500 mt-0.5">記錄公司重要控制人資料，備存於公司註冊辦事處或指明地方</p>
+        </div>
+      </div>
+      <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
+        <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
+        <ul class="text-xs text-gray-700 space-y-1.5">
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>控制性質寫得太模糊（就寫「股東」而唔係「持有超過25%股份」）</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>冇簽署同日期 — 文件有效性被質疑</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>冇記錄指定代表 — 違反公司條例</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>冇定期 update — 公司結構改變後要 7 日內更新</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Template Modal -->
+    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4" onclick="closeTemplateModal(event)">
+      <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
+        
+        <div class="flex border-b border-gray-200">
+          <button id="tabRealdemo" onclick="switchModalTab('realdemo')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition">📄 REALDEMO</button>
+          <button id="tabWord2pdf" onclick="switchModalTab('word2pdf')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 WORD2PDF</button>
+          <button onclick="closeTemplateModal()" class="px-4 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+        </div>
+
+        <div id="modalRealdemo" class="p-4">
+          <img src="/assets/demo/scr-register-realdemo.png" alt="Real Demo" class="w-full border border-gray-200 rounded-lg"
+               onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 真實範例圖片（準備中）</div>'" />
+          <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
+        </div>
+
+        <div id="modalWord2pdf" class="p-4 hidden">
+          <img src="/assets/demo/scr-register-template.png" alt="Word to PDF" class="w-full border border-gray-200 rounded-lg"
+               onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 可修改模板圖片（準備中）</div>'" />
+          <p class="text-xs text-gray-400 mt-2 text-center">空白可編輯模板格式</p>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+    function openTemplateModal(tab) {
+      document.getElementById('templateModal').classList.remove('hidden');
+      document.getElementById('templateModal').classList.add('flex');
+      if (tab && typeof switchModalTab === 'function') switchModalTab(tab);
+    }
+    function closeTemplateModal(e) {
+      if (!e || e.target === document.getElementById('templateModal')) {
+        document.getElementById('templateModal').classList.add('hidden');
+        document.getElementById('templateModal').classList.remove('flex');
+      }
+    }
+    function switchModalTab(tab) {
+      document.getElementById('modalRealdemo').classList.toggle('hidden', tab !== 'realdemo');
+      document.getElementById('modalWord2pdf').classList.toggle('hidden', tab !== 'word2pdf');
+      document.getElementById('tabRealdemo').classList.toggle('border-navy', tab === 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('border-transparent', tab !== 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('font-bold', tab === 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('font-semibold', tab !== 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('text-navy', tab === 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('text-gray-400', tab !== 'realdemo');
+      document.getElementById('tabWord2pdf').classList.toggle('border-navy', tab === 'word2pdf');
+      document.getElementById('tabWord2pdf').classList.toggle('border-transparent', tab !== 'word2pdf');
+      document.getElementById('tabWord2pdf').classList.toggle('font-bold', tab === 'word2pdf');
+      document.getElementById('tabWord2pdf').classList.toggle('font-semibold', tab !== 'word2pdf');
+      document.getElementById('tabWord2pdf').classList.toggle('text-navy', tab === 'word2pdf');
+      document.getElementById('tabWord2pdf').classList.toggle('text-gray-400', tab !== 'word2pdf');
+    }
+    </script>
+
+    <!-- PDF Form -->
+    <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px;">
+
+      <div class="bg-navy text-white py-3 px-6 text-center">
+        <div class="text-lg font-bold text-gold">SIGNIFICANT CONTROLLERS REGISTER</div>
+        <p class="text-xs text-gray-400">重要控制人登記冊</p>
+      </div>
+
+      <div class="p-6 sm:p-8">
+
+        <!-- Company Info -->
+        <div class="mb-6">
+          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">公司資料</h2>
+          <div class="field-row">
+            <span class="field-label">公司名稱</span>
+            <input type="text" id="f-company" value="ABC 貿易有限公司" class="field-input" />
+          </div>
+          <div class="field-row">
+            <span class="field-label">公司註冊編號</span>
+            <input type="text" id="f-crno" value="12345678" class="field-input" />
+          </div>
+        </div>
+
+        <!-- Register Info -->
+        <div class="mb-6">
+          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">登記冊資料</h2>
+          <div class="field-row">
+            <span class="field-label">備存日期</span>
+            <input type="date" id="f-rdate" class="field-input field-date" />
+          </div>
+          <div class="field-row">
+            <span class="field-label">存放地點</span>
+            <select id="f-loc" class="field-select">
+              <option value="公司註冊辦事處 (Registered Office)">公司註冊辦事處 (Registered Office)</option>
+              <option value="其他香港境內地點（需提交 Form NR2）">其他香港境內地點（需提交 Form NR2）</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Controllers -->
+        <div class="mb-6">
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1">重要控制人</h2>
+            <button onclick="addController()" class="text-xs bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition font-semibold">+ 新增控制人</button>
+          </div>
+          <div id="controllers-container"></div>
+        </div>
+
+        <!-- Designated Representative -->
+        <div class="mb-6">
+          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">指定代表</h2>
+          <div class="field-row">
+            <span class="field-label">姓名</span>
+            <input type="text" id="f-drname" value="董事姓名" class="field-input" />
+          </div>
+          <div class="field-row">
+            <span class="field-label">身份</span>
+            <select id="f-drtype" class="field-select">
+              <option value="董事 / Director">董事 / Director</option>
+              <option value="股東 / Shareholder">股東 / Shareholder</option>
+              <option value="員工 / Employee">員工 / Employee</option>
+              <option value="會計專業人士 / Accounting Professional">會計專業人士 / Accounting Professional</option>
+              <option value="法律專業人士 / Legal Professional">法律專業人士 / Legal Professional</option>
+            </select>
+          </div>
+          <div class="field-row">
+            <span class="field-label">聯絡電話</span>
+            <input type="text" id="f-drphone" value="" class="field-input" />
+          </div>
+        </div>
+
+        <!-- Certification -->
+        <div class="mt-8 pt-6 border-t-2 border-dashed border-gray-400">
+          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">核實聲明</h2>
+          <div class="field-row">
+            <span class="field-label">核實人姓名</span>
+            <input type="text" id="f-certname" value="董事姓名" class="field-input" />
+          </div>
+          <div class="field-row">
+            <span class="field-label">職位</span>
+            <input type="text" id="f-certpos" value="董事 / Director" class="field-input" />
+          </div>
+          <div class="field-row">
+            <span class="field-label">簽署日期</span>
+            <input type="date" id="f-certdate" class="field-input field-date" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PDF Template (hidden for capture) -->
+    <div id="pdf-content" style="position:absolute;left:-9999px;top:0;width:800px;background:white;padding:40px;font-family:'Noto Sans TC',sans-serif;font-size:13px;">
+      <div style="text-align:center;border-bottom:2px solid #1B2A4A;padding-bottom:10px;margin-bottom:20px;">
+        <div style="font-size:18px;font-weight:bold;color:#C9A84C;">SIGNIFICANT CONTROLLERS REGISTER</div>
+        <div style="font-size:12px;color:#666;">重要控制人登記冊</div>
+      </div>
+
+      <div style="margin-bottom:15px;">
+        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">公司資料</div>
+        <table style="width:100%;border-collapse:collapse;">
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司名稱</td><td style="padding:3px 5px;" id="pv-company">ABC 貿易有限公司</td></tr>
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司註冊編號</td><td style="padding:3px 5px;" id="pv-crno">12345678</td></tr>
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">備存日期</td><td style="padding:3px 5px;" id="pv-rdate"></td></tr>
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">存放地點</td><td style="padding:3px 5px;" id="pv-loc">公司註冊辦事處</td></tr>
+        </table>
+      </div>
+
+      <div style="margin-bottom:15px;">
+        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">重要控制人</div>
+        <div id="pv-controllers">
+          <p style="color:#999;font-style:italic;">未有重要控制人資料</p>
+        </div>
+      </div>
+
+      <div style="margin-bottom:15px;">
+        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">指定代表</div>
+        <table style="width:100%;border-collapse:collapse;">
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">姓名</td><td style="padding:3px 5px;" id="pv-drname">董事姓名</td></tr>
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">身份</td><td style="padding:3px 5px;" id="pv-drtype">董事</td></tr>
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">聯絡電話</td><td style="padding:3px 5px;" id="pv-drphone"></td></tr>
+        </table>
+      </div>
+
+      <div style="margin-top:20px;padding-top:10px;border-top:1px dashed #ccc;">
+        <table style="width:100%;border-collapse:collapse;">
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">核實人</td><td style="padding:3px 5px;" id="pv-certname">董事姓名</td></tr>
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">職位</td><td style="padding:3px 5px;" id="pv-certpos">董事</td></tr>
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">簽署日期</td><td style="padding:3px 5px;" id="pv-certdate"></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="mt-6">
+      <button onclick="checkEmailGate()" id="genBtn" class="w-full bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm flex items-center justify-center gap-2">
+        📄 下載 SCR 登記冊 PDF
+      </button>
+    </div>
+    <p id="status" class="text-center text-sm mt-3 hidden"></p>
+    <div class="text-center mt-4">
+      <a href="/significant-controllers-register?step=4" class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+        ← 返回重要控制人登記冊完整指南
+      </a>
+    </div>
+    <div class="text-center mt-4">
+      <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
+         class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+        ☕ 請咖啡
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Controller management
+    let ctrlCount = 0;
+
+    const controlTypes = [
+      '直接持有超過 25% 股份',
+      '間接持有超過 25% 股份',
+      '直接持有超過 25% 投票權',
+      '間接持有超過 25% 投票權',
+      '有權委任或罷免大多數董事',
+      '對公司行使重大影響或控制',
+      '法團符合以上條件',
+      '其他（請列明）'
+    ];
+
+    const entityTypes = ['自然人 Individual', '法團 Legal Entity'];
+
+    function addController(data) {
+      ctrlCount++;
+      const idx = ctrlCount;
+      const container = document.getElementById('controllers-container');
+      const div = document.createElement('div');
+      div.className = 'bg-amber-50/30 border border-gray-200 rounded-xl p-4 mb-4';
+      div.id = 'ctrl-' + idx;
+
+      const etypeOpts = entityTypes.map(t =>
+        '<option value="' + t + '"' + (data && data.etype === t ? ' selected' : '') + '>' + t + '</option>'
+      ).join('');
+      const ctypeOpts = controlTypes.map(t =>
+        '<option value="' + t + '"' + (data && data.ctype === t ? ' selected' : '') + '>' + t + '</option>'
+      ).join('');
+
+      div.innerHTML =
+        '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
+          '<span style="font-size:13px;font-weight:bold;color:#1B2A4A;">重要控制人 #' + idx + '</span>' +
+          '<button onclick="removeController(' + idx + ')" style="font-size:11px;color:#c00;background:none;border:none;cursor:' + (idx === 1 ? 'default' : 'pointer') + ';' + (idx === 1 ? 'display:none' : '') + '">✕ 移除</button>' +
+        '</div>' +
+        '<div class="field-row"><span class="field-label">控制人類型</span><select id="ctype-' + idx + '" class="field-select">' + etypeOpts + '</select></div>' +
+        '<div class="field-row"><span class="field-label">姓名 / 名稱</span><input type="text" id="ctrlname-' + idx + '" value="' + (data ? data.name : '') + '" class="field-input" /></div>' +
+        '<div class="field-row"><span class="field-label">通訊地址</span><input type="text" id="ctrladr-' + idx + '" value="' + (data ? data.adr : '') + '" class="field-input" /></div>' +
+        '<div class="field-row"><span class="field-label">身份證 / 護照</span><input type="text" id="ctrlid-' + idx + '" value="' + (data ? data.id : '') + '" class="field-input" /></div>' +
+        '<div class="field-row"><span class="field-label">出生日期</span><input type="date" id="ctrldob-' + idx + '" value="' + (data ? data.dob : '') + '" class="field-input" /></div>' +
+        '<div class="field-row"><span class="field-label">成為控制人日期</span><input type="date" id="ctrldate-' + idx + '" class="field-input field-date-ctrl" /></div>' +
+        '<div class="field-row"><span class="field-label">控制性質</span><select id="ctrltype-' + idx + '" class="field-select">' + ctypeOpts + '</select></div>';
+      container.appendChild(div);
+    }
+
+    function removeController(idx) {
+      const el = document.getElementById('ctrl-' + idx);
+      if (el && ctrlCount > 1) { el.remove(); renumberControllers(); }
+    }
+
+    function renumberControllers() {
+      const container = document.getElementById('controllers-container');
+      const rows = container.querySelectorAll('[id^="ctrl-"]');
+      rows.forEach((row, i) => {
+        const num = i + 1;
+        const title = row.querySelector('span:first-child');
+        if (title) {
+          const parts = title.textContent.split('#');
+          if (parts.length === 2) title.textContent = '重要控制人 #' + num;
+        }
+        const rmBtn = row.querySelector('button');
+        if (rmBtn) rmBtn.style.display = num === 1 ? 'none' : '';
+      });
+    }
+
+    function getControllerData() {
+      const container = document.getElementById('controllers-container');
+      const rows = container.querySelectorAll('[id^="ctrl-"]');
+      const controllers = [];
+      rows.forEach(row => {
+        const idMatch = row.id.match(/ctrl-(\d+)/);
+        if (!idMatch) return;
+        const idx = idMatch[1];
+        controllers.push({
+          num: controllers.length + 1,
+          etype: document.getElementById('ctype-' + idx)?.value || '',
+          name: document.getElementById('ctrlname-' + idx)?.value || '',
+          adr: document.getElementById('ctrladr-' + idx)?.value || '',
+          id: document.getElementById('ctrlid-' + idx)?.value || '',
+          dob: document.getElementById('ctrldob-' + idx)?.value || '',
+          date: document.getElementById('ctrldate-' + idx)?.value || '',
+          ctype: document.getElementById('ctrltype-' + idx)?.value || ''
+        });
+      });
+      return controllers;
+    }
+
+    // Set dates
+    function setDates() {
+      const d = new Date();
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      const dateStr = y + '-' + m + '-' + day;
+      document.querySelectorAll('.field-date, .field-date-ctrl').forEach(el => {
+        if (!el.value) el.value = dateStr;
+      });
+    }
+
+    // Init
+    addController({ name: '', adr: '', id: '', dob: '', date: '', etype: '自然人 Individual', ctype: '直接持有超過 25% 股份' });
+    setDates();
+
+    // Email Gate
+    function checkEmailGate() {
+      const done = localStorage.getItem('esgov_email_done');
+      if (done) { generatePDF(); return; }
+      document.getElementById('emailGateModal').classList.remove('hidden');
+      document.getElementById('emailGateModal').classList.add('flex');
+    }
+
+    function submitDownloadEmail() {
+      const email = document.getElementById('downloadEmail').value.trim();
+      if (!email || !email.includes('@')) { alert('⚠️ 請輸入有效嘅電郵地址'); return; }
+      try {
+        var iframe = document.createElement('iframe');
+        iframe.name = 'fsframe'; iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        var f = document.createElement('form');
+        f.method = 'POST'; f.action = 'https://formsubmit.co/tbstbs0613@gmail.com';
+        f.target = 'fsframe'; f.style.display = 'none';
+        var fields = { email: email, page: 'scr-generator', docType: 'SCR Register (重要控制人登記冊)', _subject: '📬 ESGov 新下載（SCR 登記冊）：' + email, _captcha: 'false', _template: 'table' };
+        for (var k in fields) { var inp = document.createElement('input'); inp.name = k; inp.value = fields[k]; f.appendChild(inp); }
+        document.body.appendChild(f); f.submit();
+        setTimeout(function(){ document.body.removeChild(f); document.body.removeChild(iframe); }, 1000);
+      } catch(e) {}
+      localStorage.setItem('esgov_email_done', 'true');
+      document.getElementById('emailGateModal').classList.add('hidden');
+      document.getElementById('emailGateModal').classList.remove('flex');
+      setTimeout(function(){ generatePDF(); }, 100);
+    }
+
+    function closeEmailGate() {
+      document.getElementById('emailGateModal').classList.add('hidden');
+      document.getElementById('emailGateModal').classList.remove('flex');
+    }
+
+    // PDF Generation
+    async function generatePDF() {
+      const btn = document.getElementById('genBtn');
+      const status = document.getElementById('status');
+      btn.disabled = true;
+      btn.innerHTML = '⏳ 生成中…';
+      status.className = 'text-center text-sm mt-3 text-blue-600';
+      status.textContent = '準備中…';
+      status.classList.remove('hidden');
+
+      try {
+        const { jsPDF } = window.jspdf;
+        await document.fonts.ready;
+
+        // Get form values
+        const company = document.getElementById('f-company').value.trim();
+        const crno = document.getElementById('f-crno').value.trim();
+        const rdate = document.getElementById('f-rdate').value || new Date().toISOString().split('T')[0];
+        const loc = document.getElementById('f-loc').value;
+        const drname = document.getElementById('f-drname').value.trim();
+        const drtype = document.getElementById('f-drtype').value;
+        const drphone = document.getElementById('f-drphone').value.trim();
+        const certname = document.getElementById('f-certname').value.trim();
+        const certpos = document.getElementById('f-certpos').value.trim();
+        const certdate = document.getElementById('f-certdate').value || rdate;
+        const controllers = getControllerData();
+
+        // Update hidden template
+        document.getElementById('pv-company').textContent = company || '—';
+        document.getElementById('pv-crno').textContent = crno || '—';
+        document.getElementById('pv-rdate').textContent = rdate;
+        document.getElementById('pv-loc').textContent = loc;
+        document.getElementById('pv-drname').textContent = drname || '—';
+        document.getElementById('pv-drtype').textContent = drtype;
+        document.getElementById('pv-drphone').textContent = drphone || '—';
+        document.getElementById('pv-certname').textContent = certname || '—';
+        document.getElementById('pv-certpos').textContent = certpos || '—';
+        document.getElementById('pv-certdate').textContent = certdate;
+
+        // Build controllers table in hidden template
+        const pvContainer = document.getElementById('pv-controllers');
+        if (controllers.length === 0) {
+          pvContainer.innerHTML = '<p style="color:#999;font-style:italic;">經查核後公司無重要控制人</p>';
+        } else {
+          let table = '<table style="width:100%;border-collapse:collapse;font-size:12px;">';
+          table += '<thead><tr style="background:#1B2A4A;color:white;">';
+          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">#</th>';
+          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">姓名/名稱</th>';
+          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">身份證/護照</th>';
+          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">控制性質</th>';
+          table += '</tr></thead><tbody>';
+          controllers.forEach((c, i) => {
+            table += '<tr style="background:' + (i % 2 === 0 ? 'white' : '#f9f9f9') + ';">';
+            table += '<td style="padding:4px 5px;border:1px solid #ddd;text-align:center;font-weight:bold;">' + c.num + '</td>';
+            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + (c.name || '—') + '</td>';
+            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + (c.id || '—') + '</td>';
+            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + c.ctype + '</td>';
+            table += '</tr>';
+          });
+          table += '</tbody></table>';
+          pvContainer.innerHTML = table;
+        }
+
+        await new Promise(r => setTimeout(r, 200));
+
+        // Capture hidden template
+        const el = document.getElementById('pdf-content');
+        const canvas = await html2canvas(el, {
+          scale: 3,
+          useCORS: true,
+          backgroundColor: '#ffffff',
+          logging: false,
+          width: 800
+        });
+
+        // Generate PDF
+        const imgData = canvas.toDataURL('image/png');
+        const doc = new jsPDF('p', 'mm', 'a4');
+        const pageW = 210;
+        const imgRatio = canvas.height / canvas.width;
+        const imgH = pageW * imgRatio;
+        const pageH = 297;
+
+        if (imgH > pageH) {
+          doc.addImage(imgData, 'PNG', 0, 0, pageW * (pageH / imgH), pageH);
+        } else {
+          doc.addImage(imgData, 'PNG', 0, (pageH - imgH) / 2, pageW, imgH);
+        }
+
+        // Watermark
+        doc.saveGraphicsState();
+        doc.setGState(new window.jspdf.GState({ opacity: 0.12 }));
+        doc.setTextColor(180, 180, 180);
+        doc.setFontSize(48);
+        doc.setFont('helvetica', 'bold');
+        doc.text('ESGov', 20, 60, { angle: -30 });
+        doc.text('ESGov', 80, 160, { angle: -30 });
+        doc.text('ESGov', 140, 260, { angle: -30 });
+        doc.restoreGraphicsState();
+
+        doc.save('SCR_Register_Filled.pdf');
+
+        btn.innerHTML = '✅ 已下載！';
+        status.className = 'text-center text-sm mt-3 text-green-600';
+        status.textContent = '✅ PDF 已儲存到你的電腦';
+        setTimeout(() => {
+          btn.innerHTML = '📄 下載 SCR 登記冊 PDF';
+          btn.disabled = false;
+          status.classList.add('hidden');
+        }, 2500);
+
+      } catch(e) {
+        console.error('PDF generation error:', e);
+        btn.innerHTML = '📄 下載 SCR 登記冊 PDF';
+        btn.disabled = false;
+        status.className = 'text-center text-sm mt-3 text-red-500';
+        status.textContent = '❌ 生成失敗: ' + e.message;
+      }
+    }
+  </script>
+
+  <!-- Email Gate Modal -->
+  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" onclick="event.stopPropagation()">
+      <div class="text-3xl mb-3">📬</div>
+      <h3 class="text-lg font-bold text-navy mb-2">下載前留低 email</h3>
+      <p class="text-sm text-gray-500 mb-5">正在為你準備 <strong>重要控制人登記冊 (SCR)</strong> 嘅 PDF<br />留低 email，我哋會話你知邊份文件準備好咗 😊</p>
+      <div class="flex flex-col gap-3">
+        <input type="email" id="downloadEmail" placeholder="your@email.com" class="border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        <button onclick="submitDownloadEmail()" class="bg-navy text-white font-semibold py-2.5 rounded-xl hover:bg-navy-light transition text-sm">📥 繼續下載 PDF</button>
+        <button onclick="closeEmailGate()" class="text-xs text-gray-400 hover:text-gray-600 transition">唔住，稍後先</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="gov-footer py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-2 text-white font-bold text-xl">
+          <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+        </div>
+        <div class="text-sm text-gray-400 flex items-center gap-3">
+          <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="hover:text-gold transition">☕ 請咖啡</a>
+          <span class="opacity-30">|</span>
+          <span>全部免費 🆓</span>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
+        <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
+        <p>© 2026 ESGov. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

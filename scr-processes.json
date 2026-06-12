@@ -1,0 +1,184 @@
+{
+  "processId": "significant-controllers-register",
+  "title": "香港有限公司重要控制人登記冊 (SCR) 完整指南",
+  "totalSteps": 5,
+  "freeSteps": 5,
+  "price": 0,
+  "currency": "HKD",
+  "donateMessage": "如果呢份指南幫到你，可以請我飲杯咖啡 ☕",
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "分析公司股權結構",
+      "summary": "了解公司股東、持股比例、投票權安排，為識別重要控制人做準備",
+      "isFree": true,
+      "details": "第一步係搞清楚公司嘅股權結構。睇公司股東名冊（Register of Members），列出所有股東同佢哋嘅持股比例。如果股權結構複雜有代持股、Nominee 持股、信託或公司持股，要拆開逐層睇。\n\n⚠️ 唔好做嘅事：\n• 唔好淨係睇股東名冊 → 要睇埋投票權安排（有啲股東持股少但投票權多）\n• 唔好忽略關連人士 → 配偶、子女嘅持股要合併計算（公司條例要求）\n• 唔好用過期資料 → 公司結構有變要先更新\n• 唔好漏咗 Nominee 持股 → 代名人持有嘅股份視為受益人持有\n• 唔好漏咗信託持股 → 信託受託人要當作控制人處理\n\n✅ 一定要做：\n• 準備最新嘅股東名冊\n• 列出每位股東嘅持股比例\n• 記錄特別投票權安排（如有）\n• 標註關連人士關係\n• 如有 Nominee 持股，記錄實益擁有人\n• 如有信託，記錄受託人同受益人資料",
+      "documents": [
+        {
+          "name": "股權結構分析表",
+          "description": "幫你整理公司股東、持股比例同投票權結構，方便下一步識別重要控制人",
+          "demoImage": "/assets/demo/scr-step1.png",
+          "templateFile": "/templates/scr-shareholder-analysis.docx",
+          "hasGenerator": true,
+          "commonMistakes": [
+            "冇更新股東名冊就開始分析",
+            "忽略關連人士合計持股",
+            "冇處理 Nominee 持股",
+            "冇處理信託結構"
+          ],
+          "generatorUrl": "/scr-shareholder-analysis-generator"
+        }
+      ],
+      "rejectionRisks": [
+        "股權結構唔清晰 = 容易漏咗真正嘅重要控制人"
+      ],
+      "mode": "B",
+      "needsGenerator": true,
+      "needsGuideContent": true,
+      "crossStepDeps": "None - first step",
+      "generatorType": "Word Template Generator",
+      "generatorUrl": "/scr-shareholder-analysis-generator",
+      "generatorDescription": "Word template generator — 填股東資料 → 下載已填好嘅股權結構分析表 Word 檔案"
+    },
+    {
+      "stepNumber": 2,
+      "title": "識別重要控制人（5項測試）",
+      "summary": "用公司條例嘅 5 項法定標準，逐項測試每個人或法團是否符合重要控制人條件",
+      "isFree": true,
+      "details": "用公司條例嘅 5 項測試標準逐個對照（Source: CR FAQ Q4, CR Guideline Ch.10）：\n\n📋 測試 1：持股 25% 以上\n直接或間接持有公司多過 25% 嘅股份。計算時要包括關連人士嘅持股。Nominee 持有嘅股份視為受益人持有。如公司冇股本，則有權分佔超過 25% 資本或利潤。\n\n📋 測試 2：投票權 25% 以上\n直接或間接控制多過 25% 嘅投票權。有啲股東持股少但投票權多，要分開計。\n\n📋 測試 3：董事任命權\n有權委任或罷免大多數董事。就算持股少，有董事任命權都符合條件。\n\n📋 測試 4：重大影響或控制\n有權對公司行使，或實際上行使緊重大影響或控制。包括影子董事。唔包括專業顧問或標準協議下嘅貸款人（除非角色有實質差異）。\n\n📋 測試 5：對信託或商號嘅影響\n對信託或商號有重大影響或控制，而該信託或商號嘅受託人或成員符合測試 1-4。\n\n⚠️ 唔好做嘅事：\n• 唔好只睇表面持股 → 間接持股（透過其他公司持有）都要計\n• 唔好忽略 multiple controllers → 可以有多個重要控制人\n• 冇人符合條件唔可以唔理 → 要有正式記錄「經查核後公司無重要控制人」\n• 唔好忽略影子董事 → 實際控制公司營運嘅人都要計\n\n✅ 一定要做：\n• 逐項測試每位股東或有影響力人士\n• 記錄每個人符合邊項條件\n• 如有間接持股或法團股東，穿透到最終自然人\n• 冇人符合條件 → 記錄「經查核後公司無重要控制人」並簽署確認",
+      "documents": [
+        {
+          "name": "重要控制人識別檢查表",
+          "description": "逐項測試嘅 checklist，記錄每位人士及法團嘅測試結果同符合條件",
+          "demoImage": "/assets/demo/scr-step2.png",
+          "templateFile": "/templates/scr-identification-checklist.docx",
+          "hasGenerator": true,
+          "commonMistakes": [
+            "只睇表面持股唔計間接持股",
+            "冇處理關連人士合計持股",
+            "以為冇人就唔使記錄"
+          ],
+          "generatorUrl": "/scr-identification-checklist-generator"
+        }
+      ],
+      "rejectionRisks": [
+        "漏咗真正嘅重要控制人 = 違反公司條例，可被罰款高達 HK$25,000 + 每日罰款"
+      ],
+      "mode": "B",
+      "needsGenerator": true,
+      "needsGuideContent": true,
+      "crossStepDeps": "Step 1 (equity structure analysis needed for identification)",
+      "generatorType": "Word Template Generator",
+      "generatorUrl": "/scr-identification-checklist-generator",
+      "generatorDescription": "Word template generator — 填測試結果 → 下載已填好嘅重要控制人識別檢查表 Word 檔案"
+    },
+    {
+      "stepNumber": 3,
+      "title": "收集控制人法定資料",
+      "summary": "收集每位重要控制人嘅身份證明文件同聯絡資料，公司有責任發出書面通知",
+      "isFree": true,
+      "details": "確定咗邊啲係重要控制人之後，就要收集佢哋嘅法定資料。公司有責任向股東同其他相關人士發出書面通知，佢哋有法定義務喺 1 個月內回覆。\n\n📝 收集嘅資料（自然人控制人）：\n• 全名（中文+英文，同身份證一致）\n• 通訊地址（可用服務地址，唔可以用郵政信箱）\n• 身份證號碼 / 護照號碼 + 簽發國\n• 出生日期\n• 成為重要控制人嘅日期\n• 控制性質（符合邊項測試條件）\n\n🏢 收集嘅資料（法團控制人）：\n• 公司名稱\n• 法律形式\n• 公司註冊編號\n• 成立地（適用法例）\n• 註冊辦事處地址\n• 成為重要控制人嘅日期\n• 控制性質\n\n👤 指定代表（Designated Representative）：\n每間公司必須指定至少一位代表，可以係：\n(a) 股東/董事/員工（自然人，居港）；或\n(b) 會計專業人士 / 法律專業人士 / TCSP 持牌人\n\n⚠️ 唔好做嘅事：\n• 唔好接受口頭提供資料 → 要有書面記錄同簽署\n• 唔好漏咗控制性質 → 淨係寫名唔夠，要寫明符合邊項測試\n• 地址唔好用郵政信箱 → 公司條例規定唔可以用郵政信箱做 SCR 地址\n• 唔好拖延 → 知道有新控制人後要盡快發出通知\n• 有人唔回覆通知 → 要喺登記冊註明「未能確認」，唔可以就咁唔理\n\n✅ 一定要做：\n• 用標準格式發出書面通知\n• 記錄通知日期同回覆\n• 控制人確認後先記錄入 SCR\n• 保留通知記錄同控制人確認書\n• 指定至少一位代表",
+      "documents": [
+        {
+          "name": "重要控制人資料收集表",
+          "description": "標準嘅資料收集表格，控制人簽署確認後歸檔",
+          "demoImage": "/assets/demo/scr-step3.png",
+          "templateFile": "/templates/scr-data-collection.docx",
+          "hasGenerator": true,
+          "commonMistakes": [
+            "資料唔齊全就入 SCR",
+            "地址用郵政信箱",
+            "冇簽署確認",
+            "冇指定代表"
+          ],
+          "generatorUrl": "/scr-data-collection-generator"
+        }
+      ],
+      "rejectionRisks": [
+        "資料唔齊全 = 執法人員查冊時發現資料唔完整，要求解釋"
+      ],
+      "mode": "B",
+      "needsGenerator": true,
+      "needsGuideContent": true,
+      "crossStepDeps": "Step 2 (need to identify controllers before collecting data)",
+      "generatorType": "Word Template Generator",
+      "generatorUrl": "/scr-data-collection-generator",
+      "generatorDescription": "Word template generator — 填控制人資料 → 下載已填好嘅資料收集表 Word 檔案"
+    },
+    {
+      "stepNumber": 4,
+      "title": "填寫重要控制人登記冊",
+      "summary": "將收集到嘅資料正式記錄入 SCR，可用互動工具一鍵生成已填好嘅 PDF",
+      "isFree": true,
+      "details": "將 Step 3 收集到嘅資料填寫落正式嘅重要控制人登記冊。SCR 冇法定格式，但必須包含指定嘅資料欄位。可以用我哋嘅 generator 直接生成已填好嘅 PDF。\n\nSCR 必須包含嘅資料欄位（Source: CR FAQ）：\n1. 重要控制人姓名或名稱\n2. 通訊地址\n3. 身份證明文件類型同號碼\n4. 成為重要控制人嘅日期\n5. 控制性質（符合邊項測試條件，如「直接持有超過 25% 股份」）\n6. 登記冊備存嘅日期\n7. 存放地點（註冊辦事處或指明地方）\n8. 指定代表資料（姓名、聯絡方式）\n9. 任何註記（如有人未回覆通知、資料變更記錄）\n\n⚠️ 唔好做嘅事：\n• 唔好用手寫 → 容易擦花或改動，建議打印或用 generator\n• 唔好亂咁改 → 任何更改要有日期同簽署記錄\n• 冇人符合條件唔可以留空 → 要寫明「經查核後公司無重要控制人」\n• 唔好漏咗指定代表資料\n\n✅ 一定要做：\n• 用清晰可讀嘅格式填寫\n• 每位控制人獨立一行或一頁\n• 控制性質要對應 Step 2 嘅測試結果\n• 填寫人簽署 + 日期\n• 保留一份副本作記錄\n• 如有指定代表，記錄佢嘅同意",
+      "documents": [
+        {
+          "name": "重要控制人登記冊",
+          "description": "正式嘅 SCR 登記冊，可透過互動工具一鍵生成已填好嘅 PDF",
+          "demoImage": "/assets/demo/scr-step4.png",
+          "templateFile": "/templates/scr-register.docx",
+          "hasGenerator": true,
+          "generatorUrl": "/scr-generator",
+          "commonMistakes": [
+            "控制性質寫得太模糊（就寫「股東」而唔係「持有超過25%股份」）",
+            "冇簽署同日期",
+            "冇定期 update",
+            "冇記錄指定代表"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "資料唔齊全 = 執法人員查冊時資料唔符合要求"
+      ],
+      "mode": "A",
+      "needsGenerator": true,
+      "needsGuideContent": true,
+      "crossStepDeps": "Steps 2-3 (data from collection feeds into register)",
+      "generatorType": "Interactive PDF Generator",
+      "generatorUrl": "/scr-generator",
+      "generatorDescription": "互動 PDF 工具 — 填好公司資料同控制人資料 → 一鍵生成已填好嘅 SCR 登記冊 PDF"
+    },
+    {
+      "stepNumber": 5,
+      "title": "備存同維護 SCR",
+      "summary": "將 SCR 存放喺適當地方，確保隨時可查閱，定期更新，保留記錄 6 年",
+      "isFree": true,
+      "details": "最後一步係將填好嘅 SCR 放喺公司可以隨時查閱嘅地方，並確保資料係最新。\n\n📍 存放位置（二選一）：\n• 選項 A：公司註冊辦事處地址（最簡單，唔使額外通知）\n• 選項 B：香港境內另一個指明地方 → 必須 15 日內提交 Form NR2 通知公司註冊處\n\n⏰ 維護時間表：\n• 確認控制人資料變更 → 7 日內更新 SCR\n• 知悉新控制人出現 → 7 日內加入登記冊\n• 控制人不再符合條件 → 7 日內移除（保留歷史記錄）\n• 控制人終止後 → 保留記錄至少 6 年\n• 執法人員要求查閱（9 個機關有權）→ 立即提供\n• 每年至少 review 一次\n• 如更改存放位置 → 15 日內提交 Form NR2\n\n👤 指定代表維護：\n• 確保隨時至少有一位指定代表\n• 代表離職或離港 → 盡快更換\n\n⚠️ 唔好做嘅事：\n• 唔好放喺公司註冊處以外地方但冇交 NR2 → 違規\n• 唔好忽略更新 → 公司股權變動後要 7 日內改\n• 唔好夠 6 年就即刻銷毀 → 到期後先可以銷毀，並記錄銷毀日期\n• 唔好以為一年 check 一次就夠 → 公司有重大變動要即時 update\n• 唔好冇指定代表 → 違反公司條例\n\n✅ 一定要做：\n• 決定存放位置（註冊辦事處或指明地方 + NR2）\n• 7 日內更新任何變更\n• 每年年度 review\n• 保留歷史記錄至少 6 年\n• 指定至少一位代表",
+      "documents": [
+        {
+          "name": "指明地點通知書（Form NR2）",
+          "description": "如果 SCR 存放喺公司註冊辦事處以外嘅地址，需要 15 日內提交此通知",
+          "demoImage": "/assets/demo/scr-step5.png",
+          "templateFile": "/templates/scr-location-notice.docx",
+          "hasGenerator": true,
+          "commonMistakes": [
+            "唔記得通知 CR 個地址",
+            "以為 SCR 係一次性文件",
+            "冇保留歷史記錄至少 6 年",
+            "冇指定代表"
+          ],
+          "generatorUrl": "/scr-nr2-generator"
+        }
+      ],
+      "rejectionRisks": [
+        "存放位置唔啱 + 冇通知 = 違反公司條例",
+        "冇指定代表 = 違反公司條例"
+      ],
+      "mode": "B",
+      "needsGenerator": true,
+      "needsGuideContent": true,
+      "crossStepDeps": "Step 4 (need completed register before filing NR2)",
+      "generatorType": "Word Template Generator",
+      "generatorUrl": "/scr-nr2-generator",
+      "generatorDescription": "Word template generator — 填存放地址資料 → 下載已填好嘅 Form NR2 指明地點通知書 Word 檔案"
+    }
+  ],
+  "finalDonate": {
+    "title": "幫到你嗎？請我飲杯咖啡 ☕",
+    "message": "呢份指南係我親身經歷整理，全部免費公開。如果幫到你節省時間同金錢，可以請我飲杯咖啡支持下，等我繼續製作更多免費指南！",
+    "goalMessage": "目標：100 次支持下載後，我會擴展到更多公司合規流程指南 🎯",
+    "buyMeACoffeeUrl": "https://buymeacoffee.com/esgov",
+    "emailCollectionTitle": "想我哋提供咩指南？",
+    "emailCollectionMessage": "可以通知我哋，話俾我哋知你想睇咩文件 😊"
+  }
+}

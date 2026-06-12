@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 重要控制人資料收集表 Word 生成工具</title>
+  <meta name="description" content="Hong Kong SCR data collection form Word generator — 直接喺網頁填好控制人資料、指定代表資料，一鍵下載已填好嘅 Word 檔案。完全免費。" />
+  <meta property="og:title" content="ESGov | 重要控制人資料收集表 Word 生成工具" />
+  <meta property="og:description" content="填控制人資料，一鍵下載已填好 Word 檔案。完全免費。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/scr-data-collection-generator" />
+  <meta property="og:url" content="https://esgov.org/scr-data-collection-generator" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "重要控制人資料收集表 Word 生成工具",
+    "description": "香港公司 SCR 重要控制人資料收集表 Word 生成工具，填資料即出已填好 Word。完全免費。",
+    "url": "https://esgov.org/scr-data-collection-generator"
+  }
+  </script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <nav class="bg-navy text-white sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/significant-controllers-register?step=3" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← Step 3</a>
+    </div>
+  </nav>
+
+  <div class="max-w-4xl mx-auto px-4 py-6">
+
+    <!-- Trust Banner -->
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
+      📝 填好控制人資料 → 㩒「下載 Word」→ 直接下載已填好嘅資料收集表
+    </div>
+
+    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">重要控制人資料收集表 — Word 生成工具</h1>
+
+    <!-- Example Image Cards -->
+    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
+      <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/scr-step3.png" alt="重要控制人資料收集表 真實範例"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">真實範例</span>
+        </div>
+      </div>
+      <div onclick="openTemplateModal('template')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/scr-step3-template.png" alt="重要控制人資料收集表 模板"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">可修改文件</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm mb-4">
+      <h2 class="font-semibold text-navy text-base mb-4">📋 公司基本資料</h2>
+
+      <div class="space-y-3">
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">公司名稱（中文）</label>
+          <input id="f1" type="text" value="ABC 貿易有限公司" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">公司名稱（英文）</label>
+          <input id="f2" type="text" value="ABC TRADING LIMITED" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">公司註冊編號</label>
+          <input id="f3" type="text" value="12345678" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">收集日期</label>
+          <input id="f4" type="date" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+
+        <h3 class="font-semibold text-navy text-sm mt-4 pt-3 border-t border-gray-100">控制人 1（自然人）</h3>
+
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">姓名</label>
+          <input id="f5" type="text" value="陳大明" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">通訊地址</label>
+          <input id="f6" type="text" value="香港灣仔告士打道100號20樓" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">身份證號碼</label>
+          <input id="f7" type="text" value="A123456(7)" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">出生日期</label>
+          <input id="f8" type="date" value="1975-03-15" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">成為控制人日期</label>
+          <input id="f9" type="date" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">控制性質</label>
+          <input id="f10" type="text" value="直接持有超過 25% 股份" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">聯絡電話</label>
+          <input id="f11" type="text" value="9123 4567" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">電郵</label>
+          <input id="f12" type="text" value="david@abctrading.com" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+
+        <h3 class="font-semibold text-navy text-sm mt-4 pt-3 border-t border-gray-100">指定代表資料</h3>
+
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">姓名</label>
+          <input id="f13" type="text" value="張秘書" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">身份</label>
+          <select id="f14" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">
+            <option value="董事">董事</option>
+            <option value="股東">股東</option>
+            <option value="員工" selected>員工</option>
+            <option value="會計專業人士">會計專業人士</option>
+            <option value="法律專業人士">法律專業人士</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">聯絡電話</label>
+          <input id="f15" type="text" value="9876 5432" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Document Info + Common Mistakes -->
+    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
+      <div class="flex items-start gap-3 mb-3">
+        <span class="text-lg mt-0.5 shrink-0">📄</span>
+        <div>
+          <p class="font-semibold text-navy text-sm">重要控制人資料收集表</p>
+          <p class="text-xs text-gray-500 mt-0.5">標準嘅資料收集表格，控制人簽署確認後歸檔</p>
+        </div>
+      </div>
+      <h2 class="font-semibold text-navy text-base mb-2 mt-4">⚠️ 常見錯誤</h2>
+      <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
+        <ul class="text-xs text-gray-700 space-y-1.5">
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>資料唔齊全就入 SCR</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>地址用郵政信箱</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>冇簽署確認</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>冇指定代表</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Download + Back + Donate -->
+    <div class="space-y-3">
+      <button onclick="downloadWord()" id="downloadBtn"
+              class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm">
+        📄 下載 Word（已填好）
+      </button>
+      <a href="/significant-controllers-register?step=3"
+         class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+        ← 返回重要控制人登記冊完整指南
+      </a>
+    </div>
+    <div class="text-center mt-4">
+      <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
+         class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+        ☕ 請咖啡
+      </a>
+    </div>
+
+  </div>
+
+  <!-- ═════ Template Modal ═════ -->
+  <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print" onclick="closeTemplateModal(event)">
+    <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+        <h3 class="font-bold text-navy text-base" id="modalTitle">重要控制人資料收集表</h3>
+        <button onclick="closeTemplateModal()" class="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+      </div>
+      <div id="modalTabs" class="flex border-b border-gray-100">
+        <button onclick="switchModalTab('realdemo')" id="tab-realdemo" class="flex-1 py-3 text-sm font-semibold text-navy border-b-2 border-gold">📄 真實範例</button>
+        <button onclick="switchModalTab('template')" id="tab-template" class="flex-1 py-3 text-sm font-semibold text-gray-400 border-b-2 border-transparent">📄 模板</button>
+      </div>
+      <div class="p-4">
+        <div id="modalContent-realdemo">
+          <img src="/assets/demo/scr-step3.png" alt="真實範例" class="w-full border border-gray-200 rounded-lg" onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 範例圖片準備中</div>'" />
+          <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
+        </div>
+        <div id="modalContent-template" class="hidden">
+          <img src="/assets/demo/scr-step3-template.png" alt="模板" class="w-full border border-gray-200 rounded-lg" onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 範例圖片準備中</div>'" />
+          <p class="text-xs text-gray-400 mt-2 text-center">可修改文件模板</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openTemplateModal(tab) {
+      document.getElementById('templateModal').classList.remove('hidden');
+      document.getElementById('templateModal').classList.add('flex');
+      switchModalTab(tab);
+    }
+    function closeTemplateModal(e) {
+      if (!e || e.target === document.getElementById('templateModal')) {
+        document.getElementById('templateModal').classList.add('hidden');
+        document.getElementById('templateModal').classList.remove('flex');
+      }
+    }
+    function switchModalTab(tab) {
+      document.getElementById('tab-realdemo').className = 'flex-1 py-3 text-sm font-semibold ' + (tab==='realdemo' ? 'text-navy border-b-2 border-gold' : 'text-gray-400 border-b-2 border-transparent');
+      document.getElementById('tab-template').className = 'flex-1 py-3 text-sm font-semibold ' + (tab==='template' ? 'text-navy border-b-2 border-gold' : 'text-gray-400 border-b-2 border-transparent');
+      document.getElementById('modalContent-realdemo').classList.toggle('hidden', tab !== 'realdemo');
+      document.getElementById('modalContent-template').classList.toggle('hidden', tab !== 'template');
+    }
+  </script>
+
+  <script>
+    function g(id) { return document.getElementById(id).value || ''; }
+    function downloadWord() {
+      const btn = document.getElementById('downloadBtn');
+      btn.disabled = true;
+      btn.innerHTML = '⏳ 生成中…';
+
+      const companyCN = g('f1') || '_____';
+      const companyEN = g('f2') || '_____';
+      const crNo = g('f3') || '_____';
+      const collectDate = g('f4') || new Date().toISOString().split('T')[0];
+      const cName = g('f5') || '_____';
+      const cAddress = g('f6') || '_____';
+      const cIdNo = g('f7') || '_____';
+      const cDob = g('f8') || '_____';
+      const cControlDate = g('f9') || '_____';
+      const cNature = g('f10') || '_____';
+      const cPhone = g('f11') || '_____';
+      const cEmail = g('f12') || '_____';
+      const rName = g('f13') || '_____';
+      const rRole = g('f14') || '_____';
+      const rPhone = g('f15') || '_____';
+
+      const html = `<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>重要控制人資料收集表 - ${companyCN}</title>
+<style>
+  body { font-family: 'Noto Sans TC', 'Arial', sans-serif; padding: 40px; max-width: 750px; margin: auto; color: #1B2A4A; }
+  h1 { font-size: 22px; text-align: center; border-bottom: 3px solid #1B2A4A; padding-bottom: 10px; margin-bottom: 25px; }
+  h2 { font-size: 16px; border-bottom: 1px solid #C9A84C; padding-bottom: 5px; margin-top: 25px; }
+  h3 { font-size: 14px; margin-top: 20px; color: #1B2A4A; }
+  label { font-weight: 600; color: #1B2A4A; font-size: 13px; display: block; margin-top: 10px; }
+  .val { padding: 5px 10px; background: #fffbeb; border: 1px solid #ddd; border-radius: 4px; margin-top: 2px; font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+  th, td { border: 1px solid #1B2A4A; padding: 8px; text-align: left; font-size: 13px; }
+  th { background: #1B2A4A; color: white; }
+  .sig-line { margin-top: 30px; border-top: 1px solid #333; width: 280px; text-align: center; padding-top: 4px; font-size: 12px; color: #555; }
+  .footer { margin-top: 30px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 11px; color: #888; text-align: center; }
+  .section-label { font-weight: 700; color: #C9A84C; font-size: 13px; margin-top: 20px; }
+</style></head>
+<body>
+<h1>重要控制人資料收集表</h1>
+<p style="text-align:right;font-size:12px;color:#666;">收集日期：${collectDate}</p>
+
+<h2>公司基本資料</h2>
+<table>
+  <tr><th style="width:180px;">項目</th><th>內容</th></tr>
+  <tr><td>公司名稱（中文）</td><td>${companyCN}</td></tr>
+  <tr><td>公司名稱（英文）</td><td>${companyEN}</td></tr>
+  <tr><td>公司註冊編號</td><td>${crNo}</td></tr>
+</table>
+
+<h2>控制人資料（自然人）</h2>
+<table>
+  <tr><th style="width:180px;">項目</th><th>內容</th></tr>
+  <tr><td>姓名</td><td>${cName}</td></tr>
+  <tr><td>通訊地址</td><td>${cAddress}</td></tr>
+  <tr><td>身份證號碼</td><td>${cIdNo}</td></tr>
+  <tr><td>出生日期</td><td>${cDob}</td></tr>
+  <tr><td>成為控制人日期</td><td>${cControlDate}</td></tr>
+  <tr><td>控制性質</td><td>${cNature}</td></tr>
+  <tr><td>聯絡電話</td><td>${cPhone}</td></tr>
+  <tr><td>電郵</td><td>${cEmail}</td></tr>
+</table>
+
+<h2>指定代表資料</h2>
+<table>
+  <tr><th style="width:180px;">項目</th><th>內容</th></tr>
+  <tr><td>姓名</td><td>${rName}</td></tr>
+  <tr><td>身份</td><td>${rRole}</td></tr>
+  <tr><td>聯絡電話</td><td>${rPhone}</td></tr>
+</table>
+
+<h2>簽署確認</h2>
+<p style="font-size:13px;color:#555;">本人確認上述資料屬實，並同意將此等資料用於公司重要控制人登記冊（SCR）之備存及更新。</p>
+
+<div style="display:flex; justify-content:space-between; margin-top:35px;">
+  <div>
+    <p class="section-label">控制人簽署</p>
+    <div class="sig-line">簽署</div>
+    <p style="font-size:12px;color:#555;margin-top:4px;">日期：_____________</p>
+  </div>
+  <div>
+    <p class="section-label">指定代表簽署</p>
+    <div class="sig-line">簽署</div>
+    <p style="font-size:12px;color:#555;margin-top:4px;">日期：_____________</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>本文件由 ESGov (https://esgov.org) 自動生成 • 僅供內部參考</p>
+  <p>⚠️ 建議覆核資料準確性後再用作正式文件</p>
+</div>
+</body></html>`;
+
+      const blob = new Blob([html], { type: 'application/msword' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `重要控制人資料收集表_${companyCN}.doc`;
+      a.click();
+      URL.revokeObjectURL(url);
+
+      btn.disabled = false;
+      btn.innerHTML = '✅ 已下載！';
+      setTimeout(() => { btn.innerHTML = '📄 下載 Word（已填好）'; }, 2000);
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="gov-footer py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-2 text-white font-bold text-xl">
+          <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+        </div>
+        <div class="text-sm text-gray-400 flex items-center gap-3">
+          <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="hover:text-gold transition">☕ 請咖啡</a>
+          <span class="opacity-30">|</span>
+          <span>全部免費 🆓</span>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
+        <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
+        <p>© 2026 ESGov. All rights reserved.</p>
+        <p class="mt-2 opacity-40">v10.7</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

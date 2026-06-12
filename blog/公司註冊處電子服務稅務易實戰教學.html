@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 公司註冊處 e-Services Portal 及稅務易 eTAX 實戰教學 2026</title>
+  <meta name="description" content="公司註冊處網上服務、稅務易 eTAX 逐個步驟圖文教學：查冊、提交文件、付款、查詢狀態，由申請帳戶到完成遞交完整流程，附 7 個常見操作錯誤。" />
+  <meta property="og:title" content="公司註冊處 e-Services Portal 及稅務易 eTAX 實戰教學 2026 — 網上查冊、遞交文件、付款完全圖解" />
+  <meta property="og:description" content="唔使排隊！公司註冊處 e-Services Portal 加稅務易 eTAX，由開戶到遞交文件完整教學，附 7 個實測操作錯誤。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .blog-content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1B2A4A;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f3f4f6;
+    }
+    .blog-content h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1B2A4A;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-content p {
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      color: #374151;
+    }
+    .blog-content ul, .blog-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #374151;
+    }
+    .blog-content li {
+      line-height: 1.8;
+      margin-bottom: 0.25rem;
+    }
+    .blog-content .flag-item {
+      background: #fef3c7;
+      border-left: 4px solid #C9A84C;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+    .blog-content .flag-item p {
+      margin-bottom: 0;
+    }
+    .blog-content strong {
+      color: #1B2A4A;
+    }
+    .blog-content .tip-box {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+    .blog-content .tip-box p {
+      margin-bottom: 0;
+    }
+    .blog-content .warn-box {
+      background: #fef2f2;
+      border-left: 4px solid #ef4444;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+    .blog-content .warn-box p {
+      margin-bottom: 0;
+    }
+    .blog-content a {
+      color: #C9A84C;
+      text-decoration: underline;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/公司註冊處電子服務稅務易實戰教學" />
+  <meta property="og:url" content="https://esgov.org/blog/公司註冊處電子服務稅務易實戰教學" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "公司註冊處 e-Services Portal 及稅務易 eTAX 實戰教學 2026",
+    "description": "公司註冊處網上服務、稅務易 eTAX 逐個步驟圖文教學：查冊、提交文件、付款、查詢狀態，由申請帳戶到完成遞交完整流程。",
+    "url": "https://esgov.org/blog/公司註冊處電子服務稅務易實戰教學",
+    "author": { "@type": "Person", "name": "ESGov" },
+    "publisher": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-06-13",
+    "dateModified": "2026-06-13"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://esgov.org" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://esgov.org/blog" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ═══════════════ Navigation ═══════════════ -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 網誌總覽</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ Article Header ═══════════════ -->
+  <section class="bg-navy text-white py-12 sm:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-sm text-gold mb-4 flex items-center gap-3">
+        <a href="/" class="hover:underline">首頁</a>
+        <span>›</span>
+        <a href="/blog/" class="hover:underline">網誌</a>
+        <span>›</span>
+        <span class="text-white/60">CR e-Services &amp; eTAX</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold leading-tight mb-4">
+        🖥️ 公司註冊處 e-Services Portal 及稅務易 eTAX 實戰教學 2026<br />網上查冊、遞交文件、付款完全圖解
+      </h1>
+      <div class="flex flex-wrap items-center gap-4 text-sm text-white/60">
+        <span>📅 2026 年 6 月 13 日</span>
+        <span>🏷️ 電子服務 · eTAX · CR · 公司註冊處</span>
+        <span>⏱️ 8 分鐘閱讀</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ Article Content ═══════════════ -->
+  <article class="py-12 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 blog-content">
+
+      <!-- Lead -->
+      <div class="bg-amber-50 border-l-4 border-gold rounded-r-xl p-5 mb-8">
+        <p class="text-base font-semibold text-navy !mb-0">
+          <strong>一句講晒：</strong>政府電子服務其實好方便，只要識得開 account、用 e-Services Portal 同 eTAX，以後遞交文件唔使排隊，1 個鐘內搞掂。
+        </p>
+      </div>
+
+      <p>
+        講真，以前我最怕就係去公司註冊處交文件。金鐘政府合署排半個鐘隊，去到 counter 先發現漏咗份附件或者填錯 format，又要重新排過。嚟緊有 approval 嘅時候更加麻煩，要專登請假去攞。
+      </p>
+      <p>
+        直至我的起心肝搞掂晒 e-Services Portal 同稅務易 eTAX 嘅 account，先發現原來大部分文件都可以網上提交，快嘅話 1 個鐘內出證書，仲唔使自己行一轉。但係 setup 過程都有啲位容易 fail，今次用呢篇文同你逐個 step 拆解。
+      </p>
+
+      <!-- Table of Contents -->
+      <div class="bg-gray-50 rounded-xl p-6 mb-8">
+        <h2 class="!border-b-0 !mt-0 !mb-3 text-base">📖 本文內容</h2>
+        <ul class="space-y-1 !mb-0">
+          <li><a href="#intro">1. 兩個系統有咩分別？幾時用邊個？</a></li>
+          <li><a href="#account">2. 開 Account 完整步驟（CR + IRD）</a></li>
+          <li><a href="#cr-portal">3. CR e-Services Portal 實戰</a></li>
+          <li><a href="#etax">4. 稅務易 eTAX 實戰</a></li>
+          <li><a href="#payment">5. 網上付款方式比較</a></li>
+          <li><a href="#mistakes">6. 7 個常見操作錯誤</a></li>
+          <li><a href="#links">7. 常用服務連結</a></li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <h2 id="intro">1️⃣ 兩個系統有咩分別？幾時用邊個？</h2>
+
+      <p>好多人撈亂公司註冊處同稅局嘅網上系統，其實好簡單：</p>
+
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-navy text-white">
+              <th class="p-3 text-left"></th>
+              <th class="p-3 text-left">CR e-Services</th>
+              <th class="p-3 text-left">IRD eTAX</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="bg-white">
+              <td class="p-3 font-semibold">負責部門</td>
+              <td class="p-3">公司註冊處</td>
+              <td class="p-3">稅務局</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="p-3 font-semibold">主要用途</td>
+              <td class="p-3">查冊公司名、遞交 NNC2/NAR1/NSC1 等文件、下載證書</td>
+              <td class="p-3">報稅（利得稅、薪俸稅）、查詢報稅狀態、提交 IR 表格</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3 font-semibold">Account 類型</td>
+              <td class="p-3">個人帳戶（要填表 + ID copy）</td>
+              <td class="p-3">個人帳戶（用 eTAX 密碼／智方便）</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="p-3 font-semibold">需時</td>
+              <td class="p-3">1-2 工作天開通</td>
+              <td class="p-3">即時（智方便）或 2 工作天（密碼）</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3 font-semibold">費用</td>
+              <td class="p-3">視乎服務，查冊免費</td>
+              <td class="p-3">免費</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>簡單記法：<strong>同公司結構有關嘅 → 用 CR e-Services；同報稅有關嘅 → 用 eTAX</strong>。</p>
+
+      <!-- Section 2 -->
+      <h2 id="account">2️⃣ 開 Account 完整步驟（兩個系統）</h2>
+
+      <h3>🔹 CR e-Services Portal 開戶</h3>
+      <p>去公司註冊處嘅<a href="https://www.eregistry.gov.hk" target="_blank" rel="noopener">e-Registry 網站</a>，撳「網上服務」→「登記用戶」：</p>
+      <ol>
+        <li><strong>填個人資料</strong> — 姓名、身份證號碼、電話、電郵</li>
+        <li><strong>設定登入資料</strong> — 用戶名（6-30 字英數字）、密碼、提示問題</li>
+        <li><strong>上載身份證副本</strong> — 影印本/掃描/手機影都得，要清楚見到姓名同號碼</li>
+        <li><strong>遞交申請</strong> — 成功後會收到確認電郵</li>
+        <li><strong>等 1-2 工作天</strong> — 審批完成後收到啟動電郵，click link activate</li>
+      </ol>
+
+      <div class="flag-item">
+        <p><strong>實測貼士：</strong>身份證副本一定要清晰！我第一次就係因為影得有啲矇，俾人 reject 咗要先影過。用手機影的話，放喺枱面、用自然光、對焦清楚先影。</p>
+      </div>
+
+      <h3>🔹 稅務易 eTAX 開戶（兩種方法）</h3>
+      <p><strong>方法一：用智方便（最快）</strong></p>
+      <ol>
+        <li>電話裝「智方便」App</li>
+        <li>做身份認證（可以去郵政局或 online 做）</li>
+        <li>喺 App 入面登入 eTAX 服務</li>
+        <li>選擇要報稅嘅公司 — 即時用到</li>
+      </ol>
+      <p><strong>方法二：申請 eTAX 密碼</strong></p>
+      <ol>
+        <li>上稅局網站填表 <a href="https://www.gov.hk/tc/residents/taxes/etax/services/application_for_etax_password_for_individual.htm" target="_blank" rel="noopener">申請 eTAX 密碼</a></li>
+        <li>稅局會寄密碼信到你嘅通訊地址</li>
+        <li>收到密碼後上 eTAX 首次登入改 password</li>
+        <li>之後就可以用同一密碼報所有公司嘅稅</li>
+      </ol>
+
+      <div class="tip-box">
+        <p><strong>💡 建議：</strong>用智方便最快最方便，開咗 account 之後仲可以用嚟查牌費、續車牌等其他政府服務。強烈推薦。</p>
+      </div>
+
+      <!-- Section 3 -->
+      <h2 id="cr-portal">3️⃣ CR e-Services Portal 實戰</h2>
+
+      <h3>🔍 查冊公司名（免費）</h3>
+      <p>開咗 account 之後，會見到「查冊公司或資料」選項。可以查：</p>
+      <ul>
+        <li><strong>公司名稱查冊（Exact Name Search）</strong> — 免費，核對公司名係咪已經俾人用咗</li>
+        <li><strong>公司資料查冊（Image Search）</strong> — 收費，可以睇公司文件影像</li>
+        <li><strong>董事索引</strong> — 查某個人係邊啲公司做董事</li>
+      </ul>
+
+      <div class="flag-item">
+        <p><strong>實測貼士：</strong>改名之前一定要做 Exact Name Search！我試過一次以為個名冇人用，點知同另一間公司太相似俾人 reject 咗，$295 報名費蝕咗。</p>
+      </div>
+
+      <h3>📄 網上遞交文件</h3>
+      <p>e-Services Portal 支援網上提交嘅文件（2026 年更新）：</p>
+      <ul>
+        <li><strong>NAR1</strong> — 周年申報表（每年續期）</li>
+        <li><strong>NNC2</strong> — 更改公司名稱通知書</li>
+        <li><strong>NSC1</strong> — 股份配發申報書</li>
+        <li><strong>ND2A</strong> — 董事/公司秘書變更通知</li>
+        <li><strong>NR2</strong> — 註冊辦事地址變更</li>
+      </ul>
+      <p>遞交流程：</p>
+      <ol>
+        <li>揀「網上提交文件」→ 選擇表格類型</li>
+        <li>填寫表格（系統會自動 check 格式）</li>
+        <li>上載附件（如有）</li>
+        <li>網上俾錢（信用卡/PPS/FPS）</li>
+        <li>確認遞交 →系統俾 transaction ID 你</li>
+      </ol>
+
+      <div class="tip-box">
+        <p><strong>💡 重點：</strong>網上提交 NNC2（改公司名），成功後 <strong>1 小時內收到電子證書</strong>！以前親身排隊要 4 個工作天。效率差好遠。</p>
+      </div>
+
+      <h3>📥 下載電子證書</h3>
+      <p>提交成功後，登入 e-Services Portal →「查詢提交紀錄」→ 下載 PDF 證書。電子證書同實體證書有同等法律效力，可以用嚟更新銀行戶口、商業登記等。</p>
+
+      <!-- Section 4 -->
+      <h2 id="etax">4️⃣ 稅務易 eTAX 實戰</h2>
+
+      <h3>📋 公司利得稅報稅</h3>
+      <p>用 eTAX 報公司利得稅嘅基本流程：</p>
+      <ol>
+        <li>登入 eTAX → 揀「公司利得稅」</li>
+        <li>選擇要報稅嘅課稅年度</li>
+        <li>填報稅表（網上 form 會自動計算）</li>
+        <li>上載審計報告 + 稅項計算表（如有）</li>
+        <li>核對資料 → 電子簽署 → 遞交</li>
+      </ol>
+
+      <div class="warn-box">
+        <p><strong>⚠️ 注意：</strong>第一次用 eTAX 報公司稅，系統會要求你確認「公司授權」。如果你係董事/公司秘書，可以直接授權俾自己。如果係會計師代報，要填授權書交俾稅局。</p>
+      </div>
+
+      <h3>📊 查詢報稅狀態</h3>
+      <p>eTAX 可以 Check 到：</p>
+      <ul>
+        <li>報稅表係咪已遞交</li>
+        <li>稅局係咪已收到（「處理中」狀態）</li>
+        <li>評稅結果（幾時出咗稅單）</li>
+        <li>仲有冇未交嘅報稅表</li>
+      </ul>
+      <p>最實用係：你可以睇到公司所有年度嘅報稅紀錄，唔怕漏交。</p>
+
+      <h3>💳 網上俾稅</h3>
+      <p>eTAX 支援：</p>
+      <ul>
+        <li>轉數快 FPS</li>
+        <li>PPS 繳費靈</li>
+        <li>信用卡（Visa/Master）</li>
+        <li>銀行網上轉帳</li>
+      </ul>
+      <p>有利息就到期嘅話，用 FPS 最快即時到帳，唔使自己過數要等一兩日。</p>
+
+      <!-- Section 5 -->
+      <h2 id="payment">5️⃣ 網上付款方式比較</h2>
+
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-navy text-white">
+              <th class="p-3 text-left">方式</th>
+              <th class="p-3 text-left">到帳速度</th>
+              <th class="p-3 text-left">手續費</th>
+              <th class="p-3 text-left">適用於</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="bg-white">
+              <td class="p-3 font-semibold">FPS 轉數快</td>
+              <td class="p-3">即時</td>
+              <td class="p-3">免費（大部分銀行）</td>
+              <td class="p-3">CR + IRD</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="p-3 font-semibold">信用卡</td>
+              <td class="p-3">即時</td>
+              <td class="p-3">免費（CR 免收）</td>
+              <td class="p-3">CR 為主</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3 font-semibold">PPS 繳費靈</td>
+              <td class="p-3">即日</td>
+              <td class="p-3">免費</td>
+              <td class="p-3">CR + IRD</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="p-3 font-semibold">銀行 e-Cheque</td>
+              <td class="p-3">1-2 工作天</td>
+              <td class="p-3">免費</td>
+              <td class="p-3">CR 為主</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="flag-item">
+        <p><strong>實戰建議：</strong>交 NAR1 或者 NNC2 嘅話，用信用卡最快最穩陣，即時確認。俾稅就用 FPS，可以慳返信用卡嘅手續費（雖然稅局唔收附加費）。</p>
+      </div>
+
+      <!-- Section 6 -->
+      <h2 id="mistakes">6️⃣ 7 個常見操作錯誤（親身中過）</h2>
+
+      <p>以下係我用呢兩個系統時親身犯過嘅錯誤，你千祈唔好學：</p>
+
+      <h3>❌ 錯誤 1：CR Account 開咗但冇 Activate</h3>
+      <p>以為填完表就得，原來要等審批電郵，收到後 30 日內 click activate link。我試過等咗成個星期都 login 唔到，先發現原來未 activate。</p>
+
+      <h3>❌ 錯誤 2：身份證副本唔清晰</h3>
+      <p>用手機影身份證，影得有啲反光+矇，俾人 reject。浪費咗 2 日再 submit。</p>
+
+      <h3>❌ 錯誤 3：用錯瀏覽器</h3>
+      <p>CR e-Services Portal 對 <strong>Chrome / Edge</strong> 相容性最好。用 Safari 有時 submit 制冇反應，用 Firefox 試過上載 PDF 失敗。呢個係親身試過嘅。</p>
+
+      <h3>❌ 錯誤 4：NAR1 網上提交時附件超過限制</h3>
+      <p>系統限制每份附件 5MB，總共 10MB。我有一次掃描文件太清晰（300 DPI），成個 PDF 成 15MB，上載咗幾次都 fail。解決方法：用 150 DPI 掃描，或者壓縮 PDF。</p>
+
+      <h3>❌ 錯誤 5：eTAX 報稅表冇 save draft</h3>
+      <p>第一次用 eTAX 報公司稅，填到一半有事要離開，以為 system 會自動 save，點知冇。結果要重新填過。記住：eTAX 嘅 draft 係要你自己㩒「暫存草稿」先 save 到。</p>
+
+      <h3>❌ 錯誤 6：電子證書冇 backup</h3>
+      <p>成功 submit NNC2 之後 download 咗證書，諗住「放喺 desktop 就得啦」。點知電腦死咗，晒咗 $295 同時間，要另外俾錢申請補發。收到電子檔案一定要 backup 去 cloud（Google Drive / Dropbox）。</p>
+
+      <h3>❌ 錯誤 7：付款成功但冇㩒「確認遞交」</h3>
+      <p>呢個最陰濕！俾完錢之後，系統唔會自動 submit 文件，你要喺付款成功畫面再㩒「確認遞交」，先叫正式提交。我有一次俾咗錢以為搞掂，點知隔咗成個月先發現份文件仲係草稿狀態。</p>
+
+      <div class="warn-box">
+        <p><strong>⚠️ 錯誤 7 係最多人中嘅陷阱：</strong>付款後一定要㩒「確認遞交（Confirm Submission）」，然後抄低系統俾你嘅 <strong>Transaction ID</strong>。之後可以喺「查詢提交紀錄」check 到 status。</p>
+      </div>
+
+      <!-- Section 7 -->
+      <h2 id="links">7️⃣ 常用服務連結（Bookmark 定）</h2>
+
+      <div class="bg-gray-50 rounded-xl p-6 mb-6">
+        <ul class="space-y-3 !mb-0">
+          <li>🔗 <strong>CR e-Registry Portal</strong>：<a href="https://www.eregistry.gov.hk" target="_blank" rel="noopener">https://www.eregistry.gov.hk</a></li>
+          <li>🔗 <strong>CR 公司名稱查冊</strong>：<a href="https://www.eregistry.gov.hk/icris3/" target="_blank" rel="noopener">https://www.eregistry.gov.hk/icris3/</a></li>
+          <li>🔗 <strong>稅務易 eTAX</strong>：<a href="https://www.gov.hk/tc/residents/taxes/etax/services/etax_login.htm" target="_blank" rel="noopener">https://www.gov.hk/tc/residents/taxes/etax/</a></li>
+          <li>🔗 <strong>智方便 iAM Smart</strong>：<a href="https://www.iamsmart.gov.hk" target="_blank" rel="noopener">https://www.iamsmart.gov.hk</a></li>
+          <li>🔗 <strong>CR 表格總覽</strong>：<a href="https://www.cr.gov.hk/tc/companies_ordinance/forms.htm" target="_blank" rel="noopener">https://www.cr.gov.hk/tc/forms/</a></li>
+        </ul>
+      </div>
+
+      <!-- Related Guides CTA -->
+      <div class="bg-gray-50 rounded-2xl border-2 border-gold/20 p-8 mt-10 mb-6 text-center">
+        <h2 class="!border-b-0 !mt-0 !mb-3">📚 相關實戰指南</h2>
+        <p class="text-center">開咗 e-Services account 之後，用得着嘅指南：</p>
+        <div class="grid sm:grid-cols-2 gap-4 my-6 text-left">
+          <a href="/shareholder-transfer/" class="block bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:border-gold/40 hover:shadow-md transition">
+            <div class="text-2xl mb-2">🔄</div>
+            <h3 class="font-bold text-navy !mt-0 !mb-1">股份轉讓完整指南</h3>
+            <p class="text-sm !mb-0 text-gray-500">由 Sold Note 到 NAR1，逐個 step 教你填</p>
+          </a>
+          <a href="/company-name-change/" class="block bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:border-gold/40 hover:shadow-md transition">
+            <div class="text-2xl mb-2">✏️</div>
+            <h3 class="font-bold text-navy !mt-0 !mb-1">更改公司名稱指南</h3>
+            <p class="text-sm !mb-0 text-gray-500">特別決議 → NNC2 → 銀行更新完整流程</p>
+          </a>
+          <a href="/nar1-generator/" class="block bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:border-gold/40 hover:shadow-md transition">
+            <div class="text-2xl mb-2">📅</div>
+            <h3 class="font-bold text-navy !mt-0 !mb-1">NAR1 生成工具</h3>
+            <p class="text-sm !mb-0 text-gray-500">一鍵生成 NAR1 表格，直接上載 e-Services</p>
+          </a>
+          <a href="/nsc1-generator/" class="block bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:border-gold/40 hover:shadow-md transition">
+            <div class="text-2xl mb-2">📊</div>
+            <h3 class="font-bold text-navy !mt-0 !mb-1">NSC1 生成工具</h3>
+            <p class="text-sm !mb-0 text-gray-500">股份配發表格，填好直接上載</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="text-xs text-gray-400 mt-8 pt-6 border-t border-gray-100 leading-relaxed">
+        <p class="!mb-1"><em>本文由 ESGov 創辦人撰寫，一個親身經歷過香港公司秘書文件流程嘅香港人。所有操作步驟親身測試，但政府系統可能隨時更新，如有疑問請以官方網站為準。內容並非專業意見，如有需要請諮詢合資格專業人士。</em></p>
+      </div>
+
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2 mt-6">
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#公司註冊處</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#eTAX</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#電子服務</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#智方便</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#網上報稅</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#SME</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#ESGov</span>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ═══════════════ Related CTA ═══════════════ -->
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-bold text-navy mb-3">
+        仲有好多實戰指南等你睇 👇
+      </h2>
+      <p class="text-gray-500 mb-6">
+        由開公司、股份轉讓、改名到報稅，全部由經歷者逐個步驟拆解
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="/shareholder-transfer/" class="inline-flex items-center gap-2 text-sm font-semibold text-navy bg-white border-2 border-navy/20 hover:border-gold/40 hover:text-gold transition rounded-xl px-6 py-3 shadow-sm">
+          🔄 股份轉讓指南 →
+        </a>
+        <a href="/company-name-change/" class="inline-flex items-center gap-2 text-sm font-semibold text-navy bg-white border-2 border-navy/20 hover:border-gold/40 hover:text-gold transition rounded-xl px-6 py-3 shadow-sm">
+          ✏️ 公司改名指南 →
+        </a>
+        <a href="/blog/" class="inline-flex items-center gap-2 text-sm font-semibold text-gold bg-white border-2 border-gold/30 hover:bg-gold hover:text-white transition rounded-xl px-6 py-3 shadow-sm">
+          📚 睇更多文章 →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ Footer ═══════════════ -->
+  <footer class="bg-navy text-white py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-400">
+      <p>© 2026 ESGov. 由真實經歷者整理，實戰經驗分享。</p>
+      <p class="mt-1">本網站內容僅供參考，不構成專業意見。如有需要請諮詢合資格專業人士。</p>
+    </div>
+  </footer>
+
+</body>
+</html>
