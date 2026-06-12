@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港有限公司第一次報稅實戰指南 — 由收到報稅表到成功Submit</title>
+  <meta name="description" content="第一次收到利得稅報稅表（BIR51）唔知點算？由填表、準備文件、審計報告到提交，逐個步驟講解。附 Deadline、延期申請攻略、7個常見錯誤同完整 Checklist。" />
+  <meta property="og:title" content="香港有限公司第一次報稅實戰指南 — 由收到報稅表到成功Submit全程教學" />
+  <meta property="og:description" content="第一次報稅？唔使驚！由收到 BIR51 到填表、審計、提交，逐個步驟拆解。附 Deadline、延期攻略、7個常見陷阱同完整報稅 Checklist。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://esgov.org/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .blog-content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1B2A4A;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f3f4f6;
+    }
+    .blog-content h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1B2A4A;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-content p {
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      color: #374151;
+    }
+    .blog-content ul, .blog-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #374151;
+    }
+    .blog-content li {
+      line-height: 1.8;
+      margin-bottom: 0.25rem;
+    }
+    .blog-content .flag-item {
+      background: #fef3c7;
+      border-left: 4px solid #C9A84C;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+    .blog-content .flag-item p {
+      margin-bottom: 0;
+    }
+    .blog-content strong {
+      color: #1B2A4A;
+    }
+    .blog-content .tip-box {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+    .blog-content .tip-box p {
+      margin-bottom: 0;
+    }
+    .blog-content .warn-box {
+      background: #fef2f2;
+      border-left: 4px solid #ef4444;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+    .blog-content .warn-box p {
+      margin-bottom: 0;
+    }
+    .blog-content a {
+      color: #C9A84C;
+      text-decoration: underline;
+    }
+    .blog-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    .blog-content th, .blog-content td {
+      border: 1px solid #ddd;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    .blog-content th {
+      background: #1B2A4A;
+      color: white;
+      font-weight: 600;
+    }
+    .blog-content .step-card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .blog-content .step-card .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      background: #1B2A4A;
+      color: #C9A84C;
+      font-weight: 800;
+      font-size: 0.875rem;
+      border-radius: 9999px;
+      margin-right: 0.5rem;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="https://esgov.org/favicon.png" />
+  <link rel="shortcut icon" href="https://esgov.org/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://esgov.org/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港有限公司第一次報稅實戰指南" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司第一次報稅實戰指南" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港有限公司第一次報稅實戰指南 — 由收到報稅表到成功Submit全程教學",
+    "description": "第一次收到利得稅報稅表（BIR51）唔知點算？由填表、準備文件、審計報告到提交，逐個步驟講解。附 Deadline、延期申請攻略、7個常見錯誤同完整 Checklist。",
+    "url": "https://esgov.org/blog/香港有限公司第一次報稅實戰指南",
+    "author": { "@type": "Person", "name": "ESGov" },
+    "publisher": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-06-13",
+    "dateModified": "2026-06-13"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://esgov.org" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://esgov.org/blog" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="https://esgov.org" class="flex items-center gap-2.5">
+        <img src="https://esgov.org/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" />
+        <span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+      </a>
+      <a href="https://esgov.org/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 返回網誌總覽</a>
+    </div>
+  </nav>
+
+  <!-- ═══ Article Content ═══ -->
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <div class="blog-content">
+
+      <!-- Title -->
+      <div class="mb-8">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-navy/10 text-navy text-xs font-semibold rounded-full">報稅</span>
+          <span class="px-3 py-1 bg-navy/10 text-navy text-xs font-semibold rounded-full">利得稅</span>
+          <span class="px-3 py-1 bg-navy/10 text-navy text-xs font-semibold rounded-full">實戰</span>
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-bold text-navy leading-tight mb-4">
+          香港有限公司第一次報稅實戰指南 — 由收到報稅表到成功 Submit 全程教學
+        </h1>
+        <div class="flex items-center text-sm text-gray-400 gap-4">
+          <span>📅 2026.06.13</span>
+          <span>⏱ 閱讀時間：約 15 分鐘</span>
+        </div>
+      </div>
+
+      <!-- Intro -->
+      <p>第一次收到利得稅報稅表嘅時候，我記得自己成個人都呆咗。</p>
+
+      <p>果陣公司開咗差唔多一年半，生意叫做上咗軌道，突然間收到一封由稅務局寄嚟嘅綠色信封，打開見到張 BIR51 — 利得稅報稅表。上面寫滿晒密密麻麻嘅欄位，咩「總入息」、「可課稅利潤」、「折舊免稅額」⋯⋯完全睇唔明。上網搵資料，又係又長又散，政府官網啲指引晦澀到好似俾律師睇咁。</p>
+
+      <p>最後死死地氣搵會計師搞，收咗我 $8,000 就係幫我填咗份表。後來先發現，其實好多嘢自己搞得掂，只要知個流程同睇得明份表。</p>
+
+      <p>呢篇就係我俾咗學費之後，想分享俾第一次報稅嘅香港有限公司東主嘅實戰指南。由你收到報稅表一刻開始，到最後成功 Submit，逐個步驟講。</p>
+
+      <!-- Table of Contents -->
+      <div class="flag-item">
+        <p class="font-bold text-navy mb-2">📋 本文目錄</p>
+        <ol class="!mb-0 !pl-4">
+          <li><strong>搞清楚：收到咩表？幾時要交？</strong></li>
+          <li><strong>第 0 步：搞清楚你公司嘅「課稅年度」</strong></li>
+          <li><strong>第 1 步：準備財務報表（Audited Financial Statements）</strong></li>
+          <li><strong>第 2 步：填寫利得稅報稅表（BIR51 / BIR52 / BIR54）</strong></li>
+          <li><strong>第 3 步：準備附屬文件同附表</strong></li>
+          <li><strong>第 4 步：核對同提交</strong></li>
+          <li><strong>延期申請點樣做？</strong></li>
+          <li><strong>第一次報稅 7 個常見錯誤</strong></li>
+          <li><strong>報稅 Checklist（即用版）</strong></li>
+          <li><strong>FAQ</strong></li>
+        </ol>
+      </div>
+
+      <!-- Section 1 -->
+      <h2>1. 搞清楚：收到咩表？幾時要交？</h2>
+
+      <p>首先，你得搞清楚你收到嘅係邊款報稅表。香港有限公司嘅利得稅報稅表主要有三款：</p>
+
+      <table>
+        <tr>
+          <th>表格</th>
+          <th>適用對象</th>
+          <th>首次提交</th>
+        </tr>
+        <tr>
+          <td><strong>BIR51</strong></td>
+          <td>一般有限公司（最常見）</td>
+          <td>開業後約 18 個月</td>
+        </tr>
+        <tr>
+          <td><strong>BIR52</strong></td>
+          <td>非居港公司</td>
+          <td>視情況</td>
+        </tr>
+        <tr>
+          <td><strong>BIR54</strong></td>
+          <td>合夥業務</td>
+          <td>視情況</td>
+        </tr>
+      </table>
+
+      <p>如果你係一間新開嘅有限公司，第一次收到報稅表通常係喺公司成立後 <strong>18 個月左右</strong>。稅局會寄一份 BIR51 俾你，上面會列明要申報嘅「課稅年度」同「提交期限」。</p>
+
+      <div class="warn-box">
+        <p><strong>⚠️ 致命陷阱：</strong>第一次報稅表嘅提交期限通常係 <strong>發出日期起計 1 個月</strong>，唔係 3 個月！好多新公司東主以為有成季時間慢慢搞，結果過期先發現。過期提交嘅罰款係 $1,200 起跳，嚴重嘅可以被檢控。</p>
+      </div>
+
+      <!-- Section 2 -->
+      <h2>2. 第 0 步：搞清楚公司嘅「課稅年度」</h2>
+
+      <p>好多第一次報稅嘅人會混淆「課稅年度」同「財政年度」。其實好簡單：</p>
+
+      <ul>
+        <li><strong>財政年度（Financial Year）：</strong>你自己決定嘅公司會計年度，例如 1 月 1 日至 12 月 31 日，或者 4 月 1 日至 3 月 31 日</li>
+        <li><strong>課稅年度（Year of Assessment / YA）：</strong>稅局用嚟計稅嘅年度，每年 4 月 1 日至下年 3 月 31 日</li>
+      </ul>
+
+      <p>舉個例：你公司嘅財政年度係 2025 年 1 月 1 日至 2025 年 12 月 31 日，咁你申報嘅就係 <strong>課稅年度 2025/26</strong>（因為 2025 年 4 月 1 日至 2026 年 3 月 31 日呢段期間，你公司嘅利潤係屬於呢個課稅年度）。</p>
+
+      <!-- Section 3 -->
+      <h2>3. 第 1 步：準備財務報表（Audited Financial Statements）</h2>
+
+      <p>報稅嘅第一步，其實唔係填表，而係準備好公司嘅 <strong>審計財務報表（Audited Financial Statements）</strong>。香港《公司條例》規定，所有有限公司每年都要做審計，而審計報告係報稅表嘅必備附件。</p>
+
+      <p>財務報表通常包括以下三份文件：</p>
+
+      <ul>
+        <li><strong>資產負債表（Balance Sheet）</strong> — 顯示公司資產、負債同股本</li>
+        <li><strong>損益表（Profit and Loss Account）</strong> — 顯示收入、支出同盈虧</li>
+        <li><strong>現金流量表（Cash Flow Statement）</strong> — 顯示資金進出</li>
+        <li><strong>附註（Notes to the Accounts）</strong> — 詳細解說各項數字</li>
+      </ul>
+
+      <div class="tip-box">
+        <p><strong>💡 慳錢貼士：</strong>如果你公司規模細（例如年營業額 $100 萬以下、總資產 $500 萬以下、員工人數 50 人以下），可以考慮做 <strong>「小型公司報告」（Small Company Report）</strong>，審計費會平好多，大概 $3,000-$8,000。如果係微型公司，仲可以考慮做 <strong>「簡化報告」（Abridged Accounts）</strong>，內容精簡咗，收費更低。</p>
+      </div>
+
+      <p>審計費視乎公司規模同複雜程度：</p>
+
+      <table>
+        <tr>
+          <th>公司規模</th>
+          <th>審計費（大約）</th>
+        </tr>
+        <tr>
+          <td>微型（年收入 < $100 萬）</td>
+          <td>$3,000 - $6,000</td>
+        </tr>
+        <tr>
+          <td>小型（年收入 $100 萬 - $500 萬）</td>
+          <td>$6,000 - $15,000</td>
+        </tr>
+        <tr>
+          <td>中型（年收入 $500 萬 - $2,000 萬）</td>
+          <td>$15,000 - $40,000</td>
+        </tr>
+        <tr>
+          <td>大型（年收入 > $2,000 萬）</td>
+          <td>$40,000 起</td>
+        </tr>
+      </table>
+
+      <div class="warn-box">
+        <p><strong>⚠️ 重要提醒：</strong>就算公司冇營業、冇收入（即係「Dormant Company」），都仍然需要提交 <strong>「無營運審計報告」（Dormant Accounts）</strong> 同報稅表，只係審計費會平好多（約 $1,500-$3,000）。以為公司冇生意就唔使報稅係最常見嘅錯誤之一！</p>
+      </div>
+
+      <!-- Section 4 -->
+      <h2>4. 第 2 步：填寫利得稅報稅表（BIR51）</h2>
+
+      <p>財務報表準備好之後，就輪到填 BIR51。份表主要有以下部分：</p>
+
+      <h3>Part 1：基本資料</h3>
+      <p>公司名稱、地址、業務性質、開始日期等。呢部分好簡單，照實填就得。</p>
+
+      <h3>Part 2：入息申報</h3>
+      <p>呢部分係成份表嘅核心，要申報公司嘅各類收入：</p>
+      <ul>
+        <li><strong>總入息（Total Gross Income）</strong> — 所有收入總和，包括銷售收入、服務費收入、利息收入等</li>
+        <li><strong>可課稅利潤（Assessable Profits）</strong> — 總入息減去可扣除開支後嘅淨利潤</li>
+      </ul>
+
+      <h3>Part 3：開支扣除</h3>
+      <p>可扣除嘅開支包括：</p>
+      <ul>
+        <li>租金、水電、辦公室開支</li>
+        <li>員工薪酬、強積金</li>
+        <li>專業費用（會計、法律、秘書公司）</li>
+        <li>折舊免稅額（Depreciation Allowance）</li>
+        <li>利息開支</li>
+        <li>營運開支（交通、宣傳、保險等）</li>
+      </ul>
+
+      <div class="flag-item">
+        <p><strong>🔑 關鍵：</strong>「可扣除開支」同「會計利潤」係兩回事。稅局有自己一套計算方法，例如應酬費（Entertainment）有限額、折舊有指定比率、資本性支出唔扣得。最好參考審計報告入面嘅 <strong>「稅項計算」（Tax Computation）</strong>，呢份文件係由核數師幫你計好。</p>
+      </div>
+
+      <h3>Part 4：稅務計算</h3>
+      <p>呢部分係自動計算結果：</p>
+      <ul>
+        <li>利得稅率（2026 年：首 $200 萬利潤 8.25% → 即係「兩級制利得稅率」；超過 $200 萬嘅部分 16.5%）</li>
+        <li>稅務寬減（如有）</li>
+        <li>應繳稅款總額</li>
+      </ul>
+
+      <h3>Part 5：補充表格（Supplementary Forms）</h3>
+      <p>根據公司情況，有機會需要填以下補充表格：</p>
+      <ul>
+        <li><strong>IR1479</strong> — 詳細嘅入息申報表（較大規模公司適用）</li>
+        <li><strong>IR1480</strong> — 有關關聯交易（Transfer Pricing）嘅申報</li>
+        <li><strong>IR1261</strong> — 離岸利得稅申報（如有 Offshore Claim）</li>
+      </ul>
+
+      <p>第一次報稅通常只需填基本 BIR51，唔需要補充表格。但如果你嘅核數師話你需要 Offshore Claim，就要一併填 IR1261。</p>
+
+      <!-- Section 5 -->
+      <h2>5. 第 3 步：準備附屬文件同附表</h2>
+
+      <p>提交報稅表嘅時候，需要連同以下文件一併提交：</p>
+
+      <ul>
+        <li><strong>✧ 審計財務報表（Audited Financial Statements）</strong> — 連同核數師報告</li>
+        <li><strong>✧ 稅項計算表（Tax Computation）</strong> — 核數師幫你計好嘅應課稅利潤計算</li>
+        <li><strong>✧ 利得稅報稅表（BIR51 正本）</strong> — 已填好同簽署</li>
+        <li><strong>✧ 董事會決議（如有需要）</strong> — 授權簽署人</li>
+      </ul>
+
+      <p>如果你係用 <strong>稅務易（eTAX）</strong> 網上提交（強烈推薦！），你需要將以上文件 scan 做 PDF 再上載。如果用郵寄，就全部一式兩份。</p>
+
+      <div class="tip-box">
+        <p><strong>💡 建議：</strong>2026 年仲用郵寄提交報稅表？太落後了！用 <strong>eTAX</strong> 網上提交，唔使排隊、唔使郵費、有收據證明、仲可以隨時 check 進度。如果你未開 eTAX 帳戶，建議睇埋我哋另一篇 <a href="https://esgov.org/blog/公司註冊處電子服務稅務易實戰教學.html">公司註冊處 e-Services Portal 及稅務易 eTAX 實戰教學</a>。</p>
+      </div>
+
+      <!-- Section 6 -->
+      <h2>6. 第 4 步：核對同提交</h2>
+
+      <p>提交之前，最後 check 一次呢啲嘢：</p>
+
+      <div class="step-card">
+        <p><span class="step-num">✅</span> <strong>檢查 1：所有欄位填齊未？</strong> 特別係 Part 2 嘅入息數字同 Part 3 嘅開支扣除，一定要同審計報告一致</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">✅</span> <strong>檢查 2：簽名簽咗未？</strong> BIR51 需要由公司董事簽署，如果公司有 2 個董事，通常只需要其中一個簽就得，但最好 check 公司章程點寫</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">✅</span> <strong>檢查 3：附件齊全未？</strong> 審計報告、稅項計算表、補充表格（如有）</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">✅</span> <strong>檢查 4：提交期限？</strong> 過期交要罰錢，可以申請延期（下面會講）</p>
+      </div>
+
+      <p>確認無誤之後，就可以用 eTAX 提交，或者郵寄去：</p>
+
+      <div class="flag-item">
+        <p><strong>📍 稅務局地址：</strong></p>
+        <p>香港九龍啟德協調道 5 號<br />稅務中心 3 樓<br />利得稅組</p>
+      </div>
+
+      <p>用 eTAX 提交嘅話，系統會即時俾返一個 <strong>「提交編號」（Submission Reference Number）</strong>，一定要記低！呢個係你成功報稅嘅證明。</p>
+
+      <!-- Section 7 -->
+      <h2>7. 延期申請點樣做？</h2>
+
+      <p>第一次報稅，90% 嘅新公司都唔能夠喺 1 個月內提交。因為要等審計報告出嚟，而審計通常要幾星期甚至幾個月。點算？<strong>申請延期</strong>。</p>
+
+      <p>延期申請方法：</p>
+
+      <ol>
+        <li>填寫 <strong>IR1121</strong>（「申請延展提交報稅表限期」）表格</li>
+        <li>或者直接用 eTAX 網上申請延期（更快捷）</li>
+        <li>解釋原因（最常見理由：審計報告未完成、會計紀錄仍在整理）</li>
+      </ol>
+
+      <table>
+        <tr>
+          <th>課稅年度</th>
+          <th>一般延期情況</th>
+          <th>最遲提交日期</th>
+        </tr>
+        <tr>
+          <td>第一次報稅</td>
+          <td>通常自動批 3 個月</td>
+          <td>發出日起計 4 個月</td>
+        </tr>
+        <tr>
+          <td>之後每年</td>
+          <td>需提交 IR1121</td>
+          <td>一般延至 11 月中</td>
+        </tr>
+      </table>
+
+      <div class="warn-box">
+        <p><strong>⚠️ 注意：</strong>延期申請必須喺 <strong>原定提交期限前</strong> 提交。過期咗先申請，稅局有權唔受理。如果真係過期咗，立即照交報稅表，同時寫一封解釋信（Covering Letter），誠實解釋延遲原因。一般初犯只會罰 $1,200，唔好因為驚罰錢而唔交，嗰啲罰款同將來被檢控嘅風險比，根本係小數目。</p>
+      </div>
+
+      <!-- Section 8 -->
+      <h2>8. 第一次報稅 7 個常見錯誤</h2>
+
+      <p>以下係我第一次報稅同身邊朋友最常見嘅錯誤，希望你唔會犯：</p>
+
+      <div class="warn-box">
+        <p><strong>❌ 錯誤 1：以為公司冇賺錢就唔使報稅</strong></p>
+        <p>錯！就算公司全年蝕本，都要照交報稅表（係「報」稅，唔係「交」稅）。蝕本都要申報，因為稅局要記錄，而且虧損可以結轉到下年抵銷利潤。</p>
+      </div>
+
+      <div class="warn-box">
+        <p><strong>❌ 錯誤 2：過期先嚟申請延期</strong></p>
+        <p>延期申請必須喺期限前做！過期後申請，稅局有權拒絶。到時唔交表就係違法，可以罰 $10,000 再加欠稅 3 倍罰款。</p>
+      </div>
+
+      <div class="warn-box">
+        <p><strong>❌ 錯誤 3：將個人使費當公司開支</strong></p>
+        <p>成日見到啲東主將自己嘅旅行、食飯、買衫當公司開支扣稅。稅局查起上嚟，係會逐項睇嘅。私人開支唔扣得，如果被查出，除咗要補稅，仲要罰款。</p>
+      </div>
+
+      <div class="warn-box">
+        <p><strong>❌ 錯誤 4：唔記得保留單據</strong></p>
+        <p>稅局有權要求你提交單據證明開支。公司條例要求保留會計紀錄至少 7 年。如果你 claim 咗某項開支但冇單據，稅局可以 reject。</p>
+      </div>
+
+      <div class="warn-box">
+        <p><strong>❌ 錯誤 5：搞錯課稅年度</strong></p>
+        <p>最常見係將財政年度嘅利潤直接搬過去報稅表，而冇做「時間分配」（Time Apportionment）。稅務計算係按課稅年度（4 月至 3 月）計，唔係財政年度。核數師會幫你做 time apportionment，唔好自己亂填。</p>
+      </div>
+
+      <div class="warn-box">
+        <p><strong>❌ 錯誤 6：搵唔啱核數師</strong></p>
+        <p>有啲平價核數師服務質素參差，試過有朋友俾 $3,000 做審計，出嚟份報告錯漏百出，結果被稅局 challenge，要重新做過，仲要俾罰款。揀核數師唔好剩係睇價錢，要睇經驗同口碑。</p>
+      </div>
+
+      <div class="warn-box">
+        <p><strong>❌ 錯誤 7：報完稅就忘記晒</strong></p>
+        <p>報稅之後，稅局可能喺 6 年內隨時抽查（Tax Audit）。所以所有文件、單據、報稅表副本、eTAX 提交證明，全部要保存至少 7 年。好多公司就係因為文件唔齊全，被查稅時俾人罰到喊。</p>
+      </div>
+
+      <!-- Section 9 -->
+      <h2>9. 報稅 Checklist（即用版）</h2>
+
+      <p>下面呢個 checklist 係我自己每次報稅都用的，print 出嚟或者 save 低，跟住做就得：</p>
+
+      <div class="step-card">
+        <p><span class="step-num">☐</span> <strong>收到報稅表後即 check 提交期限</strong>（通常 1 個月，第一次報稅要特別留意）</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">☐</span> <strong>聯絡核數師安排審計</strong>（最好喺收到報稅表之前就開始做）</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">☐</span> <strong>如果唔夠時間，即刻申請延期</strong>（填 IR1121 或 eTAX 網上申請）</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">☐</span> <strong>準備好所有銀行月結單、發票、單據</strong>俾核數師</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">☐</span> <strong>收到審計報告後，核對數字</strong>（確認同你嘅紀錄一致）</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">☐</span> <strong>填寫 BIR51</strong>（或由核數師代填）</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">☐</span> <strong>董事簽名</strong></p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">☐</span> <strong>Scan 所有文件做 PDF</strong>（審計報告、稅項計算表、BIR51）</p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">☐</span> <strong>用 eTAX 提交或郵寄</strong></p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">☐</span> <strong>save 低提交證明（Submission Reference）</strong></p>
+      </div>
+      <div class="step-card">
+        <p><span class="step-num">☐</span> <strong>將所有文件歸檔，保留至少 7 年</strong></p>
+      </div>
+
+      <!-- Section 10 -->
+      <h2>FAQ — 第一次報稅常見問題</h2>
+
+      <h3>我係 Sole Proprietorship（獨資經營），係咪都係報 BIR51？</h3>
+      <p>唔係。獨資經營同合夥業務係報 <strong>BIR60</strong>（個人入息課稅），唔係 BIR51。有限公司先報 BIR51。如果你唔肯定自己間公司係咩類型，睇公司註冊證書（Certificate of Incorporation）就知 — 有「Limited」字樣就係有限公司。</p>
+
+      <h3>公司蝕本都要報稅？報咗會唔會俾稅局追數？</h3>
+      <p>蝕本報稅係為咗 <strong>「申報虧損」（Loss Relief）</strong>。你今年蝕咗 $10 萬，稅局會記錄低，出年賺咗 $15 萬，就可以用今年嘅虧損抵銷，剩係得 $5 萬要交稅。唔申報虧損，就冇得扣。</p>
+
+      <h3>報稅表可唔可以自己填？唔搵會計師得唔得？</h3>
+      <p>技術上可以，但實際上好少公司會咁做。因為報稅表需要連同一份 <strong>審計報告</strong> 提交，而審計報告必須由香港嘅 <strong>執業會計師（Certified Public Accountant / CPA）</strong> 簽署。所以你基本一定要搵核數師。</p>
+
+      <h3>第一次報稅要俾幾多錢稅？</h3>
+      <p>冇一定答案，要睇你公司賺幾多同有咩扣稅。但記住：香港利得稅係 <strong>「兩級制」</strong> 嘅 — 首 $200 萬利潤只係俾 8.25%（2025/26 課稅年度），之後先係 16.5%。相比好多地方嘅企業稅（例如新加坡 17%、中國大陸 25%），香港已經好低。</p>
+
+      <h3>報稅之後幾耐會收到評稅通知？</h3>
+      <p>一般提交後 3-6 個月會收到 <strong>評稅通知書（Notice of Assessment）</strong>。如果冇問題，稅局會直接出評稅，要求你喺指定日期前繳稅。如果有問題，稅局會發信查詢（俗稱「Query Letter」），你需要喺限期前回覆。</p>
+
+      <h3>收到 Query Letter 點算？</h3>
+      <p>唔好驚。Query Letter 只係稅局對你提交嘅資料有疑問，想你再 clarify。最緊要係喺限期前回覆，同埋準備好相關文件解釋。如果自己搞唔掂，可以搵返幫你做審計嘅核數師幫手覆信。一般正常申報嘅 Query 都係問啲基本問題，例如「點解開支比上年多咁多」、「某某開支係咪公司用途」等。</p>
+
+      <!-- Conclusion -->
+      <h2>總結</h2>
+
+      <p>第一次報稅的確係有啲壓力，尤其係你對成個流程唔熟嘅時候。我記得自己第一次報稅，由收到表到搞掂，前後用咗 3 個月（因為延期咗），中間仲試過填錯數要核數師改餐死。</p>
+
+      <p>但其實只要搞清楚幾個重點：</p>
+
+      <ol>
+        <li><strong>Check 清楚 deadline</strong>（第一次報稅係 1 個月，唔夠時間就申請延期）</li>
+        <li><strong>搵個可靠嘅核數師</strong>（唔好剩係睇價錢）</li>
+        <li><strong>準備好所有單據同文件</strong>（越齊全越快搞掂）</li>
+        <li><strong>用 eTAX 提交</strong>（快靚正，有收據）</li>
+        <li><strong>所有文件 keep 7 年</strong>（俾稅局抽查唔使驚）</li>
+      </ol>
+
+      <p>做到呢幾點，報稅其實唔係咩難事。以後每年就係一個 routine，搞開咗就熟手㗎啦。</p>
+
+      <p>如果有咩問題，或者想分享你嘅報稅經歷，歡迎喺下面留言或者 contact 我哋。你都係過來人嘅話，不如一齊幫下其他第一次報稅嘅 SME 東主？</p>
+
+      <!-- Related Guides CTA -->
+      <div class="bg-gray-50 rounded-2xl border-2 border-gold/20 p-8 mt-10 mb-6 text-center">
+        <h2 class="!border-b-0 !mt-0 !mb-3">📚 相關實戰指南</h2>
+        <p class="text-center">報稅唔止填表咁簡單，仲有好多嘢要知：</p>
+        <div class="grid sm:grid-cols-2 gap-4 my-6 text-left">
+          <a href="https://esgov.org/blog/香港公司利得稅報稅及審計完整指南.html" class="block bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:border-gold/40 hover:shadow-md transition">
+            <div class="text-2xl mb-2">📋</div>
+            <h3 class="font-bold text-navy !mt-0 !mb-1">利得稅報稅及審計完整指南</h3>
+            <p class="text-sm !mb-0 text-gray-500">由審計到報稅，全面了解整個流程</p>
+          </a>
+          <a href="https://esgov.org/blog/香港有限公司合規時間表終極指南.html" class="block bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:border-gold/40 hover:shadow-md transition">
+            <div class="text-2xl mb-2">📅</div>
+            <h3 class="font-bold text-navy !mt-0 !mb-1">有限公司合規時間表</h3>
+            <p class="text-sm !mb-0 text-gray-500">全年合規 deadlines，唔怕漏咗</p>
+          </a>
+          <a href="https://esgov.org/blog/有限公司審計核數實戰指南.html" class="block bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:border-gold/40 hover:shadow-md transition">
+            <div class="text-2xl mb-2">🔍</div>
+            <h3 class="font-bold text-navy !mt-0 !mb-1">有限公司審計核數實戰指南</h3>
+            <p class="text-sm !mb-0 text-gray-500">審計係咩？點準備？逐個 step 拆解</p>
+          </a>
+          <a href="https://esgov.org/blog/公司註冊處電子服務稅務易實戰教學.html" class="block bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:border-gold/40 hover:shadow-md transition">
+            <div class="text-2xl mb-2">🖥️</div>
+            <h3 class="font-bold text-navy !mt-0 !mb-1">eTAX 實戰教學</h3>
+            <p class="text-sm !mb-0 text-gray-500">稅務易網上報稅 Step-by-step</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="text-xs text-gray-400 mt-8 pt-6 border-t border-gray-100 leading-relaxed">
+        <p class="!mb-1"><em>本文由 ESGov 創辦人撰寫，一個親身經歷過香港有限公司報稅流程嘅香港人。所有步驟源自真實經驗，但稅務條例同稅率可能隨時更新，如有疑問請以稅務局官方網站為準。內容並非專業意見，如有需要請諮詢合資格會計師或稅務顧問。</em></p>
+      </div>
+
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2 mt-6">
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#第一次報稅</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#利得稅</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#BIR51</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#eTAX</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#SME</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#報稅延期</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#審計</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#ESGov</span>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ═══════════════ Related CTA ═══════════════ -->
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-bold text-navy mb-3">
+        仲有好多實戰指南等你睇 👇
+      </h2>
+      <p class="text-gray-500 mb-6">
+        由開公司、股份轉讓、審計報稅到合規，全部由經歷者逐個步驟拆解
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="https://esgov.org/blog/香港有限公司開公司設立註冊終極指南2026.html" class="inline-flex items-center gap-2 text-sm font-semibold text-navy bg-white border-2 border-navy/20 hover:border-gold/40 hover:text-gold transition rounded-xl px-6 py-3 shadow-sm">
+          🏢 開公司指南 →
+        </a>
+        <a href="https://esgov.org/blog/香港有限公司合規時間表終極指南.html" class="inline-flex items-center gap-2 text-sm font-semibold text-navy bg-white border-2 border-navy/20 hover:border-gold/40 hover:text-gold transition rounded-xl px-6 py-3 shadow-sm">
+          📅 合規時間表 →
+        </a>
+        <a href="https://esgov.org/blog/" class="inline-flex items-center gap-2 text-sm font-semibold text-gold bg-white border-2 border-gold/30 hover:bg-gold hover:text-white transition rounded-xl px-6 py-3 shadow-sm">
+          📚 睇更多文章 →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ Footer ═══════════════ -->
+  <footer class="bg-navy text-white py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-400">
+      <p>© 2026 ESGov. 由真實經歷者整理，實戰經驗分享。</p>
+      <p class="mt-1">本網站內容僅供參考，不構成專業意見。如有需要請諮詢合資格專業人士。</p>
+    </div>
+  </footer>
+
+</body>
+</html>
