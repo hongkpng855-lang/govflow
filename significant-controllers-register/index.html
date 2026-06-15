@@ -138,7 +138,6 @@
   email: '',
   emailSubmitted: false,
   _pendingDoc: null,
-  crLightboxSrc: null,
 
   async init() {
     try {
@@ -390,25 +389,6 @@
               <div class="text-gray-700 leading-relaxed whitespace-pre-line text-sm" x-text="s.details"></div>
             </div>
 
-            <!-- CR Official Images -->
-            <div x-show="s.crImages && s.crImages.length >= 1" class="mb-8">
-              <h3 class="font-semibold text-navy text-lg mb-4">📘 官方參考圖（CR 指引）</h3>
-              <div class="grid sm:grid-cols-2 gap-4">
-                <template x-for="(img, idx) in s.crImages" :key="idx">
-                  <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:shadow-md transition group"
-                       @click="crLightboxSrc = img.src">
-                    <div class="relative overflow-hidden">
-                      <img :src="img.src" :alt="img.alt" class="w-full object-cover group-hover:scale-105 transition duration-300" />
-                      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition flex items-center justify-center">
-                        <span class="text-white opacity-0 group-hover:opacity-100 transition text-2xl">🔍</span>
-                      </div>
-                    </div>
-                    <div class="p-2 text-xs text-gray-500 text-center border-t border-gray-100" x-text="img.caption"></div>
-                  </div>
-                </template>
-              </div>
-            </div>
-
             <!-- Documents -->
             <div x-show="s.documents && s.documents.length >= 1" class="mb-8">
               <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
@@ -523,19 +503,6 @@
       </div>
       <div x-show="emailSubmitted" class="text-green-600 font-semibold text-sm py-4">✅ 多謝！有新指南會通知你 📬</div>
       <button @click="closeEmail()" class="mt-3 text-xs text-gray-400 hover:text-gray-600 transition">關閉</button>
-    </div>
-  </div>
-
-  <!-- CR Image Lightbox -->
-  <div x-show="crLightboxSrc" class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" @click.self="crLightboxSrc = null" @keydown.escape.window="crLightboxSrc = null">
-    <div class="max-w-5xl w-full bg-white rounded-xl overflow-hidden shadow-2xl">
-      <div class="flex items-center justify-between px-4 py-3 border-b border-gray-100">
-        <h3 class="font-semibold text-navy text-sm truncate">📘 CR 指引官方圖</h3>
-        <button @click="crLightboxSrc = null" class="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
-      </div>
-      <div class="p-2 sm:p-4 flex items-center justify-center bg-gray-50">
-        <img :src="crLightboxSrc" alt="CR 指引官方參考圖" class="max-w-full max-h-[75vh] object-contain rounded" />
-      </div>
     </div>
   </div>
 

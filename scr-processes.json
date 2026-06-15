@@ -27,22 +27,22 @@
             "冇處理信託結構"
           ],
           "generatorUrl": "/scr-shareholder-analysis-generator"
+        },
+        {
+          "name": "CR 指引：直接持股結構示例",
+          "description": "圖 1：直接持有公司權益示例（CR 指引附件 B）",
+          "demoImage": "/assets/demo/cr_fig1_direct_holding.png",
+          "hasGenerator": false
+        },
+        {
+          "name": "CR 指引：多數利益鏈結構示例",
+          "description": "圖 3：連鎖擁有權結構示例 — 多數利益鏈（CR 指引第11.5章）",
+          "demoImage": "/assets/demo/cr_fig3_chain_ownership.png",
+          "hasGenerator": false
         }
       ],
       "rejectionRisks": [
         "股權結構唔清晰 = 容易漏咗真正嘅重要控制人"
-      ],
-      "crImages": [
-        {
-          "src": "/assets/demo/cr_fig1_direct_holding.png",
-          "alt": "CR 指引圖 1：直接持股結構示例",
-          "caption": "圖 1：直接持有公司權益示例（CR 指引附件 B）"
-        },
-        {
-          "src": "/assets/demo/cr_fig3_chain_ownership.png",
-          "alt": "CR 指引圖 3：連鎖擁有權 — 多數利益鏈",
-          "caption": "圖 3：連鎖擁有權結構示例 — 多數利益鏈（CR 指引第11.5章）"
-        }
       ],
       "mode": "B",
       "needsGenerator": true,
@@ -72,22 +72,22 @@
             "以為冇人就唔使記錄"
           ],
           "generatorUrl": "/scr-identification-checklist-generator"
+        },
+        {
+          "name": "CR 指引：其他持有權益示例（包括共同安排）",
+          "description": "圖 4：其他持有公司權益示例 — 包括共同安排情況（CR 指引附件 B）",
+          "demoImage": "/assets/demo/cr_fig4_other_examples.png",
+          "hasGenerator": false
+        },
+        {
+          "name": "CR 指引：豁除人士示例",
+          "description": "圖 5：豁除人士示例（CR 指引附件 B）",
+          "demoImage": "/assets/demo/cr_fig5_excluded.png",
+          "hasGenerator": false
         }
       ],
       "rejectionRisks": [
         "漏咗真正嘅重要控制人 = 違反公司條例，可被罰款高達 HK$25,000 + 每日罰款"
-      ],
-      "crImages": [
-        {
-          "src": "/assets/demo/cr_fig4_other_examples.png",
-          "alt": "CR 指引圖 4：其他持有權益示例（包括共同安排）",
-          "caption": "圖 4：其他持有公司權益示例 — 包括共同安排情況（CR 指引附件 B）"
-        },
-        {
-          "src": "/assets/demo/cr_fig5_excluded.png",
-          "alt": "CR 指引圖 5：豁除人士示例",
-          "caption": "圖 5：豁除人士示例（CR 指引附件 B）"
-        }
       ],
       "mode": "B",
       "needsGenerator": true,
@@ -218,18 +218,17 @@
             "冇控制人但留空登記冊（冇寫聲明）",
             "冇記錄指定代表"
           ]
+        },
+        {
+          "name": "CR 指引 Annex A：重要控制人登記冊範本",
+          "description": "Annex A：重要控制人登記冊範本（CR 指引第48頁）— 官方建議格式",
+          "demoImage": "/assets/demo/cr_guide_p48.png",
+          "hasGenerator": false
         }
       ],
       "rejectionRisks": [
         "冇控制人但留空登記冊 = 違規，要寫無控制人聲明",
         "資料唔齊全 = 執法人員查冊時資料唔符合要求"
-      ],
-      "crImages": [
-        {
-          "src": "/assets/demo/cr_guide_p48.png",
-          "alt": "CR 指引 Annex A：重要控制人登記冊範本（第48頁）",
-          "caption": "Annex A：重要控制人登記冊範本（CR 指引第48頁）— 官方建議格式"
-        }
       ],
       "mode": "A",
       "needsGenerator": true,
@@ -260,19 +259,18 @@
             "冇保留歷史記錄至少 6 年"
           ],
           "generatorUrl": "/scr-nr2-generator"
+        },
+        {
+          "name": "CR 指引 Annex G：指明地點通知書（Form NR2）範本",
+          "description": "Annex G：指明地點通知書 Form NR2 範本（CR 指引附件 G）— 存放非註冊辦事處時須提交",
+          "demoImage": "/assets/demo/cr_annex_g_p1.png",
+          "hasGenerator": false
         }
       ],
       "rejectionRisks": [
         "存放位置唔啱 + 冇通知 = 違反公司條例，最高罰 HK$25,000",
         "冇指定代表 = 違反公司條例",
         "冇及時更新 = 股權變動 7 日內未改，銀行 KYC 觸發警報"
-      ],
-      "crImages": [
-        {
-          "src": "/assets/demo/cr_annex_g_p1.png",
-          "alt": "CR 指引 Annex G：指明地點通知書（Form NR2）第1頁",
-          "caption": "Annex G：指明地點通知書 Form NR2 範本（CR 指引附件 G）— 存放非註冊辦事處時須提交"
-        }
       ],
       "mode": "B",
       "needsGenerator": true,
