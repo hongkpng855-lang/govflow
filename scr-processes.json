@@ -27,18 +27,6 @@
             "冇處理信託結構"
           ],
           "generatorUrl": "/scr-shareholder-analysis-generator"
-        },
-        {
-          "name": "CR 指引：直接持股結構示例",
-          "description": "圖 1：直接持有公司權益示例（CR 指引附件 B）",
-          "demoImage": "/assets/demo/cr_fig1_direct_holding.png",
-          "hasGenerator": false
-        },
-        {
-          "name": "CR 指引：多數利益鏈結構示例",
-          "description": "圖 3：連鎖擁有權結構示例 — 多數利益鏈（CR 指引第11.5章）",
-          "demoImage": "/assets/demo/cr_fig3_chain_ownership.png",
-          "hasGenerator": false
         }
       ],
       "rejectionRisks": [
@@ -72,18 +60,6 @@
             "以為冇人就唔使記錄"
           ],
           "generatorUrl": "/scr-identification-checklist-generator"
-        },
-        {
-          "name": "CR 指引：其他持有權益示例（包括共同安排）",
-          "description": "圖 4：其他持有公司權益示例 — 包括共同安排情況（CR 指引附件 B）",
-          "demoImage": "/assets/demo/cr_fig4_other_examples.png",
-          "hasGenerator": false
-        },
-        {
-          "name": "CR 指引：豁除人士示例",
-          "description": "圖 5：豁除人士示例（CR 指引附件 B）",
-          "demoImage": "/assets/demo/cr_fig5_excluded.png",
-          "hasGenerator": false
         }
       ],
       "rejectionRisks": [
@@ -218,12 +194,6 @@
             "冇控制人但留空登記冊（冇寫聲明）",
             "冇記錄指定代表"
           ]
-        },
-        {
-          "name": "CR 指引 Annex A：重要控制人登記冊範本",
-          "description": "Annex A：重要控制人登記冊範本（CR 指引第48頁）— 官方建議格式",
-          "demoImage": "/assets/demo/cr_guide_p48.png",
-          "hasGenerator": false
         }
       ],
       "rejectionRisks": [
