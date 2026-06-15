@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 書面通知書 Word 生成工具 — 填資料即出已填好 Word</title>
+  <meta name="description" content="香港公司 SCR 書面通知書 Word 生成工具。根據《公司條例》第 653ZH 條，直接填公司名稱、收件人資料，系統自動生成正式書面通知書，要求收件人在 1 個月內提供 SCR 相關資料。一鍵下載已填好嘅通知書 Word 檔案。完全免費。"/>
+  <meta property="og:title" content="ESGov | 書面通知書 Word 生成工具" />
+  <meta property="og:description" content="填收件人資料，一鍵下載已填好書面通知書 Word 檔案。完全免費。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/scr-notice-generator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/scr-notice-generator" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "書面通知書 Word 生成工具",
+    "description": "香港公司 SCR 書面通知書 Word 生成工具，填資料即出已填好 Word。完全免費。",
+    "url": "https://esgov.org/scr-notice-generator"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "重要控制人登記冊 (SCR) 完整指南",
+      "item": "https://esgov.org/significant-controllers-register"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "書面通知書 Word 生成工具",
+      "item": "https://esgov.org/scr-notice-generator"
+    }
+  ]
+}
+  </script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <nav class="bg-navy text-white sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/significant-controllers-register?step=3" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← Step 3</a>
+    </div>
+  </nav>
+
+  <div class="max-w-4xl mx-auto px-4 py-6">
+
+    <!-- Trust Banner -->
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
+      📝 填好資料 → 㩒「下載 Word」→ 直接下載已填好嘅書面通知書
+    </div>
+
+    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">書面通知書 — Word 生成工具</h1>
+
+    <!-- Example Image Cards -->
+    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
+      <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/scr-step3.png" alt="書面通知書 真實範例"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">真實範例</span>
+        </div>
+      </div>
+      <div onclick="openTemplateModal('template')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/scr-step3-template.png" alt="書面通知書 模板"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+          <span class="text-white text-xs font-bold drop-shadow-sm">可修改文件</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm mb-4">
+      <h2 class="font-semibold text-navy text-base mb-4">📋 填寫通知書資料</h2>
+
+      <div class="space-y-3">
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">公司名稱（中文）</label>
+          <input id="f1" type="text" value="ABC 貿易有限公司" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">公司名稱（英文）</label>
+          <input id="f2" type="text" value="ABC TRADING LIMITED" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">收件人姓名</label>
+          <input id="f3" type="text" value="陳大明" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">收件人地址</label>
+          <textarea id="f4" rows="3" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">香港柴灣道 300 號</textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">通知日期</label>
+          <input id="f5" type="date" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-1">授權人姓名（董事／公司秘書）</label>
+          <input id="f6" type="text" value="黃律師" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Document Info + Common Mistakes -->
+    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
+      <div class="flex items-start gap-3 mb-3">
+        <span class="text-lg mt-0.5 shrink-0">📄</span>
+        <div>
+          <p class="font-semibold text-navy text-sm">書面通知書（根據《公司條例》第 653ZH 條）</p>
+          <p class="text-xs text-gray-500 mt-0.5">用於要求收件人提供 SCR 相關資料，收件人須在 1 個月內回覆</p>
+        </div>
+      </div>
+      <h2 class="font-semibold text-navy text-base mb-2 mt-4">⚠️ 常見錯誤</h2>
+      <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
+        <ul class="text-xs text-gray-700 space-y-1.5">
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>未保留發出通知嘅書面記錄</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>冇列明 1 個月回覆期限</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>未有提及 false statement 罰則</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>授權人簽署未經正式授權</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Download + Back + Donate -->
+    <div class="space-y-3">
+      <button onclick="checkEmailGate()" id="downloadBtn"
+              class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm">
+        📄 下載 Word（已填好）
+      </button>
+      <a href="/significant-controllers-register?step=3"
+         class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+        ← 返回重要控制人登記冊完整指南
+      </a>
+    </div>
+    <div class="text-center mt-4">
+      <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
+         class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+        ☕ 請咖啡
+      </a>
+    </div>
+
+  </div>
+
+  <!-- ═════ Template Modal ═════ -->
+  <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print" onclick="closeTemplateModal(event)">
+    <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+        <h3 class="font-bold text-navy text-base" id="modalTitle">書面通知書</h3>
+        <button onclick="closeTemplateModal()" class="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+      </div>
+      <div id="modalTabs" class="flex border-b border-gray-100">
+        <button onclick="switchModalTab('realdemo')" id="tab-realdemo" class="flex-1 py-3 text-sm font-semibold text-navy border-b-2 border-gold">📄 真實範例</button>
+        <button onclick="switchModalTab('template')" id="tab-template" class="flex-1 py-3 text-sm font-semibold text-gray-400 border-b-2 border-transparent">📄 模板</button>
+      </div>
+      <div class="p-4">
+        <div id="modalContent-realdemo">
+          <img src="/assets/demo/scr-step3.png" alt="真實範例" class="w-full border border-gray-200 rounded-lg" onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 範例圖片準備中</div>'" />
+          <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
+        </div>
+        <div id="modalContent-template" class="hidden">
+          <img src="/assets/demo/scr-step3-template.png" alt="模板" class="w-full border border-gray-200 rounded-lg" onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 範例圖片準備中</div>'" />
+          <p class="text-xs text-gray-400 mt-2 text-center">可修改文件模板</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openTemplateModal(tab) {
+      document.getElementById('templateModal').classList.remove('hidden');
+      document.getElementById('templateModal').classList.add('flex');
+      switchModalTab(tab);
+    }
+    function closeTemplateModal(e) {
+      if (!e || e.target === document.getElementById('templateModal')) {
+        document.getElementById('templateModal').classList.add('hidden');
+        document.getElementById('templateModal').classList.remove('flex');
+      }
+    }
+    function switchModalTab(tab) {
+      document.getElementById('tab-realdemo').className = 'flex-1 py-3 text-sm font-semibold ' + (tab==='realdemo' ? 'text-navy border-b-2 border-gold' : 'text-gray-400 border-b-2 border-transparent');
+      document.getElementById('tab-template').className = 'flex-1 py-3 text-sm font-semibold ' + (tab==='template' ? 'text-navy border-b-2 border-gold' : 'text-gray-400 border-b-2 border-transparent');
+      document.getElementById('modalContent-realdemo').classList.toggle('hidden', tab !== 'realdemo');
+      document.getElementById('modalContent-template').classList.toggle('hidden', tab !== 'template');
+    }
+  </script>
+
+  <script>
+    function g(id) { return document.getElementById(id).value || ''; }
+
+    // ===== Email Gate（下載前收集 email）=====
+    function checkEmailGate() {
+      const done = localStorage.getItem('esgov_email_done');
+      if (done) { downloadWord(); return; }
+      document.getElementById('emailGateModal').classList.remove('hidden');
+      document.getElementById('emailGateModal').classList.add('flex');
+    }
+
+    function submitDownloadEmail() {
+      const email = document.getElementById('downloadEmail').value.trim();
+      if (!email || !email.includes('@')) { alert('⚠️ 請輸入有效嘅電郵地址'); return; }
+      try {
+        var iframe = document.createElement('iframe');
+        iframe.name = 'fsframe'; iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        var f = document.createElement('form');
+        f.method = 'POST'; f.action = 'https://formsubmit.co/tbstbs0613@gmail.com';
+        f.target = 'fsframe'; f.style.display = 'none';
+        var fields = { email: email, page: 'scr-notice-generator', docType: 'Notice Letter (書面通知書)', _subject: '📬 ESGov 新下載（書面通知書）：' + email, _captcha: 'false', _template: 'table' };
+        for (var k in fields) { var inp = document.createElement('input'); inp.name = k; inp.value = fields[k]; f.appendChild(inp); }
+        document.body.appendChild(f); f.submit();
+        setTimeout(function(){ document.body.removeChild(f); document.body.removeChild(iframe); }, 1000);
+      } catch(e) {}
+      localStorage.setItem('esgov_email_done', 'true');
+      document.getElementById('emailGateModal').classList.add('hidden');
+      document.getElementById('emailGateModal').classList.remove('flex');
+      setTimeout(function(){ downloadWord(); }, 100);
+    }
+
+    function closeEmailGate() {
+      document.getElementById('emailGateModal').classList.add('hidden');
+      document.getElementById('emailGateModal').classList.remove('flex');
+    }
+
+    function downloadWord() {
+      const btn = document.getElementById('downloadBtn');
+      btn.disabled = true;
+      btn.innerHTML = '⏳ 生成中…';
+
+      const companyCN = g('f1') || '_____';
+      const companyEN = g('f2') || '_____';
+      const recipient = g('f3') || '_____';
+      const address = g('f4') || '_____';
+      const noticeDate = g('f5') || new Date().toISOString().split('T')[0];
+      const authorizedPerson = g('f6') || '_____';
+
+      const html = `<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>書面通知書 - ${companyCN}</title>
+<style>
+  body { font-family: 'Noto Sans TC', 'Arial', sans-serif; padding: 50px; max-width: 750px; margin: auto; color: #1B2A4A; line-height: 1.8; }
+  h1 { font-size: 22px; text-align: center; border-bottom: 3px solid #1B2A4A; padding-bottom: 10px; margin-bottom: 30px; }
+  .header { text-align: right; margin-bottom: 30px; font-size: 14px; }
+  .salutation { margin-bottom: 20px; }
+  .body-text { margin-bottom: 20px; font-size: 14px; }
+  .penalty-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 4px; padding: 15px; margin: 20px 0; font-size: 13px; }
+  .penalty-box strong { color: #b91c1c; }
+  table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+  th, td { border: 1px solid #1B2A4A; padding: 10px; text-align: left; font-size: 13px; vertical-align: top; }
+  th { background: #1B2A4A; color: white; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 11px; color: #888; text-align: center; }
+  .signature { margin-top: 50px; }
+  .signature-line { margin-top: 30px; border-top: 1px solid #1B2A4A; width: 250px; padding-top: 5px; font-size: 13px; }
+</style>
+</head>
+<body>
+<h1>書面通知書</h1>
+<p style="text-align:right;font-size:12px;color:#666;">日期：${noticeDate}</p>
+
+<div class="header">
+  <p><strong>本公司：</strong>${companyCN} (${companyEN})</p>
+</div>
+
+<div class="salutation">
+  <p><strong>致：${recipient}</strong></p>
+  <p>${address.replace(/\\n/g, '<br>')}</p>
+</div>
+
+<div class="body-text">
+  <p><strong>根據《公司條例》（第 622 章）第 653ZH 條 — 要求提供資料通知書</strong></p>
+</div>
+
+<div class="body-text">
+  <p>本公司 ${companyCN}（「本公司」）現正根據《公司條例》（第 622 章）第 653U 條採取合理步驟，以識別本公司的的重要控制人及取得所需詳情。</p>
+  <p>本公司有合理因由相信 閣下是本公司的重要控制人，或知悉另一人是本公司的重要控制人及其身分。</p>
+  <p>因此，本公司現根據《公司條例》第 653ZH 條，要求 閣下在本通知書日期起計 <strong>1 個月內</strong>，向本公司提供以下資料：</p>
+</div>
+
+<table>
+  <tr><th style="width:40px;">#</th><th>所需資料</th></tr>
+  <tr><td>1</td><td>全名（姓名／名稱）</td></tr>
+  <tr><td>2</td><td>通訊地址（不得為郵政信箱號碼）</td></tr>
+  <tr><td>3</td><td>身分證號碼；或如沒有身分證，則提供所持護照的號碼和簽發國家</td></tr>
+  <tr><td>4</td><td>成為本公司重要控制人的日期</td></tr>
+  <tr><td>5</td><td>對本公司所擁有控制權的性質（參照《公司條例》附表 5B 所列條件）</td></tr>
+</table>
+
+<div class="penalty-box">
+  <p><strong>⚠️ 重要法律提示：</strong></p>
+  <p>1. 根據《公司條例》第 653ZJ 條，任何人無合理辯解而違反通知的任何規定，即屬犯罪，可處 <strong>第 5 級罰款（HK$25,000）</strong>，如屬持續罪行，則可處 <strong>每日罰款 HK$700</strong>。</p>
+  <p>2. 根據《公司條例》第 653ZL 條，任何人在回應本通知時明知或罔顧實情地作出在要項上虛假的陳述，即屬犯罪，一經定罪可處 <strong>罰款 HK$300,000 及監禁 2 年</strong>。</p>
+  <p>3. 根據《公司條例》第 653ZJ(3) 條，如收件人未能在 1 個月內遵從通知，公司可向原訟法庭申請命令，要求該人遵從通知的規定。</p>
+</div>
+
+<div class="body-text">
+  <p>請於上述期限內，將所需資料以書面形式提交至本公司註冊辦事處。</p>
+  <p>如有任何疑問，請聯絡本公司授權代表。</p>
+</div>
+
+<div class="signature">
+  <p>此致</p>
+  <p>${recipient}</p>
+  <br>
+  <p>_________________________________</p>
+  <p><strong>${authorizedPerson}</strong></p>
+  <p>本公司董事／公司秘書</p>
+  <p>代表 ${companyCN}</p>
+</div>
+
+<div class="footer">
+  <p>本通知書由 ESGov (https://esgov.org) 根據《公司條例》第 653ZH 條自動生成</p>
+  <p>建議保留本通知書副本作為發出書面通知的記錄</p>
+</div>
+</body></html>`;
+
+      const blob = new Blob([html], { type: 'application/msword' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `書面通知書_${companyCN}_${noticeDate}.doc`;
+      a.click();
+      URL.revokeObjectURL(url);
+
+      btn.disabled = false;
+      btn.innerHTML = '✅ 已下載！';
+      setTimeout(() => { btn.innerHTML = '📄 下載 Word（已填好）'; }, 2000);
+    }
+  </script>
+
+  <!-- ═════ Email Gate Modal ═════ -->
+  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" onclick="event.stopPropagation()">
+      <div class="text-3xl mb-3">📬</div>
+      <h3 class="text-lg font-bold text-navy mb-2">下載前留低 email</h3>
+      <p class="text-sm text-gray-500 mb-5">正在為你準備 <strong>書面通知書</strong> 嘅 Word<br />留低 email，我哋會話你知邊份文件準備好咗 😊</p>
+      <div class="flex flex-col gap-3">
+        <input type="email" id="downloadEmail" placeholder="your@email.com"
+               class="border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold"
+        />
+        <button onclick="submitDownloadEmail()"
+                class="bg-navy text-white font-semibold py-2.5 rounded-xl hover:bg-navy-light transition text-sm">
+          📥 繼續下載 Word
+        </button>
+        <button onclick="closeEmailGate()" class="text-xs text-gray-400 hover:text-gray-600 transition">唔住，稍後先</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="gov-footer py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-2 text-white font-bold text-xl">
+          <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+        </div>
+        <div class="text-sm text-gray-400 flex items-center gap-3">
+          <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="hover:text-gold transition">☕ 請咖啡</a>
+          <span class="opacity-30">|</span>
+          <span>全部免費 🆓</span>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
+        <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
+        <p>© 2026 ESGov. All rights reserved.</p>
+        <p class="mt-2 opacity-40">v11.5</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
