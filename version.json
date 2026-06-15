@@ -1,7 +1,7 @@
 {
-  "version": "10.8",
-  "commit": "bbef553",
-  "date": "2026-06-13",
-  "build": "20260613-0438",
+  "version": "11.2",
+  "commit": "HEAD",
+  "date": "2026-06-15",
+  "build": "20260615-1200",
   "env": "github-pages"
 }
