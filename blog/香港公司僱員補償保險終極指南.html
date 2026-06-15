@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESGov | 香港公司僱員補償保險終極指南 — SME 東主一定要知嘅員工保險法律要求 2026</title>
+<meta name="description" content="全面解說香港僱員補償保險嘅法律要求、保費計算方法、工傷申報流程、常見漏投保陷阱及罰則。SME 東主親身經驗分享，搞清《僱員補償條例》規定，避免被罰款及刑事檢控。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gold { color: #C9A84C; }
+  .border-gold { border-color: #C9A84C; }
+  .hover:bg-gold/90 { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"香港公司係咪一定要幫員工買僱員補償保險？","acceptedAnswer":{"@type":"Answer","text":"係。根據《僱員補償條例》（第282章），所有僱主必須為僱員投購僱員補償保險，無論係長工、兼職、臨時工，甚至係暑期工。違例最高罰款$100,000及監禁兩年。"}},
+    {"@type":"Question","name":"僱員補償保險嘅保費大約幾多錢？","acceptedAnswer":{"@type":"Answer","text":"一般文職工種約為年薪嘅1-3%，例如月薪$15,000嘅文員年保費約$1,800-$5,400。高風險工種（地盤、裝修、飲食業）可以去到5-10%。保費主要視乎工種風險評級、年薪總額及索償紀錄。"}},
+    {"@type":"Question","name":"工傷發生後要幾耐內申報？","acceptedAnswer":{"@type":"Answer","text":"如工傷導致僱員死亡或喪失工作能力超過3天，僱主必須在14天內向勞工處提交書面意外通知（表格2）。如死亡個案更要立即通知勞工處。逾期申報可被罰款$5,000。"}},
+    {"@type":"Question","name":"兼職員工或暑期工需要買保險嗎？","acceptedAnswer":{"@type":"Answer","text":"需要。不論工作時數長短、合約類型，只要係受僱於你嘅員工都必須受保。好多SME東主中過呢個伏——以為兼職唔使買，結果工傷發生後被檢控兼要賠償。"}},
+    {"@type":"Question","name":"如果冇買保險而員工受傷，會有咩後果？","acceptedAnswer":{"@type":"Answer","text":"冇買保險嘅僱主需要全數承擔員工嘅工傷賠償，包括醫療費、病假錢、永久傷殘賠償等。同時會被勞工處檢控，最高罰款$100,000及監禁兩年。法庭仲可以下令禁止你營運。"}}
+  ]
+}
+</script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港公司僱員補償保險終極指南" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港公司僱員補償保險終極指南" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <meta property="og:title" content="ESGov | 香港公司僱員補償保險終極指南 — SME 東主一定要知嘅員工保險法律要求 2026" />
+  <meta property="og:description" content="全面解說香港僱員補償保險嘅法律要求、保費計算方法、工傷申報流程、常見漏投保陷阱及罰則。SME 東主親身經驗分享，搞清《僱員補償條例》規定，避免被罰款及刑事檢控。" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+  </head>
+<body>
+
+<!-- Navigation -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+<div class="max-w-4xl mx-auto px-4 pt-20 pb-12">
+
+  <!-- Header -->
+  <header class="text-center mb-10">
+    <div class="text-sm text-gold font-semibold mb-2">📋 勞工法例合規必修課</div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold gov-navy leading-tight">香港公司僱員補償保險終極指南</h1>
+    <p class="text-lg text-gray-600 mt-3">法定要求、保費計算、工傷申報、常見漏投保陷阱 — SME 東主親身經驗分享</p>
+    <div class="flex justify-center items-center gap-4 mt-4 text-sm text-gray-500">
+      <span>📅 2026 年 6 月 13 日</span>
+      <span>⏱ 約 12 分鐘閱讀</span>
+      <span>👤 ESGov 編輯部</span>
+    </div>
+  </header>
+
+  <!-- ═══════════════ Price Comparison Banner ═══════════════ -->
+  <div class="bg-navy text-white rounded-xl p-5 mb-8 text-center shadow-lg">
+    <p class="text-sm font-semibold text-gold">⚠️ 2025年勞工處發出超過 300 張傳票</p>
+    <p class="text-2xl font-extrabold text-white mt-1">冇買員工保險最高罰 $100,000 + 監禁兩年</p>
+    <p class="text-sm text-gray-300 mt-1">文職員工年保費低至 $2,000 都慳？唔好拎公司前途較飛</p>
+  </div>
+
+  <!-- ═══════════════ Table of Contents ═══════════════ -->
+  <div class="bg-white rounded-xl shadow-sm p-6 mb-8 border border-gray-100">
+    <h2 class="text-xl font-bold gov-navy mb-4">📑 本文目錄</h2>
+    <ul class="space-y-2">
+      <li><a href="#requirements" class="toc-item text-gray-700 hover:text-gold">1️⃣ 僱員補償保險嘅法律要求</a></li>
+      <li><a href="#who-must" class="toc-item text-gray-700 hover:text-gold">2️⃣ 邊啲員工一定要買？邊啲可以唔買？</a></li>
+      <li><a href="#premium" class="toc-item text-gray-700 hover:text-gold">3️⃣ 保費點樣計算？要俾幾錢？</a></li>
+      <li><a href="#claim" class="toc-item text-gray-700 hover:text-gold">4️⃣ 工傷發生後嘅申報流程</a></li>
+      <li><a href="#traps" class="toc-item text-gray-700 hover:text-gold">5️⃣ 常見漏投保陷阱（我中過嘅伏）</a></li>
+      <li><a href="#penalty" class="toc-item text-gray-700 hover:text-gold">6️⃣ 罰則同法律責任</a></li>
+      <li><a href="#faq" class="toc-item text-gray-700 hover:text-gold">❓ 常見問題 FAQ</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════ Content ═══════════════ -->
+  <div class="prose-custom bg-white rounded-xl shadow-sm p-6 sm:p-8 border border-gray-100">
+
+    <div class="callout-danger">
+      <strong>🚨 親身中過嘅伏先講：</strong> 我第一間公司得三個員工，全部文職，我覺得「坐office又唔會受傷，買咩保險啫」。結果有個同事搬文件嘅時候整親條腰，醫生紙寫「工傷建議休息兩星期」。我嗰陣先知原來就算文職，搬文件、行樓梯跌親都算工傷。最後賠咗醫藥費同病假錢成萬蚊，仲要俾勞工處調查，好彩最終只係警告。如果當年買咗保險，年保費都係兩千幾蚊……呢啖真係好難哽。
+    </div>
+
+    <h2 id="requirements">1️⃣ 僱員補償保險嘅法律要求</h2>
+
+    <p>香港《僱員補償條例》（第282章）第40條寫到明：<strong>所有僱主必須為僱員投購僱員補償保險</strong>，以承擔僱員因工作受傷或患上職業病嘅法律責任。</p>
+
+    <p>呢個唔係建議，係<strong>法定要求</strong>。唔做就係違法。</p>
+
+    <h3>法律重點一覽</h3>
+    <table>
+      <tr><th>項目</th><th>規定</th></tr>
+      <tr><td>適用對象</td><td>所有根據《僱傭條例》僱用嘅員工（長工、兼職、臨時工、暑期工）</td></tr>
+      <tr><td>最低投保額</td><td>每宗事故最少 HK$100,000,000（一億）—— 2025年起已調高</td></tr>
+      <tr><td>保障範圍</td><td>工作期間受傷、上下班途中意外（指定情況）、職業病</td></tr>
+      <tr><td>罰則</td><td>最高罰款 HK$100,000 + 監禁 2 年</td></tr>
+      <tr><td>法例</td><td>《僱員補償條例》（第282章）第40條</td></tr>
+    </table>
+
+    <div class="callout-warning">
+      <strong>⚠️ 好多人忽略：</strong> 就算員工係「合約員工」、「自僱人士名義」但實際上係你嘅員工（即「假自僱」），勞工處都會判定為僱傭關係，你需要為佢買保險。建築業、運輸業特別多呢類個案。
+    </div>
+
+    <h2 id="who-must">2️⃣ 邊啲員工一定要買？邊啲可以唔買？</h2>
+
+    <p><strong>一定要買嘅：</strong> 基本上所有受僱於你嘅人都要買，包括：</p>
+    <ul>
+      <li>全職員工</li>
+      <li>兼職員工（即使每星期只返幾日）</li>
+      <li>臨時工 / 替工</li>
+      <li>暑期工 / 實習生</li>
+      <li>在家工作嘅員工（如果工作期間受傷）</li>
+      <li>外派到海外嘅員工（需另購海外工作保險）</li>
+    </ul>
+
+    <p><strong>可以唔買嘅（好少情況）：</strong></p>
+    <ul>
+      <li>與僱主同住嘅家庭傭工（外傭另有家傭保險要求）</li>
+      <li>家屬僱員（同公司共同經營業務嘅配偶、子女、父母）——但要符合特定條件</li>
+      <li>獨立承包商（真正嘅自僱人士，唔係假自僱）</li>
+    </ul>
+
+    <div class="callout-danger">
+      <strong>🚨 又一個親身經歷：</strong> 我試過請咗個暑期工做兩個月，諗住唔使買保險慳幾千蚊。結果佢喺倉庫俾貨物壓親手指，送院縫針。冇保險情況下，醫療費、病假錢（4日×每日$600）、仲有索償精神損失……埋單成 $15,000。之後我先知道，兩年期嘅保險都係 $3,000 有找。為慳 $3,000 蝕 $15,000，呢啲教訓真係一次就夠。
+    </div>
+
+    <h2 id="premium">3️⃣ 保費點樣計算？要俾幾錢？</h2>
+
+    <p>僱員補償保險嘅保費好視乎幾個因素。以下係一般情況俾你參考：</p>
+
+    <h3>影響保費嘅因素</h3>
+    <table>
+      <tr><th>因素</th><th>說明</th></tr>
+      <tr><td>工種風險評級</td><td>文職（最低）→ 零售/飲食（中等）→ 地盤/裝修（最高）</td></tr>
+      <tr><td>年薪總額</td><td>保費 = 年薪 × 保費率，年薪越高保費越高</td></tr>
+      <tr><td>索償紀錄</td><td>過去有工傷索償紀錄嘅公司，保費率會上調</td></tr>
+      <tr><td>墊底費（自付額）</td><td>揀較高墊底費可以降低保費</td></tr>
+      <tr><td>員工人數</td><td>人數越多，整體保費越高，但人均保費可能因議價而降低</td></tr>
+    </table>
+
+    <h3>保費大約幾多？（參考價錢）</h3>
+    <table>
+      <tr><th>工種</th><th>年薪 HK$</th><th>保費率</th><th>年保費（約）</th></tr>
+      <tr><td>文職（Office）</td><td>$180,000（月薪$15K）</td><td>1-3%</td><td>$1,800 - $5,400</td></tr>
+      <tr><td>零售/服務業</td><td>$180,000</td><td>3-5%</td><td>$5,400 - $9,000</td></tr>
+      <tr><td>飲食業（廚房）</td><td>$180,000</td><td>5-8%</td><td>$9,000 - $14,400</td></tr>
+      <tr><td>地盤/裝修</td><td>$240,000（月薪$20K）</td><td>8-12%</td><td>$19,200 - $28,800</td></tr>
+    </table>
+
+    <div class="callout-info">
+      <strong>💡 慳保費小貼士：</strong> 同一個行業，唔同保險公司嘅報價可以相差 30-50%。每年續保時叫經紀幫你 quote 最少 3 間公司比較。另外，一間保險公司如果包埋你嘅勞保同財產保險，通常有打包折扣。
+    </div>
+
+    <h2 id="claim">4️⃣ 工傷發生後嘅申報流程</h2>
+
+    <p>員工工傷如果申報唔啱程序，有機會影響索償，甚至俾勞工處罰。以下係標準流程：</p>
+
+    <h3>Step 1：即時處理（受傷當日）</h3>
+    <ul>
+      <li>確保員工得到即時醫療照顧</li>
+      <li>記錄意外經過（時間、地點、原因、涉事工具/機器）</li>
+      <li>保留現場證據（影相、錄影、保存相關物品）</li>
+      <li>索取醫生紙，寫明「工傷/職業病」</li>
+    </ul>
+
+    <h3>Step 2：向保險公司申報（受傷後 7 日內）</h3>
+    <ul>
+      <li>通知你嘅保險公司或經紀</li>
+      <li>填寫保險公司嘅工傷申報表</li>
+      <li>提供醫生證明、意外報告</li>
+      <li>保險公司會指派公證行調查</li>
+    </ul>
+
+    <h3>Step 3：向勞工處書面通知（14 日內）</h3>
+    <ul>
+      <li>如工傷導致喪失工作能力超過 3 天，或導致死亡，僱主必須在 <strong>14 天內</strong>向勞工處提交書面通知</li>
+      <li>使用勞工處指定嘅「表格 2」（Form 2）</li>
+      <li>可以親身遞交、郵寄或經勞工處網站提交</li>
+      <li>通知內容：僱主同僱員資料、意外詳情、工傷性質、醫生評估</li>
+    </ul>
+
+    <div class="callout-warning">
+      <strong>⚠️ 逾期申報：</strong> 如果超過 14 日先通知勞工處，可被罰款 HK$5,000。如果故意唔申報，罰則更重。
+    </div>
+
+    <h3>Step 4：跟進同賠償</h3>
+    <ul>
+      <li>保險公司嘅公證行會評估傷勢，決定賠償金額</li>
+      <li>賠償包括：醫療費、病假錢（工傷假嘅 4/5 人工）、永久傷殘賠償、死亡賠償</li>
+      <li>如果員工唔滿意賠償，可以向勞工處或法院申請評定</li>
+      <li>賠償通常由保險公司直接俾員工，但你身為僱主都要配合提供文件</li>
+    </ul>
+
+    <h3>工傷賠償金額參考</h3>
+    <table>
+      <tr><th>賠償項目</th><th>金額（參考）</th></tr>
+      <tr><td>病假錢</td><td>工傷假期間嘅 4/5 日薪，上限 HK$1,150/日（2026年）</td></tr>
+      <tr><td>永久傷殘</td><td>按年齡同傷殘百分比計算，最高 96 個月收入</td></tr>
+      <tr><td>死亡賠償</td><td>最高 HK$564,000（2026年）<br>另加殯殮費最高 HK$97,440</td></tr>
+      <tr><td>醫療費</td><td>住院每日 HK$370（最多 180 日）<br>門診每日 HK$370（最多 120 次）</td></tr>
+    </table>
+
+    <h2 id="traps">5️⃣ 常見漏投保陷阱（我中過嘅伏）</h2>
+
+    <h3>陷阱一：以為文職唔使買保險</h3>
+    <p>最多人中。法律上冇「文職豁免」呢回事。文職員工搬文件、行樓梯、甚至碌親椅都可以構成工傷。法例要求係「所有僱員」，冇分工種。</p>
+
+    <h3>陷阱二：漏報兼職同臨時工</h3>
+    <p>好多 SME 東主覺得兼職返幾日唔使報，或者叫員工簽「放棄保險同意書」。呢啲同意書係<strong>冇法律效力</strong>嘅。勞工處一查，你仍然要負責。</p>
+
+    <h3>陷阱三：買唔夠最低投保額</h3>
+    <p>由 2025 年起，香港僱員補償保險嘅最低投保額已提高至 <strong>HK$100,000,000（一億）</strong> 每宗事故。如果你仲買緊舊嘅 HK$200,000,000（兩億，即係更高）或低額度保單，要 check 清楚係咪符合最新要求。</p>
+
+    <div class="callout-danger">
+      <strong>🚨 我中過嘅一個伏：</strong> 幾年前我幫公司續保嗰陣冇 check 投保額，仲用緊舊嘅 HK$200,000,000 保單（兩億，舊標準）。但其實 2025 年法例已更新最低要求係一億，額度係夠嘅。但真正嘅問題係——我買嘅保險計劃係「總限額」而唔係「每宗事故限額」。結果真係有員工工傷索償，先發現如果多過一宗工傷同時發生，總限額好快用晒。自此之後我一定睇清楚係「每宗事故」定「總限額」。
+    </div>
+
+    <h3>陷阱四：員工身份變更咗冇通知保險公司</h3>
+    <p>員工由兼職轉全職、加人工、轉工種（例如由文職轉做 driver），都要通知保險公司。如果冇通知，索償時保險公司可以因為「風險因素改變」而拒絕賠償。</p>
+
+    <h3>陷阱五：公司同子公司/關聯公司員工調派</h3>
+    <p>如果你有幾間公司，員工喺唔同實體之間調派，要確保每一間公司都有為該員工投保。否則調派期間發生意外，冇買保險嗰間公司要負責。</p>
+
+    <h3>陷阱六：誤以為工程「判頭」負責員工保險</h3>
+    <p>如果你係工程總承辦商，判頭嘅員工受傷，最終業主同總承辦商都可能要負連帶責任。唔好以為判咗俾人就唔關你事。總承辦商必須確保所有分判商都有買足夠嘅勞保。</p>
+
+    <h2 id="penalty">6️⃣ 罰則同法律責任</h2>
+
+    <p>唔好睇少違規嘅後果。以下係真實嘅罰則：</p>
+
+    <table>
+      <tr><th>違規事項</th><th>罰則</th></tr>
+      <tr><td>冇按規定投購僱員補償保險</td><td>最高罰款 $100,000 + 監禁 2 年</td></tr>
+      <tr><td>沒有張貼保險通告</td><td>最高罰款 $10,000</td></tr>
+      <tr><td>沒有在 14 天內申報工傷</td><td>最高罰款 $5,000</td></tr>
+      <tr><td>提供虛假資料</td><td>最高罰款 $50,000 + 監禁 1 年</td></tr>
+      <tr><td>冇保存保險單紀錄（至少保存 2 年）</td><td>最高罰款 $10,000</td></tr>
+    </table>
+
+    <div class="callout-danger">
+      <strong>⚠️ 勞工處近年執法力度：</strong> 2024 年勞工處發出超過 450 張與僱員補償保險有關嘅傳票；2025 年超過 500 張。勞工處亦會突擊巡查高風險行業。唔好以為唔會查到上門。
+    </div>
+
+    <p>除咗罰款之外，冇買保險嘅僱主仲要<strong>承擔全數工傷賠償</strong>——包括醫療費、病假錢、永久傷殘賠償、死亡賠償等，隨時幾十萬甚至過百萬。而且即使你事後立即買返保險，都要補償由意外發生到買保險期間嘅所有費用。</p>
+
+    <!-- ═══════════════ FAQ Section ═══════════════ -->
+    <h2 id="faq">❓ 常見問題 FAQ</h2>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>僱員補償保險同醫療保險有咩分別？</summary>
+        <p>僱員補償保險（勞保）係法定要求，保障員工因工受傷或患上職業病。醫療保險（團體醫保）係自願性額外福利，保障非工傷嘅疾病或意外。兩者唔可以互相取代。公司有買團體醫保並唔代表可以唔買勞保。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>保險通告係咩？一定要貼？</summary>
+        <p>係，一定要。根據法例，僱主必須喺工作場所顯眼位置張貼「僱員補償保險通告」，載明保險公司名稱、保單編號、保障範圍、投保額等資料。冇張貼可被罰款 $10,000。一般保險公司會俾埋張通告你。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>如果員工返工途中受傷算唔算工傷？</summary>
+        <p>部分情況下算。如果員工喺正常返工或放工嘅直接路線上（唔包括中途去買餸、去銀行等個人事務）發生意外而受傷，或乘坐公司提供的交通工具時受傷，都屬於可獲賠償嘅範圍。但如果員工喺途中故意冒險或自殺則不獲賠償。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>僱員補償保險可以喺邊度買？</summary>
+        <p>可以經保險經紀或直接向保險公司購買。香港有超過 20 間保險公司提供僱員補償保險，包括：AXA、Zurich、Liberty、China Insurance、AIG 等。建議透過經紀報價，可以一次過比較多間公司嘅保費同條款。SME 東主可以考慮專為中小企設計嘅勞保計劃。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>公司得我一個東主（冇員工），需要買僱員補償保險嗎？</summary>
+        <p>如果你係唯一東主，公司冇僱用任何其他員工（包括兼職），你本人唔需要為自己買僱員補償保險。但要注意：如果你係有限公司嘅唯一董事兼股東，但公司有請其他員工（即使只係一個兼職），就一定要買。另外，如果你請咗屋企人幫手（即使冇出糧），都可能被視為僱傭關係。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>買咗保險之後，員工人數變咗要點做？</summary>
+        <p>需要通知保險公司或經紀，因為保費係按年薪總額同員工人數計算嘅。員工人數增加或減少、員工轉工種、加人工等，都要 update 保險公司。否則索償時保險公司有權按比例扣減賠償（因為你俾少咗保費）。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>保險公司拒絕賠償嘅常見原因係咩？</summary>
+        <p>常見原因包括：僱主投保時冇披露重要事實（例如冇話俾保險公司知工種係高風險）、員工身份與申報不符、工傷並非喺工作期間發生、僱主冇準時申報工傷。所以投保時一定要如實申報所有員工嘅工作性質同範圍。</p>
+      </details>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════ Related Products CTA ═══════════════ -->
+  <div class="mt-10 bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+    <div class="text-center">
+      <h3 class="text-xl font-bold gov-navy">📘 仲有其他公司合規問題？</h3>
+      <p class="text-gray-600 mt-2">由真實經歷者分享，一文搞清公司秘書、報稅及勞工法例要求</p>
+      <div class="flex flex-wrap justify-center gap-3 mt-4">
+        <a href="/significant-controllers-register/" class="inline-block bg-navy text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">📋 SCR 終極指南 →</a>
+        <a href="/blog/香港公司暫繳稅終極指南2026.html" class="inline-block bg-navy text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">💰 睇埋：暫繳稅指南 2026 →</a>
+        <a href="/" class="inline-block border border-gov-navy text-gov-navy px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition">🏠 返回首頁</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Article Footer ═══════════════ -->
+  <div class="mt-6 bg-white rounded-xl shadow-sm p-6 border border-gray-100 text-center">
+    <p class="text-gray-500 text-sm">本文章內容僅供一般參考，並不構成法律或專業意見。如有具體情況，建議諮詢執業會計師或律師。投保詳情請向持牌保險經紀查詢。</p>
+    <hr class="my-4">
+    <p class="text-sm text-gray-500">© 2026 ESGov — 香港公司秘書及合規文件指南平台</p>
+    <div class="flex flex-wrap justify-center gap-4 mt-3">
+      <a href="https://esgov.org/blog/香港公司重要控制人登記冊SCR終極指南.html" class="text-gold font-semibold hover:underline">📘 睇埋：SCR 終極指南</a>
+      <a href="https://esgov.org/blog/香港公司暫繳稅終極指南2026.html" class="text-gold font-semibold hover:underline">💰 睇埋：暫繳稅終極指南 2026</a>
+      <a href="https://esgov.org/blog/foreigner-guide-hk-company-setup.html" class="text-gold font-semibold hover:underline">🌏 睇埋：外國人香港開公司指南</a>
+    </div>
+  </div>
+
+</div>
+
+  <!-- Auto-added: related tool links -->
+  <div class="max-w-3xl mx-auto px-4 mt-10 mb-8">
+    <div class="bg-navy/5 border border-navy/10 rounded-xl p-6">
+      <h3 class="text-lg font-bold text-navy mb-4">📍 相關免費工具</h3>
+      <div class="space-y-3">
+        <a href="/significant-controllers-register/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📋 ESGov 重要控制人登記冊 (SCR) 完整指南 + Generator</a>
+        <a href="https://esgov.org/nar1-generator/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📋 ESGov NAR1 周年申報表 PDF 填寫工具</a>
+        <a href="https://esgov.org/shareholder-transfer/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📄 免費使用 ESGov 股份轉讓文件生成工具</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

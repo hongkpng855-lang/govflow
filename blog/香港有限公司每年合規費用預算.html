@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESGov | 香港有限公司每年合規 Checklist + 費用預算 — 由開公司到解散每年要俾幾多錢？2026</title>
+<meta name="description" content="香港有限公司每年合規費用總覽：Annual Return $105、商業登記 $2,150、核數 $5,000-15,000、報稅、SCR 保存、公司秘書費。Checklist 整合所有使費，由開公司到解散每年要俾幾多錢一目了然。東主必讀嘅成本預算指南。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gold { color: #C9A84C; }
+  .border-gold { border-color: #C9A84C; }
+  .hover:bg-gold/90 { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  .cost-total { font-size: 2rem; font-weight: 800; color: #1B2A4A; }
+  .cost-label { font-size: 0.9rem; color: #666; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"有限公司每年最低要俾幾多錢合規費用？","acceptedAnswer":{"@type":"Answer","text":"最基本每年最少約 $3,800：Annual Return 政府費 $105 + 商業登記費 $2,150 + 公司秘書費 $800-2,000 + 註冊地址費 $0-2,000。未計核數費（$5,000起）同埋其他雜費。實際開銷一般 $8,000 - $30,000/年。"}},
+    {"@type":"Question","name":"Annual Return 同商業登記係咪同一樣嘢？","acceptedAnswer":{"@type":"Answer","text":"唔係。Annual Return（周年申報表 NAR1）係向公司註冊處提交，費用 $105；商業登記（BR）係向稅務局轄下商業登記署申請續期，費用 $2,150/年。兩者係獨立嘅法定要求，分開俾錢、分開 deadline。"}},
+    {"@type":"Question","name":"有限公司可以唔做審計（核數）嗎？","acceptedAnswer":{"@type":"Answer","text":"除咗「不活躍公司」（Dormant Company）可以向公司註冊處申請豁免外，所有有限公司每年都必須進行審計。唔做核數係違反《公司條例》，最高罰款 $150,000。小型公司核數費約 $5,000-8,000。"}},
+    {"@type":"Question","name":"公司秘書一定要請人做？可唔可以自己搞？","acceptedAnswer":{"@type":"Answer","text":"私人有限公司可以自己董事做公司秘書（除非只有一位董事兼唯一股東），但好多東主 choose 外判俾專業秘書公司，費用 $800-2,000/年。外判嘅好處係確保合規文件按時處理，避免唔小心漏 deadline。"}},
+    {"@type":"Question","name":"解散公司要幾多錢？","acceptedAnswer":{"@type":"Answer","text":"撤銷註冊（Dissolution by Strike Off）政府費 $420，律師/會計師收費約 $3,000-8,000。如果經清盤程序（Winding Up），費用由 $15,000 起，視乎公司規模同負債情況。"}}
+  ]
+}
+</script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港有限公司每年合規費用預算" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司每年合規費用預算" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <meta property="og:title" content="ESGov | 香港有限公司每年合規 Checklist + 費用預算 — 由開公司到解散每年要俾幾多錢？2026" />
+  <meta property="og:description" content="香港有限公司每年合規費用總覽：Annual Return $105、商業登記 $2,150、核數 $5,000-15,000、報稅、SCR 保存、公司秘書費。Checklist 整合所有使費，東主必讀嘅成本預算指南。" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+  </head>
+<body>
+
+<!-- Navigation -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+<div class="max-w-4xl mx-auto px-4 pt-20 pb-12">
+
+  <!-- Header -->
+  <header class="text-center mb-10">
+    <div class="text-sm text-gold font-semibold mb-2">💰 公司合規成本必修課</div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold gov-navy leading-tight">香港有限公司每年合規 Checklist + 費用預算</h1>
+    <p class="text-lg text-gray-600 mt-3">由開公司到解散，每年到底要俾幾多錢？逐項拆畀你睇</p>
+    <div class="flex justify-center items-center gap-4 mt-4 text-sm text-gray-500">
+      <span>📅 2026 年 6 月 13 日</span>
+      <span>⏱ 約 12 分鐘閱讀</span>
+      <span>👤 ESGov 編輯部</span>
+    </div>
+  </header>
+
+  <!-- ═══════════════ Total Cost Banner ═══════════════ -->
+  <div class="bg-navy text-white rounded-xl p-6 mb-8 text-center shadow-lg">
+    <p class="text-sm font-semibold text-gold">📊 2026 年預算速覽</p>
+    <div class="flex justify-center items-baseline gap-2 mt-2">
+      <span class="cost-total text-gold">$3,800</span>
+      <span class="text-gray-300">最 basic 每年開支（未計核數）</span>
+    </div>
+    <p class="text-2xl font-extrabold text-white mt-1">$8,000 – $30,000</p>
+    <p class="text-sm text-gray-300 mt-1">一般營運公司每年合規總使費</p>
+    <p class="text-xs text-gray-400 mt-2">視乎公司規模、交易量、核數複雜程度</p>
+  </div>
+
+  <!-- ═══════════════ Table of Contents ═══════════════ -->
+  <div class="bg-white rounded-xl shadow-sm p-6 mb-8 border border-gray-100">
+    <h2 class="text-xl font-bold gov-navy mb-4">📑 本文目錄</h2>
+    <ul class="space-y-2">
+      <li><a href="#overview" class="toc-item text-gray-700 hover:text-gold">1️⃣ 一年合規開支總覽</a></li>
+      <li><a href="#annual-return" class="toc-item text-gray-700 hover:text-gold">2️⃣ 周年申報表 Annual Return（NAR1）$105</a></li>
+      <li><a href="#br" class="toc-item text-gray-700 hover:text-gold">3️⃣ 商業登記續期（BR）$2,150</a></li>
+      <li><a href="#audit" class="toc-item text-gray-700 hover:text-gold">4️⃣ 審計核數費 $5,000 – $15,000</a></li>
+      <li><a href="#tax" class="toc-item text-gray-700 hover:text-gold">5️⃣ 利得稅報稅（Profits Tax）</a></li>
+      <li><a href="#scr" class="toc-item text-gray-700 hover:text-gold">6️⃣ SCR 重要控制人登記冊</a></li>
+      <li><a href="#cs" class="toc-item text-gray-700 hover:text-gold">7️⃣ 公司秘書費 $800 – $2,000/年</a></li>
+      <li><a href="#address" class="coc-item text-gray-700 hover:text-gold">8️⃣ 註冊地址費 $0 – $2,000/年</a></li>
+      <li><a href="#other" class="toc-item text-gray-700 hover:text-gold">9️⃣ 其他雜項使費</a></li>
+      <li><a href="#dissolve" class="toc-item text-gray-700 hover:text-gold">🔟 解散公司費用 $420 + 專業費</a></li>
+      <li><a href="#checklist" class="toc-item text-gray-700 hover:text-gold">✅ 年度合規 Checklist</a></li>
+      <li><a href="#hub" class="toc-item text-gray-700 hover:text-gold">📚 相關指南總目錄</a></li>
+      <li><a href="#faq" class="toc-item text-gray-700 hover:text-gold">❓ 常見問題 FAQ</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════ Content ═══════════════ -->
+  <div class="prose-custom bg-white rounded-xl shadow-sm p-6 sm:p-8 border border-gray-100">
+
+    <div class="callout-danger">
+      <strong>🚨 一個真實故事先：</strong> 我有個朋友開咗間貿易公司，第一年好順利，以為每年淨係俾 $105 Annual Return 就得。結果第二年收到商業登記署既續期通知先知仲要俾 $2,150，報稅季核數報價 $8,000，公司秘書費 $1,500。佢話：「早知一年要俾成萬蚊 maintaining，我計好晒 budget 先開公司。」呢篇文就係為咗唔想你同佢一樣 — 由頭到尾計清楚每年要俾嘅每一分錢。
+    </div>
+
+    <h2 id="overview">1️⃣ 一年合規開支總覽</h2>
+
+    <p>好多人開公司之前淨係諗「成立公司 $3,000 搞掂」，但完全冇諗過每年嘅維持成本。以下係一間典型小型貿易/服務公司嘅每年合規開支拆解：</p>
+
+    <table>
+      <tr><th>項目</th><th>費用範圍（每年）</th><th>Deadline</th><th>必須/可選</th></tr>
+      <tr><td>周年申報表（Annual Return NAR1）</td><td>$105</td><td>公司成立周年日後 42 日內</td><td>✅ 必須</td></tr>
+      <tr><td>商業登記續期（BR Renewal）</td><td>$2,150</td><td>BR 到期前 1 個月</td><td>✅ 必須</td></tr>
+      <tr><td>審計核數</td><td>$5,000 – $15,000</td><td>財政年度結束後 6 個月內</td><td>✅ 必須*</td></tr>
+      <tr><td>利得稅報稅</td><td>$0 – $2,000（代理費）</td><td>收到報稅表 1 個月內</td><td>✅ 必須</td></tr>
+      <tr><td>公司秘書服務</td><td>$800 – $2,000</td><td>—</td><td>✅ 必須有秘書</td></tr>
+      <tr><td>註冊地址服務</td><td>$0 – $2,000</td><td>—</td><td>✅ 必須有地址</td></tr>
+      <tr><td>SCR 保存</td><td>$0（自己做）/$800-1,500（外判）</td><td>—</td><td>✅ 必須</td></tr>
+      <tr><td>重要控制人登記冊更新</td><td>$0（自己做）</td><td>股權變更後即時</td><td>✅ 必須</td></tr>
+    </table>
+
+    <p class="text-sm text-gray-500">* 不活躍公司（Dormant）可申請豁免核數，條件嚴格。</p>
+
+    <div class="callout-warning">
+      <strong>⚠️ 重要提醒：</strong> 以上為基本維持成本。如果公司有物業、有員工、有跨境交易、或者營業額較高，費用會相應增加。遲交 Annual Return 或 BR 會有附加費，嚴重嘅會被罰款甚至被檢控。
+    </div>
+
+    <h2 id="annual-return">2️⃣ 周年申報表 Annual Return（NAR1）— $105</h2>
+
+    <p><strong>費用：$105（政府費）</strong></p>
+    <p>Annual Return 係公司註冊處嘅周年申報，填報公司基本資料（股東、董事、秘書、註冊地址等）。每年公司成立周年日後 <strong>42 日內</strong> 必須提交。</p>
+
+    <h3>遲交罰款</h3>
+    <table>
+      <tr><th>遲交時間</th><th>附加費</th></tr>
+      <tr><td>42 日 – 3 個月</td><td>$870</td></tr>
+      <tr><td>3 – 6 個月</td><td>$1,740</td></tr>
+      <tr><td>6 – 9 個月</td><td>$2,610</td></tr>
+      <tr><td>超過 9 個月</td><td>$3,480</td></tr>
+    </table>
+
+    <div class="callout-info">
+      <strong>💡 慳錢貼士：</strong> ESGov 有免費嘅 NAR1 填寫工具，可以幫你自動生成 PDF，慳返俾秘書公司填 form 嘅錢。<a href="https://esgov.org/nar1-generator/" class="text-gold font-semibold">👉 免費使用 NAR1 Generator</a>
+    </div>
+
+    <h2 id="br">3️⃣ 商業登記續期（BR）— $2,150</h2>
+
+    <p><strong>費用：$2,150/年（2026 年度）</strong></p>
+    <p>商業登記證（Business Registration）係由稅務局轄下嘅商業登記署發出，每年到期要續期。費用同 Annual Return 係分開俾嘅，好多人撈亂咗。</p>
+
+    <p>如果公司有多個業務場所，每個地址都要獨立申請商業登記。分行登記費 $350/年。</p>
+
+    <div class="callout-warning">
+      <strong>⚠️ 注意：</strong> 商業登記到期前約 1 個月，商業登記署會寄續期通知信到公司註冊地址。如果你用虛擬辦公室，一定要確保可以收到信。漏咗續期會罰款 $5,000 或者監禁 1 年。
+    </div>
+
+    <p>👉 詳細教學：<a href="https://esgov.org/blog/%E5%95%86%E6%A5%AD%E7%99%BB%E8%A8%98%E7%BA%8C%E6%9C%9F%E5%85%A8%E6%94%BB%E7%95%A5.html" class="text-gold font-semibold">商業登記續期全攻略</a></p>
+
+    <h2 id="audit">4️⃣ 審計核數費 — $5,000 – $15,000</h2>
+
+    <p><strong>費用範圍：$5,000（極簡公司）– $15,000+（複雜公司）</strong></p>
+    <p>除咗「不活躍公司」（Dormant Company）之外，所有有限公司每年都要做審計。核數費用取決於以下因素：</p>
+
+    <ul>
+      <li><strong>交易量：</strong> 銀行月結單有幾多條數？每月 10 條同每月 1,000 條，功夫差好遠</li>
+      <li><strong>收入規模：</strong> 營業額 $100 萬 vs $1,000 萬，核數費當然唔同</li>
+      <li><strong>行業複雜度：</strong> 貿易公司有存貨、有跨境交易，比單純服務公司貴</li>
+      <li><strong>會計紀錄質素：</strong> 自己做好盤數定係俾一疊單據會計師搞？後者貴好多</li>
+    </ul>
+
+    <table>
+      <tr><th>公司類別</th><th>估計核數費</th></tr>
+      <tr><td>極小型公司（營業額 <$100 萬，交易少）</td><td>$5,000 – $8,000</td></tr>
+      <tr><td>小型公司（營業額 $100-500 萬）</td><td>$8,000 – $12,000</td></tr>
+      <tr><td>中型公司（營業額 $500-2,000 萬）</td><td>$12,000 – $25,000</td></tr>
+      <tr><td>大型/複雜公司（營業額 >$2,000 萬）</td><td>$25,000+</td></tr>
+    </table>
+
+    <div class="callout-success">
+      <strong>💡 慳錢方法：</strong> 平時用會計軟件（如 Xero、Wave）記好晒數，年尾俾整齊嘅財務報表核數師，可以慳返 30-50% 核數費。如果公司係真正嘅「不活躍」（冇任何銀行交易），可以申請 Dormant Company 豁免核數。
+    </div>
+
+    <p>👉 詳細教學：<a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%88%A9%E5%BE%97%E7%A8%85%E5%A0%B1%E7%A8%85%E5%8F%8A%E5%AF%A9%E8%A8%88%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">利得稅報稅及審計完整指南</a></p>
+
+    <h2 id="tax">5️⃣ 利得稅報稅（Profits Tax）</h2>
+
+    <p><strong>費用：$0（自己做）/ $1,000-2,000（會計師代辦）</strong></p>
+    <p>每年 4 月稅務局會向公司發出利得稅報稅表（BIR51/BIR52），連同 IR1479 等補充表格。首次報稅嘅公司收到報稅表後有 <strong>3 個月</strong> 時間申報，其後每年係 <strong>1 個月</strong>。</p>
+
+    <h3>利得稅稅率（2026 年度）</h3>
+    <table>
+      <tr><th>情況</th><th>稅率</th></tr>
+      <tr><td>首 $200 萬應評稅利潤（中小企）</td><td>8.25%（利得稅兩級制）</td></tr>
+      <tr><td>超過 $200 萬嘅利潤</td><td>16.5%</td></tr>
+      <tr><td>合資格離岸 claim（如適用）</td><td>0%（需申請 Offshore Claim）</td></tr>
+    </table>
+
+    <p>👉 相關指南：<a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%A0%B1%E7%A8%85%E5%AF%A6%E6%88%B0%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">第一次報稅實戰指南</a> | <a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%8F%B8%E9%9B%A2%E5%B2%B8%E5%88%A9%E5%BE%97%E7%A8%85%E7%94%B3%E5%A0%B1OffshoreClaim%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">離岸利得稅申報指南</a></p>
+
+    <h2 id="scr">6️⃣ SCR 重要控制人登記冊</h2>
+
+    <p><strong>費用：$0（自己整）/ $800-1,500/年（外判俾秘書公司）</strong></p>
+    <p>SCR 係法定文件，唔需要每年俾錢 renew，但係需要保持更新。每次股權變動都要 update。如果完全自己處理，成本係 $0。</p>
+
+    <div class="callout-info">
+      <strong>📋 免費資源：</strong> ESGov 有完整嘅 SCR 指南同 template，可以免費使用。<a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%8F%B8%E9%87%8D%E8%A6%81%E6%8E%A7%E5%88%B6%E4%BA%BA%E7%99%BB%E8%A8%98%E5%86%8ASCR%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">👉 睇 SCR 終極指南</a>
+    </div>
+
+    <h2 id="cs">7️⃣ 公司秘書費 — $800 – $2,000/年</h2>
+
+    <p><strong>費用：$800 – $2,000/年（外判）/ $0（自己做，如符合資格）</strong></p>
+    <p>每間有限公司必須有公司秘書。如果你係私人有限公司，可以有以下選擇：</p>
+    <ul>
+      <li><strong>自己做：</strong> 如果你有另一位董事，你可以委任自己做公司秘書。但如果公司只有你一位董事兼唯一股東，你唔可以做公司秘書，必須委任其他人或外判。</li>
+      <li><strong>外判俾秘書公司：</strong> 費用 $800-2,000/年，視乎服務範圍。包括：準備周年申報表、更新 SCR、安排董事會議紀錄、通知公司註冊處變更等。</li>
+    </ul>
+
+    <p>👉 詳細比較：<a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%8F%B8%E7%A7%98%E6%9B%B8%E6%9C%8D%E5%8B%99vsDIY%E7%B5%82%E6%A5%B5%E6%AF%94%E8%BC%83.html" class="text-gold font-semibold">公司秘書服務 vs DIY 終極比較</a></p>
+
+    <h2 id="address">8️⃣ 註冊地址費 — $0 – $2,000/年</h2>
+
+    <p><strong>費用：$0（用自己地址）/ $800-2,000/年（虛擬辦公室）</strong></p>
+    <p>如果你係在家創業（Home Office），可以直接用屋企地址做註冊地址，費用 $0。如果唔想公開住址，可以租用虛擬辦公室服務，費用約 $800-2,000/年。</p>
+
+    <p>注意：公司註冊地址必須係一個有效嘅香港地址，能夠收到政府信件。唔可以用 PO Box。</p>
+
+    <h2 id="other">9️⃣ 其他雜項使費</h2>
+
+    <p>除咗以上主要項目，以下都係可能要俾嘅錢：</p>
+
+    <table>
+      <tr><th>項目</th><th>費用</th><th>頻率</th></tr>
+      <tr><td>公司印章（Company Chop）</td><td>$200 – $500</td><td>一次性（如有需要）</td></tr>
+      <tr><td>股份轉讓（Stamp Duty）</td><td>$5 + 0.26% 轉讓金額</td><td>有轉讓時</td></tr>
+      <tr><td>更改公司名稱</td><td>$295（政府費）</td><td>需要時</td></tr>
+      <tr><td>董事變更通知</td><td>$0（自己做）/ $500-1,000（代理）</td><td>需要時</td></tr>
+      <tr><td>公司查冊（自己查自己公司）</td><td>$30-60</td><td>需要時</td></tr>
+      <tr><td>會計軟件訂閱</td><td>$0-300/月</td><td>每月</td></tr>
+      <tr><td>銀行戶口維護費</td><td>$0-200/月</td><td>每月（視乎銀行）</td></tr>
+    </table>
+
+    <h2 id="dissolve">🔟 解散公司費用 — $420 + 專業費</h2>
+
+    <p>如果你嘅公司已經唔再營運，正式解散可以避免每年繼續俾維持費同埋法律責任。</p>
+
+    <h3>撤銷註冊（Strike Off）— 最平嘅解散方式</h3>
+    <table>
+      <tr><th>項目</th><th>費用</th></tr>
+      <tr><td>政府申請費</td><td>$420</td></tr>
+      <tr><td>會計師/律師代辦</td><td>$3,000 – $8,000</td></tr>
+      <tr><td>總計</td><td>約 $3,500 – $8,500</td></tr>
+    </table>
+
+    <h3>清盤（Winding Up）— 有負債/複雜情況</h3>
+    <table>
+      <tr><th>項目</th><th>費用</th></tr>
+      <tr><td>成員自願清盤</td><td>$15,000 – $30,000</td></tr>
+      <tr><td>債權人自願清盤</td><td>$30,000+</td></tr>
+      <tr><td>強制清盤（法庭頒令）</td><td>$50,000+</td></tr>
+    </table>
+
+    <div class="callout-warning">
+      <strong>⚠️ 注意：</strong> 如果公司一直唔營運但唔解散，每年仍然要交商業登記費 $2,150 同埋做 Annual Return $105。就算公司冇收入，遲交 Annual Return 一樣會罰款。最好嘅做法係：如果確認公司唔再用，盡快正式解散。
+    </div>
+
+    <p>👉 詳細教學：<a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B8%85%E7%9B%A4%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">香港有限公司清盤終極指南</a></p>
+
+    <!-- ═══════════════ Annual Checklist ═══════════════ -->
+    <h2 id="checklist">✅ 年度合規 Checklist（月份建議）</h2>
+
+    <p>以下係一個典型嘅「每年合規時間表」，唔想你 miss 任何一個 deadline：</p>
+
+    <table>
+      <tr><th>時間</th><th>要做嘅事項</th><th>預算</th></tr>
+      <tr><td>每年公司成立周年日 +42 日內</td><td>提交 Annual Return（NAR1）</td><td>$105</td></tr>
+      <tr><td>商業登記到期前 1 個月</td><td>續期商業登記證（BR）</td><td>$2,150</td></tr>
+      <tr><td>財政年度結束後 6 個月內</td><td>完成審計核數</td><td>$5,000-15,000</td></tr>
+      <tr><td>收到報稅表後 1 個月內</td><td>申報利得稅</td><td>$0-2,000</td></tr>
+      <tr><td>每次股權變動後</td><td>更新 SCR 同股東名冊</td><td>$0</td></tr>
+      <tr><td>每半年</td><td>檢查法定紀錄是否完整</td><td>$0</td></tr>
+      <tr><td>每年一次</td><td>檢討公司秘書服務續約</td><td>$800-2,000</td></tr>
+      <tr><td>如公司不再營運</td><td>考慮正式解散</td><td>$420+</td></tr>
+    </table>
+
+    <div class="callout-success">
+      <strong>✅ 免費資源：</strong> ESGov 有<a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%90%88%E8%A6%8F%E6%99%82%E9%96%93%E8%A1%A8%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">合規時間表終極指南</a>，你可以下載嚟做自己公司嘅 reminder。
+    </div>
+
+    <!-- ═══════════════ Hub Page ═══════════════ -->
+    <h2 id="hub">📚 ESGov 公司合規指南總目錄</h2>
+
+    <p>以下係 ESGov 所有相關指南嘅 hub 頁面，由成立公司到解散全部涵蓋。每一篇都係由真實經驗整理，幫你慳錢又慳時間：</p>
+
+    <div class="callout-info">
+      <strong>📖 新手必讀系列</strong>
+    </div>
+    <ul>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E9%96%8B%E5%85%AC%E5%8F%B8%E5%95%86%E7%AB%8B%E8%A8%BB%E5%86%8A%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%972026.html" class="text-gold font-semibold">🏢 香港有限公司開公司設立註冊終極指南 2026</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%AF%8F%E5%B9%B4%E5%90%88%E8%A6%8F%E8%B2%BB%E7%94%A8%E9%A0%90%E7%AE%97.html" class="text-gold font-semibold">💰 香港有限公司每年合規費用預算（👈 你正喺度睇緊呢篇）</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%90%88%E8%A6%8F%E6%99%82%E9%96%93%E8%A1%A8%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">📅 香港有限公司合規時間表終極指南</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E9%81%95%E5%8F%8D%E5%85%AC%E5%8F%B8%E6%A2%9D%E4%BE%8B%E7%BD%B0%E5%89%87%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">⚖️ 香港有限公司違反公司條例罰則終極指南</a></li>
+    </ul>
+
+    <div class="callout-info">
+      <strong>📋 法定文件與紀錄</strong>
+    </div>
+    <ul>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B3%95%E5%AE%9A%E7%B4%80%E9%8C%84StatutoryRecords%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">📁 香港有限公司法定紀錄 Statutory Records 終極指南</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%8F%B8%E9%87%8D%E8%A6%81%E6%8E%A7%E5%88%B6%E4%BA%BA%E7%99%BB%E8%A8%98%E5%86%8ASCR%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">🔍 香港公司重要控制人登記冊 SCR 終極指南</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%9B%B4%E6%94%B9%E5%85%AC%E5%8F%B8%E5%90%8D%E7%A8%B1%E6%B5%81%E7%A8%8B2026.html" class="text-gold font-semibold">✏️ 香港有限公司更改公司名稱流程 2026</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B3%A8%E5%86%8A%E5%9C%B0%E5%9D%80%E8%AE%8A%E6%9B%B4%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">📍 香港有限公司註冊地址變更指南</a></li>
+    </ul>
+
+    <div class="callout-info">
+      <strong>💰 稅務與核數</strong>
+    </div>
+    <ul>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%88%A9%E5%BE%97%E7%A8%85%E5%A0%B1%E7%A8%85%E5%8F%8A%E5%AF%A9%E8%A8%88%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">📊 利得稅報稅及審計完整指南</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%A0%B1%E7%A8%85%E5%AF%A6%E6%88%B0%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">📄 第一次報稅實戰指南</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%8F%B8%E6%9A%AB%E7%B9%B3%E7%A8%85%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%972026.html" class="text-gold font-semibold">⏳ 暫繳稅終極指南 2026</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%8F%B8%E9%9B%A2%E5%B2%B8%E5%88%A9%E5%BE%97%E7%A8%85%E7%94%B3%E5%A0%B1OffshoreClaim%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">🌏 離岸利得稅申報 Offshore Claim 終極指南</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%9C%83%E8%A8%88%E8%A8%98%E5%B8%B3%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">🗂️ 會計記帳文件保存指南</a></li>
+    </ul>
+
+    <div class="callout-info">
+      <strong>👥 董事、股東與公司秘書</strong>
+    </div>
+    <ul>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%85%AC%E5%8F%B8%E7%A7%98%E6%9B%B8%E8%81%B7%E8%B2%AC%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">👤 香港有限公司公司秘書職責終極指南</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%8F%B8%E7%A7%98%E6%9B%B8%E6%9C%8D%E5%8B%99vsDIY%E7%B5%82%E6%A5%B5%E6%AF%94%E8%BC%83.html" class="text-gold font-semibold">🔄 公司秘書服務 vs DIY 終極比較</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E8%91%A3%E4%BA%8B%E6%B3%95%E5%BE%8B%E8%B2%AC%E4%BB%BB%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">⚖️ 香港有限公司董事法律責任終極指南</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E8%82%A1%E6%9D%B1%E8%82%A1%E6%AC%8A%E7%B3%BE%E7%B4%9B%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">⚔️ 香港有限公司股東股權糾紛終極指南</a></li>
+    </ul>
+
+    <div class="callout-info">
+      <strong>🔄 股權變動與重組</strong>
+    </div>
+    <ul>
+      <li><a href="https://esgov.org/blog/%E8%BD%89%E8%82%A1%E6%9D%B1%E5%BE%8C%E5%BF%85%E5%81%9A5%E4%BB%B6%E4%BA%8B.html" class="text-gold font-semibold">📋 轉股東後必做 5 件事</a></li>
+      <li><a href="https://esgov.org/blog/share-transfer-mistakes.html" class="text-gold font-semibold">❌ 股份轉讓常見錯誤</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%88%86%E7%B4%85%E6%B4%BE%E6%81%AF%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">💵 香港有限公司分紅派息終極指南</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E8%82%A1%E4%BB%BD%E5%9B%9E%E8%B3%BC%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">🔄 香港有限公司股份回購終極指南</a></li>
+    </ul>
+
+    <div class="callout-info">
+      <strong>🏁 解散與結束</strong>
+    </div>
+    <ul>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B8%85%E7%9B%A4%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">🏁 香港有限公司清盤終極指南</a></li>
+    </ul>
+
+    <div class="callout-info">
+      <strong>🛠️ 其他實用資源</strong>
+    </div>
+    <ul>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E8%91%A3%E4%BA%8B%E8%A4%9B%E9%87%91vs%E8%96%AA%E9%87%91%E7%A8%85%E5%8B%99%E6%AF%94%E8%BC%83%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">👔 董事袍金 vs 薪金稅務比較指南</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%8F%B8%E9%96%8B%E9%8A%80%E8%A1%8C%E6%88%B6%E5%8F%A32026%E5%AF%A6%E6%88%B0%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">🏦 香港公司開銀行戶口 2026 實戰指南</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%95%86%E6%A5%AD%E4%BF%9D%E9%9A%AA%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">🛡️ 香港有限公司商業保險終極指南</a></li>
+      <li><a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%93%A1%E5%B7%A5%E8%82%A1%E6%AC%8A%E6%BF%80%E5%8B%B5%E8%A8%88%E5%8A%83ESOP%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold">🎯 員工股權激勵計劃 ESOP 終極指南</a></li>
+    </ul>
+
+    <!-- ═══════════════ FAQ Section ═══════════════ -->
+    <h2 id="faq">❓ 常見問題 FAQ</h2>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>有限公司每年最低要俾幾多錢合規費用？</summary>
+        <p>最基本每年最少約 $3,800：Annual Return 政府費 $105 + 商業登記費 $2,150 + 公司秘書費 $800-2,000 + 註冊地址費 $0-2,000。未計核數費（$5,000起）同埋其他雜費。實際開銷一般 $8,000 – $30,000/年。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>Annual Return 同商業登記係咪同一樣嘢？</summary>
+        <p>唔係。Annual Return（周年申報表 NAR1）係向公司註冊處提交，費用 $105；商業登記（BR）係向稅務局轄下商業登記署申請續期，費用 $2,150/年。兩者係獨立嘅法定要求，分開俾錢、分開 deadline。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>有限公司可以唔做審計（核數）嗎？</summary>
+        <p>除咗「不活躍公司」（Dormant Company）可以向公司註冊處申請豁免外，所有有限公司每年都必須進行審計。唔做核數係違反《公司條例》，最高罰款 $150,000。小型公司核數費約 $5,000-8,000。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>公司秘書一定要請人做？可唔可以自己搞？</summary>
+        <p>私人有限公司可以自己董事做公司秘書（除非只有一位董事兼唯一股東），但好多東主 choose 外判俾專業秘書公司，費用 $800-2,000/年。外判嘅好處係確保合規文件按時處理，避免唔小心漏 deadline。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>解散公司要幾多錢？</summary>
+        <p>撤銷註冊（Dissolution by Strike Off）政府費 $420，律師/會計師收費約 $3,000-8,000。如果經清盤程序（Winding Up），費用由 $15,000 起，視乎公司規模同負債情況。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>如果公司冇收入，係咪可以唔做 Annual Return？</summary>
+        <p>唔可以。就算公司完全冇營運、冇收入、冇銀行交易，仍然必須每年提交 Annual Return（$105）同續期商業登記（$2,150）。否則係違法。唯一例外係正式申請撤銷註冊或清盤。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>審計報告點解咁貴？有冇平嘅 alternatives？</summary>
+        <p>審計係核數師根據會計準則進行嘅法定審核，需要承擔法律責任，所以費用唔會太「平」。慳錢方法：平時用會計軟件記好數、整理好單據俾核數師，咁可以減低佢哋嘅工時，從而減低費用。真正嘅「不活躍公司」可以申請豁免核數。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>可以用公司秘書公司個地址做註冊地址嗎？</summary>
+        <p>可以，好多中小企都係用秘書公司或者虛擬辦公室嘅地址做註冊地址。費用約 $800-2,000/年。但要注意：你要確保秘書公司會將政府信件（Annual Return 通知、報稅表、商業登記續期信）轉交俾你。如果 miss 咗 deadline，責任係公司嘅，唔係秘書公司嘅。</p>
+      </details>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════ Related Products CTA ═══════════════ -->
+  <div class="mt-10 bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+    <div class="text-center">
+      <h3 class="text-xl font-bold gov-navy">📘 想慳錢自己搞合規？</h3>
+      <p class="text-gray-600 mt-2">免費使用 ESGov 嘅工具，慳返俾秘書公司嘅錢</p>
+      <div class="flex flex-wrap justify-center gap-3 mt-4">
+        <a href="/nar1-generator/" class="inline-block bg-navy text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">📋 NAR1 填寫工具 →</a>
+        <a href="/significant-controllers-register/" class="inline-block bg-navy text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">📋 SCR Generator →</a>
+        <a href="/shareholder-transfer/" class="inline-block bg-navy text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">📄 股份轉讓工具 →</a>
+        <a href="/" class="inline-block border border-gov-navy text-gov-navy px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition">🏠 返回首頁</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Article Footer ═══════════════ -->
+  <div class="mt-6 bg-white rounded-xl shadow-sm p-6 border border-gray-100 text-center">
+    <p class="text-gray-500 text-sm">本文章內容僅供一般參考，並不構成法律或專業意見。費用數字僅供預算參考，實際報價以服務提供者為準。如有具體情況，建議諮詢執業會計師或律師。</p>
+    <hr class="my-4">
+    <p class="text-sm text-gray-500">© 2026 ESGov — 香港公司秘書文件指南平台</p>
+    <div class="flex flex-wrap justify-center gap-4 mt-3">
+      <a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%8F%B8%E7%A7%98%E6%9B%B8%E6%9C%8D%E5%8B%99vsDIY%E7%B5%82%E6%A5%B5%E6%AF%94%E8%BC%83.html" class="text-gold font-semibold hover:underline">🔄 睇埋：公司秘書服務 vs DIY</a>
+      <a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%90%88%E8%A6%8F%E6%99%82%E9%96%93%E8%A1%A8%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold hover:underline">📅 睇埋：合規時間表</a>
+      <a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B8%85%E7%9B%A4%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold font-semibold hover:underline">🏁 睇埋：清盤指南</a>
+    </div>
+  </div>
+
+</div>
+
+  <!-- Auto-added: related tool links -->
+  <div class="max-w-3xl mx-auto px-4 mt-10 mb-8">
+    <div class="bg-navy/5 border border-navy/10 rounded-xl p-6">
+      <h3 class="text-lg font-bold text-navy mb-4">📍 相關免費工具</h3>
+      <div class="space-y-3">
+        <a href="/nar1-generator/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📋 ESGov NAR1 周年申報表 PDF 填寫工具</a>
+        <a href="/significant-controllers-register/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📋 ESGov 重要控制人登記冊 (SCR) Generator</a>
+        <a href="https://esgov.org/shareholder-transfer/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📄 免費使用 ESGov 股份轉讓文件生成工具</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

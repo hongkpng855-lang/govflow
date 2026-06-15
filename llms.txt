@@ -1,0 +1,41 @@
+# ESGov — Hong Kong Company Compliance Platform
+
+> ESGov provides free PDF generators, compliance guides, and company secretarial resources for Hong Kong companies. All tools are free to use, no registration required.
+
+## About
+
+ESGov helps Hong Kong business owners handle company secretarial documents, compliance filings, and administrative tasks without expensive professional fees. Our focus is on accurate, up-to-date, Hong Kong-specific content.
+
+## Key Pages
+
+- Homepage: https://esgov.org/
+- Blog: https://esgov.org/blog/
+- Company Share Transfer: https://esgov.org/shareholder-transfer/
+- Company Name Change: https://esgov.org/company-name-change/
+- Audit Report Generator: https://esgov.org/audit-report-generator/
+- Significant Controllers Register: https://esgov.org/significant-controllers-register/
+- Company Secretary Guide: https://esgov.org/company-secretary/
+
+## Popular Blog Posts
+
+- 僱員補償保險完全指南: https://esgov.org/blog/香港公司僱員補償保險終極指南
+- 暫繳稅終極指南 2026: https://esgov.org/blog/香港公司暫繳稅終極指南2026
+- 有限公司合規 Checklist: https://esgov.org/blog/香港有限公司每年合規全面Checklist
+- 公司秘書 DIY vs 服務比較: https://esgov.org/blog/香港公司秘書服務vsDIY終極比較
+- Foreigner's Guide to HK Company Setup: https://esgov.org/blog/foreigner-guide-hk-company-setup
+
+## Free Tools
+
+All free, no registration needed:
+- Sold Note / 股票轉讓書 PDF: https://esgov.org/sold-note-generator/
+- Instrument of Transfer / 股份轉讓書 PDF: https://esgov.org/instrument-transfer-generator/
+- Letter of Transferee / 承讓人聲明書 PDF: https://esgov.org/letter-of-transferee-generator/
+- Special Resolution / 特別決議 PDF: https://esgov.org/company-name-change-generator/special-resolution/
+- NNC2 / 更改公司名稱通知書 PDF: https://esgov.org/company-name-change-generator/nnc2/
+- NAR1 / 週年申報表 PDF: https://esgov.org/nar1-generator/
+- NSC1 / 股份配發申報書 PDF: https://esgov.org/nsc1-generator/
+- Audit Report / 核數報告 PDF: https://esgov.org/audit-report-generator/
+
+## Support
+
+Buy Me a Coffee: https://buymeacoffee.com/esgov

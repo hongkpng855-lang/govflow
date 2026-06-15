@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESGov | 香港有限公司零申報（Dormant Company）終極指南 2026 — 申請方法、條件同稅務風險</title>
+<meta name="description" content="香港有限公司零申報及 Dormant Company 全面拆解：Dormant Status 申請條件、特別決議程序、稅務局報稅要求、7 大常見錯誤。由親身申請過嘅東主分享，公司唔營運點樣合法慳審計費，同時避免被稅局追究嘅風險。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gold { color: #C9A84C; }
+  .border-gold { border-color: #C9A84C; }
+  .hover:bg-gold/90 { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"公司冇營運可唔可以唔做審計（核數）？","acceptedAnswer":{"@type":"Answer","text":"可以，但要先申請 Dormant Status。公司必須通過特別決議宣布公司處於不活躍狀態，然後向公司註冊處提交 ND2A 表格。留意：申請 Dormant 唔代表唔使報稅，稅局仍然可以要求提交 Nil Tax Return。"}},
+    {"@type":"Question","name":"Dormant Company 同 Nil Return 有咩分別？","acceptedAnswer":{"@type":"Answer","text":"Dormant Company 係公司法定狀態，向公司註冊處申請嘅正式身份，可以豁免審計；Nil Return（零申報）係向稅局報稅時申報公司冇收入，但唔代表可以豁免做審計。兩者係完全獨立嘅概念。好多人搞錯以為交 Nil Return 就係「零申報」，但其實如果冇申請 Dormant Status，交出冇審計報告嘅報稅表係違法的。"}},
+    {"@type":"Question","name":"Dormant Company 係咪完全唔使交文件？","acceptedAnswer":{"@type":"Answer","text":"唔係。Dormant Company 仍要：準時交 Annual Return（NAR1）每年 $105、續商業登記證（BR）每年約 $2,150、稅局若發報稅表要交 Nil Return。只係豁免咗核數（審計）要求。其他合規要求仍然存在。"}},
+    {"@type":"Question","name":"申請 Dormant Status 後可以重新營運嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。只要公司重新有交易或業務活動，就需要立即取消 Dormant Status。要通過董事決議記錄恢復營運日期，然後喺該會計年度恢復正常審計要求。特別係：收到稅局報稅表時，如果公司已恢復營運，唔可以再交 Nil Return，要連同審計報告一併提交。"}},
+    {"@type":"Question","name":"Dormant Company 仲可唔可以開銀行戶口？","acceptedAnswer":{"@type":"Answer","text":"可以，但唔建議。Dormant Company 嘅定義係「冇重大會計交易」，開銀行戶口存入資本金或支付年費本身可能被視為交易，影響 Dormant Status。如真係需要保留銀行戶口，建議先諮詢會計師確定會否違反 Dormant 條件。"}}
+  ]
+}
+</script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港有限公司零申報DormantCompany終極指南" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司零申報DormantCompany終極指南" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <meta property="og:title" content="ESGov | 香港有限公司零申報（Dormant Company）終極指南 2026" />
+  <meta property="og:description" content="香港有限公司零申報及 Dormant Company 全面拆解：Dormant Status 申請條件、特別決議程序、稅務局報稅要求、7 大常見錯誤。由親身申請過嘅東主分享，公司唔營運點樣合法慳審計費，同時避免被稅局追究嘅風險。" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+  </head>
+<body>
+
+<!-- Navigation -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+<div class="max-w-4xl mx-auto px-4 pt-20 pb-12">
+
+  <!-- ═══ Header ═══ -->
+  <div class="text-center mb-8">
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-navy leading-tight mb-4">
+      香港有限公司零申報（Dormant Company）終極指南 2026
+    </h1>
+    <p class="text-lg text-gray-500 max-w-3xl mx-auto">
+      公司冇營運可唔可以慳審計費？Dormant Status 申請方法同「Nil Return」嘅致命誤解全面拆解
+    </p>
+    <div class="flex items-center justify-center gap-3 mt-4">
+      <span class="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-500">
+        <span>📅</span> 2026.06.14
+      </span>
+      <span class="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-500">
+        <span>🏷️</span> Dormant Company · 零申報 · Nil Return · 審計豁免 · 公司合規 · SME
+      </span>
+    </div>
+  </div>
+
+  <!-- ═══ Table of Contents ═══ -->
+  <div class="bg-white rounded-2xl border border-gray-200 p-6 mb-8">
+    <h2 class="text-lg font-bold text-navy mb-3">📑 文章目錄</h2>
+    <ul class="space-y-1.5 text-sm">
+      <li><a href="#story" class="toc-item text-gray-500 hover:text-gold transition-colors">1. 😅 真實故事：我以爲交 Nil Return 就得咗</a></li>
+      <li><a href="#what-is" class="toc-item text-gray-500 hover:text-gold transition-colors">2. 咩係 Dormant Company？咩係 Nil Return？</a></li>
+      <li><a href="#comparison" class="toc-item text-gray-500 hover:text-gold transition-colors">3. Dormant vs 正常營運 vs 撤銷註冊 全面比較</a></li>
+      <li><a href="#conditions" class="toc-item text-gray-500 hover:text-gold transition-colors">4. Dormant Status 申請條件（公司條例第 5 條）</a></li>
+      <li><a href="#procedure" class="toc-item text-gray-500 hover:text-gold transition-colors">5. 申請 Dormant Status 完整步驟</a></li>
+      <li><a href="#tax" class="toc-item text-gray-500 hover:text-gold transition-colors">6. Dormant Company 嘅稅務責任（&#9888;&#65039; 必睇）</a></li>
+      <li><a href="#mistakes" class="toc-item text-gray-500 hover:text-gold transition-colors">7. 7 個最常見嘅錯誤</a></li>
+      <li><a href="#faq" class="toc-item text-gray-500 hover:text-gold transition-colors">8. FAQ — 常見問題</a></li>
+      <li><a href="#checklist" class="toc-item text-gray-500 hover:text-gold transition-colors">9. Dormant 申請 Checklist</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══ Content ═══ -->
+  <div class="bg-white rounded-2xl border border-gray-200 p-5 sm:p-8 prose-custom">
+
+    <section id="story">
+      <h2>😅 真實故事：我以爲交 Nil Return 就得咗</h2>
+      <p>
+        幾年前我有間公司，成立咗之後一直冇生意，乾咗大半年。嗰陣會計師打電話嚟：「公司報稅期到喇，要準備審計報告。」
+      </p>
+      <p>
+        我心諗：「吓？公司都冇收入、冇交易、零運作，仲要做審計？審計啲咩？審計個零？仲要俾成千蚊核數費？」於是我上網搵料，見到有人話「公司冇營運可以申報 Nil Return，唔使核數」。我二話不說就同會計師講：「幫我報 Nil Return 啦，唔使核數啦。」
+      </p>
+      <p>
+        會計師即刻喝停我：「你知唔知你咁做係違法㗎？」
+      </p>
+      <div class="callout-danger">
+        <strong>&#9888;&#65039; 聽清楚呢句：Nil Return ≠ 豁免審計。</strong>
+        <p class="mb-0 mt-2">除非你嘅公司已經正式申請咗 <strong>Dormant Status（不活躍公司身份）</strong>，否則就算公司完全冇收入，你仍然需要準備審計報告，連同報稅表一併提交。冇審計報告就交報稅表，係違反《公司條例》同《稅務條例》，可以罰錢㗎。</p>
+      </div>
+      <p>
+        就係咁，我嗰陣先知道原來「公司冇營運唔使核數」呢個講法，對一半錯一半。今日我就同你完整拆解咩係 Dormant Company、咩係 Nil Return、點樣合法慳審計費，同埋最常見嘅致命誤解。
+      </p>
+    </section>
+
+    <section id="what-is">
+      <h2>咩係 Dormant Company？咩係 Nil Return？</h2>
+      
+      <h3>Dormant Company（不活躍公司）</h3>
+      <p>
+        根據香港《公司條例》第 5 條及第 447 條，Dormant Company 係指喺某段期間內<strong>冇發生任何「重大會計交易」</strong>嘅公司。簡單講，即係公司完全冇營業、冇收入、冇支出、冇買賣，處於完全休眠狀態。
+      </p>
+      <p>
+        Dormant Company 最大嘅好處係：<strong>可以豁免審計（核數）</strong>，慳返每年幾千到幾萬蚊嘅核數費。
+      </p>
+
+      <h3>Nil Return（零申報）</h3>
+      <p>
+        Nil Return 係向<strong>稅務局（IRD）</strong>提交報稅表時嘅一種申報方式，意思係「公司喺該課稅年度冇任何應課稅收入／利潤」。
+      </p>
+      <p>
+        但重點係：Nil Return <strong>並唔係一個法定身份</strong>，而只係報稅表上嘅一個選項。公司有收入可以報「有收入嘅數」，冇收入可以報「Nil」。但呢個同「可唔可以唔做審計」係<strong>兩回事</strong>。
+      </p>
+
+      <div class="callout-warning">
+        <strong>&#9888;&#65039; 最常見嘅致命混淆：</strong>
+        <p class="mb-0 mt-2">好多東主（包括以前嘅我）以為「公司冇營運 = 交 Nil Return = 唔使核數」。但實際上 <strong>Nil Return 係稅局嘅概念，Dormant 係公司註冊處嘅概念</strong>，兩者完全獨立。公司冇申請 Dormant Status 就唔交審計報告，後果可以好嚴重。</p>
+      </div>
+    </section>
+
+    <section id="comparison">
+      <h2>Dormant vs 正常營運 vs 撤銷註冊 全面比較</h2>
+      <p>好多東主會喺呢三個選項之間糾結，我用一個表直接比俾你睇：</p>
+      <table>
+        <thead>
+          <tr><th>項目</th><th>正常營運</th><th>Dormant（不活躍）</th><th>撤銷註冊（Strike-off）</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>公司存在</td><td>&#9989; 繼續存在</td><td>&#9989; 繼續存在</td><td>&#10060; 消失</td></tr>
+          <tr><td>需要審計</td><td>&#9989; 每年做</td><td>&#10060; 豁免</td><td>&#10060; 最後一次</td></tr>
+          <tr><td>交 NAR1</td><td>&#9989; $105/年</td><td>&#9989; $105/年</td><td>&#10060; 唔使</td></tr>
+          <tr><td>續 BR</td><td>&#9989; $2,150/年</td><td>&#9989; $2,150/年</td><td>&#10060; 唔使</td></tr>
+          <tr><td>交報稅表</td><td>&#9989; +審計報告</td><td>&#9989; Nil Return</td><td>&#10060; 最後一次</td></tr>
+          <tr><td>保留資產</td><td>&#9989; 可以</td><td>&#9989; 可以</td><td>&#10060; 資產歸政府</td></tr>
+          <tr><td>可恢復營運</td><td>—</td><td>&#9989; 隨時恢復</td><td>&#10060; 要申請恢復</td></tr>
+          <tr><td>成本</td><td>$8,000-30,000/年</td><td>$3,000-5,000/年</td><td>$3,420-8,420 一次性</td></tr>
+        </tbody>
+      </table>
+      <p>
+        睇到未？Dormant Company 係一個「中間狀態」— 公司保留存在、保留資產、保留公司名，但唔需要做核數，每年慳 $5,000-15,000。適合「公司暫時冇營運，但將來可能有用」嘅情況。
+      </p>
+    </section>
+
+    <section id="conditions">
+      <h2>Dormant Status 申請條件</h2>
+      <p>唔係話公司冇生意就可以自動變 Dormant。根據《公司條例》，申請 Dormant Status 要符合以下條件：</p>
+
+      <h3>基本條件</h3>
+      <ul>
+        <li>公司係<strong>私人有限公司</strong>（Public Company 唔用得）</li>
+        <li>公司喺該段期間<strong>冇發生任何重大會計交易</strong></li>
+        <li>公司已經通過<strong>特別決議（Special Resolution）</strong>宣布進入 Dormant 狀態</li>
+        <li>已向公司註冊處提交 <strong>ND2A 表格</strong></li>
+      </ul>
+
+      <h3>咩係「重大會計交易」？</h3>
+      <p>公司條例定義：重大會計交易即係公司需要喺會計紀錄入面記錄嘅交易。以下嘅嘢通常<strong>唔算</strong>重大交易：</p>
+      <ul>
+        <li>公司成立費用（如註冊費、商業登記費）</li>
+        <li>罰款（如遲交報稅表嘅罰款... 但最好唔好有）</li>
+        <li>公司條例要求嘅費用（如 Annual Return 費用）</li>
+        <li>銀行戶口嘅利息收入（呢個灰色地帶，要小心）</li>
+      </ul>
+
+      <div class="callout-warning">
+        <strong>&#9888;&#65039; 重要提示：</strong>
+        <p class="mb-0 mt-2">如果公司有銀行戶口並且收到任何利息收入、或支付咗任何費用（如銀行年費），呢啲都可能被視為「重大會計交易」而令公司失去 Dormant 資格。申請前最好先清空銀行戶口或確認冇任何交易。</p>
+      </div>
+
+      <h3>邊啲公司唔可以申請 Dormant？</h3>
+      <ul>
+        <li><strong>上市公司</strong> — 唔可以用呢個機制</li>
+        <li><strong>銀行、保險公司、證券公司</strong>等受監管金融機構</li>
+        <li><strong>已經有重大交易</strong>嘅公司 — 要先等交易完結咗、完成審計後，先可以申請</li>
+        <li><strong>有銀行戶口自動產生交易</strong>嘅公司 — 銀行利息、月費等都算交易</li>
+      </ul>
+    </section>
+
+    <section id="procedure">
+      <h2>申請 Dormant Status 完整步驟</h2>
+      <p>如果你確定公司符合條件，就可以按照以下步驟申請：</p>
+
+      <div class="callout-success">
+        <strong>&#128161; 實戰貼士：</strong> 最好喺完成最後一次審計之後先申請 Dormant，咁公司嘅財務狀況就有審計報告做證據。
+      </div>
+
+      <h3>Step 1：通過特別決議（Special Resolution）</h3>
+      <p>
+        董事召開股東大會（或書面決議），通過特別決議宣布公司進入 Dormant 狀態。決議內容要清楚寫明：「由 [日期] 起，公司將處於不活躍狀態，並根據《公司條例》第 5 條申請 Dormant Status。」
+      </p>
+      <p>
+        呢份決議要保存喺公司嘅法定紀錄入面。
+      </p>
+
+      <h3>Step 2：提交 ND2A 表格</h3>
+      <p>
+        填寫公司註冊處嘅 <strong>ND2A 表格</strong>（不活躍公司的董事報告書），連同特別決議副本，提交俾公司註冊處。
+      </p>
+      <ul>
+        <li>提交方式：公司註冊處 e-Services Portal 網上提交，或親身去金鐘道 66 號提交</li>
+        <li>費用：$295（公司註冊處費用）</li>
+        <li>處理時間：約 4-7 個工作天</li>
+      </ul>
+
+      <h3>Step 3：通知稅務局</h3>
+      <p>
+        公司註冊處批咗之後，公司註冊處會通知稅務局。但為安全起見，建議你自己都通知稅務局，或者喺下次報稅表提交時一併申報公司已成為 Dormant Company。
+      </p>
+
+      <h3>Step 4：保存紀錄</h3>
+      <p>
+        雖然豁免咗審計，但公司仍然需要保存會計紀錄！《公司條例》要求所有公司（包括 Dormant）保存會計紀錄至少 7 年。
+      </p>
+
+      <h3>恢復營運（如有需要）</h3>
+      <p>
+        如果將來公司想恢復營運，只需要通過董事決議記錄恢復日期，然後通知公司註冊處。恢復後嘅會計年度就要重新做審計。
+      </p>
+    </section>
+
+    <section id="tax">
+      <h2>Dormant Company 嘅稅務責任（&#9888;&#65039; 必睇）</h2>
+      
+      <div class="callout-danger">
+        <strong>&#9888;&#65039; 呢度好多人都搞錯：Dormant ≠ 唔使報稅</strong>
+      </div>
+
+      <p>
+        即使公司成功申請咗 Dormant Status，以下稅務責任仍然存在：
+      </p>
+
+      <h3>1. 收到報稅表要照交（Nil Return）</h3>
+      <p>
+        稅局仍然會每年寄報稅表俾你。收到之後，你仍然要填寫報稅表並喺限期前提交。只係你而家可以喺報稅表上申報「Nil」（零收入），並且<strong>唔需要夾附審計報告</strong>（因為已經豁免咗）。
+      </p>
+
+      <h3>2. 商業登記證仍然要續期</h3>
+      <p>
+        Dormant Company 仍然係有限公司，仍然需要每年續商業登記證（BR），費用約 $2,150/年。唔續 BR 係違法嘅。
+      </p>
+
+      <h3>3. Annual Return（NAR1）仍然要交</h3>
+      <p>
+        公司仍然每年要交周年申報表（NAR1），費用 $105。唔交嘅話，公司註冊處仍然會罰錢。
+      </p>
+
+      <h3>4. 稅局有權查你</h3>
+      <p>
+        稅局可以隨時查核 Dormant Company 嘅狀況。如果發現公司其實有交易（例如銀行戶口有出入數），稅局可以推翻 Dormant Status，追收審計費用、罰款甚至檢控。
+      </p>
+
+      <div class="callout-warning">
+        <strong>&#9888;&#65039; 呢個真係好多人中招：</strong>
+        <p class="mb-0 mt-2">我朋友間公司話自己係 Dormant，冇做審計幾年。但原來佢公司個銀行戶口一直有自動轉帳交 hosting 費，每年幾百蚊。稅局查到的時候，要求補交過去 3 年嘅審計報告，仲要罰款。結果補核數費 $18,000 + 罰款 $5,000，仲慘過正常做核數。</p>
+      </div>
+    </section>
+
+    <section id="mistakes">
+      <h2>7 個最常見嘅錯誤</h2>
+
+      <div class="callout-warning mb-4">
+        <strong>&#10060; 錯誤 1：以為 Nil Return = Dormant Company</strong>
+        <p class="mb-0 mt-1">最致命嘅誤解。Nil Return 只係報稅表上嘅申報，Dormant 係公司法定狀態。唔申請 Dormant 就唔交審計報告係違法。</p>
+      </div>
+
+      <div class="callout-warning mb-4">
+        <strong>&#10060; 錯誤 2：Dormant 咗之後咩都唔使理</strong>
+        <p class="mb-0 mt-1">NAR1 要照交、BR 要照續、報稅表要照填。Dormant 只係豁免審計，唔係豁免所有合規責任。</p>
+      </div>
+
+      <div class="callout-warning mb-4">
+        <strong>&#10060; 錯誤 3：銀行戶口仲有錢／有交易</strong>
+        <p class="mb-0 mt-1">銀行利息、月費、自動轉帳全部都係「重大會計交易」。要申請 Dormant，最好先關閉公司銀行戶口，或者清空到零結餘兼取消所有自動轉帳。</p>
+      </div>
+
+      <div class="callout-warning mb-4">
+        <strong>&#10060; 錯誤 4：公司成立咗但未做過審計，直接申請 Dormant</strong>
+        <p class="mb-0 mt-1">新公司如果由成立到而家完全冇交易，可以申請 Dormant。但如果公司曾經有交易（即使係好耐之前），就需要完成最後一次審計，先可以申請 Dormant。</p>
+      </div>
+
+      <div class="callout-warning mb-4">
+        <strong>&#10060; 錯誤 5：以為 Dormant Company 唔使保存會計紀錄</strong>
+        <p class="mb-0 mt-1">《公司條例》規定所有公司（包括 Dormant）必須保存會計紀錄至少 7 年。違者最高罰款 $300,000。</p>
+      </div>
+
+      <div class="callout-warning mb-4">
+        <strong>&#10060; 錯誤 6：收到報稅表唔理，因為公司 Dormant 咗</strong>
+        <p class="mb-0 mt-1">稅局唔會因為你係 Dormant 就唔追報稅表。唔交報稅表，稅局有權估稅（Estimated Assessment），罰款由 $1,000 起，嚴重可以俾人檢控。</p>
+      </div>
+
+      <div class="callout-warning mb-4">
+        <strong>&#10060; 錯誤 7：恢復營運後唔記得取消 Dormant Status</strong>
+        <p class="mb-0 mt-1">公司恢復營運後要立即通知公司註冊處。如果繼續用 Dormant Status 唔做審計，後果同錯誤 1 一樣。</p>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ — 常見問題</h2>
+
+      <div class="faq-item">
+        <details>
+          <summary>公司冇營運幾年，之前一直冇做審計，而家點算？</summary>
+          <p>建議揾會計師幫手處理。一般做法係：補做過去幾年嘅審計報告（如果公司真係冇交易，審計費會平啲），然後再申請 Dormant Status。如果拖得太耐，稅局可能已經出咗估稅通知，要處理嘅手續會更麻煩。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>Dormant Company 可唔可以除名（Strike-off）？</summary>
+          <p>可以。即使係 Dormant Company，你仍然可以申請撤銷註冊。程序同正常公司一樣：先通知稅局、清還所有稅務責任、提交 ND 表格。Dormant 公司撤銷註冊更簡單，因為冇複雜嘅資產負債問題。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>我公司只有 Director's Loan（董事墊款），算唔算重大交易？</summary>
+          <p>算。董事墊款俾公司或者公司墊款俾董事，都屬於會計交易（因為需要記錄應收應付）。如果有呢啲交易，公司唔符合 Dormant 條件，除非先清理晒呢啲 loan 數。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>申請 Dormant Status 後，仲可唔可以用公司名簽約？</summary>
+          <p>唔可以。Dormant Company 嘅定義係冇任何重大會計交易。簽約（即使係意向書）可能構成重大交易。如果真係需要簽約，要先取消 Dormant Status。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>Dormant Company 仲需要 Company Secretary 嗎？</summary>
+          <p>需要。公司秘書係法定要求，同公司係咪 Dormant 冇關係。如果無公司秘書，仍然違反《公司條例》。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>一間公司可以無限期中間 Dormant 嗎？</summary>
+          <p>可以，只要公司一直符合 Dormant 條件（即冇任何重大會計交易），理論上可以一直保持 Dormant 狀態。但要留意：每年仍然要交 NAR1 同續 BR，如果好多年都冇用，直接撤銷註冊可能更慳錢。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>申請 Dormant 要揾會計師/律師幫手嗎？</summary>
+          <p>如果你熟悉公司條例同文件處理程序，可以自己搞（通過特別決議 + 遞交 ND2A）。但如果你唔肯定公司係咪符合條件、或者之前有過交易，建議揾會計師幫手 check 清楚，唔好為慳幾千蚊審計費而惹上官非。</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="checklist">
+      <h2>Dormant 申請 Checklist</h2>
+      <p>如果你決定申請 Dormant Status，用呢個 Checklist 確保冇漏：</p>
+
+      <div class="callout-info">
+        <strong>&#9989; 申請前檢查：</strong>
+      </div>
+      <ul>
+        <li>&#9744; 公司係私人有限公司（Public Company 唔得）</li>
+        <li>&#9744; 公司完全冇任何收入、支出、交易</li>
+        <li>&#9744; 公司銀行戶口已清零 / 冇自動轉帳 / 冇利息收入</li>
+        <li>&#9744; 公司冇董事墊款、股東貸款等未完結嘅交易</li>
+        <li>&#9744; 已完成最後一次審計（如果之前有交易）</li>
+      </ul>
+
+      <div class="callout-info mt-4">
+        <strong>&#9989; 申請步驟：</strong>
+      </div>
+      <ul>
+        <li>&#9744; Step 1：通過特別決議（Special Resolution）</li>
+        <li>&#9744; Step 2：填妥 ND2A 表格</li>
+        <li>&#9744; Step 3：提交俾公司註冊處（費用 $295）</li>
+        <li>&#9744; Step 4：保存決議同 ND2A 副本喺法定紀錄</li>
+        <li>&#9744; Step 5：通知稅局（或喺下次報稅表申報）</li>
+      </ul>
+
+      <div class="callout-info mt-4">
+        <strong>&#9989; 每年仍然要做：</strong>
+      </div>
+      <ul>
+        <li>&#9744; 提交 NAR1（周年申報表），費用 $105</li>
+        <li>&#9744; 續商業登記證（BR），費用約 $2,150</li>
+        <li>&#9744; 提交 Nil Return（如收到報稅表）</li>
+        <li>&#9744; 保存會計紀錄</li>
+      </ul>
+    </section>
+
+    <!-- ═══ Donate / CTA ═══ -->
+    <div class="mt-8 p-6 bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl border border-amber-200 text-center">
+      <h3 class="text-xl font-bold text-navy mb-2">📖 呢篇文章幫到你嗎？</h3>
+      <p class="text-gray-600 mb-4">如果呢篇 Dormant Company 指南幫你慳到審計費，可以請我飲杯咖啡支持下 ☕<br>等我可以繼續製作更多免費實戰指南俾香港中小企東主。</p>
+      <a href="https://buymeacoffee.com/esgov" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2.5 bg-gold text-white font-bold rounded-xl hover:bg-gold/90 transition-colors">☕ 請我飲杯咖啡</a>
+    </div>
+
+  </div>
+
+  <!-- ═══ Related Articles ═══ -->
+  <div class="mt-8">
+    <h2 class="text-xl font-bold text-navy mb-4">📚 你可能都啱睇</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="香港有限公司合規時間表終極指南.html" class="block bg-white rounded-xl border border-gray-200 p-4 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <h3 class="font-bold text-navy group-hover:text-gold transition-colors">&#128197; 有限公司合規時間表終極指南</h3>
+        <p class="text-sm text-gray-500 mt-1">每年幾時做咩一次過睇晒，唔再怕漏 deadline</p>
+      </a>
+      <a href="香港有限公司每年合規費用預算.html" class="block bg-white rounded-xl border border-gray-200 p-4 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <h3 class="font-bold text-navy group-hover:text-gold transition-colors">&#128176; 有限公司每年合規費用預算</h3>
+        <p class="text-sm text-gray-500 mt-1">由開公司到解散，每年要俾幾多錢一目了然</p>
+      </a>
+      <a href="有限公司撤銷註冊終止營運指南.html" class="block bg-white rounded-xl border border-gray-200 p-4 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <h3 class="font-bold text-navy group-hover:text-gold transition-colors">&#128682; 有限公司撤銷註冊指南</h3>
+        <p class="text-sm text-gray-500 mt-1">公司唔做要點收尾？除名條件同程序全面睇</p>
+      </a>
+      <a href="香港有限公司清盤終極指南.html" class="block bg-white rounded-xl border border-gray-200 p-4 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <h3 class="font-bold text-navy group-hover:text-gold transition-colors">&#127937; 有限公司清盤終極指南</h3>
+        <p class="text-sm text-gray-500 mt-1">自願清盤 vs 強制清盤完整教學</p>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+  <!-- ═══ Footer ═══ -->
+  <footer class="bg-navy text-white py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-400">
+      <p>© 2026 ESGov. 由真實經歷者整理，實戰經驗分享。</p>
+      <p class="mt-1">本網站內容僅供參考，不構成專業意見。如有需要請諮詢合資格專業人士。</p>
+    </div>
+  </footer>
+
+</body>
+</html>

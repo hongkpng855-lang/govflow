@@ -13,7 +13,7 @@
       "h1_text": [
         "香港公司秘書文件<br />\n          <span class=\"text-gold\">原"
       ],
-      "h2_count": 6,
+      "h2_count": 8,
       "canonical": "https://esgov.org",
       "og_title": true,
       "og_desc": true,
@@ -22,7 +22,7 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 3,
+      "jsonld": 4,
       "charset": true,
       "img_alt_pct": "2/2",
       "clean_urls": 0
@@ -48,7 +48,7 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 3,
+      "jsonld": 4,
       "charset": true,
       "img_alt_pct": "4/4",
       "clean_urls": 0
@@ -74,7 +74,7 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 2,
+      "jsonld": 3,
       "charset": true,
       "img_alt_pct": "6/6",
       "clean_urls": 0
@@ -100,7 +100,7 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 2,
+      "jsonld": 3,
       "charset": true,
       "img_alt_pct": "6/6",
       "clean_urls": 0
@@ -126,7 +126,7 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 1,
+      "jsonld": 3,
       "charset": true,
       "img_alt_pct": "4/4",
       "clean_urls": 0
@@ -152,7 +152,7 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 1,
+      "jsonld": 3,
       "charset": true,
       "img_alt_pct": "4/4",
       "clean_urls": 0
@@ -178,7 +178,7 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 1,
+      "jsonld": 3,
       "charset": true,
       "img_alt_pct": "4/4",
       "clean_urls": 0
@@ -204,7 +204,7 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 2,
+      "jsonld": 3,
       "charset": true,
       "img_alt_pct": "6/6",
       "clean_urls": 0
@@ -230,7 +230,7 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 3,
+      "jsonld": 4,
       "charset": true,
       "img_alt_pct": "4/4",
       "clean_urls": 0
@@ -239,13 +239,13 @@
       "path": "company-name-change-generator/special-resolution/index.html",
       "issues": [],
       "score": 100,
-      "title": "ESGov | 特別決議（更改公司名稱）PDF 填寫工具 — 一鍵生成已填好 PDF",
-      "title_len": 42,
-      "description": "香港公司改名特別決議（Special Resolution）PDF 線上填寫工具。直接填公司名、新名、董事資料，一鍵生成...",
-      "desc_len": 103,
+      "title": "ESGov | 特別決議（更改公司名稱）PDF 工具 — 即時預覽 + 一鍵下載",
+      "title_len": 40,
+      "description": "香港公司改名特別決議（Special Resolution）PDF 工具。直接晌文件上填公司名、新名、董事資料，即時預覽...",
+      "desc_len": 130,
       "h1_count": 1,
       "h1_text": [
-        "特別決議填寫"
+        "特別決議（更改公司名稱）PDF 填寫工具"
       ],
       "h2_count": 1,
       "canonical": "https://esgov.org/company-name-change-generator/special-resolution",
@@ -256,9 +256,9 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 1,
+      "jsonld": 2,
       "charset": true,
-      "img_alt_pct": "6/6",
+      "img_alt_pct": "9/9",
       "clean_urls": 0
     },
     {
@@ -282,9 +282,9 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 1,
+      "jsonld": 3,
       "charset": true,
-      "img_alt_pct": "5/5",
+      "img_alt_pct": "8/8",
       "clean_urls": 0
     }
   ]

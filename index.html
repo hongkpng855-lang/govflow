@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/style.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -309,6 +310,55 @@
           <div class="flex flex-col sm:flex-row gap-2">
             <a href="/significant-controllers-register" class="btn-gov btn-gov-buy flex-1 justify-center text-sm py-2.5 opacity-50 cursor-not-allowed" onclick="return false">
               📖 免費睇全部 5 個步驟 →
+            </a>
+            <a href="#" @click.prevent="showDonate = true" class="btn-gov btn-gov-preview flex-1 justify-center text-sm py-2.5">
+              ☕ 請咖啡支持
+            </a>
+          </div>
+        </div>
+
+        <!-- ═══ Card 4: Company Secretary (製作中) ═══ -->
+        <div class="relative overflow-hidden bg-white rounded-2xl shadow-xl shadow-gold/10 border-2 border-gold/20 p-8 sm:p-10 transition-all duration-300">
+
+          <!-- Blur overlay -->
+          <div class="absolute inset-0 z-10 flex flex-col items-center justify-center backdrop-blur-sm bg-white/30 rounded-2xl">
+            <div class="bg-navy/90 text-white px-6 py-4 rounded-2xl shadow-xl text-center">
+              <div class="text-3xl mb-1">🛠️</div>
+              <div class="font-bold text-lg">製作中</div>
+              <div class="text-sm text-white/70 mt-1">即將推出</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 text-sm text-blue-600 font-semibold mb-3">
+            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full border border-blue-200">🛠️ 製作中</span>
+            <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full border border-green-200">全部免費 🆓</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold gov-heading mb-3">
+            香港公司<span class="text-gold">秘書服務</span>完整指南
+          </h2>
+          <p class="text-gray-500 text-sm mb-4">6 個步驟搞掂公司秘書 — 了解法定要求、委任/辭任、持續合規</p>
+          <p class="text-gray-600 mb-5 leading-relaxed">
+            公司秘書係有限公司法定要求。了解要求、選擇人選、準備文件、提交CR、更新記錄、持續合規。附成本比較 DIY vs 專業秘書公司。<br />
+            <span class="text-amber-600 font-semibold">全部免費公開 🎉</span>
+          </p>
+
+          <!-- First 100 banner -->
+          <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-xl p-3 mb-4 text-center shadow-sm">
+            <p class="text-sm font-semibold text-blue-800">
+              🎯 頭 100 次下載完全免費
+            </p>
+            <p class="text-xs text-blue-600 mt-0.5">之後我哋會考慮轉為收費模式。而家嚟就慳返，把握機會！</p>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">📋 6 個步驟</span>
+            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">📄 6 份文件</span>
+            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">💰 成本比較</span>
+            <span class="inline-flex items-center gap-1.5 text-xs bg-green-50 text-green-700 font-medium px-3 py-1.5 rounded-full">🆓 全部免費</span>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <a href="/company-secretary" class="btn-gov btn-gov-buy flex-1 justify-center text-sm py-2.5 opacity-50 cursor-not-allowed" onclick="return false">
+              📖 免費睇全部 6 個步驟 →
             </a>
             <a href="#" @click.prevent="showDonate = true" class="btn-gov btn-gov-preview flex-1 justify-center text-sm py-2.5">
               ☕ 請咖啡支持
