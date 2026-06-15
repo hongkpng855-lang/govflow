@@ -63,17 +63,290 @@
 }
   </script>
   <style>
-    .field-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-    .field-label { width: 180px; font-size: 13px; font-weight: 600; color: #1B2A4A; text-align: right; flex-shrink: 0; }
-    .field-input { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: #fffbeb; font-family: inherit; outline: none; transition: all 0.15s; }
-    .field-input:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); background: #fef3c7; }
-    .field-select { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: white; font-family: inherit; outline: none; }
-    .field-select:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); }
-    .field-textarea { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: #fffbeb; font-family: inherit; outline: none; resize: vertical; transition: all 0.15s; }
-    .field-textarea:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); background: #fef3c7; }
-    .checkbox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; flex: 1; }
-    .checkbox-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #374151; cursor: pointer; }
-    .checkbox-item input[type="checkbox"] { accent-color: #1B2A4A; width: 16px; height: 16px; }
+    /* ===== Document-style form (WYSIWYG) ===== */
+
+    /* ── A4 Paper container ── */
+    #pdf-form {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1px 4px rgba(0,0,0,0.06);
+      border: 1px solid #e5e7eb;
+      border-radius: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 13px;
+      line-height: 1.75;
+      color: #1B2A4A;
+      padding: 50px 55px 55px 55px;
+      position: relative;
+    }
+
+    /* ── Document Input Styling ── */
+    #pdf-form input[type="text"],
+    #pdf-form input[type="number"],
+    #pdf-form input[type="date"],
+    #pdf-form textarea,
+    #pdf-form select {
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 13px;
+      color: #1B2A4A;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #d1d5db;
+      border-radius: 0;
+      padding: 2px 6px;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+      line-height: 1.6;
+      box-shadow: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    #pdf-form input[type="text"]:hover,
+    #pdf-form input[type="number"]:hover,
+    #pdf-form input[type="date"]:hover,
+    #pdf-form textarea:hover,
+    #pdf-form select:hover {
+      border-bottom-color: #C9A84C;
+    }
+    #pdf-form input[type="text"]:focus,
+    #pdf-form input[type="number"]:focus,
+    #pdf-form input[type="date"]:focus,
+    #pdf-form textarea:focus,
+    #pdf-form select:focus {
+      border-bottom-color: #C9A84C;
+      border-bottom-width: 2px;
+      background: #fffbeb;
+      box-shadow: none;
+    }
+    #pdf-form textarea {
+      resize: vertical;
+      min-height: 36px;
+      border: 1px solid #d1d5db;
+      border-radius: 0;
+      padding: 4px 6px;
+    }
+    #pdf-form textarea:focus {
+      border-color: #C9A84C;
+      border-width: 1px;
+      background: #fffbeb;
+    }
+    #pdf-form select {
+      background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='6'%3E%3Cpath d='M0 0l4 6 4-6z' fill='%23999'/%3E%3C/svg%3E") no-repeat right 6px center;
+      padding-right: 20px;
+      cursor: pointer;
+    }
+    #pdf-form input[type="checkbox"] {
+      accent-color: #1B2A4A;
+      width: 15px;
+      height: 15px;
+      margin: 0;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    #pdf-form input[type="date"] {
+      min-width: 120px;
+    }
+    #pdf-form input[type="number"] {
+      min-width: 60px;
+      text-align: center;
+    }
+
+    /* ── Document structure ── */
+    .doc-letterhead {
+      text-align: center;
+      padding-bottom: 14px;
+      margin-bottom: 24px;
+      border-bottom: 2px solid #1B2A4A;
+      position: relative;
+    }
+    .doc-letterhead::before {
+      content: '';
+      display: block;
+      height: 4px;
+      background: #C9A84C;
+      margin-bottom: 14px;
+      border-radius: 2px;
+    }
+    .doc-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #C9A84C;
+      letter-spacing: 1px;
+    }
+    .doc-subtitle {
+      font-size: 11px;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    .doc-ref-line {
+      display: flex;
+      justify-content: flex-end;
+      gap: 24px;
+      margin-bottom: 20px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .doc-section-heading {
+      font-weight: 700;
+      font-size: 14px;
+      color: #1B2A4A;
+      border-bottom: 1px solid #C9A84C;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+
+    .doc-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin: 12px 0;
+    }
+    .doc-table th {
+      background: #1B2A4A;
+      color: white;
+      padding: 6px 8px;
+      border: 1px solid #1B2A4A;
+      text-align: center;
+    }
+    .doc-table th:first-child { width: 36px; }
+    .doc-table th:last-child { width: 100px; text-align: center; }
+    .doc-table th:nth-child(2) { text-align: left; }
+    .doc-table td {
+      padding: 5px 8px;
+      border: 1px solid #ddd;
+    }
+    .doc-table td:first-child {
+      text-align: center;
+      font-weight: 700;
+    }
+    .doc-table td:last-child {
+      text-align: center;
+    }
+    .doc-table tr:nth-child(even) td {
+      background: #f9f9f9;
+    }
+
+    .doc-notice-box {
+      margin: 10px 0;
+      padding: 8px 12px;
+      background: #f8f6f0;
+      border-left: 3px solid #C9A84C;
+      font-size: 12px;
+    }
+
+    .doc-penalty-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      padding: 14px;
+      margin: 16px 0;
+      font-size: 12px;
+    }
+    .doc-penalty-box p {
+      margin: 0 0 4px 0;
+    }
+    .doc-penalty-box p:first-child {
+      margin: 0 0 6px 0;
+      font-weight: 700;
+      color: #b91c1c;
+    }
+
+    .doc-signature {
+      margin-top: 36px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+    .doc-signature .sig-line {
+      margin-top: 30px;
+      padding-top: 5px;
+    }
+
+    .doc-footer-note {
+      margin-top: 40px;
+      padding-top: 12px;
+      border-top: 1px solid #eee;
+      font-size: 10px;
+      color: #aaa;
+      text-align: center;
+    }
+    .doc-footer-note p {
+      margin: 0 0 2px 0;
+    }
+
+    /* ── Inline field wrappers for document flow ── */
+    .doc-field-inline {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+    .doc-field-inline input,
+    .doc-field-inline select,
+    .doc-field-inline textarea {
+      display: inline;
+    }
+
+    /* ── Captured tests checkboxes in document ── */
+    .doc-tests-list {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 12px 0;
+    }
+    .doc-tests-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 3px 0;
+      font-size: 12px;
+    }
+    .doc-tests-list li label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      flex: 1;
+    }
+
+    /* ── Capture mode: hide everything outside the document ── */
+    body.capture-mode nav,
+    body.capture-mode .info-banner,
+    body.capture-mode h1,
+    body.capture-mode .ref-images,
+    body.capture-mode .doc-info-card,
+    body.capture-mode #templateModal,
+    body.capture-mode .action-buttons,
+    body.capture-mode #status,
+    body.capture-mode .return-link,
+    body.capture-mode .coffee-link,
+    body.capture-mode footer,
+    body.capture-mode #emailGateModal,
+    body.capture-mode #genBtn,
+    body.capture-mode .page-header {
+      display: none !important;
+    }
+    body.capture-mode #pdf-form {
+      box-shadow: none !important;
+      border: none !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+    }
+    body.capture-mode .bg-gray-100 {
+      background: white !important;
+    }
+    body.capture-mode .max-w-4xl {
+      max-width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      #pdf-form { padding: 30px 24px 35px 24px; }
+      .doc-table { font-size: 11px; }
+      .doc-title { font-size: 18px; }
+      .doc-ref-line { flex-direction: column; align-items: flex-end; gap: 2px; }
+    }
   </style>
 </head>
 <body class="bg-gray-100 font-sans">
@@ -88,14 +361,14 @@
   <div class="max-w-4xl mx-auto px-4 py-6">
 
     <!-- Info Banner -->
-    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
+    <div class="info-banner bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
       📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅書面通知書 PDF
     </div>
 
-    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">書面通知書 PDF 生成工具 — 一鍵生成已填好 PDF</h1>
+    <h1 class="page-header text-xl sm:text-2xl font-bold text-navy text-center mb-4">書面通知書 PDF 生成工具 — 一鍵生成已填好 PDF</h1>
 
     <!-- 參考圖片兩幅 -->
-    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
+    <div class="ref-images grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
       <!-- 真實案例 -->
       <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
         <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
@@ -121,7 +394,7 @@
     </div>
 
     <!-- 文件說明 + 常見錯誤 -->
-    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
+    <div class="doc-info-card mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
       <div class="flex items-start gap-3 mb-3">
         <span class="text-lg mt-0.5 shrink-0">📄</span>
         <div>
@@ -195,232 +468,186 @@
     }
     </script>
 
-    <!-- PDF Form -->
-    <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px;">
+    <!-- ============================================================
+         PDF FORM — WYSIWYG Document Style
+         The editor form IS the document.
+         ============================================================ -->
+    <div id="pdf-form">
 
-      <div class="bg-navy text-white py-3 px-6 text-center">
-        <div class="text-lg font-bold text-gold">書面通知書</div>
-        <p class="text-xs text-gray-400">根據《公司條例》第 653ZH 條</p>
+      <!-- ── Letterhead ── -->
+      <div class="doc-letterhead">
+        <div class="doc-title">書面通知書</div>
+        <div class="doc-subtitle">FORMAL NOTICE LETTER</div>
       </div>
 
-      <div class="p-6 sm:p-8">
+      <!-- ── Reference & Date ── -->
+      <div class="doc-ref-line">
+        <span>本行參考 / Our Ref: SCR-NOTICE-<span id="pv-refno">2026</span></span>
+        <span>日期 / Date: <input type="date" id="f-noticedate" class="doc-field-inline" style="width:130px;display:inline;font-size:12px;" /></span>
+      </div>
 
-        <!-- Company Info -->
-        <div class="mb-6">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">公司資料</h2>
-          <div class="field-row">
-            <span class="field-label">公司名稱</span>
-            <input type="text" id="f-company" value="ABC 貿易有限公司" class="field-input" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">公司註冊編號</span>
-            <input type="text" id="f-crno" value="12345678" class="field-input" />
-          </div>
-        </div>
+      <!-- ── Company Information ── -->
+      <div class="doc-section-heading">本公司 / Our Company</div>
+      <table style="width:100%;border-collapse:collapse;font-size:13px;margin-bottom:16px;">
+        <tr>
+          <td style="width:140px;padding:2px 5px;font-weight:600;color:#555;">公司名稱</td>
+          <td style="padding:2px 5px;"><input type="text" id="f-company" value="ABC 貿易有限公司" style="width:100%;" /></td>
+        </tr>
+        <tr>
+          <td style="width:140px;padding:2px 5px;font-weight:600;color:#555;">公司註冊編號</td>
+          <td style="padding:2px 5px;"><input type="text" id="f-crno" value="12345678" style="width:200px;" /></td>
+        </tr>
+      </table>
 
-        <!-- Recipient Info -->
-        <div class="mb-6">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">收件人資料</h2>
-          <div class="field-row">
-            <span class="field-label">收件人姓名</span>
-            <input type="text" id="f-recipient" value="陳大明" class="field-input" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">收件人地址</span>
-            <textarea id="f-address" rows="3" class="field-textarea">香港柴灣道 300 號 10 樓</textarea>
-          </div>
-          <div class="field-row">
-            <span class="field-label">收件人類型</span>
-            <select id="f-rectype" class="field-select">
+      <!-- ── Recipient Information ── -->
+      <div class="doc-section-heading">收件人 / Recipient</div>
+      <table style="width:100%;border-collapse:collapse;font-size:13px;margin-bottom:16px;">
+        <tr>
+          <td style="width:140px;padding:2px 5px;font-weight:600;color:#555;">姓名</td>
+          <td style="padding:2px 5px;"><input type="text" id="f-recipient" value="陳大明" style="width:100%;" /></td>
+        </tr>
+        <tr>
+          <td style="width:140px;padding:2px 5px;font-weight:600;color:#555;">地址</td>
+          <td style="padding:2px 5px;"><textarea id="f-address" rows="2" style="width:100%;">香港柴灣道 300 號 10 樓</textarea></td>
+        </tr>
+        <tr>
+          <td style="width:140px;padding:2px 5px;font-weight:600;color:#555;">類型</td>
+          <td style="padding:2px 5px;">
+            <select id="f-rectype" style="width:220px;">
               <option value="疑似重要控制人">疑似重要控制人</option>
               <option value="股東">股東</option>
               <option value="董事">董事</option>
               <option value="其他">其他</option>
             </select>
-          </div>
-        </div>
+          </td>
+        </tr>
+      </table>
 
-        <!-- Notice Details -->
-        <div class="mb-6">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">通知書內容</h2>
-          <div class="field-row">
-            <span class="field-label">發出日期</span>
-            <input type="date" id="f-noticedate" class="field-input field-date" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">公司授權人</span>
-            <input type="text" id="f-authorizer" value="黃律師" class="field-input" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">授權人職位</span>
-            <select id="f-authpos" class="field-select">
-              <option value="董事 (Director)">董事 (Director)</option>
-              <option value="公司秘書 (Company Secretary)">公司秘書 (Company Secretary)</option>
-              <option value="獲授權代表 (Authorized Representative)">獲授權代表 (Authorized Representative)</option>
-            </select>
-          </div>
-          <div class="field-row">
-            <span class="field-label">回覆期限（日）</span>
-            <input type="number" id="f-deadline" value="30" min="1" max="90" class="field-input" style="max-width:120px;" />
-            <span class="text-xs text-gray-400">天（預設 1 個月）</span>
-          </div>
-          <div class="field-row">
-            <span class="field-label">引用條文</span>
-            <input type="text" id="f-section" value="Section 653ZH, Cap. 622" class="field-input" />
-          </div>
-        </div>
+      <!-- ── Notice Body ── -->
+      <div class="doc-section-heading">通知內容 / Notice Content</div>
 
-        <!-- 對方符合嘅測試條件 (Test 1-5) -->
-        <div class="mb-6">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">對方符合嘅測試條件</h2>
-          <div class="field-row">
-            <span class="field-label" style="align-self:flex-start;margin-top:4px;">測試條件</span>
-            <div class="checkbox-grid">
-              <label class="checkbox-item"><input type="checkbox" id="test1" checked /> Test 1 – 直接持有超過 25% 股份</label>
-              <label class="checkbox-item"><input type="checkbox" id="test2" /> Test 2 – 間接持有超過 25% 股份</label>
-              <label class="checkbox-item"><input type="checkbox" id="test3" /> Test 3 – 直接持有超過 25% 投票權</label>
-              <label class="checkbox-item"><input type="checkbox" id="test4" /> Test 4 – 間接持有超過 25% 投票權</label>
-              <label class="checkbox-item" style="grid-column:1/-1;"><input type="checkbox" id="test5" /> Test 5 – 有權委任或罷免大多數董事</label>
-            </div>
-          </div>
-        </div>
+      <p style="margin:0 0 6px 0;"><strong>根據《公司條例》（第 622 章）第 <input type="text" id="f-section" value="653ZH" style="width:70px;text-align:center;" /> 條 — 要求提供資料通知書</strong></p>
 
-        <!-- 通知方式 -->
-        <div class="mb-6">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">通知方式</h2>
-          <div class="field-row">
-            <span class="field-label">送達方式</span>
-            <select id="f-delivery" class="field-select">
-              <option value="親身交付 (Personal Delivery)">親身交付 (Personal Delivery)</option>
-              <option value="掛號郵件 (Registered Mail)" selected>掛號郵件 (Registered Mail)</option>
-              <option value="電子郵件 (Email)">電子郵件 (Email)</option>
-              <option value="快遞 (Courier)">快遞 (Courier)</option>
-            </select>
-          </div>
-        </div>
+      <p style="margin:0 0 6px 0;">致 <input type="text" id="pv-recipient2" value="陳大明" style="width:160px;" />：</p>
 
-      </div>
-    </div>
+      <p style="margin:0 0 6px 0;">
+        本公司 <strong><input type="text" id="pv-company2" value="ABC 貿易有限公司" style="width:220px;" /></strong>（「本公司」）現正根據《公司條例》（第 622 章）第 653U 條採取合理步驟，以識別本公司的的重要控制人及取得所需詳情。
+      </p>
 
-    <!-- PDF Template (hidden for capture) -->
-    <div id="pdf-content" style="position:absolute;left:-9999px;top:0;width:800px;background:white;padding:50px 60px;font-family:'Noto Sans TC',sans-serif;font-size:13px;line-height:1.7;color:#1B2A4A;">
-      
-      <!-- Letterhead -->
-      <div style="text-align:center;border-bottom:2px solid #1B2A4A;padding-bottom:12px;margin-bottom:24px;">
-        <div style="font-size:22px;font-weight:bold;color:#C9A84C;letter-spacing:1px;">書面通知書</div>
-        <div style="font-size:11px;color:#888;margin-top:2px;">FORMAL NOTICE LETTER</div>
+      <p style="margin:0 0 6px 0;">
+        鑑於 閣下被識別為本公司的 <strong>
+          <select id="pv-rectype2" style="width:160px;">
+            <option value="疑似重要控制人">疑似重要控制人</option>
+            <option value="股東">股東</option>
+            <option value="董事">董事</option>
+            <option value="其他">其他</option>
+          </select>
+        </strong>，本公司有合理因由相信 閣下是本公司的重要控制人，或知悉另一人是本公司的重要控制人及其身分。
+      </p>
+
+      <p style="margin:0 0 6px 0;">
+        因此，本公司現根據《公司條例》第 <input type="text" id="pv-section2" value="653ZH" style="width:70px;text-align:center;" /> 條，要求 閣下在本通知書日期起計 <strong>
+        <input type="number" id="f-deadline" value="30" min="1" max="90" style="width:50px;text-align:center;" /> 日（<span id="deadlineDisplay">1 個月</span>）內</strong>，向本公司提供以下資料：
+      </p>
+
+      <!-- ── Required Info Table ── -->
+      <table class="doc-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>所需資料</th>
+            <th>適用測試</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>全名（姓名／名稱）</td><td id="pv-test1"></td></tr>
+          <tr><td>2</td><td>通訊地址（不得為郵政信箱號碼）</td><td id="pv-test2"></td></tr>
+          <tr><td>3</td><td>身分證號碼；或如沒有身分證，則提供所持護照的號碼和簽發國家</td><td id="pv-test3"></td></tr>
+          <tr><td>4</td><td>成為本公司重要控制人的日期</td><td id="pv-test4"></td></tr>
+          <tr><td>5</td><td>對本公司所擁有控制權的性質（參照《公司條例》附表 5B 所列條件）</td><td id="pv-test5"></td></tr>
+        </tbody>
+      </table>
+
+      <!-- ── Tests Checklist (editable) ── -->
+      <div style="margin:12px 0 10px 0;">
+        <div style="font-weight:600;font-size:12px;color:#1B2A4A;margin-bottom:4px;">請在適用的測試條件前打 ✓：</div>
+        <ul class="doc-tests-list">
+          <li><label><input type="checkbox" id="test1" checked /> Test 1 – 直接持有超過 25% 股份</label></li>
+          <li><label><input type="checkbox" id="test2" /> Test 2 – 間接持有超過 25% 股份</label></li>
+          <li><label><input type="checkbox" id="test3" /> Test 3 – 直接持有超過 25% 投票權</label></li>
+          <li><label><input type="checkbox" id="test4" /> Test 4 – 間接持有超過 25% 投票權</label></li>
+          <li><label><input type="checkbox" id="test5" /> Test 5 – 有權委任或罷免大多數董事</label></li>
+        </ul>
       </div>
 
-      <!-- Reference Line -->
-      <div style="margin-bottom:20px;text-align:right;">
-        <div style="font-size:11px;color:#666;">本行參考 / Our Ref: SCR-NOTICE-<span id="pv-refno">2026</span></div>
-        <div style="font-size:11px;color:#666;">日期 / Date: <span id="pv-noticedate">_________</span></div>
+      <!-- ── Delivery Method ── -->
+      <div class="doc-notice-box">
+        <strong>通知方式：</strong>
+        <select id="f-delivery" style="width:220px;">
+          <option value="親身交付 (Personal Delivery)">親身交付 (Personal Delivery)</option>
+          <option value="掛號郵件 (Registered Mail)" selected>掛號郵件 (Registered Mail)</option>
+          <option value="電子郵件 (Email)">電子郵件 (Email)</option>
+          <option value="快遞 (Courier)">快遞 (Courier)</option>
+        </select>
       </div>
 
-      <!-- Company Details -->
-      <div style="margin-bottom:16px;">
-        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #C9A84C;padding-bottom:4px;margin-bottom:8px;">本公司 / Our Company</div>
-        <table style="width:100%;border-collapse:collapse;font-size:13px;">
-          <tr><td style="width:140px;padding:2px 5px;font-weight:600;color:#555;">公司名稱</td><td style="padding:2px 5px;" id="pv-company">ABC 貿易有限公司</td></tr>
-          <tr><td style="width:140px;padding:2px 5px;font-weight:600;color:#555;">公司註冊編號</td><td style="padding:2px 5px;" id="pv-crno">12345678</td></tr>
-        </table>
+      <!-- ── Penalty Warning Box ── -->
+      <div class="doc-penalty-box">
+        <p>⚠️ 重要法律提示 / IMPORTANT LEGAL NOTICE</p>
+        <p>1. 根據《公司條例》第 653ZJ 條，任何人無合理辯解而違反通知的任何規定，即屬犯罪，可處 <strong>第 5 級罰款（HK$25,000）</strong>，如屬持續罪行，則可處 <strong>每日罰款 HK$700</strong>。</p>
+        <p>2. 根據《公司條例》第 653ZL 條，任何人在回應本通知時明知或罔顧實情地作出在要項上虛假的陳述，即屬犯罪，一經定罪可處 <strong>罰款 HK$300,000 及監禁 2 年</strong>。</p>
+        <p>3. 根據《公司條例》第 653ZJ(3) 條，如收件人未能在 <strong><span id="pv-deadline2">1 個月</span></strong> 內遵從通知，公司可向原訟法庭申請命令，要求該人遵從通知的規定。</p>
       </div>
 
-      <!-- Recipient Details -->
-      <div style="margin-bottom:16px;">
-        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #C9A84C;padding-bottom:4px;margin-bottom:8px;">收件人 / Recipient</div>
-        <table style="width:100%;border-collapse:collapse;font-size:13px;">
-          <tr><td style="width:140px;padding:2px 5px;font-weight:600;color:#555;">姓名</td><td style="padding:2px 5px;" id="pv-recipient">陳大明</td></tr>
-          <tr><td style="width:140px;padding:2px 5px;font-weight:600;color:#555;">地址</td><td style="padding:2px 5px;" id="pv-address">香港柴灣道 300 號 10 樓</td></tr>
-          <tr><td style="width:140px;padding:2px 5px;font-weight:600;color:#555;">類型</td><td style="padding:2px 5px;" id="pv-rectype">疑似重要控制人</td></tr>
-        </table>
-      </div>
-
-      <!-- Notice Body -->
-      <div style="margin-bottom:16px;">
-        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #C9A84C;padding-bottom:4px;margin-bottom:10px;">通知內容 / Notice Content</div>
-        
-        <div style="margin-bottom:10px;">
-          <p style="margin:0 0 6px 0;"><strong>根據《公司條例》（第 622 章）第 <span id="pv-section">653ZH</span> 條 — 要求提供資料通知書</strong></p>
-          <p style="margin:0 0 6px 0;">致 <span id="pv-recipient2">陳大明</span>：</p>
-          <p style="margin:0 0 6px 0;">本公司 <strong><span id="pv-company2">ABC 貿易有限公司</span></strong>（「本公司」）現正根據《公司條例》（第 622 章）第 653U 條採取合理步驟，以識別本公司的的重要控制人及取得所需詳情。</p>
-          <p style="margin:0 0 6px 0;">鑑於 閣下被識別為本公司的 <strong><span id="pv-rectype2">疑似重要控制人</span></strong>，本公司有合理因由相信 閣下是本公司的重要控制人，或知悉另一人是本公司的重要控制人及其身分。</p>
-          <p style="margin:0 0 6px 0;">因此，本公司現根據《公司條例》第 <span id="pv-section2">653ZH</span> 條，要求 閣下在本通知書日期起計 <strong><span id="pv-deadline">1 個月</span>內</strong>，向本公司提供以下資料：</p>
-        </div>
-
-        <!-- Required Info Table -->
-        <table style="width:100%;border-collapse:collapse;margin:12px 0;font-size:12px;">
-          <thead>
-            <tr style="background:#1B2A4A;color:white;">
-              <th style="padding:6px 8px;border:1px solid #1B2A4A;text-align:center;width:36px;">#</th>
-              <th style="padding:6px 8px;border:1px solid #1B2A4A;text-align:left;">所需資料</th>
-              <th style="padding:6px 8px;border:1px solid #1B2A4A;text-align:center;width:100px;">適用測試</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td style="padding:5px 8px;border:1px solid #ddd;text-align:center;font-weight:bold;">1</td><td style="padding:5px 8px;border:1px solid #ddd;">全名（姓名／名稱）</td><td style="padding:5px 8px;border:1px solid #ddd;text-align:center;" id="pv-test1"></td></tr>
-            <tr style="background:#f9f9f9;"><td style="padding:5px 8px;border:1px solid #ddd;text-align:center;font-weight:bold;">2</td><td style="padding:5px 8px;border:1px solid #ddd;">通訊地址（不得為郵政信箱號碼）</td><td style="padding:5px 8px;border:1px solid #ddd;text-align:center;" id="pv-test2"></td></tr>
-            <tr><td style="padding:5px 8px;border:1px solid #ddd;text-align:center;font-weight:bold;">3</td><td style="padding:5px 8px;border:1px solid #ddd;">身分證號碼；或如沒有身分證，則提供所持護照的號碼和簽發國家</td><td style="padding:5px 8px;border:1px solid #ddd;text-align:center;" id="pv-test3"></td></tr>
-            <tr style="background:#f9f9f9;"><td style="padding:5px 8px;border:1px solid #ddd;text-align:center;font-weight:bold;">4</td><td style="padding:5px 8px;border:1px solid #ddd;">成為本公司重要控制人的日期</td><td style="padding:5px 8px;border:1px solid #ddd;text-align:center;" id="pv-test4"></td></tr>
-            <tr><td style="padding:5px 8px;border:1px solid #ddd;text-align:center;font-weight:bold;">5</td><td style="padding:5px 8px;border:1px solid #ddd;">對本公司所擁有控制權的性質（參照《公司條例》附表 5B 所列條件）</td><td style="padding:5px 8px;border:1px solid #ddd;text-align:center;" id="pv-test5"></td></tr>
-          </tbody>
-        </table>
-
-        <!-- Delivery Method -->
-        <div style="margin:10px 0;padding:8px 12px;background:#f8f6f0;border-left:3px solid #C9A84C;font-size:12px;">
-          <strong>通知方式：</strong><span id="pv-delivery">掛號郵件 (Registered Mail)</span>
-        </div>
-
-      </div>
-
-      <!-- Penalty Warning Box -->
-      <div style="background:#fef2f2;border:1px solid #fecaca;border-radius:4px;padding:14px;margin:16px 0;font-size:12px;">
-        <p style="margin:0 0 6px 0;font-weight:bold;color:#b91c1c;">⚠️ 重要法律提示 / IMPORTANT LEGAL NOTICE</p>
-        <p style="margin:0 0 4px 0;">1. 根據《公司條例》第 653ZJ 條，任何人無合理辯解而違反通知的任何規定，即屬犯罪，可處 <strong>第 5 級罰款（HK$25,000）</strong>，如屬持續罪行，則可處 <strong>每日罰款 HK$700</strong>。</p>
-        <p style="margin:0 0 4px 0;">2. 根據《公司條例》第 653ZL 條，任何人在回應本通知時明知或罔顧實情地作出在要項上虛假的陳述，即屬犯罪，一經定罪可處 <strong>罰款 HK$300,000 及監禁 2 年</strong>。</p>
-        <p style="margin:0 0 0 0;">3. 根據《公司條例》第 653ZJ(3) 條，如收件人未能在 <strong><span id="pv-deadline2">1 個月</span></strong> 內遵從通知，公司可向原訟法庭申請命令，要求該人遵從通知的規定。</p>
-      </div>
-
-      <!-- Response Instruction -->
+      <!-- ── Response Instruction ── -->
       <div style="margin:14px 0 20px 0;font-size:12px;">
         <p style="margin:0 0 4px 0;">請於上述期限內，將所需資料以書面形式提交至本公司註冊辦事處。</p>
         <p style="margin:0 0 4px 0;">如有任何疑問，請聯絡本公司授權代表。</p>
       </div>
 
-      <!-- Signature Block -->
-      <div style="margin-top:36px;border-top:1px solid #ddd;padding-top:20px;">
+      <!-- ── Signature Block ── -->
+      <div class="doc-signature">
         <p style="margin:0 0 4px 0;">此致</p>
         <p style="margin:0 0 4px 0;" id="pv-recipient3">陳大明</p>
         <br/>
-        <div style="margin-top:30px;padding-top:5px;">
+        <div class="sig-line">
           <p style="margin:0 0 2px 0;">_________________________________</p>
-          <p style="margin:0 0 2px 0;font-weight:bold;" id="pv-authorizer">黃律師</p>
-          <p style="margin:0 0 2px 0;" id="pv-authpos">董事 (Director)</p>
-          <p style="margin:0 0 2px 0;">代表 <span id="pv-company3">ABC 貿易有限公司</span></p>
+          <p style="margin:0 0 2px 0;font-weight:700;">
+            <input type="text" id="f-authorizer" value="黃律師" style="width:180px;font-weight:700;" />
+          </p>
+          <p style="margin:0 0 2px 0;">
+            <select id="f-authpos" style="width:240px;">
+              <option value="董事 (Director)">董事 (Director)</option>
+              <option value="公司秘書 (Company Secretary)">公司秘書 (Company Secretary)</option>
+              <option value="獲授權代表 (Authorized Representative)">獲授權代表 (Authorized Representative)</option>
+            </select>
+          </p>
+          <p style="margin:0 0 2px 0;">代表 <input type="text" id="pv-company3" value="ABC 貿易有限公司" style="width:200px;" /></p>
         </div>
       </div>
 
-      <!-- Footer -->
-      <div style="margin-top:40px;padding-top:12px;border-top:1px solid #eee;font-size:10px;color:#aaa;text-align:center;">
-        <p style="margin:0 0 2px 0;">本通知書由 ESGov (https://esgov.org) 根據《公司條例》第 653ZH 條自動生成</p>
-        <p style="margin:0 0 0 0;">建議保留本通知書副本作為發出書面通知的記錄</p>
+      <!-- ── Footer ── -->
+      <div class="doc-footer-note">
+        <p>本通知書由 ESGov (https://esgov.org) 根據《公司條例》第 653ZH 條自動生成</p>
+        <p>建議保留本通知書副本作為發出書面通知的記錄</p>
       </div>
 
     </div>
+    <!-- ===== END PDF-FORM ===== -->
 
     <!-- Buttons -->
-    <div class="mt-6">
+    <div class="action-buttons mt-6">
       <button onclick="checkEmailGate()" id="genBtn" class="w-full bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm flex items-center justify-center gap-2">
         📄 下載書面通知書 PDF
       </button>
     </div>
     <p id="status" class="text-center text-sm mt-3 hidden"></p>
-    <div class="text-center mt-4">
+    <div class="return-link text-center mt-4">
       <a href="/significant-controllers-register?step=3" class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
         ← 返回重要控制人登記冊完整指南
       </a>
     </div>
-    <div class="text-center mt-4">
+    <div class="coffee-link text-center mt-4">
       <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
          class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
         ☕ 請咖啡
@@ -436,8 +663,9 @@
       const m = String(d.getMonth() + 1).padStart(2, '0');
       const day = String(d.getDate()).padStart(2, '0');
       const dateStr = y + '-' + m + '-' + day;
-      const el = document.querySelector('.field-date');
+      const el = document.getElementById('f-noticedate');
       if (el && !el.value) el.value = dateStr;
+      updateDeadlineDisplay();
     }
 
     function getCheckedTests() {
@@ -449,6 +677,102 @@
       if (document.getElementById('test5').checked) tests.push('Test 5');
       return tests;
     }
+
+    function updateDeadlineDisplay() {
+      const days = parseInt(document.getElementById('f-deadline').value) || 30;
+      const display = days >= 30 ? '1 個月' : days + ' 日';
+      document.getElementById('deadlineDisplay').textContent = display;
+      document.getElementById('pv-deadline2').textContent = display;
+    }
+
+    // Update ref no when date changes
+    function updateRefNo() {
+      const d = document.getElementById('f-noticedate').value;
+      if (d) {
+        const parts = d.split('-');
+        document.getElementById('pv-refno').textContent = parts[0] + '-' + parts[1] + '-' + parts[2];
+      }
+    }
+
+    // Live sync between f-recipient ↔ pv-recipient2 (body usage) and pv-recipient3
+    function syncRecipientFields() {
+      const val = document.getElementById('f-recipient').value;
+      document.getElementById('pv-recipient2').value = val;
+      document.getElementById('pv-recipient3').textContent = val || '—';
+    }
+
+    // Live sync: f-company → pv-company2, pv-company3
+    function syncCompanyFields() {
+      const val = document.getElementById('f-company').value;
+      document.getElementById('pv-company2').value = val;
+      document.getElementById('pv-company3').value = val;
+    }
+
+    // Live sync: f-rectype → pv-rectype2
+    function syncRecTypeFields() {
+      const val = document.getElementById('f-rectype').value;
+      document.getElementById('pv-rectype2').value = val;
+    }
+
+    // Live sync: f-section → pv-section2
+    function syncSectionFields() {
+      const val = document.getElementById('f-section').value;
+      document.getElementById('pv-section2').value = val;
+    }
+
+    // Format date for display (dd/mm/yyyy)
+    function formatDate(dStr) {
+      if (!dStr) return '_________';
+      const parts = dStr.split('-');
+      return parts[2] + '/' + parts[1] + '/' + parts[0];
+    }
+
+    // Update test table cells
+    function updateTestTable() {
+      const checkedTests = getCheckedTests();
+      const testLabels = ['Test 1', 'Test 2', 'Test 3', 'Test 4', 'Test 5'];
+      for (let i = 1; i <= 5; i++) {
+        const el = document.getElementById('pv-test' + i);
+        if (checkedTests.includes(testLabels[i-1])) {
+          el.textContent = '✓';
+          el.style.color = '#16a34a';
+          el.style.fontWeight = 'bold';
+        } else {
+          el.textContent = '—';
+          el.style.color = '#999';
+        }
+      }
+    }
+
+    // Wire up live sync events
+    document.addEventListener('DOMContentLoaded', function() {
+      setDefaultDate();
+      updateTestTable();
+
+      // Recipient sync
+      document.getElementById('f-recipient').addEventListener('input', syncRecipientFields);
+      // Company sync
+      document.getElementById('f-company').addEventListener('input', syncCompanyFields);
+      // RecType sync
+      document.getElementById('f-rectype').addEventListener('change', syncRecTypeFields);
+      // Section sync
+      document.getElementById('f-section').addEventListener('input', syncSectionFields);
+      // Deadline display
+      document.getElementById('f-deadline').addEventListener('input', updateDeadlineDisplay);
+      // Date → refno
+      document.getElementById('f-noticedate').addEventListener('change', updateRefNo);
+      // Test checkboxes
+      document.querySelectorAll('#test1, #test2, #test3, #test4, #test5').forEach(function(cb) {
+        cb.addEventListener('change', updateTestTable);
+      });
+
+      // Initial sync
+      syncRecipientFields();
+      syncCompanyFields();
+      syncRecTypeFields();
+      syncSectionFields();
+      updateRefNo();
+    });
 
     // Email Gate
     function checkEmailGate() {
@@ -484,7 +808,7 @@
       document.getElementById('emailGateModal').classList.remove('flex');
     }
 
-    // PDF Generation
+    // PDF Generation — capture #pdf-form directly
     async function generatePDF() {
       const btn = document.getElementById('genBtn');
       const status = document.getElementById('status');
@@ -498,80 +822,42 @@
         const { jsPDF } = window.jspdf;
         await document.fonts.ready;
 
-        // Get form values
+        // Get form values (for filename & deadline calc)
         const company = document.getElementById('f-company').value.trim();
-        const crno = document.getElementById('f-crno').value.trim();
-        const recipient = document.getElementById('f-recipient').value.trim();
-        const address = document.getElementById('f-address').value.trim();
-        const rectype = document.getElementById('f-rectype').value;
         const noticeDate = document.getElementById('f-noticedate').value || new Date().toISOString().split('T')[0];
-        const authorizer = document.getElementById('f-authorizer').value.trim();
-        const authpos = document.getElementById('f-authpos').value;
-        const deadlineDays = parseInt(document.getElementById('f-deadline').value) || 30;
-        const section = document.getElementById('f-section').value.trim();
-        const delivery = document.getElementById('f-delivery').value;
-        const checkedTests = getCheckedTests();
 
-        // Calculate deadline date
-        const issueDate = new Date(noticeDate);
-        const deadlineDate = new Date(issueDate);
-        deadlineDate.setDate(deadlineDate.getDate() + deadlineDays);
-        const deadlineStr = deadlineDate.toISOString().split('T')[0];
-        const deadlineDisplay = deadlineDays >= 30 ? '1 個月' : deadlineDays + ' 日';
+        // Update deadline display one last time
+        updateDeadlineDisplay();
+        // Update test table
+        updateTestTable();
+        // Sync all fields
+        syncRecipientFields();
+        syncCompanyFields();
+        syncRecTypeFields();
+        syncSectionFields();
+        updateRefNo();
 
-        // Format date for display (dd/mm/yyyy)
-        function formatDate(dStr) {
-          if (!dStr) return '_________';
-          const parts = dStr.split('-');
-          return parts[2] + '/' + parts[1] + '/' + parts[0];
-        }
+        await new Promise(r => setTimeout(r, 300));
 
-        // Update hidden template
-        document.getElementById('pv-company').textContent = company || '—';
-        document.getElementById('pv-crno').textContent = crno || '—';
-        document.getElementById('pv-recipient').textContent = recipient || '—';
-        document.getElementById('pv-address').textContent = address || '—';
-        document.getElementById('pv-rectype').textContent = rectype;
-        document.getElementById('pv-noticedate').textContent = formatDate(noticeDate);
-        document.getElementById('pv-section').textContent = section || '653ZH';
-        document.getElementById('pv-recipient2').textContent = recipient || '—';
-        document.getElementById('pv-company2').textContent = company || '—';
-        document.getElementById('pv-rectype2').textContent = rectype;
-        document.getElementById('pv-section2').textContent = section || '653ZH';
-        document.getElementById('pv-deadline').textContent = deadlineDisplay;
-        document.getElementById('pv-deadline2').textContent = deadlineDisplay;
-        document.getElementById('pv-authorizer').textContent = authorizer || '—';
-        document.getElementById('pv-authpos').textContent = authpos;
-        document.getElementById('pv-company3').textContent = company || '—';
-        document.getElementById('pv-recipient3').textContent = recipient || '—';
-        document.getElementById('pv-delivery').textContent = delivery;
-        document.getElementById('pv-refno').textContent = issueDate.getFullYear() + '-' + String(issueDate.getMonth() + 1).padStart(2, '0') + '-' + String(issueDate.getDate()).padStart(2, '0');
-
-        // Update test columns
-        const testLabels = ['Test 1', 'Test 2', 'Test 3', 'Test 4', 'Test 5'];
-        for (let i = 1; i <= 5; i++) {
-          const el = document.getElementById('pv-test' + i);
-          if (checkedTests.includes(testLabels[i-1])) {
-            el.textContent = '✓';
-            el.style.color = '#16a34a';
-            el.style.fontWeight = 'bold';
-          } else {
-            el.textContent = '—';
-            el.style.color = '#999';
-          }
-        }
+        // Capture mode: hide non-document UI
+        document.body.classList.add('capture-mode');
+        // Force reflow
+        void document.body.offsetHeight;
 
         await new Promise(r => setTimeout(r, 200));
 
-        // Capture hidden template
-        const el = document.getElementById('pdf-content');
+        // Capture #pdf-form directly
+        const el = document.getElementById('pdf-form');
         const canvas = await html2canvas(el, {
           scale: 3,
           useCORS: true,
           backgroundColor: '#ffffff',
           logging: false,
-          width: 800
+          width: el.scrollWidth
         });
+
+        // Restore UI
+        document.body.classList.remove('capture-mode');
 
         // Generate PDF
         const imgData = canvas.toDataURL('image/png');
@@ -582,7 +868,9 @@
         const pageH = 297;
 
         if (imgH > pageH) {
-          doc.addImage(imgData, 'PNG', 0, 0, pageW * (pageH / imgH), pageH);
+          // Scale to fit height
+          const scale = pageH / imgH;
+          doc.addImage(imgData, 'PNG', 0, 0, pageW * scale, pageH);
         } else {
           doc.addImage(imgData, 'PNG', 0, (pageH - imgH) / 2, pageW, imgH);
         }
@@ -610,6 +898,8 @@
         }, 2500);
 
       } catch(e) {
+        // Restore UI on error too
+        document.body.classList.remove('capture-mode');
         console.error('PDF generation error:', e);
         btn.innerHTML = '📄 下載書面通知書 PDF';
         btn.disabled = false;
@@ -617,9 +907,6 @@
         status.textContent = '❌ 生成失敗: ' + e.message;
       }
     }
-
-    // Init
-    setDefaultDate();
   </script>
 
   <!-- Email Gate Modal -->

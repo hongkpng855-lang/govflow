@@ -65,10 +65,20 @@
   <style>
     .field-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
     .field-label { width: 180px; font-size: 13px; font-weight: 600; color: #1B2A4A; text-align: right; flex-shrink: 0; }
-    .field-input { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: #fffbeb; font-family: inherit; outline: none; transition: all 0.15s; }
-    .field-input:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); background: #fef3c7; }
-    .field-select { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: white; font-family: inherit; outline: none; }
-    .field-select:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); }
+    .field-input { flex: 1; padding: 6px 4px; border: none; border-bottom: 1px solid #999; font-size: 14px; background: transparent; font-family: inherit; outline: none; transition: border-color 0.15s; }
+    .field-input:focus { border-bottom-color: #C9A84C; }
+    .field-select { flex: 1; padding: 6px 4px; border: none; border-bottom: 1px solid #999; font-size: 14px; background: transparent; font-family: inherit; outline: none; }
+    .field-select:focus { border-bottom-color: #C9A84C; }
+    .capture-mode nav,
+    .capture-mode footer,
+    .capture-mode #emailGateModal,
+    .capture-mode #page-wrap > :not(#pdf-form):not(script) {
+      display: none !important;
+    }
+    .capture-mode .ctrl-remove-btn,
+    .capture-mode .add-ctrl-btn {
+      display: none !important;
+    }
   </style>
 </head>
 <body class="bg-gray-100 font-sans">
@@ -80,7 +90,7 @@
     </div>
   </nav>
 
-  <div class="max-w-4xl mx-auto px-4 py-6">
+  <div class="max-w-4xl mx-auto px-4 py-6" id="page-wrap">
 
     <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
       📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅資料收集表 PDF
@@ -217,7 +227,7 @@
         <div class="mb-6">
           <div class="flex items-center justify-between mb-3">
             <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1">控制人資料</h2>
-            <button onclick="addController()" class="text-xs bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition font-semibold">+ 新增控制人</button>
+            <button onclick="addController()" class="text-xs bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition font-semibold add-ctrl-btn">+ 新增控制人</button>
           </div>
           <div id="controllers-container"></div>
         </div>
@@ -248,54 +258,6 @@
       </div>
     </div>
 
-    <!-- PDF Template (hidden for capture) -->
-    <div id="pdf-content" style="position:absolute;left:-9999px;top:0;width:800px;background:white;padding:40px;font-family:'Noto Sans TC',sans-serif;font-size:13px;">
-      <div style="text-align:center;border-bottom:2px solid #1B2A4A;padding-bottom:10px;margin-bottom:20px;">
-        <div style="font-size:18px;font-weight:bold;color:#C9A84C;">重要控制人資料收集表</div>
-        <div style="font-size:12px;color:#666;">Significant Controllers Data Collection Form</div>
-      </div>
-
-      <div style="margin-bottom:15px;">
-        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">公司資料</div>
-        <table style="width:100%;border-collapse:collapse;">
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司名稱</td><td style="padding:3px 5px;" id="pv-company">ABC 貿易有限公司</td></tr>
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司註冊編號</td><td style="padding:3px 5px;" id="pv-crno">12345678</td></tr>
-        </table>
-      </div>
-
-      <div style="margin-bottom:15px;">
-        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">控制人資料</div>
-        <div id="pv-controllers">
-          <p style="color:#999;font-style:italic;">未有控制人資料</p>
-        </div>
-      </div>
-
-      <div style="margin-bottom:15px;">
-        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">收集人資料</div>
-        <table style="width:100%;border-collapse:collapse;">
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">收集人姓名</td><td style="padding:3px 5px;" id="pv-collector-name">張秘書</td></tr>
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">收集人職位</td><td style="padding:3px 5px;" id="pv-collector-role">員工</td></tr>
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">收集日期</td><td style="padding:3px 5px;" id="pv-collect-date"></td></tr>
-        </table>
-      </div>
-
-      <div style="margin-top:25px;padding-top:15px;border-top:1px dashed #ccc;">
-        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">簽署確認</div>
-        <p style="font-size:12px;color:#555;margin-bottom:15px;">本人確認上述資料屬實，並同意將此等資料用於公司重要控制人登記冊（SCR）之備存及更新。</p>
-        <div style="display:flex; justify-content:space-between;">
-          <div>
-            <p style="font-weight:600;font-size:12px;color:#C9A84C;">控制人簽署</p>
-            <div style="margin-top:25px;border-top:1px solid #333;width:250px;text-align:center;padding-top:4px;font-size:11px;color:#555;">簽署</div>
-            <p style="font-size:11px;color:#555;margin-top:4px;">日期：_____________</p>
-          </div>
-          <div>
-            <p style="font-weight:600;font-size:12px;color:#C9A84C;">收集人簽署</p>
-            <div style="margin-top:25px;border-top:1px solid #333;width:250px;text-align:center;padding-top:4px;font-size:11px;color:#555;">簽署</div>
-            <p style="font-size:11px;color:#555;margin-top:4px;">日期：_____________</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Buttons -->
     <div class="mt-6">
@@ -351,7 +313,7 @@
       div.innerHTML =
         '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
           '<span style="font-size:13px;font-weight:bold;color:#1B2A4A;">控制人 #' + idx + '</span>' +
-          '<button onclick="removeController(' + idx + ')" style="font-size:11px;color:#c00;background:none;border:none;cursor:' + (idx === 1 ? 'default' : 'pointer') + ';' + (idx === 1 ? 'display:none' : '') + '">✕ 移除</button>' +
+          '<button onclick="removeController(' + idx + ')" class="ctrl-remove-btn" style="font-size:11px;color:#c00;background:none;border:none;cursor:' + (idx === 1 ? 'default' : 'pointer') + ';' + (idx === 1 ? 'display:none' : '') + '">✕ 移除</button>' +
         '</div>' +
         '<div class="field-row"><span class="field-label">控制人類型</span><select id="ctype-' + idx + '" class="field-select">' + etypeOpts + '</select></div>' +
         '<div class="field-row"><span class="field-label">全名（中文）</span><input type="text" id="ctrlname-cn-' + idx + '" value="' + (data ? data.nameCN : '') + '" class="field-input" placeholder="例如：陳大明" /></div>' +
@@ -472,70 +434,11 @@
         const { jsPDF } = window.jspdf;
         await document.fonts.ready;
 
-        // Get form values
-        const company = document.getElementById('f-company').value.trim();
-        const crno = document.getElementById('f-crno').value.trim();
-        const collectorName = document.getElementById('f-collector-name').value.trim();
-        const collectorRole = document.getElementById('f-collector-role').value;
-        const collectDate = document.getElementById('f-collect-date').value || new Date().toISOString().split('T')[0];
-        const controllers = getControllerData();
+        // Capture the form directly with html2canvas
+        document.body.classList.add('capture-mode');
+        await new Promise(r => setTimeout(r, 100));
 
-        // Update hidden template
-        document.getElementById('pv-company').textContent = company || '—';
-        document.getElementById('pv-crno').textContent = crno || '—';
-        document.getElementById('pv-collector-name').textContent = collectorName || '—';
-        document.getElementById('pv-collector-role').textContent = collectorRole;
-        document.getElementById('pv-collect-date').textContent = collectDate;
-
-        // Build controllers table in hidden template
-        const pvContainer = document.getElementById('pv-controllers');
-        if (controllers.length === 0) {
-          pvContainer.innerHTML = '<p style="color:#999;font-style:italic;">未有控制人資料</p>';
-        } else {
-          let table = '<table style="width:100%;border-collapse:collapse;font-size:12px;">';
-          table += '<thead><tr style="background:#1B2A4A;color:white;">';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">#</th>';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">類型</th>';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">姓名（中文）</th>';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">姓名（英文）</th>';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">身份證/護照</th>';
-          table += '</tr></thead><tbody>';
-          controllers.forEach((c, i) => {
-            table += '<tr style="background:' + (i % 2 === 0 ? 'white' : '#f9f9f9') + ';">';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;text-align:center;font-weight:bold;">' + c.num + '</td>';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + (c.etype || '—') + '</td>';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + (c.nameCN || '—') + '</td>';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + (c.nameEN || '—') + '</td>';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + (c.id || '—') + '</td>';
-            table += '</tr>';
-          });
-          table += '</tbody></table>';
-
-          // Detail section for each controller
-          table += '<div style="margin-top:10px;">';
-          controllers.forEach((c, i) => {
-            table += '<div style="background:#f9f9f9;border:1px solid #ddd;border-radius:6px;padding:8px 12px;margin-bottom:8px;">';
-            table += '<div style="font-weight:bold;font-size:12px;color:#1B2A4A;margin-bottom:5px;">控制人 #' + c.num + ' 詳細資料</div>';
-            table += '<table style="width:100%;border-collapse:collapse;font-size:11px;">';
-            table += '<tr><td style="padding:2px 5px;font-weight:600;color:#555;width:140px;">控制人類型</td><td style="padding:2px 5px;">' + (c.etype || '—') + '</td></tr>';
-            table += '<tr><td style="padding:2px 5px;font-weight:600;color:#555;">全名（中文）</td><td style="padding:2px 5px;">' + (c.nameCN || '—') + '</td></tr>';
-            table += '<tr><td style="padding:2px 5px;font-weight:600;color:#555;">全名（英文）</td><td style="padding:2px 5px;">' + (c.nameEN || '—') + '</td></tr>';
-            table += '<tr><td style="padding:2px 5px;font-weight:600;color:#555;">通訊地址</td><td style="padding:2px 5px;">' + (c.adr || '—') + '</td></tr>';
-            table += '<tr><td style="padding:2px 5px;font-weight:600;color:#555;">身份證號碼</td><td style="padding:2px 5px;">' + (c.id || '—') + '</td></tr>';
-            table += '<tr><td style="padding:2px 5px;font-weight:600;color:#555;">出生日期</td><td style="padding:2px 5px;">' + (c.dob || '—') + '</td></tr>';
-            table += '<tr><td style="padding:2px 5px;font-weight:600;color:#555;">成為控制人日期</td><td style="padding:2px 5px;">' + (c.date || '—') + '</td></tr>';
-            table += '<tr><td style="padding:2px 5px;font-weight:600;color:#555;">控制性質</td><td style="padding:2px 5px;">' + c.ctype + '</td></tr>';
-            table += '</table></div>';
-          });
-          table += '</div>';
-
-          pvContainer.innerHTML = table;
-        }
-
-        await new Promise(r => setTimeout(r, 200));
-
-        // Capture hidden template
-        const el = document.getElementById('pdf-content');
+        const el = document.getElementById('pdf-form');
         const canvas = await html2canvas(el, {
           scale: 3,
           useCORS: true,
@@ -543,6 +446,8 @@
           logging: false,
           width: 800
         });
+
+        document.body.classList.remove('capture-mode');
 
         // Generate PDF
         const imgData = canvas.toDataURL('image/png');

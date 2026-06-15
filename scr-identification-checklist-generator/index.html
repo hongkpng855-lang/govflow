@@ -61,12 +61,33 @@
 }
   </script>
   <style>
-    .field-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-    .field-label { width: 180px; font-size: 13px; font-weight: 600; color: #1B2A4A; text-align: right; flex-shrink: 0; }
-    .field-input { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: #fffbeb; font-family: inherit; outline: none; transition: all 0.15s; }
-    .field-input:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); background: #fef3c7; }
-    .field-select { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: white; font-family: inherit; outline: none; }
-    .field-select:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); }
+    /* WYSIWYG Document Styles */
+    .doc-input { border: none; border-bottom: 1px solid #999; background: transparent; padding: 2px 4px; font-size: 13px; font-family: inherit; outline: none; width: 100%; color: #333; transition: border-color 0.15s; box-sizing: border-box; }
+    .doc-input:focus { border-bottom-color: #C9A84C; border-bottom-width: 2px; }
+    .doc-input[type="date"] { min-width: 140px; }
+    .doc-select { border: none; border-bottom: 1px solid #999; background: transparent; padding: 2px 4px; font-size: 12px; font-family: inherit; outline: none; width: 100%; color: #333; cursor: pointer; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-align: center; box-sizing: border-box; }
+    .doc-select:focus { border-bottom-color: #C9A84C; border-bottom-width: 2px; }
+    .doc-textarea { border: none; border-bottom: 1px solid #999; background: transparent; padding: 2px 4px; font-size: 13px; font-family: inherit; outline: none; width: 100%; color: #333; resize: vertical; min-height: 28px; box-sizing: border-box; }
+    .doc-textarea:focus { border-bottom-color: #C9A84C; border-bottom-width: 2px; }
+    /* Subjects table */
+    .subjects-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .subjects-table th { background: #1B2A4A; color: white; padding: 5px 3px; text-align: center; font-weight: 600; font-size: 11px; border: 1px solid #1B2A4A; line-height: 1.2; }
+    .subjects-table td { padding: 3px; text-align: center; border: 1px solid #ccc; vertical-align: middle; }
+    .subjects-table td.cell-num { font-weight: bold; color: #1B2A4A; width: 24px; font-size: 12px; }
+    .subjects-table td.cell-name { min-width: 100px; }
+    .subjects-table td.cell-result { min-width: 80px; }
+    .subjects-table td.cell-remove { width: 28px; border: none; }
+    .remove-btn { background: none; border: none; color: #c00; cursor: pointer; font-size: 14px; padding: 2px 4px; border-radius: 3px; line-height: 1; }
+    .remove-btn:hover { background: #fee2e2; }
+    .add-subject-btn { display: inline-flex; align-items: center; gap: 4px; background: none; border: 1px dashed #C9A84C; color: #C9A84C; padding: 4px 14px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; margin-top: 8px; transition: all 0.15s; }
+    .add-subject-btn:hover { background: #fffbeb; border-style: solid; }
+    /* Capture mode: hide non-document UI */
+    .capture-mode .add-subject-btn,
+    .capture-mode .remove-btn,
+    .capture-mode .cell-remove,
+    .capture-mode #template-refs,
+    .capture-mode .doc-info-box,
+    .capture-mode .breadcrumb-bar { display: none !important; }
   </style>
 </head>
 <body class="bg-gray-100 font-sans">
@@ -186,83 +207,61 @@
     }
     </script>
 
-    <!-- PDF Form -->
-    <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px;">
+    <!-- PDF Form (WYSIWYG Document) -->
+    <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto" style="max-width:800px;font-family:'Noto Sans TC',sans-serif;font-size:13px;line-height:1.5;">
 
-      <div class="bg-navy text-white py-3 px-6 text-center">
-        <div class="text-lg font-bold text-gold">IDENTIFICATION CHECKLIST</div>
-        <p class="text-xs text-gray-400">重要控制人識別檢查表</p>
+      <!-- Document Header -->
+      <div style="text-align:center;padding:24px 40px 14px;border-bottom:2px solid #1B2A4A;">
+        <div style="font-size:18px;font-weight:bold;color:#C9A84C;letter-spacing:1px;">IDENTIFICATION CHECKLIST</div>
+        <div style="font-size:12px;color:#666;margin-top:2px;">重要控制人識別檢查表</div>
       </div>
 
-      <div class="p-6 sm:p-8">
+      <div style="padding:24px 40px 32px;">
 
-        <!-- Company Info -->
-        <div class="mb-6">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">公司資料</h2>
-          <div class="field-row">
-            <span class="field-label">公司名稱</span>
-            <input type="text" id="f-company" value="ABC 貿易有限公司" class="field-input" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">公司名稱（英文）</span>
-            <input type="text" id="f-company-en" value="ABC TRADING LIMITED" class="field-input" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">公司註冊編號</span>
-            <input type="text" id="f-crno" value="12345678" class="field-input" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">分析日期</span>
-            <input type="date" id="f-rdate" class="field-input field-date" />
-          </div>
+        <!-- Company Info Section -->
+        <div style="margin-bottom:20px;">
+          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">公司資料</div>
+          <table style="width:100%;border-collapse:collapse;">
+            <tr><td style="width:110px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">公司名稱</td><td style="padding:3px 0;"><input type="text" id="f-company" value="ABC 貿易有限公司" class="doc-input" style="max-width:360px;" /></td></tr>
+            <tr><td style="width:110px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">公司名稱（英文）</td><td style="padding:3px 0;"><input type="text" id="f-company-en" value="ABC TRADING LIMITED" class="doc-input" style="max-width:360px;" /></td></tr>
+            <tr><td style="width:110px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">公司註冊編號</td><td style="padding:3px 0;"><input type="text" id="f-crno" value="12345678" class="doc-input" style="max-width:180px;" /></td></tr>
+            <tr><td style="width:110px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">分析日期</td><td style="padding:3px 0;"><input type="date" id="f-rdate" class="doc-input" style="max-width:160px;" /></td></tr>
+          </table>
         </div>
 
-        <!-- Test Subjects -->
-        <div class="mb-6">
-          <div class="flex items-center justify-between mb-3">
-            <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1">測試對象</h2>
-            <button onclick="addSubject()" class="text-xs bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition font-semibold">+ 新增測試對象</button>
-          </div>
-          <div id="subjects-container"></div>
+        <!-- Test Subjects Table -->
+        <div style="margin-bottom:16px;">
+          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">重要控制人識別測試結果</div>
+          <table class="subjects-table" id="subjects-table">
+            <thead>
+              <tr>
+                <th style="width:24px;">#</th>
+                <th style="min-width:100px;">姓名/名稱</th>
+                <th style="width:40px;">T1<br/><span style="font-weight:400;font-size:9px;">持股&gt;25%</span></th>
+                <th style="width:40px;">T2<br/><span style="font-weight:400;font-size:9px;">投票權&gt;25%</span></th>
+                <th style="width:40px;">T3<br/><span style="font-weight:400;font-size:9px;">董事任命權</span></th>
+                <th style="width:40px;">T4<br/><span style="font-weight:400;font-size:9px;">重大影響</span></th>
+                <th style="width:40px;">T5<br/><span style="font-weight:400;font-size:9px;">信託影響</span></th>
+                <th style="min-width:80px;">識別結果</th>
+              </tr>
+            </thead>
+            <tbody id="subjects-container"></tbody>
+          </table>
+          <button onclick="addSubject()" class="add-subject-btn">+ 新增測試對象</button>
         </div>
 
-      </div>
-    </div>
-
-    <!-- PDF Template (hidden for capture) -->
-    <div id="pdf-content" style="position:absolute;left:-9999px;top:0;width:800px;background:white;padding:40px;font-family:'Noto Sans TC',sans-serif;font-size:13px;">
-      <div style="text-align:center;border-bottom:2px solid #1B2A4A;padding-bottom:10px;margin-bottom:20px;">
-        <div style="font-size:18px;font-weight:bold;color:#C9A84C;">IDENTIFICATION CHECKLIST</div>
-        <div style="font-size:12px;color:#666;">重要控制人識別檢查表</div>
-      </div>
-
-      <div style="margin-bottom:15px;">
-        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">公司資料</div>
-        <table style="width:100%;border-collapse:collapse;">
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司名稱</td><td style="padding:3px 5px;" id="pv-company">ABC 貿易有限公司</td></tr>
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司名稱（英文）</td><td style="padding:3px 5px;" id="pv-company-en">ABC TRADING LIMITED</td></tr>
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司註冊編號</td><td style="padding:3px 5px;" id="pv-crno">12345678</td></tr>
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">分析日期</td><td style="padding:3px 5px;" id="pv-rdate"></td></tr>
-        </table>
-      </div>
-
-      <div style="margin-bottom:15px;">
-        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">重要控制人識別測試結果</div>
-        <div id="pv-subjects">
-          <p style="color:#999;font-style:italic;">未有測試對象資料</p>
+        <!-- Notes -->
+        <div style="margin-bottom:16px;">
+          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">備註</div>
+          <textarea id="f-notes" class="doc-textarea" rows="2" placeholder="如有需要，可在此輸入備註…"></textarea>
         </div>
-      </div>
 
-      <div style="margin-top:20px;padding-top:10px;border-top:1px dashed #ccc;">
-        <div id="pv-notes" style="display:none;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">備註</div>
-          <p style="padding:5px 0;" id="pv-notes-text"></p>
+        <!-- Signature -->
+        <div style="margin-top:20px;padding-top:12px;border-top:1px solid #ddd;display:flex;gap:36px;font-size:13px;">
+          <div style="display:flex;align-items:center;gap:6px;"><span style="font-weight:600;color:#555;white-space:nowrap;">核實人簽署：</span><input type="text" id="f-signature" class="doc-input" style="width:160px;" /></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="font-weight:600;color:#555;white-space:nowrap;">日期：</span><input type="date" id="f-signdate" class="doc-input" style="width:140px;" /></div>
         </div>
-      </div>
 
-      <div style="margin-top:20px;padding-top:10px;border-top:1px solid #ddd;text-align:center;font-size:10px;color:#999;">
-        <p>本文件由 ESGov (https://esgov.org) 自動生成 • 僅供內部參考</p>
-        <p>⚠️ 建議覆核資料準確性後再用作正式文件</p>
       </div>
     </div>
 
@@ -296,30 +295,29 @@
       subjectCount++;
       const idx = subjectCount;
       const container = document.getElementById('subjects-container');
-      const div = document.createElement('div');
-      div.className = 'bg-amber-50/30 border border-gray-200 rounded-xl p-4 mb-4';
-      div.id = 'subj-' + idx;
+      const tr = document.createElement('tr');
+      tr.id = 'subj-' + idx;
 
-      const typeOpts = subjectTypes.map(t =>
-        '<option value="' + t + '"' + (data && data.type === t ? ' selected' : '') + '>' + t + '</option>'
-      ).join('');
+      function selOpts(v) {
+        return '<option value="是"' + (v === '是' ? ' selected' : '') + '>是</option><option value="否"' + (v === '否' ? ' selected' : '') + '>否</option>';
+      }
 
-      div.innerHTML =
-        '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
-          '<span style="font-size:13px;font-weight:bold;color:#1B2A4A;">測試對象 #' + idx + '</span>' +
-          '<button onclick="removeSubject(' + idx + ')" style="font-size:11px;color:#c00;background:none;border:none;cursor:' + (idx === 1 ? 'default' : 'pointer') + ';' + (idx === 1 ? 'display:none' : '') + '">✕ 移除</button>' +
-        '</div>' +
-        '<div class="field-row"><span class="field-label">測試對象姓名/名稱</span><input type="text" id="subjname-' + idx + '" value="' + (data ? data.name : '') + '" class="field-input" /></div>' +
-        '<div class="field-row"><span class="field-label">對象類型</span><select id="subjtype-' + idx + '" class="field-select">' + typeOpts + '</select></div>' +
-        '<div class="field-row"><span class="field-label">測試 1：持股 >25%</span><select id="subjt1-' + idx + '" class="field-select"><option value="是"' + (data && data.t1 === '是' ? ' selected' : '') + '>是</option><option value="否"' + (data && data.t1 === '否' ? ' selected' : '') + '>否</option></select></div>' +
-        '<div class="field-row"><span class="field-label">測試 2：投票權 >25%</span><select id="subjt2-' + idx + '" class="field-select"><option value="是"' + (data && data.t2 === '是' ? ' selected' : '') + '>是</option><option value="否"' + (data && data.t2 === '否' ? ' selected' : '') + '>否</option></select></div>' +
-        '<div class="field-row"><span class="field-label">測試 3：董事任命權</span><select id="subjt3-' + idx + '" class="field-select"><option value="是"' + (data && data.t3 === '是' ? ' selected' : '') + '>是</option><option value="否"' + (data && data.t3 === '否' ? ' selected' : '') + '>否</option></select></div>' +
-        '<div class="field-row"><span class="field-label">測試 4：重大影響或控制</span><select id="subjt4-' + idx + '" class="field-select"><option value="是"' + (data && data.t4 === '是' ? ' selected' : '') + '>是</option><option value="否"' + (data && data.t4 === '否' ? ' selected' : '') + '>否</option></select></div>' +
-        '<div class="field-row"><span class="field-label">測試 5：對信託/商號影響</span><select id="subjt5-' + idx + '" class="field-select"><option value="是"' + (data && data.t5 === '是' ? ' selected' : '') + '>是</option><option value="否"' + (data && data.t5 === '否' ? ' selected' : '') + '>否</option></select></div>' +
-        '<div class="field-row"><span class="field-label">符合條件</span><input type="text" id="subjresult-' + idx + '" value="' + (data ? data.result : '') + '" class="field-input" placeholder="例如：測試 1 及測試 2" /></div>' +
-        '<div class="field-row"><span class="field-label">是否重要控制人</span><select id="subjsc-' + idx + '" class="field-select"><option value="是"' + (data && data.sc === '是' ? ' selected' : '') + '>是</option><option value="否"' + (data && data.sc === '否' ? ' selected' : '') + '>否</option><option value="待確認"' + (data && data.sc === '待確認' ? ' selected' : '') + '>待確認</option></select></div>' +
-        '<div class="field-row"><span class="field-label">備註</span><input type="text" id="subjnotes-' + idx + '" value="' + (data ? data.notes : '') + '" class="field-input" /></div>';
-      container.appendChild(div);
+      tr.innerHTML =
+        '<td class="cell-num">' + idx + '</td>' +
+        '<td class="cell-name"><input type="text" id="subjname-' + idx + '" class="doc-input" value="' + (data ? data.name : '') + '" /></td>' +
+        '<td><select id="subjt1-' + idx + '" class="doc-select">' + selOpts(data ? data.t1 : '') + '</select></td>' +
+        '<td><select id="subjt2-' + idx + '" class="doc-select">' + selOpts(data ? data.t2 : '') + '</select></td>' +
+        '<td><select id="subjt3-' + idx + '" class="doc-select">' + selOpts(data ? data.t3 : '') + '</select></td>' +
+        '<td><select id="subjt4-' + idx + '" class="doc-select">' + selOpts(data ? data.t4 : '') + '</select></td>' +
+        '<td><select id="subjt5-' + idx + '" class="doc-select">' + selOpts(data ? data.t5 : '') + '</select></td>' +
+        '<td class="cell-result"><input type="text" id="subjresult-' + idx + '" class="doc-input" value="' + (data ? data.result : '') + '" placeholder="PSC/非控" /></td>' +
+        '<td class="cell-remove"><button onclick="removeSubject(' + idx + ')" class="remove-btn"' + (idx === 1 ? ' style="display:none"' : '') + '>✕</button></td>' +
+        '<td style="display:none;">' +
+          '<input type="hidden" id="subjtype-' + idx + '" value="' + (data ? data.type : '股東') + '" />' +
+          '<input type="hidden" id="subjsc-' + idx + '" value="' + (data ? data.sc : '待確認') + '" />' +
+          '<input type="hidden" id="subjnotes-' + idx + '" value="' + (data ? data.notes : '') + '" />' +
+        '</td>';
+      container.appendChild(tr);
     }
 
     function removeSubject(idx) {
@@ -332,12 +330,9 @@
       const rows = container.querySelectorAll('[id^="subj-"]');
       rows.forEach((row, i) => {
         const num = i + 1;
-        const title = row.querySelector('span:first-child');
-        if (title) {
-          const parts = title.textContent.split('#');
-          if (parts.length === 2) title.textContent = '測試對象 #' + num;
-        }
-        const rmBtn = row.querySelector('button');
+        const numCell = row.querySelector('.cell-num');
+        if (numCell) numCell.textContent = num;
+        const rmBtn = row.querySelector('.remove-btn');
         if (rmBtn) rmBtn.style.display = num === 1 ? 'none' : '';
       });
     }
@@ -377,7 +372,7 @@
       const m = String(d.getMonth() + 1).padStart(2, '0');
       const day = String(d.getDate()).padStart(2, '0');
       const dateStr = y + '-' + m + '-' + day;
-      document.querySelectorAll('.field-date').forEach(el => {
+      document.querySelectorAll('input[type="date"].doc-input').forEach(el => {
         if (!el.value) el.value = dateStr;
       });
     }
@@ -434,85 +429,22 @@
         const { jsPDF } = window.jspdf;
         await document.fonts.ready;
 
-        // Get form values
-        const company = document.getElementById('f-company').value.trim();
-        const companyEn = document.getElementById('f-company-en').value.trim();
-        const crno = document.getElementById('f-crno').value.trim();
-        const rdate = document.getElementById('f-rdate').value || new Date().toISOString().split('T')[0];
-        const subjects = getSubjectData();
+        // Enter capture mode: hide non-document UI
+        const form = document.getElementById('pdf-form');
+        form.classList.add('capture-mode');
+        await new Promise(r => setTimeout(r, 100));
 
-        // Get global notes from last subject or empty
-        let globalNotes = '';
-        if (subjects.length > 0) {
-          const lastSubject = subjects[subjects.length - 1];
-          if (lastSubject.notes) globalNotes = lastSubject.notes;
-        }
-
-        // Update hidden template
-        document.getElementById('pv-company').textContent = company || '—';
-        document.getElementById('pv-company-en').textContent = companyEn || '—';
-        document.getElementById('pv-crno').textContent = crno || '—';
-        document.getElementById('pv-rdate').textContent = rdate;
-
-        // Build subjects table in hidden template
-        const pvContainer = document.getElementById('pv-subjects');
-        if (subjects.length === 0) {
-          pvContainer.innerHTML = '<p style="color:#999;font-style:italic;">未有測試對象資料</p>';
-        } else {
-          let table = '<table style="width:100%;border-collapse:collapse;font-size:11px;">';
-          table += '<thead><tr style="background:#1B2A4A;color:white;">';
-          table += '<th style="padding:4px;border:1px solid #ddd;">#</th>';
-          table += '<th style="padding:4px;border:1px solid #ddd;">姓名/名稱</th>';
-          table += '<th style="padding:4px;border:1px solid #ddd;">類型</th>';
-          table += '<th style="padding:4px;border:1px solid #ddd;">測試1<br/>持股>25%</th>';
-          table += '<th style="padding:4px;border:1px solid #ddd;">測試2<br/>投票權>25%</th>';
-          table += '<th style="padding:4px;border:1px solid #ddd;">測試3<br/>董事任命權</th>';
-          table += '<th style="padding:4px;border:1px solid #ddd;">測試4<br/>重大影響</th>';
-          table += '<th style="padding:4px;border:1px solid #ddd;">測試5<br/>信託影響</th>';
-          table += '<th style="padding:4px;border:1px solid #ddd;">符合條件</th>';
-          table += '<th style="padding:4px;border:1px solid #ddd;">識別結果</th>';
-          table += '<th style="padding:4px;border:1px solid #ddd;">備註</th>';
-          table += '</tr></thead><tbody>';
-          subjects.forEach((s, i) => {
-            const isSC = s.t1 === '是' || s.t2 === '是' || s.t3 === '是' || s.t4 === '是' || s.t5 === '是';
-            const bgColor = isSC ? '#fef2f2' : (i % 2 === 0 ? 'white' : '#f9f9f9');
-            table += '<tr style="background:' + bgColor + ';">';
-            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;font-weight:bold;">' + s.num + '</td>';
-            table += '<td style="padding:3px 4px;border:1px solid #ddd;">' + (s.name || '—') + '</td>';
-            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;">' + s.type + '</td>';
-            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;">' + tr(s.t1) + '</td>';
-            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;">' + tr(s.t2) + '</td>';
-            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;">' + tr(s.t3) + '</td>';
-            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;">' + tr(s.t4) + '</td>';
-            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;">' + tr(s.t5) + '</td>';
-            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;">' + (s.result || '—') + '</td>';
-            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;font-weight:bold;color:' + (isSC ? '#b91c1c' : '#666') + ';">' + s.sc + '</td>';
-            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;font-size:10px;">' + (s.notes || '—') + '</td>';
-            table += '</tr>';
-          });
-          table += '</tbody></table>';
-          pvContainer.innerHTML = table;
-        }
-
-        // Notes
-        if (globalNotes) {
-          document.getElementById('pv-notes').style.display = 'block';
-          document.getElementById('pv-notes-text').textContent = globalNotes;
-        } else {
-          document.getElementById('pv-notes').style.display = 'none';
-        }
-
-        await new Promise(r => setTimeout(r, 200));
-
-        // Capture hidden template
-        const el = document.getElementById('pdf-content');
-        const canvas = await html2canvas(el, {
+        // Capture #pdf-form directly
+        const canvas = await html2canvas(form, {
           scale: 3,
           useCORS: true,
           backgroundColor: '#ffffff',
           logging: false,
           width: 800
         });
+
+        // Exit capture mode
+        form.classList.remove('capture-mode');
 
         // Generate PDF
         const imgData = canvas.toDataURL('image/png');
@@ -552,6 +484,8 @@
 
       } catch(e) {
         console.error('PDF generation error:', e);
+        // Ensure capture mode is removed on error
+        document.getElementById('pdf-form').classList.remove('capture-mode');
         btn.innerHTML = '📄 下載識別檢查表 PDF';
         btn.disabled = false;
         status.className = 'text-center text-sm mt-3 text-red-500';

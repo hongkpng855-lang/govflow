@@ -63,17 +63,188 @@
 }
   </script>
   <style>
-    .field-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-    .field-label { width: 180px; font-size: 13px; font-weight: 600; color: #1B2A4A; text-align: right; flex-shrink: 0; }
-    .field-input { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: #fffbeb; font-family: inherit; outline: none; transition: all 0.15s; }
-    .field-input:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); background: #fef3c7; }
-    .field-select { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: white; font-family: inherit; outline: none; }
-    .field-select:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); }
+    /* ===== WYSIWYG Document Styles ===== */
+    .doc-header {
+      background: #1B2A4A;
+      padding: 18px 40px;
+      text-align: center;
+    }
+    .doc-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #C9A84C;
+      letter-spacing: 0.5px;
+    }
+    .doc-subtitle {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 3px;
+    }
+    .doc-body {
+      padding: 36px 40px 40px;
+      font-size: 13px;
+      color: #333;
+      line-height: 1.6;
+    }
+    .doc-section {
+      margin-bottom: 22px;
+    }
+    .doc-section-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1B2A4A;
+      border-bottom: 1.5px solid #1B2A4A;
+      padding-bottom: 4px;
+      margin: 0 0 12px 0;
+    }
+    .doc-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      min-height: 30px;
+    }
+    .doc-label {
+      width: 130px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+      flex-shrink: 0;
+    }
+    .doc-input {
+      flex: 1;
+      border: none;
+      border-bottom: 1px solid #aaa;
+      background: transparent;
+      font-size: 13px;
+      font-family: inherit;
+      padding: 2px 4px;
+      outline: none;
+      transition: border-color 0.2s;
+      color: #222;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+    .doc-input:focus {
+      border-bottom-color: #C9A84C;
+      border-bottom-width: 2px;
+    }
+    .doc-input::placeholder {
+      color: #bbb;
+      font-style: italic;
+    }
+    .doc-input[type="date"] {
+      width: auto;
+      min-width: 150px;
+      flex: 0 1 auto;
+    }
+    .doc-select {
+      flex: 1;
+      border: none;
+      border-bottom: 1px solid #aaa;
+      background: transparent;
+      font-size: 13px;
+      font-family: inherit;
+      padding: 2px 4px;
+      padding-right: 20px;
+      outline: none;
+      color: #222;
+      min-width: 0;
+      box-sizing: border-box;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23999'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 2px center;
+      background-size: 10px 6px;
+    }
+    .doc-select:focus {
+      border-bottom-color: #C9A84C;
+      border-bottom-width: 2px;
+    }
+
+    /* Controller Cards — look like document subsections */
+    .ctrl-card {
+      border: 1px solid #ddd;
+      border-left: 3px solid #1B2A4A;
+      border-radius: 4px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      background: #fff;
+    }
+    .ctrl-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px dotted #e0e0e0;
+    }
+    .ctrl-card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1B2A4A;
+    }
+    .ctrl-remove-btn {
+      font-size: 11px;
+      color: #c00;
+      background: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+      padding: 2px 8px;
+      border-radius: 3px;
+      transition: all 0.15s;
+    }
+    .ctrl-remove-btn:hover {
+      border-color: #fca5a5;
+      background: #fef2f2;
+    }
+    .ctrl-add-btn {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1B2A4A;
+      background: #f0f4ff;
+      border: 1px dashed #1B2A4A;
+      border-radius: 4px;
+      padding: 6px 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .ctrl-add-btn:hover {
+      background: #1B2A4A;
+      color: #fff;
+    }
+
+    /* ===== Capture Mode ===== */
+    .capture-mode .capture-hide {
+      display: none !important;
+    }
+    .capture-mode #pdf-form {
+      box-shadow: none !important;
+      border: none !important;
+      margin: 0 auto !important;
+    }
+    .capture-mode .ctrl-card {
+      border-color: #d0d0d0;
+    }
+    .capture-mode .ctrl-add-btn,
+    .capture-mode .ctrl-remove-btn {
+      display: none !important;
+    }
+    .capture-mode .ctrl-card-header {
+      border-bottom: 1px dotted #d0d0d0;
+    }
+
+    /* Fine-tune for PDF rendering */
+    #pdf-form {
+      font-family: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+    }
   </style>
 </head>
 <body class="bg-gray-100 font-sans">
 
-  <nav class="bg-navy text-white sticky top-0 z-50">
+  <nav class="bg-navy text-white sticky top-0 z-50 capture-hide">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
       <a href="/significant-controllers-register?step=4" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回指南</a>
@@ -82,14 +253,14 @@
 
   <div class="max-w-4xl mx-auto px-4 py-6">
 
-    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700 capture-hide">
       📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅 SCR 登記冊 PDF
     </div>
 
-    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">重要控制人登記冊 (SCR) PDF 填寫工具 — 一鍵生成已填好 PDF</h1>
+    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4 capture-hide">重要控制人登記冊 (SCR) PDF 填寫工具 — 一鍵生成已填好 PDF</h1>
 
     <!-- 參考圖片兩幅 -->
-    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
+    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto capture-hide">
       <!-- 真實案例 -->
       <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
         <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
@@ -115,7 +286,7 @@
     </div>
 
     <!-- 文件說明 + 常見錯誤 -->
-    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
+    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm capture-hide">
       <div class="flex items-start gap-3 mb-3">
         <span class="text-lg mt-0.5 shrink-0">📄</span>
         <div>
@@ -135,7 +306,7 @@
     </div>
 
     <!-- Template Modal -->
-    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4" onclick="closeTemplateModal(event)">
+    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 capture-hide" onclick="closeTemplateModal(event)">
       <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
         
         <div class="flex border-b border-gray-200">
@@ -189,64 +360,65 @@
     }
     </script>
 
-    <!-- PDF Form -->
+    <!-- ===== SCR Register Document — WYSIWYG ===== -->
     <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px;">
 
-      <div class="bg-navy text-white py-3 px-6 text-center">
-        <div class="text-lg font-bold text-gold">SIGNIFICANT CONTROLLERS REGISTER</div>
-        <p class="text-xs text-gray-400">重要控制人登記冊</p>
+      <!-- Document Header -->
+      <div class="doc-header">
+        <div class="doc-title">SIGNIFICANT CONTROLLERS REGISTER</div>
+        <div class="doc-subtitle">重要控制人登記冊</div>
       </div>
 
-      <div class="p-6 sm:p-8">
+      <div class="doc-body">
 
-        <!-- Company Info -->
-        <div class="mb-6">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">公司資料</h2>
-          <div class="field-row">
-            <span class="field-label">公司名稱</span>
-            <input type="text" id="f-company" value="ABC 貿易有限公司" class="field-input" />
+        <!-- 公司資料 -->
+        <div class="doc-section">
+          <h2 class="doc-section-title">公司資料</h2>
+          <div class="doc-row">
+            <span class="doc-label">公司名稱</span>
+            <input type="text" id="f-company" value="ABC 貿易有限公司" class="doc-input" />
           </div>
-          <div class="field-row">
-            <span class="field-label">公司註冊編號</span>
-            <input type="text" id="f-crno" value="12345678" class="field-input" />
+          <div class="doc-row">
+            <span class="doc-label">公司註冊編號</span>
+            <input type="text" id="f-crno" value="12345678" class="doc-input" />
           </div>
         </div>
 
-        <!-- Register Info -->
-        <div class="mb-6">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">登記冊資料</h2>
-          <div class="field-row">
-            <span class="field-label">備存日期</span>
-            <input type="date" id="f-rdate" class="field-input field-date" />
+        <!-- 登記冊資料 -->
+        <div class="doc-section">
+          <h2 class="doc-section-title">登記冊資料</h2>
+          <div class="doc-row">
+            <span class="doc-label">備存日期</span>
+            <input type="date" id="f-rdate" class="doc-input" />
           </div>
-          <div class="field-row">
-            <span class="field-label">存放地點</span>
-            <select id="f-loc" class="field-select">
+          <div class="doc-row">
+            <span class="doc-label">存放地點</span>
+            <select id="f-loc" class="doc-select">
               <option value="公司註冊辦事處 (Registered Office)">公司註冊辦事處 (Registered Office)</option>
               <option value="其他香港境內地點（需提交 Form NR2）">其他香港境內地點（需提交 Form NR2）</option>
             </select>
           </div>
         </div>
 
-        <!-- Controllers -->
-        <div class="mb-6">
-          <div class="flex items-center justify-between mb-3">
-            <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1">重要控制人</h2>
-            <button onclick="addController()" class="text-xs bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition font-semibold">+ 新增控制人</button>
+        <!-- 重要控制人 -->
+        <div class="doc-section">
+          <div class="flex items-center justify-between" style="margin-bottom:10px;">
+            <h2 class="doc-section-title" style="margin-bottom:0;">重要控制人</h2>
+            <button onclick="addController()" class="ctrl-add-btn capture-hide">+ 新增控制人</button>
           </div>
           <div id="controllers-container"></div>
         </div>
 
-        <!-- Designated Representative -->
-        <div class="mb-6">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">指定代表</h2>
-          <div class="field-row">
-            <span class="field-label">姓名</span>
-            <input type="text" id="f-drname" value="董事姓名" class="field-input" />
+        <!-- 指定代表 -->
+        <div class="doc-section">
+          <h2 class="doc-section-title">指定代表</h2>
+          <div class="doc-row">
+            <span class="doc-label">姓名</span>
+            <input type="text" id="f-drname" value="董事姓名" class="doc-input" />
           </div>
-          <div class="field-row">
-            <span class="field-label">身份</span>
-            <select id="f-drtype" class="field-select">
+          <div class="doc-row">
+            <span class="doc-label">身份</span>
+            <select id="f-drtype" class="doc-select">
               <option value="董事 / Director">董事 / Director</option>
               <option value="股東 / Shareholder">股東 / Shareholder</option>
               <option value="員工 / Employee">員工 / Employee</option>
@@ -254,87 +426,45 @@
               <option value="法律專業人士 / Legal Professional">法律專業人士 / Legal Professional</option>
             </select>
           </div>
-          <div class="field-row">
-            <span class="field-label">聯絡電話</span>
-            <input type="text" id="f-drphone" value="" class="field-input" />
+          <div class="doc-row">
+            <span class="doc-label">聯絡電話</span>
+            <input type="text" id="f-drphone" value="" class="doc-input" />
           </div>
         </div>
 
-        <!-- Certification -->
-        <div class="mt-8 pt-6 border-t-2 border-dashed border-gray-400">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">核實聲明</h2>
-          <div class="field-row">
-            <span class="field-label">核實人姓名</span>
-            <input type="text" id="f-certname" value="董事姓名" class="field-input" />
+        <!-- 核實聲明 -->
+        <div class="doc-section" style="margin-top:28px;padding-top:16px;border-top:1px dashed #bbb;">
+          <h2 class="doc-section-title">核實聲明</h2>
+          <div class="doc-row">
+            <span class="doc-label">核實人姓名</span>
+            <input type="text" id="f-certname" value="董事姓名" class="doc-input" />
           </div>
-          <div class="field-row">
-            <span class="field-label">職位</span>
-            <input type="text" id="f-certpos" value="董事 / Director" class="field-input" />
+          <div class="doc-row">
+            <span class="doc-label">職位</span>
+            <input type="text" id="f-certpos" value="董事 / Director" class="doc-input" />
           </div>
-          <div class="field-row">
-            <span class="field-label">簽署日期</span>
-            <input type="date" id="f-certdate" class="field-input field-date" />
+          <div class="doc-row">
+            <span class="doc-label">簽署日期</span>
+            <input type="date" id="f-certdate" class="doc-input" />
           </div>
         </div>
 
-      </div>
-    </div>
-
-    <!-- PDF Template (hidden for capture) -->
-    <div id="pdf-content" style="position:absolute;left:-9999px;top:0;width:800px;background:white;padding:40px;font-family:'Noto Sans TC',sans-serif;font-size:13px;">
-      <div style="text-align:center;border-bottom:2px solid #1B2A4A;padding-bottom:10px;margin-bottom:20px;">
-        <div style="font-size:18px;font-weight:bold;color:#C9A84C;">SIGNIFICANT CONTROLLERS REGISTER</div>
-        <div style="font-size:12px;color:#666;">重要控制人登記冊</div>
-      </div>
-
-      <div style="margin-bottom:15px;">
-        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">公司資料</div>
-        <table style="width:100%;border-collapse:collapse;">
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司名稱</td><td style="padding:3px 5px;" id="pv-company">ABC 貿易有限公司</td></tr>
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司註冊編號</td><td style="padding:3px 5px;" id="pv-crno">12345678</td></tr>
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">備存日期</td><td style="padding:3px 5px;" id="pv-rdate"></td></tr>
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">存放地點</td><td style="padding:3px 5px;" id="pv-loc">公司註冊辦事處</td></tr>
-        </table>
-      </div>
-
-      <div style="margin-bottom:15px;">
-        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">重要控制人</div>
-        <div id="pv-controllers">
-          <p style="color:#999;font-style:italic;">未有重要控制人資料</p>
-        </div>
-      </div>
-
-      <div style="margin-bottom:15px;">
-        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">指定代表</div>
-        <table style="width:100%;border-collapse:collapse;">
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">姓名</td><td style="padding:3px 5px;" id="pv-drname">董事姓名</td></tr>
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">身份</td><td style="padding:3px 5px;" id="pv-drtype">董事</td></tr>
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">聯絡電話</td><td style="padding:3px 5px;" id="pv-drphone"></td></tr>
-        </table>
-      </div>
-
-      <div style="margin-top:20px;padding-top:10px;border-top:1px dashed #ccc;">
-        <table style="width:100%;border-collapse:collapse;">
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">核實人</td><td style="padding:3px 5px;" id="pv-certname">董事姓名</td></tr>
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">職位</td><td style="padding:3px 5px;" id="pv-certpos">董事</td></tr>
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">簽署日期</td><td style="padding:3px 5px;" id="pv-certdate"></td></tr>
-        </table>
-      </div>
-    </div>
+      </div><!-- /doc-body -->
+    </div><!-- /#pdf-form -->
 
     <!-- Buttons -->
-    <div class="mt-6">
+    <div class="mt-6 capture-hide">
       <button onclick="checkEmailGate()" id="genBtn" class="w-full bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm flex items-center justify-center gap-2">
         📄 下載 SCR 登記冊 PDF
       </button>
     </div>
-    <p id="status" class="text-center text-sm mt-3 hidden"></p>
-    <div class="text-center mt-4">
+    <p id="status" class="text-center text-sm mt-3 hidden capture-hide"></p>
+    <div class="text-center mt-4 capture-hide">
       <a href="/significant-controllers-register?step=4" class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
         ← 返回重要控制人登記冊完整指南
       </a>
     </div>
-    <div class="text-center mt-4">
+    <div class="text-center mt-4 capture-hide">
       <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
          class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
         ☕ 請咖啡
@@ -343,7 +473,7 @@
   </div>
 
   <script>
-    // Controller management
+    // ===== Controller Management =====
     let ctrlCount = 0;
 
     const controlTypes = [
@@ -364,7 +494,7 @@
       const idx = ctrlCount;
       const container = document.getElementById('controllers-container');
       const div = document.createElement('div');
-      div.className = 'bg-amber-50/30 border border-gray-200 rounded-xl p-4 mb-4';
+      div.className = 'ctrl-card';
       div.id = 'ctrl-' + idx;
 
       const etypeOpts = entityTypes.map(t =>
@@ -375,17 +505,17 @@
       ).join('');
 
       div.innerHTML =
-        '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
-          '<span style="font-size:13px;font-weight:bold;color:#1B2A4A;">重要控制人 #' + idx + '</span>' +
-          '<button onclick="removeController(' + idx + ')" style="font-size:11px;color:#c00;background:none;border:none;cursor:' + (idx === 1 ? 'default' : 'pointer') + ';' + (idx === 1 ? 'display:none' : '') + '">✕ 移除</button>' +
+        '<div class="ctrl-card-header">' +
+          '<span class="ctrl-card-title">重要控制人 #' + idx + '</span>' +
+          '<button onclick="removeController(' + idx + ')" class="ctrl-remove-btn capture-hide"' + (idx === 1 ? ' style="display:none"' : '') + '>✕ 移除</button>' +
         '</div>' +
-        '<div class="field-row"><span class="field-label">控制人類型</span><select id="ctype-' + idx + '" class="field-select">' + etypeOpts + '</select></div>' +
-        '<div class="field-row"><span class="field-label">姓名 / 名稱</span><input type="text" id="ctrlname-' + idx + '" value="' + (data ? data.name : '') + '" class="field-input" /></div>' +
-        '<div class="field-row"><span class="field-label">通訊地址</span><input type="text" id="ctrladr-' + idx + '" value="' + (data ? data.adr : '') + '" class="field-input" /></div>' +
-        '<div class="field-row"><span class="field-label">身份證 / 護照</span><input type="text" id="ctrlid-' + idx + '" value="' + (data ? data.id : '') + '" class="field-input" /></div>' +
-        '<div class="field-row"><span class="field-label">出生日期</span><input type="date" id="ctrldob-' + idx + '" value="' + (data ? data.dob : '') + '" class="field-input" /></div>' +
-        '<div class="field-row"><span class="field-label">成為控制人日期</span><input type="date" id="ctrldate-' + idx + '" class="field-input field-date-ctrl" /></div>' +
-        '<div class="field-row"><span class="field-label">控制性質</span><select id="ctrltype-' + idx + '" class="field-select">' + ctypeOpts + '</select></div>';
+        '<div class="doc-row"><span class="doc-label">控制人類型</span><select id="ctype-' + idx + '" class="doc-select">' + etypeOpts + '</select></div>' +
+        '<div class="doc-row"><span class="doc-label">姓名 / 名稱</span><input type="text" id="ctrlname-' + idx + '" value="' + (data ? data.name : '') + '" class="doc-input" /></div>' +
+        '<div class="doc-row"><span class="doc-label">通訊地址</span><input type="text" id="ctrladr-' + idx + '" value="' + (data ? data.adr : '') + '" class="doc-input" /></div>' +
+        '<div class="doc-row"><span class="doc-label">身份證 / 護照</span><input type="text" id="ctrlid-' + idx + '" value="' + (data ? data.id : '') + '" class="doc-input" /></div>' +
+        '<div class="doc-row"><span class="doc-label">出生日期</span><input type="date" id="ctrldob-' + idx + '" value="' + (data ? data.dob : '') + '" class="doc-input" /></div>' +
+        '<div class="doc-row"><span class="doc-label">成為控制人日期</span><input type="date" id="ctrldate-' + idx + '" class="doc-input" /></div>' +
+        '<div class="doc-row"><span class="doc-label">控制性質</span><select id="ctrltype-' + idx + '" class="doc-select">' + ctypeOpts + '</select></div>';
       container.appendChild(div);
     }
 
@@ -399,12 +529,12 @@
       const rows = container.querySelectorAll('[id^="ctrl-"]');
       rows.forEach((row, i) => {
         const num = i + 1;
-        const title = row.querySelector('span:first-child');
+        const title = row.querySelector('.ctrl-card-title');
         if (title) {
           const parts = title.textContent.split('#');
           if (parts.length === 2) title.textContent = '重要控制人 #' + num;
         }
-        const rmBtn = row.querySelector('button');
+        const rmBtn = row.querySelector('.ctrl-remove-btn');
         if (rmBtn) rmBtn.style.display = num === 1 ? 'none' : '';
       });
     }
@@ -438,7 +568,7 @@
       const m = String(d.getMonth() + 1).padStart(2, '0');
       const day = String(d.getDate()).padStart(2, '0');
       const dateStr = y + '-' + m + '-' + day;
-      document.querySelectorAll('.field-date, .field-date-ctrl').forEach(el => {
+      document.querySelectorAll('#pdf-form input[type="date"]').forEach(el => {
         if (!el.value) el.value = dateStr;
       });
     }
@@ -447,7 +577,7 @@
     addController({ name: '', adr: '', id: '', dob: '', date: '', etype: '自然人 Individual', ctype: '直接持有超過 25% 股份' });
     setDates();
 
-    // Email Gate
+    // ===== Email Gate =====
     function checkEmailGate() {
       const done = localStorage.getItem('esgov_email_done');
       if (done) { generatePDF(); return; }
@@ -481,7 +611,7 @@
       document.getElementById('emailGateModal').classList.remove('flex');
     }
 
-    // PDF Generation
+    // ===== PDF Generation (WYSIWYG — captures #pdf-form directly) =====
     async function generatePDF() {
       const btn = document.getElementById('genBtn');
       const status = document.getElementById('status');
@@ -495,68 +625,24 @@
         const { jsPDF } = window.jspdf;
         await document.fonts.ready;
 
-        // Get form values
-        const company = document.getElementById('f-company').value.trim();
-        const crno = document.getElementById('f-crno').value.trim();
-        const rdate = document.getElementById('f-rdate').value || new Date().toISOString().split('T')[0];
-        const loc = document.getElementById('f-loc').value;
-        const drname = document.getElementById('f-drname').value.trim();
-        const drtype = document.getElementById('f-drtype').value;
-        const drphone = document.getElementById('f-drphone').value.trim();
-        const certname = document.getElementById('f-certname').value.trim();
-        const certpos = document.getElementById('f-certpos').value.trim();
-        const certdate = document.getElementById('f-certdate').value || rdate;
-        const controllers = getControllerData();
+        // Enter capture mode — hide nav, buttons, footer, etc.
+        document.body.classList.add('capture-mode');
 
-        // Update hidden template
-        document.getElementById('pv-company').textContent = company || '—';
-        document.getElementById('pv-crno').textContent = crno || '—';
-        document.getElementById('pv-rdate').textContent = rdate;
-        document.getElementById('pv-loc').textContent = loc;
-        document.getElementById('pv-drname').textContent = drname || '—';
-        document.getElementById('pv-drtype').textContent = drtype;
-        document.getElementById('pv-drphone').textContent = drphone || '—';
-        document.getElementById('pv-certname').textContent = certname || '—';
-        document.getElementById('pv-certpos').textContent = certpos || '—';
-        document.getElementById('pv-certdate').textContent = certdate;
+        await new Promise(r => setTimeout(r, 300));
 
-        // Build controllers table in hidden template
-        const pvContainer = document.getElementById('pv-controllers');
-        if (controllers.length === 0) {
-          pvContainer.innerHTML = '<p style="color:#999;font-style:italic;">經查核後公司無重要控制人</p>';
-        } else {
-          let table = '<table style="width:100%;border-collapse:collapse;font-size:12px;">';
-          table += '<thead><tr style="background:#1B2A4A;color:white;">';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">#</th>';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">姓名/名稱</th>';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">身份證/護照</th>';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">控制性質</th>';
-          table += '</tr></thead><tbody>';
-          controllers.forEach((c, i) => {
-            table += '<tr style="background:' + (i % 2 === 0 ? 'white' : '#f9f9f9') + ';">';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;text-align:center;font-weight:bold;">' + c.num + '</td>';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + (c.name || '—') + '</td>';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + (c.id || '—') + '</td>';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + c.ctype + '</td>';
-            table += '</tr>';
-          });
-          table += '</tbody></table>';
-          pvContainer.innerHTML = table;
-        }
-
-        await new Promise(r => setTimeout(r, 200));
-
-        // Capture hidden template
-        const el = document.getElementById('pdf-content');
+        // Capture the document form directly (WYSIWYG)
+        const el = document.getElementById('pdf-form');
         const canvas = await html2canvas(el, {
           scale: 3,
           useCORS: true,
           backgroundColor: '#ffffff',
-          logging: false,
-          width: 800
+          logging: false
         });
 
-        // Generate PDF
+        // Restore UI
+        document.body.classList.remove('capture-mode');
+
+        // Generate PDF from captured image
         const imgData = canvas.toDataURL('image/png');
         const doc = new jsPDF('p', 'mm', 'a4');
         const pageW = 210;
@@ -593,6 +679,8 @@
         }, 2500);
 
       } catch(e) {
+        // Restore UI on error
+        document.body.classList.remove('capture-mode');
         console.error('PDF generation error:', e);
         btn.innerHTML = '📄 下載 SCR 登記冊 PDF';
         btn.disabled = false;
@@ -603,7 +691,7 @@
   </script>
 
   <!-- Email Gate Modal -->
-  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4">
+  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 capture-hide">
     <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" onclick="event.stopPropagation()">
       <div class="text-3xl mb-3">📬</div>
       <h3 class="text-lg font-bold text-navy mb-2">下載前留低 email</h3>
@@ -617,7 +705,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="gov-footer py-12">
+  <footer class="gov-footer py-12 capture-hide">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
         <div class="flex items-center gap-2 text-white font-bold text-xl">

@@ -61,17 +61,179 @@
 }
   </script>
   <style>
-    .field-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-    .field-label { width: 180px; font-size: 13px; font-weight: 600; color: #1B2A4A; text-align: right; flex-shrink: 0; }
-    .field-input { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: #fffbeb; font-family: inherit; outline: none; transition: all 0.15s; }
-    .field-input:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); background: #fef3c7; }
-    .field-select { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: white; font-family: inherit; outline: none; }
-    .field-select:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); }
+    /* ===== WYSIWYG Document Form Styles ===== */
+    #pdf-form {
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* Field rows (company info, analysis results) */
+    #pdf-form .doc-field {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    #pdf-form .doc-label {
+      width: 130px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #1B2A4A;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    #pdf-form .doc-input {
+      border: none;
+      border-bottom: 1px solid #999;
+      background: transparent;
+      padding: 2px 4px;
+      font-family: inherit;
+      font-size: 13px;
+      color: #333;
+      outline: none;
+      transition: border-color 0.15s;
+      border-radius: 0;
+      min-height: 22px;
+      flex: 1;
+    }
+    #pdf-form .doc-input:focus {
+      border-bottom-color: #C9A84C;
+    }
+    #pdf-form .doc-select {
+      border: none;
+      border-bottom: 1px solid #999;
+      background: transparent;
+      padding: 2px 4px;
+      padding-right: 18px;
+      font-family: inherit;
+      font-size: 13px;
+      color: #333;
+      outline: none;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23999'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 2px center;
+      background-size: 10px 6px;
+      flex: 1;
+    }
+    #pdf-form .doc-select:focus {
+      border-bottom-color: #C9A84C;
+    }
+
+    /* Shareholder table */
+    #pdf-form .sh-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+    #pdf-form .sh-table th {
+      background: #1B2A4A;
+      color: white;
+      padding: 6px 4px;
+      border: 1px solid #d1d5db;
+      text-align: center;
+      font-weight: 600;
+      font-size: 11px;
+      white-space: nowrap;
+    }
+    #pdf-form .sh-table td {
+      padding: 4px 4px;
+      border: 1px solid #d1d5db;
+      vertical-align: middle;
+      text-align: center;
+    }
+    #pdf-form .sh-table .sh-input {
+      border: none;
+      border-bottom: 1px solid #ccc;
+      background: transparent;
+      padding: 2px 4px;
+      font-family: inherit;
+      font-size: 12px;
+      color: #333;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 0;
+      text-align: inherit;
+    }
+    #pdf-form .sh-table .sh-input:focus {
+      border-bottom-color: #C9A84C;
+    }
+    #pdf-form .sh-table .sh-select {
+      border: none;
+      border-bottom: 1px solid #ccc;
+      background: transparent;
+      padding: 2px 4px;
+      padding-right: 14px;
+      font-family: inherit;
+      font-size: 12px;
+      color: #333;
+      outline: none;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0l4 5 4-5z' fill='%23999'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1px center;
+      background-size: 8px 5px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Textarea */
+    #pdf-form .doc-textarea {
+      border: 1px solid #ddd;
+      border-bottom: 1px solid #999;
+      border-radius: 4px;
+      padding: 6px 8px;
+      resize: vertical;
+      min-height: 60px;
+      line-height: 1.5;
+    }
+    #pdf-form .doc-textarea:focus {
+      border-color: #C9A84C;
+    }
+
+    /* Signature row */
+    #pdf-form .signature-row {
+      display: flex;
+      gap: 48px;
+      margin-top: 32px;
+      padding-top: 12px;
+      justify-content: center;
+      font-size: 13px;
+      color: #333;
+    }
+    #pdf-form .signature-row .doc-input {
+      display: inline-block;
+      width: 180px;
+      flex: none;
+    }
+
+    /* ===== Capture mode: hide UI chrome when generating PDF ===== */
+    body.capture-mode .hide-during-capture {
+      display: none !important;
+    }
+    body.capture-mode #pdf-form {
+      box-shadow: none;
+      border: 1px solid #d1d5db;
+      margin: 0 auto;
+      border-radius: 0;
+    }
+    body.capture-mode #pdf-form .add-remove-btn {
+      display: none !important;
+    }
   </style>
 </head>
 <body class="bg-gray-100 font-sans">
 
-  <nav class="bg-navy text-white sticky top-0 z-50">
+  <nav class="bg-navy text-white sticky top-0 z-50 hide-during-capture">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
       <a href="/significant-controllers-register?step=1" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回指南</a>
@@ -81,14 +243,14 @@
   <div class="max-w-4xl mx-auto px-4 py-6">
 
     <!-- Trust Banner -->
-    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700 hide-during-capture">
       📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅股權結構分析表 PDF
     </div>
 
-    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">股權結構分析表 — PDF 生成工具</h1>
+    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4 hide-during-capture">股權結構分析表 — PDF 生成工具</h1>
 
     <!-- 參考圖片兩幅 -->
-    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
+    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto hide-during-capture">
       <!-- 真實範例 -->
       <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
         <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
@@ -114,7 +276,7 @@
     </div>
 
     <!-- 文件說明 + 常見錯誤 -->
-    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
+    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm hide-during-capture">
       <div class="flex items-start gap-3 mb-3">
         <span class="text-lg mt-0.5 shrink-0">📄</span>
         <div>
@@ -134,7 +296,7 @@
     </div>
 
     <!-- Template Modal -->
-    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4" onclick="closeTemplateModal(event)">
+    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 hide-during-capture" onclick="closeTemplateModal(event)">
       <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
 
         <div class="flex border-b border-gray-200">
@@ -188,9 +350,10 @@
     }
     </script>
 
-    <!-- PDF Form -->
-    <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px;">
+    <!-- ===== WYSIWYG PDF Form ===== -->
+    <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg" style="max-width:800px;">
 
+      <!-- Document Header -->
       <div class="bg-navy text-white py-3 px-6 text-center">
         <div class="text-lg font-bold text-gold">SHAREHOLDING STRUCTURE ANALYSIS</div>
         <p class="text-xs text-gray-400">股權結構分析表</p>
@@ -198,100 +361,87 @@
 
       <div class="p-6 sm:p-8">
 
-        <!-- Company Info -->
-        <div class="mb-6">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">公司資料</h2>
-          <div class="field-row">
-            <span class="field-label">公司名稱</span>
-            <input type="text" id="f-company" value="ABC 貿易有限公司" class="field-input" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">公司註冊編號</span>
-            <input type="text" id="f-crno" value="12345678" class="field-input" />
-          </div>
+        <!-- ===== Company Info ===== -->
+        <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">公司資料</h2>
+        <div class="doc-field">
+          <span class="doc-label">公司名稱</span>
+          <input type="text" id="f-company" value="ABC 貿易有限公司" class="doc-input" />
+        </div>
+        <div class="doc-field">
+          <span class="doc-label">公司註冊編號</span>
+          <input type="text" id="f-crno" value="12345678" class="doc-input" />
         </div>
 
-        <!-- Shareholders -->
+        <!-- ===== Shareholders Table ===== -->
         <div class="mb-6">
           <div class="flex items-center justify-between mb-3">
-            <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1">股東資料</h2>
-            <button onclick="addShareholder()" class="text-xs bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition font-semibold">+ 新增股東</button>
+            <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1">股東持股結構</h2>
+            <button onclick="addShareholder()" class="add-remove-btn text-xs bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition font-semibold">+ 新增股東</button>
           </div>
-          <div id="shareholders-container"></div>
+          <table class="sh-table">
+            <thead>
+              <tr>
+                <th style="width:30px;">#</th>
+                <th style="text-align:left;">姓名/名稱</th>
+                <th style="width:120px;">類型</th>
+                <th style="width:60px;">持股%</th>
+                <th style="width:60px;">投票權%</th>
+                <th style="width:70px;">關連關係</th>
+                <th style="text-align:left;">關連人士</th>
+                <th class="add-remove-btn" style="width:32px;"></th>
+              </tr>
+            </thead>
+            <tbody id="shareholders-container"></tbody>
+          </table>
         </div>
 
-        <!-- Analysis Results -->
-        <div class="mb-6">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">分析結果</h2>
-          <div class="field-row">
-            <span class="field-label">初步判斷</span>
-            <select id="f-judgment" class="field-select">
-              <option value="">— 請選擇 —</option>
-              <option value="潛在重要控制人 (Potential PSC)">潛在重要控制人 (Potential PSC)</option>
-              <option value="非控制人">非控制人</option>
-              <option value="需進一步確認">需進一步確認</option>
-            </select>
-          </div>
-          <div class="field-row" style="align-items:flex-start;">
-            <span class="field-label" style="padding-top:8px;">備註</span>
-            <textarea id="f-remarks" rows="3" class="field-input" style="resize:vertical;">• 陳大明持有 75% 股份，超過 25% 門檻
+        <!-- ===== Analysis Results ===== -->
+        <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">分析結果</h2>
+        <div class="doc-field">
+          <span class="doc-label">初步判斷</span>
+          <select id="f-judgment" class="doc-select">
+            <option value="">— 請選擇 —</option>
+            <option value="潛在重要控制人 (Potential PSC)">潛在重要控制人 (Potential PSC)</option>
+            <option value="非控制人">非控制人</option>
+            <option value="需進一步確認">需進一步確認</option>
+          </select>
+        </div>
+        <div class="doc-field" style="align-items:flex-start;">
+          <span class="doc-label" style="padding-top:8px;">備註</span>
+          <textarea id="f-remarks" rows="3" class="doc-input doc-textarea" style="flex:1;">• 陳大明持有 75% 股份，超過 25% 門檻
 • 暫無發現關連關係
 • 冇 Nominee 持股
 • 冇信託結構</textarea>
-          </div>
+        </div>
+
+        <!-- ===== Signature ===== -->
+        <div class="signature-row">
+          <span>填表人：<input type="text" id="f-preparer" class="doc-input" style="width:180px;" placeholder="簽署人姓名" /></span>
+          <span>日期：<input type="text" id="f-date" class="doc-input" style="width:140px;" placeholder="dd/mm/yyyy" /></span>
         </div>
 
       </div>
     </div>
 
-    <!-- PDF Template (hidden for capture) -->
-    <div id="pdf-content" style="position:absolute;left:-9999px;top:0;width:800px;background:white;padding:40px;font-family:'Noto Sans TC',sans-serif;font-size:13px;">
-      <div style="text-align:center;border-bottom:2px solid #1B2A4A;padding-bottom:10px;margin-bottom:20px;">
-        <div style="font-size:18px;font-weight:bold;color:#C9A84C;">SHAREHOLDING STRUCTURE ANALYSIS</div>
-        <div style="font-size:12px;color:#666;">股權結構分析表</div>
+    <!-- Buttons area -->
+    <div class="hide-during-capture">
+      <div class="mt-6">
+        <button onclick="checkEmailGate()" id="genBtn" class="w-full bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm flex items-center justify-center gap-2">
+          📄 下載股權結構分析表 PDF
+        </button>
       </div>
-
-      <div style="margin-bottom:15px;">
-        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">公司資料</div>
-        <table style="width:100%;border-collapse:collapse;">
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司名稱</td><td style="padding:3px 5px;" id="pv-company">ABC 貿易有限公司</td></tr>
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司註冊編號</td><td style="padding:3px 5px;" id="pv-crno">12345678</td></tr>
-        </table>
+      <p id="status" class="text-center text-sm mt-3 hidden"></p>
+      <div class="text-center mt-4">
+        <a href="/significant-controllers-register?step=1" class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+          ← 返回重要控制人登記冊完整指南
+        </a>
       </div>
-
-      <div style="margin-bottom:15px;">
-        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">股東持股結構</div>
-        <div id="pv-shareholders">
-          <p style="color:#999;font-style:italic;">未有股東資料</p>
-        </div>
+      <div class="text-center mt-4">
+        <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
+           class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+          ☕ 請咖啡
+        </a>
       </div>
-
-      <div style="margin-bottom:15px;">
-        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">分析結果</div>
-        <table style="width:100%;border-collapse:collapse;">
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">初步判斷</td><td style="padding:3px 5px;" id="pv-judgment">—</td></tr>
-          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">備註</td><td style="padding:3px 5px;" id="pv-remarks">—</td></tr>
-        </table>
-      </div>
-    </div>
-
-    <!-- Buttons -->
-    <div class="mt-6">
-      <button onclick="checkEmailGate()" id="genBtn" class="w-full bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm flex items-center justify-center gap-2">
-        📄 下載股權結構分析表 PDF
-      </button>
-    </div>
-    <p id="status" class="text-center text-sm mt-3 hidden"></p>
-    <div class="text-center mt-4">
-      <a href="/significant-controllers-register?step=1" class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
-        ← 返回重要控制人登記冊完整指南
-      </a>
-    </div>
-    <div class="text-center mt-4">
-      <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
-         class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
-        ☕ 請咖啡
-      </a>
     </div>
   </div>
 
@@ -305,10 +455,9 @@
     function addShareholder(data) {
       shCount++;
       const idx = shCount;
-      const container = document.getElementById('shareholders-container');
-      const div = document.createElement('div');
-      div.className = 'bg-amber-50/30 border border-gray-200 rounded-xl p-4 mb-4';
-      div.id = 'sh-' + idx;
+      const tbody = document.getElementById('shareholders-container');
+      const tr = document.createElement('tr');
+      tr.id = 'sh-' + idx;
 
       const typeOpts = shareholderTypes.map(t =>
         '<option value="' + t + '"' + (data && data.type === t ? ' selected' : '') + '>' + t + '</option>'
@@ -317,18 +466,27 @@
         '<option value="' + t + '"' + (data && data.relation === t ? ' selected' : '') + '>' + t + '</option>'
       ).join('');
 
-      div.innerHTML =
-        '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
-          '<span style="font-size:13px;font-weight:bold;color:#1B2A4A;">股東 #' + idx + '</span>' +
-          '<button onclick="removeShareholder(' + idx + ')" style="font-size:11px;color:#c00;background:none;border:none;cursor:' + (idx === 1 ? 'default' : 'pointer') + ';' + (idx === 1 ? 'display:none' : '') + '">✕ 移除</button>' +
-        '</div>' +
-        '<div class="field-row"><span class="field-label">股東姓名/名稱</span><input type="text" id="sh-name-' + idx + '" value="' + (data ? data.name : '') + '" class="field-input" placeholder="例如：陳大明" /></div>' +
-        '<div class="field-row"><span class="field-label">股東類型</span><select id="sh-type-' + idx + '" class="field-select">' + typeOpts + '</select></div>' +
-        '<div class="field-row"><span class="field-label">持股比例 (%)</span><input type="text" id="sh-pct-' + idx + '" value="' + (data ? data.pct : '') + '" class="field-input" placeholder="例如：75" /></div>' +
-        '<div class="field-row"><span class="field-label">投票權比例 (%)</span><input type="text" id="sh-vote-' + idx + '" value="' + (data ? data.vote : '') + '" class="field-input" placeholder="例如：75" /></div>' +
-        '<div class="field-row"><span class="field-label">是否有關連關係</span><select id="sh-relation-' + idx + '" class="field-select">' + relOpts + '</select></div>' +
-        '<div class="field-row"><span class="field-label">關連人士名稱</span><input type="text" id="sh-relname-' + idx + '" value="' + (data ? data.relname : '') + '" class="field-input" placeholder="如適用" /></div>';
-      container.appendChild(div);
+      const nameVal = data ? data.name : '';
+      const pctVal = data ? data.pct : '';
+      const voteVal = data ? data.vote : '';
+      const relnameVal = data ? data.relname : '';
+
+      tr.innerHTML =
+        '<td style="text-align:center;font-weight:bold;font-size:12px;">' + idx + '</td>' +
+        '<td style="text-align:left;"><input type="text" id="sh-name-' + idx + '" value="' + nameVal + '" placeholder="股東姓名" class="sh-input" style="text-align:left;" /></td>' +
+        '<td><select id="sh-type-' + idx + '" class="sh-select">' + typeOpts + '</select></td>' +
+        '<td><input type="text" id="sh-pct-' + idx + '" value="' + pctVal + '" placeholder="%" class="sh-input" /></td>' +
+        '<td><input type="text" id="sh-vote-' + idx + '" value="' + voteVal + '" placeholder="%" class="sh-input" /></td>' +
+        '<td><select id="sh-relation-' + idx + '" class="sh-select">' + relOpts + '</select></td>' +
+        '<td style="text-align:left;"><input type="text" id="sh-relname-' + idx + '" value="' + relnameVal + '" placeholder="如適用" class="sh-input" style="text-align:left;" /></td>' +
+        '<td class="add-remove-btn" style="text-align:center;"><button onclick="removeShareholder(' + idx + ')" style="color:#c00;background:none;border:none;cursor:pointer;font-size:14px;padding:2px 6px;line-height:1;">✕</button></td>';
+
+      // Hide remove button for first shareholder
+      if (idx === 1) {
+        tr.querySelector('button').style.display = 'none';
+      }
+
+      tbody.appendChild(tr);
     }
 
     function removeShareholder(idx) {
@@ -337,23 +495,26 @@
     }
 
     function renumberShareholders() {
-      const container = document.getElementById('shareholders-container');
-      const rows = container.querySelectorAll('[id^="sh-"]');
+      const tbody = document.getElementById('shareholders-container');
+      const rows = tbody.querySelectorAll('tr');
       rows.forEach((row, i) => {
         const num = i + 1;
-        const title = row.querySelector('span:first-child');
-        if (title) {
-          const parts = title.textContent.split('#');
-          if (parts.length === 2) title.textContent = '股東 #' + num;
+        const firstTd = row.querySelector('td:first-child');
+        if (firstTd) firstTd.textContent = num;
+        const removeBtn = row.querySelector('button');
+        if (removeBtn) {
+          if (num === 1) {
+            removeBtn.style.display = 'none';
+          } else {
+            removeBtn.style.display = '';
+          }
         }
-        const rmBtn = row.querySelector('button');
-        if (rmBtn) rmBtn.style.display = num === 1 ? 'none' : '';
       });
     }
 
     function getShareholderData() {
       const container = document.getElementById('shareholders-container');
-      const rows = container.querySelectorAll('[id^="sh-"]');
+      const rows = container.querySelectorAll('tr');
       const shareholders = [];
       rows.forEach(row => {
         const idMatch = row.id.match(/sh-(\d+)/);
@@ -416,7 +577,7 @@
       document.getElementById('emailGateModal').classList.remove('flex');
     }
 
-    // PDF Generation
+    // PDF Generation — WYSIWYG mode: capture #pdf-form directly
     async function generatePDF() {
       const btn = document.getElementById('genBtn');
       const status = document.getElementById('status');
@@ -430,80 +591,23 @@
         const { jsPDF } = window.jspdf;
         await document.fonts.ready;
 
-        // Get form values
-        const company = document.getElementById('f-company').value.trim();
-        const crno = document.getElementById('f-crno').value.trim();
-        const judgment = document.getElementById('f-judgment').value;
-        const remarks = document.getElementById('f-remarks').value.trim();
-        const shareholders = getShareholderData();
+        // Enter capture mode (hides nav, buttons, etc.)
+        document.body.classList.add('capture-mode');
+        // Small delay for CSS transition
+        await new Promise(r => setTimeout(r, 300));
 
-        // Update hidden template
-        document.getElementById('pv-company').textContent = company || '—';
-        document.getElementById('pv-crno').textContent = crno || '—';
-        document.getElementById('pv-judgment').textContent = judgment || '—';
-        document.getElementById('pv-remarks').textContent = remarks || '—';
-
-        // Build shareholders table in hidden template
-        const pvContainer = document.getElementById('pv-shareholders');
-        if (shareholders.length === 0) {
-          pvContainer.innerHTML = '<p style="color:#999;font-style:italic;">未有股東資料</p>';
-        } else {
-          let table = '<table style="width:100%;border-collapse:collapse;font-size:12px;">';
-          table += '<thead><tr style="background:#1B2A4A;color:white;">';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">#</th>';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">姓名/名稱</th>';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">類型</th>';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:right;">持股%</th>';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:right;">投票權%</th>';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">關連關係</th>';
-          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">關連人士</th>';
-          table += '</tr></thead><tbody>';
-          shareholders.forEach((s, i) => {
-            const isPSC = parseFloat(s.pct) > 25 || parseFloat(s.vote) > 25;
-            table += '<tr style="background:' + (i % 2 === 0 ? 'white' : '#f9f9f9') + ';">';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;text-align:center;font-weight:bold;">' + s.num + '</td>';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + (s.name || '—') + '</td>';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + s.type + '</td>';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;text-align:right;">' + (s.pct || '0') + '%</td>';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;text-align:right;">' + (s.vote || '0') + '%</td>';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;text-align:center;">' + s.relation + '</td>';
-            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + (s.relname || '—') + '</td>';
-            table += '</tr>';
-          });
-          table += '</tbody></table>';
-
-          // Add PSC analysis summary below table
-          table += '<div style="margin-top:10px;font-size:11px;color:#555;">';
-          shareholders.forEach(s => {
-            const pct = parseFloat(s.pct) || 0;
-            const vote = parseFloat(s.vote) || 0;
-            table += '<div style="padding:2px 5px;">• ' + (s.name || '—') + '：持股 ' + pct + '%，投票權 ' + vote + '% — ';
-            if (pct > 25 || vote > 25) {
-              table += '<span style="color:#b91c1c;font-weight:bold;">⚠ 潛在重要控制人</span>';
-            } else {
-              table += '<span style="color:#666;">非控制人</span>';
-            }
-            if (s.relation === '是' && s.relname) {
-              table += '（關連：' + s.relname + '）';
-            }
-            table += '</div>';
-          });
-          table += '</div>';
-
-          pvContainer.innerHTML = table;
-        }
-
-        await new Promise(r => setTimeout(r, 200));
-
-        // Capture hidden template
-        const el = document.getElementById('pdf-content');
+        // Capture the WYSIWYG form directly
+        const el = document.getElementById('pdf-form');
         const canvas = await html2canvas(el, {
           scale: 3,
           useCORS: true,
           backgroundColor: '#ffffff',
           logging: false,
-          width: 800
+          width: el.scrollWidth
         });
+
+        // Exit capture mode
+        document.body.classList.remove('capture-mode');
 
         // Generate PDF
         const imgData = canvas.toDataURL('image/png');
@@ -542,6 +646,8 @@
         }, 2500);
 
       } catch(e) {
+        // Ensure capture mode is removed on error
+        document.body.classList.remove('capture-mode');
         console.error('PDF generation error:', e);
         btn.innerHTML = '📄 下載股權結構分析表 PDF';
         btn.disabled = false;
@@ -552,7 +658,7 @@
   </script>
 
   <!-- Email Gate Modal -->
-  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4">
+  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 hide-during-capture" onclick="closeEmailGate(event)">
     <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" onclick="event.stopPropagation()">
       <div class="text-3xl mb-3">📬</div>
       <h3 class="text-lg font-bold text-navy mb-2">下載前留低 email</h3>
@@ -566,7 +672,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="gov-footer py-12">
+  <footer class="gov-footer py-12 hide-during-capture">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
         <div class="flex items-center gap-2 text-white font-bold text-xl">

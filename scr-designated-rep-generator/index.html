@@ -61,20 +61,204 @@
 }
   </script>
   <style>
-    .field-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-    .field-label { width: 180px; font-size: 13px; font-weight: 600; color: #1B2A4A; text-align: right; flex-shrink: 0; }
-    .field-input { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: #fffbeb; font-family: inherit; outline: none; transition: all 0.15s; }
-    .field-input:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); background: #fef3c7; }
-    .field-select { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: white; font-family: inherit; outline: none; }
-    .field-select:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); }
-    .field-date { max-width: 190px; }
-    .field-textarea { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: #fffbeb; font-family: inherit; outline: none; transition: all 0.15s; min-height: 80px; resize: vertical; }
-    .field-textarea:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); background: #fef3c7; }
+    /* ===== WYSIWYG Document Form Styles ===== */
+    .pdf-document {
+      font-family: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      line-height: 1.8;
+      color: #1B2A4A;
+      background: white;
+    }
+    /* ---- Underline Inputs ---- */
+    .underline-input {
+      border: none;
+      border-bottom: 1px solid #888;
+      background: transparent;
+      border-radius: 0;
+      padding: 0 4px 1px;
+      font-family: inherit;
+      font-size: inherit;
+      color: #1B2A4A;
+      outline: none;
+      min-width: 70px;
+      transition: border-color 0.15s;
+    }
+    .underline-input:focus {
+      border-bottom-color: #C9A84C;
+      border-bottom-width: 2px;
+    }
+    .underline-input.wide { min-width: 200px; }
+    .underline-input.full { width: 100%; }
+    /* Date inputs need special handling */
+    .underline-date {
+      min-width: 110px;
+      font-size: 12px;
+    }
+    input[type="date"].underline-input {
+      min-width: 120px;
+    }
+    input[type="date"].underline-input::-webkit-calendar-picker-indicator {
+      opacity: 0.4;
+      padding: 0;
+      margin: 0 0 0 2px;
+    }
+    /* ---- Underline Selects ---- */
+    .underline-select {
+      border: none;
+      border-bottom: 1px solid #888;
+      background: transparent;
+      border-radius: 0;
+      padding: 0 16px 1px 4px;
+      font-family: inherit;
+      font-size: inherit;
+      color: #1B2A4A;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      cursor: pointer;
+      min-width: 100px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0l4 5 4-5' fill='%23888'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 2px center;
+      background-size: 8px 5px;
+    }
+    .underline-select:focus {
+      border-bottom-color: #C9A84C;
+      border-bottom-width: 2px;
+    }
+    /* ---- Underline Textareas ---- */
+    .underline-textarea {
+      border: none;
+      border-bottom: 1px dashed #aaa;
+      background: transparent;
+      border-radius: 0;
+      padding: 2px 4px;
+      font-family: inherit;
+      font-size: inherit;
+      color: #1B2A4A;
+      outline: none;
+      resize: vertical;
+      width: 100%;
+      min-height: 50px;
+      line-height: 1.7;
+    }
+    .underline-textarea:focus {
+      border-bottom-color: #C9A84C;
+      border-bottom-width: 2px;
+    }
+    /* ---- Document Layout ---- */
+    .doc-header {
+      text-align: center;
+      border-bottom: 2px solid #1B2A4A;
+      padding-bottom: 10px;
+      margin-bottom: 22px;
+    }
+    .doc-title-gold {
+      font-size: 17px;
+      font-weight: bold;
+      color: #C9A84C;
+      letter-spacing: 0.5px;
+    }
+    .doc-title-navy {
+      font-size: 14px;
+      font-weight: bold;
+      color: #1B2A4A;
+      margin-top: 3px;
+    }
+    .doc-subtitle {
+      font-size: 10px;
+      color: #888;
+      margin-top: 3px;
+    }
+    .doc-section-title {
+      font-weight: bold;
+      font-size: 13px;
+      color: #1B2A4A;
+      border-bottom: 1px solid #1B2A4A;
+      padding-bottom: 2px;
+      margin-bottom: 8px;
+      margin-top: 16px;
+    }
+    .doc-row {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      padding: 2px 0;
+    }
+    .doc-row.align-top { align-items: flex-start; }
+    .doc-label {
+      font-weight: 600;
+      color: #555;
+      font-size: 12px;
+      white-space: nowrap;
+      min-width: 100px;
+    }
+    .doc-label-wide { min-width: 130px; }
+    .doc-inline-text {
+      font-size: 12px;
+      line-height: 1.8;
+    }
+    .doc-footer-note {
+      margin-top: 20px;
+      padding: 8px 12px;
+      background: #f9f9f9;
+      border-left: 3px solid #C9A84C;
+      font-size: 10px;
+      color: #666;
+      text-align: center;
+    }
+    .doc-consent-box {
+      margin: 12px 0;
+      padding: 12px 16px;
+      background: #fffbeb;
+      border: 1px solid #e8d48b;
+      border-radius: 4px;
+      font-size: 12px;
+      line-height: 1.9;
+    }
+    .signature-line {
+      display: inline-block;
+      width: 180px;
+      border-bottom: 1px solid #1B2A4A;
+      margin: 0 4px;
+    }
+    .page-break-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 20px 0;
+      margin: 10px 0;
+      color: #999;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+    .page-break-divider::before,
+    .page-break-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #ccc;
+    }
+    .consent-signer-display {
+      font-weight: 600;
+      color: #1B2A4A;
+    }
+    /* ---- Capture Mode ---- */
+    .capture-mode .capture-hide { display: none !important; }
+    .capture-mode { background: white !important; }
+    .capture-mode #pdf-form {
+      box-shadow: none !important;
+      border: none !important;
+      margin: 0 auto !important;
+    }
   </style>
 </head>
 <body class="bg-gray-100 font-sans">
 
-  <nav class="bg-navy text-white sticky top-0 z-50">
+  <nav class="bg-navy text-white sticky top-0 z-50 capture-hide">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
       <a href="/significant-controllers-register?step=5" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回指南</a>
@@ -84,14 +268,14 @@
   <div class="max-w-4xl mx-auto px-4 py-6">
 
     <!-- Trust Banner -->
-    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700 capture-hide">
       📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅董事會決議及同意書 PDF
     </div>
 
-    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">指定代表委任決議及同意書 — PDF 填寫工具</h1>
+    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4 capture-hide">指定代表委任決議及同意書 — PDF 填寫工具</h1>
 
     <!-- 參考圖片兩幅 -->
-    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
+    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto capture-hide">
       <!-- 真實範例 -->
       <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
         <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
@@ -117,7 +301,7 @@
     </div>
 
     <!-- 文件說明 + 常見錯誤 -->
-    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
+    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm capture-hide">
       <div class="flex items-start gap-3 mb-3">
         <span class="text-lg mt-0.5 shrink-0">📄</span>
         <div>
@@ -137,7 +321,7 @@
     </div>
 
     <!-- Template Modal -->
-    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4" onclick="closeTemplateModal(event)">
+    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 capture-hide" onclick="closeTemplateModal(event)">
       <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
 
         <div class="flex border-b border-gray-200">
@@ -191,239 +375,157 @@
     }
     </script>
 
-    <!-- PDF Form -->
-    <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px;">
+    <!-- PDF Form — WYSIWYG Document -->
+    <div id="pdf-form" class="pdf-document bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px;">
 
-      <div class="bg-navy text-white py-3 px-6 text-center">
-        <div class="text-lg font-bold text-gold">BOARD RESOLUTION &amp; CONSENT-TO-ACT</div>
-        <p class="text-xs text-gray-400">指定代表委任決議及同意書</p>
-      </div>
+      <!-- ==================== PAGE 1: BOARD RESOLUTION ==================== -->
+      <div id="form-page-1" class="p-6 sm:p-8" style="padding-bottom:20px;">
 
-      <div class="p-6 sm:p-8">
-
-        <!-- 公司資料 -->
-        <div class="mb-6">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">公司資料</h2>
-          <div class="field-row">
-            <span class="field-label">公司名稱（中文）</span>
-            <input type="text" id="f-company-cn" value="ABC 貿易有限公司" class="field-input" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">公司名稱（英文）</span>
-            <input type="text" id="f-company-en" value="ABC TRADING LIMITED" class="field-input" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">公司註冊編號</span>
-            <input type="text" id="f-crno" value="12345678" class="field-input" />
-          </div>
+        <!-- Header -->
+        <div class="doc-header">
+          <div class="doc-title-gold">BOARD RESOLUTION</div>
+          <div class="doc-title-navy">董事會書面決議</div>
+          <div class="doc-subtitle">（根據《公司條例》第 622 章第 653M 條）</div>
         </div>
 
-        <!-- 決議資料 -->
-        <div class="mb-6">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">決議資料</h2>
-          <div class="field-row">
-            <span class="field-label">決議編號</span>
-            <input type="text" id="f-res-no" value="DIR/2025/001" class="field-input" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">董事會會議日期</span>
-            <input type="date" id="f-board-date" class="field-input field-date" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">通過日期</span>
-            <input type="date" id="f-pass-date" class="field-input field-date" />
-          </div>
+        <!-- Resolution Metadata -->
+        <div class="doc-row">
+          <span class="doc-label">決議編號</span>
+          <input type="text" id="f-res-no" value="DIR/2025/001" class="underline-input wide" />
+        </div>
+        <div class="doc-row">
+          <span class="doc-label">會議日期</span>
+          <input type="date" id="f-board-date" class="underline-input underline-date" />
+        </div>
+        <div class="doc-row">
+          <span class="doc-label">通過日期</span>
+          <input type="date" id="f-pass-date" class="underline-input underline-date" />
         </div>
 
-        <!-- 委任代表資料 -->
-        <div class="mb-6">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">委任代表資料</h2>
-          <div class="field-row">
-            <span class="field-label">代表姓名</span>
-            <input type="text" id="f-rep-name" value="黃小明" class="field-input" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">代表身份</span>
-            <select id="f-rep-identity" class="field-select">
-              <option value="董事 (Director)" selected>董事 (Director)</option>
-              <option value="股東 (Shareholder)">股東 (Shareholder)</option>
-              <option value="僱員 (Employee)">僱員 (Employee)</option>
-              <option value="執業會計師 (Certified Public Accountant)">執業會計師 (CPA)</option>
-              <option value="律師 (Solicitor/Lawyer)">律師 (Solicitor/Lawyer)</option>
-              <option value="信託或公司服務提供者 (TCSP)">信託或公司服務提供者 (TCSP)</option>
-            </select>
-          </div>
-          <div class="field-row">
-            <span class="field-label">是否居港</span>
-            <select id="f-rep-hk" class="field-select">
-              <option value="是" selected>是（必須為是）</option>
-              <option value="否">否</option>
-            </select>
-          </div>
-          <div class="field-row">
-            <span class="field-label">委任生效日期</span>
-            <input type="date" id="f-effective-date" class="field-input field-date" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">薪酬（如有）</span>
-            <input type="text" id="f-remuneration" value="" placeholder="例如：每月 HK$5,000" class="field-input" />
-          </div>
+        <!-- Company Info -->
+        <div class="doc-section-title">公司資料</div>
+        <div class="doc-row">
+          <span class="doc-label doc-label-wide">公司名稱（中文）</span>
+          <input type="text" id="f-company-cn" value="ABC 貿易有限公司" class="underline-input full" />
+        </div>
+        <div class="doc-row">
+          <span class="doc-label doc-label-wide">公司名稱（英文）</span>
+          <input type="text" id="f-company-en" value="ABC TRADING LIMITED" class="underline-input full" />
+        </div>
+        <div class="doc-row">
+          <span class="doc-label doc-label-wide">公司註冊編號</span>
+          <input type="text" id="f-crno" value="12345678" class="underline-input wide" />
         </div>
 
-        <!-- 董事會決議內容 -->
-        <div class="mb-6">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">董事會決議內容</h2>
-          <div class="field-row">
-            <span class="field-label">決議標題</span>
-            <input type="text" id="f-res-title" value="關於委任指定代表之董事會書面決議" class="field-input" />
-          </div>
-          <div class="field-row" style="align-items:flex-start;">
-            <span class="field-label" style="margin-top:8px;">決議正文</span>
-            <textarea id="f-res-body" class="field-textarea" rows="6">茲根據《公司條例》（第 622 章）第 653M 條及《打擊洗錢及恐怖分子資金籌集條例》（第 615 章）附表 2 第 5 條，董事會通過決議委任 {{代表姓名}} 為本公司就備存重要控制人登記冊（SCR）事宜的指定代表，任期自 {{生效日期}} 起生效。</textarea>
-          </div>
-          <div class="field-row">
-            <span class="field-label">主席簽署</span>
-            <input type="text" id="f-chairman" value="陳大明" class="field-input" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">秘書簽署</span>
-            <input type="text" id="f-secretary" value="李慧敏" class="field-input" />
-          </div>
+        <!-- Resolution -->
+        <div class="doc-section-title">決議</div>
+        <div class="doc-row">
+          <span class="doc-label">決議標題</span>
+          <input type="text" id="f-res-title" value="關於委任指定代表之董事會書面決議" class="underline-input full" />
+        </div>
+        <div class="doc-row align-top">
+          <span class="doc-label" style="margin-top:2px;">決議正文</span>
+          <textarea id="f-res-body" class="underline-textarea" rows="4">茲根據《公司條例》（第 622 章）第 653M 條及《打擊洗錢及恐怖分子資金籌集條例》（第 615 章）附表 2 第 5 條，董事會通過決議委任 {{代表姓名}} 為本公司就備存重要控制人登記冊（SCR）事宜的指定代表，任期自 {{生效日期}} 起生效。</textarea>
         </div>
 
-        <!-- 同意書 -->
-        <div class="mb-4">
-          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">同意書（Consent-to-Act）</h2>
-          <div class="field-row" style="align-items:flex-start;">
-            <span class="field-label" style="margin-top:8px;">確認接受委任</span>
-            <textarea id="f-consent-ack" class="field-textarea" rows="3">本人確認接受委任，同意擔任指定代表，並了解相關法定職責。</textarea>
-          </div>
-          <div class="field-row" style="align-items:flex-start;">
-            <span class="field-label" style="margin-top:8px;">了解指定代表職責</span>
-            <textarea id="f-consent-duties" class="field-textarea" rows="3">本人確認已閱讀並明白指定代表的法定職責，包括按要求向執法人員提供 SCR 資料及查閱、協助公司遵從《公司條例》第 653 部規定等。</textarea>
-          </div>
-          <div class="field-row">
-            <span class="field-label">簽署人姓名</span>
-            <input type="text" id="f-consent-signer" value="黃小明" class="field-input" />
-          </div>
-          <div class="field-row">
-            <span class="field-label">簽署日期</span>
-            <input type="date" id="f-consent-date" class="field-input field-date" />
-          </div>
+        <!-- Representative Details -->
+        <div class="doc-section-title">委任代表詳情</div>
+        <div class="doc-row">
+          <span class="doc-label doc-label-wide">代表姓名</span>
+          <input type="text" id="f-rep-name" value="黃小明" class="underline-input wide" />
+        </div>
+        <div class="doc-row">
+          <span class="doc-label doc-label-wide">代表身份</span>
+          <select id="f-rep-identity" class="underline-select">
+            <option value="董事 (Director)" selected>董事 (Director)</option>
+            <option value="股東 (Shareholder)">股東 (Shareholder)</option>
+            <option value="僱員 (Employee)">僱員 (Employee)</option>
+            <option value="執業會計師 (Certified Public Accountant)">執業會計師 (CPA)</option>
+            <option value="律師 (Solicitor/Lawyer)">律師 (Solicitor/Lawyer)</option>
+            <option value="信託或公司服務提供者 (TCSP)">信託或公司服務提供者 (TCSP)</option>
+          </select>
+        </div>
+        <div class="doc-row">
+          <span class="doc-label doc-label-wide">是否居港</span>
+          <select id="f-rep-hk" class="underline-select">
+            <option value="是" selected>是</option>
+            <option value="否">否</option>
+          </select>
+        </div>
+        <div class="doc-row">
+          <span class="doc-label doc-label-wide">委任生效日期</span>
+          <input type="date" id="f-effective-date" class="underline-input underline-date" />
+        </div>
+        <div class="doc-row">
+          <span class="doc-label doc-label-wide">薪酬（如有）</span>
+          <input type="text" id="f-remuneration" value="" placeholder="例如：每月 HK$5,000" class="underline-input wide" />
         </div>
 
-      </div>
-    </div>
-
-    <!-- PDF Template (hidden for capture) -->
-    <div id="pdf-content" style="position:absolute;left:-9999px;top:0;width:800px;background:white;padding:40px;font-family:'Noto Sans TC',sans-serif;font-size:13px;line-height:1.7;color:#1B2A4A;">
-
-      <!-- Page 1: Board Resolution -->
-      <div id="pdf-page-1" style="margin-bottom:40px;padding-bottom:40px;">
-
-        <div style="text-align:center;border-bottom:2px solid #1B2A4A;padding-bottom:10px;margin-bottom:25px;">
-          <div style="font-size:18px;font-weight:bold;color:#C9A84C;">BOARD RESOLUTION</div>
-          <div style="font-size:14px;font-weight:bold;color:#1B2A4A;margin-top:4px;">董事會書面決議</div>
-          <div style="font-size:11px;color:#666;margin-top:4px;">（根據《公司條例》第 622 章第 653M 條）</div>
+        <!-- Signatures -->
+        <div class="doc-section-title">簽署</div>
+        <div class="doc-row">
+          <span class="doc-label">主席簽署</span>
+          <input type="text" id="f-chairman" value="陳大明" class="underline-input wide" />
+        </div>
+        <div class="doc-row">
+          <span class="doc-label">秘書簽署</span>
+          <input type="text" id="f-secretary" value="李慧敏" class="underline-input wide" />
         </div>
 
-        <table style="width:100%;border-collapse:collapse;margin-bottom:20px;">
-          <tr><td style="width:120px;padding:4px 8px;font-weight:600;color:#555;font-size:12px;">決議編號</td><td style="padding:4px 8px;font-size:12px;" id="pv-res-no">DIR/2025/001</td></tr>
-          <tr><td style="width:120px;padding:4px 8px;font-weight:600;color:#555;font-size:12px;">會議日期</td><td style="padding:4px 8px;font-size:12px;" id="pv-board-date"></td></tr>
-          <tr><td style="width:120px;padding:4px 8px;font-weight:600;color:#555;font-size:12px;">通過日期</td><td style="padding:4px 8px;font-size:12px;" id="pv-pass-date"></td></tr>
-        </table>
-
-        <div style="margin-bottom:15px;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">公司資料</div>
-          <table style="width:100%;border-collapse:collapse;">
-            <tr><td style="width:120px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">公司名稱（中文）</td><td style="padding:3px 5px;font-size:12px;" id="pv-company-cn">ABC 貿易有限公司</td></tr>
-            <tr><td style="width:120px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">公司名稱（英文）</td><td style="padding:3px 5px;font-size:12px;" id="pv-company-en">ABC TRADING LIMITED</td></tr>
-            <tr><td style="width:120px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">公司註冊編號</td><td style="padding:3px 5px;font-size:12px;" id="pv-crno">12345678</td></tr>
-          </table>
-        </div>
-
-        <div style="margin-bottom:15px;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">決議標題</div>
-          <div style="padding:3px 5px;font-size:14px;font-weight:600;" id="pv-res-title">關於委任指定代表之董事會書面決議</div>
-        </div>
-
-        <div style="margin-bottom:15px;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">決議正文</div>
-          <div style="padding:3px 5px;font-size:12px;text-align:justify;" id="pv-res-body"></div>
-        </div>
-
-        <div style="margin-bottom:15px;">
-          <table style="width:100%;border-collapse:collapse;">
-            <tr><td style="width:120px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">代表姓名</td><td style="padding:3px 5px;font-size:12px;" id="pv-rep-name">黃小明</td></tr>
-            <tr><td style="width:120px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">代表身份</td><td style="padding:3px 5px;font-size:12px;" id="pv-rep-identity">董事 (Director)</td></tr>
-            <tr><td style="width:120px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">是否居港</td><td style="padding:3px 5px;font-size:12px;" id="pv-rep-hk">是</td></tr>
-            <tr><td style="width:120px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">委任生效日期</td><td style="padding:3px 5px;font-size:12px;" id="pv-effective-date"></td></tr>
-            <tr><td style="width:120px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">薪酬</td><td style="padding:3px 5px;font-size:12px;" id="pv-remuneration">—</td></tr>
-          </table>
-        </div>
-
-        <div style="margin-top:25px;padding-top:15px;border-top:1px dashed #ccc;">
-          <table style="width:100%;border-collapse:collapse;">
-            <tr><td style="width:120px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">主席簽署</td><td style="padding:3px 5px;font-size:12px;" id="pv-chairman">陳大明</td></tr>
-            <tr><td style="width:120px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">秘書簽署</td><td style="padding:3px 5px;font-size:12px;" id="pv-secretary">李慧敏</td></tr>
-            <tr><td style="width:120px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">通過日期</td><td style="padding:3px 5px;font-size:12px;" id="pv-pass-date2"></td></tr>
-          </table>
-        </div>
-
-        <div style="margin-top:20px;padding:10px 15px;background:#f9f9f9;border-left:3px solid #C9A84C;font-size:11px;color:#555;text-align:center;">
+        <div class="doc-footer-note">
           〓 本決議由全體董事簽署，並作為董事會書面決議歸檔備查 〓
         </div>
       </div>
 
-      <!-- Page 2: Consent to Act -->
-      <div id="pdf-page-2" style="page-break-before:always;padding-top:40px;">
+      <!-- ==================== PAGE BREAK ==================== -->
+      <div id="page-break" class="page-break-divider">
+        <span>— 同意書 —</span>
+      </div>
 
-        <div style="text-align:center;border-bottom:2px solid #1B2A4A;padding-bottom:10px;margin-bottom:25px;">
-          <div style="font-size:18px;font-weight:bold;color:#C9A84C;">CONSENT TO ACT AS DESIGNATED REPRESENTATIVE</div>
-          <div style="font-size:14px;font-weight:bold;color:#1B2A4A;margin-top:4px;">指定代表同意書</div>
-          <div style="font-size:11px;color:#666;margin-top:4px;">（《公司條例》第 622 章第 653M 條）</div>
+      <!-- ==================== PAGE 2: CONSENT TO ACT ==================== -->
+      <div id="form-page-2" class="p-6 sm:p-8" style="padding-top:10px;">
+
+        <!-- Header -->
+        <div class="doc-header">
+          <div class="doc-title-gold">CONSENT TO ACT AS DESIGNATED REPRESENTATIVE</div>
+          <div class="doc-title-navy">指定代表同意書</div>
+          <div class="doc-subtitle">（《公司條例》第 622 章第 653M 條）</div>
         </div>
 
-        <div style="margin-bottom:20px;padding:15px 20px;background:#fffbeb;border:1px solid #e8d48b;border-radius:4px;">
-          <p style="font-size:12px;line-height:1.8;">
-            本人 <strong id="pv-consent-signer">黃小明</strong>，同意接受委任，擔任
-            <strong id="pv-consent-company">ABC 貿易有限公司</strong>（「本公司」）
-            就重要控制人登記冊事宜的指定代表，並確認以下事項：
+        <!-- Consent Intro -->
+        <div class="doc-consent-box">
+          <p class="doc-inline-text">
+            本人 <input type="text" id="f-consent-signer" value="黃小明" class="underline-input" style="min-width:90px;font-weight:600;" />
+            ，同意接受委任，擔任
+            <span id="consent-company-display" style="font-weight:600;">ABC 貿易有限公司</span>
+            （「本公司」）就重要控制人登記冊事宜的指定代表，並確認以下事項：
           </p>
         </div>
 
-        <div style="margin-bottom:15px;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">接受委任聲明</div>
-          <div style="padding:3px 5px;font-size:12px;text-align:justify;" id="pv-consent-ack">本人確認接受委任，同意擔任指定代表，並了解相關法定職責。</div>
+        <!-- Acknowledgment -->
+        <div class="doc-section-title">接受委任聲明</div>
+        <textarea id="f-consent-ack" class="underline-textarea" rows="2">本人確認接受委任，同意擔任指定代表，並了解相關法定職責。</textarea>
+
+        <!-- Duties -->
+        <div class="doc-section-title">了解指定代表職責</div>
+        <textarea id="f-consent-duties" class="underline-textarea" rows="2">本人確認已閱讀並明白指定代表的法定職責，包括按要求向執法人員提供 SCR 資料及查閱、協助公司遵從《公司條例》第 653 部規定等。</textarea>
+
+        <!-- Signature -->
+        <div class="doc-section-title">簽署</div>
+        <div class="doc-row">
+          <span class="doc-label doc-label-wide">同意人簽署</span>
+          <span class="signature-line"></span>
+        </div>
+        <div class="doc-row">
+          <span class="doc-label doc-label-wide">簽署人姓名</span>
+          <span id="consent-signer-display" class="consent-signer-display">黃小明</span>
+        </div>
+        <div class="doc-row">
+          <span class="doc-label doc-label-wide">簽署日期</span>
+          <input type="date" id="f-consent-date" class="underline-input underline-date" />
         </div>
 
-        <div style="margin-bottom:15px;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">了解指定代表職責</div>
-          <div style="padding:3px 5px;font-size:12px;text-align:justify;" id="pv-consent-duties">本人確認已閱讀並明白指定代表的法定職責，包括按要求向執法人員提供 SCR 資料及查閱、協助公司遵從《公司條例》第 653 部規定等。</div>
-        </div>
-
-        <div style="margin-bottom:15px;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">委任詳情</div>
-          <table style="width:100%;border-collapse:collapse;">
-            <tr><td style="width:140px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">委任公司</td><td style="padding:3px 5px;font-size:12px;" id="pv-consent-company2">ABC 貿易有限公司</td></tr>
-            <tr><td style="width:140px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">指定代表姓名</td><td style="padding:3px 5px;font-size:12px;" id="pv-consent-signer2">黃小明</td></tr>
-            <tr><td style="width:140px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">代表身份</td><td style="padding:3px 5px;font-size:12px;" id="pv-consent-identity">董事 (Director)</td></tr>
-            <tr><td style="width:140px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">是否居港</td><td style="padding:3px 5px;font-size:12px;" id="pv-consent-hk">是</td></tr>
-            <tr><td style="width:140px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">委任生效日期</td><td style="padding:3px 5px;font-size:12px;" id="pv-consent-effective"></td></tr>
-            <tr><td style="width:140px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">薪酬</td><td style="padding:3px 5px;font-size:12px;" id="pv-consent-remuneration">—</td></tr>
-          </table>
-        </div>
-
-        <div style="margin-top:25px;padding-top:15px;border-top:1px dashed #ccc;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">簽署</div>
-          <table style="width:100%;border-collapse:collapse;">
-            <tr><td style="width:140px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">同意人簽署</td><td style="padding:3px 5px;font-size:12px;">_________________________</td></tr>
-            <tr><td style="width:140px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">簽署人姓名</td><td style="padding:3px 5px;font-size:12px;" id="pv-consent-signer3">黃小明</td></tr>
-            <tr><td style="width:140px;padding:3px 5px;font-weight:600;color:#555;font-size:12px;">簽署日期</td><td style="padding:3px 5px;font-size:12px;" id="pv-consent-date"></td></tr>
-          </table>
-        </div>
-
-        <div style="margin-top:20px;padding:10px 15px;background:#f9f9f9;border-left:3px solid #C9A84C;font-size:11px;color:#555;text-align:center;">
+        <div class="doc-footer-note">
           〓 本同意書應與董事會書面決議一併保存 〓
         </div>
       </div>
@@ -431,18 +533,18 @@
     </div>
 
     <!-- Buttons -->
-    <div class="mt-6">
+    <div class="mt-6 capture-hide">
       <button onclick="checkEmailGate()" id="genBtn" class="w-full bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm flex items-center justify-center gap-2">
         📄 下載指定代表委任決議及同意書 PDF
       </button>
     </div>
-    <p id="status" class="text-center text-sm mt-3 hidden"></p>
-    <div class="text-center mt-4">
+    <p id="status" class="text-center text-sm mt-3 hidden capture-hide"></p>
+    <div class="text-center mt-4 capture-hide">
       <a href="/significant-controllers-register?step=5" class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
         ← 返回重要控制人登記冊完整指南
       </a>
     </div>
-    <div class="text-center mt-4">
+    <div class="text-center mt-4 capture-hide">
       <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
          class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
         ☕ 請咖啡
@@ -451,6 +553,23 @@
   </div>
 
   <script>
+    // Sync consent signer name to display span
+    function syncConsentSigner() {
+      const input = document.getElementById('f-consent-signer');
+      const display = document.getElementById('consent-signer-display');
+      if (input && display) {
+        display.textContent = input.value.trim() || '_____';
+      }
+    }
+    // Sync company name to display span
+    function syncCompanyName() {
+      const input = document.getElementById('f-company-cn');
+      const display = document.getElementById('consent-company-display');
+      if (input && display) {
+        display.textContent = input.value.trim() || '本公司';
+      }
+    }
+
     // Set default dates on load
     function setDates() {
       const d = new Date();
@@ -458,11 +577,19 @@
       const m = String(d.getMonth() + 1).padStart(2, '0');
       const day = String(d.getDate()).padStart(2, '0');
       const dateStr = y + '-' + m + '-' + day;
-      document.querySelectorAll('.field-date').forEach(el => {
+      document.querySelectorAll('.underline-date').forEach(el => {
         if (!el.value) el.value = dateStr;
       });
     }
     setDates();
+
+    // Attach sync listeners
+    document.addEventListener('DOMContentLoaded', function() {
+      const signerInput = document.getElementById('f-consent-signer');
+      if (signerInput) signerInput.addEventListener('input', syncConsentSigner);
+      const companyInput = document.getElementById('f-company-cn');
+      if (companyInput) companyInput.addEventListener('input', syncCompanyName);
+    });
 
     // Email Gate
     function checkEmailGate() {
@@ -498,7 +625,7 @@
       document.getElementById('emailGateModal').classList.remove('flex');
     }
 
-    // PDF Generation
+    // PDF Generation — capture #pdf-form directly (WYSIWYG)
     async function generatePDF() {
       const btn = document.getElementById('genBtn');
       const status = document.getElementById('status');
@@ -512,70 +639,27 @@
         const { jsPDF } = window.jspdf;
         await document.fonts.ready;
 
-        // Get form values
+        // Sync displays before capture
+        syncConsentSigner();
+        syncCompanyName();
+
+        // Build resolution body with placeholders replaced (used for filename)
         const companyCN = document.getElementById('f-company-cn').value.trim();
-        const companyEN = document.getElementById('f-company-en').value.trim();
-        const crno = document.getElementById('f-crno').value.trim();
-        const resNo = document.getElementById('f-res-no').value.trim();
-        const boardDate = document.getElementById('f-board-date').value || new Date().toISOString().split('T')[0];
-        const passDate = document.getElementById('f-pass-date').value || boardDate;
+        const effectiveDate = document.getElementById('f-effective-date').value || new Date().toISOString().split('T')[0];
         const repName = document.getElementById('f-rep-name').value.trim();
-        const repIdentity = document.getElementById('f-rep-identity').value;
-        const repHk = document.getElementById('f-rep-hk').value;
-        const effectiveDate = document.getElementById('f-effective-date').value || boardDate;
-        const remuneration = document.getElementById('f-remuneration').value.trim();
-        const resTitle = document.getElementById('f-res-title').value.trim();
         const resBody = document.getElementById('f-res-body').value.trim();
-        const chairman = document.getElementById('f-chairman').value.trim();
-        const secretary = document.getElementById('f-secretary').value.trim();
-        const consentAck = document.getElementById('f-consent-ack').value.trim();
-        const consentDuties = document.getElementById('f-consent-duties').value.trim();
-        const consentSigner = document.getElementById('f-consent-signer').value.trim();
-        const consentDate = document.getElementById('f-consent-date').value || boardDate;
-
-        const remText = remuneration || '無';
-
-        // Build resolution body with placeholders replaced
         let resolvedBody = resBody
           .replace(/\{\{代表姓名\}\}/g, repName || '_____')
           .replace(/\{\{生效日期\}\}/g, effectiveDate);
+        document.getElementById('f-res-body').value = resolvedBody;
 
-        // Update hidden template - Page 1 (Board Resolution)
-        document.getElementById('pv-res-no').textContent = resNo || '—';
-        document.getElementById('pv-board-date').textContent = boardDate;
-        document.getElementById('pv-pass-date').textContent = passDate;
-        document.getElementById('pv-company-cn').textContent = companyCN || '—';
-        document.getElementById('pv-company-en').textContent = companyEN || '—';
-        document.getElementById('pv-crno').textContent = crno || '—';
-        document.getElementById('pv-res-title').textContent = resTitle || '—';
-        document.getElementById('pv-res-body').textContent = resolvedBody || '—';
-        document.getElementById('pv-rep-name').textContent = repName || '—';
-        document.getElementById('pv-rep-identity').textContent = repIdentity;
-        document.getElementById('pv-rep-hk').textContent = repHk;
-        document.getElementById('pv-effective-date').textContent = effectiveDate;
-        document.getElementById('pv-remuneration').textContent = remText;
-        document.getElementById('pv-chairman').textContent = chairman || '—';
-        document.getElementById('pv-secretary').textContent = secretary || '—';
-        document.getElementById('pv-pass-date2').textContent = passDate;
+        // Enter capture mode — hide everything outside #pdf-form
+        document.body.classList.add('capture-mode');
 
-        // Update hidden template - Page 2 (Consent to Act)
-        document.getElementById('pv-consent-signer').textContent = consentSigner || repName || '—';
-        document.getElementById('pv-consent-company').textContent = companyCN || '—';
-        document.getElementById('pv-consent-ack').textContent = consentAck || '本人確認接受委任，同意擔任指定代表。';
-        document.getElementById('pv-consent-duties').textContent = consentDuties || '本人確認已閱讀並明白指定代表的法定職責。';
-        document.getElementById('pv-consent-company2').textContent = companyCN || '—';
-        document.getElementById('pv-consent-signer2').textContent = consentSigner || repName || '—';
-        document.getElementById('pv-consent-identity').textContent = repIdentity;
-        document.getElementById('pv-consent-hk').textContent = repHk;
-        document.getElementById('pv-consent-effective').textContent = effectiveDate;
-        document.getElementById('pv-consent-remuneration').textContent = remText;
-        document.getElementById('pv-consent-signer3').textContent = consentSigner || repName || '—';
-        document.getElementById('pv-consent-date').textContent = consentDate;
+        await new Promise(r => setTimeout(r, 300));
 
-        await new Promise(r => setTimeout(r, 200));
-
-        // Capture hidden template (both pages in one canvas)
-        const el = document.getElementById('pdf-content');
+        // Capture #pdf-form directly
+        const el = document.getElementById('pdf-form');
         const canvas = await html2canvas(el, {
           scale: 3,
           useCORS: true,
@@ -584,54 +668,50 @@
           width: 800
         });
 
-        // Generate PDF
+        // Exit capture mode
+        document.body.classList.remove('capture-mode');
+
+        // Generate PDF — 2 pages (Resolution + Consent)
         const imgData = canvas.toDataURL('image/png');
         const doc = new jsPDF('p', 'mm', 'a4');
         const pageW = 210;
-        const imgRatio = canvas.height / canvas.width;
-        const imgH = pageW * imgRatio;
         const pageH = 297;
 
-        // If canvas is taller than one page, split into multiple pages
-        if (imgH > pageH) {
-          // Scale to fit width
-          const scaleFactor = pageW / canvas.width;
-          const scaledH = canvas.height * scaleFactor;
+        // Find page break position from the form element
+        const formEl = document.getElementById('pdf-form');
+        const pageBreakEl = document.getElementById('page-break');
+        const formRect = formEl.getBoundingClientRect();
+        const breakRect = pageBreakEl.getBoundingClientRect();
+        const breakY = breakRect.top - formRect.top; // pixels from top of form
 
-          // Number of pages needed
-          const numPages = Math.ceil(scaledH / pageH);
+        // Canvas scale factor
+        const scaleFactor = 3; // matches html2canvas scale
+        const breakCanvasY = breakY * scaleFactor;
 
-          for (let i = 0; i < numPages; i++) {
-            if (i > 0) doc.addPage();
+        // Page 1: top portion (resolution)
+        const page1Canvas = document.createElement('canvas');
+        page1Canvas.width = canvas.width;
+        page1Canvas.height = Math.round(breakCanvasY);
+        const ctx1 = page1Canvas.getContext('2d');
+        ctx1.drawImage(canvas, 0, 0, canvas.width, Math.round(breakCanvasY), 0, 0, canvas.width, Math.round(breakCanvasY));
 
-            // Create a canvas for this page portion
-            const pageCanvas = document.createElement('canvas');
-            const srcY = i * (canvas.height / numPages);
-            const srcH = canvas.height / numPages;
+        const page1Data = page1Canvas.toDataURL('image/png');
+        const page1Ratio = page1Canvas.height / page1Canvas.width;
+        const page1H = pageW * page1Ratio;
+        doc.addImage(page1Data, 'PNG', 0, (pageH - Math.min(page1H, pageH)) / 2, pageW, Math.min(page1H, pageH));
 
-            pageCanvas.width = canvas.width;
-            pageCanvas.height = canvas.height / numPages;
+        // Page 2: bottom portion (consent)
+        doc.addPage();
+        const page2Canvas = document.createElement('canvas');
+        page2Canvas.width = canvas.width;
+        page2Canvas.height = canvas.height - Math.round(breakCanvasY);
+        const ctx2 = page2Canvas.getContext('2d');
+        ctx2.drawImage(canvas, 0, Math.round(breakCanvasY), canvas.width, canvas.height - Math.round(breakCanvasY), 0, 0, canvas.width, page2Canvas.height);
 
-            const ctx = pageCanvas.getContext('2d');
-            ctx.drawImage(
-              canvas,
-              0, srcY, canvas.width, srcH,
-              0, 0, canvas.width, pageCanvas.height
-            );
-
-            const pageImgData = pageCanvas.toDataURL('image/png');
-            const pageImgH = pageW * (pageCanvas.height / canvas.width);
-
-            if (pageImgH > pageH) {
-              // If still too tall, scale proportionally
-              doc.addImage(pageImgData, 'PNG', 0, 0, pageW, pageH);
-            } else {
-              doc.addImage(pageImgData, 'PNG', 0, (pageH - pageImgH) / 2, pageW, pageImgH);
-            }
-          }
-        } else {
-          doc.addImage(imgData, 'PNG', 0, (pageH - imgH) / 2, pageW, imgH);
-        }
+        const page2Data = page2Canvas.toDataURL('image/png');
+        const page2Ratio = page2Canvas.height / page2Canvas.width;
+        const page2H = pageW * page2Ratio;
+        doc.addImage(page2Data, 'PNG', 0, (pageH - Math.min(page2H, pageH)) / 2, pageW, Math.min(page2H, pageH));
 
         // Watermark
         doc.saveGraphicsState();
@@ -658,6 +738,8 @@
 
       } catch(e) {
         console.error('PDF generation error:', e);
+        // Ensure capture mode is removed even on error
+        document.body.classList.remove('capture-mode');
         btn.innerHTML = '📄 下載指定代表委任決議及同意書 PDF';
         btn.disabled = false;
         status.className = 'text-center text-sm mt-3 text-red-500';
@@ -667,7 +749,7 @@
   </script>
 
   <!-- Email Gate Modal -->
-  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4">
+  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 capture-hide">
     <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" onclick="event.stopPropagation()">
       <div class="text-3xl mb-3">📬</div>
       <h3 class="text-lg font-bold text-navy mb-2">下載前留低 email</h3>
@@ -686,7 +768,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="gov-footer py-12">
+  <footer class="gov-footer py-12 capture-hide">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
         <div class="flex items-center gap-2 text-white font-bold text-xl">
