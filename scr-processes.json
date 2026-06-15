@@ -227,12 +227,6 @@
             "更改存放地址後冇喺 15 日內更新 NR2"
           ],
           "generatorUrl": "/scr-nr2-generator"
-        },
-        {
-          "name": "CR 指引 Annex G：指明地點通知書（Form NR2）範本",
-          "description": "Annex G：指明地點通知書 Form NR2 範本（CR 指引附件 G）— 存放非註冊辦事處時須提交",
-          "demoImage": "/assets/demo/cr_annex_g_p1.png",
-          "hasGenerator": false
         }
       ],
       "rejectionRisks": [
