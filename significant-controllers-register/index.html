@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ESGov | 香港公司重要控制人登記冊 (SCR) 完整指南 — 5個步驟搞掂</title>
-  <meta name="description" content="香港公司重要控制人登記冊 (SCR) 完整指南。由真實經歷者整理，5 個步驟教你備存 SCR：分析股權結構、5 項控制權測試、收集控制人資料、填寫登記冊、備存維護。含法定要求、範例、常見錯誤同罰則。全部免費公開，避免罰款 HK$25,000+。" />
-  <meta property="og:title" content="香港公司重要控制人登記冊 (SCR) 完整指南 — 5個步驟搞掂 | ESGov" />
-  <meta property="og:description" content="真實來源對照、可下載範本、避免被罰款。由經歷者整理，5個步驟搞掂重要控制人登記冊。" />
+  <title>ESGov | 重要控制人登記冊 (SCR) 完整指南 — 7個步驟搞掂，含通知範本</title>
+  <meta name="description" content="香港公司重要控制人登記冊 (SCR) 7 個步驟完整指南。含發出書面通知、委任指定代表、NR2 指明地點通知及無控制人聲明範本。真實經歷者整理，全部免費公開，避免被罰 HK$25,000+。" />
+  <meta property="og:title" content="重要控制人登記冊 (SCR) 完整指南 — 7個步驟搞掂" />
+  <meta property="og:description" content="7個步驟搞掂 SCR：股權分析、5項測試、書面通知、指定代表、登記冊填寫、備存維護。全部免費，可下載範本。" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="zh_HK" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -62,16 +62,72 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "香港公司重要控制人登記冊 (SCR) 完整指南 — 5個步驟搞掂",
-    "description": "香港公司重要控制人登記冊 (SCR) 完整指南。由真實經歷者整理，5 個步驟教你備存 SCR。含法定要求、5 項控制權測試方法、登記冊範例、常見錯誤同罰則。全部免費公開，避免被公司註冊處罰款 HK$25,000+。",
+    "name": "重要控制人登記冊 (SCR) 完整指南 — 7個步驟搞掂，含通知範本",
+    "description": "香港公司重要控制人登記冊 (SCR) 7 個步驟完整指南。含發出書面通知、委任指定代表、NR2 指明地點通知及無控制人聲明範本。全部免費公開，避免被罰 HK$25,000+。",
     "url": "https://esgov.org/significant-controllers-register"
   }
+  </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "SCR 係咩嚟？邊啲公司要做？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SCR（重要控制人登記冊）係香港《公司條例》要求所有非上市公司備存嘅登記冊，记录公司嘅重要控制人資料。上市公司豁免。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "點樣通知疑似控制人？要用咩格式？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "公司必須向每位疑似重要控制人發出書面通知，要求佢哋喺 1 個月內回覆。我哋提供 standard 通知書範本下載。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "指定代表（Designated Representative）點樣委任？一定要董事會決議？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "係，指定代表必須經董事會決議正式委任，並記錄喺會議記錄。可以係股東/董事/員工（須居港），或者會計/法律專業人士/TCSP 持牌人。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "公司冇重要控制人，仲要備存 SCR 嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "要。即使冇重要控制人，公司仍然必須備存 SCR，並喺登記冊註明「經查核後公司無重要控制人」。留空係違規。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SCR 放喺邊？一定要交 NR2 嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SCR 可以放喺公司註冊辦事處（唔使交 NR2），或者香港境內另一個指明地方（必須 15 日內交 NR2 通知公司註冊處）。NR2 係條件性嘅，唔係一定要交。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "唔做 SCR 有咩罰則？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "未備存 SCR 最高罰 HK$25,000 + 每日 HK$700。提供虛假/誤導資料最高罰 HK$300,000 + 2 年監禁。2025 年已有實際檢控案例罰款 $3,000-$20,000。"
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body x-data="{
   processData: null,
   currentStep: Number(new URLSearchParams(window.location.search).get('step')) || 1,
-  totalSteps: 5,
+  totalSteps: 7,
   isLoading: true,
   error: null,
   activeMobileTab: 1,
@@ -85,7 +141,7 @@
 
   async init() {
     try {
-      const r = await fetch('/scr-processes.json?v=2.0');
+      const r = await fetch('/scr-processes.json?v=3.0');
       if (!r.ok) throw new Error('HTTP '+r.status);
       const j = await r.json();
       this.processData = j;
@@ -389,7 +445,7 @@
         <div x-show="!isLoading && !error && currentStep === totalSteps" class="mt-8 mb-12">
           <div class="bg-navy text-white rounded-xl p-4 sm:p-5 text-center mb-4">
             <div class="text-3xl mb-2">🎉</div>
-            <h3 class="text-lg font-bold mb-1">搞掂晒！5 個步驟全部完成</h3>
+            <h3 class="text-lg font-bold mb-1">搞掂晒！7 個步驟全部完成</h3>
             <p class="text-gray-300 text-xs max-w-md mx-auto">你而家有齊晒所有資料同範例，可以放心備存重要控制人登記冊。</p>
           </div>
 
