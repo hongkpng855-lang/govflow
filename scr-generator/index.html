@@ -642,18 +642,33 @@
         // Restore UI
         document.body.classList.remove('capture-mode');
 
-        // Generate PDF from captured image
+        // Generate multi-page PDF
         const imgData = canvas.toDataURL('image/png');
         const doc = new jsPDF('p', 'mm', 'a4');
         const pageW = 210;
-        const imgRatio = canvas.height / canvas.width;
-        const imgH = pageW * imgRatio;
         const pageH = 297;
+        const margin = 10;
+        const contentW = pageW - margin * 2;
+        const contentH = pageH - margin * 2;
 
-        if (imgH > pageH) {
-          doc.addImage(imgData, 'PNG', 0, 0, pageW * (pageH / imgH), pageH);
-        } else {
-          doc.addImage(imgData, 'PNG', 0, (pageH - imgH) / 2, pageW, imgH);
+        // Calculate page height in canvas pixels
+        const pxRatio = canvas.width / contentW;
+        const pagePxH = contentH * pxRatio;
+        const totalPages = Math.ceil(canvas.height / pagePxH);
+
+        for (let i = 0; i < totalPages; i++) {
+          if (i > 0) doc.addPage();
+          const srcY = i * pagePxH;
+          const srcH = Math.min(pagePxH, canvas.height - srcY);
+          const tempCanvas = document.createElement('canvas');
+          tempCanvas.width = canvas.width;
+          tempCanvas.height = srcH;
+          const ctx = tempCanvas.getContext('2d');
+          ctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, srcH);
+          const pageImgData = tempCanvas.toDataURL('image/png');
+          const pageImgH = contentW * (srcH / canvas.width);
+          const yOffset = margin + (contentH - Math.min(pageImgH, contentH)) / 2;
+          doc.addImage(pageImgData, 'PNG', margin, yOffset, contentW, Math.min(pageImgH, contentH));
         }
 
         // Watermark
