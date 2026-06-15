@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ESGov | 重要控制人識別檢查表 Word 生成工具 — 填資料即出已填好 Word</title>
-  <meta name="description" content="香港公司 SCR 重要控制人識別檢查表 Word 生成工具。用公司條例 5 項測試標準（持股 25%、投票權、董事任命權、重大影響、信託影響）逐項對照，填好每位測試對象資料同結果。一鍵下載已填好嘅識別檢查表 Word 檔案，唔使自己整表格。" />
-  <meta property="og:title" content="ESGov | 重要控制人識別檢查表 Word 生成工具" />
-  <meta property="og:description" content="填測試資料，一鍵下載已填好 Word 檔案。完全免費。" />
+  <title>ESGov | 重要控制人識別檢查表 PDF 填寫工具 — 一鍵生成已填好 PDF</title>
+  <meta name="description" content="香港公司 SCR 重要控制人識別檢查表 PDF 線上填寫工具。用公司條例 5 項測試標準（持股 25%、投票權、董事任命權、重大影響、信託影響）逐項對照，填好每位測試對象資料同結果。一鍵下載已填好嘅識別檢查表 PDF 檔案，唔使自己整表格。完全免費。" />
+  <meta property="og:title" content="ESGov | 重要控制人識別檢查表 PDF 填寫工具 — 一鍵生成已填好 PDF" />
+  <meta property="og:description" content="填測試資料，一鍵下載已填好 PDF 檔案。完全免費。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
     tailwind.config = {
       theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
@@ -29,8 +31,8 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "重要控制人識別檢查表 Word 生成工具",
-    "description": "香港公司 SCR 重要控制人識別檢查表 Word 生成工具，填測試結果即出已填好 Word。完全免費。",
+    "name": "重要控制人識別檢查表 PDF 填寫工具",
+    "description": "香港公司 SCR 重要控制人識別檢查表 PDF 線上填寫工具，填測試結果即出已填好 PDF。完全免費。",
     "url": "https://esgov.org/scr-identification-checklist-generator"
   }
   </script>
@@ -52,48 +54,57 @@
     },{
       "@type": "ListItem",
       "position": 3,
-      "name": "重要控制人識別檢查表 Word 生成工具",
+      "name": "重要控制人識別檢查表 PDF 填寫工具",
       "item": "https://esgov.org/scr-identification-checklist-generator"
     }
   ]
 }
   </script>
+  <style>
+    .field-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .field-label { width: 180px; font-size: 13px; font-weight: 600; color: #1B2A4A; text-align: right; flex-shrink: 0; }
+    .field-input { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: #fffbeb; font-family: inherit; outline: none; transition: all 0.15s; }
+    .field-input:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); background: #fef3c7; }
+    .field-select { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: white; font-family: inherit; outline: none; }
+    .field-select:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); }
+  </style>
 </head>
 <body class="bg-gray-100 font-sans">
 
   <nav class="bg-navy text-white sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/significant-controllers-register?step=2" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← Step 2</a>
+      <a href="/significant-controllers-register?step=2" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回指南</a>
     </div>
   </nav>
 
   <div class="max-w-4xl mx-auto px-4 py-6">
 
-    <!-- Trust Banner -->
     <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
-      📝 填好測試結果 → 㩒「下載 Word」→ 直接下載已填好嘅重要控制人識別檢查表
+      📝 填好下面測試資料 → 㩒「下載 PDF」→ 直接下載已填好嘅重要控制人識別檢查表 PDF
     </div>
 
-    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">重要控制人識別檢查表 — Word 生成工具</h1>
+    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">重要控制人識別檢查表 — PDF 填寫工具</h1>
 
-    <!-- Example Image Cards -->
+    <!-- 參考圖片兩幅 -->
     <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
+      <!-- 真實案例 -->
       <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
         <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
           <img src="/assets/demo/scr-step2.png" alt="重要控制人識別檢查表 真實範例"
                class="w-full h-full object-contain"
-               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 真實範例（準備中）</div>'" />
         </div>
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
           <span class="text-white text-xs font-bold drop-shadow-sm">真實範例</span>
         </div>
       </div>
+      <!-- 可修改文件 -->
       <div onclick="openTemplateModal('template')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
         <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-          <img src="/assets/demo/scr-step2-template.png" alt="重要控制人識別檢查表 模板"
+          <img src="/assets/demo/scr-step2.png" alt="重要控制人識別檢查表 模板"
                class="w-full h-full object-contain"
-               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 模板（準備中）</div>'" />
         </div>
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
           <span class="text-white text-xs font-bold drop-shadow-sm">可修改文件</span>
@@ -101,136 +112,7 @@
       </div>
     </div>
 
-    <!-- Form -->
-    <div class="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm mb-4">
-      <h2 class="font-semibold text-navy text-base mb-4">📋 填寫重要控制人識別測試資料</h2>
-
-      <div class="space-y-3">
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">公司名稱（中文）</label>
-          <input id="f1" type="text" value="ABC 貿易有限公司" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">公司名稱（英文）</label>
-          <input id="f2" type="text" value="ABC TRADING LIMITED" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">公司註冊編號</label>
-          <input id="f3" type="text" value="12345678" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">分析日期</label>
-          <input id="f4" type="date" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-
-        <h3 class="font-semibold text-navy text-sm mt-4 pt-3 border-t border-gray-100">測試對象 1</h3>
-
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試對象 1 — 姓名</label>
-          <input id="f5" type="text" value="陳大明" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試對象 1 — 身份</label>
-          <input id="f6" type="text" value="股東" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試 1：持股 >25%</label>
-          <select id="f7" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">
-            <option value="是" selected>是</option>
-            <option value="否">否</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試 2：投票權 >25%</label>
-          <select id="f8" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">
-            <option value="是" selected>是</option>
-            <option value="否">否</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試 3：董事任命權</label>
-          <select id="f9" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">
-            <option value="是">是</option>
-            <option value="否" selected>否</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試 4：重大影響</label>
-          <select id="f10" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">
-            <option value="是">是</option>
-            <option value="否" selected>否</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試 5：信託影響</label>
-          <select id="f11" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">
-            <option value="是">是</option>
-            <option value="否" selected>否</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試對象 1 — 符合條件</label>
-          <input id="f12" type="text" value="測試 1 及測試 2" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-
-        <h3 class="font-semibold text-navy text-sm mt-4 pt-3 border-t border-gray-100">測試對象 2</h3>
-
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試對象 2 — 姓名</label>
-          <input id="f13" type="text" value="李小美" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試對象 2 — 身份</label>
-          <input id="f14" type="text" value="股東" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試 1：持股 >25%</label>
-          <select id="f15" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">
-            <option value="是" selected>是</option>
-            <option value="否">否</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試 2：投票權 >25%</label>
-          <select id="f16" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">
-            <option value="是" selected>是</option>
-            <option value="否">否</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試 3：董事任命權</label>
-          <select id="f17" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">
-            <option value="是">是</option>
-            <option value="否" selected>否</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試 4：重大影響</label>
-          <select id="f18" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">
-            <option value="是">是</option>
-            <option value="否" selected>否</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試 5：信託影響</label>
-          <select id="f19" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">
-            <option value="是">是</option>
-            <option value="否" selected>否</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">測試對象 2 — 符合條件</label>
-          <input id="f20" type="text" value="測試 1 及測試 2" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-
-        <h3 class="font-semibold text-navy text-sm mt-4 pt-3 border-t border-gray-100">備註</h3>
-        <div>
-          <textarea id="f21" rows="3" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">冇特別備註</textarea>
-        </div>
-      </div>
-    </div>
-
-    <!-- Document Info + Common Mistakes -->
+    <!-- 文件說明 + 常見錯誤 -->
     <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
       <div class="flex items-start gap-3 mb-3">
         <span class="text-lg mt-0.5 shrink-0">📄</span>
@@ -239,8 +121,8 @@
           <p class="text-xs text-gray-500 mt-0.5">逐項測試嘅 checklist，記錄每位人士及法團嘅測試結果同符合條件</p>
         </div>
       </div>
-      <h2 class="font-semibold text-navy text-base mb-2 mt-4">⚠️ 常見錯誤</h2>
       <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
+        <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
         <ul class="text-xs text-gray-700 space-y-1.5">
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>只睇表面持股唔計間接持股</li>
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>冇處理關連人士合計持股</li>
@@ -249,14 +131,150 @@
       </div>
     </div>
 
-    <!-- Download + Back + Donate -->
-    <div class="space-y-3">
-      <button onclick="downloadWord()" id="downloadBtn"
-              class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm">
-        📄 下載 Word（已填好）
+    <!-- Template Modal -->
+    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4" onclick="closeTemplateModal(event)">
+      <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
+        
+        <div class="flex border-b border-gray-200">
+          <button id="tabRealdemo" onclick="switchModalTab('realdemo')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition">📄 真實範例</button>
+          <button id="tabTemplate" onclick="switchModalTab('template')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 模板</button>
+          <button onclick="closeTemplateModal()" class="px-4 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+        </div>
+
+        <div id="modalRealdemo" class="p-4">
+          <img src="/assets/demo/scr-step2.png" alt="真實範例" class="w-full border border-gray-200 rounded-lg"
+               onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 真實範例圖片（準備中）</div>'" />
+          <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
+        </div>
+
+        <div id="modalTemplate" class="p-4 hidden">
+          <img src="/assets/demo/scr-step2.png" alt="模板" class="w-full border border-gray-200 rounded-lg"
+               onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 可修改模板圖片（準備中）</div>'" />
+          <p class="text-xs text-gray-400 mt-2 text-center">空白可編輯模板格式</p>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+    function openTemplateModal(tab) {
+      document.getElementById('templateModal').classList.remove('hidden');
+      document.getElementById('templateModal').classList.add('flex');
+      if (tab && typeof switchModalTab === 'function') switchModalTab(tab);
+    }
+    function closeTemplateModal(e) {
+      if (!e || e.target === document.getElementById('templateModal')) {
+        document.getElementById('templateModal').classList.add('hidden');
+        document.getElementById('templateModal').classList.remove('flex');
+      }
+    }
+    function switchModalTab(tab) {
+      document.getElementById('modalRealdemo').classList.toggle('hidden', tab !== 'realdemo');
+      document.getElementById('modalTemplate').classList.toggle('hidden', tab !== 'template');
+      document.getElementById('tabRealdemo').classList.toggle('border-navy', tab === 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('border-transparent', tab !== 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('font-bold', tab === 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('font-semibold', tab !== 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('text-navy', tab === 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('text-gray-400', tab !== 'realdemo');
+      document.getElementById('tabTemplate').classList.toggle('border-navy', tab === 'template');
+      document.getElementById('tabTemplate').classList.toggle('border-transparent', tab !== 'template');
+      document.getElementById('tabTemplate').classList.toggle('font-bold', tab === 'template');
+      document.getElementById('tabTemplate').classList.toggle('font-semibold', tab !== 'template');
+      document.getElementById('tabTemplate').classList.toggle('text-navy', tab === 'template');
+      document.getElementById('tabTemplate').classList.toggle('text-gray-400', tab !== 'template');
+    }
+    </script>
+
+    <!-- PDF Form -->
+    <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px;">
+
+      <div class="bg-navy text-white py-3 px-6 text-center">
+        <div class="text-lg font-bold text-gold">IDENTIFICATION CHECKLIST</div>
+        <p class="text-xs text-gray-400">重要控制人識別檢查表</p>
+      </div>
+
+      <div class="p-6 sm:p-8">
+
+        <!-- Company Info -->
+        <div class="mb-6">
+          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">公司資料</h2>
+          <div class="field-row">
+            <span class="field-label">公司名稱</span>
+            <input type="text" id="f-company" value="ABC 貿易有限公司" class="field-input" />
+          </div>
+          <div class="field-row">
+            <span class="field-label">公司名稱（英文）</span>
+            <input type="text" id="f-company-en" value="ABC TRADING LIMITED" class="field-input" />
+          </div>
+          <div class="field-row">
+            <span class="field-label">公司註冊編號</span>
+            <input type="text" id="f-crno" value="12345678" class="field-input" />
+          </div>
+          <div class="field-row">
+            <span class="field-label">分析日期</span>
+            <input type="date" id="f-rdate" class="field-input field-date" />
+          </div>
+        </div>
+
+        <!-- Test Subjects -->
+        <div class="mb-6">
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1">測試對象</h2>
+            <button onclick="addSubject()" class="text-xs bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition font-semibold">+ 新增測試對象</button>
+          </div>
+          <div id="subjects-container"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PDF Template (hidden for capture) -->
+    <div id="pdf-content" style="position:absolute;left:-9999px;top:0;width:800px;background:white;padding:40px;font-family:'Noto Sans TC',sans-serif;font-size:13px;">
+      <div style="text-align:center;border-bottom:2px solid #1B2A4A;padding-bottom:10px;margin-bottom:20px;">
+        <div style="font-size:18px;font-weight:bold;color:#C9A84C;">IDENTIFICATION CHECKLIST</div>
+        <div style="font-size:12px;color:#666;">重要控制人識別檢查表</div>
+      </div>
+
+      <div style="margin-bottom:15px;">
+        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">公司資料</div>
+        <table style="width:100%;border-collapse:collapse;">
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司名稱</td><td style="padding:3px 5px;" id="pv-company">ABC 貿易有限公司</td></tr>
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司名稱（英文）</td><td style="padding:3px 5px;" id="pv-company-en">ABC TRADING LIMITED</td></tr>
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司註冊編號</td><td style="padding:3px 5px;" id="pv-crno">12345678</td></tr>
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">分析日期</td><td style="padding:3px 5px;" id="pv-rdate"></td></tr>
+        </table>
+      </div>
+
+      <div style="margin-bottom:15px;">
+        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">重要控制人識別測試結果</div>
+        <div id="pv-subjects">
+          <p style="color:#999;font-style:italic;">未有測試對象資料</p>
+        </div>
+      </div>
+
+      <div style="margin-top:20px;padding-top:10px;border-top:1px dashed #ccc;">
+        <div id="pv-notes" style="display:none;">
+          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">備註</div>
+          <p style="padding:5px 0;" id="pv-notes-text"></p>
+        </div>
+      </div>
+
+      <div style="margin-top:20px;padding-top:10px;border-top:1px solid #ddd;text-align:center;font-size:10px;color:#999;">
+        <p>本文件由 ESGov (https://esgov.org) 自動生成 • 僅供內部參考</p>
+        <p>⚠️ 建議覆核資料準確性後再用作正式文件</p>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="mt-6">
+      <button onclick="checkEmailGate()" id="genBtn" class="w-full bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm flex items-center justify-center gap-2">
+        📄 下載識別檢查表 PDF
       </button>
-      <a href="/significant-controllers-register?step=2"
-         class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+    </div>
+    <p id="status" class="text-center text-sm mt-3 hidden"></p>
+    <div class="text-center mt-4">
+      <a href="/significant-controllers-register?step=2" class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
         ← 返回重要控制人登記冊完整指南
       </a>
     </div>
@@ -266,191 +284,295 @@
         ☕ 請咖啡
       </a>
     </div>
-
-  </div>
-
-  <!-- ═════ Template Modal ═════ -->
-  <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print" onclick="closeTemplateModal(event)">
-    <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
-      <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
-        <h3 class="font-bold text-navy text-base" id="modalTitle">重要控制人識別檢查表</h3>
-        <button onclick="closeTemplateModal()" class="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
-      </div>
-      <div id="modalTabs" class="flex border-b border-gray-100">
-        <button onclick="switchModalTab('realdemo')" id="tab-realdemo" class="flex-1 py-3 text-sm font-semibold text-navy border-b-2 border-gold">📄 真實範例</button>
-        <button onclick="switchModalTab('template')" id="tab-template" class="flex-1 py-3 text-sm font-semibold text-gray-400 border-b-2 border-transparent">📄 模板</button>
-      </div>
-      <div class="p-4">
-        <div id="modalContent-realdemo">
-          <img src="/assets/demo/scr-step2.png" alt="真實範例" class="w-full border border-gray-200 rounded-lg" onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 範例圖片準備中</div>'" />
-          <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
-        </div>
-        <div id="modalContent-template" class="hidden">
-          <img src="/assets/demo/scr-step2-template.png" alt="模板" class="w-full border border-gray-200 rounded-lg" onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 範例圖片準備中</div>'" />
-          <p class="text-xs text-gray-400 mt-2 text-center">可修改文件模板</p>
-        </div>
-      </div>
-    </div>
   </div>
 
   <script>
-    function g(id) { return document.getElementById(id).value || ''; }
-    function gs(id) { return document.getElementById(id).value || '否'; }
-    function isSC(t1, t2, t3, t4, t5) { return t1 === '是' || t2 === '是' || t3 === '是' || t4 === '是' || t5 === '是'; }
+    // Subject management
+    let subjectCount = 0;
 
-    // Set today's date as default for date input
-    document.addEventListener('DOMContentLoaded', function() {
-      const dateInput = document.getElementById('f4');
-      if (dateInput && !dateInput.value) {
-        dateInput.value = new Date().toISOString().split('T')[0];
-      }
-    });
+    const subjectTypes = ['股東', '董事', '影子董事', '信託受託人', '法團股東', '其他'];
 
-    function downloadWord() {
-      const btn = document.getElementById('downloadBtn');
+    function addSubject(data) {
+      subjectCount++;
+      const idx = subjectCount;
+      const container = document.getElementById('subjects-container');
+      const div = document.createElement('div');
+      div.className = 'bg-amber-50/30 border border-gray-200 rounded-xl p-4 mb-4';
+      div.id = 'subj-' + idx;
+
+      const typeOpts = subjectTypes.map(t =>
+        '<option value="' + t + '"' + (data && data.type === t ? ' selected' : '') + '>' + t + '</option>'
+      ).join('');
+
+      div.innerHTML =
+        '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
+          '<span style="font-size:13px;font-weight:bold;color:#1B2A4A;">測試對象 #' + idx + '</span>' +
+          '<button onclick="removeSubject(' + idx + ')" style="font-size:11px;color:#c00;background:none;border:none;cursor:' + (idx === 1 ? 'default' : 'pointer') + ';' + (idx === 1 ? 'display:none' : '') + '">✕ 移除</button>' +
+        '</div>' +
+        '<div class="field-row"><span class="field-label">測試對象姓名/名稱</span><input type="text" id="subjname-' + idx + '" value="' + (data ? data.name : '') + '" class="field-input" /></div>' +
+        '<div class="field-row"><span class="field-label">對象類型</span><select id="subjtype-' + idx + '" class="field-select">' + typeOpts + '</select></div>' +
+        '<div class="field-row"><span class="field-label">測試 1：持股 >25%</span><select id="subjt1-' + idx + '" class="field-select"><option value="是"' + (data && data.t1 === '是' ? ' selected' : '') + '>是</option><option value="否"' + (data && data.t1 === '否' ? ' selected' : '') + '>否</option></select></div>' +
+        '<div class="field-row"><span class="field-label">測試 2：投票權 >25%</span><select id="subjt2-' + idx + '" class="field-select"><option value="是"' + (data && data.t2 === '是' ? ' selected' : '') + '>是</option><option value="否"' + (data && data.t2 === '否' ? ' selected' : '') + '>否</option></select></div>' +
+        '<div class="field-row"><span class="field-label">測試 3：董事任命權</span><select id="subjt3-' + idx + '" class="field-select"><option value="是"' + (data && data.t3 === '是' ? ' selected' : '') + '>是</option><option value="否"' + (data && data.t3 === '否' ? ' selected' : '') + '>否</option></select></div>' +
+        '<div class="field-row"><span class="field-label">測試 4：重大影響或控制</span><select id="subjt4-' + idx + '" class="field-select"><option value="是"' + (data && data.t4 === '是' ? ' selected' : '') + '>是</option><option value="否"' + (data && data.t4 === '否' ? ' selected' : '') + '>否</option></select></div>' +
+        '<div class="field-row"><span class="field-label">測試 5：對信託/商號影響</span><select id="subjt5-' + idx + '" class="field-select"><option value="是"' + (data && data.t5 === '是' ? ' selected' : '') + '>是</option><option value="否"' + (data && data.t5 === '否' ? ' selected' : '') + '>否</option></select></div>' +
+        '<div class="field-row"><span class="field-label">符合條件</span><input type="text" id="subjresult-' + idx + '" value="' + (data ? data.result : '') + '" class="field-input" placeholder="例如：測試 1 及測試 2" /></div>' +
+        '<div class="field-row"><span class="field-label">是否重要控制人</span><select id="subjsc-' + idx + '" class="field-select"><option value="是"' + (data && data.sc === '是' ? ' selected' : '') + '>是</option><option value="否"' + (data && data.sc === '否' ? ' selected' : '') + '>否</option><option value="待確認"' + (data && data.sc === '待確認' ? ' selected' : '') + '>待確認</option></select></div>' +
+        '<div class="field-row"><span class="field-label">備註</span><input type="text" id="subjnotes-' + idx + '" value="' + (data ? data.notes : '') + '" class="field-input" /></div>';
+      container.appendChild(div);
+    }
+
+    function removeSubject(idx) {
+      const el = document.getElementById('subj-' + idx);
+      if (el && subjectCount > 1) { el.remove(); renumberSubjects(); }
+    }
+
+    function renumberSubjects() {
+      const container = document.getElementById('subjects-container');
+      const rows = container.querySelectorAll('[id^="subj-"]');
+      rows.forEach((row, i) => {
+        const num = i + 1;
+        const title = row.querySelector('span:first-child');
+        if (title) {
+          const parts = title.textContent.split('#');
+          if (parts.length === 2) title.textContent = '測試對象 #' + num;
+        }
+        const rmBtn = row.querySelector('button');
+        if (rmBtn) rmBtn.style.display = num === 1 ? 'none' : '';
+      });
+    }
+
+    function getSubjectData() {
+      const container = document.getElementById('subjects-container');
+      const rows = container.querySelectorAll('[id^="subj-"]');
+      const subjects = [];
+      rows.forEach(row => {
+        const idMatch = row.id.match(/subj-(\d+)/);
+        if (!idMatch) return;
+        const idx = idMatch[1];
+        subjects.push({
+          num: subjects.length + 1,
+          name: document.getElementById('subjname-' + idx)?.value || '',
+          type: document.getElementById('subjtype-' + idx)?.value || '',
+          t1: document.getElementById('subjt1-' + idx)?.value || '否',
+          t2: document.getElementById('subjt2-' + idx)?.value || '否',
+          t3: document.getElementById('subjt3-' + idx)?.value || '否',
+          t4: document.getElementById('subjt4-' + idx)?.value || '否',
+          t5: document.getElementById('subjt5-' + idx)?.value || '否',
+          result: document.getElementById('subjresult-' + idx)?.value || '',
+          sc: document.getElementById('subjsc-' + idx)?.value || '待確認',
+          notes: document.getElementById('subjnotes-' + idx)?.value || ''
+        });
+      });
+      return subjects;
+    }
+
+    // Helper: test result icon
+    function tr(v) { return v === '是' ? '✅ 是' : '❌ 否'; }
+
+    // Set dates
+    function setDates() {
+      const d = new Date();
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      const dateStr = y + '-' + m + '-' + day;
+      document.querySelectorAll('.field-date').forEach(el => {
+        if (!el.value) el.value = dateStr;
+      });
+    }
+
+    // Init with one subject
+    addSubject({ name: '陳大明', type: '股東', t1: '是', t2: '是', t3: '否', t4: '否', t5: '否', result: '測試 1 及測試 2', sc: '是', notes: '' });
+    setDates();
+
+    // Email Gate
+    function checkEmailGate() {
+      const done = localStorage.getItem('esgov_email_done');
+      if (done) { generatePDF(); return; }
+      document.getElementById('emailGateModal').classList.remove('hidden');
+      document.getElementById('emailGateModal').classList.add('flex');
+    }
+
+    function submitDownloadEmail() {
+      const email = document.getElementById('downloadEmail').value.trim();
+      if (!email || !email.includes('@')) { alert('⚠️ 請輸入有效嘅電郵地址'); return; }
+      try {
+        var iframe = document.createElement('iframe');
+        iframe.name = 'fsframe'; iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        var f = document.createElement('form');
+        f.method = 'POST'; f.action = 'https://formsubmit.co/tbstbs0613@gmail.com';
+        f.target = 'fsframe'; f.style.display = 'none';
+        var fields = { email: email, page: 'scr-identification-checklist-generator', docType: 'Identification Checklist (重要控制人識別檢查表)', _subject: '📬 ESGov 新下載（識別檢查表）：' + email, _captcha: 'false', _template: 'table' };
+        for (var k in fields) { var inp = document.createElement('input'); inp.name = k; inp.value = fields[k]; f.appendChild(inp); }
+        document.body.appendChild(f); f.submit();
+        setTimeout(function(){ document.body.removeChild(f); document.body.removeChild(iframe); }, 1000);
+      } catch(e) {}
+      localStorage.setItem('esgov_email_done', 'true');
+      document.getElementById('emailGateModal').classList.add('hidden');
+      document.getElementById('emailGateModal').classList.remove('flex');
+      setTimeout(function(){ generatePDF(); }, 100);
+    }
+
+    function closeEmailGate() {
+      document.getElementById('emailGateModal').classList.add('hidden');
+      document.getElementById('emailGateModal').classList.remove('flex');
+    }
+
+    // PDF Generation
+    async function generatePDF() {
+      const btn = document.getElementById('genBtn');
+      const status = document.getElementById('status');
       btn.disabled = true;
       btn.innerHTML = '⏳ 生成中…';
+      status.className = 'text-center text-sm mt-3 text-blue-600';
+      status.textContent = '準備中…';
+      status.classList.remove('hidden');
 
-      const companyCN = g('f1') || '_____';
-      const companyEN = g('f2') || '_____';
-      const crNo = g('f3') || '_____';
-      const date = g('f4') || new Date().toISOString().split('T')[0];
+      try {
+        const { jsPDF } = window.jspdf;
+        await document.fonts.ready;
 
-      const s1Name = g('f5') || '_____';
-      const s1Role = g('f6') || '_____';
-      const s1t1 = gs('f7');
-      const s1t2 = gs('f8');
-      const s1t3 = gs('f9');
-      const s1t4 = gs('f10');
-      const s1t5 = gs('f11');
-      const s1Result = g('f12') || '—';
-      const s1SC = isSC(s1t1, s1t2, s1t3, s1t4, s1t5);
+        // Get form values
+        const company = document.getElementById('f-company').value.trim();
+        const companyEn = document.getElementById('f-company-en').value.trim();
+        const crno = document.getElementById('f-crno').value.trim();
+        const rdate = document.getElementById('f-rdate').value || new Date().toISOString().split('T')[0];
+        const subjects = getSubjectData();
 
-      const s2Name = g('f13') || '_____';
-      const s2Role = g('f14') || '_____';
-      const s2t1 = gs('f15');
-      const s2t2 = gs('f16');
-      const s2t3 = gs('f17');
-      const s2t4 = gs('f18');
-      const s2t5 = gs('f19');
-      const s2Result = g('f20') || '—';
-      const s2SC = isSC(s2t1, s2t2, s2t3, s2t4, s2t5);
+        // Get global notes from last subject or empty
+        let globalNotes = '';
+        if (subjects.length > 0) {
+          const lastSubject = subjects[subjects.length - 1];
+          if (lastSubject.notes) globalNotes = lastSubject.notes;
+        }
 
-      const notes = g('f21') || '無';
+        // Update hidden template
+        document.getElementById('pv-company').textContent = company || '—';
+        document.getElementById('pv-company-en').textContent = companyEn || '—';
+        document.getElementById('pv-crno').textContent = crno || '—';
+        document.getElementById('pv-rdate').textContent = rdate;
 
-      // Helper: test result icon
-      function tr(v) { return v === '是' ? '✅ 是' : '❌ 否'; }
+        // Build subjects table in hidden template
+        const pvContainer = document.getElementById('pv-subjects');
+        if (subjects.length === 0) {
+          pvContainer.innerHTML = '<p style="color:#999;font-style:italic;">未有測試對象資料</p>';
+        } else {
+          let table = '<table style="width:100%;border-collapse:collapse;font-size:11px;">';
+          table += '<thead><tr style="background:#1B2A4A;color:white;">';
+          table += '<th style="padding:4px;border:1px solid #ddd;">#</th>';
+          table += '<th style="padding:4px;border:1px solid #ddd;">姓名/名稱</th>';
+          table += '<th style="padding:4px;border:1px solid #ddd;">類型</th>';
+          table += '<th style="padding:4px;border:1px solid #ddd;">測試1<br/>持股>25%</th>';
+          table += '<th style="padding:4px;border:1px solid #ddd;">測試2<br/>投票權>25%</th>';
+          table += '<th style="padding:4px;border:1px solid #ddd;">測試3<br/>董事任命權</th>';
+          table += '<th style="padding:4px;border:1px solid #ddd;">測試4<br/>重大影響</th>';
+          table += '<th style="padding:4px;border:1px solid #ddd;">測試5<br/>信託影響</th>';
+          table += '<th style="padding:4px;border:1px solid #ddd;">符合條件</th>';
+          table += '<th style="padding:4px;border:1px solid #ddd;">識別結果</th>';
+          table += '<th style="padding:4px;border:1px solid #ddd;">備註</th>';
+          table += '</tr></thead><tbody>';
+          subjects.forEach((s, i) => {
+            const isSC = s.t1 === '是' || s.t2 === '是' || s.t3 === '是' || s.t4 === '是' || s.t5 === '是';
+            const bgColor = isSC ? '#fef2f2' : (i % 2 === 0 ? 'white' : '#f9f9f9');
+            table += '<tr style="background:' + bgColor + ';">';
+            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;font-weight:bold;">' + s.num + '</td>';
+            table += '<td style="padding:3px 4px;border:1px solid #ddd;">' + (s.name || '—') + '</td>';
+            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;">' + s.type + '</td>';
+            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;">' + tr(s.t1) + '</td>';
+            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;">' + tr(s.t2) + '</td>';
+            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;">' + tr(s.t3) + '</td>';
+            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;">' + tr(s.t4) + '</td>';
+            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;">' + tr(s.t5) + '</td>';
+            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;">' + (s.result || '—') + '</td>';
+            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;font-weight:bold;color:' + (isSC ? '#b91c1c' : '#666') + ';">' + s.sc + '</td>';
+            table += '<td style="padding:3px 4px;border:1px solid #ddd;text-align:center;font-size:10px;">' + (s.notes || '—') + '</td>';
+            table += '</tr>';
+          });
+          table += '</tbody></table>';
+          pvContainer.innerHTML = table;
+        }
 
-      const html = `<!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"><title>重要控制人識別檢查表 - ${companyCN}</title>
-<style>
-  body { font-family: 'Noto Sans TC', 'Arial', sans-serif; padding: 40px; max-width: 800px; margin: auto; color: #1B2A4A; }
-  h1 { font-size: 22px; text-align: center; border-bottom: 3px solid #1B2A4A; padding-bottom: 10px; margin-bottom: 25px; }
-  h2 { font-size: 16px; border-bottom: 1px solid #C9A84C; padding-bottom: 5px; margin-top: 25px; }
-  label { font-weight: 600; color: #1B2A4A; font-size: 13px; display: block; margin-top: 10px; }
-  .val { padding: 5px 10px; background: #fffbeb; border: 1px solid #ddd; border-radius: 4px; margin-top: 2px; font-size: 14px; }
-  table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-  th, td { border: 1px solid #1B2A4A; padding: 8px; text-align: center; font-size: 12px; }
-  th { background: #1B2A4A; color: white; }
-  .sc-row { background: #fef2f2; }
-  .sc-label { font-weight: bold; color: #b91c1c; }
-  .footer { margin-top: 30px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 11px; color: #888; text-align: center; }
-  .left { text-align: left; }
-</style>
-</head>
-<body>
-<h1>重要控制人識別檢查表</h1>
-<p style="text-align:right;font-size:12px;color:#666;">製表日期：${date}</p>
+        // Notes
+        if (globalNotes) {
+          document.getElementById('pv-notes').style.display = 'block';
+          document.getElementById('pv-notes-text').textContent = globalNotes;
+        } else {
+          document.getElementById('pv-notes').style.display = 'none';
+        }
 
-<h2>公司基本資料</h2>
-<table>
-  <tr><th style="width:180px;">項目</th><th>內容</th></tr>
-  <tr><td>公司名稱（中文）</td><td class="left">${companyCN}</td></tr>
-  <tr><td>公司名稱（英文）</td><td class="left">${companyEN}</td></tr>
-  <tr><td>公司註冊編號</td><td>${crNo}</td></tr>
-</table>
+        await new Promise(r => setTimeout(r, 200));
 
-<h2>重要控制人識別測試結果</h2>
-<table>
-  <tr>
-    <th rowspan="2">姓名</th>
-    <th rowspan="2">身份</th>
-    <th colspan="5">5 項測試</th>
-    <th rowspan="2">符合條件</th>
-    <th rowspan="2">識別結果</th>
-  </tr>
-  <tr>
-    <th>持股 >25%</th>
-    <th>投票權 >25%</th>
-    <th>董事任命權</th>
-    <th>重大影響</th>
-    <th>信託影響</th>
-  </tr>
-  <tr class="${s1SC ? 'sc-row' : ''}">
-    <td class="left">${s1Name}</td>
-    <td>${s1Role}</td>
-    <td>${tr(s1t1)}</td>
-    <td>${tr(s1t2)}</td>
-    <td>${tr(s1t3)}</td>
-    <td>${tr(s1t4)}</td>
-    <td>${tr(s1t5)}</td>
-    <td>${s1Result}</td>
-    <td class="sc-label">${s1SC ? '✅ 重要控制人' : '—'}</td>
-  </tr>
-  <tr class="${s2SC ? 'sc-row' : ''}">
-    <td class="left">${s2Name}</td>
-    <td>${s2Role}</td>
-    <td>${tr(s2t1)}</td>
-    <td>${tr(s2t2)}</td>
-    <td>${tr(s2t3)}</td>
-    <td>${tr(s2t4)}</td>
-    <td>${tr(s2t5)}</td>
-    <td>${s2Result}</td>
-    <td class="sc-label">${s2SC ? '✅ 重要控制人' : '—'}</td>
-  </tr>
-</table>
+        // Capture hidden template
+        const el = document.getElementById('pdf-content');
+        const canvas = await html2canvas(el, {
+          scale: 3,
+          useCORS: true,
+          backgroundColor: '#ffffff',
+          logging: false,
+          width: 800
+        });
 
-<h2>備註</h2>
-<div class="val">${notes.replace(/\n/g, '<br>')}</div>
+        // Generate PDF
+        const imgData = canvas.toDataURL('image/png');
+        const doc = new jsPDF('p', 'mm', 'a4');
+        const pageW = 210;
+        const imgRatio = canvas.height / canvas.width;
+        const imgH = pageW * imgRatio;
+        const pageH = 297;
 
-<div class="footer">
-  <p>本文件由 ESGov (https://esgov.org) 自動生成 • 僅供內部參考</p>
-  <p>⚠️ 建議覆核資料準確性後再用作正式文件</p>
-</div>
-</body></html>`;
+        if (imgH > pageH) {
+          doc.addImage(imgData, 'PNG', 0, 0, pageW * (pageH / imgH), pageH);
+        } else {
+          doc.addImage(imgData, 'PNG', 0, (pageH - imgH) / 2, pageW, imgH);
+        }
 
-      const blob = new Blob([html], { type: 'application/msword' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `重要控制人識別檢查表_${companyCN}.doc`;
-      a.click();
-      URL.revokeObjectURL(url);
+        // Watermark
+        doc.saveGraphicsState();
+        doc.setGState(new window.jspdf.GState({ opacity: 0.12 }));
+        doc.setTextColor(180, 180, 180);
+        doc.setFontSize(48);
+        doc.setFont('helvetica', 'bold');
+        doc.text('ESGov', 20, 60, { angle: -30 });
+        doc.text('ESGov', 80, 160, { angle: -30 });
+        doc.text('ESGov', 140, 260, { angle: -30 });
+        doc.restoreGraphicsState();
 
-      btn.disabled = false;
-      btn.innerHTML = '✅ 已下載！';
-      setTimeout(() => { btn.innerHTML = '📄 下載 Word（已填好）'; }, 2000);
-    }
+        doc.save('Identification_Checklist_Filled.pdf');
 
-    function openTemplateModal(tab) {
-      document.getElementById('templateModal').classList.remove('hidden');
-      document.getElementById('templateModal').classList.add('flex');
-      switchModalTab(tab);
-    }
-    function closeTemplateModal(e) {
-      if (!e || e.target === document.getElementById('templateModal')) {
-        document.getElementById('templateModal').classList.add('hidden');
-        document.getElementById('templateModal').classList.remove('flex');
+        btn.innerHTML = '✅ 已下載！';
+        status.className = 'text-center text-sm mt-3 text-green-600';
+        status.textContent = '✅ PDF 已儲存到你的電腦';
+        setTimeout(() => {
+          btn.innerHTML = '📄 下載識別檢查表 PDF';
+          btn.disabled = false;
+          status.classList.add('hidden');
+        }, 2500);
+
+      } catch(e) {
+        console.error('PDF generation error:', e);
+        btn.innerHTML = '📄 下載識別檢查表 PDF';
+        btn.disabled = false;
+        status.className = 'text-center text-sm mt-3 text-red-500';
+        status.textContent = '❌ 生成失敗: ' + e.message;
       }
     }
-    function switchModalTab(tab) {
-      document.getElementById('tab-realdemo').className = 'flex-1 py-3 text-sm font-semibold ' + (tab==='realdemo' ? 'text-navy border-b-2 border-gold' : 'text-gray-400 border-b-2 border-transparent');
-      document.getElementById('tab-template').className = 'flex-1 py-3 text-sm font-semibold ' + (tab==='template' ? 'text-navy border-b-2 border-gold' : 'text-gray-400 border-b-2 border-transparent');
-      document.getElementById('modalContent-realdemo').classList.toggle('hidden', tab !== 'realdemo');
-      document.getElementById('modalContent-template').classList.toggle('hidden', tab !== 'template');
-    }
   </script>
+
+  <!-- Email Gate Modal -->
+  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" onclick="event.stopPropagation()">
+      <div class="text-3xl mb-3">📬</div>
+      <h3 class="text-lg font-bold text-navy mb-2">下載前留低 email</h3>
+      <p class="text-sm text-gray-500 mb-5">正在為你準備 <strong>重要控制人識別檢查表</strong> 嘅 PDF<br />留低 email，我哋會話你知邊份文件準備好咗 😊</p>
+      <div class="flex flex-col gap-3">
+        <input type="email" id="downloadEmail" placeholder="your@email.com" class="border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        <button onclick="submitDownloadEmail()" class="bg-navy text-white font-semibold py-2.5 rounded-xl hover:bg-navy-light transition text-sm">📥 繼續下載 PDF</button>
+        <button onclick="closeEmailGate()" class="text-xs text-gray-400 hover:text-gray-600 transition">唔住，稍後先</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="gov-footer py-12">

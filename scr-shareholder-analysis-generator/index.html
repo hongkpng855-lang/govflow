@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ESGov | 股權結構分析表 Word 生成工具 — 填資料即出已填好 Word</title>
-  <meta name="description" content="香港公司 SCR 股權結構分析表 Word 生成工具。直接填公司名稱、股東資料、持股比例同投票權安排，系統自動分析潛在重要控制人並標記。一鍵下載已填好嘅股權結構分析表 Word 檔案，幫你整理股東結構同關連關係，為識別重要控制人做好準備。完全免費公開。" />
-  <meta property="og:title" content="ESGov | 股權結構分析表 Word 生成工具" />
-  <meta property="og:description" content="填公司股權資料，一鍵下載已填好 Word 檔案。完全免費。" />
+  <title>ESGov | 股權結構分析表 PDF 生成工具 — 一鍵生成已填好 PDF</title>
+  <meta name="description" content="香港公司 SCR 股權結構分析表 (Shareholding Structure Analysis) PDF 線上填寫工具。直接喺網頁填好公司股東資料、持股比例同投票權安排，系統自動分析潛在重要控制人並標記。一鍵生成已填好嘅股權結構分析表 PDF 檔案，幫你整理股東結構同關連關係，為識別重要控制人做好準備。完全免費公開。" />
+  <meta property="og:title" content="ESGov | 股權結構分析表 PDF 生成工具" />
+  <meta property="og:description" content="填公司股權資料，一鍵生成已填好嘅 PDF，完全免費。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
     tailwind.config = {
       theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
@@ -29,8 +31,8 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "股權結構分析表 Word 生成工具",
-    "description": "香港公司 SCR 股權結構分析表 Word 生成工具，填資料即出已填好 Word。完全免費。",
+    "name": "股權結構分析表 PDF 生成工具",
+    "description": "香港公司 SCR 股權結構分析表 PDF 線上填寫工具，填資料即出已填好 PDF。完全免費。",
     "url": "https://esgov.org/scr-shareholder-analysis-generator"
   }
   </script>
@@ -52,19 +54,27 @@
     },{
       "@type": "ListItem",
       "position": 3,
-      "name": "股權結構分析表 Word 生成工具",
+      "name": "股權結構分析表 PDF 生成工具",
       "item": "https://esgov.org/scr-shareholder-analysis-generator"
     }
   ]
 }
   </script>
+  <style>
+    .field-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .field-label { width: 180px; font-size: 13px; font-weight: 600; color: #1B2A4A; text-align: right; flex-shrink: 0; }
+    .field-input { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: #fffbeb; font-family: inherit; outline: none; transition: all 0.15s; }
+    .field-input:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); background: #fef3c7; }
+    .field-select { flex: 1; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: white; font-family: inherit; outline: none; }
+    .field-select:focus { border-color: #C9A84C; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); }
+  </style>
 </head>
 <body class="bg-gray-100 font-sans">
 
   <nav class="bg-navy text-white sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/significant-controllers-register?step=1" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← Step 1</a>
+      <a href="/significant-controllers-register?step=1" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回指南</a>
     </div>
   </nav>
 
@@ -72,28 +82,30 @@
 
     <!-- Trust Banner -->
     <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
-      📝 填好股東資料 → 㩒「下載 Word」→ 直接下載已填好嘅股權結構分析表
+      📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅股權結構分析表 PDF
     </div>
 
-    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">股權結構分析表 — Word 生成工具</h1>
+    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">股權結構分析表 — PDF 生成工具</h1>
 
-    <!-- Example Image Cards -->
+    <!-- 參考圖片兩幅 -->
     <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
+      <!-- 真實範例 -->
       <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
         <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
           <img src="/assets/demo/scr-step1.png" alt="股權結構分析表 真實範例"
                class="w-full h-full object-contain"
-               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 真實範例（準備中）</div>'" />
         </div>
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
           <span class="text-white text-xs font-bold drop-shadow-sm">真實範例</span>
         </div>
       </div>
+      <!-- 可修改文件 -->
       <div onclick="openTemplateModal('template')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
         <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
           <img src="/assets/demo/scr-step1-template.png" alt="股權結構分析表 模板"
                class="w-full h-full object-contain"
-               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 模板（準備中）</div>'" />
         </div>
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
           <span class="text-white text-xs font-bold drop-shadow-sm">可修改文件</span>
@@ -101,85 +113,17 @@
       </div>
     </div>
 
-    <!-- Form -->
-    <div class="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm mb-4">
-      <h2 class="font-semibold text-navy text-base mb-4">📋 填寫股權結構資料</h2>
-
-      <div class="space-y-3">
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">公司名稱（中文）</label>
-          <input id="f1" type="text" value="ABC 貿易有限公司" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">公司名稱（英文）</label>
-          <input id="f2" type="text" value="ABC TRADING LIMITED" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">公司註冊編號</label>
-          <input id="f3" type="text" value="12345678" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">分析日期</label>
-          <input id="f4" type="date" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-
-        <h3 class="font-semibold text-navy text-sm mt-4 pt-3 border-t border-gray-100">股東資料</h3>
-
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">股東 1 — 姓名</label>
-          <input id="f5" type="text" value="陳大明" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">股東 1 — 持股數量</label>
-          <input id="f6" type="text" value="7,500" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">股東 1 — 持股比例 (%)</label>
-          <input id="f7" type="text" value="75" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">股東 1 — 投票權比例 (%)</label>
-          <input id="f8" type="text" value="75" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-
-        <div class="pt-2">
-          <label class="block text-sm font-semibold text-navy mb-1">股東 2 — 姓名</label>
-          <input id="f9" type="text" value="李小美" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">股東 2 — 持股數量</label>
-          <input id="f10" type="text" value="2,500" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">股東 2 — 持股比例 (%)</label>
-          <input id="f11" type="text" value="25" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">股東 2 — 投票權比例 (%)</label>
-          <input id="f12" type="text" value="25" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-
-        <h3 class="font-semibold text-navy text-sm mt-4 pt-3 border-t border-gray-100">特別備註</h3>
-        <div>
-          <textarea id="f13" rows="3" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">• 陳大明係公司創辦人及董事
-• 陳大明同李小美冇關連關係
-• 冇 Nominee 持股
-• 冇信託結構</textarea>
-        </div>
-      </div>
-    </div>
-
-    <!-- Document Info + Common Mistakes -->
+    <!-- 文件說明 + 常見錯誤 -->
     <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
       <div class="flex items-start gap-3 mb-3">
         <span class="text-lg mt-0.5 shrink-0">📄</span>
         <div>
-          <p class="font-semibold text-navy text-sm">股權結構分析表</p>
+          <p class="font-semibold text-navy text-sm">股權結構分析表（Shareholding Structure Analysis）</p>
           <p class="text-xs text-gray-500 mt-0.5">幫你整理公司股東、持股比例同投票權結構，方便下一步識別重要控制人</p>
         </div>
       </div>
-      <h2 class="font-semibold text-navy text-base mb-2 mt-4">⚠️ 常見錯誤</h2>
       <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
+        <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
         <ul class="text-xs text-gray-700 space-y-1.5">
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>冇更新股東名冊就開始分析</li>
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>忽略關連人士合計持股</li>
@@ -189,14 +133,157 @@
       </div>
     </div>
 
-    <!-- Download + Back + Donate -->
-    <div class="space-y-3">
-      <button onclick="downloadWord()" id="downloadBtn"
-              class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm">
-        📄 下載 Word（已填好）
+    <!-- Template Modal -->
+    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4" onclick="closeTemplateModal(event)">
+      <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
+
+        <div class="flex border-b border-gray-200">
+          <button id="tabRealdemo" onclick="switchModalTab('realdemo')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition">📄 真實範例</button>
+          <button id="tabTemplate" onclick="switchModalTab('template')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 模板</button>
+          <button onclick="closeTemplateModal()" class="px-4 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+        </div>
+
+        <div id="modalRealdemo" class="p-4">
+          <img src="/assets/demo/scr-step1.png" alt="真實範例" class="w-full border border-gray-200 rounded-lg"
+               onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 真實範例圖片（準備中）</div>'" />
+          <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
+        </div>
+
+        <div id="modalTemplate" class="p-4 hidden">
+          <img src="/assets/demo/scr-step1-template.png" alt="模板" class="w-full border border-gray-200 rounded-lg"
+               onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 可修改模板圖片（準備中）</div>'" />
+          <p class="text-xs text-gray-400 mt-2 text-center">空白可編輯模板格式</p>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+    function openTemplateModal(tab) {
+      document.getElementById('templateModal').classList.remove('hidden');
+      document.getElementById('templateModal').classList.add('flex');
+      if (tab && typeof switchModalTab === 'function') switchModalTab(tab);
+    }
+    function closeTemplateModal(e) {
+      if (!e || e.target === document.getElementById('templateModal')) {
+        document.getElementById('templateModal').classList.add('hidden');
+        document.getElementById('templateModal').classList.remove('flex');
+      }
+    }
+    function switchModalTab(tab) {
+      document.getElementById('modalRealdemo').classList.toggle('hidden', tab !== 'realdemo');
+      document.getElementById('modalTemplate').classList.toggle('hidden', tab !== 'template');
+      document.getElementById('tabRealdemo').classList.toggle('border-navy', tab === 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('border-transparent', tab !== 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('font-bold', tab === 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('font-semibold', tab !== 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('text-navy', tab === 'realdemo');
+      document.getElementById('tabRealdemo').classList.toggle('text-gray-400', tab !== 'realdemo');
+      document.getElementById('tabTemplate').classList.toggle('border-navy', tab === 'template');
+      document.getElementById('tabTemplate').classList.toggle('border-transparent', tab !== 'template');
+      document.getElementById('tabTemplate').classList.toggle('font-bold', tab === 'template');
+      document.getElementById('tabTemplate').classList.toggle('font-semibold', tab !== 'template');
+      document.getElementById('tabTemplate').classList.toggle('text-navy', tab === 'template');
+      document.getElementById('tabTemplate').classList.toggle('text-gray-400', tab !== 'template');
+    }
+    </script>
+
+    <!-- PDF Form -->
+    <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px;">
+
+      <div class="bg-navy text-white py-3 px-6 text-center">
+        <div class="text-lg font-bold text-gold">SHAREHOLDING STRUCTURE ANALYSIS</div>
+        <p class="text-xs text-gray-400">股權結構分析表</p>
+      </div>
+
+      <div class="p-6 sm:p-8">
+
+        <!-- Company Info -->
+        <div class="mb-6">
+          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">公司資料</h2>
+          <div class="field-row">
+            <span class="field-label">公司名稱</span>
+            <input type="text" id="f-company" value="ABC 貿易有限公司" class="field-input" />
+          </div>
+          <div class="field-row">
+            <span class="field-label">公司註冊編號</span>
+            <input type="text" id="f-crno" value="12345678" class="field-input" />
+          </div>
+        </div>
+
+        <!-- Shareholders -->
+        <div class="mb-6">
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1">股東資料</h2>
+            <button onclick="addShareholder()" class="text-xs bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition font-semibold">+ 新增股東</button>
+          </div>
+          <div id="shareholders-container"></div>
+        </div>
+
+        <!-- Analysis Results -->
+        <div class="mb-6">
+          <h2 class="text-base font-bold text-navy border-b-2 border-navy pb-1 mb-4">分析結果</h2>
+          <div class="field-row">
+            <span class="field-label">初步判斷</span>
+            <select id="f-judgment" class="field-select">
+              <option value="">— 請選擇 —</option>
+              <option value="潛在重要控制人 (Potential PSC)">潛在重要控制人 (Potential PSC)</option>
+              <option value="非控制人">非控制人</option>
+              <option value="需進一步確認">需進一步確認</option>
+            </select>
+          </div>
+          <div class="field-row" style="align-items:flex-start;">
+            <span class="field-label" style="padding-top:8px;">備註</span>
+            <textarea id="f-remarks" rows="3" class="field-input" style="resize:vertical;">• 陳大明持有 75% 股份，超過 25% 門檻
+• 暫無發現關連關係
+• 冇 Nominee 持股
+• 冇信託結構</textarea>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PDF Template (hidden for capture) -->
+    <div id="pdf-content" style="position:absolute;left:-9999px;top:0;width:800px;background:white;padding:40px;font-family:'Noto Sans TC',sans-serif;font-size:13px;">
+      <div style="text-align:center;border-bottom:2px solid #1B2A4A;padding-bottom:10px;margin-bottom:20px;">
+        <div style="font-size:18px;font-weight:bold;color:#C9A84C;">SHAREHOLDING STRUCTURE ANALYSIS</div>
+        <div style="font-size:12px;color:#666;">股權結構分析表</div>
+      </div>
+
+      <div style="margin-bottom:15px;">
+        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">公司資料</div>
+        <table style="width:100%;border-collapse:collapse;">
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司名稱</td><td style="padding:3px 5px;" id="pv-company">ABC 貿易有限公司</td></tr>
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">公司註冊編號</td><td style="padding:3px 5px;" id="pv-crno">12345678</td></tr>
+        </table>
+      </div>
+
+      <div style="margin-bottom:15px;">
+        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">股東持股結構</div>
+        <div id="pv-shareholders">
+          <p style="color:#999;font-style:italic;">未有股東資料</p>
+        </div>
+      </div>
+
+      <div style="margin-bottom:15px;">
+        <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:8px;">分析結果</div>
+        <table style="width:100%;border-collapse:collapse;">
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">初步判斷</td><td style="padding:3px 5px;" id="pv-judgment">—</td></tr>
+          <tr><td style="width:150px;padding:3px 5px;font-weight:600;color:#555;">備註</td><td style="padding:3px 5px;" id="pv-remarks">—</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="mt-6">
+      <button onclick="checkEmailGate()" id="genBtn" class="w-full bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm flex items-center justify-center gap-2">
+        📄 下載股權結構分析表 PDF
       </button>
-      <a href="/significant-controllers-register?step=1"
-         class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+    </div>
+    <p id="status" class="text-center text-sm mt-3 hidden"></p>
+    <div class="text-center mt-4">
+      <a href="/significant-controllers-register?step=1" class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
         ← 返回重要控制人登記冊完整指南
       </a>
     </div>
@@ -206,153 +293,277 @@
         ☕ 請咖啡
       </a>
     </div>
-
   </div>
 
-  <!-- ═════ Template Modal ═════ -->
-  <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print" onclick="closeTemplateModal(event)">
-    <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
-      <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
-        <h3 class="font-bold text-navy text-base" id="modalTitle">股權結構分析表</h3>
-        <button onclick="closeTemplateModal()" class="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
-      </div>
-      <div id="modalTabs" class="flex border-b border-gray-100">
-        <button onclick="switchModalTab('realdemo')" id="tab-realdemo" class="flex-1 py-3 text-sm font-semibold text-navy border-b-2 border-gold">📄 真實範例</button>
-        <button onclick="switchModalTab('template')" id="tab-template" class="flex-1 py-3 text-sm font-semibold text-gray-400 border-b-2 border-transparent">📄 模板</button>
-      </div>
-      <div class="p-4">
-        <div id="modalContent-realdemo">
-          <img src="/assets/demo/scr-step1.png" alt="真實範例" class="w-full border border-gray-200 rounded-lg" onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 範例圖片準備中</div>'" />
-          <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
-        </div>
-        <div id="modalContent-template" class="hidden">
-          <img src="/assets/demo/scr-step1-template.png" alt="模板" class="w-full border border-gray-200 rounded-lg" onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 範例圖片準備中</div>'" />
-          <p class="text-xs text-gray-400 mt-2 text-center">可修改文件模板</p>
-        </div>
+  <script>
+    // Shareholder management
+    let shCount = 0;
+
+    const shareholderTypes = ['自然人 (Individual)', '法團 (Legal Entity)', '代名人 (Nominee)', '信託 (Trust)'];
+    const relationOptions = ['否', '是'];
+
+    function addShareholder(data) {
+      shCount++;
+      const idx = shCount;
+      const container = document.getElementById('shareholders-container');
+      const div = document.createElement('div');
+      div.className = 'bg-amber-50/30 border border-gray-200 rounded-xl p-4 mb-4';
+      div.id = 'sh-' + idx;
+
+      const typeOpts = shareholderTypes.map(t =>
+        '<option value="' + t + '"' + (data && data.type === t ? ' selected' : '') + '>' + t + '</option>'
+      ).join('');
+      const relOpts = relationOptions.map(t =>
+        '<option value="' + t + '"' + (data && data.relation === t ? ' selected' : '') + '>' + t + '</option>'
+      ).join('');
+
+      div.innerHTML =
+        '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
+          '<span style="font-size:13px;font-weight:bold;color:#1B2A4A;">股東 #' + idx + '</span>' +
+          '<button onclick="removeShareholder(' + idx + ')" style="font-size:11px;color:#c00;background:none;border:none;cursor:' + (idx === 1 ? 'default' : 'pointer') + ';' + (idx === 1 ? 'display:none' : '') + '">✕ 移除</button>' +
+        '</div>' +
+        '<div class="field-row"><span class="field-label">股東姓名/名稱</span><input type="text" id="sh-name-' + idx + '" value="' + (data ? data.name : '') + '" class="field-input" placeholder="例如：陳大明" /></div>' +
+        '<div class="field-row"><span class="field-label">股東類型</span><select id="sh-type-' + idx + '" class="field-select">' + typeOpts + '</select></div>' +
+        '<div class="field-row"><span class="field-label">持股比例 (%)</span><input type="text" id="sh-pct-' + idx + '" value="' + (data ? data.pct : '') + '" class="field-input" placeholder="例如：75" /></div>' +
+        '<div class="field-row"><span class="field-label">投票權比例 (%)</span><input type="text" id="sh-vote-' + idx + '" value="' + (data ? data.vote : '') + '" class="field-input" placeholder="例如：75" /></div>' +
+        '<div class="field-row"><span class="field-label">是否有關連關係</span><select id="sh-relation-' + idx + '" class="field-select">' + relOpts + '</select></div>' +
+        '<div class="field-row"><span class="field-label">關連人士名稱</span><input type="text" id="sh-relname-' + idx + '" value="' + (data ? data.relname : '') + '" class="field-input" placeholder="如適用" /></div>';
+      container.appendChild(div);
+    }
+
+    function removeShareholder(idx) {
+      const el = document.getElementById('sh-' + idx);
+      if (el && shCount > 1) { el.remove(); renumberShareholders(); }
+    }
+
+    function renumberShareholders() {
+      const container = document.getElementById('shareholders-container');
+      const rows = container.querySelectorAll('[id^="sh-"]');
+      rows.forEach((row, i) => {
+        const num = i + 1;
+        const title = row.querySelector('span:first-child');
+        if (title) {
+          const parts = title.textContent.split('#');
+          if (parts.length === 2) title.textContent = '股東 #' + num;
+        }
+        const rmBtn = row.querySelector('button');
+        if (rmBtn) rmBtn.style.display = num === 1 ? 'none' : '';
+      });
+    }
+
+    function getShareholderData() {
+      const container = document.getElementById('shareholders-container');
+      const rows = container.querySelectorAll('[id^="sh-"]');
+      const shareholders = [];
+      rows.forEach(row => {
+        const idMatch = row.id.match(/sh-(\d+)/);
+        if (!idMatch) return;
+        const idx = idMatch[1];
+        shareholders.push({
+          num: shareholders.length + 1,
+          name: document.getElementById('sh-name-' + idx)?.value || '',
+          type: document.getElementById('sh-type-' + idx)?.value || '',
+          pct: document.getElementById('sh-pct-' + idx)?.value || '',
+          vote: document.getElementById('sh-vote-' + idx)?.value || '',
+          relation: document.getElementById('sh-relation-' + idx)?.value || '否',
+          relname: document.getElementById('sh-relname-' + idx)?.value || ''
+        });
+      });
+      return shareholders;
+    }
+
+    // Init with first shareholder
+    addShareholder({
+      name: '陳大明',
+      type: '自然人 (Individual)',
+      pct: '75',
+      vote: '75',
+      relation: '否',
+      relname: ''
+    });
+
+    // Email Gate
+    function checkEmailGate() {
+      const done = localStorage.getItem('esgov_email_done');
+      if (done) { generatePDF(); return; }
+      document.getElementById('emailGateModal').classList.remove('hidden');
+      document.getElementById('emailGateModal').classList.add('flex');
+    }
+
+    function submitDownloadEmail() {
+      const email = document.getElementById('downloadEmail').value.trim();
+      if (!email || !email.includes('@')) { alert('⚠️ 請輸入有效嘅電郵地址'); return; }
+      try {
+        var iframe = document.createElement('iframe');
+        iframe.name = 'fsframe'; iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        var f = document.createElement('form');
+        f.method = 'POST'; f.action = 'https://formsubmit.co/tbstbs0613@gmail.com';
+        f.target = 'fsframe'; f.style.display = 'none';
+        var fields = { email: email, page: 'scr-shareholder-analysis-generator', docType: '股權結構分析表 (Shareholding Structure Analysis)', _subject: '📬 ESGov 新下載（股權結構分析表）：' + email, _captcha: 'false', _template: 'table' };
+        for (var k in fields) { var inp = document.createElement('input'); inp.name = k; inp.value = fields[k]; f.appendChild(inp); }
+        document.body.appendChild(f); f.submit();
+        setTimeout(function(){ document.body.removeChild(f); document.body.removeChild(iframe); }, 1000);
+      } catch(e) {}
+      localStorage.setItem('esgov_email_done', 'true');
+      document.getElementById('emailGateModal').classList.add('hidden');
+      document.getElementById('emailGateModal').classList.remove('flex');
+      setTimeout(function(){ generatePDF(); }, 100);
+    }
+
+    function closeEmailGate() {
+      document.getElementById('emailGateModal').classList.add('hidden');
+      document.getElementById('emailGateModal').classList.remove('flex');
+    }
+
+    // PDF Generation
+    async function generatePDF() {
+      const btn = document.getElementById('genBtn');
+      const status = document.getElementById('status');
+      btn.disabled = true;
+      btn.innerHTML = '⏳ 生成中…';
+      status.className = 'text-center text-sm mt-3 text-blue-600';
+      status.textContent = '準備中…';
+      status.classList.remove('hidden');
+
+      try {
+        const { jsPDF } = window.jspdf;
+        await document.fonts.ready;
+
+        // Get form values
+        const company = document.getElementById('f-company').value.trim();
+        const crno = document.getElementById('f-crno').value.trim();
+        const judgment = document.getElementById('f-judgment').value;
+        const remarks = document.getElementById('f-remarks').value.trim();
+        const shareholders = getShareholderData();
+
+        // Update hidden template
+        document.getElementById('pv-company').textContent = company || '—';
+        document.getElementById('pv-crno').textContent = crno || '—';
+        document.getElementById('pv-judgment').textContent = judgment || '—';
+        document.getElementById('pv-remarks').textContent = remarks || '—';
+
+        // Build shareholders table in hidden template
+        const pvContainer = document.getElementById('pv-shareholders');
+        if (shareholders.length === 0) {
+          pvContainer.innerHTML = '<p style="color:#999;font-style:italic;">未有股東資料</p>';
+        } else {
+          let table = '<table style="width:100%;border-collapse:collapse;font-size:12px;">';
+          table += '<thead><tr style="background:#1B2A4A;color:white;">';
+          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">#</th>';
+          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">姓名/名稱</th>';
+          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">類型</th>';
+          table += '<th style="padding:5px;border:1px solid #ddd;text-align:right;">持股%</th>';
+          table += '<th style="padding:5px;border:1px solid #ddd;text-align:right;">投票權%</th>';
+          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">關連關係</th>';
+          table += '<th style="padding:5px;border:1px solid #ddd;text-align:left;">關連人士</th>';
+          table += '</tr></thead><tbody>';
+          shareholders.forEach((s, i) => {
+            const isPSC = parseFloat(s.pct) > 25 || parseFloat(s.vote) > 25;
+            table += '<tr style="background:' + (i % 2 === 0 ? 'white' : '#f9f9f9') + ';">';
+            table += '<td style="padding:4px 5px;border:1px solid #ddd;text-align:center;font-weight:bold;">' + s.num + '</td>';
+            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + (s.name || '—') + '</td>';
+            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + s.type + '</td>';
+            table += '<td style="padding:4px 5px;border:1px solid #ddd;text-align:right;">' + (s.pct || '0') + '%</td>';
+            table += '<td style="padding:4px 5px;border:1px solid #ddd;text-align:right;">' + (s.vote || '0') + '%</td>';
+            table += '<td style="padding:4px 5px;border:1px solid #ddd;text-align:center;">' + s.relation + '</td>';
+            table += '<td style="padding:4px 5px;border:1px solid #ddd;">' + (s.relname || '—') + '</td>';
+            table += '</tr>';
+          });
+          table += '</tbody></table>';
+
+          // Add PSC analysis summary below table
+          table += '<div style="margin-top:10px;font-size:11px;color:#555;">';
+          shareholders.forEach(s => {
+            const pct = parseFloat(s.pct) || 0;
+            const vote = parseFloat(s.vote) || 0;
+            table += '<div style="padding:2px 5px;">• ' + (s.name || '—') + '：持股 ' + pct + '%，投票權 ' + vote + '% — ';
+            if (pct > 25 || vote > 25) {
+              table += '<span style="color:#b91c1c;font-weight:bold;">⚠ 潛在重要控制人</span>';
+            } else {
+              table += '<span style="color:#666;">非控制人</span>';
+            }
+            if (s.relation === '是' && s.relname) {
+              table += '（關連：' + s.relname + '）';
+            }
+            table += '</div>';
+          });
+          table += '</div>';
+
+          pvContainer.innerHTML = table;
+        }
+
+        await new Promise(r => setTimeout(r, 200));
+
+        // Capture hidden template
+        const el = document.getElementById('pdf-content');
+        const canvas = await html2canvas(el, {
+          scale: 3,
+          useCORS: true,
+          backgroundColor: '#ffffff',
+          logging: false,
+          width: 800
+        });
+
+        // Generate PDF
+        const imgData = canvas.toDataURL('image/png');
+        const doc = new jsPDF('p', 'mm', 'a4');
+        const pageW = 210;
+        const imgRatio = canvas.height / canvas.width;
+        const imgH = pageW * imgRatio;
+        const pageH = 297;
+
+        if (imgH > pageH) {
+          doc.addImage(imgData, 'PNG', 0, 0, pageW * (pageH / imgH), pageH);
+        } else {
+          doc.addImage(imgData, 'PNG', 0, (pageH - imgH) / 2, pageW, imgH);
+        }
+
+        // Watermark
+        doc.saveGraphicsState();
+        doc.setGState(new window.jspdf.GState({ opacity: 0.12 }));
+        doc.setTextColor(180, 180, 180);
+        doc.setFontSize(48);
+        doc.setFont('helvetica', 'bold');
+        doc.text('ESGov', 20, 60, { angle: -30 });
+        doc.text('ESGov', 80, 160, { angle: -30 });
+        doc.text('ESGov', 140, 260, { angle: -30 });
+        doc.restoreGraphicsState();
+
+        doc.save('股權結構分析表_Filled.pdf');
+
+        btn.innerHTML = '✅ 已下載！';
+        status.className = 'text-center text-sm mt-3 text-green-600';
+        status.textContent = '✅ PDF 已儲存到你的電腦';
+        setTimeout(() => {
+          btn.innerHTML = '📄 下載股權結構分析表 PDF';
+          btn.disabled = false;
+          status.classList.add('hidden');
+        }, 2500);
+
+      } catch(e) {
+        console.error('PDF generation error:', e);
+        btn.innerHTML = '📄 下載股權結構分析表 PDF';
+        btn.disabled = false;
+        status.className = 'text-center text-sm mt-3 text-red-500';
+        status.textContent = '❌ 生成失敗: ' + e.message;
+      }
+    }
+  </script>
+
+  <!-- Email Gate Modal -->
+  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" onclick="event.stopPropagation()">
+      <div class="text-3xl mb-3">📬</div>
+      <h3 class="text-lg font-bold text-navy mb-2">下載前留低 email</h3>
+      <p class="text-sm text-gray-500 mb-5">正在為你準備 <strong>股權結構分析表</strong> 嘅 PDF<br />留低 email，我哋會話你知邊份文件準備好咗 😊</p>
+      <div class="flex flex-col gap-3">
+        <input type="email" id="downloadEmail" placeholder="your@email.com" class="border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+        <button onclick="submitDownloadEmail()" class="bg-navy text-white font-semibold py-2.5 rounded-xl hover:bg-navy-light transition text-sm">📥 繼續下載 PDF</button>
+        <button onclick="closeEmailGate()" class="text-xs text-gray-400 hover:text-gray-600 transition">唔住，稍後先</button>
       </div>
     </div>
   </div>
-
-  <script>
-    function openTemplateModal(tab) {
-      document.getElementById('templateModal').classList.remove('hidden');
-      document.getElementById('templateModal').classList.add('flex');
-      switchModalTab(tab);
-    }
-    function closeTemplateModal(e) {
-      if (!e || e.target === document.getElementById('templateModal')) {
-        document.getElementById('templateModal').classList.add('hidden');
-        document.getElementById('templateModal').classList.remove('flex');
-      }
-    }
-    function switchModalTab(tab) {
-      document.getElementById('tab-realdemo').className = 'flex-1 py-3 text-sm font-semibold ' + (tab==='realdemo' ? 'text-navy border-b-2 border-gold' : 'text-gray-400 border-b-2 border-transparent');
-      document.getElementById('tab-template').className = 'flex-1 py-3 text-sm font-semibold ' + (tab==='template' ? 'text-navy border-b-2 border-gold' : 'text-gray-400 border-b-2 border-transparent');
-      document.getElementById('modalContent-realdemo').classList.toggle('hidden', tab !== 'realdemo');
-      document.getElementById('modalContent-template').classList.toggle('hidden', tab !== 'template');
-    }
-  </script>
-
-  <script>
-    function g(id) { return document.getElementById(id).value || ''; }
-    function downloadWord() {
-      const btn = document.getElementById('downloadBtn');
-      btn.disabled = true;
-      btn.innerHTML = '⏳ 生成中…';
-
-      const companyCN = g('f1') || '_____';
-      const companyEN = g('f2') || '_____';
-      const crNo = g('f3') || '_____';
-      const date = g('f4') || new Date().toISOString().split('T')[0];
-      const s1Name = g('f5') || '_____';
-      const s1Shares = g('f6') || '_____';
-      const s1Pct = g('f7') || '_____';
-      const s1Vote = g('f8') || '_____';
-      const s2Name = g('f9') || '_____';
-      const s2Shares = g('f10') || '_____';
-      const s2Pct = g('f11') || '_____';
-      const s2Vote = g('f12') || '_____';
-      const notes = g('f13') || '無';
-
-      const totalShares = (parseInt(s1Shares.replace(/,/g,'')) || 0) + (parseInt(s2Shares.replace(/,/g,'')) || 0);
-
-      const html = `<!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"><title>股權結構分析表 - ${companyCN}</title>
-<style>
-  body { font-family: 'Noto Sans TC', 'Arial', sans-serif; padding: 40px; max-width: 750px; margin: auto; color: #1B2A4A; }
-  h1 { font-size: 22px; text-align: center; border-bottom: 3px solid #1B2A4A; padding-bottom: 10px; margin-bottom: 25px; }
-  h2 { font-size: 16px; border-bottom: 1px solid #C9A84C; padding-bottom: 5px; margin-top: 25px; }
-  label { font-weight: 600; color: #1B2A4A; font-size: 13px; display: block; margin-top: 10px; }
-  .val { padding: 5px 10px; background: #fffbeb; border: 1px solid #ddd; border-radius: 4px; margin-top: 2px; font-size: 14px; }
-  table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-  th, td { border: 1px solid #1B2A4A; padding: 8px; text-align: left; font-size: 13px; }
-  th { background: #1B2A4A; color: white; }
-  .footer { margin-top: 30px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 11px; color: #888; text-align: center; }
-  .total { font-weight: bold; margin-top: 10px; text-align: right; }
-</style>
-</head>
-<body>
-<h1>股權結構分析表</h1>
-<p style="text-align:right;font-size:12px;color:#666;">製表日期：${date}</p>
-
-<h2>公司基本資料</h2>
-<table>
-  <tr><th style="width:180px;">項目</th><th>內容</th></tr>
-  <tr><td>公司名稱（中文）</td><td>${companyCN}</td></tr>
-  <tr><td>公司名稱（英文）</td><td>${companyEN}</td></tr>
-  <tr><td>公司註冊編號</td><td>${crNo}</td></tr>
-</table>
-
-<h2>股東持股結構</h2>
-<table>
-  <tr><th>股東姓名</th><th>持股數量</th><th>持股比例</th><th>投票權比例</th></tr>
-  <tr><td>${s1Name}</td><td style="text-align:right;">${s1Shares}</td><td style="text-align:right;">${s1Pct}%</td><td style="text-align:right;">${s1Vote}%</td></tr>
-  <tr><td>${s2Name}</td><td style="text-align:right;">${s2Shares}</td><td style="text-align:right;">${s2Pct}%</td><td style="text-align:right;">${s2Vote}%</td></tr>
-</table>
-<p class="total">總股份：${totalShares.toLocaleString()} 股</p>
-
-<h2>潛在重要控制人分析</h2>
-<table>
-  <tr><th>股東</th><th>持股 >25%</th><th>投票權 >25%</th><th>董事任命權</th><th>結果</th></tr>
-  <tr>
-    <td>${s1Name}</td>
-    <td>${parseFloat(s1Pct) > 25 ? '✅ 是' : '❌ 否'}</td>
-    <td>${parseFloat(s1Vote) > 25 ? '✅ 是' : '❌ 否'}</td>
-    <td>—</td>
-    <td style="font-weight:bold;color:${parseFloat(s1Pct) > 25 ? '#b91c1c' : '#666'};">${parseFloat(s1Pct) > 25 ? '潛在重要控制人' : '—'}</td>
-  </tr>
-  <tr>
-    <td>${s2Name}</td>
-    <td>${parseFloat(s2Pct) > 25 ? '✅ 是' : '❌ 否'}</td>
-    <td>${parseFloat(s2Vote) > 25 ? '✅ 是' : '❌ 否'}</td>
-    <td>—</td>
-    <td style="font-weight:bold;color:${parseFloat(s2Pct) > 25 ? '#b91c1c' : '#666'};">${parseFloat(s2Pct) > 25 ? '潛在重要控制人' : '—'}</td>
-  </tr>
-</table>
-
-<h2>特別備註</h2>
-<div class="val">${notes.replace(/\n/g, '<br>')}</div>
-
-<div class="footer">
-  <p>本文件由 ESGov (https://esgov.org) 自動生成 • 僅供內部參考</p>
-  <p>⚠️ 建議覆核資料準確性後再用作正式文件</p>
-</div>
-</body></html>`;
-
-      const blob = new Blob([html], { type: 'application/msword' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `股權結構分析表_${companyCN}.doc`;
-      a.click();
-      URL.revokeObjectURL(url);
-
-      btn.disabled = false;
-      btn.innerHTML = '✅ 已下載！';
-      setTimeout(() => { btn.innerHTML = '📄 下載 Word（已填好）'; }, 2000);
-    }
-  </script>
 
   <!-- Footer -->
   <footer class="gov-footer py-12">
@@ -370,7 +581,6 @@
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
         <p>© 2026 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v10.7</p>
       </div>
     </div>
   </footer>

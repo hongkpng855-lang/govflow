@@ -44,13 +44,13 @@
       "rejectionRisks": [
         "股權結構唔清晰 = 容易漏咗真正嘅重要控制人"
       ],
-      "mode": "B",
+      "mode": "A",
       "needsGenerator": true,
       "needsGuideContent": true,
       "crossStepDeps": "None - first step",
-      "generatorType": "Word Template Generator",
+      "generatorType": "Interactive PDF Generator",
       "generatorUrl": "/scr-shareholder-analysis-generator",
-      "generatorDescription": "Word template generator — 填股東資料 → 下載已填好嘅股權結構分析表 Word 檔案"
+      "generatorDescription": "Interactive PDF Generator — 填股東資料 → 一鍵生成已填好嘅股權結構分析表 PDF"
     },
     {
       "stepNumber": 2,
@@ -89,13 +89,13 @@
       "rejectionRisks": [
         "漏咗真正嘅重要控制人 = 違反公司條例，可被罰款高達 HK$25,000 + 每日罰款"
       ],
-      "mode": "B",
+      "mode": "A",
       "needsGenerator": true,
       "needsGuideContent": true,
       "crossStepDeps": "Step 1 (equity structure analysis needed for identification)",
-      "generatorType": "Word Template Generator",
+      "generatorType": "Interactive PDF Generator",
       "generatorUrl": "/scr-identification-checklist-generator",
-      "generatorDescription": "Word template generator — 填測試結果 → 下載已填好嘅重要控制人識別檢查表 Word 檔案"
+      "generatorDescription": "Interactive PDF Generator — 填測試結果 → 一鍵生成已填好嘅重要控制人識別檢查表 PDF"
     },
     {
       "stepNumber": 3,
@@ -123,13 +123,13 @@
         "冇發出書面通知 = 違反公司條例，可被罰款 HK$25,000",
         "冇保留通知記錄 = CR 查冊時無法證明已履行通知義務"
       ],
-      "mode": "B",
+      "mode": "A",
       "needsGenerator": true,
       "needsGuideContent": true,
       "crossStepDeps": "Step 2 (need to identify controllers before notifying them)",
-      "generatorType": "Word Template Generator",
+      "generatorType": "Interactive PDF Generator",
       "generatorUrl": "/scr-notice-generator",
-      "generatorDescription": "Word template generator — 填通知書資料 → 下載已填好嘅書面通知書 Word 檔案"
+      "generatorDescription": "Interactive PDF Generator — 填通知書資料 → 一鍵生成已填好嘅書面通知書 PDF"
     },
     {
       "stepNumber": 4,
@@ -155,13 +155,13 @@
       "rejectionRisks": [
         "資料唔齊全 = 執法人員查冊時發現資料唔完整，要求解釋"
       ],
-      "mode": "B",
+      "mode": "A",
       "needsGenerator": true,
       "needsGuideContent": true,
       "crossStepDeps": "Step 3 (need to confirm controllers before collecting data)",
-      "generatorType": "Word Template Generator",
+      "generatorType": "Interactive PDF Generator",
       "generatorUrl": "/scr-data-collection-generator",
-      "generatorDescription": "Word template generator — 填控制人資料 → 下載已填好嘅資料收集表 Word 檔案"
+      "generatorDescription": "Interactive PDF Generator — 填控制人資料 → 一鍵生成已填好嘅資料收集表 PDF"
     },
     {
       "stepNumber": 5,
@@ -189,13 +189,13 @@
         "冇指定代表 = 違反公司條例，可被罰款 HK$25,000",
         "指定代表未能 1 小時內提供 SCR = 最高 HK$25,000 罰款（12% 被查企業中招）"
       ],
-      "mode": "B",
+      "mode": "A",
       "needsGenerator": true,
       "needsGuideContent": true,
       "crossStepDeps": "Steps 1-4 (need to understand company structure before appointing rep)",
-      "generatorType": "Word Template Generator",
+      "generatorType": "Interactive PDF Generator",
       "generatorUrl": "/scr-designated-rep-generator",
-      "generatorDescription": "Word template generator — 填委任資料 → 下載已填好嘅董事會決議 + 同意書 Word 檔案"
+      "generatorDescription": "Interactive PDF Generator — 填委任資料 → 一鍵生成已填好嘅董事會決議 + 同意書 PDF"
     },
     {
       "stepNumber": 6,
@@ -247,18 +247,15 @@
       "documents": [
         {
           "name": "指明地點通知書（Form NR2）— 條件性文件",
-          "description": "⚠️ 只有當 SCR 存放喺公司註冊辦事處以外嘅地址先需要。如需提交，必須喺 15 日內完成。放喺註冊辦事處嘅公司唔使",
+          "description": "⚠️ 只有當 SCR 存放喺公司註冊辦事處以外嘅地址先需要。放喺註冊辦事處嘅公司唔使。可喺公司註冊處官網下載正式表格",
           "demoImage": "/assets/demo/scr-step7.png",
           "templateFile": "/templates/scr-location-notice.docx",
-          "hasGenerator": true,
+          "hasGenerator": false,
           "commonMistakes": [
             "放喺註冊辦事處都照交 NR2（唔需要）",
             "放喺第二度但唔記得交 NR2",
-            "更改存放地址後冇喺 15 日內更新 NR2",
-            "以為 SCR 係一次性文件，之後唔使 update",
-            "冇保留歷史記錄至少 6 年"
-          ],
-          "generatorUrl": "/scr-nr2-generator"
+            "更改存放地址後冇喺 15 日內更新 NR2"
+          ]
         },
         {
           "name": "CR 指引 Annex G：指明地點通知書（Form NR2）範本",
@@ -273,12 +270,9 @@
         "冇及時更新 = 股權變動 7 日內未改，銀行 KYC 觸發警報"
       ],
       "mode": "B",
-      "needsGenerator": true,
+      "needsGenerator": false,
       "needsGuideContent": true,
-      "crossStepDeps": "Step 6 (need completed register before filing NR2)",
-      "generatorType": "Word Template Generator",
-      "generatorUrl": "/scr-nr2-generator",
-      "generatorDescription": "Word template generator — 填存放地址資料 → 下載已填好嘅 Form NR2 指明地點通知書 Word 檔案"
+      "crossStepDeps": "Step 6 (need completed register before filing NR2)"
     }
   ],
   "finalDonate": {

@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ESGov | Form NR2 指明地點通知書 Word 生成工具</title>
-  <meta name="description" content="香港公司 Form NR2 指明地點通知書 Word 生成工具。如果 SCR 存放喺公司註冊辦事處以外嘅香港地址，需要 15 日內向公司註冊處提交此通知。直接填好存放地址資料同授權人簽署，一鍵下載已填好嘅 Form NR2 Word 檔案。完全免費。" />
-  <meta property="og:title" content="ESGov | Form NR2 指明地點通知書 Word 生成工具" />
-  <meta property="og:description" content="填存放地址資料，一鍵下載已填好 Form NR2 通知書 Word 檔案。完全免費。" />
+  <title>ESGov | Form NR2 指明地點通知書 — 範例檢視</title>
+  <meta name="description" content="香港公司 Form NR2 指明地點通知書官方範例。NR2 只係當 SCR 存放喺註冊辦事處以外嘅香港地址先需要提交。附 CR Annex G 官方表格範本同常見錯誤說明。免費公開。" />
+  <meta property="og:title" content="ESGov | Form NR2 指明地點通知書 — 範例檢視" />
+  <meta property="og:description" content="公司註冊處 Form NR2 官方範例 + 常見錯誤說明。免費公開。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -29,8 +29,8 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Form NR2 指明地點通知書 Word 生成工具",
-    "description": "香港公司 Form NR2 通知書 Word 生成工具，填資料即出已填好 Word。完全免費。",
+    "name": "Form NR2 指明地點通知書 — 範例檢視",
+    "description": "香港公司 Form NR2 指明地點通知書官方範例。附 CR Annex G 官方表格範本。免費公開。",
     "url": "https://esgov.org/scr-nr2-generator"
   }
   </script>
@@ -52,7 +52,7 @@
     },{
       "@type": "ListItem",
       "position": 3,
-      "name": "Form NR2 指明地點通知書 Word 生成工具",
+      "name": "Form NR2 指明地點通知書 — 範例檢視",
       "item": "https://esgov.org/scr-nr2-generator"
     }
   ]
@@ -64,118 +64,30 @@
   <nav class="bg-navy text-white sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/significant-controllers-register?step=5" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← Step 5</a>
+      <a href="/significant-controllers-register?step=7" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← Step 7</a>
     </div>
   </nav>
 
   <div class="max-w-4xl mx-auto px-4 py-6">
 
-    <!-- Trust Banner -->
+    <!-- Info Banner -->
     <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
-      📝 填好存放地址資料 → 㩒「下載 Word」→ 直接下載已填好嘅 Form NR2 通知書
+      📌 呢份係公司註冊處嘅官方表格範例。NR2 只係當 SCR 存放喺註冊辦事處以外嘅地方先需要提交。
     </div>
 
-    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">指明地點通知書 (Form NR2) — Word 生成工具</h1>
+    <!-- Page Title -->
+    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">Form NR2 指明地點通知書 — 範例檢視</h1>
 
-    <!-- Example Image Cards -->
-    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
-      <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-          <img src="/assets/demo/scr-step5.png" alt="指明地點通知書 真實範例"
-               class="w-full h-full object-contain"
-               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
+    <!-- Demo Image (clickable) -->
+    <div class="mb-4 max-w-lg mx-auto">
+      <div onclick="openLightbox()" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/cr_annex_g_p1.png" alt="CR Annex G — Form NR2 指明地點通知書範例"
+               class="w-full object-contain max-h-[500px]"
+               onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 範例圖片準備中</div>'" />
         </div>
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-          <span class="text-white text-xs font-bold drop-shadow-sm">真實範例</span>
-        </div>
-      </div>
-      <div onclick="openTemplateModal('template')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-          <img src="/assets/demo/scr-step5-template.png" alt="指明地點通知書 模板"
-               class="w-full h-full object-contain"
-               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️</div>'" />
-        </div>
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-          <span class="text-white text-xs font-bold drop-shadow-sm">可修改文件</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Form -->
-    <div class="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm mb-4">
-      <h2 class="font-semibold text-navy text-base mb-4">📋 填寫指明地點通知書資料</h2>
-
-      <div class="space-y-3">
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">公司名稱（中文）</label>
-          <input id="f1" type="text" value="ABC 貿易有限公司" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">公司名稱（英文）</label>
-          <input id="f2" type="text" value="ABC TRADING LIMITED" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">公司註冊編號</label>
-          <input id="f3" type="text" value="12345678" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">通知日期</label>
-          <input id="f4" type="date" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-
-        <h3 class="font-semibold text-navy text-sm mt-4 pt-3 border-t border-gray-100">原本 SCR 存放位置</h3>
-
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">選項</label>
-          <select id="f5" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">
-            <option value="公司註冊辦事處">公司註冊辦事處</option>
-            <option value="其他指明地址">其他指明地址</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">原本地址</label>
-          <input id="f6" type="text" value="香港灣仔告士打道100號20樓" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-
-        <h3 class="font-semibold text-navy text-sm mt-4 pt-3 border-t border-gray-100">新 SCR 存放位置</h3>
-
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">新存放地址</label>
-          <input id="f7" type="text" value="香港九龍觀塘海濱道123號9樓" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">生效日期</label>
-          <input id="f8" type="date" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-
-        <h3 class="font-semibold text-navy text-sm mt-4 pt-3 border-t border-gray-100">公司授權人簽署</h3>
-
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">授權人姓名</label>
-          <input id="f9" type="text" value="陳大明" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">職位</label>
-          <select id="f10" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">
-            <option value="董事">董事</option>
-            <option value="公司秘書">公司秘書</option>
-            <option value="其他">其他</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">簽署日期</label>
-          <input id="f11" type="date" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        </div>
-
-        <h3 class="font-semibold text-navy text-sm mt-4 pt-3 border-t border-gray-100">提交公司註冊處</h3>
-
-        <div>
-          <label class="block text-sm font-semibold text-navy mb-1">提交方式</label>
-          <select id="f12" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-amber-50 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold">
-            <option value="郵寄">郵寄</option>
-            <option value="親身提交">親身提交</option>
-            <option value="網上提交">網上提交</option>
-          </select>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+          <span class="text-white text-xs font-bold drop-shadow-sm flex items-center gap-1">🔍 按此放大檢視</span>
         </div>
       </div>
     </div>
@@ -185,28 +97,27 @@
       <div class="flex items-start gap-3 mb-3">
         <span class="text-lg mt-0.5 shrink-0">📄</span>
         <div>
-          <p class="font-semibold text-navy text-sm">指明地點通知書（Form NR2）</p>
-          <p class="text-xs text-gray-500 mt-0.5">如果 SCR 存放喺公司註冊辦事處以外嘅地址，需要 15 日內提交此通知</p>
+          <p class="font-semibold text-navy text-sm">指明地點通知書（Form NR2）— CR 指引 Annex G 範本</p>
+          <p class="text-xs text-gray-500 mt-0.5">NR2 係指明地點通知書，當 SCR 備存於公司註冊辦事處以外嘅香港地址時，需 15 日內提交</p>
         </div>
       </div>
       <h2 class="font-semibold text-navy text-base mb-2 mt-4">⚠️ 常見錯誤</h2>
       <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
         <ul class="text-xs text-gray-700 space-y-1.5">
-          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>唔記得通知 CR 個地址</li>
-          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>以為 SCR 係一次性文件</li>
-          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>冇保留歷史記錄至少 6 年</li>
-          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>冇指定代表</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>放喺註冊辦事處都照交 NR2（唔需要）</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>放喺第二度但唔記得交 NR2</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>更改存放地址後冇喺 15 日內更新 NR2</li>
         </ul>
       </div>
     </div>
 
-    <!-- Download + Back + Donate -->
+    <!-- Download + Return + Donate -->
     <div class="space-y-3">
-      <button onclick="downloadWord()" id="downloadBtn"
-              class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm">
-        📄 下載 Word（已填好）
-      </button>
-      <a href="/significant-controllers-register?step=5"
+      <a href="https://www.cr.gov.hk/en/forms/docs/nr2.pdf" target="_blank"
+         class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm">
+        📄 下載官方 Form NR2（PDF）
+      </a>
+      <a href="/significant-controllers-register?step=7"
          class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
         ← 返回重要控制人登記冊完整指南
       </a>
@@ -220,178 +131,41 @@
 
   </div>
 
-  <!-- ═════ Template Modal ═════ -->
-  <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 no-print" onclick="closeTemplateModal(event)">
-    <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
-      <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
-        <h3 class="font-bold text-navy text-base" id="modalTitle">指明地點通知書（Form NR2）</h3>
-        <button onclick="closeTemplateModal()" class="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
-      </div>
-      <div id="modalTabs" class="flex border-b border-gray-100">
-        <button onclick="switchModalTab('realdemo')" id="tab-realdemo" class="flex-1 py-3 text-sm font-semibold text-navy border-b-2 border-gold">📄 真實範例</button>
-        <button onclick="switchModalTab('template')" id="tab-template" class="flex-1 py-3 text-sm font-semibold text-gray-400 border-b-2 border-transparent">📄 模板</button>
+  <!-- ═════ Lightbox Modal ═════ -->
+  <div id="lightboxModal" class="fixed inset-0 bg-black/70 z-50 hidden items-center justify-center p-4 no-print" onclick="closeLightbox(event)">
+    <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100 sticky top-0 bg-white z-10">
+        <h3 class="font-bold text-navy text-base">CR Annex G — Form NR2 指明地點通知書範本</h3>
+        <button onclick="closeLightbox()" class="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
       </div>
       <div class="p-4">
-        <div id="modalContent-realdemo">
-          <img src="/assets/demo/scr-step5.png" alt="真實範例" class="w-full border border-gray-200 rounded-lg" onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 範例圖片準備中</div>'" />
-          <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
-        </div>
-        <div id="modalContent-template" class="hidden">
-          <img src="/assets/demo/scr-step5-template.png" alt="模板" class="w-full border border-gray-200 rounded-lg" onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 範例圖片準備中</div>'" />
-          <p class="text-xs text-gray-400 mt-2 text-center">可修改文件模板</p>
-        </div>
+        <img src="/assets/demo/cr_annex_g_p1.png" alt="CR Annex G — Form NR2 指明地點通知書範例" class="w-full border border-gray-200 rounded-lg" />
+        <p class="text-xs text-gray-400 mt-2 text-center">公司註冊處 CR 指引 Annex G — 指明地點通知書（Form NR2）範本</p>
       </div>
     </div>
   </div>
 
   <script>
-    function openTemplateModal(tab) {
-      document.getElementById('templateModal').classList.remove('hidden');
-      document.getElementById('templateModal').classList.add('flex');
-      switchModalTab(tab);
+    function openLightbox() {
+      document.getElementById('lightboxModal').classList.remove('hidden');
+      document.getElementById('lightboxModal').classList.add('flex');
+      document.body.style.overflow = 'hidden';
     }
-    function closeTemplateModal(e) {
-      if (!e || e.target === document.getElementById('templateModal')) {
-        document.getElementById('templateModal').classList.add('hidden');
-        document.getElementById('templateModal').classList.remove('flex');
+    function closeLightbox(e) {
+      if (!e || e.target === document.getElementById('lightboxModal')) {
+        document.getElementById('lightboxModal').classList.add('hidden');
+        document.getElementById('lightboxModal').classList.remove('flex');
+        document.body.style.overflow = '';
       }
     }
-    function switchModalTab(tab) {
-      document.getElementById('tab-realdemo').className = 'flex-1 py-3 text-sm font-semibold ' + (tab==='realdemo' ? 'text-navy border-b-2 border-gold' : 'text-gray-400 border-b-2 border-transparent');
-      document.getElementById('tab-template').className = 'flex-1 py-3 text-sm font-semibold ' + (tab==='template' ? 'text-navy border-b-2 border-gold' : 'text-gray-400 border-b-2 border-transparent');
-      document.getElementById('modalContent-realdemo').classList.toggle('hidden', tab !== 'realdemo');
-      document.getElementById('modalContent-template').classList.toggle('hidden', tab !== 'template');
-    }
-  </script>
-
-  <script>
-    function g(id) { return document.getElementById(id).value || ''; }
-    function gs(id) {
-      const el = document.getElementById(id);
-      return el ? el.value : '';
-    }
-    function todayStr() {
-      return new Date().toISOString().split('T')[0];
-    }
-    function downloadWord() {
-      const btn = document.getElementById('downloadBtn');
-      btn.disabled = true;
-      btn.innerHTML = '⏳ 生成中…';
-
-      const companyCN = g('f1') || '_____';
-      const companyEN = g('f2') || '_____';
-      const crNo = g('f3') || '_____';
-      const noticeDate = g('f4') || todayStr();
-      const locationOption = g('f5') || '公司註冊辦事處';
-      const oldAddress = g('f6') || '_____';
-      const newAddress = g('f7') || '_____';
-      const effectiveDate = g('f8') || todayStr();
-      const authorizedPerson = g('f9') || '_____';
-      const position = g('f10') || '董事';
-      const signDate = g('f11') || todayStr();
-      const submitMethod = g('f12') || '郵寄';
-
-      const html = `<!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"><title>指明地點通知書（Form NR2）- ${companyCN}</title>
-<style>
-  body { font-family: 'Noto Sans TC', 'Arial', sans-serif; padding: 50px 60px; max-width: 800px; margin: auto; color: #1B2A4A; line-height: 1.7; }
-  h1 { font-size: 24px; text-align: center; border-bottom: 3px solid #1B2A4A; padding-bottom: 12px; margin-bottom: 20px; letter-spacing: 1px; }
-  .subtitle { text-align: center; font-size: 14px; color: #666; margin-bottom: 30px; }
-  table { width: 100%; border-collapse: collapse; margin-top: 16px; }
-  th, td { border: 1px solid #1B2A4A; padding: 10px 12px; text-align: left; font-size: 14px; vertical-align: top; }
-  th { background: #1B2A4A; color: white; font-weight: 600; width: 180px; }
-  .section-title { font-size: 16px; font-weight: 700; color: #1B2A4A; margin-top: 28px; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 2px solid #C9A84C; }
-  .declaration { margin-top: 30px; padding: 16px 20px; background: #fffbeb; border: 1px solid #e5d9a0; border-radius: 6px; font-size: 13px; }
-  .signature-area { margin-top: 35px; }
-  .signature-line { display: flex; justify-content: space-between; margin-top: 30px; }
-  .signature-line div { width: 45%; }
-  .sig-label { font-size: 12px; color: #888; }
-  .sig-space { border-bottom: 1px solid #1B2A4A; height: 30px; margin-top: 4px; margin-bottom: 4px; }
-  .footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #ddd; font-size: 11px; color: #888; text-align: center; }
-  .label-cell { font-weight: 600; background: #f8f6f0; }
-  .highlight { background: #fef9e7; }
-  .notice { font-size: 12px; color: #b91c1c; margin-top: 8px; text-align: center; font-weight: 600; }
-</style>
-</head>
-<body>
-<h1>指明地點通知書</h1>
-<p class="subtitle">（根據《公司條例》（第622章）第653N條 — Form NR2）</p>
-<p style="text-align:right;font-size:12px;color:#666;">通知日期：${noticeDate}</p>
-
-<div class="section-title">一、公司基本資料</div>
-<table>
-  <tr><th>項目</th><th>內容</th></tr>
-  <tr><td class="label-cell">公司名稱（中文）</td><td>${companyCN}</td></tr>
-  <tr><td class="label-cell">公司名稱（英文）</td><td>${companyEN}</td></tr>
-  <tr><td class="label-cell">公司註冊編號</td><td>${crNo}</td></tr>
-</table>
-
-<div class="section-title">二、原本 SCR 存放位置</div>
-<table>
-  <tr><th>項目</th><th>內容</th></tr>
-  <tr><td class="label-cell">存放選項</td><td>${locationOption}</td></tr>
-  <tr><td class="label-cell">原本地址</td><td>${oldAddress}</td></tr>
-</table>
-
-<div class="section-title">三、新 SCR 存放位置</div>
-<table>
-  <tr><th>項目</th><th>內容</th></tr>
-  <tr><td class="label-cell">新存放地址</td><td>${newAddress}</td></tr>
-  <tr><td class="label-cell">生效日期</td><td>${effectiveDate}</td></tr>
-</table>
-
-<div class="declaration">
-  <strong>⚠️ 重要通知：</strong> 根據《公司條例》第 653N 條，如果公司嘅重要控制人登記冊（SCR）存放喺公司註冊辦事處以外嘅地址，公司必須喺更改生效後 15 日內，將新存放地址通知公司註冊處處長。
-</div>
-
-<div class="signature-area">
-  <div class="section-title">四、公司授權人簽署</div>
-  <table>
-    <tr><th>項目</th><th>內容</th></tr>
-    <tr><td class="label-cell">授權人姓名</td><td>${authorizedPerson}</td></tr>
-    <tr><td class="label-cell">職位</td><td>${position}</td></tr>
-    <tr><td class="label-cell">簽署日期</td><td>${signDate}</td></tr>
-  </table>
-
-  <div class="signature-line">
-    <div>
-      <div class="sig-label">授權人簽署：</div>
-      <div class="sig-space"></div>
-    </div>
-    <div>
-      <div class="sig-label">日期：</div>
-      <div class="sig-space"></div>
-    </div>
-  </div>
-</div>
-
-<div class="section-title">五、提交公司註冊處</div>
-<table>
-  <tr><th>項目</th><th>內容</th></tr>
-  <tr><td class="label-cell">提交方式</td><td>${submitMethod}</td></tr>
-</table>
-
-<p class="notice">請將此通知書連同簽署正本提交至公司註冊處</p>
-
-<div class="footer">
-  <p>本文件由 ESGov (https://esgov.org) 自動生成 • 僅供參考</p>
-  <p>⚠️ 建議由公司授權人簽署後始向公司註冊處提交</p>
-</div>
-</body></html>`;
-
-      const blob = new Blob([html], { type: 'application/msword' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `指明地點通知書_Form_NR2_${companyCN}.doc`;
-      a.click();
-      URL.revokeObjectURL(url);
-
-      btn.disabled = false;
-      btn.innerHTML = '✅ 已下載！';
-      setTimeout(() => { btn.innerHTML = '📄 下載 Word（已填好）'; }, 2000);
-    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('lightboxModal');
+        if (!modal.classList.contains('hidden')) {
+          closeLightbox();
+        }
+      }
+    });
   </script>
 
   <!-- Footer -->
