@@ -225,7 +225,8 @@
             "放喺註冊辦事處都照交 NR2（唔需要）",
             "放喺第二度但唔記得交 NR2",
             "更改存放地址後冇喺 15 日內更新 NR2"
-          ]
+          ],
+          "generatorUrl": "/scr-nr2-generator"
         },
         {
           "name": "CR 指引 Annex G：指明地點通知書（Form NR2）範本",
