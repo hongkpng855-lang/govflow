@@ -225,7 +225,8 @@
             "放喺第二度但唔記得交 NR2",
             "更改存放地址後冇喺 15 日內更新 NR2"
           ],
-          "generatorUrl": "/scr-nr2-generator"
+          "generatorUrl": "/scr-nr2-generator",
+          "demoImage": "/assets/demo/scr-nr2-filled.png"
         }
       ],
       "rejectionRisks": [
