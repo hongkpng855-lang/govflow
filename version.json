@@ -1,7 +1,7 @@
 {
-  "version": "12.12",
-  "commit": "37e8905",
+  "version": "12.13",
+  "commit": "eaf64b9",
   "date": "2026-06-16",
-  "build": "20260616-2014",
+  "build": "20260616-2022",
   "env": "github-pages"
 }
