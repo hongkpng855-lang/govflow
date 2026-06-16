@@ -443,7 +443,13 @@
           width: 800
         });
 
-        // Exit capture mode
+        // Restore original inputs
+        inputReplacements.forEach(function(item) {
+          item.replacement.remove();
+          item.original.style.display = '';
+        });
+
+                // Exit capture mode
         form.classList.remove('capture-mode');
 
         // Generate multi-page PDF

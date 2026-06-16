@@ -848,7 +848,26 @@
 
         // Capture #pdf-form directly
         const el = document.getElementById('pdf-form');
-        const canvas = await html2canvas(el, {
+        // Replace inputs with styled spans (html2canvas doesn't render input text)
+        const inputReplacements = [];
+        document.querySelectorAll('#pdf-form input:not([type=checkbox]):not([type=hidden]), #pdf-form select, #pdf-form textarea').forEach(function(el) {
+          var span = document.createElement('span');
+          span.className = 'input-replacement';
+          if (el.tagName === 'SELECT') {
+            span.textContent = el.options[el.selectedIndex] ? el.options[el.selectedIndex].text : '';
+          } else {
+            span.textContent = el.value || '';
+          }
+          var style = getComputedStyle(el);
+          span.style.cssText = 'font:' + style.font + ';color:' + style.color + ';border-bottom:1px solid #999;background:transparent;padding:2px 4px;white-space:pre-wrap;display:inline-block;min-width:80px;';
+          el.parentNode.insertBefore(span, el);
+          el.style.display = 'none';
+          inputReplacements.push({ original: el, replacement: span });
+        });
+        void document.body.offsetHeight;
+        await new Promise(function(r) { setTimeout(r, 50); });
+
+                const canvas = await html2canvas(el, {
           scale: 3,
           useCORS: true,
           backgroundColor: '#ffffff',
@@ -857,7 +876,13 @@
         });
 
         // Restore UI
-        document.body.classList.remove('capture-mode');
+        // Restore original inputs
+        inputReplacements.forEach(function(item) {
+          item.replacement.remove();
+          item.original.style.display = '';
+        });
+
+                document.body.classList.remove('capture-mode');
 
         // Generate multi-page PDF
         const imgData = canvas.toDataURL('image/png');
