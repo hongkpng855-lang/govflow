@@ -397,12 +397,13 @@
                   <a :href="doc['generatorUrl'] || '#'"
                      @click="doc['generatorUrl'] || (openDoc(s.documents[idx]), false)"
                      class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md">
-                    <template x-if="doc.demoImage">
-                      <div class="h-32 sm:h-40 bg-gray-100 overflow-hidden relative">
-                        <img :src="doc.demoImage" :alt="doc.name" class="w-full h-full object-cover" @error="$event.target.closest('div').innerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-sm>🖼️ 範例圖片</div>'" />
-                        <div x-show="doc.hasGenerator" class="absolute top-2 right-2 bg-gold text-navy text-xs font-bold px-2 py-0.5 rounded-full shadow">互動工具</div>
+                    <div class="h-32 sm:h-40 bg-gray-50 overflow-hidden relative flex items-center justify-center">
+                      <div class="text-center">
+                        <div class="text-3xl mb-1">🛠️</div>
+                        <div class="text-sm font-semibold text-gray-400">準備中</div>
+                        <div class="text-xs text-gray-300 mt-0.5">真實範例即將上載</div>
                       </div>
-                    </template>
+                    </div>
                     <div class="p-4">
                       <p class="font-bold text-sm text-navy" x-text="doc.name"></p>
                       <p class="text-xs text-gray-500 mt-1 leading-relaxed" x-text="doc.description"></p>
@@ -514,11 +515,13 @@
         <button @click="closeDoc()" class="text-gray-400 hover:text-gray-600 text-2xl leading-none shrink-0 ml-2">&times;</button>
       </div>
       <div class="p-6">
-        <template x-if="selectedDoc?.demoImage">
-          <div class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden mb-4">
-            <img :src="selectedDoc.demoImage" :alt="selectedDoc.name" class="w-full" @error="$event.target.outerHTML='<div class=flex items-center justify-center h-full py-20 text-gray-400 text-sm>🖼️ 範例圖片暫時未上載</div>'" />
+        <div class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden mb-4 flex items-center justify-center py-12">
+          <div class="text-center">
+            <div class="text-4xl mb-2">🛠️</div>
+            <div class="text-base font-semibold text-gray-400">準備中</div>
+            <div class="text-sm text-gray-300 mt-1">真實範例即將上載</div>
           </div>
-        </template>
+        </div>
         <p class="text-sm text-gray-600 leading-relaxed mb-4" x-text="selectedDoc?.description"></p>
         <div x-show="selectedDoc?.commonMistakes && selectedDoc.commonMistakes.length >= 1" class="bg-red-50 border border-red-100 rounded-xl p-4 mb-4">
           <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
@@ -564,7 +567,7 @@
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
         <p>© 2026 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v12.15</p>
+        <p class="mt-2 opacity-40">v12.16</p>
     </div>
   </footer>
 

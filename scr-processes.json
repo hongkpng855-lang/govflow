@@ -17,7 +17,6 @@
         {
           "name": "股權結構分析表",
           "description": "幫你整理公司股東、持股比例同投票權結構，方便下一步識別重要控制人",
-          "demoImage": "/assets/demo/scr-step1.png",
           "templateFile": "/templates/scr-shareholder-analysis.docx",
           "hasGenerator": true,
           "commonMistakes": [
@@ -50,7 +49,6 @@
         {
           "name": "重要控制人識別檢查表",
           "description": "逐項測試嘅 checklist，記錄每位人士及法團嘅測試結果同符合條件",
-          "demoImage": "/assets/demo/scr-step2.png",
           "templateFile": "/templates/scr-identification-checklist.docx",
           "hasGenerator": true,
           "commonMistakes": [
@@ -83,7 +81,6 @@
         {
           "name": "重要控制人書面通知書",
           "description": "標準格式嘅書面通知書模板，用嚟通知疑似重要控制人，包含法定要求嘅所有欄位",
-          "demoImage": "/assets/demo/scr-step3.png",
           "templateFile": "/templates/scr-notice-letter.docx",
           "hasGenerator": true,
           "commonMistakes": [
@@ -117,7 +114,6 @@
         {
           "name": "重要控制人資料收集表",
           "description": "標準嘅資料收集表格，控制人簽署確認後歸檔",
-          "demoImage": "/assets/demo/scr-step4.png",
           "templateFile": "/templates/scr-data-collection.docx",
           "hasGenerator": true,
           "commonMistakes": [
@@ -149,7 +145,6 @@
         {
           "name": "指定代表委任決議 + 同意書",
           "description": "董事會決議範本 + 指定代表同意書，包含所有法定欄位同簽署位置",
-          "demoImage": "/assets/demo/scr-step5.png",
           "templateFile": "/templates/scr-designated-rep-resolution.docx",
           "hasGenerator": true,
           "commonMistakes": [
@@ -183,7 +178,6 @@
         {
           "name": "重要控制人登記冊（含無控制人聲明範本）",
           "description": "正式嘅 SCR 登記冊，包含標準控制人記錄頁 + 無控制人聲明範本。可透過互動工具一鍵生成已填好嘅 PDF",
-          "demoImage": "/assets/demo/scr-step6.png",
           "templateFile": "/templates/scr-register.docx",
           "hasGenerator": true,
           "generatorUrl": "/scr-generator",
@@ -218,7 +212,6 @@
         {
           "name": "指明地點通知書（Form NR2）— 條件性文件",
           "description": "⚠️ 只有當 SCR 存放喺公司註冊辦事處以外嘅地址先需要。放喺註冊辦事處嘅公司唔使。可喺公司註冊處官網下載正式表格",
-          "demoImage": "/assets/demo/scr-step7.png",
           "templateFile": "/templates/scr-location-notice.docx",
           "hasGenerator": false,
           "commonMistakes": [
