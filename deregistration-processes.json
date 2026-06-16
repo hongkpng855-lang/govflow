@@ -1,0 +1,229 @@
+{
+  "processId": "deregistration",
+  "title": "香港有限公司撤銷註冊（停業）完整指南",
+  "totalSteps": 6,
+  "freeSteps": 6,
+  "price": 0,
+  "currency": "HKD",
+  "donateMessage": "如果呢份指南幫到你，可以請我飲杯咖啡 ☕",
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "資格檢査 — Check 公司係咪合資格撤銷",
+      "summary": "確認公司符合公司法第 750 條嘅 7 大條件，睇下公司係咪喺排除名單入面",
+      "isFree": true,
+      "details": "第一步：搞清楚公司係咪有資格申請撤銷註冊。公司法第 750 條列明 7 個必要條件，全部要達成先可以申請。唔好跳過呢步 — 唔符合條件就申請，只係嘥錢嘥時間。\n\n✅ 7 大必要條件：\n1️⃣ 公司所有成員（股東）書面同意撤銷註冊 — 一個都唔少得\n2️⃣ 公司從未開始營業，或者已經停業超過 3 個月（由最後一次商業活動計起）\n3️⃣ 公司冇任何未清償債務（包括或然負債，例如銀行擔保、未到期租約）\n4️⃣ 公司唔係任何法律程序嘅一方（冇俾人告、亦冇告人）\n5️⃣ 公司嘅資產唔包含位於香港嘅不動產（物業、車位、寫字樓）\n6️⃣ 如果公司係控權公司（Holding Company），佢嘅附屬公司都唔可以有香港不動產\n7️⃣ 公司已經取得稅務局局長發出嘅《不反對撤銷公司註冊通知書》（即係 Step 2 要做嘅嘢）\n\n🚫 以下類型公司唔可以用撤銷註冊方式解散（必須行清盤）：\n• 公眾公司（Public Company）\n• 銀行業條例下嘅認可機構（銀行）\n• 保險公司條例下嘅保險人\n• 證券及期貨條例持牌法團\n• 強積金計劃條例核准受託人\n• 受託人條例註冊嘅信託公司\n• 申請前 5 年內曾經屬於以上類別嘅公司\n\n⚠️ 最易中招嘅位：\n• 「停業超過 3 個月」係由最後一次商業活動計 — 唔係由董事決定嗰日計。過去 3 個月有冇出過 invoice？收過錢？簽過約？全部要停。\n• 或然負債（Contingent Liability）都要計 — 例如公司擔保咗銀行貸款，就算未 call 款都係債務\n• 公司名下如有香港車位、物業，一定要先賣走或者轉名，否則唔符合條件\n• 全體股東同意係必須 — 有股東移民咗、失聯咗、過身咗，都要諗辦法搞掂先\n\n🕐 預計時間：視乎公司狀況，一般 1 至 4 星期（主要等股東簽番同意書）\n\n✅ 一定要做：\n• 填寫資格預檢清單（下面有 generator），逐項 check 公司是否符合條件\n• 召開股東會或發書面決議，取得全體股東書面同意\n• 清理所有或然負債（銀行擔保、未到期租約等）\n• 處理香港不動產（賣走或轉名）\n• 確保公司冇被牽涉任何法律訴訟",
+      "documents": [
+        {
+          "name": "撤銷註冊資格預檢清單",
+          "description": "逐項 check 公司是否符合撤銷註冊嘅 7 大條件，啱用嚟做內部審查記錄",
+          "templateFile": "/templates/company-deregistration-checklist.docx",
+          "hasGenerator": true,
+          "commonMistakes": [
+            "冇 check 或然負債（銀行擔保、未到期租約都算負債）",
+            "以為「停業」由董事會決定嗰日開始計 — 實情係由最後一次商業活動計",
+            "冇諗清楚全體股東同意呢點 — 失聯股東要先行法院程序",
+            "漏咗 check 附屬公司有冇香港不動產（控股公司適用）"
+          ],
+          "generatorUrl": "/deregistration-checklist-generator",
+          "demoImage": "/assets/demo/dereg-step1.png"
+        }
+      ],
+      "rejectionRisks": [
+        "唔符合 7 大條件就申請 = NDR1 被拒，HK$420 費用唔退還",
+        "漏咗股東同意 = 憲報反對期有人反對，程序卡住",
+        "公司係排除類型但行撤銷程序 = 申請無效，要重新行清盤"
+      ],
+      "mode": "A",
+      "needsGenerator": true,
+      "needsGuideContent": true,
+      "crossStepDeps": "None - first step",
+      "generatorType": "Interactive PDF Generator",
+      "generatorUrl": "/deregistration-checklist-generator",
+      "generatorDescription": "Interactive PDF Generator — 逐項 check 公司條件 → 一鍵生成已填好嘅資格預檢清單 PDF"
+    },
+    {
+      "stepNumber": 2,
+      "title": "申請不反對通知書 — 向稅局提交 IR1263",
+      "summary": "填妥 IR1263 表格連同 HK$270 交去稅務局，申請《不反對撤銷公司註冊通知書》",
+      "isFree": true,
+      "details": "第二步：向稅務局申請《不反對撤銷公司註冊通知書》（Notice of No Objection，簡稱 NNO）。呢份係去公司註冊處申請撤銷嘅必備文件，冇嘅話 Step 3 做唔到。\n\n📝 準備文件：\n• IR1263 申請表（要求發出不反對撤銷公司註冊通知書）\n• HK$270 支票（抬頭「香港特別行政區政府」）— 唔退還㗎\n• 公司董事嘅身份證明副本（部分情況需要）\n\n📮 遞交方式（三選一）：\n1️⃣ 郵遞：寄去「香港郵政總局郵箱 132 號 稅務局局長收」\n2️⃣ 親身：九龍啟德協調道 5 號稅務中心 14 樓撤銷註冊組\n3️⃣ 網上：持「智方便+」或電子證書，經稅局電子表格系統提交\n\n⏱ 審批時間：約 21 個工作天（如果稅務狀況簡單，例如一直零申報）\n\n⚠️ 呢步最大嘅伏位：\n**喺申請之前，一定要交晒所有未完稅嘅報稅表！**\n\n呢個係申請 NNO 被拒嘅頭號原因。就算公司從來冇營運，如果稅局已經出咗報稅表俾你（BIR51），你冇交過任何報稅表（包括零申報），稅局係唔會出 NNO 俾你嘅。\n\n常見要補交嘅文件：\n• 未交嘅利得稅報稅表（BIR51 / BIR52）— 包括零申報\n• 未交嘅僱主報稅表（BIR56A / IR56B）— 如果有請人\n• 未處理嘅稅務查詢信件\n• 未完結嘅評稅反對或上訴\n• 未找清嘅欠稅（包括暫繳稅）\n• 未交嘅商業登記費\n\n💰 如果稅局發現有欠稅，唔會出 NNO。佢哋會出信列出未完成事項，你辦妥後可以要求重新考慮（唔使再俾 HK$270）。\n\n🎯 收到 NNO 之後：\n• 核對 NNO 上面嘅公司名同 CR 編號係咪正確\n• NNO 有效期只有 3 個月 — 一定要喺 3 個月內 submit Step 3 嘅 NDR1\n• 妥善保存正本（或者核證副本），Step 3 要交俾公司註冊處\n\n🕐 預計時間：約 4-6 星期（連同準備文件同審批）\n\n✅ 一定要做：\n• 申請前提交所有未完稅嘅報稅表（包括零申報）\n• Check 清楚公司有冇欠稅、欠商業登記費\n• 收到 NNO 後 mark 低 3 個月 deadline",
+      "documents": [
+        {
+          "name": "IR1263 不反對通知書申請表填寫工具",
+          "description": "一步步引導你填寫 IR1263 表格（要求發出不反對撤銷公司註冊通知書），生成可下載嘅已填 PDF",
+          "templateFile": "/templates/company-deregistration-ir1263.docx",
+          "hasGenerator": true,
+          "commonMistakes": [
+            "未交晒報稅表就申請 NNO — 最常見被拒原因，HK$270 白俾",
+            "申請人身份揀錯 — 董事可以直接申請，非董事要授權書",
+            "以為 NNO 係永久有效 — 只有 3 個月期限",
+            "唔知可以網上提交 — 親身去稅局排隊嘥時間"
+          ],
+          "generatorUrl": "/deregistration-ir1263-generator",
+          "demoImage": "/assets/demo/dereg-step2.png"
+        }
+      ],
+      "rejectionRisks": [
+        "未交報稅表（包括零申報）就申請 = 申請被拒，HK$270 唔退還",
+        "有欠稅未清 = NNO 唔會發出，要清稅後重新申請",
+        "漏交商業登記費 = 稅局唔會出 NNO"
+      ],
+      "mode": "A",
+      "needsGenerator": true,
+      "needsGuideContent": true,
+      "crossStepDeps": "Step 1 (must confirm eligibility before applying for NNO)",
+      "generatorType": "Interactive PDF Generator",
+      "generatorUrl": "/deregistration-ir1263-generator",
+      "generatorDescription": "Interactive PDF Generator — 填 IR1263 資料 → 一鍵生成已填好嘅申請表 PDF"
+    },
+    {
+      "stepNumber": 3,
+      "title": "提交撤銷申請 — 向公司註冊處遞交 NDR1",
+      "summary": "填妥 NDR1 表格連同 HK$420 同 NNO 正本交去公司註冊處，正式啟動撤銷程序",
+      "isFree": true,
+      "details": "第三步：收到稅局嘅不反對通知書（NNO）之後，就要喺 3 個月內向公司註冊處提交撤銷註冊申請 — 用 NDR1 表格。呢步係成個程序嘅核心。\n\n⏰ 鐵則：NNO 發出日期起計 **3 個月內** 一定要遞交 NDR1。過期即失效，要重新申請 NNO（再俾 HK$270）。\n\n📝 NDR1 表格要填嘅資料：\n• 公司名稱同公司註冊編號（CR No.）\n• 商業登記號碼（BR No.）\n• 申請人類別：公司本身 / 董事 / 成員（揀一個）\n• 申請人全名、通訊地址、電郵地址\n• 獲提名接收撤銷通知嘅自然人資料（如果申請人係公司本身，呢項必填）\n• 申請條件聲明：申請人必須核實公司符合 s.750 嘅所有條件\n• 隨表格交付嘅文件清單（包括 NNO 正本）\n\n💰 費用：HK$420（唔退還）\n\n📮 遞交方式（二選一）：\n1️⃣ 電子形式：經公司註冊處 e-Services Portal（www.e-services.cr.gov.hk）網上提交\n   — 需要預先開 account 同有數碼證書\n   — 最快、最方便、有確認記錄\n2️⃣ 紙本形式：親身或郵寄去金鐘道 66 號政府合署 14 樓公司註冊處收款處\n   — 支票抬頭「公司註冊處處長」\n   — 要連同 NNO 正本（或核證副本）一齊交\n\n📎 必須連同 NDR1 一齊交嘅文件：\n• 不反對通知書（NNO）正本（或核證真實副本）\n• 申請費用 HK$420\n\n📄 公司註冊處收到申請後：\n• 約 4-5 個工作天會發出確認收件信\n• 然後就進入 Step 4 嘅憲報公告程序\n\n⚠️ 重要提示 — 申請條件聲明：\nNDR1 表格入面嘅申請條件聲明唔係求其剔就得。你（申請人）係要宣誓式咁確認公司符合所有條件。如果明知公司唔符合條件都照申請，係刑事罪行 — 最高罰 HK$300,000 + 監禁 2 年。\n\n🕐 預計時間：準備文件 1-2 日，審批確認約 1 星期\n\n✅ 一定要做：\n• 收到 NNO 後即刻 mark 低 3 個月 deadline，唔好等最後一刻\n• 預先開 e-Services Portal account（如果諗住網上提交）\n• 核對 NDR1 所有資料同公司註冊證明書一致\n• 保留申請確認信同收據",
+      "documents": [
+        {
+          "name": "NDR1 撤銷註冊申請書填寫工具",
+          "description": "一步步引導你填寫 NDR1 表格（私人公司或擔保有限公司撤銷註冊申請書），生成可下載嘅已填 PDF",
+          "templateFile": "/templates/company-deregistration-ndr1.docx",
+          "hasGenerator": true,
+          "commonMistakes": [
+            "超過 NNO 3 個月有效期先交 NDR1 — 要重新申請 NNO 兼再俾 HK$270",
+            "申請條件聲明求其剔冇核實 — 虛假陳述可罰 HK$300,000 + 監禁 2 年",
+            "唔記得交 NNO 正本（或核證副本）— 申請會被退回",
+            "用錯表格版本 — 一定要用公司註冊處官網最新版本",
+            "網上提交冇提前開 account — 要預先登記 e-Services Portal"
+          ],
+          "generatorUrl": "/deregistration-ndr1-generator",
+          "demoImage": "/assets/demo/dereg-step3.png"
+        }
+      ],
+      "rejectionRisks": [
+        "NNO 過期先交 NDR1 = 申請無效，要重新申請 NNO（再俾 HK$270）",
+        "NDR1 資料填錯 = 申請被退回，延誤整個程序",
+        "虛假聲明 = 刑事罪行，最高罰 HK$300,000 + 監禁 2 年"
+      ],
+      "mode": "A",
+      "needsGenerator": true,
+      "needsGuideContent": true,
+      "crossStepDeps": "Step 2 (must have NNO before submitting NDR1)",
+      "generatorType": "Interactive PDF Generator",
+      "generatorUrl": "/deregistration-ndr1-generator",
+      "generatorDescription": "Interactive PDF Generator — 填 NDR1 資料 → 一鍵生成已填好嘅申請書 PDF"
+    },
+    {
+      "stepNumber": 4,
+      "title": "憲報公告（第一份）& 3 個月反對期",
+      "summary": "公司註冊處刊登第一份憲報公告，建議撤銷公司註冊，隨後進入 3 個月反對期",
+      "isFree": true,
+      "details": "第四步：公司註冊處收到 NDR1 申請之後，會喺約 3 星期內喺香港憲報（Gazette）刊登第一份公告，話俾公眾知「我哋建議撤銷呢間公司嘅註冊」。\n\n由公告刊登日起計，有一個 **3 個月嘅反對期（Objection Period）**。\n\n📰 憲報公告（第一份）：\n• 根據《公司條例》第 751(1) 條刊登\n• 內容包括公司名稱、CR 編號、申請日期\n• 公告係公開嘅，任何人都可以查閱\n• 憲報一般逢星期五出版\n• 免費查閱：www.gld.gov.hk/egazette\n\n⏳ 3 個月反對期：\n• 任何認為自己會受影響嘅人士都可以提出反對\n• 常見反對原因：公司仲有欠債未還、有人聲稱擁有公司資產、股東之間有糾紛\n• 如果有人反對，公司註冊處會暫停程序，並通知申請人\n• 申請人需要處理反對事項（還錢、和解等）\n• 如果問題解決唔到，程序可能被終止，要行清盤等其他方式\n\n🤔 誰有機會反對？\n• 債權人（公司仲欠人錢）\n• 未達成協議嘅股東（有人唔同意撤銷）\n• 公司擔保嘅受益人\n• 有潛在法律索償嘅人士\n\n🔄 如果冇人反對：\n• 3 個月一過，公司註冊處就會進入 Step 5 — 刊登第二份憲報公告，正式解散公司\n\n⚠️ 重要提醒：\n喺呢段期間（直到第二份憲報公告刊登之前），**公司嘅法律地位仍然存在**！所有法定義務都要繼續履行：\n• 仍然要準時交周年申報表（NAR1）同續商業登記證\n• 如果收到利得稅報稅表仍然要按時提交\n• 公司仍然可以俾人告 / 可以告人\n\n🕐 預計時間：3.5 個月（3 星期等第一份公告 + 3 個月反對期）\n\n✅ 一定要做：\n• 定期上憲報網站 check 公告刊登咗未\n• 保持公司合規紀錄（NAR1、BR 等）直到正式解散\n• 留意有冇人聯絡公司提出反對\n• 如果收到反對通知，要盡快處理",
+      "documents": [
+        {
+          "name": "憲報查閱指南",
+          "description": "教你點樣喺香港憲報網站查閱公司撤銷公告，同埋點樣監察 3 個月反對期有冇人反對",
+          "templateFile": "",
+          "hasGenerator": false,
+          "commonMistakes": [
+            "以為遞交 NDR1 後就唔使再理公司合規 — 解散前仍要交 NAR1 同續 BR",
+            "冇定期 check 憲報 — 唔知第一份公告幾時刊登",
+            "有人反對唔知點處理 — 要盡快揾律師或會計師幫手"
+          ],
+          "generatorUrl": "",
+          "demoImage": "/assets/demo/dereg-step4.png"
+        }
+      ],
+      "rejectionRisks": [
+        "有人反對且未能解決 = 撤銷程序被終止，可能要行清盤",
+        "期間冇交 NAR1 或 BR 續期 = 罰款，甚至影響解散",
+        "公司有未披露債務 = 債權人反對，程序卡住"
+      ],
+      "mode": "B",
+      "needsGenerator": false,
+      "needsGuideContent": true,
+      "crossStepDeps": "Step 3 (CR must have received NDR1 before gazette is published)",
+      "generatorType": "",
+      "generatorUrl": "",
+      "generatorDescription": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "正式解散 — 第二份憲報公告刊登",
+      "summary": "3 個月反對期後無人反對，公司註冊處刊登第二份憲報公告，公司正式解散",
+      "isFree": true,
+      "details": "第五步：如果 3 個月反對期內冇人提出反對（或者反對已經妥善處理），公司註冊處處長就會刊登第二份憲報公告，宣布公司正式解散（Dissolution）。\n\n📰 第二份憲報公告：\n• 根據《公司條例》第 751(3) 條刊登\n• 公告刊登嘅日期就係公司正式解散嘅日期\n• 公司由呢一日開始，法律上正式終止存在\n\n🔚 解散嘅法律後果：\n• 公司從公司登記冊中除名\n• 公司唔可以再進行任何商業活動\n• 公司唔可以簽約、開票、收款\n• 公司嘅法律實體身份正式終結\n\n📬 公司註冊處會通知：\n• 申請人（NDR1 上填嘅申請人）\n• 獲提名接收通知嘅自然人\n• 通知方式一般係書面郵寄\n\n💡 收到解散通知之後：\n• 公司註冊處嘅查冊結果會顯示「Dissolved（解散）」\n• 可以喺公司註冊處嘅網上查冊中心（e-ICRIS）查閱公司狀態\n\n⚠️ 重要概念：\n**就算公司解散咗，董事同股東嘅法律責任唔會自動消失。**\n• 如果解散後發現公司有未申報嘅稅務問題，稅局仍然可以追究董事\n• 如果有欺詐或不當行為，董事可能要負個人責任\n\n🕐 預計時間：由第一步計起，一般需時 6 至 9 個月（順利嘅話最快約 5 個月）\n\n✅ 一定要做：\n• 保存解散通知書以作記錄\n• 保留公司紀錄至少 7 年（之後 Step 6 會詳細講）\n• 進入 Step 6 處理解散後嘅跟進事項",
+      "documents": [
+        {
+          "name": "解散狀態確認指南",
+          "description": "教你點樣喺公司註冊處網上查冊中心確認公司嘅解散狀態，同埋解讀公司註冊處嘅通知信",
+          "templateFile": "",
+          "hasGenerator": false,
+          "commonMistakes": [
+            "以為解散咗就唔使保留公司紀錄 — 稅例要求保留至少 7 年",
+            "冇保存解散通知書 — 日後可能需要用嚟證明公司已解散",
+            "以為解散後所有責任都完 — 稅局仍可追究董事個人責任"
+          ],
+          "generatorUrl": "",
+          "demoImage": "/assets/demo/dereg-step5.png"
+        }
+      ],
+      "rejectionRisks": [
+        "3 個月反對期內突然有人反對 = 程序延誤或終止",
+        "解散後先發現有未處理稅務問題 = 董事個人責任"
+      ],
+      "mode": "B",
+      "needsGenerator": false,
+      "needsGuideContent": true,
+      "crossStepDeps": "Step 4 (must complete 3-month objection period before dissolution)",
+      "generatorType": "",
+      "generatorUrl": "",
+      "generatorDescription": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "解散後跟進 — 取消商業登記、關銀行戶口、保留文件",
+      "summary": "公司解散後仲有好多手尾要跟：取消商業登記、確保銀行戶口已關、保留公司紀錄 7 年",
+      "isFree": true,
+      "details": "第六步：公司正式解散之後，仲有幾個重要嘅跟進事項要做。好多公司以為解散咗就搞掂晒，結果漏咗重要步驟俾人罰款。\n\n📋 跟進清單：\n\n1️⃣ **取消商業登記（最重要！）**\n撤銷公司註冊 ≠ 自動取消商業登記！呢個係最多人中招嘅位。\n• 要另外填 IRC3113「結束業務通知書」通知商業登記署\n• 必須喺業務結束日期起計 **1 個月內** 遞交\n• 逾期最高罰款 HK$5,000 + 監禁 1 年\n• 遞交方式：郵寄或親身去商業登記署\n\n2️⃣ **確保銀行戶口已經關閉**\n呢個要喺解散 **之前** 做好 — 如果解散嗰日仲有銀行戶口未關、或者戶口仲有錢，後果好嚴重：\n• 戶口內嘅所有款項自動成為「無主財物」（Bona Vacantia），歸香港特別行政區政府所有\n• 想攞返啲錢？要向原訟法庭申請恢復公司註冊（s.765）\n• 恢復註冊嘅費用同時間遠遠超過你 close 戶口嘅功夫\n• 建議：解散前至少 1 個月就 close 晒所有銀行戶口，轉走結餘\n\n3️⃣ **保留公司紀錄 7 年**\n根據《稅務條例》第 51C 條，公司嘅業務及會計紀錄必須保留至少 7 年：\n• 會計紀錄（Profit & Loss、Balance Sheet）\n• 銀行月結單\n• 發票、收據、合約\n• 董事會會議記錄\n• 股東名冊及股份轉讓記錄\n• 公司印章及相關文件\n• 解散通知書及所有相關申請文件\n\n4️⃣ **通知相關人士公司已解散**\n• 供應商、客戶、合作夥伴\n• 保險公司（取消保險單）\n• 強積金受託人（終止 MPF 帳戶）\n• 牌照機構（如有持牌）\n\n5️⃣ **處理未申報資產（如有）**\n如果解散後先發現有未處理嘅資產（例如海外應收款項、知識產權）：\n• 資產已自動歸政府所有\n• 需要向原訟法庭申請恢復註冊（s.765）\n• 解散後 20 年內都可以申請恢復\n• 恢復註冊後可以處理資產，然後再重新申請解散\n\n🕐 預計時間：手續上約 1-2 星期，但文件要 keep 7 年\n\n✅ 一定要做：\n• 解散前 close 晒所有銀行戶口（呢個係最關鍵！）\n• 解散後 1 個月內遞交 IRC3113 取消商業登記\n• 保留所有公司紀錄至少 7 年\n• 通知相關持份者公司已解散\n• 如果解散後先發現有資產未處理，考慮申請恢復註冊",
+      "documents": [
+        {
+          "name": "IRC3113 取消商業登記申請表",
+          "description": "結束業務通知書，用嚟通知商業登記署公司已解散或結束業務，必須喺解散後 1 個月內遞交",
+          "templateFile": "/templates/company-deregistration-irc3113.docx",
+          "hasGenerator": true,
+          "commonMistakes": [
+            "以為撤銷公司註冊＝自動取消商業登記 — 要另外遞 IRC3113",
+            "過咗 1 個月 deadline 先交 — 最高罰 HK$5,000 + 監禁 1 年",
+            "解散前冇 close 銀行戶口 — 資金變無主財物歸政府",
+            "公司解散後銷毀所有文件 — 稅例要求保留至少 7 年",
+            "冇通知銀行同供應商 — 可能有人繼續用公司名義交易"
+          ],
+          "generatorUrl": "/deregistration-irc3113-generator",
+          "demoImage": "/assets/demo/dereg-step6.png"
+        }
+      ],
+      "rejectionRisks": [
+        "冇取消商業登記 = 最高罰 HK$5,000 + 監禁 1 年",
+        "解散前冇 close 銀行戶口 = 資金變無主財物，要申請恢復註冊先攞得返",
+        "冇保留公司紀錄 7 年 = 違反稅務條例，可被罰款",
+        "解散後先發現有海外資產未處理 = 要申請恢復註冊，額外時間金錢"
+      ],
+      "mode": "A",
+      "needsGenerator": true,
+      "needsGuideContent": true,
+      "crossStepDeps": "Steps 1-5 (must complete deregistration process before post-dissolution steps)",
+      "generatorType": "Interactive PDF Generator",
+      "generatorUrl": "/deregistration-irc3113-generator",
+      "generatorDescription": "Interactive PDF Generator — 填 IRC3113 資料 → 一鍵生成已填好嘅結束業務通知書 PDF"
+    }
+  ],
+  "finalDonate": {
+    "title": "幫到你嗎？請我飲杯咖啡 ☕",
+    "message": "呢份指南係由真實經歷者整理，全部免費公開。如果幫到你順利解散公司、慳返幾千蚊秘書公司費用，可以請我飲杯咖啡支持下，等我繼續製作更多免費指南！",
+    "goalMessage": "目標：100 次支持下載後，我會擴展到更多公司合規流程指南 🎯",
+    "buyMeACoffeeUrl": "https://buymeacoffee.com/esgov",
+    "emailCollectionTitle": "想我哋提供咩指南？",
+    "emailCollectionMessage": "可以話俾我哋知，你想睇咩公司合規文件 😊"
+  }
+}

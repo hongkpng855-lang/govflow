@@ -1,0 +1,443 @@
+{
+  "meta": {
+    "product": "Product 4 - Hong Kong Company Deregistration Guide",
+    "site": "ESGov (esgov.org)",
+    "language": "Traditional Chinese (香港繁體)",
+    "lastUpdated": "2026-06-17",
+    "sourceNotes": "Researched from Companies Registry (cr.gov.hk), IRD (ird.gov.hk), GovHK, CLIC, PAT CPA, Statrys, Kaizen CPA, and commercial secretarial firms."
+  },
+
+  "legalFramework": {
+    "primaryLegislation": {
+      "name": "Companies Ordinance (Cap. 622)",
+      "keySections": {
+        "s749": "Conditions and excluded companies for deregistration",
+        "s750": "Right to apply for deregistration (private companies & companies limited by guarantee)",
+        "s751": "Publication in Gazette — notice of proposed deregistration and final deregistration",
+        "s765": "Court application for restoration of deregistered company"
+      },
+      "taxOrdinance": {
+        "name": "Inland Revenue Ordinance (Cap. 112)",
+        "s88B": "Commissioner may issue Notice of No Objection to deregistration"
+      }
+    },
+    "deregistrationVsWindingUp": {
+      "deregistration": {
+        "description": "行政程序 — 公司/成員/董事主動申請撤銷註冊 (s.750)",
+        "bestFor": "不營運、有償債能力的私人公司或擔保有限公司",
+        "cost": "HK$690 政府費 + 專業服務費",
+        "timeline": "5–9 個月",
+        "initiator": "公司 / 董事 / 成員（主動）"
+      },
+      "strikeOff": {
+        "description": "剔除註冊 — 公司註冊處處長行使法定權力，非公司可申請",
+        "bestFor": "處長有合理因由相信公司不營運",
+        "cost": "無申請費（但有欠交文件罰款）",
+        "timeline": "6–9 個月",
+        "initiator": "公司註冊處處長（被動）"
+      },
+      "windingUp": {
+        "description": "清盤 — 法律程序，委任清盤人清算賬目及資產",
+        "bestFor": "無償債能力 / 有複雜資產或債務的公司",
+        "cost": "HK$30,000+（清盤師費用）",
+        "timeline": "6–18 個月",
+        "initiator": "股東 / 債權人 / 法院"
+      }
+    },
+    "eligibleCompanies": [
+      "本地私人有限公司（private company limited by shares）",
+      "本地擔保有限公司（company limited by guarantee）"
+    ],
+    "excludedCompanies": {
+      "s749_2": [
+        "公眾公司（public company）",
+        "《銀行業條例》第155章所指的認可機構（銀行）",
+        "《保險公司條例》第41章所指的保險人",
+        "根據《證券及期貨條例》第571章持牌的法人",
+        "上述法團的相聯實體",
+        "《強積金計劃條例》第485章核准受託人",
+        "《受託人條例》第29章註冊的信託公司",
+        "擁有上述附屬公司的控權公司",
+        "申請前5年內曾屬上述類別的公司"
+      ]
+    },
+    "conditions": {
+      "s750_2": [
+        "公司所有成員均同意撤銷註冊（書面）",
+        "公司從未開始營業或運作，或在緊接申請前已停止營業或運作超過3個月",
+        "公司沒有尚未清償的債務（包括或然負債如銀行擔保）",
+        "公司不是任何法律程序的一方",
+        "公司的資產不包含位於香港的不動產",
+        "如公司是控權公司，其所有附屬公司的資產均不包含位於香港的不動產",
+        "公司已取得稅務局局長發出的《不反對撤銷公司註冊通知書》（即不反對通知書 / NNO）"
+      ]
+    }
+  },
+
+  "forms": {
+    "ndr1": {
+      "name": "NDR1 — 私人公司或擔保有限公司撤銷註冊申請書",
+      "url": "https://www.cr.gov.hk/en/companies_ordinance/docs/NDR1_fillable.pdf",
+      "fee": "HK$420（不可退還）",
+      "purpose": "向公司註冊處申請撤銷公司註冊（根據 s.750）",
+      "filingDeadline": "必須於不反對通知書發出日期起計3個月內遞交",
+      "deliveryMethods": [
+        "電子形式：經 e-Services Portal 網上提交",
+        "紙本形式：親身或郵寄至金鐘道政府合署14樓公司註冊處收款處"
+      ],
+      "sections": {
+        "2A": "申請人類別（公司本人／董事／成員）",
+        "2B": "申請人資料（全名、通訊地址、電郵）",
+        "2C": "獲提名接收撤銷通知的自然人資料（如申請人為公司本身則必須填寫）",
+        "2D": "申請條件聲明書（申請人須核實公司符合所有條件）",
+        "2E": "隨表格交付的文件（不反對通知書正本等）"
+      },
+      "penalties": {
+        "falseStatement": "明知或罔顧實情向處長提供虛假或誤導性資料，可處罰款HK$300,000及監禁2年（公訴）或罰款HK$100,000及監禁6個月（簡易程序）"
+      }
+    },
+    "ir1263": {
+      "name": "IR1263 — 要求發出不反對撤銷公司註冊通知書申請表",
+      "url": "https://www.ird.gov.hk/chi/paf/for.htm#IR1263",
+      "specimenUrl": "https://www.ird.gov.hk/chi/pdf/c_ir1263specimen.pdf",
+      "fee": "HK$270（不可退還）",
+      "purpose": "向稅務局局長申請《不反對撤銷公司註冊通知書》",
+      "whoCanApply": [
+        "該公司的董事",
+        "該公司的成員或被提名人（連同由公司董事簽署的授權書）"
+      ],
+      "processingTime": "約21個工作天（如稅務事宜完結）",
+      "deliveryMethods": [
+        "郵遞：寄往香港郵政總局郵箱132號稅務局局長收",
+        "親身：九龍啟德協調道5號稅務中心14樓撤銷註冊組",
+        "網上：持「智方便+」或電子證書經電子表格提交"
+      ]
+    },
+    "irc3113": {
+      "name": "IRC3113 — 結束業務通知書",
+      "purpose": "向商業登記署通知業務結束（撤銷公司註冊 ≠ 自動取消商業登記）",
+      "deadline": "業務結束日期起計1個月內",
+      "penalty": "最高罰款HK$5,000 + 監禁1年"
+    }
+  },
+
+  "officialSources": {
+    "companiesRegistry": {
+      "homepage": "https://www.cr.gov.hk",
+      "deregistrationGuide": "https://www.cr.gov.hk/tc/services/deregister-company.htm",
+      "faqDeregStrikeWinding": "https://www.cr.gov.hk/tc/faq/local-company/dereg-striking-off-winding-up.htm",
+      "ndr1Form": "https://www.cr.gov.hk/en/companies_ordinance/docs/NDR1_fillable.pdf",
+      "pamphlet": "https://www.cr.gov.hk/tc/services/docs/deregistration_defunct_solvent_company.pdf",
+      "feeSchedule": "https://www.cr.gov.hk/en/services/fees.htm",
+      "eServices": "https://www.e-services.cr.gov.hk",
+      "gazette": "https://www.gld.gov.hk/egazette"
+    },
+    "inlandRevenueDepartment": {
+      "homepage": "https://www.ird.gov.hk",
+      "nnoGuide": "https://www.ird.gov.hk/chi/tax/bus_han.htm",
+      "ir1263Form": "https://www.ird.gov.hk/chi/paf/for.htm#IR1263",
+      "ir1263Specimen": "https://www.ird.gov.hk/chi/pdf/c_ir1263specimen.pdf",
+      "cancelBusinessReg": "https://www.ird.gov.hk/chi/tax/bre_cbr.htm",
+      "brFeeTable": "https://www.ird.gov.hk/eng/pdf/brfee_table.pdf",
+      "electronicForm": "https://eform.cefs.gov.hk/form/ird060/tc/"
+    },
+    "govHk": {
+      "portal": "https://www.gov.hk/tc/business/registration/deregistration/index.htm"
+    },
+    "clic": {
+      "guide": "https://clic.org.hk/zh/topics/businessAndCommerce/setting_up_business_in_Hong_Kong/the_new_company_ordinance/de-registration"
+    },
+    "legislation": {
+      "cap622": "https://www.elegislation.gov.hk/hk/cap622",
+      "cap622K_fees": "https://www.elegislation.gov.hk/hk/cap622K!en"
+    }
+  },
+
+  "process": {
+    "overview": "撤銷公司註冊分為兩大階段：先向稅務局申請不反對通知書，再向公司註冊處提交撤銷申請。",
+    "totalTimeline": "一般需時6至9個月，最快約5個月（若不反對通知書迅速發出且無反對）",
+    "steps": [
+      {
+        "step": 1,
+        "title": "準備階段 — 自查是否符合條件",
+        "details": [
+          "確認公司已停止營運超過3個月（或從未營運）",
+          "全體股東書面同意撤銷註冊",
+          "清償所有債務（包括稅款、商業登記費、罰款等）",
+          "結束所有銀行戶口，轉走結餘",
+          "處置所有資產（物業、車輛、存貨、證券、知識產權等）",
+          "遣散員工，供足強積金",
+          "確認公司無牽涉任何法律訴訟",
+          "確認公司在香港沒有不動產（包括附屬公司）",
+          "提交所有未交的周年申報表（NAR1）及利得稅報稅表（BIR51）",
+          "回覆稅務局所有未處理的查詢",
+          "處理所有未完結的評稅反對或上訴"
+        ],
+        "note": "這是最關鍵的一步。若條件未符即申請，只會浪費時間及申請費用。"
+      },
+      {
+        "step": 2,
+        "title": "向稅務局申請《不反對撤銷公司註冊通知書》",
+        "details": [
+          "填妥 IR1263 申請表",
+          "連同 HK$270 支票（抬頭「香港特別行政區政府」）遞交",
+          "可郵寄、親身或網上提交",
+          "稅務局審查公司稅務狀況（約21個工作天）",
+          "如無未清稅務事宜，稅務局局長發出不反對通知書",
+          "如稅務有問題，局長會發出通知書列明未完成事項，辦妥後可要求重新考慮（無須再付費）"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "向公司註冊處提交撤銷註冊申請（NDR1）",
+        "details": [
+          "必須在不反對通知書發出日起計3個月內遞交，否則通知書失效須重申請",
+          "填妥 NDR1 表格（須核實申請條件）",
+          "連同 HK$420 費用及不反對通知書正本（或核證副本）一併交付",
+          "可網上（e-Services Portal）或紙本提交",
+          "公司註冊處約4-5個工作天發出確認收件信"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "憲報公告（第一份）及反對期",
+        "details": [
+          "公司註冊處處長在確認收件後約3星期，於香港憲報刊登第一份公告（s.751(1)）",
+          "公告建議撤銷有關公司的註冊",
+          "由刊登日起計3個月反對期（任何受影響人士可提出反對）",
+          "憲報一般逢星期五出版，可於 www.gld.gov.hk/egazette 查閱"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "憲報公告（第二份）及正式解散",
+        "details": [
+          "如3個月內無人反對，處長刊登第二份憲報公告（s.751(3)）",
+          "公告刊登當日公司正式解散（dissolution）",
+          "處長會通知申請人或獲提名人士",
+          "公司從公司登記冊中除名，法律實體終止存在"
+        ]
+      },
+      {
+        "step": 6,
+        "title": "解散後跟進事項",
+        "details": [
+          "公司解散後，所有未處置的財產（包括銀行戶口結餘）自動歸屬香港特別行政區政府（bona vacantia）",
+          "已解散的公司不可再進行任何商業活動",
+          "業務及會計紀錄須保留至少7年（《稅務條例》第51C條）",
+          "如日後發現未處理的資產或債務，可向原訟法庭申請恢復註冊（s.765，解散後20年內可申請）",
+          "注意：撤銷公司註冊 ≠ 自動取消商業登記！須另行填寫 IRC3113 通知商業登記署"
+        ]
+      }
+    ],
+    "ongoingObligations": {
+      "note": "直至第二份憲報公告刊登前，公司的法律地位仍然存在，所有法定義務必須繼續履行",
+      "obligations": [
+        "每年準時提交周年申報表（NAR1）及繳費（HK$105準時，逾期罰款HK$870–HK$3,480）",
+        "商業登記證須續期至解散為止（2026/27年度一年證 HK$2,350，三年證 HK$6,170）",
+        "如收到利得稅報稅表仍須按時提交",
+        "申報註冊辦事處或董事/秘書的任何變更"
+      ]
+    }
+  },
+
+  "commonMistakes": [
+    {
+      "issue": "未交利得稅報稅表（包括零申報）就申請",
+      "detail": "這是申請被拒最常見原因。即使公司從未營運，如稅務局已發出報稅表，仍須提交零申報。未提交即不符合IRD發出不反對通知書的條件。",
+      "impact": "申請被拒，HK$270 費用不退還，需補交後重新申請"
+    },
+    {
+      "issue": "未滿3個月停止營運期就申請",
+      "detail": "申請必須在停止營運/營業後3個月才能提出。如在過去3個月內有過任何商業活動（開票、收款、付款等），均不符合條件。",
+      "impact": "NDR1 申請被拒，HK$420 費用不退還"
+    },
+    {
+      "issue": "取得不反對通知書後超過3個月才提交 NDR1",
+      "detail": "不反對通知書的有效期只有3個月。逾期須重新向稅務局申請（再付 HK$270）。",
+      "impact": "需重新申請，額外耗時及費用"
+    },
+    {
+      "issue": "銀行戶口未關閉或未清空結餘",
+      "detail": "公司解散後，戶口內任何款項自動成為無主財物（bona vacantia）歸政府所有。要取回需向法院申請恢復註冊。",
+      "impact": "資金永久損失或需耗費大量時間和金錢追回"
+    },
+    {
+      "issue": "以為提出申請後就可以不理合規義務",
+      "detail": "在第二份憲報公告刊登前，公司法律地位仍在。漏交周年申報表（NAR1）或商業登記費可被檢控，董事個人承擔刑責。",
+      "impact": "罰款、檢控、解散程序被拖延"
+    },
+    {
+      "issue": "沒有獨立取消商業登記",
+      "detail": "撤銷公司註冊並不等於自動取消商業登記。須在結業後1個月內另填 IRC3113 通知商業登記署。",
+      "impact": "最高罰款 HK$5,000 + 監禁1年"
+    },
+    {
+      "issue": "股東失聯、過身或移居海外",
+      "detail": "申請條件要求「所有成員均同意」。如有股東無法聯絡或已去世，無法取得書面同意，程序會卡住。",
+      "impact": "程序癱瘓，可能需改行清盤或法院方式處理"
+    },
+    {
+      "issue": "公司有未處理的知識產權或海外應收款項",
+      "detail": "公司解散後這些資產會成為無主財物，需申請恢復註冊才能處理。",
+      "impact": "資產損失或複雜的恢復註冊程序"
+    },
+    {
+      "issue": "多年未交BR費及NAR1的「殼公司」",
+      "detail": "想解散時才發現需補交多年BR費、NAR1、補審計、補報稅，總成本可超過HK$50,000。",
+      "impact": "巨額補交費用及罰款"
+    }
+  ],
+
+  "pricing": {
+    "governmentFees": {
+      "ir1263": {"amount": 270, "description": "稅務局 — 申請不反對通知書（不可退還）"},
+      "ndr1": {"amount": 420, "description": "公司註冊處 — 撤銷註冊申請費（不可退還）"},
+      "totalGov": 690,
+      "note": "上述為2026年政府費用標準。程序期間仍須繳付商業登記費（一年證 HK$2,350）及周年申報費（HK$105）。"
+    },
+    "marketProfessionalFees": {
+      "budget": {
+        "range": "HK$1,600 – HK$2,500",
+        "providers": ["中小型秘書公司", "網上平台如 Easy Marketing、Startupregistry"],
+        "included": "基本文件處理及遞交，不包補交文件/審計"
+      },
+      "midRange": {
+        "range": "HK$3,000 – HK$5,000",
+        "providers": ["Kaizen CPA (HK$4,800)", "PAT CPA (HK$2,500–$5,000)"],
+        "included": "審閱文件、準備董事決議、IRD及CR申請、進度更新"
+      },
+      "premium": {
+        "range": "HK$5,000 – HK$8,000",
+        "providers": ["大型會計師行", "律師事務所"],
+        "included": "全套服務包括補交文件、審計、稅務清繳、資產處理建議"
+      },
+      "note": "以上為2025-2026年市場參考價格。如公司有未交報稅表、欠稅、或需補審計，費用會大幅增加。"
+    },
+    "comparisonCard": {
+      "esgov": {"price": "免費（Free）", "offering": "完整指南 + NDR1填寫生成器 + 檢查清單 + 步驟引導"},
+      "competitorBudget": {"price": "HK$1,600–$2,500", "offering": "基本代辦服務（文件遞交）"},
+      "competitorMid": {"price": "HK$3,000–$5,000", "offering": "全套秘書服務（審閱+申請+跟進）"},
+      "competitorPremium": {"price": "HK$5,000–$8,000", "offering": "會計師/律師全套（含審計及稅務）"}
+    }
+  },
+
+  "suggestedStructure": {
+    "guideOverview": {
+      "suggestedSteps": 6,
+      "tone": "專業、清晰、權威，繁體中文（香港）",
+      "targetAudience": "香港中小企東主、公司董事、創業者"
+    },
+    "pageStructure": [
+      {
+        "section": "hero",
+        "content": "標題、副標題、CTA（使用生成器）"
+      },
+      {
+        "section": "what-is-deregistration",
+        "content": "什麼是撤銷公司註冊？與清盤/剔除註冊的分別"
+      },
+      {
+        "section": "conditions",
+        "content": "申請資格與條件（7大條件 + 排除名單）"
+      },
+      {
+        "section": "step-by-step-guide",
+        "content": "六步完整流程（含每步詳細說明、所需文件、預計時間）",
+        "steps": [
+          "第1步：準備自查 — 條件檢查清單（可互動）",
+          "第2步：股東書面同意 — 模板下載",
+          "第3步：申請不反對通知書（IR1263）— 填寫指引 + 生成器",
+          "第4步：提交撤銷註冊申請（NDR1）— 填寫生成器",
+          "第5步：等候憲報公告及反對期 — 時間線追蹤",
+          "第6步：解散後跟進 — 取消商業登記、保留文件"
+        ]
+      },
+      {
+        "section": "cost-calculator",
+        "content": "費用計算機（政府費 + 市場價格比較卡）"
+      },
+      {
+        "section": "required-forms",
+        "content": "所需表格一覽（NDR1, IR1263, IRC3113）及下載連結"
+      },
+      {
+        "section": "common-mistakes",
+        "content": "常見錯誤與避免方法"
+      },
+      {
+        "section": "faq",
+        "content": "常見問題（FAQ）"
+      },
+      {
+        "section": "checklist-download",
+        "content": "可下載的PDF檢查清單"
+      }
+    ],
+    "interactiveGenerators": [
+      {
+        "name": "NDR1 填寫生成器",
+        "description": "一步步引導填寫 NDR1 表格，生成可下載的已填PDF",
+        "fields": ["公司名稱及CR編號", "商業登記號碼", "申請人類別", "申請人資料", "獲提名自然人資料", "條件確認聲明"]
+      },
+      {
+        "name": "IR1263 填寫生成器",
+        "description": "一步步引導填寫 IR1263 表格",
+        "fields": ["公司資料", "申請人資料", "稅務狀況確認"]
+      },
+      {
+        "name": "資格預檢工具（Eligibility Checker）",
+        "description": "互動問答判斷公司是否符合撤銷註冊條件",
+        "questions": [
+          "公司是否已停止營運超過3個月？",
+          "全體股東是否同意撤銷？",
+          "有無未清償債務？",
+          "有無牽涉法律訴訟？",
+          "有無香港不動產？"
+        ]
+      },
+      {
+        "name": "費用計算機",
+        "description": "根據公司狀況估算總費用（政府費 + 必要專業服務）"
+      },
+      {
+        "name": "時間線追蹤工具",
+        "description": "按申請日期推算預計各階段的時間節點"
+      }
+    ],
+    "documentsTemplates": [
+      "全體股東書面同意撤銷註冊模板",
+      "董事會決議撤銷註冊模板",
+      "結束業務通知書（IRC3113）填寫指引",
+      "公司結業前檢查清單（PDF可下載）",
+      "文件保存清單及指引"
+    ]
+  },
+
+  "keywords": {
+    "primary": {
+      "zh_hk": ["香港公司撤銷註冊", "有限公司撤銷註冊", "撤銷公司註冊", "公司解散", "公司註銷"],
+      "en": ["HK company deregistration", "Hong Kong company strike-off", "deregister Hong Kong company"]
+    },
+    "secondary": {
+      "zh_hk": ["公司結業", "取消商業登記", "不反對通知書", "註銷公司程序", "有限公司解散", "公司停業", "NDR1 表格", "IR1263 表格"],
+      "en": ["NDR1 form", "IR1263 form", "notice of no objection Hong Kong", "bona vacantia HK", "strike off company Hong Kong", "company dissolution Hong Kong"]
+    },
+    "longTail": {
+      "zh_hk": [
+        "香港有限公司撤銷註冊流程及費用",
+        "公司撤銷註冊條件一覽",
+        "如何申請不反對撤銷公司註冊通知書",
+        "公司解散後銀行戶口處理",
+        "撤銷公司註冊與清盤分別",
+        "有限公司結業後文件要保留多久"
+      ],
+      "en": [
+        "how to deregister a Hong Kong company",
+        "Hong Kong company deregistration requirements",
+        "difference between strike off and winding up Hong Kong",
+        "what happens to bank account after company dissolution Hong Kong"
+      ]
+    }
+  }
+}

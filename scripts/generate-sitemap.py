@@ -25,6 +25,11 @@ PRIORITY = {
     '/company-name-change/': 0.7,
     '/company-name-change-generator/special-resolution/': 0.8,
     '/company-name-change-generator/nnc2/': 0.8,
+    '/deregistration/': 0.9,
+    '/deregistration-checklist-generator/': 0.8,
+    '/deregistration-ir1263-generator/': 0.8,
+    '/deregistration-ndr1-generator/': 0.8,
+    '/deregistration-irc3113-generator/': 0.8,
 }
 
 urlset = Element('urlset', xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
