@@ -87,7 +87,7 @@
   <section class="py-10">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="sr-only">所有網誌文章列表</h2>
-      <div class="space-y-3">
+      <div id="article-list" class="space-y-3">
 
         <!-- New Article: 零申報Dormant Company終極指南 -->
         <!-- New Article: 香港公司股份轉讓流程2026 -->
@@ -967,6 +967,14 @@
         </a>
 
       </div>
+
+      <!-- ═══ Pagination ═══ -->
+      <nav id="pagination" class="mt-8 flex items-center justify-center gap-2 flex-wrap" aria-label="Page navigation">
+        <button id="prev-page" class="px-4 py-2 rounded-lg bg-navy text-gold text-sm font-medium hover:bg-navy-light transition-colors disabled:opacity-40 disabled:cursor-not-allowed" disabled>← 上一頁</button>
+        <div id="page-numbers" class="flex items-center gap-1"></div>
+        <button id="next-page" class="px-4 py-2 rounded-lg bg-navy text-gold text-sm font-medium hover:bg-navy-light transition-colors disabled:opacity-40 disabled:cursor-not-allowed">下一頁 →</button>
+      </nav>
+
     </div>
   </section>
 
@@ -992,6 +1000,90 @@
       "logo": "https://esgov.org/assets/images/esgov-logo.png"
     }
   }
+  </script>
+
+  <!-- ═══ Client-side Pagination ═══ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const PER_PAGE = 15;
+      const articleList = document.getElementById('article-list');
+      const pageNumbersDiv = document.getElementById('page-numbers');
+      const prevBtn = document.getElementById('prev-page');
+      const nextBtn = document.getElementById('next-page');
+      const allArticles = articleList.querySelectorAll('a');
+
+      // Wrap each <a> in a div.article-wrapper so show/hide works cleanly
+      // (comments between cards remain but are harmless)
+      allArticles.forEach(function (a) {
+        var wrapper = document.createElement('div');
+        wrapper.className = 'article-wrapper';
+        a.parentNode.insertBefore(wrapper, a);
+        wrapper.appendChild(a);
+      });
+
+      var wrappers = articleList.querySelectorAll('.article-wrapper');
+      var totalPages = Math.ceil(wrappers.length / PER_PAGE);
+      var currentPage = 1;
+
+      function showPage(page) {
+        if (page < 1 || page > totalPages) return;
+        currentPage = page;
+
+        // Show/hide articles
+        wrappers.forEach(function (w, i) {
+          var shouldShow = i >= (page - 1) * PER_PAGE && i < page * PER_PAGE;
+          w.style.display = shouldShow ? '' : 'none';
+        });
+
+        // Update prev/next buttons
+        prevBtn.disabled = (page === 1);
+        nextBtn.disabled = (page === totalPages);
+
+        // Build page number buttons
+        pageNumbersDiv.innerHTML = '';
+        for (var p = 1; p <= totalPages; p++) {
+          var btn = document.createElement('button');
+          btn.textContent = p;
+          btn.setAttribute('data-page', p);
+          btn.className = 'px-3 py-1.5 rounded-lg text-sm font-medium transition-colors';
+          if (p === page) {
+            btn.className += ' bg-gold text-navy font-bold';
+          } else {
+            btn.className += ' bg-navy text-gold hover:bg-navy-light';
+          }
+          btn.addEventListener('click', (function (pNum) {
+            return function () { showPage(pNum); scrollToTop(); };
+          })(p));
+          pageNumbersDiv.appendChild(btn);
+        }
+      }
+
+      function scrollToTop() {
+        var header = document.querySelector('header');
+        if (header) {
+          header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+
+      prevBtn.addEventListener('click', function () {
+        if (currentPage > 1) {
+          showPage(currentPage - 1);
+          scrollToTop();
+        }
+      });
+
+      nextBtn.addEventListener('click', function () {
+        if (currentPage < totalPages) {
+          showPage(currentPage + 1);
+          scrollToTop();
+        }
+      });
+
+      // Initial render
+      showPage(1);
+    });
   </script>
 
 </body>
