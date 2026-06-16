@@ -25,7 +25,8 @@
             "冇處理 Nominee 持股",
             "冇處理信託結構"
           ],
-          "generatorUrl": "/scr-shareholder-analysis-generator"
+          "generatorUrl": "/scr-shareholder-analysis-generator",
+          "demoImage": "/assets/demo/scr-step1.png"
         }
       ],
       "rejectionRisks": [
@@ -57,7 +58,8 @@
             "冇處理 Nominee 代名人持股（需穿透到實益擁有人）",
             "以為冇人就唔使記錄"
           ],
-          "generatorUrl": "/scr-identification-checklist-generator"
+          "generatorUrl": "/scr-identification-checklist-generator",
+          "demoImage": "/assets/demo/scr-step2.png"
         }
       ],
       "rejectionRisks": [
@@ -89,7 +91,8 @@
             "俾嘅回覆時間唔夠 1 個月",
             "有人唔回覆就唔理"
           ],
-          "generatorUrl": "/scr-notice-generator"
+          "generatorUrl": "/scr-notice-generator",
+          "demoImage": "/assets/demo/scr-step3.png"
         }
       ],
       "rejectionRisks": [
@@ -121,7 +124,8 @@
             "地址用郵政信箱",
             "冇簽署確認"
           ],
-          "generatorUrl": "/scr-data-collection-generator"
+          "generatorUrl": "/scr-data-collection-generator",
+          "demoImage": "/assets/demo/scr-step4.png"
         }
       ],
       "rejectionRisks": [
@@ -153,7 +157,8 @@
             "冇後備人選",
             "冇通知代表佢嘅法定職責"
           ],
-          "generatorUrl": "/scr-designated-rep-generator"
+          "generatorUrl": "/scr-designated-rep-generator",
+          "demoImage": "/assets/demo/scr-step5.png"
         }
       ],
       "rejectionRisks": [
@@ -187,7 +192,8 @@
             "冇定期 update",
             "冇控制人但留空登記冊（冇寫聲明）",
             "冇記錄指定代表"
-          ]
+          ],
+          "demoImage": "/assets/demo/scr-step6.png"
         }
       ],
       "rejectionRisks": [
