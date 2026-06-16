@@ -101,7 +101,8 @@ SEO（起點）→ Researcher → Writer → SEO（終點+deploy）
 
 ### 4b. Technical Setup
 - [ ] 文章放 `blog/{article-slug}.html`
-- [ ] 更新 `blog/index.html`（加新 card）
+- [ ] 更新 `blog/index.html`（加新 card 做第一條）
+- [ ] 更新 `index.html`（主頁 blog section — 加新 card 做第一條）
 - [ ] 更新 `sitemap.xml`
 - [ ] 行 seo-checker.py 確認 0 issues
 - [ ] Deploy（等 user 批准）
