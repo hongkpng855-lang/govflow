@@ -73,7 +73,6 @@ SED_FILES=(
   company-name-change/index.html
   company-name-change-generator/nnc2/index.html
   company-name-change-generator/special-resolution/index.html
-  company-secretary/index.html
 )
 sed -i "s|\(mt-2 opacity-40\">\)v[0-9.]\+|\1${NEW_VER}|g" "${SED_FILES[@]}"
 
