@@ -1,7 +1,7 @@
 {
-  "version": "12.26",
-  "commit": "fba80ff",
+  "version": "12.27",
+  "commit": "28b3524",
   "date": "2026-06-17",
-  "build": "20260617-0128",
+  "build": "20260617-0133",
   "env": "github-pages"
 }
