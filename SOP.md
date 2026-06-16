@@ -244,7 +244,7 @@
    - 優先採集：gov.hk、cr.gov.hk（官方）
    - 然後：accounting firm 網站（patcpa、osome、acaccountinghk 等）
    - 最後：創業/商業資訊網站
-3. 用 web_fetch 取得每個網站嘅完整流程內文
+3. 用 web_extract 取得每個網站嘅完整流程內文
 
 #### Step 2.2 — 比對確認流程
 - 比較各網站嘅：步驟數、順序、費用、所需文件清單
@@ -332,3 +332,125 @@
 - [ ] Demo 圖有水印（右下角「示範範例 · ESGov」）
 - [ ] Generator PDF 有跨頁斜水印
 - [ ] 水印透明度合適（唔遮內容但又清晰可見）
+
+---
+
+## 📋 WYSIWYG Generator 製作流程（html2canvas + jsPDF 多頁模式）
+
+適用於互動填寫後截圖生成 PDF 嘅 Generator（SCR 系列 generator 標準模式）。
+
+### 架構要點
+
+```
+User 填寫 <input>/<select>/<textarea> →
+  html2canvas 截取 #pdf-form →
+  canvas slice 多頁 →
+  每頁 addImage → jsPDF save
+```
+
+### 1. Generator HTML 結構
+
+- 載入套件：html2canvas 1.4.1 + jsPDF 2.5.1（CDN）
+- 表單容器：`<div id="pdf-form">` — 模擬 A4 紙張外觀
+- 所有輸入用標準 `<input type="text">` / `<select>` / `<textarea>`
+- Field 命名：`f-{fieldname}`（如 `f-company`, `f-date`）
+
+### 2. ⚠️ html2canvas input rendering fix（必做）
+
+html2canvas **唔識 render** `<input>` / `<select>` / `<textarea>` 嘅文字值。Capture 前必須替換：
+
+```javascript
+// Capture 前：將 input 替換為 span（保留文字）
+const inputReplacements = [];
+document.querySelectorAll('#pdf-form input:not([type=checkbox]):not([type=hidden]), #pdf-form select, #pdf-form textarea').forEach(function(el) {
+  var span = document.createElement('span');
+  span.className = 'input-replacement';
+  if (el.tagName === 'SELECT') {
+    span.textContent = el.options[el.selectedIndex] ? el.options[el.selectedIndex].text : '';
+  } else {
+    span.textContent = el.value || '';
+  }
+  var style = getComputedStyle(el);
+  span.style.cssText = 'font:' + style.font + ';color:' + style.color + ';border-bottom:1px solid #999;background:transparent;padding:2px 4px;white-space:pre-wrap;display:inline-block;min-width:80px;';
+  el.parentNode.insertBefore(span, el);
+  el.style.display = 'none';
+  inputReplacements.push({ original: el, replacement: span });
+});
+
+// Capture 後：還原 inputs
+inputReplacements.forEach(function(item) {
+  item.replacement.remove();
+  item.original.style.display = '';
+});
+```
+
+### 3. 📄 多頁 PDF split（必做）
+
+避免成個 document 縮落一頁 A4 導致文字 cut off：
+
+```javascript
+const imgData = canvas.toDataURL('image/png');
+const doc = new jsPDF('p', 'mm', 'a4');
+const pageW = 210, pageH = 297, margin = 10;
+const contentW = pageW - margin * 2;
+const contentH = pageH - margin * 2;
+
+// 計算 canvas slice 高度
+const pxRatio = canvas.width / contentW;
+const pagePxH = contentH * pxRatio;
+const totalPages = Math.ceil(canvas.height / pagePxH);
+
+for (let i = 0; i < totalPages; i++) {
+  if (i > 0) doc.addPage();
+  const srcY = i * pagePxH;
+  const srcH = Math.min(pagePxH, canvas.height - srcY);
+  const tempCanvas = document.createElement('canvas');
+  tempCanvas.width = canvas.width;
+  tempCanvas.height = srcH;
+  const ctx = tempCanvas.getContext('2d');
+  ctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, srcH);
+  const pageImgData = tempCanvas.toDataURL('image/png');
+  const pageImgH = contentW * (srcH / canvas.width);
+  const yOffset = margin + (contentH - Math.min(pageImgH, contentH)) / 2;
+  doc.addImage(pageImgData, 'PNG', margin, yOffset, contentW, Math.min(pageImgH, contentH));
+}
+```
+
+### 4. 生成前 sync 所有動態字段
+
+Capture 前確保所有 JS 更新嘅數值已同步：
+
+```javascript
+// Call all sync functions
+updateDeadlineDisplay();
+updateTestTable();
+// ... etc
+await new Promise(r => setTimeout(r, 300));
+```
+
+### 5. Email Gate 整合（選用）
+
+下載前彈出 email modal，留低 email 後先繼續生成：
+
+```javascript
+// 按「下載」→ check email gate
+const emailDone = localStorage.getItem('esgov_email_done');
+if (!emailDone) { showEmailGate(); return; }
+
+// Email submit → save to localStorage + generate PDF
+function submitDownloadEmail() {
+  const email = document.getElementById('downloadEmail').value;
+  if (!email.includes('@')) return;
+  localStorage.setItem('esgov_email_done', 'true');
+  closeEmailGate();
+  setTimeout(function(){ generatePDF(); }, 100);
+}
+```
+
+### 6. Debug 要點
+
+- html2canvas logging 設 false（否則 console 好嘈）：`html2canvas(el, { logging: false, ... })`
+- scale=3 確保高清（但會慢啲，手機要考慮）
+- capture-mode class：隱藏非表單 UI（header, footer, buttons）再 capture
+- `await document.fonts.ready` — 確保字型載入先 capture
+- Watermark 用 `doc.saveGraphicsState()` + `setGState({ opacity: 0.12 })` + `restoreGraphicsState()`

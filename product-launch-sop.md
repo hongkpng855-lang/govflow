@@ -8,9 +8,25 @@
 
 所有文件都要有獨立 Generator 頁面，分兩種模式：
 
-#### 模式 A：🚀 互動填寫（編輯線上嘅版本）
+#### 模式 A：🚀 互動填寫（WYSIWYG — 截圖生成 PDF）
 
-適用於需要填寫後生成 PDF 嘅文件（Step 1-3）。
+適用於需要填寫後生成 PDF 嘅文件（Step 1-6）。**最新標準係 html2canvas + jsPDF 截圖模式**（SCR 系列 generator），唔再用 contenteditable。
+
+```html
+<!-- CDN 載入 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- 表單容器：模擬 A4 紙張 -->
+<div id="pdf-form">
+  <input type="text" id="f-company" />
+  <select id="f-type">...</select>
+  <textarea id="f-address">...</textarea>
+</div>
+
+<!-- 生成按鈕 -->
+<button onclick="generatePDF()">📄 下載 PDF</button>
+```
 
 ```
 ┌─────────────────────────────────┐
@@ -19,19 +35,24 @@
 ├─────────────────────────────────┤
 │  文件說明 + 常見錯誤             │
 ├─────────────────────────────────┤
-│  線上可編輯表單 (contenteditable)│  ← 跟 Word template layout
+│  📄 線上填寫表單 (input/select)  │  ← 用標準 HTML input fields
 │  [field 1], [field 2], ...      │
 ├─────────────────────────────────┤
-│  🚀 下載 PDF（一鍵生成）          │  ← jsPDF + html2canvas
+│  🚀 下載 PDF（一鍵生成）          │  ← html2canvas + jsPDF 多頁
 └─────────────────────────────────┘
 ```
 
 **需要：**
 - `{step}-realdemo.png` — 真實填寫範例
 - `{step}-wordtopdf.png` — 空白模板 screenshot
-- `{product-id}-generator.html` — **互動表單（contenteditable fields）**
+- `{product-id}-generator.html` — **標準 HTML 表單（input/select/textarea）**
 - `processes.json` → `hasGenerator: true` + `generatorUrl`
 - 卡面顯示：**🚀 填寫 + 生成 PDF**
+
+**⚠️ 關鍵坑（v12.1-v12.2 已 fix）：**
+1. **html2canvas input rendering** → capture 前必須將 `<input>/<select>/<textarea>` 替換為 `<span>`，capture 後還原（見 SOP.md WYSIWYG section）
+2. **多頁 PDF split** → 唔可以將整頁縮落一頁 A4，要用 canvas slice 逐頁 addImage（見 SOP.md）
+3. **Capture mode** → capture 前加 `capture-mode` class 隱藏 header/footer/buttons
 
 #### 模式 B：👁️ 範例+下載（淨係連結去官方嘅文件版本）
 
@@ -84,90 +105,62 @@
 
 當需要為某個 Step 製作 Generator 時，先決定用 **模式 A（互動填寫）** 定 **模式 B（範例+下載）**。
 
-### 模式 A：互動填寫 Generator（Sold Note, Instrument, Letter 模式）
+### 模式 A：互動填寫 Generator（WYSIWYG html2canvas 模式 — SCR 系列 generator 標準）
 
-#### Step 1 — 分析 Word 模板
-```bash
-python3 -c "
-from docx import Document
-doc = Document('templates/{filename}.docx')
-for i, p in enumerate(doc.paragraphs):
-    if p.text.strip():
-        print(f'{i}: {p.text}')
-"
-```
-- 標記所有 fillable fields（公司名、人名、日期、簽名等）
-- 留意 checkbox / radio 選項
-- 記錄簽名位（通常需要「親筆簽署後掃描」提示）
+最新 generator 使用 **html2canvas + jsPDF 截圖模式**（唔再用 contenteditable）。
 
-### Step 2 — Copy 現有 Generator 做 Template
-- Copy `sold-note-generator.html` → `{product-id}-generator.html`
-- 修改以下部分：
+#### Step 1 — Copy 現有 Generator 做 Template
+- Copy `scr-notice-generator/index.html` → `{product-id}-generator/index.html`
+- 或者 copy `scr-shareholder-analysis-generator/index.html`（table-based layout）
 
-#### 2a. Head meta tags
-- `<title>` — 改為新產品名稱
-- `<meta name="description">` — 改為新產品描述
-- `<meta property="og:title">` / `og:description` / `og:url` — 對應更新
-- `<link rel="canonical">` — 更新為新網址
+#### Step 2 — 修改 Head + Navigation
+- `<title>` — 產品名稱
+- `<meta name="description">` — 產品描述
+- OG / canonical — 對應更新
+- 導航 back link：指向產品頁
 
-#### 2b. Navigation
-- Back link: `href="shareholder-transfer.html"`（指向產品頁）
-
-#### 2c. 參考圖片
+#### Step 3 — 參考圖片
 ```html
-<img src="assets/demo/{step}-realdemo.png?v=9.x" alt="真實案例" />
-<img src="assets/demo/{step}-wordtopdf.png?v=9.x" alt="可修改文件" />
+<img src="/assets/demo/{step}-realdemo.png?v=12.x" alt="真實案例" />
+<img src="/assets/demo/{step}-wordtopdf.png?v=12.x" alt="可修改文件" />
 ```
-更新 `openTemplateModal()` 嘅兩個 tab 嘅圖片 src
+更新 modal 內嘅兩個 tab 圖片 src
 
-#### 2d. 文件說明 + 常見錯誤
-- 更新文件名稱同描述
-- 更新常見錯誤列表（從 processes.json 直接 copy）
+#### Step 4 — 文件說明 + 常見錯誤
+更新文件名稱、描述同常見錯誤列表（從 processes.json copy）
 
-#### 2e. 表單 FORM（最重要部分）
-- Header bar：改標題（`LETTER OF TRANSFEREE OF SHARES`、中文名）
-- 設計 field layout 跟 Word template 結構
-- 每個 field 用 `contenteditable="true"` 嘅 `div`
-- Field ID 命名：`f1`, `f2`, ... `fN`
-- 日期 field 加 `class="field-date"`
-- 特殊互動（checkbox/radio 選項）用 JavaScript 自訂
+#### Step 5 — 表單結構 (#pdf-form)
+- 用 `<input type="text">` / `<select>` / `<textarea>`（標準 HTML，唔係 contenteditable）
+- Field id：`f-{fieldname}`（如 `f-company`, `f-date`）
+- 日期 field 用 `<input type="date">`
+- 簽名位用 `<input type="text" placeholder="親筆簽署後掃描">`
+- **Field ID 命名同 getVals/sync 對應**
 
-#### 2f. getVals() 更新
-```javascript
-function val(id) { return (document.getElementById(id).textContent || '').trim(); }
-function sig(id) { const v=val(id); return (v && v !== '親筆簽署後掃描') ? v : '________________'; }
-return {
-  f1: val('f1'),
-  f2: val('f2'),
-  ...
-  fN: sig('fN'),  // 簽名位用 sig()
-  fDate: dateStr,
-  // 如有選項邏輯：
-  selectedOption: selectedOption || '1',
-};
-```
+#### Step 6 — PDF 生成邏輯 (generatePDF)
+參考 `scr-notice-generator/index.html` 嘅 `generatePDF()` 函數，包括：
+- input→span 替換（html2canvas rendering fix）
+- canvas slice 多頁 split
+- capture mode class toggle
+- email gate 檢查
+- watermark 疊加
 
-#### 2g. downloadPDF() 更新
-- Field map：`const vMap = { f1:'f1', f2:'f2', ..., fN:'fN' }`
-- PDF filename：`doc.save('{Product_Name}_Filled.pdf')`
-- Email gate fields：
-  - `page: '{product-id}-generator'`
-  - `docType: '{文件中文名（英文名）}'`
-  - `_subject: '📬 ESGov 新下載（{中文名}）：' + email`
-
-### Step 3 — 更新 processes.json
-- 該文件嘅 document 加：
-  ```json
+#### Step 7 — 更新 processes.json
+```json
+{
   "hasGenerator": true,
-  "generatorUrl": "{product-id}-generator.html"
-  ```
+  "generatorUrl": "/{product-id}-generator"
+}
+```
 
-### Step 4 — 更新 deploy.sh
-- 加新頁名到 `ALLOWED_PAGES` 變數
-- 加新頁名到 version badge sed 命令
+#### Step 8 — 更新 deploy.sh
+- 加 `{product-id}-generator/index.html` 到 SED_FILES
 
-### Step 5 — 更新 sitemap.py
-- 加新頁到 `PRIORITY` dict（generator 統一 priority `0.8`）
+#### Step 9 — 更新 sitemap.py
+- 加新頁到 PRIORITY dict（generator 統一 priority `0.8`）
+
+> **舊 pattern（contenteditable，已 deprecated）：**
+> 如果需要參考舊嘅 contenteditable generator（`sold-note-generator.html`），可以睇 git history 嘅 v12.0 以前版本。
+> 主要分別：contenteditable 用 `div[contenteditable=true]` 配合 `textContent` 提取數值；html2canvas 模式用標準 input fields + canvas capture 保證 WYSIWYG 輸出。
 
 ### 模式 B：範例+下載 Generator（Audit Report, NAR1, NSC1 模式）
 

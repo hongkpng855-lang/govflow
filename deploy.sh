@@ -53,7 +53,29 @@ EOF
 
 # Update version badge in footers (inside the <p> tags only)
 # Pattern: mt-2 opacity-40">vX.Y ...
-sed -i "s|\\(mt-2 opacity-40\\\">\\)v[0-9.]\\+|\\1${NEW_VER}|g" index.html shareholder-transfer/index.html sold-note-generator/index.html instrument-transfer-generator/index.html letter-of-transferee-generator/index.html nar1-generator/index.html nsc1-generator/index.html audit-report-generator/index.html
+SED_FILES=(
+  index.html
+  shareholder-transfer/index.html
+  sold-note-generator/index.html
+  instrument-transfer-generator/index.html
+  letter-of-transferee-generator/index.html
+  nar1-generator/index.html
+  nsc1-generator/index.html
+  audit-report-generator/index.html
+  significant-controllers-register/index.html
+  scr-shareholder-analysis-generator/index.html
+  scr-identification-checklist-generator/index.html
+  scr-notice-generator/index.html
+  scr-designated-rep-generator/index.html
+  scr-data-collection-generator/index.html
+  scr-generator/index.html
+  scr-nr2-generator/index.html
+  company-name-change/index.html
+  company-name-change-generator/nnc2/index.html
+  company-name-change-generator/special-resolution/index.html
+  company-secretary/index.html
+)
+sed -i "s|\(mt-2 opacity-40\">\)v[0-9.]\+|\1${NEW_VER}|g" "${SED_FILES[@]}"
 
 git add -A
 git commit -m "${MSG}"
