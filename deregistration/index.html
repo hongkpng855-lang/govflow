@@ -290,10 +290,10 @@
           details: '第六步：公司正式解散之後，仲有幾個重要嘅跟進事項要做。好多公司以為解散咗就搞掂晒，結果漏咗重要步驟俾人罰款。\n\n📋 跟進清單：\n\n1️⃣ **取消商業登記（最重要！）**\n撤銷公司註冊 ≠ 自動取消商業登記！呢個係最多人中招嘅位。\n• 要另外填 IRC3113「結束業務通知書」通知商業登記署\n• 必須喺業務結束日期起計 **1 個月內** 遞交\n• 逾期最高罰款 HK$5,000 + 監禁 1 年\n• 遞交方式：郵寄或親身去商業登記署\n\n2️⃣ **確保銀行戶口已經關閉**\n呢個要喺解散 **之前** 做好 — 如果解散嗰日仲有銀行戶口未關、或者戶口仲有錢，後果好嚴重：\n• 戶口內嘅所有款項自動成為「無主財物」（Bona Vacantia），歸香港特別行政區政府所有\n• 想攞返啲錢？要向原訟法庭申請恢復公司註冊（s.765）\n• 恢復註冊嘅費用同時間遠遠超過你 close 戶口嘅功夫\n• 建議：解散前至少 1 個月就 close 晒所有銀行戶口，轉走結餘\n\n3️⃣ **保留公司紀錄 7 年**\n根據《稅務條例》第 51C 條，公司嘅業務及會計紀錄必須保留至少 7 年：\n• 會計紀錄（Profit & Loss、Balance Sheet）\n• 銀行月結單\n• 發票、收據、合約\n• 董事會會議記錄\n• 股東名冊及股份轉讓記錄\n• 公司印章及相關文件\n• 解散通知書及所有相關申請文件\n\n4️⃣ **通知相關人士公司已解散**\n• 供應商、客戶、合作夥伴\n• 保險公司（取消保險單）\n• 強積金受託人（終止 MPF 帳戶）\n• 牌照機構（如有持牌）\n\n5️⃣ **處理未申報資產（如有）**\n如果解散後先發現有未處理嘅資產（例如海外應收款項、知識產權）：\n• 資產已自動歸政府所有\n• 需要向原訟法庭申請恢復註冊（s.765）\n• 解散後 20 年內都可以申請恢復\n• 恢復註冊後可以處理資產，然後再重新申請解散\n\n🕐 預計時間：手續上約 1-2 星期，但文件要 keep 7 年\n\n✅ 一定要做：\n• 解散前 close 晒所有銀行戶口（呢個係最關鍵！）\n• 解散後 1 個月內遞交 IRC3113 取消商業登記\n• 保留所有公司紀錄至少 7 年\n• 通知相關持份者公司已解散\n• 如果解散後先發現有資產未處理，考慮申請恢復註冊',
           documents: [
             {
-              name: 'IRC3113 取消商業登記申請表',
-              description: '結束業務通知書，用嚟通知商業登記署公司已解散或結束業務，必須喺解散後 1 個月內遞交',
-              templateFile: '/templates/company-deregistration-irc3113.docx',
-              hasGenerator: true,
+              name: 'IRC3113 結束業務通知書（官方表格）',
+              description: '⚠️ 公司解散後必須喺 1 個月內遞交 IRC3113 取消商業登記。可喺稅務局官網下載正式表格填寫，連同相關文件郵寄或親身遞交至商業登記署。',
+              templateFile: '',
+              hasGenerator: false,
               commonMistakes: [
                 '以為撤銷公司註冊＝自動取消商業登記 — 要另外遞 IRC3113',
                 '過咗 1 個月 deadline 先交 — 最高罰 HK$5,000 + 監禁 1 年',
@@ -302,7 +302,7 @@
                 '冇通知銀行同供應商 — 可能有人繼續用公司名義交易'
               ],
               generatorUrl: '/deregistration-irc3113-generator',
-              demoImage: '/assets/demo/dereg-step6.png'
+              demoImage: '/assets/demo/dereg-irc3113-official.png'
             }
           ],
           rejectionRisks: [
@@ -311,13 +311,10 @@
             '冇保留公司紀錄 7 年 = 違反稅務條例，可被罰款',
             '解散後先發現有海外資產未處理 = 要申請恢復註冊，額外時間金錢'
           ],
-          mode: 'A',
-          needsGenerator: true,
+          mode: 'B',
           needsGuideContent: true,
           crossStepDeps: 'Steps 1-5 (must complete deregistration process before post-dissolution steps)',
-          generatorType: 'Interactive PDF Generator',
-          generatorUrl: '/deregistration-irc3113-generator',
-          generatorDescription: 'Interactive PDF Generator — 填 IRC3113 資料 → 一鍵生成已填好嘅結束業務通知書 PDF'
+          generatorUrl: '/deregistration-irc3113-generator'
         }
       ],
       finalDonate: {
@@ -772,7 +769,7 @@
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
         <p>© 2026 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v12.48</p>
+        <p class="mt-2 opacity-40">v12.49</p>
     </div>
   </footer>
 

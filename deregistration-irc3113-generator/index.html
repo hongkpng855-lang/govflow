@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ESGov | IRC3113 結束業務通知書 PDF 填寫工具 — 一鍵生成已填好 PDF</title>
-  <meta name="description" content="香港公司 IRC3113 結束業務通知書（取消商業登記）PDF 線上填寫工具。公司撤銷註冊後消商業登記係必做步驟，逾期最高罰 HK$5,000。直接喺網頁填公司名稱、BR 編號、結束業務日期、東主/合夥人資料，系統自動生成已填妥嘅正式 IRC3113 通知書。一鍵下載 PDF 交去商業登記署。完全免費。" />
-  <meta property="og:title" content="ESGov | IRC3113 結束業務通知書 PDF 填寫工具 — 一鍵生成已填好 PDF" />
-  <meta property="og:description" content="填 IRC3113 資料，一鍵下載已填好 PDF 檔案。完全免費。" />
+  <title>ESGov | IRC3113 結束業務通知書 — 範例檢視</title>
+  <meta name="description" content="香港公司 IRC3113 結束業務通知書（取消商業登記）官方範例及可填寫 PDF 下載。公司撤銷註冊後必須取消商業登記，解散後 1 個月內遞交，逾期最高罰 HK$5,000 + 監禁 1 年。免費公開。" />
+  <meta property="og:title" content="ESGov | IRC3113 結束業務通知書 — 範例檢視" />
+  <meta property="og:description" content="IRC3113 官方表格範例 + 常見錯誤說明。免費公開。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
     tailwind.config = {
       theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
@@ -31,8 +29,8 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "IRC3113 結束業務通知書 PDF 填寫工具",
-    "description": "香港公司 IRC3113 結束業務通知書（取消商業登記）PDF 線上填寫工具，填資料即出已填好 PDF。完全免費。",
+    "name": "IRC3113 結束業務通知書 — 範例檢視",
+    "description": "香港公司 IRC3113 結束業務通知書（取消商業登記）官方範例。附 IRD 官方可填寫 PDF 下載。免費公開。",
     "url": "https://esgov.org/deregistration-irc3113-generator"
   }
   </script>
@@ -49,221 +47,80 @@
     },{
       "@type": "ListItem",
       "position": 2,
-      "name": "撤銷公司註冊完整指南",
+      "name": "公司撤銷註冊完整指南",
       "item": "https://esgov.org/deregistration"
     },{
       "@type": "ListItem",
       "position": 3,
-      "name": "IRC3113 結束業務通知書 PDF 填寫工具",
+      "name": "IRC3113 結束業務通知書 — 範例檢視",
       "item": "https://esgov.org/deregistration-irc3113-generator"
     }
   ]
 }
   </script>
-  <style>
-    .doc-input { border: none; border-bottom: 1px solid #999; background: transparent; padding: 2px 4px; font-size: 13px; font-family: inherit; outline: none; width: 100%; color: #333; transition: border-color 0.15s; box-sizing: border-box; }
-    .doc-input:focus { border-bottom-color: #C9A84C; border-bottom-width: 2px; }
-    .doc-input[type="date"] { min-width: 140px; }
-    .doc-select { border: none; border-bottom: 1px solid #999; background: transparent; padding: 2px 4px; font-size: 12px; font-family: inherit; outline: none; width: 100%; color: #333; cursor: pointer; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-align: center; box-sizing: border-box; }
-    .doc-select:focus { border-bottom-color: #C9A84C; border-bottom-width: 2px; }
-    .doc-textarea { border: none; border-bottom: 1px solid #999; background: transparent; padding: 2px 4px; font-size: 13px; font-family: inherit; outline: none; width: 100%; color: #333; resize: vertical; min-height: 28px; box-sizing: border-box; }
-    .doc-textarea:focus { border-bottom-color: #C9A84C; border-bottom-width: 2px; }
-    .capture-mode .doc-info-box,
-    .capture-mode .breadcrumb-bar { display: none !important; }
-  </style>
 </head>
 <body class="bg-gray-100 font-sans">
 
   <nav class="bg-navy text-white sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/deregistration?step=6" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回指南</a>
+      <a href="/deregistration?step=6" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← Step 6</a>
     </div>
   </nav>
 
   <div class="max-w-4xl mx-auto px-4 py-6">
 
+    <!-- Info Banner -->
     <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
-      📝 填好下面 IRC3113 資料 → 㩒「下載 PDF」→ 直接下載已填好嘅結束業務通知書 PDF
+      📌 公司解散後必須取消商業登記！呢份係稅務局（IRD）嘅 IRC3113 結束業務通知書。「撤銷公司註冊 ≠ 自動取消商業登記」，要另外遞交呢份表格，必須喺解散後 1 個月內遞交。
     </div>
 
-    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">IRC3113 結束業務通知書 — PDF 填寫工具</h1>
+    <!-- Page Title -->
+    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">IRC3113 結束業務通知書（取消商業登記）— 範例檢視</h1>
 
-    <!-- 參考圖片 -->
-    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
-      <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-        <div class="aspect-[4/5] bg-gray-50 overflow-hidden flex items-center justify-center">
-          <div class="text-center">
-            <div class="text-3xl mb-1">🖼️</div>
-            <div class="text-xs font-semibold text-gray-400">準備中</div>
-          </div>
+    <!-- Demo Image (clickable) -->
+    <div class="mb-4 max-w-lg mx-auto">
+      <div onclick="openLightbox()" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/dereg-irc3113-official.png" alt="IRC3113 結束業務通知書 — 範例"
+               class="w-full object-contain max-h-[500px]"
+               onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 範例圖片準備中</div>'" />
         </div>
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-          <span class="text-white text-xs font-bold drop-shadow-sm">真實範例</span>
-        </div>
-      </div>
-      <div onclick="openTemplateModal('template')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-          <img src="/assets/demo/dereg-irc3113-template.png" alt="可修改文件"
-               class="w-full h-full object-contain"
-               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 模板（準備中）</div>'" />
-        </div>
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-          <span class="text-white text-xs font-bold drop-shadow-sm">可修改文件</span>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+          <span class="text-white text-xs font-bold drop-shadow-sm flex items-center gap-1">🔍 按此放大檢視</span>
         </div>
       </div>
     </div>
 
-    <!-- 文件說明 + 常見錯誤 -->
-    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm doc-info-box">
+    <!-- Document Info + Common Mistakes -->
+    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
       <div class="flex items-start gap-3 mb-3">
         <span class="text-lg mt-0.5 shrink-0">📄</span>
         <div>
-          <h2 class="font-semibold text-navy text-sm">IRC3113 結束業務通知書</h2>
-          <p class="text-xs text-gray-500 mt-0.5">通知商業登記署公司已解散或結束業務，必須喺解散後 1 個月內遞交</p>
+          <p class="font-semibold text-navy text-sm">IRC3113 結束業務通知書 — IRD 官方表格</p>
+          <p class="text-xs text-gray-500 mt-0.5">IRC3113 係通知商業登記署公司已解散或結束業務嘅官方表格，必須喺解散後 1 個月內遞交，逾期最高罰 HK$5,000 + 監禁 1 年</p>
         </div>
       </div>
+      <h2 class="font-semibold text-navy text-base mb-2 mt-4">⚠️ 常見錯誤</h2>
       <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
-        <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
         <ul class="text-xs text-gray-700 space-y-1.5">
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>以為撤銷公司註冊＝自動取消商業登記 — 要另外遞 IRC3113</li>
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>過咗 1 個月 deadline 先交 — 最高罰 HK$5,000 + 監禁 1 年</li>
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>解散前冇 close 銀行戶口 — 資金變無主財物歸政府</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>公司解散後銷毀所有文件 — 稅例要求保留至少 7 年</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>冇通知銀行同供應商 — 可能有人繼續用公司名義交易</li>
         </ul>
       </div>
     </div>
 
-    <!-- Template Modal -->
-    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4" onclick="closeTemplateModal(event)">
-      <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
-        <div class="flex border-b border-gray-200">
-          <button id="tabRealdemo" onclick="switchModalTab('realdemo')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition">📄 真實範例</button>
-          <button id="tabTemplate" onclick="switchModalTab('template')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 模板</button>
-          <button onclick="closeTemplateModal()" class="px-4 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
-        </div>
-        <div id="modalRealdemo" class="p-4">
-          <div class="flex items-center justify-center py-20 text-gray-400 text-sm">🖼️ 真實範例圖片（準備中）</div>
-          <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
-        </div>
-        <div id="modalTemplate" class="p-4 hidden">
-          <img src="/assets/demo/dereg-irc3113-template.png" alt="Template" class="w-full border border-gray-200 rounded-lg"
-               onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 可修改模板圖片（準備中）</div>'" />
-          <p class="text-xs text-gray-400 mt-2 text-center">空白可編輯模板格式</p>
-        </div>
-      </div>
-    </div>
-
-    <script>
-    function openTemplateModal(tab) {
-      document.getElementById('templateModal').classList.remove('hidden');
-      document.getElementById('templateModal').classList.add('flex');
-      if (tab && typeof switchModalTab === 'function') switchModalTab(tab);
-    }
-    function closeTemplateModal(e) {
-      if (!e || e.target === document.getElementById('templateModal')) {
-        document.getElementById('templateModal').classList.add('hidden');
-        document.getElementById('templateModal').classList.remove('flex');
-      }
-    }
-    function switchModalTab(tab) {
-      document.getElementById('modalRealdemo').classList.toggle('hidden', tab !== 'realdemo');
-      document.getElementById('modalTemplate').classList.toggle('hidden', tab !== 'template');
-      document.getElementById('tabRealdemo').classList.toggle('border-navy', tab === 'realdemo');
-      document.getElementById('tabRealdemo').classList.toggle('border-transparent', tab !== 'realdemo');
-      document.getElementById('tabRealdemo').classList.toggle('font-bold', tab === 'realdemo');
-      document.getElementById('tabRealdemo').classList.toggle('font-semibold', tab !== 'realdemo');
-      document.getElementById('tabRealdemo').classList.toggle('text-navy', tab === 'realdemo');
-      document.getElementById('tabRealdemo').classList.toggle('text-gray-400', tab !== 'realdemo');
-      document.getElementById('tabTemplate').classList.toggle('border-navy', tab === 'template');
-      document.getElementById('tabTemplate').classList.toggle('border-transparent', tab !== 'template');
-      document.getElementById('tabTemplate').classList.toggle('font-bold', tab === 'template');
-      document.getElementById('tabTemplate').classList.toggle('font-semibold', tab !== 'template');
-      document.getElementById('tabTemplate').classList.toggle('text-navy', tab === 'template');
-      document.getElementById('tabTemplate').classList.toggle('text-gray-400', tab !== 'template');
-    }
-    </script>
-
-    <!-- PDF Form -->
-    <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto" style="max-width:800px;font-family:'Noto Sans TC',sans-serif;font-size:13px;line-height:1.5;">
-      <div style="text-align:center;padding:24px 40px 14px;border-bottom:2px solid #1B2A4A;">
-        <div style="font-size:18px;font-weight:bold;color:#C9A84C;letter-spacing:1px;">IRC3113</div>
-        <div style="font-size:12px;color:#666;margin-top:2px;">結束業務通知書</div>
-        <div style="font-size:11px;color:#888;margin-top:2px;">Notification of Cessation of Business</div>
-      </div>
-
-      <div style="padding:24px 40px 32px;">
-
-        <!-- Business Info -->
-        <div style="margin-bottom:20px;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">業務資料</div>
-          <table style="width:100%;border-collapse:collapse;">
-            <tr><td style="width:120px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">商業登記號碼</td><td style="padding:3px 0;"><input type="text" id="f-brno" value="87654321" class="doc-input" style="max-width:180px;" /></td></tr>
-            <tr><td style="width:120px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">業務名稱（中文）</td><td style="padding:3px 0;"><input type="text" id="f-business-cn" value="ABC 貿易有限公司" class="doc-input" style="max-width:360px;" /></td></tr>
-            <tr><td style="width:120px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">業務名稱（英文）</td><td style="padding:3px 0;"><input type="text" id="f-business-en" value="ABC TRADING LIMITED" class="doc-input" style="max-width:360px;" /></td></tr>
-            <tr><td style="width:120px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">業務地址</td><td style="padding:3px 0;"><input type="text" id="f-business-addr" value="香港九龍灣宏照道 100 號 6 樓" class="doc-input" /></td></tr>
-            <tr><td style="width:120px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">業務性質</td><td style="padding:3px 0;"><input type="text" id="f-business-nature" value="進出口貿易" class="doc-input" style="max-width:260px;" /></td></tr>
-          </table>
-        </div>
-
-        <!-- Cessation Info -->
-        <div style="margin-bottom:20px;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">結束業務資料</div>
-          <table style="width:100%;border-collapse:collapse;">
-            <tr><td style="width:120px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">結束業務日期</td><td style="padding:3px 0;"><input type="date" id="f-cess-date" class="doc-input" style="max-width:160px;" /></td></tr>
-            <tr><td style="width:120px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">結束原因</td><td style="padding:3px 0;">
-              <select id="f-cess-reason" class="doc-select" style="max-width:300px;">
-                <option value="公司已解散">公司已解散（撤銷註冊）</option>
-                <option value="公司已清盤">公司已清盤</option>
-                <option value="業務已結束">業務已結束</option>
-                <option value="其他">其他</option>
-              </select>
-            </td></tr>
-          </table>
-        </div>
-
-        <!-- Business Owner Info -->
-        <div style="margin-bottom:20px;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">東主/合夥人資料</div>
-          <table style="width:100%;border-collapse:collapse;">
-            <tr><td style="width:120px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">姓名</td><td style="padding:3px 0;"><input type="text" id="f-owner-name" value="陳大明" class="doc-input" style="max-width:300px;" /></td></tr>
-            <tr><td style="width:120px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">身份證號碼</td><td style="padding:3px 0;"><input type="text" id="f-owner-id" value="A123456(7)" class="doc-input" style="max-width:180px;" /></td></tr>
-            <tr><td style="width:120px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">通訊地址</td><td style="padding:3px 0;"><input type="text" id="f-owner-addr" value="香港九龍旺角彌敦道 123 號 10 樓" class="doc-input" /></td></tr>
-            <tr><td style="width:120px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">聯絡電話</td><td style="padding:3px 0;"><input type="text" id="f-owner-phone" value="98765432" class="doc-input" style="max-width:180px;" /></td></tr>
-          </table>
-        </div>
-
-        <!-- Declaration -->
-        <div style="margin-bottom:16px;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">聲明</div>
-          <label style="display:flex;align-items:flex-start;gap:8px;font-size:12px;color:#555;">
-            <input type="checkbox" id="f-decl" checked style="accent-color:#1B2A4A;margin-top:2px;" />
-            <span>本人確認上述業務已經結束，所有相關稅務責任已妥善處理。本人明白根據《商業登記條例》，虛假陳述可被檢控。</span>
-          </label>
-        </div>
-
-        <!-- Signature -->
-        <div style="margin-top:20px;padding-top:12px;border-top:1px solid #ddd;display:flex;gap:36px;font-size:13px;flex-wrap:wrap;">
-          <div style="display:flex;align-items:center;gap:6px;"><span style="font-weight:600;color:#555;white-space:nowrap;">東主/授權人簽署：</span><input type="text" id="f-signature" class="doc-input" style="width:160px;" /></div>
-          <div style="display:flex;align-items:center;gap:6px;"><span style="font-weight:600;color:#555;white-space:nowrap;">日期：</span><input type="date" id="f-signdate" class="doc-input" style="width:140px;" /></div>
-        </div>
-
-        <!-- Notice -->
-        <div style="margin-top:16px;padding:8px 10px;background:#f9f9f9;border:1px solid #ddd;border-radius:4px;font-size:11px;color:#888;">
-          ⚠️ 必須喺業務結束日期起計 1 個月內遞交。逾期最高罰款 HK$5,000 + 監禁 1 年。請郵寄或親身遞交至商業登記署。
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Buttons -->
-    <div class="mt-6">
-      <button onclick="checkEmailGate()" id="genBtn" class="w-full bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm flex items-center justify-center gap-2">
-        📄 下載 IRC3113 結束業務通知書 PDF
-      </button>
-    </div>
-    <p id="status" class="text-center text-sm mt-3 hidden"></p>
-    <div class="text-center mt-4">
-      <a href="/deregistration?step=6" class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+    <!-- Download + Return + Donate -->
+    <div class="space-y-3">
+      <a href="https://www.ird.gov.hk/eng/pdf/irc3113.pdf" target="_blank"
+         class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm">
+        📄 下載官方 IRC3113 表格（可填寫 PDF）
+      </a>
+      <a href="/deregistration?step=6"
+         class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
         ← 返回撤銷公司註冊完整指南
       </a>
     </div>
@@ -273,153 +130,45 @@
         ☕ 請咖啡
       </a>
     </div>
+
   </div>
 
-  <script>
-    function setDates() {
-      const d = new Date();
-      const y = d.getFullYear();
-      const m = String(d.getMonth() + 1).padStart(2, '0');
-      const day = String(d.getDate()).padStart(2, '0');
-      const dateStr = y + '-' + m + '-' + day;
-      document.querySelectorAll('input[type="date"].doc-input').forEach(el => {
-        if (!el.value) el.value = dateStr;
-      });
-    }
-    setDates();
-
-    // Email Gate
-    function checkEmailGate() {
-      const done = localStorage.getItem('esgov_email_done');
-      if (done) { generatePDF(); return; }
-      document.getElementById('emailGateModal').classList.remove('hidden');
-      document.getElementById('emailGateModal').classList.add('flex');
-    }
-
-    function submitDownloadEmail() {
-      const email = document.getElementById('downloadEmail').value.trim();
-      if (!email || !email.includes('@')) { alert('⚠️ 請輸入有效嘅電郵地址'); return; }
-      try {
-        var iframe = document.createElement('iframe');
-        iframe.name = 'fsframe'; iframe.style.display = 'none';
-        document.body.appendChild(iframe);
-        var f = document.createElement('form');
-        f.method = 'POST'; f.action = 'https://formsubmit.co/tbstbs0613@gmail.com';
-        f.target = 'fsframe'; f.style.display = 'none';
-        var fields = { email: email, page: 'deregistration-irc3113-generator', docType: 'IRC3113 結束業務通知書', _subject: '📬 ESGov 新下載（IRC3113）：' + email, _captcha: 'false', _template: 'table' };
-        for (var k in fields) { var inp = document.createElement('input'); inp.name = k; inp.value = fields[k]; f.appendChild(inp); }
-        document.body.appendChild(f); f.submit();
-        setTimeout(function(){ document.body.removeChild(f); document.body.removeChild(iframe); }, 1000);
-      } catch(e) {}
-      localStorage.setItem('esgov_email_done', 'true');
-      document.getElementById('emailGateModal').classList.add('hidden');
-      document.getElementById('emailGateModal').classList.remove('flex');
-      setTimeout(function(){ generatePDF(); }, 100);
-    }
-
-    function closeEmailGate() {
-      document.getElementById('emailGateModal').classList.add('hidden');
-      document.getElementById('emailGateModal').classList.remove('flex');
-    }
-
-    // PDF Generation
-    async function generatePDF() {
-      const btn = document.getElementById('genBtn');
-      const status = document.getElementById('status');
-      btn.disabled = true;
-      btn.innerHTML = '⏳ 生成中…';
-      status.className = 'text-center text-sm mt-3 text-blue-600';
-      status.textContent = '準備中…';
-      status.classList.remove('hidden');
-
-      try {
-        const { jsPDF } = window.jspdf;
-        await document.fonts.ready;
-
-        const form = document.getElementById('pdf-form');
-        await new Promise(r => setTimeout(r, 100));
-
-        const canvas = await html2canvas(form, {
-          scale: 3,
-          useCORS: true,
-          backgroundColor: '#ffffff',
-          logging: false,
-          width: 800
-        });
-
-        const imgData = canvas.toDataURL('image/png');
-        const doc = new jsPDF('p', 'mm', 'a4');
-        const pageW = 210;
-        const pageH = 297;
-        const margin = 10;
-        const contentW = pageW - margin * 2;
-        const contentH = pageH - margin * 2;
-
-        const pxRatio = canvas.width / contentW;
-        const pagePxH = contentH * pxRatio;
-        const totalPages = Math.ceil(canvas.height / pagePxH);
-
-        for (let i = 0; i < totalPages; i++) {
-          if (i > 0) doc.addPage();
-          const srcY = i * pagePxH;
-          const srcH = Math.min(pagePxH, canvas.height - srcY);
-          const tempCanvas = document.createElement('canvas');
-          tempCanvas.width = canvas.width;
-          tempCanvas.height = srcH;
-          const ctx = tempCanvas.getContext('2d');
-          ctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, srcH);
-          const pageImgData = tempCanvas.toDataURL('image/png');
-          const pageImgH = contentW * (srcH / canvas.width);
-          const yOffset = margin + (contentH - Math.min(pageImgH, contentH)) / 2;
-          doc.addImage(pageImgData, 'PNG', margin, yOffset, contentW, Math.min(pageImgH, contentH));
-        }
-
-        // Watermark
-        doc.saveGraphicsState();
-        doc.setGState(new window.jspdf.GState({ opacity: 0.12 }));
-        doc.setTextColor(180, 180, 180);
-        doc.setFontSize(48);
-        doc.setFont('helvetica', 'bold');
-        doc.text('ESGov', 20, 60, { angle: -30 });
-        doc.text('ESGov', 80, 160, { angle: -30 });
-        doc.text('ESGov', 140, 260, { angle: -30 });
-        doc.restoreGraphicsState();
-
-        doc.save('IRC3113_Cessation_Filled.pdf');
-
-        btn.innerHTML = '✅ 已下載！';
-        status.className = 'text-center text-sm mt-3 text-green-600';
-        status.textContent = '✅ PDF 已儲存到你的電腦';
-        setTimeout(() => {
-          btn.innerHTML = '📄 下載 IRC3113 結束業務通知書 PDF';
-          btn.disabled = false;
-          status.classList.add('hidden');
-        }, 2500);
-
-      } catch(e) {
-        console.error('PDF generation error:', e);
-        document.getElementById('pdf-form').classList.remove('capture-mode');
-        btn.innerHTML = '📄 下載 IRC3113 結束業務通知書 PDF';
-        btn.disabled = false;
-        status.className = 'text-center text-sm mt-3 text-red-500';
-        status.textContent = '❌ 生成失敗: ' + e.message;
-      }
-    }
-  </script>
-
-  <!-- Email Gate Modal -->
-  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4">
-    <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" onclick="event.stopPropagation()">
-      <div class="text-3xl mb-3">📬</div>
-      <h3 class="text-lg font-bold text-navy mb-2">下載前留低 email</h3>
-      <p class="text-sm text-gray-500 mb-5">正在為你準備 <strong>IRC3113 結束業務通知書</strong> 嘅 PDF<br />留低 email，我哋會話你知邊份文件準備好咗 😊</p>
-      <div class="flex flex-col gap-3">
-        <input type="email" id="downloadEmail" placeholder="your@email.com" class="border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        <button onclick="submitDownloadEmail()" class="bg-navy text-white font-semibold py-2.5 rounded-xl hover:bg-navy-light transition text-sm">📥 繼續下載 PDF</button>
-        <button onclick="closeEmailGate()" class="text-xs text-gray-400 hover:text-gray-600 transition">唔住，稍後先</button>
+  <!-- ═════ Lightbox Modal ═════ -->
+  <div id="lightboxModal" class="fixed inset-0 bg-black/70 z-50 hidden items-center justify-center p-4 no-print" onclick="closeLightbox(event)">
+    <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100 sticky top-0 bg-white z-10">
+        <h3 class="font-bold text-navy text-base">IRC3113 結束業務通知書 — IRD 官方表格範本</h3>
+        <button onclick="closeLightbox()" class="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+      </div>
+      <div class="p-4">
+        <img src="/assets/demo/dereg-irc3113-official.png" alt="IRC3113 結束業務通知書 IRD 官方範例" class="w-full border border-gray-200 rounded-lg" />
+        <p class="text-xs text-gray-400 mt-2 text-center">稅務局 IRD — IRC3113 結束業務通知書範本（第 1 頁）</p>
       </div>
     </div>
   </div>
+
+  <script>
+    function openLightbox() {
+      document.getElementById('lightboxModal').classList.remove('hidden');
+      document.getElementById('lightboxModal').classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(e) {
+      if (!e || e.target === document.getElementById('lightboxModal')) {
+        document.getElementById('lightboxModal').classList.add('hidden');
+        document.getElementById('lightboxModal').classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('lightboxModal');
+        if (!modal.classList.contains('hidden')) {
+          closeLightbox();
+        }
+      }
+    });
+  </script>
 
   <!-- Footer -->
   <footer class="gov-footer py-12">
@@ -437,7 +186,7 @@
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
         <p>© 2026 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v12.48</p>
+        <p class="mt-2 opacity-40">v12.49</p>
       </div>
     </div>
   </footer>
