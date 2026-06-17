@@ -192,18 +192,18 @@
           details: '第二步：向稅務局申請《不反對撤銷公司註冊通知書》（Notice of No Objection，簡稱 NNO）。呢份係去公司註冊處申請撤銷嘅必備文件，冇嘅話 Step 3 做唔到。\n\n📝 準備文件：\n• IR1263 申請表（要求發出不反對撤銷公司註冊通知書）\n• HK$270 支票（抬頭「香港特別行政區政府」）— 唔退還㗎\n• 公司董事嘅身份證明副本（部分情況需要）\n\n📮 遞交方式（三選一）：\n1️⃣ 郵遞：寄去「香港郵政總局郵箱 132 號 稅務局局長收」\n2️⃣ 親身：九龍啟德協調道 5 號稅務中心 14 樓撤銷註冊組\n3️⃣ 網上：持「智方便+」或電子證書，經稅局電子表格系統提交\n\n⏱ 審批時間：約 21 個工作天（如果稅務狀況簡單，例如一直零申報）\n\n⚠️ 呢步最大嘅伏位：\n**喺申請之前，一定要交晒所有未完稅嘅報稅表！**\n\n呢個係申請 NNO 被拒嘅頭號原因。就算公司從來冇營運，如果稅局已經出咗報稅表俾你（BIR51），你冇交過任何報稅表（包括零申報），稅局係唔會出 NNO 俾你嘅。\n\n常見要補交嘅文件：\n• 未交嘅利得稅報稅表（BIR51 / BIR52）— 包括零申報\n• 未交嘅僱主報稅表（BIR56A / IR56B）— 如果有請人\n• 未處理嘅稅務查詢信件\n• 未完結嘅評稅反對或上訴\n• 未找清嘅欠稅（包括暫繳稅）\n• 未交嘅商業登記費\n\n💰 如果稅局發現有欠稅，唔會出 NNO。佢哋會出信列出未完成事項，你辦妥後可以要求重新考慮（唔使再俾 HK$270）。\n\n🎯 收到 NNO 之後：\n• 核對 NNO 上面嘅公司名同 CR 編號係咪正確\n• NNO 有效期只有 3 個月 — 一定要喺 3 個月內 submit Step 3 嘅 NDR1\n• 妥善保存正本（或者核證副本），Step 3 要交俾公司註冊處\n\n🕐 預計時間：約 4-6 星期（連同準備文件同審批）\n\n✅ 一定要做：\n• 申請前提交所有未完稅嘅報稅表（包括零申報）\n• Check 清楚公司有冇欠稅、欠商業登記費\n• 收到 NNO 後 mark 低 3 個月 deadline',
           documents: [
             {
-              name: 'IR1263 不反對通知書申請表（官方表格）',
-              description: '向稅務局申請《不反對撤銷公司註冊通知書》嘅 IR1263 官方表格。直接填妥後連同 HK$270 支票交去稅務局，約 4-6 星期審批。',
-              templateFile: '',
-              hasGenerator: false,
+              name: 'IR1263 不反對通知書申請表填寫工具',
+              description: '一步步引導你填寫 IR1263 表格（要求發出不反對撤銷公司註冊通知書），生成可下載嘅已填 PDF',
+              templateFile: '/templates/company-deregistration-ir1263.docx',
+              hasGenerator: true,
               commonMistakes: [
                 '未交晒報稅表就申請 NNO — 最常見被拒原因，HK$270 白俾',
                 '申請人身份揀錯 — 董事可以直接申請，非董事要授權書',
                 '以為 NNO 係永久有效 — 只有 3 個月期限',
                 '唔知可以網上提交 — 親身去稅局排隊嘥時間'
               ],
-              generatorUrl: 'https://www.ird.gov.hk/eng/pdf/ir1263_normal.pdf',
-              demoImage: '/assets/demo/dereg-ir1263-official.png'
+              generatorUrl: '/deregistration-ir1263-generator',
+              demoImage: '/assets/demo/dereg-ir1263-template.png'
             }
           ],
           rejectionRisks: [
@@ -804,7 +804,7 @@
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
         <p>© 2026 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v12.40</p>
+        <p class="mt-2 opacity-40">v12.41</p>
     </div>
   </footer>
 
