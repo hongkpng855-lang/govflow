@@ -623,6 +623,14 @@
                 </template>
               </div>
             </div>
+            <div x-show="(!s.documents || s.documents.length === 0) && !isLoading" class="mb-8">
+              <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
+              <div class="bg-gray-50 border-2 border-dashed border-gray-200 rounded-xl p-8 text-center">
+                <p class="text-3xl mb-2">👣</p>
+                <p class="text-gray-400 text-sm font-medium">此步驟不需要提交任何文件</p>
+                <p class="text-gray-300 text-xs mt-1">純粹係程序性步驟，跟住做就得</p>
+              </div>
+            </div>
 
             <!-- Rejection Risks -->
             <div x-show="s.rejectionRisks && s.rejectionRisks.length >= 1" class="risk-callout mb-8">
@@ -784,7 +792,7 @@
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
         <p>© 2026 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v12.46</p>
+        <p class="mt-2 opacity-40">v12.47</p>
     </div>
   </footer>
 
