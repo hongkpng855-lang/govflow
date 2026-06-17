@@ -227,10 +227,10 @@
           details: '第三步：收到稅局嘅不反對通知書（NNO）之後，就要喺 3 個月內向公司註冊處提交撤銷註冊申請 — 用 NDR1 表格。呢步係成個程序嘅核心。\n\n⏰ 鐵則：NNO 發出日期起計 **3 個月內** 一定要遞交 NDR1。過期即失效，要重新申請 NNO（再俾 HK$270）。\n\n📝 NDR1 表格要填嘅資料：\n• 公司名稱同公司註冊編號（CR No.）\n• 商業登記號碼（BR No.）\n• 申請人類別：公司本身 / 董事 / 成員（揀一個）\n• 申請人全名、通訊地址、電郵地址\n• 獲提名接收撤銷通知嘅自然人資料（如果申請人係公司本身，呢項必填）\n• 申請條件聲明：申請人必須核實公司符合 s.750 嘅所有條件\n• 隨表格交付嘅文件清單（包括 NNO 正本）\n\n💰 費用：HK$420（唔退還）\n\n📮 遞交方式（二選一）：\n1️⃣ 電子形式：經公司註冊處 e-Services Portal（www.e-services.cr.gov.hk）網上提交\n   — 需要預先開 account 同有數碼證書\n   — 最快、最方便、有確認記錄\n2️⃣ 紙本形式：親身或郵寄去金鐘道 66 號政府合署 14 樓公司註冊處收款處\n   — 支票抬頭「公司註冊處處長」\n   — 要連同 NNO 正本（或核證副本）一齊交\n\n📎 必須連同 NDR1 一齊交嘅文件：\n• 不反對通知書（NNO）正本（或核證真實副本）\n• 申請費用 HK$420\n\n📄 公司註冊處收到申請後：\n• 約 4-5 個工作天會發出確認收件信\n• 然後就進入 Step 4 嘅憲報公告程序\n\n⚠️ 重要提示 — 申請條件聲明：\nNDR1 表格入面嘅申請條件聲明唔係求其剔就得。你（申請人）係要宣誓式咁確認公司符合所有條件。如果明知公司唔符合條件都照申請，係刑事罪行 — 最高罰 HK$300,000 + 監禁 2 年。\n\n🕐 預計時間：準備文件 1-2 日，審批確認約 1 星期\n\n✅ 一定要做：\n• 收到 NNO 後即刻 mark 低 3 個月 deadline，唔好等最後一刻\n• 預先開 e-Services Portal account（如果諗住網上提交）\n• 核對 NDR1 所有資料同公司註冊證明書一致\n• 保留申請確認信同收據',
           documents: [
             {
-              name: 'NDR1 撤銷註冊申請書填寫工具',
-              description: '一步步引導你填寫 NDR1 表格（私人公司或擔保有限公司撤銷註冊申請書），生成可下載嘅已填 PDF',
-              templateFile: '/templates/company-deregistration-ndr1.docx',
-              hasGenerator: true,
+              name: 'NDR1 撤銷註冊申請書（官方表格）',
+              description: '⚠️ 必須先取得稅局嘅不反對通知書（NNO）先可以提交 NDR1。可喺公司註冊處官網下載正式表格填寫，連同 HK$420 支票同 NNO 正本一齊提交。',
+              templateFile: '',
+              hasGenerator: false,
               commonMistakes: [
                 '超過 NNO 3 個月有效期先交 NDR1 — 要重新申請 NNO 兼再俾 HK$270',
                 '申請條件聲明求其剔冇核實 — 虛假陳述可罰 HK$300,000 + 監禁 2 年',
@@ -239,7 +239,7 @@
                 '網上提交冇提前開 account — 要預先登記 e-Services Portal'
               ],
               generatorUrl: '/deregistration-ndr1-generator',
-              demoImage: '/assets/demo/dereg-step3.png'
+              demoImage: '/assets/demo/dereg-ndr1-official.png'
             }
           ],
           rejectionRisks: [
@@ -804,7 +804,7 @@
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
         <p>© 2026 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v12.44</p>
+        <p class="mt-2 opacity-40">v12.45</p>
     </div>
   </footer>
 

@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ESGov | NDR1 撤銷註冊申請書 PDF 填寫工具 — 一鍵生成已填好 PDF</title>
-  <meta name="description" content="香港公司撤銷註冊 NDR1 申請書 PDF 線上填寫工具。直接喺網頁填公司名稱、CR 編號、BR 號碼、申請人類別（公司/董事/成員）、提名收件人資料等，系統自動生成正式 NDR1 撤銷註冊申請書，連同必須嘅條件聲明都幫你填好。一鍵下載已填妥嘅 PDF，提交公司註冊處。完全免費。" />
-  <meta property="og:title" content="ESGov | NDR1 撤銷註冊申請書 PDF 填寫工具 — 一鍵生成已填好 PDF" />
-  <meta property="og:description" content="填 NDR1 資料，一鍵下載已填好 PDF 檔案。完全免費。" />
+  <title>ESGov | NDR1 撤銷註冊申請書 — 範例檢視</title>
+  <meta name="description" content="香港公司撤銷註冊 NDR1 申請書官方範例及可填寫 PDF 下載。必須先取得稅局不反對通知書（NNO）先可以提交，連同 HK$420 支票交去公司註冊處。免費公開。" />
+  <meta property="og:title" content="ESGov | NDR1 撤銷註冊申請書 — 範例檢視" />
+  <meta property="og:description" content="NDR1 官方表格範例 + 常見錯誤說明。免費公開。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
     tailwind.config = {
       theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
@@ -31,8 +29,8 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "NDR1 撤銷註冊申請書 PDF 填寫工具",
-    "description": "香港公司 NDR1 撤銷註冊申請書 PDF 線上填寫工具，填資料即出已填好 PDF。完全免費。",
+    "name": "NDR1 撤銷註冊申請書 — 範例檢視",
+    "description": "香港公司 NDR1 撤銷註冊申請書官方範例。附 CR 官方可填寫 PDF 下載。免費公開。",
     "url": "https://esgov.org/deregistration-ndr1-generator"
   }
   </script>
@@ -49,234 +47,79 @@
     },{
       "@type": "ListItem",
       "position": 2,
-      "name": "撤銷公司註冊完整指南",
+      "name": "公司撤銷註冊完整指南",
       "item": "https://esgov.org/deregistration"
     },{
       "@type": "ListItem",
       "position": 3,
-      "name": "NDR1 撤銷註冊申請書 PDF 填寫工具",
+      "name": "NDR1 撤銷註冊申請書 — 範例檢視",
       "item": "https://esgov.org/deregistration-ndr1-generator"
     }
   ]
 }
   </script>
-  <style>
-    .doc-input { border: none; border-bottom: 1px solid #999; background: transparent; padding: 2px 4px; font-size: 13px; font-family: inherit; outline: none; width: 100%; color: #333; transition: border-color 0.15s; box-sizing: border-box; }
-    .doc-input:focus { border-bottom-color: #C9A84C; border-bottom-width: 2px; }
-    .doc-input[type="date"] { min-width: 140px; }
-    .doc-select { border: none; border-bottom: 1px solid #999; background: transparent; padding: 2px 4px; font-size: 12px; font-family: inherit; outline: none; width: 100%; color: #333; cursor: pointer; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-align: center; box-sizing: border-box; }
-    .doc-select:focus { border-bottom-color: #C9A84C; border-bottom-width: 2px; }
-    .doc-textarea { border: none; border-bottom: 1px solid #999; background: transparent; padding: 2px 4px; font-size: 13px; font-family: inherit; outline: none; width: 100%; color: #333; resize: vertical; min-height: 28px; box-sizing: border-box; }
-    .doc-textarea:focus { border-bottom-color: #C9A84C; border-bottom-width: 2px; }
-    .capture-mode .doc-info-box,
-    .capture-mode .breadcrumb-bar { display: none !important; }
-  </style>
 </head>
 <body class="bg-gray-100 font-sans">
 
   <nav class="bg-navy text-white sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/deregistration?step=3" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回指南</a>
+      <a href="/deregistration?step=3" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← Step 3</a>
     </div>
   </nav>
 
   <div class="max-w-4xl mx-auto px-4 py-6">
 
+    <!-- Info Banner -->
     <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
-      📝 填好下面 NDR1 資料 → 㩒「下載 PDF」→ 直接下載已填好嘅撤銷註冊申請書 PDF
+      📌 呢份係公司註冊處嘅 NDR1 官方申請表範例。只有收到稅局不反對通知書（NNO）後先需要提交，有效期 3 個月。
     </div>
 
-    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">NDR1 撤銷註冊申請書 — PDF 填寫工具</h1>
+    <!-- Page Title -->
+    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4">NDR1 撤銷註冊申請書 — 範例檢視</h1>
 
-    <!-- 參考圖片 -->
-    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto">
-      <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-        <div class="aspect-[4/5] bg-gray-50 overflow-hidden flex items-center justify-center">
-          <div class="text-center">
-            <div class="text-3xl mb-1">🖼️</div>
-            <div class="text-xs font-semibold text-gray-400">準備中</div>
-          </div>
+    <!-- Demo Image (clickable) -->
+    <div class="mb-4 max-w-lg mx-auto">
+      <div onclick="openLightbox()" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+        <div class="bg-gray-50 overflow-hidden">
+          <img src="/assets/demo/dereg-ndr1-official.png" alt="NDR1 撤銷註冊申請書 — 範例"
+               class="w-full object-contain max-h-[500px]"
+               onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 範例圖片準備中</div>'" />
         </div>
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-          <span class="text-white text-xs font-bold drop-shadow-sm">真實範例</span>
-        </div>
-      </div>
-      <div onclick="openTemplateModal('template')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-          <img src="/assets/demo/dereg-ndr1-template.png" alt="可修改文件"
-               class="w-full h-full object-contain"
-               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 模板（準備中）</div>'" />
-        </div>
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-          <span class="text-white text-xs font-bold drop-shadow-sm">可修改文件</span>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+          <span class="text-white text-xs font-bold drop-shadow-sm flex items-center gap-1">🔍 按此放大檢視</span>
         </div>
       </div>
     </div>
 
-    <!-- 文件說明 + 常見錯誤 -->
-    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm doc-info-box">
+    <!-- Document Info + Common Mistakes -->
+    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
       <div class="flex items-start gap-3 mb-3">
         <span class="text-lg mt-0.5 shrink-0">📄</span>
         <div>
-          <h2 class="font-semibold text-navy text-sm">NDR1 撤銷註冊申請書</h2>
-          <p class="text-xs text-gray-500 mt-0.5">私人公司或擔保有限公司撤銷註冊申請書（根據《公司條例》第 750 條）</p>
+          <p class="font-semibold text-navy text-sm">撤銷註冊申請書（NDR1）— CR 官方表格</p>
+          <p class="text-xs text-gray-500 mt-0.5">NDR1 係向公司註冊處提交撤銷註冊申請嘅官方表格，連同 NNO 正本同 HK$420 支票提交</p>
         </div>
       </div>
+      <h2 class="font-semibold text-navy text-base mb-2 mt-4">⚠️ 常見錯誤</h2>
       <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
-        <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
         <ul class="text-xs text-gray-700 space-y-1.5">
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>超過 NNO 3 個月有效期先交 NDR1 — 要重新申請 NNO 兼再俾 HK$270</li>
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>申請條件聲明求其剔冇核實 — 虛假陳述可罰 HK$300,000 + 監禁 2 年</li>
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>唔記得交 NNO 正本（或核證副本）— 申請會被退回</li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>用錯表格版本 — 一定要用公司註冊處官網最新版本</li>
         </ul>
       </div>
     </div>
 
-    <!-- Template Modal -->
-    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4" onclick="closeTemplateModal(event)">
-      <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
-        <div class="flex border-b border-gray-200">
-          <button id="tabRealdemo" onclick="switchModalTab('realdemo')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition">📄 真實範例</button>
-          <button id="tabTemplate" onclick="switchModalTab('template')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 模板</button>
-          <button onclick="closeTemplateModal()" class="px-4 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
-        </div>
-        <div id="modalRealdemo" class="p-4">
-          <div class="flex items-center justify-center py-20 text-gray-400 text-sm">🖼️ 真實範例圖片（準備中）</div>
-          <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
-        </div>
-        <div id="modalTemplate" class="p-4 hidden">
-          <img src="/assets/demo/dereg-ndr1-template.png" alt="Template" class="w-full border border-gray-200 rounded-lg"
-               onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 可修改模板圖片（準備中）</div>'" />
-          <p class="text-xs text-gray-400 mt-2 text-center">空白可編輯模板格式</p>
-        </div>
-      </div>
-    </div>
-
-    <script>
-    function openTemplateModal(tab) {
-      document.getElementById('templateModal').classList.remove('hidden');
-      document.getElementById('templateModal').classList.add('flex');
-      if (tab && typeof switchModalTab === 'function') switchModalTab(tab);
-    }
-    function closeTemplateModal(e) {
-      if (!e || e.target === document.getElementById('templateModal')) {
-        document.getElementById('templateModal').classList.add('hidden');
-        document.getElementById('templateModal').classList.remove('flex');
-      }
-    }
-    function switchModalTab(tab) {
-      document.getElementById('modalRealdemo').classList.toggle('hidden', tab !== 'realdemo');
-      document.getElementById('modalTemplate').classList.toggle('hidden', tab !== 'template');
-      document.getElementById('tabRealdemo').classList.toggle('border-navy', tab === 'realdemo');
-      document.getElementById('tabRealdemo').classList.toggle('border-transparent', tab !== 'realdemo');
-      document.getElementById('tabRealdemo').classList.toggle('font-bold', tab === 'realdemo');
-      document.getElementById('tabRealdemo').classList.toggle('font-semibold', tab !== 'realdemo');
-      document.getElementById('tabRealdemo').classList.toggle('text-navy', tab === 'realdemo');
-      document.getElementById('tabRealdemo').classList.toggle('text-gray-400', tab !== 'realdemo');
-      document.getElementById('tabTemplate').classList.toggle('border-navy', tab === 'template');
-      document.getElementById('tabTemplate').classList.toggle('border-transparent', tab !== 'template');
-      document.getElementById('tabTemplate').classList.toggle('font-bold', tab === 'template');
-      document.getElementById('tabTemplate').classList.toggle('font-semibold', tab !== 'template');
-      document.getElementById('tabTemplate').classList.toggle('text-navy', tab === 'template');
-      document.getElementById('tabTemplate').classList.toggle('text-gray-400', tab !== 'template');
-    }
-    </script>
-
-    <!-- PDF Form -->
-    <div id="pdf-form" class="bg-white shadow-xl border border-gray-300 mx-auto" style="max-width:800px;font-family:'Noto Sans TC',sans-serif;font-size:13px;line-height:1.5;">
-      <div style="text-align:center;padding:24px 40px 14px;border-bottom:2px solid #1B2A4A;">
-        <div style="font-size:18px;font-weight:bold;color:#C9A84C;letter-spacing:1px;">NDR1</div>
-        <div style="font-size:12px;color:#666;margin-top:2px;">撤銷註冊申請書（私人公司或擔保有限公司）</div>
-        <div style="font-size:11px;color:#888;margin-top:2px;">Application for Deregistration of a Private Company or Company Limited by Guarantee</div>
-      </div>
-
-      <div style="padding:24px 40px 32px;">
-
-        <!-- Company Info -->
-        <div style="margin-bottom:20px;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">公司資料</div>
-          <table style="width:100%;border-collapse:collapse;">
-            <tr><td style="width:110px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">公司名稱（中文）</td><td style="padding:3px 0;"><input type="text" id="f-company-cn" value="ABC 貿易有限公司" class="doc-input" style="max-width:360px;" /></td></tr>
-            <tr><td style="width:110px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">公司名稱（英文）</td><td style="padding:3px 0;"><input type="text" id="f-company-en" value="ABC TRADING LIMITED" class="doc-input" style="max-width:360px;" /></td></tr>
-            <tr><td style="width:110px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">公司註冊編號</td><td style="padding:3px 0;"><input type="text" id="f-crno" value="12345678" class="doc-input" style="max-width:180px;" /></td></tr>
-            <tr><td style="width:110px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">商業登記號碼</td><td style="padding:3px 0;"><input type="text" id="f-brno" value="87654321" class="doc-input" style="max-width:180px;" /></td></tr>
-          </table>
-        </div>
-
-        <!-- Applicant Info -->
-        <div style="margin-bottom:20px;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">申請人資料</div>
-          <table style="width:100%;border-collapse:collapse;">
-            <tr><td style="width:110px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">申請人類別</td><td style="padding:3px 0;"><select id="f-app-type" class="doc-select" style="max-width:200px;"><option value="公司本身">公司本身</option><option value="董事">董事</option><option value="成員（股東）">成員（股東）</option></select></td></tr>
-            <tr><td style="width:110px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">申請人姓名/名稱</td><td style="padding:3px 0;"><input type="text" id="f-app-name" value="陳大明" class="doc-input" style="max-width:300px;" /></td></tr>
-            <tr><td style="width:110px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">通訊地址</td><td style="padding:3px 0;"><input type="text" id="f-app-addr" value="香港九龍旺角彌敦道 123 號 10 樓" class="doc-input" /></td></tr>
-            <tr><td style="width:110px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">電郵地址</td><td style="padding:3px 0;"><input type="text" id="f-app-email" value="director@abc.com" class="doc-input" style="max-width:260px;" /></td></tr>
-            <tr><td style="width:110px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">聯絡電話</td><td style="padding:3px 0;"><input type="text" id="f-app-phone" value="98765432" class="doc-input" style="max-width:180px;" /></td></tr>
-          </table>
-        </div>
-
-        <!-- Nominated Person -->
-        <div style="margin-bottom:20px;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">獲提名接收撤銷通知嘅自然人（如申請人係公司本身，此項必填）</div>
-          <table style="width:100%;border-collapse:collapse;">
-            <tr><td style="width:110px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">姓名</td><td style="padding:3px 0;"><input type="text" id="f-nom-name" value="陳大明" class="doc-input" style="max-width:300px;" /></td></tr>
-            <tr><td style="width:110px;padding:3px 8px 3px 0;font-weight:600;color:#555;font-size:13px;white-space:nowrap;">地址</td><td style="padding:3px 0;"><input type="text" id="f-nom-addr" value="香港九龍旺角彌敦道 123 號 10 樓" class="doc-input" /></td></tr>
-          </table>
-        </div>
-
-        <!-- Declaration -->
-        <div style="margin-bottom:16px;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">申請條件聲明</div>
-          <div style="font-size:12px;color:#555;line-height:1.8;">
-            <label style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;">
-              <input type="checkbox" id="f-decl-1" checked style="accent-color:#1B2A4A;margin-top:2px;" />
-              <span>本人確認公司符合《公司條例》第 750(1) 條所載嘅所有撤銷註冊條件</span>
-            </label>
-            <label style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;">
-              <input type="checkbox" id="f-decl-2" checked style="accent-color:#1B2A4A;margin-top:2px;" />
-              <span>本人確認隨申請書附上稅務局發出嘅不反對通知書（NNO）正本（或核證真實副本）</span>
-            </label>
-            <label style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;">
-              <input type="checkbox" id="f-decl-3" checked style="accent-color:#1B2A4A;margin-top:2px;" />
-              <span>本人明白明知公司唔符合條件仍作出虛假陳述可被檢控，最高罰 HK$300,000 及監禁 2 年</span>
-            </label>
-          </div>
-        </div>
-
-        <!-- Attached Documents -->
-        <div style="margin-bottom:16px;">
-          <div style="font-weight:bold;font-size:14px;color:#1B2A4A;border-bottom:1px solid #1B2A4A;padding-bottom:3px;margin-bottom:10px;">隨附文件</div>
-          <div style="font-size:12px;color:#555;line-height:1.8;">
-            <label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" checked style="accent-color:#1B2A4A;" /> 不反對通知書（NNO）正本或核證副本</label>
-            <label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" checked style="accent-color:#1B2A4A;" /> 申請費用 HK$420（支票抬頭「公司註冊處處長」）</label>
-            <label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" style="accent-color:#1B2A4A;" /> 董事會決議或書面同意書（如適用）</label>
-          </div>
-        </div>
-
-        <!-- Signature -->
-        <div style="margin-top:20px;padding-top:12px;border-top:1px solid #ddd;display:flex;gap:36px;font-size:13px;flex-wrap:wrap;">
-          <div style="display:flex;align-items:center;gap:6px;"><span style="font-weight:600;color:#555;white-space:nowrap;">申請人簽署：</span><input type="text" id="f-signature" class="doc-input" style="width:160px;" /></div>
-          <div style="display:flex;align-items:center;gap:6px;"><span style="font-weight:600;color:#555;white-space:nowrap;">日期：</span><input type="date" id="f-signdate" class="doc-input" style="width:140px;" /></div>
-        </div>
-
-        <!-- Notice -->
-        <div style="margin-top:16px;padding:8px 10px;background:#f9f9f9;border:1px solid #ddd;border-radius:4px;font-size:11px;color:#888;">
-          ⚠️ 填妥後請連同 NNO 正本及 HK$420 支票遞交至公司註冊處。NNO 有效期只有 3 個月，請務必喺有效期內提交。
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Buttons -->
-    <div class="mt-6">
-      <button onclick="checkEmailGate()" id="genBtn" class="w-full bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm flex items-center justify-center gap-2">
-        📄 下載 NDR1 申請書 PDF
-      </button>
-    </div>
-    <p id="status" class="text-center text-sm mt-3 hidden"></p>
-    <div class="text-center mt-4">
-      <a href="/deregistration?step=3" class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+    <!-- Download + Return + Donate -->
+    <div class="space-y-3">
+      <a href="https://www.cr.gov.hk/en/companies_ordinance/docs/NDR1_fillable.pdf" target="_blank"
+         class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm">
+        📄 下載官方 NDR1 表格（可填寫 PDF）
+      </a>
+      <a href="/deregistration?step=3"
+         class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
         ← 返回撤銷公司註冊完整指南
       </a>
     </div>
@@ -286,153 +129,45 @@
         ☕ 請咖啡
       </a>
     </div>
+
   </div>
 
-  <script>
-    function setDates() {
-      const d = new Date();
-      const y = d.getFullYear();
-      const m = String(d.getMonth() + 1).padStart(2, '0');
-      const day = String(d.getDate()).padStart(2, '0');
-      const dateStr = y + '-' + m + '-' + day;
-      document.querySelectorAll('input[type="date"].doc-input').forEach(el => {
-        if (!el.value) el.value = dateStr;
-      });
-    }
-    setDates();
-
-    // Email Gate
-    function checkEmailGate() {
-      const done = localStorage.getItem('esgov_email_done');
-      if (done) { generatePDF(); return; }
-      document.getElementById('emailGateModal').classList.remove('hidden');
-      document.getElementById('emailGateModal').classList.add('flex');
-    }
-
-    function submitDownloadEmail() {
-      const email = document.getElementById('downloadEmail').value.trim();
-      if (!email || !email.includes('@')) { alert('⚠️ 請輸入有效嘅電郵地址'); return; }
-      try {
-        var iframe = document.createElement('iframe');
-        iframe.name = 'fsframe'; iframe.style.display = 'none';
-        document.body.appendChild(iframe);
-        var f = document.createElement('form');
-        f.method = 'POST'; f.action = 'https://formsubmit.co/tbstbs0613@gmail.com';
-        f.target = 'fsframe'; f.style.display = 'none';
-        var fields = { email: email, page: 'deregistration-ndr1-generator', docType: 'NDR1 撤銷註冊申請書', _subject: '📬 ESGov 新下載（NDR1）：' + email, _captcha: 'false', _template: 'table' };
-        for (var k in fields) { var inp = document.createElement('input'); inp.name = k; inp.value = fields[k]; f.appendChild(inp); }
-        document.body.appendChild(f); f.submit();
-        setTimeout(function(){ document.body.removeChild(f); document.body.removeChild(iframe); }, 1000);
-      } catch(e) {}
-      localStorage.setItem('esgov_email_done', 'true');
-      document.getElementById('emailGateModal').classList.add('hidden');
-      document.getElementById('emailGateModal').classList.remove('flex');
-      setTimeout(function(){ generatePDF(); }, 100);
-    }
-
-    function closeEmailGate() {
-      document.getElementById('emailGateModal').classList.add('hidden');
-      document.getElementById('emailGateModal').classList.remove('flex');
-    }
-
-    // PDF Generation
-    async function generatePDF() {
-      const btn = document.getElementById('genBtn');
-      const status = document.getElementById('status');
-      btn.disabled = true;
-      btn.innerHTML = '⏳ 生成中…';
-      status.className = 'text-center text-sm mt-3 text-blue-600';
-      status.textContent = '準備中…';
-      status.classList.remove('hidden');
-
-      try {
-        const { jsPDF } = window.jspdf;
-        await document.fonts.ready;
-
-        const form = document.getElementById('pdf-form');
-        await new Promise(r => setTimeout(r, 100));
-
-        const canvas = await html2canvas(form, {
-          scale: 3,
-          useCORS: true,
-          backgroundColor: '#ffffff',
-          logging: false,
-          width: 800
-        });
-
-        const imgData = canvas.toDataURL('image/png');
-        const doc = new jsPDF('p', 'mm', 'a4');
-        const pageW = 210;
-        const pageH = 297;
-        const margin = 10;
-        const contentW = pageW - margin * 2;
-        const contentH = pageH - margin * 2;
-
-        const pxRatio = canvas.width / contentW;
-        const pagePxH = contentH * pxRatio;
-        const totalPages = Math.ceil(canvas.height / pagePxH);
-
-        for (let i = 0; i < totalPages; i++) {
-          if (i > 0) doc.addPage();
-          const srcY = i * pagePxH;
-          const srcH = Math.min(pagePxH, canvas.height - srcY);
-          const tempCanvas = document.createElement('canvas');
-          tempCanvas.width = canvas.width;
-          tempCanvas.height = srcH;
-          const ctx = tempCanvas.getContext('2d');
-          ctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, srcH);
-          const pageImgData = tempCanvas.toDataURL('image/png');
-          const pageImgH = contentW * (srcH / canvas.width);
-          const yOffset = margin + (contentH - Math.min(pageImgH, contentH)) / 2;
-          doc.addImage(pageImgData, 'PNG', margin, yOffset, contentW, Math.min(pageImgH, contentH));
-        }
-
-        // Watermark
-        doc.saveGraphicsState();
-        doc.setGState(new window.jspdf.GState({ opacity: 0.12 }));
-        doc.setTextColor(180, 180, 180);
-        doc.setFontSize(48);
-        doc.setFont('helvetica', 'bold');
-        doc.text('ESGov', 20, 60, { angle: -30 });
-        doc.text('ESGov', 80, 160, { angle: -30 });
-        doc.text('ESGov', 140, 260, { angle: -30 });
-        doc.restoreGraphicsState();
-
-        doc.save('NDR1_Deregistration_Filled.pdf');
-
-        btn.innerHTML = '✅ 已下載！';
-        status.className = 'text-center text-sm mt-3 text-green-600';
-        status.textContent = '✅ PDF 已儲存到你的電腦';
-        setTimeout(() => {
-          btn.innerHTML = '📄 下載 NDR1 申請書 PDF';
-          btn.disabled = false;
-          status.classList.add('hidden');
-        }, 2500);
-
-      } catch(e) {
-        console.error('PDF generation error:', e);
-        document.getElementById('pdf-form').classList.remove('capture-mode');
-        btn.innerHTML = '📄 下載 NDR1 申請書 PDF';
-        btn.disabled = false;
-        status.className = 'text-center text-sm mt-3 text-red-500';
-        status.textContent = '❌ 生成失敗: ' + e.message;
-      }
-    }
-  </script>
-
-  <!-- Email Gate Modal -->
-  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4">
-    <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" onclick="event.stopPropagation()">
-      <div class="text-3xl mb-3">📬</div>
-      <h3 class="text-lg font-bold text-navy mb-2">下載前留低 email</h3>
-      <p class="text-sm text-gray-500 mb-5">正在為你準備 <strong>NDR1 撤銷註冊申請書</strong> 嘅 PDF<br />留低 email，我哋會話你知邊份文件準備好咗 😊</p>
-      <div class="flex flex-col gap-3">
-        <input type="email" id="downloadEmail" placeholder="your@email.com" class="border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
-        <button onclick="submitDownloadEmail()" class="bg-navy text-white font-semibold py-2.5 rounded-xl hover:bg-navy-light transition text-sm">📥 繼續下載 PDF</button>
-        <button onclick="closeEmailGate()" class="text-xs text-gray-400 hover:text-gray-600 transition">唔住，稍後先</button>
+  <!-- ═════ Lightbox Modal ═════ -->
+  <div id="lightboxModal" class="fixed inset-0 bg-black/70 z-50 hidden items-center justify-center p-4 no-print" onclick="closeLightbox(event)">
+    <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100 sticky top-0 bg-white z-10">
+        <h3 class="font-bold text-navy text-base">NDR1 撤銷註冊申請書 — CR 官方表格範本</h3>
+        <button onclick="closeLightbox()" class="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+      </div>
+      <div class="p-4">
+        <img src="/assets/demo/dereg-ndr1-official.png" alt="NDR1 撤銷註冊申請書 CR 官方範例" class="w-full border border-gray-200 rounded-lg" />
+        <p class="text-xs text-gray-400 mt-2 text-center">公司註冊處 CR — NDR1 撤銷註冊申請書範本（第 1 頁）</p>
       </div>
     </div>
   </div>
+
+  <script>
+    function openLightbox() {
+      document.getElementById('lightboxModal').classList.remove('hidden');
+      document.getElementById('lightboxModal').classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(e) {
+      if (!e || e.target === document.getElementById('lightboxModal')) {
+        document.getElementById('lightboxModal').classList.add('hidden');
+        document.getElementById('lightboxModal').classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('lightboxModal');
+        if (!modal.classList.contains('hidden')) {
+          closeLightbox();
+        }
+      }
+    });
+  </script>
 
   <!-- Footer -->
   <footer class="gov-footer py-12">
@@ -450,7 +185,7 @@
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
         <p>© 2026 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v12.44</p>
+        <p class="mt-2 opacity-40">v12.45</p>
       </div>
     </div>
   </footer>
