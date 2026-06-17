@@ -261,33 +261,13 @@
           summary: '公司註冊處刊登第一份憲報公告，建議撤銷公司註冊，隨後進入 3 個月反對期',
           isFree: true,
           details: '第四步：公司註冊處收到 NDR1 申請之後，會喺約 3 星期內喺香港憲報（Gazette）刊登第一份公告，話俾公眾知「我哋建議撤銷呢間公司嘅註冊」。\n\n由公告刊登日起計，有一個 **3 個月嘅反對期（Objection Period）**。\n\n📰 憲報公告（第一份）：\n• 根據《公司條例》第 751(1) 條刊登\n• 內容包括公司名稱、CR 編號、申請日期\n• 公告係公開嘅，任何人都可以查閱\n• 憲報一般逢星期五出版\n• 免費查閱：www.gld.gov.hk/egazette\n\n⏳ 3 個月反對期：\n• 任何認為自己會受影響嘅人士都可以提出反對\n• 常見反對原因：公司仲有欠債未還、有人聲稱擁有公司資產、股東之間有糾紛\n• 如果有人反對，公司註冊處會暫停程序，並通知申請人\n• 申請人需要處理反對事項（還錢、和解等）\n• 如果問題解決唔到，程序可能被終止，要行清盤等其他方式\n\n🤔 誰有機會反對？\n• 債權人（公司仲欠人錢）\n• 未達成協議嘅股東（有人唔同意撤銷）\n• 公司擔保嘅受益人\n• 有潛在法律索償嘅人士\n\n🔄 如果冇人反對：\n• 3 個月一過，公司註冊處就會進入 Step 5 — 刊登第二份憲報公告，正式解散公司\n\n⚠️ 重要提醒：\n喺呢段期間（直到第二份憲報公告刊登之前），**公司嘅法律地位仍然存在**！所有法定義務都要繼續履行：\n• 仍然要準時交周年申報表（NAR1）同續商業登記證\n• 如果收到利得稅報稅表仍然要按時提交\n• 公司仍然可以俾人告 / 可以告人\n\n🕐 預計時間：3.5 個月（3 星期等第一份公告 + 3 個月反對期）\n\n✅ 一定要做：\n• 定期上憲報網站 check 公告刊登咗未\n• 保持公司合規紀錄（NAR1、BR 等）直到正式解散\n• 留意有冇人聯絡公司提出反對\n• 如果收到反對通知，要盡快處理',
-          documents: [
-            {
-              name: '憲報查閱指南',
-              description: '教你點樣喺香港憲報網站查閱公司撤銷公告，同埋點樣監察 3 個月反對期有冇人反對',
-              templateFile: '',
-              hasGenerator: false,
-              commonMistakes: [
-                '以為遞交 NDR1 後就唔使再理公司合規 — 解散前仍要交 NAR1 同續 BR',
-                '冇定期 check 憲報 — 唔知第一份公告幾時刊登',
-                '有人反對唔知點處理 — 要盡快揾律師或會計師幫手'
-              ],
-              generatorUrl: '',
-              demoImage: '/assets/demo/dereg-step4.png'
-            }
-          ],
           rejectionRisks: [
             '有人反對且未能解決 = 撤銷程序被終止，可能要行清盤',
             '期間冇交 NAR1 或 BR 續期 = 罰款，甚至影響解散',
             '公司有未披露債務 = 債權人反對，程序卡住'
           ],
-          mode: 'B',
-          needsGenerator: false,
-          needsGuideContent: true,
-          crossStepDeps: 'Step 3 (CR must have received NDR1 before gazette is published)',
-          generatorType: '',
-          generatorUrl: '',
-          generatorDescription: ''
+          mode: 'C',
+          crossStepDeps: 'Step 3 (CR must have received NDR1 before gazette is published)'
         },
         {
           stepNumber: 5,
@@ -804,7 +784,7 @@
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
         <p>© 2026 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v12.45</p>
+        <p class="mt-2 opacity-40">v12.46</p>
     </div>
   </footer>
 
