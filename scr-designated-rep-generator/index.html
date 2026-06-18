@@ -1,817 +1,501 @@
-<!DOCTYPE html>
-<html lang="zh-HK">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ESGov | 指定代表委任決議及同意書 PDF 填寫工具 — 一鍵生成已填好 PDF</title>
-  <meta name="description" content="香港公司 SCR 指定代表委任決議及同意書 PDF 線上填寫工具。直接喺網頁填好公司資料同代表資料，系統自動生成董事會書面決議及指定代表同意書。一鍵生成已填好嘅 PDF 檔案。完全免費，適合中小企東主同公司秘書使用。"/>
-  <meta property="og:title" content="ESGov | 指定代表委任決議及同意書 PDF 填寫工具" />
-  <meta property="og:description" content="填公司代表資料，一鍵生成已填好委任決議及同意書 PDF。完全免費。" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
-    }
-  </script>
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="canonical" href="https://esgov.org/scr-designated-rep-generator" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="zh_HK" />
-  <meta property="og:url" content="https://esgov.org/scr-designated-rep-generator" />
-  <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "指定代表委任決議及同意書 PDF 填寫工具",
-    "description": "香港公司 SCR 指定代表委任決議及同意書 PDF 線上填寫工具。直接填資料，一鍵生成已填好嘅 PDF。完全免費。",
-    "url": "https://esgov.org/scr-designated-rep-generator"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首頁",
-      "item": "https://esgov.org"
-    },{
-      "@type": "ListItem",
-      "position": 2,
-      "name": "重要控制人登記冊 (SCR) 完整指南",
-      "item": "https://esgov.org/significant-controllers-register"
-    },{
-      "@type": "ListItem",
-      "position": 3,
-      "name": "指定代表委任決議及同意書 PDF 填寫工具",
-      "item": "https://esgov.org/scr-designated-rep-generator"
-    }
-  ]
-}
-  </script>
-  <style>
-    /* ===== WYSIWYG Document Form Styles ===== */
-    .pdf-document {
-      font-family: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
-      font-size: 13px;
-      line-height: 1.8;
-      color: #1B2A4A;
-      background: white;
-    }
-    /* ---- Underline Inputs ---- */
-    .underline-input {
-      border: none;
-      border-bottom: 1px solid #888;
-      background: transparent;
-      border-radius: 0;
-      padding: 0 4px 1px;
-      font-family: inherit;
-      font-size: inherit;
-      color: #1B2A4A;
-      outline: none;
-      min-width: 70px;
-      transition: border-color 0.15s;
-    }
-    .underline-input:focus {
-      border-bottom-color: #C9A84C;
-      border-bottom-width: 2px;
-    }
-    .underline-input.wide { min-width: 200px; }
-    .underline-input.full { width: 100%; }
-    /* Date inputs need special handling */
-    .underline-date {
-      min-width: 110px;
-      font-size: 12px;
-    }
-    input[type="date"].underline-input {
-      min-width: 120px;
-    }
-    input[type="date"].underline-input::-webkit-calendar-picker-indicator {
-      opacity: 0.4;
-      padding: 0;
-      margin: 0 0 0 2px;
-    }
-    /* ---- Underline Selects ---- */
-    .underline-select {
-      border: none;
-      border-bottom: 1px solid #888;
-      background: transparent;
-      border-radius: 0;
-      padding: 0 16px 1px 4px;
-      font-family: inherit;
-      font-size: inherit;
-      color: #1B2A4A;
-      outline: none;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      cursor: pointer;
-      min-width: 100px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0l4 5 4-5' fill='%23888'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 2px center;
-      background-size: 8px 5px;
-    }
-    .underline-select:focus {
-      border-bottom-color: #C9A84C;
-      border-bottom-width: 2px;
-    }
-    /* ---- Underline Textareas ---- */
-    .underline-textarea {
-      border: none;
-      border-bottom: 1px dashed #aaa;
-      background: transparent;
-      border-radius: 0;
-      padding: 2px 4px;
-      font-family: inherit;
-      font-size: inherit;
-      color: #1B2A4A;
-      outline: none;
-      resize: vertical;
-      width: 100%;
-      min-height: 50px;
-      line-height: 1.7;
-    }
-    .underline-textarea:focus {
-      border-bottom-color: #C9A84C;
-      border-bottom-width: 2px;
-    }
-    /* ---- Document Layout ---- */
-    .doc-header {
-      text-align: center;
-      border-bottom: 2px solid #1B2A4A;
-      padding-bottom: 10px;
-      margin-bottom: 22px;
-    }
-    .doc-title-gold {
-      font-size: 17px;
-      font-weight: bold;
-      color: #C9A84C;
-      letter-spacing: 0.5px;
-    }
-    .doc-title-navy {
-      font-size: 14px;
-      font-weight: bold;
-      color: #1B2A4A;
-      margin-top: 3px;
-    }
-    .doc-subtitle {
-      font-size: 10px;
-      color: #888;
-      margin-top: 3px;
-    }
-    .doc-section-title {
-      font-weight: bold;
-      font-size: 13px;
-      color: #1B2A4A;
-      border-bottom: 1px solid #1B2A4A;
-      padding-bottom: 2px;
-      margin-bottom: 8px;
-      margin-top: 16px;
-    }
-    .doc-row {
-      display: flex;
-      align-items: baseline;
-      gap: 6px;
-      padding: 2px 0;
-    }
-    .doc-row.align-top { align-items: flex-start; }
-    .doc-label {
-      font-weight: 600;
-      color: #555;
-      font-size: 12px;
-      white-space: nowrap;
-      min-width: 100px;
-    }
-    .doc-label-wide { min-width: 130px; }
-    .doc-inline-text {
-      font-size: 12px;
-      line-height: 1.8;
-    }
-    .doc-footer-note {
-      margin-top: 20px;
-      padding: 8px 12px;
-      background: #f9f9f9;
-      border-left: 3px solid #C9A84C;
-      font-size: 10px;
-      color: #666;
-      text-align: center;
-    }
-    .doc-consent-box {
-      margin: 12px 0;
-      padding: 12px 16px;
-      background: #fffbeb;
-      border: 1px solid #e8d48b;
-      border-radius: 4px;
-      font-size: 12px;
-      line-height: 1.9;
-    }
-    .signature-line {
-      display: inline-block;
-      width: 180px;
-      border-bottom: 1px solid #1B2A4A;
-      margin: 0 4px;
-    }
-    .page-break-divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding: 20px 0;
-      margin: 10px 0;
-      color: #999;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 2px;
-    }
-    .page-break-divider::before,
-    .page-break-divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: #ccc;
-    }
-    .consent-signer-display {
-      font-weight: 600;
-      color: #1B2A4A;
-    }
-    /* ---- Capture Mode ---- */
-    .capture-mode .capture-hide { display: none !important; }
-    .capture-mode { background: white !important; }
-    .capture-mode #pdf-form {
-      box-shadow: none !important;
-      border: none !important;
-      margin: 0 auto !important;
-    }
-  </style>
-</head>
-<body class="bg-gray-100 font-sans">
-
-  <nav class="bg-navy text-white sticky top-0 z-50 capture-hide">
-    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
-      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/significant-controllers-register?step=5" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回指南</a>
-    </div>
-  </nav>
-
-  <div class="max-w-4xl mx-auto px-4 py-6">
-
-    <!-- Trust Banner -->
-    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700 capture-hide">
-      📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅董事會決議及同意書 PDF
-    </div>
-
-    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4 capture-hide">指定代表委任決議及同意書 — PDF 填寫工具</h1>
-
-    <!-- 參考圖片兩幅 -->
-    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto capture-hide">
-      <!-- 真實範例 -->
-      <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-          <img src="/assets/demo/scr-step5.png" alt="指定代表委任決議 真實範例"
-               class="w-full h-full object-contain"
-               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 真實範例（準備中）</div>'" />
-        </div>
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-          <span class="text-white text-xs font-bold drop-shadow-sm">真實範例</span>
-        </div>
-      </div>
-      <!-- 可修改文件 -->
-      <div onclick="openTemplateModal('template')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
-        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
-          <img src="/assets/demo/scr-step5-template.png" alt="指定代表委任決議 模板"
-               class="w-full h-full object-contain"
-               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 模板（準備中）</div>'" />
-        </div>
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-          <span class="text-white text-xs font-bold drop-shadow-sm">可修改文件</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 文件說明 + 常見錯誤 -->
-    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm capture-hide">
-      <div class="flex items-start gap-3 mb-3">
-        <span class="text-lg mt-0.5 shrink-0">📄</span>
-        <div>
-          <h2 class="font-semibold text-navy text-sm">董事會書面決議 + 指定代表同意書</h2>
-          <p class="text-xs text-gray-500 mt-0.5">用於正式委任指定代表備存 SCR，及取得該代表同意擔任該職位</p>
-        </div>
-      </div>
-      <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
-        <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
-        <ul class="text-xs text-gray-700 space-y-1.5">
-          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>未取得指定代表書面同意就委任</li>
-          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>決議未經全體董事簽署</li>
-          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>冇保留決議及同意書正本</li>
-          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>代表身分不符合法定資格</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Template Modal -->
-    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 capture-hide" onclick="closeTemplateModal(event)">
-      <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
-
-        <div class="flex border-b border-gray-200">
-          <button id="tabRealdemo" onclick="switchModalTab('realdemo')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition">📄 真實範例</button>
-          <button id="tabTemplate" onclick="switchModalTab('template')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 模板</button>
-          <button onclick="closeTemplateModal()" class="px-4 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
-        </div>
-
-        <div id="modalRealdemo" class="p-4">
-          <img src="/assets/demo/scr-step5.png" alt="Real Demo" class="w-full border border-gray-200 rounded-lg"
-               onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 真實範例圖片（準備中）</div>'" />
-          <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
-        </div>
-
-        <div id="modalTemplate" class="p-4 hidden">
-          <img src="/assets/demo/scr-step5-template.png" alt="Template" class="w-full border border-gray-200 rounded-lg"
-               onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 可修改模板圖片（準備中）</div>'" />
-          <p class="text-xs text-gray-400 mt-2 text-center">空白可編輯模板格式</p>
-        </div>
-
-      </div>
-    </div>
-
-    <script>
-    function openTemplateModal(tab) {
-      document.getElementById('templateModal').classList.remove('hidden');
-      document.getElementById('templateModal').classList.add('flex');
-      if (tab && typeof switchModalTab === 'function') switchModalTab(tab);
-    }
-    function closeTemplateModal(e) {
-      if (!e || e.target === document.getElementById('templateModal')) {
-        document.getElementById('templateModal').classList.add('hidden');
-        document.getElementById('templateModal').classList.remove('flex');
-      }
-    }
-    function switchModalTab(tab) {
-      document.getElementById('modalRealdemo').classList.toggle('hidden', tab !== 'realdemo');
-      document.getElementById('modalTemplate').classList.toggle('hidden', tab !== 'template');
-      document.getElementById('tabRealdemo').classList.toggle('border-navy', tab === 'realdemo');
-      document.getElementById('tabRealdemo').classList.toggle('border-transparent', tab !== 'realdemo');
-      document.getElementById('tabRealdemo').classList.toggle('font-bold', tab === 'realdemo');
-      document.getElementById('tabRealdemo').classList.toggle('font-semibold', tab !== 'realdemo');
-      document.getElementById('tabRealdemo').classList.toggle('text-navy', tab === 'realdemo');
-      document.getElementById('tabRealdemo').classList.toggle('text-gray-400', tab !== 'realdemo');
-      document.getElementById('tabTemplate').classList.toggle('border-navy', tab === 'template');
-      document.getElementById('tabTemplate').classList.toggle('border-transparent', tab !== 'template');
-      document.getElementById('tabTemplate').classList.toggle('font-bold', tab === 'template');
-      document.getElementById('tabTemplate').classList.toggle('font-semibold', tab !== 'template');
-      document.getElementById('tabTemplate').classList.toggle('text-navy', tab === 'template');
-      document.getElementById('tabTemplate').classList.toggle('text-gray-400', tab !== 'template');
-    }
-    </script>
-
-    <!-- PDF Form — WYSIWYG Document -->
-    <div id="pdf-form" class="pdf-document bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px;">
-
-      <!-- ==================== PAGE 1: BOARD RESOLUTION ==================== -->
-      <div id="form-page-1" class="p-6 sm:p-8" style="padding-bottom:20px;">
-
-        <!-- Header -->
-        <div class="doc-header">
-          <div class="doc-title-gold">BOARD RESOLUTION</div>
-          <div class="doc-title-navy">董事會書面決議</div>
-          <div class="doc-subtitle">（根據《公司條例》第 622 章第 653M 條）</div>
-        </div>
-
-        <!-- Resolution Metadata -->
-        <div class="doc-row">
-          <span class="doc-label">決議編號</span>
-          <input type="text" id="f-res-no" value="DIR/2025/001" class="underline-input wide" />
-        </div>
-        <div class="doc-row">
-          <span class="doc-label">會議日期</span>
-          <input type="date" id="f-board-date" class="underline-input underline-date" />
-        </div>
-        <div class="doc-row">
-          <span class="doc-label">通過日期</span>
-          <input type="date" id="f-pass-date" class="underline-input underline-date" />
-        </div>
-
-        <!-- Company Info -->
-        <div class="doc-section-title">公司資料</div>
-        <div class="doc-row">
-          <span class="doc-label doc-label-wide">公司名稱（中文）</span>
-          <input type="text" id="f-company-cn" value="ABC 貿易有限公司" class="underline-input full" />
-        </div>
-        <div class="doc-row">
-          <span class="doc-label doc-label-wide">公司名稱（英文）</span>
-          <input type="text" id="f-company-en" value="ABC TRADING LIMITED" class="underline-input full" />
-        </div>
-        <div class="doc-row">
-          <span class="doc-label doc-label-wide">公司註冊編號</span>
-          <input type="text" id="f-crno" value="12345678" class="underline-input wide" />
-        </div>
-
-        <!-- Resolution -->
-        <div class="doc-section-title">決議</div>
-        <div class="doc-row">
-          <span class="doc-label">決議標題</span>
-          <input type="text" id="f-res-title" value="關於委任指定代表之董事會書面決議" class="underline-input full" />
-        </div>
-        <div class="doc-row align-top">
-          <span class="doc-label" style="margin-top:2px;">決議正文</span>
-          <textarea id="f-res-body" class="underline-textarea" rows="4">茲根據《公司條例》（第 622 章）第 653M 條及《打擊洗錢及恐怖分子資金籌集條例》（第 615 章）附表 2 第 5 條，董事會通過決議委任 {{代表姓名}} 為本公司就備存重要控制人登記冊（SCR）事宜的指定代表，任期自 {{生效日期}} 起生效。</textarea>
-        </div>
-
-        <!-- Representative Details -->
-        <div class="doc-section-title">委任代表詳情</div>
-        <div class="doc-row">
-          <span class="doc-label doc-label-wide">代表姓名</span>
-          <input type="text" id="f-rep-name" value="黃小明" class="underline-input wide" />
-        </div>
-        <div class="doc-row">
-          <span class="doc-label doc-label-wide">代表身份</span>
-          <select id="f-rep-identity" class="underline-select">
-            <option value="董事 (Director)" selected>董事 (Director)</option>
-            <option value="股東 (Shareholder)">股東 (Shareholder)</option>
-            <option value="僱員 (Employee)">僱員 (Employee)</option>
-            <option value="執業會計師 (Certified Public Accountant)">執業會計師 (CPA)</option>
-            <option value="律師 (Solicitor/Lawyer)">律師 (Solicitor/Lawyer)</option>
-            <option value="信託或公司服務提供者 (TCSP)">信託或公司服務提供者 (TCSP)</option>
-          </select>
-        </div>
-        <div class="doc-row">
-          <span class="doc-label doc-label-wide">是否居港</span>
-          <select id="f-rep-hk" class="underline-select">
-            <option value="是" selected>是</option>
-            <option value="否">否</option>
-          </select>
-        </div>
-        <div class="doc-row">
-          <span class="doc-label doc-label-wide">委任生效日期</span>
-          <input type="date" id="f-effective-date" class="underline-input underline-date" />
-        </div>
-        <div class="doc-row">
-          <span class="doc-label doc-label-wide">薪酬（如有）</span>
-          <input type="text" id="f-remuneration" value="" placeholder="例如：每月 HK$5,000" class="underline-input wide" />
-        </div>
-
-        <!-- Signatures -->
-        <div class="doc-section-title">簽署</div>
-        <div class="doc-row">
-          <span class="doc-label">主席簽署</span>
-          <input type="text" id="f-chairman" value="陳大明" class="underline-input wide" />
-        </div>
-        <div class="doc-row">
-          <span class="doc-label">秘書簽署</span>
-          <input type="text" id="f-secretary" value="李慧敏" class="underline-input wide" />
-        </div>
-
-        <div class="doc-footer-note">
-          〓 本決議由全體董事簽署，並作為董事會書面決議歸檔備查 〓
-        </div>
-      </div>
-
-      <!-- ==================== PAGE BREAK ==================== -->
-      <div id="page-break" class="page-break-divider">
-        <span>— 同意書 —</span>
-      </div>
-
-      <!-- ==================== PAGE 2: CONSENT TO ACT ==================== -->
-      <div id="form-page-2" class="p-6 sm:p-8" style="padding-top:10px;">
-
-        <!-- Header -->
-        <div class="doc-header">
-          <div class="doc-title-gold">CONSENT TO ACT AS DESIGNATED REPRESENTATIVE</div>
-          <div class="doc-title-navy">指定代表同意書</div>
-          <div class="doc-subtitle">（《公司條例》第 622 章第 653M 條）</div>
-        </div>
-
-        <!-- Consent Intro -->
-        <div class="doc-consent-box">
-          <p class="doc-inline-text">
-            本人 <input type="text" id="f-consent-signer" value="黃小明" class="underline-input" style="min-width:90px;font-weight:600;" />
-            ，同意接受委任，擔任
-            <span id="consent-company-display" style="font-weight:600;">ABC 貿易有限公司</span>
-            （「本公司」）就重要控制人登記冊事宜的指定代表，並確認以下事項：
-          </p>
-        </div>
-
-        <!-- Acknowledgment -->
-        <div class="doc-section-title">接受委任聲明</div>
-        <textarea id="f-consent-ack" class="underline-textarea" rows="2">本人確認接受委任，同意擔任指定代表，並了解相關法定職責。</textarea>
-
-        <!-- Duties -->
-        <div class="doc-section-title">了解指定代表職責</div>
-        <textarea id="f-consent-duties" class="underline-textarea" rows="2">本人確認已閱讀並明白指定代表的法定職責，包括按要求向執法人員提供 SCR 資料及查閱、協助公司遵從《公司條例》第 653 部規定等。</textarea>
-
-        <!-- Signature -->
-        <div class="doc-section-title">簽署</div>
-        <div class="doc-row">
-          <span class="doc-label doc-label-wide">同意人簽署</span>
-          <span class="signature-line"></span>
-        </div>
-        <div class="doc-row">
-          <span class="doc-label doc-label-wide">簽署人姓名</span>
-          <span id="consent-signer-display" class="consent-signer-display">黃小明</span>
-        </div>
-        <div class="doc-row">
-          <span class="doc-label doc-label-wide">簽署日期</span>
-          <input type="date" id="f-consent-date" class="underline-input underline-date" />
-        </div>
-
-        <div class="doc-footer-note">
-          〓 本同意書應與董事會書面決議一併保存 〓
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Buttons -->
-    <div class="mt-6 capture-hide">
-      <button onclick="checkEmailGate()" id="genBtn" class="w-full bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm flex items-center justify-center gap-2">
-        📄 下載指定代表委任決議及同意書 PDF
-      </button>
-    </div>
-    <p id="status" class="text-center text-sm mt-3 hidden capture-hide"></p>
-    <div class="text-center mt-4 capture-hide">
-      <a href="/significant-controllers-register?step=5" class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
-        ← 返回重要控制人登記冊完整指南
-      </a>
-    </div>
-    <div class="text-center mt-4 capture-hide">
-      <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
-         class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
-        ☕ 請咖啡
-      </a>
-    </div>
-  </div>
-
-  <script>
-    // Sync consent signer name to display span
-    function syncConsentSigner() {
-      const input = document.getElementById('f-consent-signer');
-      const display = document.getElementById('consent-signer-display');
-      if (input && display) {
-        display.textContent = input.value.trim() || '_____';
-      }
-    }
-    // Sync company name to display span
-    function syncCompanyName() {
-      const input = document.getElementById('f-company-cn');
-      const display = document.getElementById('consent-company-display');
-      if (input && display) {
-        display.textContent = input.value.trim() || '本公司';
-      }
-    }
-
-    // Set default dates on load
-    function setDates() {
-      const d = new Date();
-      const y = d.getFullYear();
-      const m = String(d.getMonth() + 1).padStart(2, '0');
-      const day = String(d.getDate()).padStart(2, '0');
-      const dateStr = y + '-' + m + '-' + day;
-      document.querySelectorAll('.underline-date').forEach(el => {
-        if (!el.value) el.value = dateStr;
-      });
-    }
-    setDates();
-
-    // Attach sync listeners
-    document.addEventListener('DOMContentLoaded', function() {
-      const signerInput = document.getElementById('f-consent-signer');
-      if (signerInput) signerInput.addEventListener('input', syncConsentSigner);
-      const companyInput = document.getElementById('f-company-cn');
-      if (companyInput) companyInput.addEventListener('input', syncCompanyName);
-    });
-
-    // Email Gate
-    function checkEmailGate() {
-      const done = localStorage.getItem('esgov_email_done');
-      if (done) { generatePDF(); return; }
-      document.getElementById('emailGateModal').classList.remove('hidden');
-      document.getElementById('emailGateModal').classList.add('flex');
-    }
-
-    function submitDownloadEmail() {
-      const email = document.getElementById('downloadEmail').value.trim();
-      if (!email || !email.includes('@')) { alert('⚠️ 請輸入有效嘅電郵地址'); return; }
-      try {
-        var iframe = document.createElement('iframe');
-        iframe.name = 'fsframe'; iframe.style.display = 'none';
-        document.body.appendChild(iframe);
-        var f = document.createElement('form');
-        f.method = 'POST'; f.action = 'https://formsubmit.co/tbstbs0613@gmail.com';
-        f.target = 'fsframe'; f.style.display = 'none';
-        var fields = { email: email, page: 'scr-designated-rep-generator', docType: 'Designated Rep Resolution (指定代表委任決議及同意書)', _subject: '📬 ESGov 新下載（指定代表委任決議）：' + email, _captcha: 'false', _template: 'table' };
-        for (var k in fields) { var inp = document.createElement('input'); inp.name = k; inp.value = fields[k]; f.appendChild(inp); }
-        document.body.appendChild(f); f.submit();
-        setTimeout(function(){ document.body.removeChild(f); document.body.removeChild(iframe); }, 1000);
-      } catch(e) {}
-      localStorage.setItem('esgov_email_done', 'true');
-      document.getElementById('emailGateModal').classList.add('hidden');
-      document.getElementById('emailGateModal').classList.remove('flex');
-      setTimeout(function(){ generatePDF(); }, 100);
-    }
-
-    function closeEmailGate() {
-      document.getElementById('emailGateModal').classList.add('hidden');
-      document.getElementById('emailGateModal').classList.remove('flex');
-    }
-
-    // PDF Generation — capture #pdf-form directly (WYSIWYG)
-    async function generatePDF() {
-      const btn = document.getElementById('genBtn');
-      const status = document.getElementById('status');
-      btn.disabled = true;
-      btn.innerHTML = '⏳ 生成中…';
-      status.className = 'text-center text-sm mt-3 text-blue-600';
-      status.textContent = '準備中…';
-      status.classList.remove('hidden');
-
-      try {
-        const { jsPDF } = window.jspdf;
-        await document.fonts.ready;
-
-        // Sync displays before capture
-        syncConsentSigner();
-        syncCompanyName();
-
-        // Build resolution body with placeholders replaced (used for filename)
-        const companyCN = document.getElementById('f-company-cn').value.trim();
-        const effectiveDate = document.getElementById('f-effective-date').value || new Date().toISOString().split('T')[0];
-        const repName = document.getElementById('f-rep-name').value.trim();
-        const resBody = document.getElementById('f-res-body').value.trim();
-        let resolvedBody = resBody
-          .replace(/\{\{代表姓名\}\}/g, repName || '_____')
-          .replace(/\{\{生效日期\}\}/g, effectiveDate);
-        document.getElementById('f-res-body').value = resolvedBody;
-
-        // Enter capture mode — hide everything outside #pdf-form
-        document.body.classList.add('capture-mode');
-
-        await new Promise(r => setTimeout(r, 300));
-
-        // Capture #pdf-form directly
-        const el = document.getElementById('pdf-form');
-        // Replace inputs with styled spans (html2canvas doesn't render input text)
-        const inputReplacements = [];
-        document.querySelectorAll('#pdf-form input:not([type=checkbox]):not([type=hidden]), #pdf-form select, #pdf-form textarea').forEach(function(el) {
-          var span = document.createElement('span');
-          span.className = 'input-replacement';
-          if (el.tagName === 'SELECT') {
-            span.textContent = el.options[el.selectedIndex] ? el.options[el.selectedIndex].text : '';
-          } else {
-            span.textContent = el.value || '';
-          }
-          var style = getComputedStyle(el);
-          span.style.cssText = 'font:' + style.font + ';color:' + style.color + ';border-bottom:1px solid #999;background:transparent;padding:2px 4px;white-space:pre-wrap;display:inline-block;min-width:80px;';
-          el.parentNode.insertBefore(span, el);
-          el.style.display = 'none';
-          inputReplacements.push({ original: el, replacement: span });
-        });
-        void document.body.offsetHeight;
-        await new Promise(function(r) { setTimeout(r, 50); });
-
-                const canvas = await html2canvas(el, {
-          scale: 3,
-          useCORS: true,
-          backgroundColor: '#ffffff',
-          logging: false,
-          width: 800
-        });
-
-        // Exit capture mode
-        // Restore original inputs
-        inputReplacements.forEach(function(item) {
-          item.replacement.remove();
-          item.original.style.display = '';
-        });
-
-                document.body.classList.remove('capture-mode');
-
-        // Generate PDF — 2 pages (Resolution + Consent)
-        const imgData = canvas.toDataURL('image/png');
-        const doc = new jsPDF('p', 'mm', 'a4');
-        const pageW = 210;
-        const pageH = 297;
-
-        // Find page break position from the form element
-        const formEl = document.getElementById('pdf-form');
-        const pageBreakEl = document.getElementById('page-break');
-        const formRect = formEl.getBoundingClientRect();
-        const breakRect = pageBreakEl.getBoundingClientRect();
-        const breakY = breakRect.top - formRect.top; // pixels from top of form
-
-        // Canvas scale factor
-        const scaleFactor = 3; // matches html2canvas scale
-        const breakCanvasY = breakY * scaleFactor;
-
-        // Page 1: top portion (resolution)
-        const page1Canvas = document.createElement('canvas');
-        page1Canvas.width = canvas.width;
-        page1Canvas.height = Math.round(breakCanvasY);
-        const ctx1 = page1Canvas.getContext('2d');
-        ctx1.drawImage(canvas, 0, 0, canvas.width, Math.round(breakCanvasY), 0, 0, canvas.width, Math.round(breakCanvasY));
-
-        const page1Data = page1Canvas.toDataURL('image/png');
-        const page1Ratio = page1Canvas.height / page1Canvas.width;
-        const page1H = pageW * page1Ratio;
-        doc.addImage(page1Data, 'PNG', 0, (pageH - Math.min(page1H, pageH)) / 2, pageW, Math.min(page1H, pageH));
-
-        // Page 2: bottom portion (consent)
-        doc.addPage();
-        const page2Canvas = document.createElement('canvas');
-        page2Canvas.width = canvas.width;
-        page2Canvas.height = canvas.height - Math.round(breakCanvasY);
-        const ctx2 = page2Canvas.getContext('2d');
-        ctx2.drawImage(canvas, 0, Math.round(breakCanvasY), canvas.width, canvas.height - Math.round(breakCanvasY), 0, 0, canvas.width, page2Canvas.height);
-
-        const page2Data = page2Canvas.toDataURL('image/png');
-        const page2Ratio = page2Canvas.height / page2Canvas.width;
-        const page2H = pageW * page2Ratio;
-        doc.addImage(page2Data, 'PNG', 0, (pageH - Math.min(page2H, pageH)) / 2, pageW, Math.min(page2H, pageH));
-
-        // Watermark
-        doc.saveGraphicsState();
-        doc.setGState(new window.jspdf.GState({ opacity: 0.12 }));
-        doc.setTextColor(180, 180, 180);
-        doc.setFontSize(48);
-        doc.setFont('helvetica', 'bold');
-        doc.text('ESGov', 20, 60, { angle: -30 });
-        doc.text('ESGov', 80, 160, { angle: -30 });
-        doc.text('ESGov', 140, 260, { angle: -30 });
-        doc.restoreGraphicsState();
-
-        const fileName = `指定代表委任決議及同意書_${companyCN || 'Company'}_${effectiveDate}.pdf`;
-        doc.save(fileName);
-
-        btn.innerHTML = '✅ 已下載！';
-        status.className = 'text-center text-sm mt-3 text-green-600';
-        status.textContent = '✅ PDF 已儲存到你的電腦';
-        setTimeout(() => {
-          btn.innerHTML = '📄 下載指定代表委任決議及同意書 PDF';
-          btn.disabled = false;
-          status.classList.add('hidden');
-        }, 2500);
-
-      } catch(e) {
-        console.error('PDF generation error:', e);
-        // Ensure capture mode is removed even on error
-        document.body.classList.remove('capture-mode');
-        btn.innerHTML = '📄 下載指定代表委任決議及同意書 PDF';
-        btn.disabled = false;
-        status.className = 'text-center text-sm mt-3 text-red-500';
-        status.textContent = '❌ 生成失敗: ' + e.message;
-      }
-    }
-  </script>
-
-  <!-- Email Gate Modal -->
-  <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 capture-hide">
-    <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" onclick="event.stopPropagation()">
-      <div class="text-3xl mb-3">📬</div>
-      <h3 class="text-lg font-bold text-navy mb-2">下載前留低 email</h3>
-      <p class="text-sm text-gray-500 mb-5">正在為你準備 <strong>指定代表委任決議及同意書</strong> 嘅 PDF<br />留低 email，我哋會話你知邊份文件準備好咗 😊</p>
-      <div class="flex flex-col gap-3">
-        <input type="email" id="downloadEmail" placeholder="your@email.com"
-               class="border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold"
-        />
-        <button onclick="submitDownloadEmail()"
-                class="bg-navy text-white font-semibold py-2.5 rounded-xl hover:bg-navy-light transition text-sm">
-          📥 繼續下載 PDF
-        </button>
-        <button onclick="closeEmailGate()" class="text-xs text-gray-400 hover:text-gray-600 transition">唔住，稍後先</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="gov-footer py-12 capture-hide">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
-        <div class="flex items-center gap-2 text-white font-bold text-xl">
-          <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
-        </div>
-        <div class="text-sm text-gray-400 flex items-center gap-3">
-          <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="hover:text-gold transition">☕ 請咖啡</a>
-          <span class="opacity-30">|</span>
-          <span>全部免費 🆓</span>
-        </div>
-      </div>
-      <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
-        <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
-        <p>© 2026 ESGov. All rights reserved.</p>
-        <p class="mt-2 opacity-40">v12.50</p>
-      </div>
-    </div>
-  </footer>
-
-</body>
-</html>
+1|<!DOCTYPE html>
+2|<html lang="zh-HK">
+3|<head>
+4|  <meta charset="UTF-8" />
+5|  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+6|  <title>ESGov | 指定代表委任決議及同意書 PDF 填寫工具 — 一鍵生成已填好 PDF</title>
+7|  <meta name="description" content="香港重要控制人登記冊（SCR）指定代表通知書 PDF 線上填寫工具。直接喺網頁填寫公司名稱、指定代表姓名、身份證號碼、國籍及生效日期，系統會自動生成已填妥嘅正式指定代表通知書（Designated Representative Notification）。一鍵下載 PDF 交去公司註冊處存檔。完全免費使用。"/>
+8|  <meta property="og:title" content="ESGov | 指定代表委任決議及同意書 PDF 填寫工具" />
+9|  <meta property="og:description" content="SCR 指定代表通知書 PDF 線上填寫工具。填公司名、代表資料、生效日期，一鍵生成已填好 PDF。免費使用。" />
+10|  <link rel="preconnect" href="https://fonts.googleapis.com" />
+11|  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+12|  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+13|  <script src="https://cdn.tailwindcss.com"></script>
+14|  <link rel="stylesheet" href="/assets/css/style.css" />
+15|  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+16|  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+17|  <script>
+18|    tailwind.config = {
+19|      theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
+20|    }
+21|  </script>
+22|  <link rel="icon" type="image/png" href="/favicon.png" />
+23|  <link rel="shortcut icon" href="/favicon.ico" />
+24|  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+25|  <link rel="canonical" href="https://esgov.org/scr-designated-rep-generator" />
+26|  <meta property="og:type" content="website" />
+27|  <meta property="og:locale" content="zh_HK" />
+28|  <meta property="og:url" content="https://esgov.org/scr-designated-rep-generator" />
+29|  <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
+30|  <script type="application/ld+json">
+31|  {
+32|    "@context": "https://schema.org",
+33|    "@type": "WebPage",
+34|    "name": "指定代表委任決議及同意書 PDF 填寫工具",
+35|    "description": "香港公司 SCR 指定代表委任決議及同意書 PDF 線上填寫工具。直接填資料，一鍵生成已填好嘅 PDF。完全免費。",
+36|    "url": "https://esgov.org/scr-designated-rep-generator"
+37|  }
+38|  </script>
+39|  <script type="application/ld+json">
+40|  {
+41|  "@context": "https://schema.org",
+42|  "@type": "BreadcrumbList",
+43|  "itemListElement": [
+44|    {
+45|      "@type": "ListItem",
+46|      "position": 1,
+47|      "name": "首頁",
+48|      "item": "https://esgov.org"
+49|    },{
+50|      "@type": "ListItem",
+51|      "position": 2,
+52|      "name": "重要控制人登記冊 (SCR) 完整指南",
+53|      "item": "https://esgov.org/significant-controllers-register"
+54|    },{
+55|      "@type": "ListItem",
+56|      "position": 3,
+57|      "name": "指定代表委任決議及同意書 PDF 填寫工具",
+58|      "item": "https://esgov.org/scr-designated-rep-generator"
+59|    }
+60|  ]
+61|}
+62|  </script>
+63|  <style>
+64|    /* ===== WYSIWYG Document Form Styles ===== */
+65|    .pdf-document {
+66|      font-family: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+67|      font-size: 13px;
+68|      line-height: 1.8;
+69|      color: #1B2A4A;
+70|      background: white;
+71|    }
+72|    /* ---- Underline Inputs ---- */
+73|    .underline-input {
+74|      border: none;
+75|      border-bottom: 1px solid #888;
+76|      background: transparent;
+77|      border-radius: 0;
+78|      padding: 0 4px 1px;
+79|      font-family: inherit;
+80|      font-size: inherit;
+81|      color: #1B2A4A;
+82|      outline: none;
+83|      min-width: 70px;
+84|      transition: border-color 0.15s;
+85|    }
+86|    .underline-input:focus {
+87|      border-bottom-color: #C9A84C;
+88|      border-bottom-width: 2px;
+89|    }
+90|    .underline-input.wide { min-width: 200px; }
+91|    .underline-input.full { width: 100%; }
+92|    /* Date inputs need special handling */
+93|    .underline-date {
+94|      min-width: 110px;
+95|      font-size: 12px;
+96|    }
+97|    input[type="date"].underline-input {
+98|      min-width: 120px;
+99|    }
+100|    input[type="date"].underline-input::-webkit-calendar-picker-indicator {
+101|      opacity: 0.4;
+102|      padding: 0;
+103|      margin: 0 0 0 2px;
+104|    }
+105|    /* ---- Underline Selects ---- */
+106|    .underline-select {
+107|      border: none;
+108|      border-bottom: 1px solid #888;
+109|      background: transparent;
+110|      border-radius: 0;
+111|      padding: 0 16px 1px 4px;
+112|      font-family: inherit;
+113|      font-size: inherit;
+114|      color: #1B2A4A;
+115|      outline: none;
+116|      appearance: none;
+117|      -webkit-appearance: none;
+118|      -moz-appearance: none;
+119|      cursor: pointer;
+120|      min-width: 100px;
+121|      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0l4 5 4-5' fill='%23888'/%3E%3C/svg%3E");
+122|      background-repeat: no-repeat;
+123|      background-position: right 2px center;
+124|      background-size: 8px 5px;
+125|    }
+126|    .underline-select:focus {
+127|      border-bottom-color: #C9A84C;
+128|      border-bottom-width: 2px;
+129|    }
+130|    /* ---- Underline Textareas ---- */
+131|    .underline-textarea {
+132|      border: none;
+133|      border-bottom: 1px dashed #aaa;
+134|      background: transparent;
+135|      border-radius: 0;
+136|      padding: 2px 4px;
+137|      font-family: inherit;
+138|      font-size: inherit;
+139|      color: #1B2A4A;
+140|      outline: none;
+141|      resize: vertical;
+142|      width: 100%;
+143|      min-height: 50px;
+144|      line-height: 1.7;
+145|    }
+146|    .underline-textarea:focus {
+147|      border-bottom-color: #C9A84C;
+148|      border-bottom-width: 2px;
+149|    }
+150|    /* ---- Document Layout ---- */
+151|    .doc-header {
+152|      text-align: center;
+153|      border-bottom: 2px solid #1B2A4A;
+154|      padding-bottom: 10px;
+155|      margin-bottom: 22px;
+156|    }
+157|    .doc-title-gold {
+158|      font-size: 17px;
+159|      font-weight: bold;
+160|      color: #C9A84C;
+161|      letter-spacing: 0.5px;
+162|    }
+163|    .doc-title-navy {
+164|      font-size: 14px;
+165|      font-weight: bold;
+166|      color: #1B2A4A;
+167|      margin-top: 3px;
+168|    }
+169|    .doc-subtitle {
+170|      font-size: 10px;
+171|      color: #888;
+172|      margin-top: 3px;
+173|    }
+174|    .doc-section-title {
+175|      font-weight: bold;
+176|      font-size: 13px;
+177|      color: #1B2A4A;
+178|      border-bottom: 1px solid #1B2A4A;
+179|      padding-bottom: 2px;
+180|      margin-bottom: 8px;
+181|      margin-top: 16px;
+182|    }
+183|    .doc-row {
+184|      display: flex;
+185|      align-items: baseline;
+186|      gap: 6px;
+187|      padding: 2px 0;
+188|    }
+189|    .doc-row.align-top { align-items: flex-start; }
+190|    .doc-label {
+191|      font-weight: 600;
+192|      color: #555;
+193|      font-size: 12px;
+194|      white-space: nowrap;
+195|      min-width: 100px;
+196|    }
+197|    .doc-label-wide { min-width: 130px; }
+198|    .doc-inline-text {
+199|      font-size: 12px;
+200|      line-height: 1.8;
+201|    }
+202|    .doc-footer-note {
+203|      margin-top: 20px;
+204|      padding: 8px 12px;
+205|      background: #f9f9f9;
+206|      border-left: 3px solid #C9A84C;
+207|      font-size: 10px;
+208|      color: #666;
+209|      text-align: center;
+210|    }
+211|    .doc-consent-box {
+212|      margin: 12px 0;
+213|      padding: 12px 16px;
+214|      background: #fffbeb;
+215|      border: 1px solid #e8d48b;
+216|      border-radius: 4px;
+217|      font-size: 12px;
+218|      line-height: 1.9;
+219|    }
+220|    .signature-line {
+221|      display: inline-block;
+222|      width: 180px;
+223|      border-bottom: 1px solid #1B2A4A;
+224|      margin: 0 4px;
+225|    }
+226|    .page-break-divider {
+227|      display: flex;
+228|      align-items: center;
+229|      justify-content: center;
+230|      gap: 12px;
+231|      padding: 20px 0;
+232|      margin: 10px 0;
+233|      color: #999;
+234|      font-size: 11px;
+235|      font-weight: 600;
+236|      letter-spacing: 2px;
+237|    }
+238|    .page-break-divider::before,
+239|    .page-break-divider::after {
+240|      content: '';
+241|      flex: 1;
+242|      height: 1px;
+243|      background: #ccc;
+244|    }
+245|    .consent-signer-display {
+246|      font-weight: 600;
+247|      color: #1B2A4A;
+248|    }
+249|    /* ---- Capture Mode ---- */
+250|    .capture-mode .capture-hide { display: none !important; }
+251|    .capture-mode { background: white !important; }
+252|    .capture-mode #pdf-form {
+253|      box-shadow: none !important;
+254|      border: none !important;
+255|      margin: 0 auto !important;
+256|    }
+257|  </style>
+258|</head>
+259|<body class="bg-gray-100 font-sans">
+260|
+261|  <nav class="bg-navy text-white sticky top-0 z-50 capture-hide">
+262|    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+263|      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+264|      <a href="/significant-controllers-register?step=5" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回指南</a>
+265|    </div>
+266|  </nav>
+267|
+268|  <div class="max-w-4xl mx-auto px-4 py-6">
+269|
+270|    <!-- Trust Banner -->
+271|    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700 capture-hide">
+272|      📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅董事會決議及同意書 PDF
+273|    </div>
+274|
+275|    <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4 capture-hide">指定代表委任決議及同意書 — PDF 填寫工具</h1>
+276|
+277|    <!-- 參考圖片兩幅 -->
+278|    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4 max-w-lg mx-auto capture-hide">
+279|      <!-- 真實範例 -->
+280|      <div onclick="openTemplateModal('realdemo')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+281|        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+282|          <img src="/assets/demo/scr-step5.png" alt="指定代表委任決議 真實範例"
+283|               class="w-full h-full object-contain"
+284|               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 真實範例（準備中）</div>'" />
+285|        </div>
+286|        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+287|          <span class="text-white text-xs font-bold drop-shadow-sm">真實範例</span>
+288|        </div>
+289|      </div>
+290|      <!-- 可修改文件 -->
+291|      <div onclick="openTemplateModal('template')" class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm cursor-pointer hover:border-gold/40 transition group relative">
+292|        <div class="aspect-[4/5] bg-gray-50 overflow-hidden">
+293|          <img src="/assets/demo/scr-step5-template.png" alt="指定代表委任決議 模板"
+294|               class="w-full h-full object-contain"
+295|               onerror="this.outerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-xs>🖼️ 模板（準備中）</div>'" />
+296|        </div>
+297|        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+298|          <span class="text-white text-xs font-bold drop-shadow-sm">可修改文件</span>
+299|        </div>
+300|      </div>
+301|    </div>
+302|
+303|    <!-- 文件說明 + 常見錯誤 -->
+304|    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm capture-hide">
+305|      <div class="flex items-start gap-3 mb-3">
+306|        <span class="text-lg mt-0.5 shrink-0">📄</span>
+307|        <div>
+308|          <h2 class="font-semibold text-navy text-sm">董事會書面決議 + 指定代表同意書</h2>
+309|          <p class="text-xs text-gray-500 mt-0.5">用於正式委任指定代表備存 SCR，及取得該代表同意擔任該職位</p>
+310|        </div>
+311|      </div>
+312|      <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
+313|        <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
+314|        <ul class="text-xs text-gray-700 space-y-1.5">
+315|          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>未取得指定代表書面同意就委任</li>
+316|          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>決議未經全體董事簽署</li>
+317|          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>冇保留決議及同意書正本</li>
+318|          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>代表身分不符合法定資格</li>
+319|        </ul>
+320|      </div>
+321|    </div>
+322|
+323|    <!-- Template Modal -->
+324|    <div id="templateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 capture-hide" onclick="closeTemplateModal(event)">
+325|      <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
+326|
+327|        <div class="flex border-b border-gray-200">
+328|          <button id="tabRealdemo" onclick="switchModalTab('realdemo')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition">📄 真實範例</button>
+329|          <button id="tabTemplate" onclick="switchModalTab('template')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 模板</button>
+330|          <button onclick="closeTemplateModal()" class="px-4 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+331|        </div>
+332|
+333|        <div id="modalRealdemo" class="p-4">
+334|          <img src="/assets/demo/scr-step5.png" alt="Real Demo" class="w-full border border-gray-200 rounded-lg"
+335|               onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 真實範例圖片（準備中）</div>'" />
+336|          <p class="text-xs text-gray-400 mt-2 text-center">真實填寫範例（資料已模糊處理）</p>
+337|        </div>
+338|
+339|        <div id="modalTemplate" class="p-4 hidden">
+340|          <img src="/assets/demo/scr-step5-template.png" alt="Template" class="w-full border border-gray-200 rounded-lg"
+341|               onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 可修改模板圖片（準備中）</div>'" />
+342|          <p class="text-xs text-gray-400 mt-2 text-center">空白可編輯模板格式</p>
+343|        </div>
+344|
+345|      </div>
+346|    </div>
+347|
+348|    <script>
+349|    function openTemplateModal(tab) {
+350|      document.getElementById('templateModal').classList.remove('hidden');
+351|      document.getElementById('templateModal').classList.add('flex');
+352|      if (tab && typeof switchModalTab === 'function') switchModalTab(tab);
+353|    }
+354|    function closeTemplateModal(e) {
+355|      if (!e || e.target === document.getElementById('templateModal')) {
+356|        document.getElementById('templateModal').classList.add('hidden');
+357|        document.getElementById('templateModal').classList.remove('flex');
+358|      }
+359|    }
+360|    function switchModalTab(tab) {
+361|      document.getElementById('modalRealdemo').classList.toggle('hidden', tab !== 'realdemo');
+362|      document.getElementById('modalTemplate').classList.toggle('hidden', tab !== 'template');
+363|      document.getElementById('tabRealdemo').classList.toggle('border-navy', tab === 'realdemo');
+364|      document.getElementById('tabRealdemo').classList.toggle('border-transparent', tab !== 'realdemo');
+365|      document.getElementById('tabRealdemo').classList.toggle('font-bold', tab === 'realdemo');
+366|      document.getElementById('tabRealdemo').classList.toggle('font-semibold', tab !== 'realdemo');
+367|      document.getElementById('tabRealdemo').classList.toggle('text-navy', tab === 'realdemo');
+368|      document.getElementById('tabRealdemo').classList.toggle('text-gray-400', tab !== 'realdemo');
+369|      document.getElementById('tabTemplate').classList.toggle('border-navy', tab === 'template');
+370|      document.getElementById('tabTemplate').classList.toggle('border-transparent', tab !== 'template');
+371|      document.getElementById('tabTemplate').classList.toggle('font-bold', tab === 'template');
+372|      document.getElementById('tabTemplate').classList.toggle('font-semibold', tab !== 'template');
+373|      document.getElementById('tabTemplate').classList.toggle('text-navy', tab === 'template');
+374|      document.getElementById('tabTemplate').classList.toggle('text-gray-400', tab !== 'template');
+375|    }
+376|    </script>
+377|
+378|    <!-- PDF Form — WYSIWYG Document -->
+379|    <div id="pdf-form" class="pdf-document bg-white shadow-xl border border-gray-300 mx-auto rounded-lg overflow-hidden" style="max-width:800px;">
+380|
+381|      <!-- ==================== PAGE 1: BOARD RESOLUTION ==================== -->
+382|      <div id="form-page-1" class="p-6 sm:p-8" style="padding-bottom:20px;">
+383|
+384|        <!-- Header -->
+385|        <div class="doc-header">
+386|          <div class="doc-title-gold">BOARD RESOLUTION</div>
+387|          <div class="doc-title-navy">董事會書面決議</div>
+388|          <div class="doc-subtitle">（根據《公司條例》第 622 章第 653M 條）</div>
+389|        </div>
+390|
+391|        <!-- Resolution Metadata -->
+392|        <div class="doc-row">
+393|          <span class="doc-label">決議編號</span>
+394|          <input type="text" id="f-res-no" value="DIR/2025/001" class="underline-input wide" />
+395|        </div>
+396|        <div class="doc-row">
+397|          <span class="doc-label">會議日期</span>
+398|          <input type="date" id="f-board-date" class="underline-input underline-date" />
+399|        </div>
+400|        <div class="doc-row">
+401|          <span class="doc-label">通過日期</span>
+402|          <input type="date" id="f-pass-date" class="underline-input underline-date" />
+403|        </div>
+404|
+405|        <!-- Company Info -->
+406|        <div class="doc-section-title">公司資料</div>
+407|        <div class="doc-row">
+408|          <span class="doc-label doc-label-wide">公司名稱（中文）</span>
+409|          <input type="text" id="f-company-cn" value="ABC 貿易有限公司" class="underline-input full" />
+410|        </div>
+411|        <div class="doc-row">
+412|          <span class="doc-label doc-label-wide">公司名稱（英文）</span>
+413|          <input type="text" id="f-company-en" value="ABC TRADING LIMITED" class="underline-input full" />
+414|        </div>
+415|        <div class="doc-row">
+416|          <span class="doc-label doc-label-wide">公司註冊編號</span>
+417|          <input type="text" id="f-crno" value="12345678" class="underline-input wide" />
+418|        </div>
+419|
+420|        <!-- Resolution -->
+421|        <div class="doc-section-title">決議</div>
+422|        <div class="doc-row">
+423|          <span class="doc-label">決議標題</span>
+424|          <input type="text" id="f-res-title" value="關於委任指定代表之董事會書面決議" class="underline-input full" />
+425|        </div>
+426|        <div class="doc-row align-top">
+427|          <span class="doc-label" style="margin-top:2px;">決議正文</span>
+428|          <textarea id="f-res-body" class="underline-textarea" rows="4">茲根據《公司條例》（第 622 章）第 653M 條及《打擊洗錢及恐怖分子資金籌集條例》（第 615 章）附表 2 第 5 條，董事會通過決議委任 {{代表姓名}} 為本公司就備存重要控制人登記冊（SCR）事宜的指定代表，任期自 {{生效日期}} 起生效。</textarea>
+429|        </div>
+430|
+431|        <!-- Representative Details -->
+432|        <div class="doc-section-title">委任代表詳情</div>
+433|        <div class="doc-row">
+434|          <span class="doc-label doc-label-wide">代表姓名</span>
+435|          <input type="text" id="f-rep-name" value="黃小明" class="underline-input wide" />
+436|        </div>
+437|        <div class="doc-row">
+438|          <span class="doc-label doc-label-wide">代表身份</span>
+439|          <select id="f-rep-identity" class="underline-select">
+440|            <option value="董事 (Director)" selected>董事 (Director)</option>
+441|            <option value="股東 (Shareholder)">股東 (Shareholder)</option>
+442|            <option value="僱員 (Employee)">僱員 (Employee)</option>
+443|            <option value="執業會計師 (Certified Public Accountant)">執業會計師 (CPA)</option>
+444|            <option value="律師 (Solicitor/Lawyer)">律師 (Solicitor/Lawyer)</option>
+445|            <option value="信託或公司服務提供者 (TCSP)">信託或公司服務提供者 (TCSP)</option>
+446|          </select>
+447|        </div>
+448|        <div class="doc-row">
+449|          <span class="doc-label doc-label-wide">是否居港</span>
+450|          <select id="f-rep-hk" class="underline-select">
+451|            <option value="是" selected>是</option>
+452|            <option value="否">否</option>
+453|          </select>
+454|        </div>
+455|        <div class="doc-row">
+456|          <span class="doc-label doc-label-wide">委任生效日期</span>
+457|          <input type="date" id="f-effective-date" class="underline-input underline-date" />
+458|        </div>
+459|        <div class="doc-row">
+460|          <span class="doc-label doc-label-wide">薪酬（如有）</span>
+461|          <input type="text" id="f-remuneration" value="" placeholder="例如：每月 HK$5,000" class="underline-input wide" />
+462|        </div>
+463|
+464|        <!-- Signatures -->
+465|        <div class="doc-section-title">簽署</div>
+466|        <div class="doc-row">
+467|          <span class="doc-label">主席簽署</span>
+468|          <input type="text" id="f-chairman" value="陳大明" class="underline-input wide" />
+469|        </div>
+470|        <div class="doc-row">
+471|          <span class="doc-label">秘書簽署</span>
+472|          <input type="text" id="f-secretary" value="李慧敏" class="underline-input wide" />
+473|        </div>
+474|
+475|        <div class="doc-footer-note">
+476|          〓 本決議由全體董事簽署，並作為董事會書面決議歸檔備查 〓
+477|        </div>
+478|      </div>
+479|
+480|      <!-- ==================== PAGE BREAK ==================== -->
+481|      <div id="page-break" class="page-break-divider">
+482|        <span>— 同意書 —</span>
+483|      </div>
+484|
+485|      <!-- ==================== PAGE 2: CONSENT TO ACT ==================== -->
+486|      <div id="form-page-2" class="p-6 sm:p-8" style="padding-top:10px;">
+487|
+488|        <!-- Header -->
+489|        <div class="doc-header">
+490|          <div class="doc-title-gold">CONSENT TO ACT AS DESIGNATED REPRESENTATIVE</div>
+491|          <div class="doc-title-navy">指定代表同意書</div>
+492|          <div class="doc-subtitle">（《公司條例》第 622 章第 653M 條）</div>
+493|        </div>
+494|
+495|        <!-- Consent Intro -->
+496|        <div class="doc-consent-box">
+497|          <p class="doc-inline-text">
+498|            本人 <input type="text" id="f-consent-signer" value="黃小明" class="underline-input" style="min-width:90px;font-weight:600;" />
+499|            ，同意接受委任，擔任
+500|            <span id="consent-company-display" style="font-weight:600;">ABC 貿易有限公司</span>
+501|
