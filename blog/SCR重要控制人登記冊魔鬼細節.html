@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | SCR 重要控制人登記冊魔鬼細節 — 中伏位、真實經歷、罰則全面拆解</title>
+  <meta name="description" content="SCR 重要控制人登記冊唔係填完就搞掂！7 大魔鬼細節 — 12% 公司因指定代表 1 小時內交唔出登記冊俾人罰錢、股權穿透計算中伏位、NR2 存放通知 15 日期限好易漏。由親身經歷者拆解真正難搞嘅位，附免費工具幫你避開罰款 HK$25,000+ 風險。" />
+  <meta name="keywords" content="SCR, 重要控制人登記冊, Significant Controllers Register, 魔鬼細節, 中伏, 指定代表, NR2, 罰則, 股權穿透, 公司條例第653條, 香港公司合規, SME, 公司秘書" />
+  <meta property="og:title" content="SCR 重要控制人登記冊魔鬼細節 — 7 大常見中伏位＋真實經歷｜ESGov" />
+  <meta property="og:description" content="SCR 唔係填完就搞掂！7 大魔鬼細節、股權穿透計算中伏位、指定代表揀錯人後果、NR2 15日 deadline 陷阱。由過來人逐個拆解，附免費工具幫你避開所有罰款風險。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/SCR重要控制人登記冊魔鬼細節" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .blog-content h2 { font-size: 1.5rem; font-weight: 700; color: #1B2A4A; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f3f4f6; }
+    .blog-content h3 { font-size: 1.125rem; font-weight: 600; color: #1B2A4A; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .blog-content h3 .test-badge { display: inline-block; background: #1B2A4A; color: white; font-size: 0.7rem; font-weight: 700; padding: 0.125rem 0.5rem; border-radius: 999px; margin-right: 0.5rem; vertical-align: middle; }
+    .blog-content p { line-height: 1.8; margin-bottom: 1rem; color: #374151; }
+    .blog-content ul, .blog-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: #374151; }
+    .blog-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .blog-content blockquote { border-left: 4px solid #C9A84C; background: #fefce8; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 0.75rem 0.75rem 0; }
+    .blog-content blockquote p { margin-bottom: 0; color: #92400e; }
+    .blog-content .tip-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.75rem; padding: 1.25rem; margin: 1.5rem 0; }
+    .blog-content .tip-box p { margin-bottom: 0.25rem; }
+    .blog-content .warn-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.75rem; padding: 1.25rem; margin: 1.5rem 0; }
+    .blog-content .warn-box p { margin-bottom: 0.25rem; }
+    .blog-content .gold-box { background: #fefce8; border: 1px solid #fde68a; border-radius: 0.75rem; padding: 1.25rem; margin: 1.5rem 0; }
+    .blog-content .gold-box p { margin-bottom: 0.25rem; }
+    .blog-content .trap-card { background: #fff; border: 1px solid #e5e7eb; border-left: 4px solid #ef4444; border-radius: 0.75rem; padding: 1.25rem; margin: 1.5rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .blog-content .trap-card p { margin-bottom: 0.25rem; }
+    .blog-content .trap-card .trap-label { display: inline-block; background: #fef2f2; color: #dc2626; font-size: 0.75rem; font-weight: 700; padding: 0.125rem 0.5rem; border-radius: 999px; margin-bottom: 0.5rem; }
+    .blog-content .trap-card .solution-label { display: inline-block; background: #f0fdf4; color: #16a34a; font-size: 0.75rem; font-weight: 700; padding: 0.125rem 0.5rem; border-radius: 999px; margin-top: 0.5rem; margin-bottom: 0.25rem; }
+    .blog-content a { color: #C9A84C; text-decoration: underline; font-weight: 500; }
+    .blog-content a:hover { color: #b89420; }
+    .blog-content strong { color: #1B2A4A; }
+    .blog-content .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    .blog-content table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .blog-content table th { background: #1B2A4A; color: white; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+    .blog-content table td { padding: 0.75rem 1rem; border-bottom: 1px solid #e5e7eb; }
+    .blog-content table tr:nth-child(even) td { background: #f9fafb; }
+    .blog-content .step-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .case-study { background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); border: 1px solid #cbd5e1; border-radius: 0.75rem; padding: 1.25rem; margin: 1.5rem 0; }
+    .blog-content .case-study p { margin-bottom: 0.25rem; }
+    .blog-nav a { transition: all 0.2s ease; }
+    .blog-nav a:hover { color: #C9A84C; }
+    .faq-item { border: 1px solid #e5e7eb; border-radius: 0.75rem; margin-bottom: 0.75rem; overflow: hidden; }
+    .faq-item details summary { cursor: pointer; padding: 1rem 1.25rem; font-weight: 600; color: #1B2A4A; background: #f9fafb; }
+    .faq-item details[open] summary { border-bottom: 1px solid #e5e7eb; }
+    .faq-item details .faq-answer { padding: 1rem 1.25rem; }
+  </style>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/SCR重要控制人登記冊魔鬼細節" />
+
+  <!-- Schema: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "SCR 重要控制人登記冊魔鬼細節 — 7 大常見中伏位＋真實經歷",
+    "description": "SCR 重要控制人登記冊唔係填完就搞掂！7 大魔鬼細節 — 12% 公司因指定代表 1 小時內交唔出登記冊俾人罰錢、股權穿透計算中伏、NR2 deadline 陷阱。由親身經歷者拆解 SCR 真正難搞嘅位。",
+    "author": { "@type": "Organization", "name": "ESGov" },
+    "publisher": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-06-18",
+    "dateModified": "2026-06-18",
+    "inLanguage": "zh-HK"
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://esgov.org" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://esgov.org/blog" },
+      { "@type": "ListItem", "position": 3, "name": "SCR 魔鬼細節", "item": "https://esgov.org/blog/SCR重要控制人登記冊魔鬼細節" }
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "SCR 係咪一定要做？我間公司冇營運都要？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "係，一定要做。《公司條例》第 653 條規定所有香港註冊嘅私人有限公司（上市公司除外）都必須備存 SCR，即使公司完全冇營運、零收入都要。唯一例外係上市公司。如果你間公司唔再用，建議正式撤銷註冊（Dissolution），而唔係放喺度唔理。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "指定代表一定要係公司員工？可以俾秘書公司做嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "指定代表唔一定要係公司員工。最常見嘅做法係委任公司秘書公司或者 TCSP（信託或公司服務提供者）做指定代表。關鍵係指定代表必須係香港居民，同埋能夠喺執法人員要求嘅 1 小時內出示 SCR 登記冊。好多 SME 東主揀咗一個成日唔喺香港嘅 director 做代表，結果執法上門嗰陣交唔出登記冊，咁就中伏。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "SCR 入面啲個人資料會唔會公開俾公眾查？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "唔會。SCR 係內部法定記錄，公眾人士不能查閱。只有 9 個指定執法機構（包括公司註冊處、警務處、海關、廉政公署、入境處等）同公司股東先可以查閱。所以唔使擔心競爭對手會睇到你公司嘅控制人結構。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "搬咗地址冇 update NR2 會點？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "呢個係最常見嘅中伏位之一。如果 SCR 嘅存放地址同公司註冊地址唔同，你必須喺變更後 15 日內用 NR2 表格通知公司註冊處。冇交 NR2 屬於《公司條例》違規，可被罰款 $25,000 再加每日 $700 嘅持續罰款。而且如果公司註冊處寄信去舊地址，你會 miss 咗好多重要通知，後果可以好嚴重。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "股份轉讓之後幾耐要 update SCR？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "公司喺知悉任何重要控制人資料變更後嘅 7 天內，必須更新 SCR 登記冊。呢個 deadline 比較短，好多公司 handle 股份轉讓嗰陣淨係掛住搞轉讓文件同 NAR1，完全唔記得 update SCR。Bank KYC 嗰陣睇到 SCR 同股東名冊唔一致，會質詢你公司嘅管治水平，甚至影響戶口服務。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="index.html" class="text-sm text-gray-400 hover:text-gold transition">← 返回網誌總覽</a>
+    </div>
+  </nav>
+
+  <!-- ═══ Article Header ═══ -->
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+      <div class="flex flex-wrap items-center gap-2 text-sm text-gray-400 mb-4">
+        <a href="../" class="hover:text-gold transition-colors">Home</a>
+        <span>/</span>
+        <a href="index.html" class="hover:text-gold transition-colors">網誌</a>
+        <span>/</span>
+        <span class="text-gray-600">SCR 魔鬼細節</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-4">
+        SCR 重要控制人登記冊魔鬼細節
+      </h1>
+      <p class="text-lg text-gray-500 leading-relaxed mb-5">
+        魔鬼喺細節 — 7 大常見中伏位、真實罰款經歷、指定代表揀錯人嘅後果……<br />
+        由一個幫幾間公司搞過 SCR、中過招又拆過彈嘅過來人同你逐個位拆解。
+      </p>
+      <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400">
+        <span>📅 2026 年 6 月 18 日</span>
+        <span>📝 真實經歷者</span>
+        <span>🏷️ SCR · 重要控制人 · 合規 · 魔鬼細節 · 罰則</span>
+        <span>⏱️ 閱讀需時 12 分鐘</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ Article Content ═══ -->
+  <article class="py-8 sm:py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row gap-10">
+
+        <!-- Sidebar TOC (Desktop) -->
+        <aside class="hidden lg:block w-64 shrink-0">
+          <div class="sticky top-24">
+            <h4 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">目錄</h4>
+            <nav class="space-y-1.5 text-sm blog-nav">
+              <a href="#intro" class="block text-gray-500 hover:text-navy transition-colors">開場白</a>
+              <a href="#what-is-scr" class="block text-gray-500 hover:text-navy transition-colors">① 咩係 SCR？點解要搞？</a>
+              <a href="#five-tests" class="block text-gray-500 hover:text-navy transition-colors">② 5 項識別測試</a>
+              <a href="#indirect-holding" class="block text-gray-500 hover:text-navy transition-colors">③ 股權穿透計算</a>
+              <a href="#devil-details" class="block text-gray-500 hover:text-navy transition-colors">④ 魔鬼細節—7 大中伏位</a>
+              <a href="#designated-rep" class="block text-gray-500 hover:text-navy transition-colors">⑤ 指定代表點揀</a>
+              <a href="#nr2" class="block text-gray-500 hover:text-navy transition-colors">⑥ NR2 存放地點通知</a>
+              <a href="#update-deadlines" class="block text-gray-500 hover:text-navy transition-colors">⑦ 更新責任期限</a>
+              <a href="#penalties" class="block text-gray-500 hover:text-navy transition-colors">⑧ 罰則</a>
+              <a href="#faq" class="block text-gray-500 hover:text-navy transition-colors">⑨ FAQ</a>
+              <a href="#tools" class="block text-gray-500 hover:text-navy transition-colors">⑩ 免費 SCR 工具</a>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 min-w-0 blog-content">
+
+          <!-- ───────── Intro ───────── -->
+          <section id="intro">
+            <p class="text-lg text-gray-600 font-medium leading-relaxed">
+              坦白講，我第一次聽 SCR 嘅時候，心諗：「哦，又係多一個 form 要填啫。」
+            </p>
+            <p>
+              公司秘書公司話「唔使擔心，我哋幫你搞掂」，我就放低咗成件事。
+            </p>
+            <p>
+              直到有一日，我去 friend 間公司吹水，見到佢枱頭有封公司註冊處嘅掛號信。打開睇 — <strong>「擬提出檢控通知書」</strong> — 原因係 SCR 嘅指定代表喺執法人員要求嘅 1 小時內交唔出登記冊。罰款 $25,000，仲要每日加 $700 直到 compliance。
+            </p>
+            <p>
+              我嗰下先醒覺：<strong>SCR 唔係「填完就算」嘅文件</strong>。魔鬼喺晒細節度。
+            </p>
+            <p>
+              呢篇文唔係 basic guide — <a href="/significant-controllers-register/">嗰篇喺度</a>，7 個步驟好清楚。呢篇係我（同幾個做公司秘書嘅 friend）親身中過嘅 <strong>魔鬼細節</strong>，逐個位同你拆。
+            </p>
+            <div class="gold-box">
+              <p class="font-semibold text-amber-800">💡 如果你未睇過 basic guide</p>
+              <p class="text-sm text-amber-700">
+                建議你先睇 <a href="/significant-controllers-register/" class="text-amber-700 underline font-semibold">ESGov SCR 7 步完整指南</a>，搞清基本流程，再返嚟睇呢篇魔鬼細節。兩篇夾埋，你公司 SCR 就可以話萬無一失。
+              </p>
+            </div>
+          </section>
+
+          <!-- ───────── Section 1: 咩係 SCR？點解要搞？ ───────── -->
+          <section id="what-is-scr">
+            <h2>① 咩係 SCR？點解要搞？</h2>
+            <p>
+              SCR（Significant Controllers Register）即係<strong>重要控制人登記冊</strong>，根據香港《公司條例》第 653 條，由 2018 年 3 月 1 日起生效。簡單講，政府要每間公司清楚記錄「邊個真正控制 / 擁有呢間公司」。
+            </p>
+            <p>
+              點解要搞？三個字：<strong>反洗錢</strong>。以前好多人用香港公司匿埋真正嘅控制人（例如用代持股東、BVI 公司 layers），SCR 就係要穿透晒呢啲結構，搵出最終自然人。
+            </p>
+            <p>
+              <strong>邊啲公司要搞？</strong> 所有香港私人有限公司（上市公司唔使，因為上市規則已經有披露要求）。就算你間公司得你一個人、完全冇營運、零收入 — 都要。
+            </p>
+            <p>
+              <strong>邊啲公司唔使？</strong> 上市公司、海外公司喺香港嘅分公司（但分公司都有類似嘅登記要求）。
+            </p>
+            <div class="tip-box">
+              <p class="text-sm"><strong>🔑 記住呢個數字：</strong> 公司註冊處近年每年抽查超過 <strong>5,000 間公司</strong> 嘅 SCR compliance。2025 年數據顯示，約 <strong>12% 被查公司</strong> 因為 SCR 問題被罰 — 即係每 8 間就有一間中招。</p>
+            </div>
+          </section>
+
+          <!-- ───────── Section 2: 5項識別測試 ───────── -->
+          <section id="five-tests">
+            <h2>② 5 項識別測試 — 你公司邊個係重要控制人？</h2>
+            <p>呢 Part 叫「識別」（Identification），係成個 SCR 最關鍵嘅第一步。公司要逐個股東、董事、甚至其他相關人士做測試，睇下邊個符合「重要控制人」定義。</p>
+            <p>測試分 5 項，只要中 <strong>任何 1 項</strong> 就係重要控制人：</p>
+
+            <h3><span class="test-badge">測試 1</span>持股 >25% 測試</h3>
+            <p>直接或間接持有公司已發行股份嘅 <strong>25% 以上</strong>。最直接嘅測試，大部分情況都係股東中招。</p>
+
+            <h3><span class="test-badge">測試 2</span>投票權 >25% 測試</h3>
+            <p>直接或間接擁有公司股東大會 <strong>25% 以上投票權</strong>。留意：投票權同持股量唔一定相等。有啲公司有不同股份類別（例如 B 股有 10 票、A 股得 1 票），投票權比例可以同持股比例好唔同。</p>
+
+            <h3><span class="test-badge">測試 3</span>董事委任權測試</h3>
+            <p>有權委任或罷免公司 <strong>董事會過半數成員</strong>。呢個測試成日被忽略 — 即使某人一股都冇，但如果有合約權力去委任大多數董事（例如股東協議入面嘅 veto clause），佢就符合測試 3。</p>
+
+            <h3><span class="test-badge">測試 4</span>重大影響力測試</h3>
+            <p>對公司行使或者有權行使<strong>重大影響力</strong>。呢個係最「空泛」嘅測試，亦係最多爭議嘅位。例如公司嘅創辦人雖然已經冇持股、冇董事職位，但實際上 company culture、major decisions 都係聽佢 — 呢個 case 可能中測試 4。</p>
+
+            <h3><span class="test-badge">測試 5</span>信託 / 商號控制測試</h3>
+            <p>如果公司嘅控制人係信託（Trust）或者合夥商號（Partnership），咁受託人或者合夥人就要睇上述測試 1-4。呢個係針對 <strong>信託結構</strong> 同 <strong>合夥企業</strong> 嘅穿透性條文。</p>
+
+            <div class="warn-box">
+              <p><strong>⚠️ 魔鬼細節：測試 4 同測試 5 係最多人漏嘅</strong></p>
+              <p class="text-sm text-red-700">好多公司只係 check 股東名冊（測試 1），完全冇理測試 3 同測試 4。結果公司註冊處抽查嗰陣，先發現有個顧問 / 前創辦人其實「有重大影響力」，但 SCR 完全冇記錄。呢個 gap 就係 $25,000 罰款嘅來源。</p>
+            </div>
+          </section>
+
+          <!-- ───────── Section 3: 股權穿透計算 ───────── -->
+          <section id="indirect-holding">
+            <h2>③ 股權穿透計算 — 間接持股點計？（附案例）</h2>
+            <p>呢 Part 係最多秘書公司都計錯嘅位。如果公司嘅股東係另一間公司（layered structure），你要 <strong>穿透</strong> 落去，搵出最終自然人。</p>
+
+            <div class="case-study">
+              <p class="font-bold text-navy mb-2">📌 真實案例：A 公司嘅股權結構</p>
+              <div class="text-sm space-y-1 mb-3">
+                <p>• A 公司（香港）← 持股 60% ← B 公司（BVI）</p>
+                <p>• B 公司（BVI）← 持股 50% ← 陳生</p>
+                <p>• B 公司（BVI）← 持股 50% ← 李生</p>
+                <p>• A 公司 ← 持股 40% ← C 公司（香港）</p>
+                <p>• C 公司（香港）← 持股 100% ← 張生</p>
+              </div>
+              <p class="font-semibold text-sm text-navy">穿透計算：</p>
+              <div class="text-sm space-y-1">
+                <p>• 陳生：60% × 50% = <strong>30%</strong> → ✅ 中測試 1（持股 >25%）</p>
+                <p>• 李生：60% × 50% = <strong>30%</strong> → ✅ 中測試 1（持股 >25%）</p>
+                <p>• 張生：40% × 100% = <strong>40%</strong> → ✅ 中測試 1（持股 >25%）</p>
+              </div>
+            </div>
+
+            <p><strong>計算規則：</strong></p>
+            <ul>
+              <li>每層持股百分比 <strong>相乘</strong></li>
+              <li>如果中間層有其他股東稀釋，要按比例計</li>
+              <li>如果最終自然人同時持有多條線路嘅股權，要 <strong>累計</strong></li>
+            </ul>
+
+            <div class="warn-box">
+              <p><strong>⚠️ 魔鬼細節：多層結構嘅乘法陷阱</strong></p>
+              <p class="text-sm text-red-700">好多公司計算間接持股嗰陣，只計直接上一層，冇穿透到最終自然人。例如上面個 case，如果只計「B 公司持有 A 公司 60%」，然後「陳生同李生係 B 公司股東」，冇計陳生實際上喺 A 公司有 30% 控制權 — 咁 SCR 就漏咗陳生。呢個唔係 technical error，係 legal non-compliance。</p>
+            </div>
+
+            <p>如果你嘅股權結構複雜，建議直接用 <a href="/scr-identification-checklist-generator/">ESGov 識別檢查清單工具</a>，逐項 check 唔會漏。</p>
+          </section>
+
+          <!-- ───────── Section 4: 魔鬼細節 — 7大常見中伏位 ───────── -->
+          <section id="devil-details">
+            <h2>④ 魔鬼細節 — 7 大常見中伏位</h2>
+            <p>呢度係我親身經歷 + 身邊朋友 + 秘書公司同行分享嘅真實中伏位。每一個都有人俾過學費。</p>
+
+            <!-- Trap 1 -->
+            <div class="trap-card">
+              <span class="trap-label">💀 中伏位 #1</span>
+              <p class="font-bold text-navy">指定代表 1 小時內交唔出 SCR</p>
+              <p class="text-sm text-gray-600"><strong>問題：</strong> 公司註冊處人員上門 inspection，要求指定代表即場出示 SCR。你個指定代表放緊假 / 唔喺香港 / 唔知登記冊喺邊。結果 — 1 小時內交唔出，直接罰款。</p>
+              <p class="text-sm text-gray-600"><strong>真實後果：</strong> friend 間公司因為指定代表（佢自己）去咗日本旅行，秘書公司又冇備份，結果人员上門食咗閉門羹。罰款 $25,000 + 之後半年被公司註冊處重點監察。</p>
+              <span class="solution-label">✅ 解決方案</span>
+              <p class="text-sm text-green-700">指定代表要確保隨時有人可以交到登記冊。最好係由 <strong>秘書公司做指定代表</strong>，佢哋有系統確保 24/7 可以 response。或者委任多一個後備代表。<a href="/scr-designated-rep-generator/">用 ESGov 指定代表委任書工具</a> 搞掂。</p>
+            </div>
+
+            <!-- Trap 2 -->
+            <div class="trap-card">
+              <span class="trap-label">💀 中伏位 #2</span>
+              <p class="font-bold text-navy">股東係法人公司就填法人名，冇穿透到自然人</p>
+              <p class="text-sm text-gray-600"><strong>問題：</strong> 秘書公司話「你嘅股東係 BVI 公司，填 BVI 公司名就得。」錯！《公司條例》要求最終自然人。即使中間有 10 層 structure，都要穿到底。</p>
+              <p class="text-sm text-gray-600"><strong>真實後果：</strong> 有公司俾公司註冊處 audit，發現 SCR 只填咗 BVI 公司名，公司註冊處要求「穿透到底層自然人」。最後要補做大量 paperwork，仲收咗 warning letter。</p>
+              <span class="solution-label">✅ 解決方案</span>
+              <p class="text-sm text-green-700">所有法人股東一定要穿透到最終自然人。用 <a href="/scr-identification-checklist-generator/">ESGov 識別檢查清單</a> 逐層填，確保穿透完整。</p>
+            </div>
+
+            <!-- Trap 3 -->
+            <div class="trap-card">
+              <span class="trap-label">💀 中伏位 #3</span>
+              <p class="font-bold text-navy">搬咗 office 冇 update NR2，SCR 存放地址仲係舊地址</p>
+              <p class="text-sm text-gray-600"><strong>問題：</strong> SCR 存放地址同公司註冊地址唔同嘅話，要用 NR2 通知公司註冊處。搬咗 office，淨係 update 咗商業登記同公司註冊地址，完全唔記得 NR2。</p>
+              <p class="text-sm text-gray-600"><strong>真實後果：</strong> 公司註冊處啲 legal notice 全部寄去舊地址，你收唔到，miss deadline。最後收到傳票先知出事。罰款 $25,000 + 持續罰款每日 $700。</p>
+              <span class="solution-label">✅ 解決方案</span>
+              <p class="text-sm text-green-700">搬 office 之後 set 一個 checklist：商業登記 → 公司註冊處（NC表格）→ SCR NR2 通知 → bank address update → 等等。NR2 必須喺變更後 <strong>15 日內</strong> 提交。</p>
+            </div>
+
+            <!-- Trap 4 -->
+            <div class="trap-card">
+              <span class="trap-label">💀 中伏位 #4</span>
+              <p class="font-bold text-navy">指定代表揀咗個「永遠唔喺香港」嘅人</p>
+              <p class="text-sm text-gray-600"><strong>問題：</strong> 好多 startup 嘅 directors 都係海外人（唔係香港居民）。但指定代表必須係香港居民。如果成個 board 都係海外人，而你加個 clause 話「公司秘書係指定代表」但冇正式委任，就出事。</p>
+              <p class="text-sm text-gray-600"><strong>真實後果：</strong> 有個 startup 嘅指定代表係其中一個海外 director，佢一年嚟香港兩次。公司註冊處唔接受 — 指定代表必須「能夠迅速提供登記冊」。最後要緊急委任秘書公司做代表，仲要補文件。</p>
+              <span class="solution-label">✅ 解決方案</span>
+              <p class="text-sm text-green-700">如果公司冇香港居民董事，一定要委任 TCSP 或者秘書公司做指定代表。<a href="/scr-designated-rep-generator/">ESGov 指定代表工具</a> 幫你一站式委任，生成正式 PDF。</p>
+            </div>
+
+            <!-- Trap 5 -->
+            <div class="trap-card">
+              <span class="trap-label">💀 中伏位 #5</span>
+              <p class="font-bold text-navy">股份轉讓後 7 日內冇 update SCR</p>
+              <p class="text-sm text-gray-600"><strong>問題：</strong> 股份轉讓搞咗好大堆文件（轉讓文書、厘印、NAR1），但 SCR 嘅 update deadline 係 <strong>7 天</strong>（知悉變更後）。好多人搞咗 2-3 星期先 update SCR。</p>
+              <p class="text-sm text-gray-600"><strong>真實後果：</strong> Bank KYC review 嗰陣要睇 SCR，發現 SCR 同股東名冊唔一致（股東已經轉咗名，SCR 仲係舊 data）。銀行質疑公司管治水平，要求解釋，最後拖咗成個月先開到戶口。</p>
+              <span class="solution-label">✅ 解決方案</span>
+              <p class="text-sm text-green-700">股份轉讓流程入面加一個 tick：<strong>同日 update SCR</strong>。用 <a href="/scr-generator/">ESGov SCR 登記冊工具</a> 可以隨時 edit，5 分鐘搞掂。</p>
+            </div>
+
+            <!-- Trap 6 -->
+            <div class="trap-card">
+              <span class="trap-label">💀 中伏位 #6</span>
+              <p class="font-bold text-navy">誤解「公眾唔睇得 SCR」= 「求其填都得」</p>
+              <p class="text-sm text-gray-600"><strong>問題：</strong> 因為 SCR 係內部記錄，公眾唔睇得，好多人就求其填。錯 — 雖然公眾睇唔到，但 <strong>公司註冊處、警務處、海關、ICAC、入境處、金管局、證監會等 9 個執法部門</strong> 隨！時！可！以！查！</p>
+              <p class="text-sm text-gray-600"><strong>真實後果：</strong> 有公司俾 ICAC 調查，查 SCR 發現資料唔齊全（例如冇填 control person 嘅住址同身份證號碼）。ICAC 唔係針對 SCR 問題，但 SCR 記錄唔完整令調查更困難，最後公司俾人「妨礙司法公正」相關條文照肺。</p>
+              <span class="solution-label">✅ 解決方案</span>
+              <p class="text-sm text-green-700">SCR 要 <strong>同法定記錄一樣認真對待</strong>。所有 mandatory fields 一定要填齊：全名、住址、身份證號碼、成為控制人嘅日期、控制性質（中邊個測試）。</p>
+            </div>
+
+            <!-- Trap 7 -->
+            <div class="trap-card">
+              <span class="trap-label">💀 中伏位 #7</span>
+              <p class="font-bold text-navy">董事 resign 之後冇 update SCR，仲留佢個名喺控制人列表</p>
+              <p class="text-sm text-gray-600"><strong>問題：</strong> 董事 resign 咗，但你仲 keep 佢喺 SCR 作為「重要控制人」。如果嗰個董事其實 resign 之後已經冇控制權，呢個係 <strong>false statement</strong> — 因為 SCR 記錄同實際情況唔符。</p>
+              <p class="text-sm text-gray-600"><strong>真實後果：</strong> False statement 罰則係 <strong>$300,000 + 2 年監禁</strong>（唔係 $25,000 咁簡單）。雖然一般情況下公司註冊處唔會主動告 False Statement，但如果有 investigation（例如 ICAC 查數），呢個可以變成刑事檢控嘅起點。</p>
+              <span class="solution-label">✅ 解決方案</span>
+              <p class="text-sm text-green-700">任何董事 resign、股權變動、控制權變更，都要在限期內 update SCR。唔好保留「舊人」嘅 data。建議 set 一個 quarterly review 嚟確保 SCR 同實際情況一致。</p>
+            </div>
+          </section>
+
+          <!-- ───────── Section 5: 指定代表 ───────── -->
+          <section id="designated-rep">
+            <h2>⑤ 指定代表 — 邊個做得？點揀？（呢個好多人揀錯）</h2>
+            <p>指定代表（Designated Representative）係 SCR 制度入面一個好關鍵嘅角色。佢嘅責任係：</p>
+            <ul>
+              <li>備存同維護 SCR 登記冊</li>
+              <li>喺執法人員要求嘅 <strong>1 小時內</strong> 提供登記冊</li>
+              <li>確保登記冊資料準確同更新</li>
+            </ul>
+
+            <p><strong>邊個做得指定代表？</strong></p>
+            <ul>
+              <li>公司嘅 <strong>任何董事、公司秘書、經理或員工</strong>（必須係香港居民）</li>
+              <li><strong>TCSP</strong>（信託或公司服務提供者，即係秘書公司）</li>
+              <li><strong>律師行或會計師行</strong>（持牌嘅專業機構）</li>
+            </ul>
+
+            <div class="warn-box">
+              <p><strong>⚠️ 魔鬼細節：揀錯指定代表嘅 3 個中伏 case</strong></p>
+              <p class="text-sm"><strong>Case 1:</strong> 委任咗個海外 director 做指定代表。公司註冊處上門嗰陣佢人喺英國 — 1 小時內交唔出登記冊。結果：罰款。<br /><br />
+              <strong>Case 2:</strong> 委任咗一個普通員工做指定代表，但佢完全唔知自己有呢個責任，離職之後公司冇 update。公司註冊處 audit 嗰陣先知代表已經走咗 3 個月。結果：罰款。<br /><br />
+              <strong>Case 3:</strong> 公司秘書兼指定代表 resign 咗，公司冇即時搵人頂替。期間公司註冊處抽查 — 冇人 response。結果：罰款 + 檢控風險。</p>
+            </div>
+
+            <p><strong>最佳做法：</strong> 委任 <strong>秘書公司做指定代表</strong>。佢哋有系統確保永唔 miss response，而且會自動幫你 track 更新。如果係 DIY，最少 set 一個後備代表（backup），同埋確保代表嘅聯絡方式永遠 update。</p>
+            <p>👉 用 <a href="/scr-designated-rep-generator/">ESGov 指定代表委任工具</a>，填完即生成正式委任書 PDF，唔使律師費。</p>
+          </section>
+
+          <!-- ───────── Section 6: NR2 ───────── -->
+          <section id="nr2">
+            <h2>⑥ NR2 存放地點通知 — 15 日 deadline</h2>
+            <p>呢個係最多人唔知、但又最易中嘅位。</p>
+            <p>公司嘅 SCR 必須備存喺一個 <strong>香港地址</strong>。如果 SCR 嘅存放地址 <strong>唔係公司嘅註冊地址</strong>，公司必須喺存放地址開始使用後 <strong>15 日內</strong> 用 NR2 表格通知公司註冊處。</p>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>情況</th>
+                    <th>需要 NR2？</th>
+                    <th>Deadline</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>SCR 放喺公司註冊地址</td>
+                    <td>❌ 唔需要</td>
+                    <td>—</td>
+                  </tr>
+                  <tr>
+                    <td>SCR 放喺秘書公司 office</td>
+                    <td>✅ 需要 NR2</td>
+                    <td>開始存放後 15 日</td>
+                  </tr>
+                  <tr>
+                    <td>搬咗 SCR 存放地點</td>
+                    <td>✅ 需要 NR2（再次提交）</td>
+                    <td>搬遷後 15 日</td>
+                  </tr>
+                  <tr>
+                    <td>公司註冊地址搬遷，SCR 地址都搬</td>
+                    <td>✅ 可能需要 NR2（睇情況）</td>
+                    <td>搬遷後 15 日</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="warn-box">
+              <p><strong>⚠️ 魔鬼細節：NR2 漏交嘅連鎖效應</strong></p>
+              <p class="text-sm text-red-700">冇交 NR2 唔只係罰錢問題。因為公司註冊處記錄嘅 SCR 地址係錯嘅，佢哋之後寄任何關於 SCR 嘅 notice（例如 audit 通知、要求提供登記冊）你都收唔到。Miss 咗 audit response deadline 再罰多次。一個 NR2 漏交可以引發連環罰款。</p>
+            </div>
+
+            <p>👉 如果你唔肯定自己做緊嘅係咪正確，去睇 <a href="/significant-controllers-register/">ESGov SCR 完整指南</a> 嘅 Step 5，有詳細講 NR2 點填。</p>
+          </section>
+
+          <!-- ───────── Section 7: 更新責任 ───────── -->
+          <section id="update-deadlines">
+            <h2>⑦ 更新責任 — 7 天 / 15 天 / 1 個月（三個唔同期限）</h2>
+            <p>SCR 係「活文件」，要 keep updating。唔同變更有唔同 deadline，最容易亂：</p>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>變更類型</th>
+                    <th>Deadline</th>
+                    <th>法例根據</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>重要控制人資料變更（姓名、地址、身份證等）</td>
+                    <td><strong>7 天</strong></td>
+                    <td>第 653O(1) 條</td>
+                  </tr>
+                  <tr>
+                    <td>公司知悉有新重要控制人 / 有人不再係控制人</td>
+                    <td><strong>7 天</strong></td>
+                    <td>第 653N 條</td>
+                  </tr>
+                  <tr>
+                    <td>SCR 存放地址變更（需交 NR2）</td>
+                    <td><strong>15 天</strong></td>
+                    <td>第 653M(5) 條</td>
+                  </tr>
+                  <tr>
+                    <td>指定代表變更</td>
+                    <td><strong>7 天</strong></td>
+                    <td>第 653L 條</td>
+                  </tr>
+                  <tr>
+                    <td>收到書面通知（條件性通知）後回覆</td>
+                    <td><strong>1 個月</strong></td>
+                    <td>第 653F 條</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="warn-box">
+              <p><strong>⚠️ 魔鬼細節：7-day deadline 係「知悉」後計，唔係「變更日期」後計</strong></p>
+              <p class="text-sm text-red-700">好多人以為「股份轉讓 1 月 1 日發生，所以 deadline 係 1 月 8 日」。但法例寫嘅係 <strong>知悉</strong>（知道）變更後 7 天。如果董事喺 12 月 20 日已經知道轉讓會發生（例如簽咗轉讓協議），deadline 就係 12 月 27 日，唔係 1 月 8 日。實務上建議一簽文件就 update，唔好等 complete 咗先。</p>
+            </div>
+
+            <p>👉 建議用 <a href="/scr-generator/">ESGov SCR 登記冊工具</a>，資料改完就自動幫你 track 修改日期，確保永遠喺 deadline 內。</p>
+          </section>
+
+          <!-- ───────── Section 8: 罰則 ───────── -->
+          <section id="penalties">
+            <h2>⑧ 罰則 — 一般犯規 vs 虛假陳述（分別好大）</h2>
+            <p>呢度係最多人 confused 嘅位。睇過好多網站將罰則混為一談，其實 <strong>一般犯規</strong> 同 <strong>虛假陳述</strong> 嘅罰則差好遠：</p>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>違規類型</th>
+                    <th>罰款</th>
+                    <th>監禁</th>
+                    <th>持續罰款</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>一般違規</strong>（例如：冇備存 SCR、冇 update、冇通知變更）</td>
+                    <td><strong>$25,000</strong></td>
+                    <td>❌ 冇（但可檢控）</td>
+                    <td><strong>$700 / 日</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>虛假陳述</strong>（例如：明知資料錯誤仍然記錄、誤導執法人員）</td>
+                    <td><strong>$300,000</strong></td>
+                    <td><strong>2 年</strong></td>
+                    <td>—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="gold-box">
+              <p class="font-semibold text-amber-800">📌 重點：</p>
+              <p class="text-sm text-amber-700">
+                1. 一般違規係 <strong>$25,000 一次性 + 每日 $700</strong>，唔係 $300,000。好多網站抄錯。<br />
+                2. 虛假陳述先係 $300,000 + 2 年監禁。呢個通常係涉及「明知係假資料都填落去」嘅情況。<br />
+                3. 公司同董事可以 <strong>同時被罰</strong> — 即係公司俾 $25,000，董事自己都可能俾 $25,000。<br />
+                4. 一般違規同虛假陳述嘅界線未必好清 — 如果 SCR 記錄同實際情況有重大出入（例如長期冇 update），執法機構可以選擇按「虛假陳述」嚟告。
+              </p>
+            </div>
+
+            <div class="warn-box">
+              <p><strong>⚠️ 魔鬼細節：持續罰款 $700/日 — 疊加得好快</strong></p>
+              <p class="text-sm text-red-700">$25,000 罰款可能一筆過俾咗就算，但 $700 一日嘅持續罰款係好恐怖嘅。假設你公司嘅違規持續咗 6 個月先被發現：$700 × 180 日 = $126,000。加上原來的 $25,000 = 超過 $150,000。好多 SME 公司一年盈利都冇呢個數。</p>
+            </div>
+
+            <p>關於罰則嘅詳細 breakdown，可以睇 <a href="/blog/香港有限公司違反公司條例罰則終極指南.html">我哋另一篇罰則終極指南</a>，入面有逐條逐條嘅罰款分析。</p>
+          </section>
+
+          <!-- ───────── Section 9: FAQ ───────── -->
+          <section id="faq">
+            <h2>⑨ 常見問題 FAQ</h2>
+
+            <div class="faq-item">
+              <details>
+                <summary>SCR 係咪一定要做？我間公司冇營運都要？</summary>
+                <div class="faq-answer text-sm text-gray-600">
+                  <p>係，一定要做。《公司條例》第 653 條規定所有香港註冊嘅私人有限公司（上市公司除外）都必須備存 SCR，即使公司完全冇營運、零收入都要。唯一例外係上市公司。如果你間公司唔再用，建議正式撤銷註冊（Dissolution），而唔係放喺度唔理。</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="faq-item">
+              <details>
+                <summary>指定代表一定要係公司員工？可以俾秘書公司做嗎？</summary>
+                <div class="faq-answer text-sm text-gray-600">
+                  <p>指定代表唔一定要係公司員工。最常見嘅做法係委任公司秘書公司或者 TCSP（信託或公司服務提供者）做指定代表。關鍵係指定代表必須係香港居民，同埋能夠喺執法人員要求嘅 1 小時內出示 SCR 登記冊。好多 SME 東主揀咗一個成日唔喺香港嘅 director 做代表，結果執法上門嗰陣交唔出登記冊，咁就中伏。</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="faq-item">
+              <details>
+                <summary>SCR 入面啲個人資料會唔會公開俾公眾查？</summary>
+                <div class="faq-answer text-sm text-gray-600">
+                  <p>唔會。SCR 係內部法定記錄，公眾人士不能查閱。只有 9 個指定執法機構（包括公司註冊處、警務處、海關、廉政公署、入境處等）同公司股東先可以查閱。所以唔使擔心競爭對手會睇到你公司嘅控制人結構。</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="faq-item">
+              <details>
+                <summary>搬咗地址冇 update NR2 會點？</summary>
+                <div class="faq-answer text-sm text-gray-600">
+                  <p>呢個係最常見嘅中伏位之一。如果 SCR 嘅存放地址同公司註冊地址唔同，你必須喺變更後 15 日內用 NR2 表格通知公司註冊處。冇交 NR2 屬於《公司條例》違規，可被罰款 $25,000 再加每日 $700 嘅持續罰款。而且如果公司註冊處寄信去舊地址，你會 miss 咗好多重要通知，後果可以好嚴重。</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="faq-item">
+              <details>
+                <summary>股份轉讓之後幾耐要 update SCR？</summary>
+                <div class="faq-answer text-sm text-gray-600">
+                  <p>公司喺知悉任何重要控制人資料變更後嘅 7 天內，必須更新 SCR 登記冊。呢個 deadline 比較短，好多公司 handle 股份轉讓嗰陣淨係掛住搞轉讓文件同 NAR1，完全唔記得 update SCR。Bank KYC 嗰陣睇到 SCR 同股東名冊唔一致，會質詢你公司嘅管治水平，甚至影響戶口服務。</p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <!-- ───────── Section 10: 免費 SCR 工具推薦 ───────── -->
+          <section id="tools">
+            <h2>⑩ 免費 SCR 工具推薦 — 自己搞掂，唔使俾人呃</h2>
+            <p>我明嘅 — 以前搞 SCR 真係好煩。要逐個通知、填 form、keep track 變更。但而家有免費工具，成個流程快好多。</p>
+            <p>我哋 ESGov 製作咗一系列 <strong>免費 SCR 工具</strong>，全部可以直接喺網頁填寫，一鍵生成 PDF：</p>
+
+            <div class="grid sm:grid-cols-2 gap-3 mb-4">
+              <a href="/scr-generator/" class="block bg-white border-2 border-gold rounded-xl p-4 hover:shadow-lg transition shadow-sm">
+                <p class="font-bold text-navy text-sm">📚 SCR 登記冊主工具</p>
+                <p class="text-xs text-gray-500 mt-1">直接填寫完整 SCR 登記冊，一鍵生成已填好嘅 PDF。最受歡迎嘅工具</p>
+              </a>
+              <a href="/scr-identification-checklist-generator/" class="block bg-white border border-gold/30 rounded-xl p-4 hover:border-gold/60 transition shadow-sm">
+                <p class="font-bold text-navy text-sm">✅ 識別檢查清單</p>
+                <p class="text-xs text-gray-500 mt-1">逐項檢查 5 項測試，確保冇漏網之魚，股權穿透清楚</p>
+              </a>
+              <a href="/scr-designated-rep-generator/" class="block bg-white border border-gold/30 rounded-xl p-4 hover:border-gold/60 transition shadow-sm">
+                <p class="font-bold text-navy text-sm">👤 指定代表委任書</p>
+                <p class="text-xs text-gray-500 mt-1">委任指定代表，填寫代表資料一鍵生成委任書 PDF</p>
+              </a>
+              <a href="/nar1-generator/" class="block bg-white border border-gold/30 rounded-xl p-4 hover:border-gold/60 transition shadow-sm">
+                <p class="font-bold text-navy text-sm">📋 NAR1 周年申報表</p>
+                <p class="text-xs text-gray-500 mt-1">NAR1 表格填寫工具，股份變動同 SCR 夾埋一齊搞</p>
+              </a>
+            </div>
+
+            <p>如果未睇過完整流程，建議先睇 <a href="/significant-controllers-register/"><strong>ESGov SCR 7 步完整指南</strong></a> — 由頭到尾教你點搞 SCR，然後先用工具生成文件。</p>
+
+            <div class="tip-box mt-6">
+              <p class="font-semibold">🔑 記住三個數字：</p>
+              <ul class="text-sm mt-2">
+                <li><strong>7 天</strong> — 知悉變更後更新登記冊</li>
+                <li><strong>15 天</strong> — NR2 通知存放地點變更</li>
+                <li><strong>1 小時</strong> — 指定代表要喺 1 小時內提供到登記冊俾執法人員</li>
+              </ul>
+            </div>
+
+            <p>全部免費，唔使俾錢買 template。如果幫到你，可以請我飲杯咖啡支持下 ☕</p>
+          </section>
+
+          <!-- ───────── Conclusion ───────── -->
+          <section class="mt-12 border-t border-gray-200 pt-8">
+            <h2>總結：魔鬼喺細節，但細節有得避</h2>
+            <p>
+              SCR 重要控制人登記冊唔係一張 form — 係一個 <strong>持續嘅合規責任</strong>。填好一次只係開始，之後每次股權變動、董事變更、地址搬遷，都要及時 update。
+            </p>
+            <p>
+              我寫呢篇文嘅目的唔係嚇你，而係想話俾你知：<strong>呢啲陷阱完全可以避開</strong>。只要你：
+            </p>
+            <ol class="list-decimal pl-5 space-y-2">
+              <li><strong>知道魔鬼喺邊</strong> — 呢篇文已經幫你列出 7 個最常見嘅中伏位</li>
+              <li><strong>用好工具</strong> — ESGov 嘅免費工具幫你 auto-generate 晒所有文件</li>
+              <li><strong>Set reminder</strong> — 每月 check 一次 SCR 係咪需要 update</li>
+              <li><strong>搞唔掂就搵人幫</strong> — 秘書公司唔貴，但揀啱人好重要</li>
+            </ol>
+            <div class="gold-box mt-6">
+              <p class="font-semibold text-amber-800">📌 最後一句</p>
+              <p class="text-sm text-amber-700">
+                我 friend 間公司俾 $25,000 罰款 + 超過 $50,000 嘅持續罰款，加埋成 8 萬幾，就係因為一個指定代表嘅疏忽。唔好俾呢啲細節害到你。<br /><br />
+                合規嘅成本，遠低於違規嘅代價。
+              </p>
+            </div>
+          </section>
+
+        </div>
+        <!-- / Main Content -->
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══ Related CTA ═══ -->
+  <section class="bg-gray-50 py-12 border-t border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-bold text-navy mb-3">仲有其他實戰指南幫到手 👇</h2>
+      <p class="text-gray-500 mb-6">由開公司、股份轉讓、審計報稅到合規，全部由經歷者逐個步驟拆解</p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="/significant-controllers-register/" class="inline-flex items-center gap-2 bg-navy text-white font-bold py-2.5 px-5 rounded-xl hover:bg-navy-light transition shadow text-sm">📖 SCR 完整 7 步指南 →</a>
+        <a href="/scr-generator/" class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-5 rounded-xl hover:bg-gold-light transition shadow text-sm">📚 免費 SCR 工具 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Footer ═══ -->
+  <footer class="bg-navy py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-2 text-white font-bold text-xl">
+          <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+        </div>
+        <div class="text-sm text-gray-400">
+          香港公司秘書文件指南
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
+        <p class="mb-2">
+          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。
+        </p>
+        <p>© 2026 ESGov. All rights reserved.</p>
+        <p class="mt-2 inline-flex items-center gap-1 text-gray-600">
+          <span class="bg-gray-700 text-gray-300 px-2 py-0.5 rounded text-[0.65rem] font-mono">v2.0.0</span>
+          <span class="text-gray-600">| Built by real experience • SCR魔鬼細節專版</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
