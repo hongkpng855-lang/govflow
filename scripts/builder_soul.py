@@ -57,8 +57,14 @@ Generator 頁面 include（跟 NR2 pattern）：
   - 📌 Info banner（說明前提條件）
   - 🖼️ 官方表格 full image（clickable → lightbox modal）
   - ⚠️ 常見錯誤
-  - 📥 下載官方表格（直接 link 到 government official fillable PDF）
+  - 📥 下載官方表格（trigger email gate first → then open PDF in new tab）
   - ← 返回按鈕
+
+Email Gate Requirement（v12.50+）：
+  - ALL Mode B generator pages MUST have email gate BEFORE downloading
+  - Pattern：button → checkEmailGate() → submit email → openOfficialPDF()
+  - Same FormSubmit endpoint + localStorage flag as Mode A generators
+  - `openOfficialPDF()` opens the government PDF URL in `_blank`
 
 參考：
   - SCR Step 7（NR2）— 原型
