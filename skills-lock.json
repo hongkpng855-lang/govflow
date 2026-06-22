@@ -1,0 +1,725 @@
+{
+  "version": 1,
+  "skills": {
+    "ab-testing": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ab-testing/SKILL.md",
+      "computedHash": "cf3c45f234075599035078c15d3a63c24f684c39177e851eb911dbe1efa7e253"
+    },
+    "ad-creative": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ad-creative/SKILL.md",
+      "computedHash": "34d1acc296366b72eb3fcc5a7eb0ab5d5b7b823a2440d901b0a5ae9d80804132"
+    },
+    "ads": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ads/SKILL.md",
+      "computedHash": "3efc9fe621acad997b8c194e8acab893ee0ce6678b6a7c495b93fc344175b7a7"
+    },
+    "agile-product-owner": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/agile-product-owner/SKILL.md",
+      "computedHash": "448ca8e4d629f32f24c08d56d670b438b808f7f03848233f8c200277f95491b1"
+    },
+    "ai-seo": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ai-seo/SKILL.md",
+      "computedHash": "71fed5a57e9ea88ca1038c2ed0887cd04b0ca4d76cad375f0d10853a2e1c3846"
+    },
+    "analytics": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/analytics/SKILL.md",
+      "computedHash": "ee9de7cfe75a5982c0032e651ec6222006e73dd8f245b3a26b51ca279c4bd6cf"
+    },
+    "api-docs-quality-report": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": "skills/api-docs-quality-report/SKILL.md",
+      "computedHash": "b78184114f50cd23e4af45c9a9d264ca62051b253f03d36868fbabf7c5c0d0c2"
+    },
+    "blog": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog/SKILL.md",
+      "computedHash": "08031c8ac00ea7e59d294ef2fccfbb41f4ce17c40959035226d82e41be3b00fc"
+    },
+    "blog-analyze": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-analyze/SKILL.md",
+      "computedHash": "f8ec47e0b196421ee02844c1ed7d64741d0fe78022c221e978aa57afcabf48dc"
+    },
+    "blog-audio": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-audio/SKILL.md",
+      "computedHash": "df3ff5e773b11bf7d68910f93ef483dd56d09cf6524c8addeea755dc2fab753c"
+    },
+    "blog-audit": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-audit/SKILL.md",
+      "computedHash": "588e20d8e95da60197771835ada91dedbb95cef859d4bb245430071db075d20d"
+    },
+    "blog-brand": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-brand/SKILL.md",
+      "computedHash": "c00cbfd6d8ddcbb8ce708dcce29a13da93b91f67b953063dd7ee0ffa2da788da"
+    },
+    "blog-brief": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-brief/SKILL.md",
+      "computedHash": "9373761212bce02315f8c9cec77edf3540ca3ce7beb1cf43694017420a5bf726"
+    },
+    "blog-calendar": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-calendar/SKILL.md",
+      "computedHash": "bfda5bd511f66411e5ab15f06da258a161addaceff03c6c06e01c24b61ff7e8d"
+    },
+    "blog-cannibalization": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-cannibalization/SKILL.md",
+      "computedHash": "af595bacd5c1fe4eca937c8dd66aa035331bea8f6627539d0702a1818bc6b6ee"
+    },
+    "blog-chart": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-chart/SKILL.md",
+      "computedHash": "84e882794e6a1a146edab7bf3b0edeb81e9f4f6c572abc4922c3f6808482f3d7"
+    },
+    "blog-cluster": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-cluster/SKILL.md",
+      "computedHash": "f481acfd51260d438434d44197c56aa11d068354fd342908ab7bff578d5251d6"
+    },
+    "blog-discourse": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-discourse/SKILL.md",
+      "computedHash": "eb50719042a2aa2e3d8403408ac83e1b73117551501da80461b2f78f21f6c3d8"
+    },
+    "blog-factcheck": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-factcheck/SKILL.md",
+      "computedHash": "7f62950ab4d4f29d435121afd23d9c1fc16126f5e2a553dc503133f89e0cf2ae"
+    },
+    "blog-flow": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-flow/SKILL.md",
+      "computedHash": "8c4898f7d85ac7bb28bcf6f1affac1d1e981f4d28e42c2fd8cdf4b3ff76d64f8"
+    },
+    "blog-geo": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-geo/SKILL.md",
+      "computedHash": "7cf95c06a890afb0a9b875213efefb31d39c72ed84479e46f9c2295fee0118f5"
+    },
+    "blog-google": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-google/SKILL.md",
+      "computedHash": "89e08a5f45dbd8a65ca8ab31944f85db9476d2e3bd8fbfae48849880a55c6ea2"
+    },
+    "blog-image": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-image/SKILL.md",
+      "computedHash": "be05c90897c5c8aaad393db3ebea33eeaf01c713c16f7973933b13d6a772953b"
+    },
+    "blog-locale-audit": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-locale-audit/SKILL.md",
+      "computedHash": "199265287ff33a907a7c4317848a95197da8593f6b274d8c1d4cfe857c93eeb6"
+    },
+    "blog-localize": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-localize/SKILL.md",
+      "computedHash": "2a84866a33e69f7e3bc565f9e8a2553cbd37b125acc97a45f669234671284b20"
+    },
+    "blog-multilingual": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-multilingual/SKILL.md",
+      "computedHash": "0a7f6d99dc225f2b9b4cdc5c2b525adf0ac61dccf4bcca3dd70340a475889a9d"
+    },
+    "blog-notebooklm": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-notebooklm/SKILL.md",
+      "computedHash": "863af40879e0ea1670ae34279a50c3535afd2552663fe398c0acc55bb81a983c"
+    },
+    "blog-outline": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-outline/SKILL.md",
+      "computedHash": "e27eb48922eaf37465d9f0de3ee60896af5a8929b917c812a26b3d8890e9b8d9"
+    },
+    "blog-persona": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-persona/SKILL.md",
+      "computedHash": "33fc7f6e13253c43fab2f555f40411b74d6305f5862853f9fd6d0e3b3c1158d5"
+    },
+    "blog-post-counter": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": "skills/blog-post-counter/SKILL.md",
+      "computedHash": "98b850b4aac72510603be87ddd79a8d40405091362916592df8be15848312ff6"
+    },
+    "blog-repurpose": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-repurpose/SKILL.md",
+      "computedHash": "255bd1839f6c15870653bb80bcc6c9248b2a539db64e7898f6a755c79c15c776"
+    },
+    "blog-rewrite": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-rewrite/SKILL.md",
+      "computedHash": "711579d8e3bade46465c1fd40e0167677ed11c045ca95e542ca60ee2b72d7f12"
+    },
+    "blog-schema": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-schema/SKILL.md",
+      "computedHash": "3d4e00236b932166aa4c314fdbd68453fd2b241b3ec3a1fc1118655d3392d24a"
+    },
+    "blog-seo-check": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-seo-check/SKILL.md",
+      "computedHash": "5c9303878e17002978372cda615c8cfbfbe72cfab566a2084574bd8f0f5ee77d"
+    },
+    "blog-strategy": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-strategy/SKILL.md",
+      "computedHash": "ee3ffa7b31b63429f9eb6f2557a1d71ad14c0a7e2848c0e97929d863efa02282"
+    },
+    "blog-taxonomy": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-taxonomy/SKILL.md",
+      "computedHash": "1a563d4e03e6f16cb65c3f97e9a6745257b02c3a46ac9050b9fcce91a80ce5b1"
+    },
+    "blog-translate": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-translate/SKILL.md",
+      "computedHash": "f8dc1a7f3047f6af765face8d8b910bfecd6872d51048d131d74b98f008ee6b9"
+    },
+    "blog-write": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/blog-write/SKILL.md",
+      "computedHash": "fa10004bc2c53984800500386b859c4c84e00a381d44b4ac7aae827ad64b67a6"
+    },
+    "brand": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/brand/SKILL.md",
+      "computedHash": "84d8232808a37b35a762755f6e22133ad8aef819b801aa63845cc9d24356f76e"
+    },
+    "brief-outline-generator": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": "skills/brief-outline-generator/SKILL.md",
+      "computedHash": "6a0e6bb62652b1a60ccf46fe6b5c6419361c72f8e2eb4c7c8ddac25318e39ffa"
+    },
+    "churn-prevention": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/churn-prevention/SKILL.md",
+      "computedHash": "8c25561d6dcb667af2941e84ba850739386a92d497602934afb42c0454f51ba7"
+    },
+    "cold-email": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/cold-email/SKILL.md",
+      "computedHash": "3da14f3fe2d8bcfb447339e981df3c69cd3795c3aa17fb9435b3bc0e5cbbb458"
+    },
+    "community-marketing": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/community-marketing/SKILL.md",
+      "computedHash": "0b2bbbca0a1e9989d8244975909269a7d5d4cd9087ad60f3e694382563ad1387"
+    },
+    "competitor-profiling": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/competitor-profiling/SKILL.md",
+      "computedHash": "6a8f0f2521e1d1bd9bddbfa40da0a8f9dea5c14a9df9e99b2f83f4acee622467"
+    },
+    "competitors": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/competitors/SKILL.md",
+      "computedHash": "5dc5b55524c4bc7b47108914a272ac1f5384ae859d56a05a629838868ad3e219"
+    },
+    "content-strategy": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/content-strategy/SKILL.md",
+      "computedHash": "453b9dda7c25f0b2dc5061f526834844bf3dcaaca03b22eacd1c8c5e40ead789"
+    },
+    "copywriting": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/copywriting/SKILL.md",
+      "computedHash": "6304bb8c0ec28d3270c6ff76f497b01961570d62f9eaf90c9744b5d3bb5d4aa9"
+    },
+    "cro": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/cro/SKILL.md",
+      "computedHash": "e26c7a3d4288f8bb01abf635e2732a85fac760b31a12cd8174064d2045bd9da5"
+    },
+    "customer-research": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/customer-research/SKILL.md",
+      "computedHash": "94deb7c110a9cb1d1aa86e9834a9ec14e72dae2ab914be2ce92acdbf8812929b"
+    },
+    "dev-marketing-prospector": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": "skills/dev-marketing-prospector/SKILL.md",
+      "computedHash": "108b2902a73a99414192dc401ad18ef3f5590d45749e9154daf4c4ef9de20b67"
+    },
+    "docs-auditor": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": "skills/docs-auditor/SKILL.md",
+      "computedHash": "39050971da958d46d962a8c3d7a64bdc80679196ff9766d1bbdab61ff067ec2f"
+    },
+    "emails": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/emails/SKILL.md",
+      "computedHash": "ce816bb4e7c98cc538c5ba99d4ea1ae487a771202e74aa334aa1e1574a8928e4"
+    },
+    "free-tools": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/free-tools/SKILL.md",
+      "computedHash": "e9205b0a24a988bbe40b906b932b41bc68be764d0add9466112012aa0a540347"
+    },
+    "frontend-design": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/frontend-design/SKILL.md",
+      "computedHash": "6e4e63985f63f8f0d8b48fffb7681b5d8c29f03ee368fa397ed59dcb1efd642b"
+    },
+    "geo-optimizer": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/geo-optimizer/SKILL.md",
+      "computedHash": "39b30f69f5746465e7ec1fb4991ab0950879c1f9dbf25b02001de8555b293d82"
+    },
+    "geo-seo-claude": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/geo-seo-claude/SKILL.md",
+      "computedHash": "d52df44c2514d0768db02dda325f41edf97594d3203eb1638fe217fe7943b666"
+    },
+    "growth-report": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": "skills/growth-report/SKILL.md",
+      "computedHash": "e599d499fac631dcbc69791ce889ed3263ea8de5d47acd22a4dfaabc5a2b12b5"
+    },
+    "keyword-clustering": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/keyword-clustering/SKILL.md",
+      "computedHash": "4ada3e45a344c5797b14e143bb6e1350e8595229187968422787cd75c1bcb70f"
+    },
+    "landing-page-auditor": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/landing-page-auditor/SKILL.md",
+      "computedHash": "74b5859ebb7c2ae34cdec4b2da47d05b0032ef02da6607a6aa498b1a52d7560d"
+    },
+    "launch": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/launch/SKILL.md",
+      "computedHash": "38bafab5545e5155c8d36aa6d67f44471fb125e50c5cf1038ffc5964f98d18ef"
+    },
+    "lead-magnets": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/lead-magnets/SKILL.md",
+      "computedHash": "ffb6d3e4f4c97bfaa9375027660b793e24ee5ffc57033e9e2f65f9d5d0f5fe87"
+    },
+    "llms-txt-checker": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": "skills/llms-txt-checker/SKILL.md",
+      "computedHash": "e2a1a0b78a4eadf06631737aaead17203584f8c90209ac1487674805a2d51e13"
+    },
+    "marketing-ideas": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/marketing-ideas/SKILL.md",
+      "computedHash": "a91a4264108ffef5ac6da1f76312cc2723952eb2696bf869e28a01776ed52421"
+    },
+    "no-outlinks-audit": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": "skills/no-outlinks-audit/SKILL.md",
+      "computedHash": "60b3c9f6286f26accee59ddc9fe1c105b53e96da71e80578d9b9235447a47556"
+    },
+    "ogilvy-copywriting": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ogilvy-copywriting/SKILL.md",
+      "computedHash": "5f546a713f09a4da9372917cb577cdb373623959ee50c0250c964279d35b3664"
+    },
+    "onboarding": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/onboarding/SKILL.md",
+      "computedHash": "101e66d4b0a218697197249471da850422fb54a7911c6fcee3fb972b1a9e1dd1"
+    },
+    "organic-growth-advisor": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/organic-growth-advisor/SKILL.md",
+      "computedHash": "401cfd89caa68fb38d1f65e3d9dde618345b4be6520609c2a4961776d63a2304"
+    },
+    "orphan-pages-internal-linking-opportunities": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": "skills/orphan-pages-internal-linking-opportunities/SKILL.md",
+      "computedHash": "10c4f94048d53d331937c287e7e1b61621393c5c852c4c827068e30b04025f59"
+    },
+    "pm-skill-creator": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/pm-skill-creator/SKILL.md",
+      "computedHash": "a4d8f5ef7cb1e9c285711390c4954f3c664a4c274364fa3e6e7b6414499636c3"
+    },
+    "prd-development": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/prd-development/SKILL.md",
+      "computedHash": "285e9ac791a5b5bc01fee613e24f1d90ba224dc6936778244afef763adf82315"
+    },
+    "pricing": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/pricing/SKILL.md",
+      "computedHash": "970e28031d2ea39d0441f2e7ed0b343cfaeedad89a2a7f0a461296fea273c229"
+    },
+    "prioritization-advisor": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/prioritization-advisor/SKILL.md",
+      "computedHash": "3f181e341b70fcf5cf6a110d6353b6ecea4999ea98371834a006b310a2f2b6b7"
+    },
+    "product-manager-toolkit": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/product-manager-toolkit/SKILL.md",
+      "computedHash": "c80f4034e008b5786c9af9cddd1552bf1e53bafedd8b0ab9420caab607bebd90"
+    },
+    "product-strategist": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/product-strategist/SKILL.md",
+      "computedHash": "65ecd32fc03fa2949f465756a0bf49044b9a015da549be3246430d3e7c7aa045"
+    },
+    "programmatic-seo": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/programmatic-seo/SKILL.md",
+      "computedHash": "c0bdee18a13bce3a4bac33d175246aac263a2cc396993dd3a5aa2dc5b62b7515"
+    },
+    "referrals": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/referrals/SKILL.md",
+      "computedHash": "219d326c591983c6e976a181c102233458a9908c0f441d0fdd6a9b826367802d"
+    },
+    "revops": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/revops/SKILL.md",
+      "computedHash": "5752b04cf59d26c20f971391a249a1b7d7ab6c29755130c4c79848a78294b020"
+    },
+    "sales-enablement": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/sales-enablement/SKILL.md",
+      "computedHash": "c44cbb3eb195a9e5bbbcc855dea91b1a971c7fc1e5e6579a06ec5bc4b68bbb76"
+    },
+    "schema": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/schema/SKILL.md",
+      "computedHash": "aa00f1abe77f3d0921c177ea650babab67c0a686efd24322f84dbc5bb0760d44"
+    },
+    "sdk-docs-auditor": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": "skills/sdk-docs-auditor/SKILL.md",
+      "computedHash": "0d74d19b2d82e3ec9918cbf2c99d9480a544eb066d90d559ae4b07b4ee513c0f"
+    },
+    "seo": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo/SKILL.md",
+      "computedHash": "cdee839a7a55ae4cbf446ffe421e02f4cf88bb53c29855f60d1ecd0b88065357"
+    },
+    "seo-ahrefs": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-ahrefs/SKILL.md",
+      "computedHash": "6f24d31e0b885b089d2c4f228573a577d509f4364a5d8f21228f29c6b7a1640a"
+    },
+    "seo-audit": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-audit/SKILL.md",
+      "computedHash": "79ed82c3fc2127ed6ae316b07c5df12fffd188fa8f85c1e5729201f89d92843b"
+    },
+    "seo-audit-full": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-audit-full/SKILL.md",
+      "computedHash": "178948c0156a5ba05cd1c7d7776d0269a4807592b0b924a6253a745e95aa3db2"
+    },
+    "seo-backlinks": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-backlinks/SKILL.md",
+      "computedHash": "129756404842dd4383570a08bbbb28d8cbfa67135a3c7ea97519c7353d60ee4a"
+    },
+    "seo-bing": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-bing/SKILL.md",
+      "computedHash": "1d90c066aea55269ca9b40026a142c1186115f81b1e6f4301af8e83e3bfba4e0"
+    },
+    "seo-cluster": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-cluster/SKILL.md",
+      "computedHash": "8c84468c5fba2d2f0dbe06810a406c545e9f7bc6f0f70b921621d1f4e1dfb13f"
+    },
+    "seo-competitor-pages": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-competitor-pages/SKILL.md",
+      "computedHash": "5a6d94fc0baacefa789720c1948c6bfe80176ba7790a6eaf5e605d7693f128cb"
+    },
+    "seo-content": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-content/SKILL.md",
+      "computedHash": "2ac40c9bc666bcd58aee0396df790410913719dbb7674663b7becf0ac945da96"
+    },
+    "seo-content-brief": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-content-brief/SKILL.md",
+      "computedHash": "77eee65bb534aac97d25f8eb2369f6d468f8ca806272b2f3a542e1189f9cf695"
+    },
+    "seo-dataforseo": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-dataforseo/SKILL.md",
+      "computedHash": "f193b33cf19ceb46328fd886245a2b19c45efc98911cef84ec218aa0aa039fc6"
+    },
+    "seo-drift": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-drift/SKILL.md",
+      "computedHash": "cdb5836397ecee278b5f5cfcd0acce1180366e913285856dd24ec1ebd771471c"
+    },
+    "seo-ecommerce": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-ecommerce/SKILL.md",
+      "computedHash": "0519cdce375ba710f829e041d8975ffc8b408c07844dc765c75eb2f0b3491e04"
+    },
+    "seo-firecrawl": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-firecrawl/SKILL.md",
+      "computedHash": "9f1bde5fbc8150e18853447917f3f2c076a1e92878b4641c729a759e137370a2"
+    },
+    "seo-flow": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-flow/SKILL.md",
+      "computedHash": "d6756b98382a2d27b725a02493ca9fecb418843b3f39641baed0e8c41b4e683f"
+    },
+    "seo-geo": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-geo/SKILL.md",
+      "computedHash": "d8ed82fe382f0061f5fdeae89d7acbefb90bbbf1b811c9a52226a52cfbee3743"
+    },
+    "seo-google": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-google/SKILL.md",
+      "computedHash": "d456cc3df45802e16d7f7126990bdecc1c1eafaf5a14235900eac96d98f1a5c1"
+    },
+    "seo-hreflang": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-hreflang/SKILL.md",
+      "computedHash": "274141a30e38a7ce908802638f9d92d85ad566dd438f4a0a12be101061383861"
+    },
+    "seo-image-gen": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-image-gen/SKILL.md",
+      "computedHash": "04c4bac8829068e645c3ccce0aacd76e8b5257509e033f259f3a60332632fa06"
+    },
+    "seo-images": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-images/SKILL.md",
+      "computedHash": "46a96a7a91ac866f08904205e66b0ac6eed78c4c9e03853b089c1646f5a64b44"
+    },
+    "seo-local": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-local/SKILL.md",
+      "computedHash": "5f9967a52d94070cdae54865318d94cc6e0669c1ef923ffff592e4ba5373c87f"
+    },
+    "seo-maps": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-maps/SKILL.md",
+      "computedHash": "5fdfa2e40d1e2f52eadff3c3a17d68edab7fb58029628850214468f5003b8123"
+    },
+    "seo-page": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-page/SKILL.md",
+      "computedHash": "1cc9f7b0f9a72a1bdf3bc9f89149871009c14a2aa032563b451701ff0653e84e"
+    },
+    "seo-plan": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-plan/SKILL.md",
+      "computedHash": "c507bd706181f67c5dcd4647a3d0ebbd85007b369ebb24781edda72d4d42fc2f"
+    },
+    "seo-profound": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-profound/SKILL.md",
+      "computedHash": "5a94e5fa8fef1f39cfa3c70dd263328afa36845ac213c4895b9e144ed4ed7cdb"
+    },
+    "seo-programmatic": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-programmatic/SKILL.md",
+      "computedHash": "c827c4f5719d241d45a9c67f188f47f914489896f480ccf012de199efbfaf937"
+    },
+    "seo-schema": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-schema/SKILL.md",
+      "computedHash": "ecb3c4fab54c3baa525d7f5417192fe44959a8ad665e0171f094712a33cb9bcb"
+    },
+    "seo-seranking": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-seranking/SKILL.md",
+      "computedHash": "e879f347d653b979fcae71fca275fffc19a0b1f02330fbe0fd46c0c4aa2ebf1c"
+    },
+    "seo-sitemap": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-sitemap/SKILL.md",
+      "computedHash": "603a69f75354d880b988ae5d78eb24070dcddcdac86b79304184e827eb26b6dc"
+    },
+    "seo-sxo": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-sxo/SKILL.md",
+      "computedHash": "264813d336a4831c0a864c286d9e82e2235092f044d571d7b2613edcf8de69fe"
+    },
+    "seo-technical": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-technical/SKILL.md",
+      "computedHash": "dd275d667ca3ee95b9efa02652b0a998610b3c024100a8862a005856e1a6ccb5"
+    },
+    "seo-unlighthouse": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/seo-unlighthouse/SKILL.md",
+      "computedHash": "90ea167524824810ebccd5c077c056ff25775f9ce3924fe2f3d1c7ba91325b22"
+    },
+    "site-architecture": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/site-architecture/SKILL.md",
+      "computedHash": "7118c7842e14f31a61e1550782d6e2ba1779fbc9154ee0d3c5e69b078a204a7b"
+    },
+    "social": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/social/SKILL.md",
+      "computedHash": "5e2489bfc879e11739870d1af6128b3cea0bcb33b932df035fb9778c658028fd"
+    },
+    "social-media-posts": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/social-media-posts/SKILL.md",
+      "computedHash": "1ba18137b79ccc1e830ede442689d86e666bf94c98397d5982cf392108bdcba5"
+    },
+    "stop-slop": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/stop-slop/SKILL.md",
+      "computedHash": "ba530c0c4bb727c486eb8a2315914d630144a19cca267b84635d3fbf63f724bb"
+    },
+    "ui-styling": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ui-styling/SKILL.md",
+      "computedHash": "b49f6a8d3e6a25b4ed3cac32ad35e15d5b0de9a43d5d4514e74a840e5c5a937e"
+    },
+    "ui-ux-pro-max": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ui-ux-pro-max/SKILL.md",
+      "computedHash": "8c3fc917e7bf109613bb5c18cd11f4e4e066af6f5ac2fd2904955acd31d199ba"
+    },
+    "user-story-mapping": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/user-story-mapping/SKILL.md",
+      "computedHash": "1e1c3ea6da9708771cb75b42b3610ccdec2c690ac454396b35ef45092b39677e"
+    },
+    "web-design-guidelines": {
+      "source": "Infrasity-Labs/dev-gtm-claude-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/web-design-guidelines/SKILL.md",
+      "computedHash": "d1b01b541a7276c4ef6f3e02d7ebc5f052b869358a804c68f1dd2e8dc43a6361"
+    }
+  }
+}

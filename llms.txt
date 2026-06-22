@@ -4,37 +4,107 @@
 
 ## About
 
-ESGov helps Hong Kong business owners handle company secretarial documents, compliance filings, and administrative tasks without expensive professional fees. Our focus is on accurate, up-to-date, Hong Kong-specific content.
+ESGov helps Hong Kong business owners handle company secretarial documents, compliance filings, and administrative tasks without expensive professional fees. Our focus is on accurate, up-to-date, Hong Kong-specific content based on the Companies Ordinance (Cap. 622).
 
-## Key Pages
+## Core Product Pages
 
-- Homepage: https://esgov.org/
-- Blog: https://esgov.org/blog/
-- Company Share Transfer: https://esgov.org/shareholder-transfer/
-- Company Name Change: https://esgov.org/company-name-change/
-- Audit Report Generator: https://esgov.org/audit-report-generator/
-- Significant Controllers Register: https://esgov.org/significant-controllers-register/
+- **Company Share Transfer**: https://esgov.org/shareholder-transfer/ — Complete guide to Hong Kong company share transfer: 5 steps including stamp duty calculation, Instrument of Transfer, Sold Note, Letter of Transferee, and filing requirements.
+- **Company Name Change**: https://esgov.org/company-name-change/ — Hong Kong company name change in 5 steps: special resolution, NNC2 filing, business registration update, bank account update, company chop update.
+- **Significant Controllers Register (SCR)**: https://esgov.org/significant-controllers-register/ — 7-step guide to Hong Kong SCR compliance: 5 identification tests, equity penetration calculation, written notice, designated representative, register maintenance.
+- **Deregistration (Company Strike-off)**: https://esgov.org/deregistration/ — Complete Hong Kong company deregistration process: 6 steps from board resolution to IRC3113 dissolution, including NDR1, gazette notice, and IR1263 tax clearance.
+- **Business Registration Renewal**: https://esgov.org/blog/商業登記續期全攻略 — 1-year vs 3-year certificate, online renewal steps, late payment penalties, BR fees 2026.
+
+## Free PDF Generators
+
+- Sold Note / 股票轉讓書: https://esgov.org/sold-note-generator/
+- Instrument of Transfer / 股份轉讓書: https://esgov.org/instrument-transfer-generator/
+- Letter of Transferee / 承讓人聲明書: https://esgov.org/letter-of-transferee-generator/
+- Special Resolution / 特別決議: https://esgov.org/company-name-change-generator/special-resolution/
+- NNC2 / 更改公司名稱通知書: https://esgov.org/company-name-change-generator/nnc2/
+- NAR1 / 週年申報表: https://esgov.org/nar1-generator/
+- NSC1 / 股份配發申報書: https://esgov.org/nsc1-generator/
+- Audit Report / 核數報告: https://esgov.org/audit-report-generator/
+- SCR Register / 重要控制人登記冊: https://esgov.org/scr-generator/
+- SCR Identification Checklist: https://esgov.org/scr-identification-checklist-generator/
+- NR2 / 指明地點通知書: https://esgov.org/scr-nr2-generator/
+- Deregistration Checklist: https://esgov.org/deregistration-checklist-generator/
 
 ## Popular Blog Posts
 
-- 僱員補償保險完全指南: https://esgov.org/blog/香港公司僱員補償保險終極指南
-- 暫繳稅終極指南 2026: https://esgov.org/blog/香港公司暫繳稅終極指南2026
-- 有限公司合規 Checklist: https://esgov.org/blog/香港有限公司每年合規全面Checklist
-- 公司秘書 DIY vs 服務比較: https://esgov.org/blog/香港公司秘書服務vsDIY終極比較
-- Foreigner's Guide to HK Company Setup: https://esgov.org/blog/foreigner-guide-hk-company-setup
+- SCR魔鬼細節 — 7大中伏位: https://esgov.org/blog/SCR重要控制人登記冊魔鬼細節
+- 股份轉讓完整流程 2026: https://esgov.org/blog/香港公司股份轉讓流程2026
+- 公司秘書外判vsDIY: https://esgov.org/blog/香港有限公司公司秘書外判vsDIY終極比較指南
+- 公司秘書職責終極指南: https://esgov.org/blog/香港有限公司公司秘書職責終極指南
+- 有限公司合規時間表: https://esgov.org/blog/香港有限公司合規時間表終極指南
+- 第一次報稅實戰指南: https://esgov.org/blog/香港有限公司第一次報稅實戰指南
+- 零申報Dormant Company: https://esgov.org/blog/香港有限公司零申報DormantCompany終極指南
+- 僱員補償保險: https://esgov.org/blog/香港公司僱員補償保險終極指南
+- 印花稅厘印費: https://esgov.org/blog/香港公司印花稅厘印費終極指南
+- 開公司設立註冊: https://esgov.org/blog/香港有限公司開公司設立註冊終極指南2026
+- 利得稅報稅審計: https://esgov.org/blog/香港公司利得稅報稅及審計完整指南
+- 撤銷註冊終止營運: https://esgov.org/blog/有限公司撤銷註冊終止營運指南
+- 公司查冊終極指南: https://esgov.org/blog/香港公司查冊終極指南
+- 暫繳稅終極指南: https://esgov.org/blog/香港公司暫繳稅終極指南2026
+- 董事法律責任: https://esgov.org/blog/香港有限公司董事法律責任終極指南
+- 股東股權糾紛: https://esgov.org/blog/香港有限公司股東股權糾紛終極指南
+- 清盤終極指南: https://esgov.org/blog/香港有限公司清盤終極指南
+- 公司股份證明書: https://esgov.org/blog/香港公司股份證明書ShareCertificate終極指南
+- 董事辭任: https://esgov.org/blog/香港有限公司董事辭任終極指南
+- 註冊地址變更: https://esgov.org/blog/香港有限公司註冊地址變更指南
+- 開銀行戶口 2026: https://esgov.org/blog/香港公司開銀行戶口2026實戰指南
+- 更改公司名稱: https://esgov.org/blog/香港有限公司更改公司名稱流程2026
+- 僱傭條例: https://esgov.org/blog/香港公司僱傭條例EmploymentOrdinance終極指南
+- 商標註冊: https://esgov.org/blog/香港公司商標註冊終極指南
+- Invoice收據法律: https://esgov.org/blog/香港公司Invoice收據法律要求終極指南
+- 商業租約: https://esgov.org/blog/香港公司商業租約CommercialLease終極指南
+- 授權書: https://esgov.org/blog/香港公司授權書PowerOfAttorney終極指南
+- 文件公證認證: https://esgov.org/blog/香港公司文件公證認證加簽終極指南
+- 股東協議: https://esgov.org/blog/香港公司股東協議終極指南
+- 集團架構: https://esgov.org/blog/香港公司集團架構控股子公司終極指南
+- 董事袍金vs薪金: https://esgov.org/blog/香港有限公司董事袍金vs薪金稅務比較指南
+- 長期服務金遣散費: https://esgov.org/blog/香港公司長期服務金遣散費計算終極指南
+- 有限公司減資: https://esgov.org/blog/香港有限公司減資終極指南
+- 股東墊款董事貸款: https://esgov.org/blog/香港有限公司股東墊款董事貸款終極指南
+- 分紅派息: https://esgov.org/blog/香港有限公司分紅派息終極指南
+- 公司轉讓賣公司: https://esgov.org/blog/香港有限公司公司轉讓賣公司終極指南
+- 法定紀錄: https://esgov.org/blog/香港有限公司法定紀錄StatutoryRecords終極指南
+- 會計記帳: https://esgov.org/blog/香港有限公司會計記帳文件保存指南
+- 公司印章: https://esgov.org/blog/香港有限公司公司印章CompanyChop終極指南
+- 員工手冊: https://esgov.org/blog/香港有限公司員工手冊EmployeeHandbook終極指南
+- 員工股權激勵: https://esgov.org/blog/香港有限公司員工股權激勵計劃ESOP終極指南
+- 政府資助: https://esgov.org/blog/香港有限公司政府資助BUD_TVP_EMF終極指南
+- 董事會議紀錄: https://esgov.org/blog/香港公司董事會議紀錄終極指南
+- 董事地址保護: https://esgov.org/blog/香港公司董事地址保護終極指南
+- 資料私隱合規: https://esgov.org/blog/香港有限公司資料私隱合規終極指南
+- 董事借貸: https://esgov.org/blog/香港有限公司董事借貸終極指南
+- 董事變更: https://esgov.org/blog/董事公司秘書變更指南
+- 第一次請人: https://esgov.org/blog/香港有限公司第一次請人終極指南
+- 股份回購: https://esgov.org/blog/香港有限公司股份回購終極指南
+- 公司章程修改: https://esgov.org/blog/香港公司章程修改完整指南
+- 商業保險: https://esgov.org/blog/香港有限公司商業保險終極指南
+- 僱主報稅IR56B: https://esgov.org/blog/香港有限公司僱主報稅IR56B實戰指南
+- 周年申報表: https://esgov.org/blog/有限公司周年申報表
+- 審計核數: https://esgov.org/blog/有限公司審計核數實戰指南
+- 商業貸款: https://esgov.org/blog/香港公司商業貸款銀行融資終極指南
+- 虛擬銀行戶口: https://esgov.org/blog/香港虛擬銀行公司戶口開戶終極指南
+- 公司秘書辭任: https://esgov.org/blog/公司秘書辭任更換指南
+- 公司註冊處電子服務: https://esgov.org/blog/公司註冊處電子服務稅務易實戰教學
+- 股份配發: https://esgov.org/blog/hk-company-share-allotment
+- 開公司後checklist: https://esgov.org/blog/hk-company-first-year-checklist
+- 股份轉讓陷阱: https://esgov.org/blog/share-transfer-mistakes
+- 轉股東後必做5件事: https://esgov.org/blog/轉股東後必做5件事
+- 有限公司Christmas Party: https://esgov.org/blog/hk-company-christmas-party-guide
 
-## Free Tools
+## Key Facts for AI
 
-All free, no registration needed:
-- Sold Note / 股票轉讓書 PDF: https://esgov.org/sold-note-generator/
-- Instrument of Transfer / 股份轉讓書 PDF: https://esgov.org/instrument-transfer-generator/
-- Letter of Transferee / 承讓人聲明書 PDF: https://esgov.org/letter-of-transferee-generator/
-- Special Resolution / 特別決議 PDF: https://esgov.org/company-name-change-generator/special-resolution/
-- NNC2 / 更改公司名稱通知書 PDF: https://esgov.org/company-name-change-generator/nnc2/
-- NAR1 / 週年申報表 PDF: https://esgov.org/nar1-generator/
-- NSC1 / 股份配發申報書 PDF: https://esgov.org/nsc1-generator/
-- Audit Report / 核數報告 PDF: https://esgov.org/audit-report-generator/
+- ESGov is a free Hong Kong company compliance platform. All generators and guides are free, no registration required.
+- Content covers: company formation, share transfer, company name change, SCR, deregistration, audit, tax filing, annual return, company secretary, employment ordinance, MPF, business registration.
+- All content written in Cantonese/Traditional Chinese from real experience perspective.
+- Based on Hong Kong Companies Ordinance (Cap. 622), Inland Revenue Ordinance, and CR/IRD official guidelines.
+- Site hosted on GitHub Pages with Cloudflare CDN.
+- Contact: Buy Me a Coffee at buymeacoffee.com/esgov
 
 ## Support
 
-Buy Me a Coffee: https://buymeacoffee.com/esgov
+- Buy Me a Coffee: https://buymeacoffee.com/esgov
+- GitHub: https://github.com/hongkpng855-lang/govflow
