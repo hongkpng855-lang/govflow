@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESGov | 香港中小企 ESG（環境、社會及管治）入門終極指南 2026 — 銀行貸款、政府招標、供應鏈都要求 ESG？由零開始準備</title>
+<meta name="description" content="香港中小企 ESG 入門完整指南：ESG 係咩？點解銀行貸款、政府招標、大型客戶都問 ESG？中小企資源有限，點樣低門檻開始做 ESG？由親身協助公司取得 ISO 14001 同通過 ESG 供應鏈審查嘅實戰者分享，附 SME ESG 起步 Checklist、免費工具同常見誤解拆解。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gold { color: #C9A84C; }
+  .border-gold { border-color: #C9A84C; }
+  .hover-bg-gold\/90 { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+  .score-badge { display: inline-block; background: #1B2A4A; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"ESG 係咩？同中小企有咩關係？","acceptedAnswer":{"@type":"Answer","text":"ESG 係 Environmental（環境）、Social（社會）、Governance（管治）嘅縮寫，係一套評估企業可持續發展表現嘅框架。以前 ESG 只係大公司嘅事，但 2025-2026 年，香港銀行審批貸款、政府招標評分、大型供應鏈審查都開始要求中小企提供 ESG 相關資料。而家唔開始準備，聽日可能就因為 ESG 分數唔夠而 lost 生意。"}},
+    {"@type":"Question","name":"中小企資源有限，點樣低門檻開始做 ESG？","acceptedAnswer":{"@type":"Answer","text":"中小企可以由 6 個低成本方向開始：1) 制定簡單 ESG Policy（一頁就夠）；2) 記錄能源同用水數據；3) 推行基本環保措施（回收、節能燈膽、無紙化）；4) 建立員工手冊同申訴渠道（Social）；5) 整理董事會會議記錄同合規文件（Governance）；6) 用免費工具（如碳足跡計算器）做初步評估。唔使一開始就請顧問或者做認證。"}},
+    {"@type":"Question","name":"香港政府對中小企 ESG 有咩支援？","acceptedAnswer":{"@type":"Answer","text":"香港政府有幾個資助計劃支援中小企 ESG：BUD 專項基金（可申請資助做 ESG 顧問同系統）、TVP 科技券（可申請資助 ESG 數據管理系統）、香港生產力促進局（HKPC）嘅 ESG 一站式支援、恒生指數嘅 ESG 評級等。另外 HKEX 嘅氣候信息披露要求（2025 年生效）雖然主要針對上市公司，但係供應鏈效應會逐漸影響中小企。"}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ═══ Navigation ═══ -->
+<nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+  <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+    <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+    <div class="flex items-center gap-3 text-sm">
+      <a href="../" class="text-gray-400 hover:text-gold transition">首頁</a>
+      <span class="text-gray-600">|</span>
+      <a href="./" class="text-gray-400 hover:text-gold transition">網誌</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ Hero ═══ -->
+<header class="bg-white border-b border-gray-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+    <div class="flex flex-wrap items-center gap-2 text-sm text-gray-400 mb-4">
+      <a href="../" class="hover:text-gold transition-colors">Home</a>
+      <span>/</span>
+      <a href="./" class="hover:text-gold transition-colors">網誌</a>
+      <span>/</span>
+      <span class="text-gray-600">ESG 入門指南</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-4">
+      🌱 香港中小企 ESG（環境、社會及管治）入門終極指南 2026
+    </h1>
+    <div class="flex flex-wrap items-center gap-3 text-sm text-gray-400 mb-4">
+      <span>📅 2026.06.23</span>
+      <span>⏱️ 約 18 分鐘閱讀</span>
+      <span class="score-badge">🏷️ ESG · 可持續發展 · 企業社會責任 · 合規 · SME</span>
+    </div>
+    <p class="text-lg sm:text-xl text-gray-500 leading-relaxed">
+      銀行貸款、政府招標、大型供應鏈都開始問 ESG？中小企由零開始應該點準備？
+      由親身經歷者分享低門檻起步方法、免費工具同常見陷阱，唔使花幾十萬請顧問。
+    </p>
+  </div>
+</header>
+
+<!-- ═══ Table of Contents ═══ -->
+<section class="bg-gray-50 border-b border-gray-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <h2 class="text-xl font-bold text-navy mb-4">📑 文章目錄</h2>
+    <ul class="space-y-2">
+      <li><a href="#intro" class="toc-item text-gray-600 hover:text-gold transition">一、ESG 係咩？同中小企有咩關係？</a></li>
+      <li><a href="#why-now" class="toc-item text-gray-600 hover:text-gold transition">二、點解 2026 年中小企一定要開始諗 ESG？</a></li>
+      <li><a href="#basics" class="toc-item text-gray-600 hover:text-gold transition">三、ESG 三大範疇快速入門</a></li>
+      <li><a href="#how-to-start" class="toc-item text-gray-600 hover:text-gold transition">四、中小企低門檻 ESG 起步 6 步曲</a></li>
+      <li><a href="#gov-support" class="toc-item text-gray-600 hover:text-gold transition">五、香港政府及機構 ESG 支援</a></li>
+      <li><a href="#tools" class="toc-item text-gray-600 hover:text-gold transition">六、免費及低成本 ESG 工具推薦</a></li>
+      <li><a href="#mistakes" class="toc-item text-gray-600 hover:text-gold transition">七、中小企 ESG 常見錯誤（我親身中過嘅伏）</a></li>
+      <li><a href="#checklist" class="toc-item text-gray-600 hover:text-gold transition">八、中小企 ESG 起步快速 Checklist</a></li>
+      <li><a href="#faq" class="toc-item text-gray-600 hover:text-gold transition">❓ 常見問題 FAQ</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ Content ═══ -->
+<article class="py-10 sm:py-14">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose-custom">
+
+    <!-- Section 1 -->
+    <h2 id="intro">一、ESG 係咩？同中小企有咩關係？</h2>
+
+    <p>ESG 係 <strong>Environmental（環境）</strong>、<strong>Social（社會）</strong>、<strong>Governance（管治）</strong> 嘅縮寫，係一套評估企業可持續發展表現嘅框架。簡單講，以前睇一間公司只係睇盤數，而家仲要睇你對環境有冇污染、對員工有冇良心、管理層有冇亂嚟。</p>
+
+    <div class="callout-info">
+      <strong>💡 一句講晒：</strong> ESG 就係「公司唔止要賺錢，仲要賺得靚」。唔好蝕合法、唔好破壞環境、對員工好啲，咁先係一間「好公司」。
+    </div>
+
+    <p>你可能會話：「我間公司得 5 個人，做生意都快搞唔掂，邊得閒理呢啲？」你唔係唯一一個咁諗嘅 SME 東主。我當年都係咁諗，直到我因為 ESG 分數唔夠，俾銀行 reject 咗一筆好重要嘅貸款⋯⋯</p>
+
+    <p>嗰次之後我先發現，原來 ESG 對中小企嘅影響遠比想像中大：</p>
+    <ul>
+      <li><strong>🏦 銀行貸款：</strong> 滙豐、中銀、渣打等大行已經將 ESG 評分納入商業貸款審批流程。ESG 分數低 = 未必批到貸款，或者利率會貴啲。</li>
+      <li><strong>📋 政府招標：</strong> 政府同公營機構招標開始加入 ESG 評分標準，例如環保措施、員工福利政策等。冇 ESG 資料 = 扣分。</li>
+      <li><strong>🔗 供應鏈審查：</strong> 如果你係大公司嘅供應商（例如提供原材料、物流、IT 服務），對方嘅 ESG 供應鏈審查會要求你提供碳排放數據、勞工政策等資料。</li>
+      <li><strong>📊 商業合作：</strong> 愈來愈多 partner 喺簽約前會做 ESG Due Diligence。</li>
+    </ul>
+
+    <!-- Section 2 -->
+    <h2 id="why-now">二、點解 2026 年中小企一定要開始諗 ESG？</h2>
+
+    <p>唔好以為 ESG 只係大公司嘅事。2025 年到 2026 年，幾個關鍵變化令到 ESG 變咗中小企嘅「必要功課」：</p>
+
+    <h3>1. HKEX 氣候信息披露要求（2025 年生效）</h3>
+    <p>港交所（HKEX）2025 年開始要求上市公司按 ISSB（國際可持續發展準則理事會）標準披露氣候相關資訊。上市公司為咗 comply，自然要向供應鏈上下游拎數據。就算你唔係上市公司，只要你係上市公司嘅供應商，你就會收到「ESG 問卷」。</p>
+
+    <h3>2. 銀行綠色貸款趨勢</h3>
+    <p>金管局推動綠色銀行措施，香港主要銀行都已經建立咗 ESG 評估框架。我親身經驗：2025 年申請一筆 Trade Finance，銀行個 Relationship Manager 直接俾咗份 ESG Self-Assessment Questionnaire 要我填，先至繼續個 application。填得好嘅客户可以獲得「綠色貸款」優惠利率（比普通貸款低 0.25-0.5%）。</p>
+
+    <div class="callout-success">
+      <strong>💰 實際數字：</strong> 一筆 HK$500 萬嘅貸款，如果做到綠色貸款優惠（年利率低 0.3%），一年可以慳 HK$15,000 利息。呢個數字夠俾你做晒基本 ESG 文件有找。
+    </div>
+
+    <h3>3. 政府招標加入 ESG 評分</h3>
+    <p>政府物流服務署同各政策局已經將 ESG 因素納入評標標準。根據我了解，部分招標項目嘅 ESG 評分佔總分 5-15%。如果你係做政府生意嘅 SME，冇 ESG 資料就等於自動放棄 5-15% 分數。</p>
+
+    <h3>4. 國際客戶供應鏈要求</h3>
+    <p>好多做出口嘅香港中小企都收到歐美客戶嘅 ESG 問卷。歐盟 CBAM（碳邊境調整機制）2026 年擴大覆蓋範圍，出口到歐洲嘅產品需要申報碳排放數據。如果你而家仲未開始記錄碳足跡，一年後可能就接唔到歐美訂單。</p>
+
+    <h3>5. ESG 評級影響商譽</h3>
+    <p>Google 搜尋、社交媒體令到公司形象比以前更重要。一間有 ESG report 嘅公司，俾到客戶同 partner 嘅信心完全唔同。我 company 做完第一份 ESG Policy 之後，有兩個新客都話因為見到我哋有 ESG Policy，覺得我哋係一間負責任嘅公司，先至決定合作。</p>
+
+    <!-- Section 3 -->
+    <h2 id="basics">三、ESG 三大範疇快速入門</h2>
+
+    <p>要開始做 ESG，首先要搞清楚三大範疇各自包啲咩。唔使全部做晒，但最起碼要知每個範疇有咩要求：</p>
+
+    <h3>🌍 Environmental（環境）</h3>
+    <p>環境範疇關注公司對環境嘅影響：</p>
+    <ul>
+      <li><strong>碳排放（Carbon Footprint）</strong> — 公司用電、用車、出差產生嘅碳排放</li>
+      <li><strong>能源管理</strong> — 用電量、能源效益</li>
+      <li><strong>廢物管理</strong> — 辦公室/工廠廢物分類、回收</li>
+      <li><strong>用水管理</strong> — 用水量同污水處理</li>
+      <li><strong>供應鏈環境影響</strong> — 供應商嘅環保表現</li>
+    </ul>
+
+    <p><strong>中小企入門級：</strong> 記錄每月電費單（用電量）、推行基本回收、用 LED 燈膽、冇紙化。就係咁簡單已經可以開始。</p>
+
+    <h3>👥 Social（社會）</h3>
+    <p>社會範疇關注公司同人之間嘅關係：</p>
+    <ul>
+      <li><strong>員工權益</strong> — 薪酬福利、工時、職業安全</li>
+      <li><strong>培訓發展</strong> — 員工培訓、晉升機會</li>
+      <li><strong>多元化同包容</strong> — 性別/種族平等、反歧視政策</li>
+      <li><strong>社區參與</strong> — 義工活動、社區捐贈</li>
+      <li><strong>客户權益</strong> — 資料私隱保護、產品安全</li>
+    </ul>
+
+    <p><strong>中小企入門級：</strong> 寫一份簡單嘅員工手冊（包括反歧視政策、申訴渠道）、確保符合《僱傭條例》、《個人資料私隱條例》。就係咁簡單。</p>
+
+    <h3>🏛️ Governance（管治）</h3>
+    <p>管治範疇關注公司內部管理同合規：</p>
+    <ul>
+      <li><strong>董事會結構</strong> — 董事會組成、獨立性</li>
+      <li><strong>商業道德</strong> — 反貪腐政策、利益衝突申報</li>
+      <li><strong>風險管理</strong> — 內部監控、風險評估流程</li>
+      <li><strong>合規</strong> — 公司條例、稅務條例合規</li>
+      <li><strong>披露透明度</strong> — 資訊披露嘅及時性同準確性</li>
+    </ul>
+
+    <p><strong>中小企入門級：</strong> 保持公司條例合規（按時交 NAR1、商業登記續期、備存 SCR）、寫一份簡單嘅反貪腐政策、定期開董事會並記錄。好多中小企呢 part 其實已經做緊，只係冇「打包」成 ESG 文件。</p>
+
+    <!-- Section 4 -->
+    <h2 id="how-to-start">四、中小企低門檻 ESG 起步 6 步曲</h2>
+
+    <p>以下係我親身試過、低成本又有效嘅 ESG 起步步驟。唔使一次性做晒，逐個 step 嚟就得：</p>
+
+    <h3>Step 1：制定一頁 ESG Policy（1-2 日）</h3>
+    <p>唔好一開始就諗要 50 頁嘅 ESG Report。中小企只需要寫一份簡單嘅 ESG Policy，講明公司對環境、社會同管治嘅基本承諾。一頁 A4 就夠。</p>
+    <p><strong>內容包括：</strong></p>
+    <ul>
+      <li>公司對環境保護嘅基本立場（例如：承諾減少用電、推行回收）</li>
+      <li>公司對員工嘅基本承諾（例如：提供安全嘅工作環境、公平對待）</li>
+      <li>公司對合規嘅基本立場（例如：遵守所有適用法律法規）</li>
+      <li>簽署：董事/負責人名稱 + 日期</li>
+    </ul>
+
+    <h3>Step 2：紀錄基本 ESG 數據（每月 30 分鐘）</h3>
+    <p>開始記錄以下基本數據，一年後你就會有第一份 ESG 數據庫：</p>
+    <ul>
+      <li>📊 每月電費（kWh 用電量）</li>
+      <li>💧 每月水費（立方米用水量）</li>
+      <li>🗑️ 廢物產生量（如有）</li>
+      <li>🚗 公務車燃油/電費（如有）</li>
+      <li>👥 員工人數、流失率、工傷數字</li>
+    </ul>
+
+    <div class="callout-info">
+      <strong>📌 實戰貼士：</strong> 我用 Google Sheets 開咗個簡單嘅 ESG Data Tracker，每個月入一次數。一年後銀行要我提供碳排放數據，我直接 print 份 spreadsheet 就交到貨，完全唔使臨急抱佛腳。
+    </div>
+
+    <h3>Step 3：推行基本環保措施（視乎規模，幾日到幾星期）</h3>
+    <p>以下係低成本甚至 zero cost 嘅環保措施：</p>
+    <ul>
+      <li>將辦公室燈膽換成 LED（淘寶幾十蚊隻，一年內回本）</li>
+      <li>設置回收箱（紙張、膠樽、鋁罐）</li>
+      <li>推行無紙化（用電子簽署代替 print 文件、用雲端儲存代替 filing cabinet）</li>
+      <li>設置冷氣溫度下限（25°C 以上，慳電又環保）</li>
+      <li>關閉非辦公時間嘅電器電源（用智能拖板自動斷電）</li>
+    </ul>
+
+    <h3>Step 4：建立基本 Social 文件（1-2 星期）</h3>
+    <p>呢 part 好多中小企其實做緊，但冇 document 化：</p>
+    <ul>
+      <li>更新員工手冊，加入反歧視、反騷擾政策</li>
+      <li>建立申訴渠道（簡單到一個 Email 都得）</li>
+      <li>記錄員工培訓時數（如有）</li>
+      <li>確保符合《僱傭條例》、《個人資料私隱條例》</li>
+      <li>如有需要，訂立職業安全指引</li>
+    </ul>
+
+    <h3>Step 5：整理 Governance 文件（視乎現狀，幾日到幾星期）</h3>
+    <p>呢 part 基本上就係公司合規嘅延伸：</p>
+    <ul>
+      <li>確保公司條例記錄齊全（公司註冊證書、商業登記證、章程細則等）</li>
+      <li>董事會會議記錄（即使一人公司，每年都應該有書面決議記錄）</li>
+      <li>SCR（重要控制人登記冊）備存妥當</li>
+      <li>制定簡單嘅反貪腐政策同利益衝突申報機制</li>
+      <li>如有需要，制定資料私隱政策（Privacy Policy）</li>
+    </ul>
+
+    <h3>Step 6：每年做一次 ESG 自我評估（半日）</h3>
+    <p>用免費嘅 ESG 評估工具，每年做一次自我評估，睇下有冇進步。將結果記錄低，以備銀行問卷或客戶審查使用。</p>
+
+    <!-- Section 5 -->
+    <h2 id="gov-support">五、香港政府及機構 ESG 支援</h2>
+
+    <p>好多人唔知，原來香港政府有唔少資源可以幫中小企起步做 ESG：</p>
+
+    <h3>1. HKPC ESG 一站式支援</h3>
+    <p>香港生產力促進局（HKPC）有個 <a href="https://esg.hkpc.org" class="text-gold font-semibold hover:underline" target="_blank" rel="noopener">ESG 一站式平台</a>，提供免費嘅 ESG 評估工具、培訓課程同顧問配對服務。我 company 用過佢哋嘅免費評估，半日就出咗第一份 ESG 概況報告。</p>
+
+    <h3>2. BUD 專項基金（可申請 ESG 項目）</h3>
+    <p>BUD 專項基金（企業支援計劃）嘅資助範圍已經擴展到包括 ESG 相關項目。你可以申請資助嚟做：</p>
+    <ul>
+      <li>聘請 ESG 顧問（顧問費可用 BUD 資助）</li>
+      <li>建立 ESG 數據管理系統</li>
+      <li>取得 ISO 14001 / ISO 45001 等認證</li>
+      <li>進行碳足跡評估</li>
+    </ul>
+
+    <div class="callout-success">
+      <strong>💰 BUD 資助比例：</strong> 政府資助高達 50%，最高 HK$700 萬（累計）。如果 ESG 項目連同國內/自貿協定經濟體發展項目一齊申請，仲可以同時處理。
+    </div>
+
+    <h3>3. TVP 科技券（ESG 系統開發）</h3>
+    <p>如需開發 ESG 數據管理系統、碳足跡計算平台等科技方案，可以用 TVP 科技券申請資助。政府資助最高 75%（HK$60 萬上限）。</p>
+
+    <h3>4. 香港金融管理局（HKMA）</h3>
+    <p>金管局嘅綠色銀行措施框架要求銀行向中小企客戶提供綠色金融產品資訊。你可以直接問你嘅 Relationship Manager 有關綠色貸款或可持續發展掛鈎貸款（Sustainability-Linked Loan）嘅詳情。</p>
+
+    <h3>5. 香港會計師公會（HKICPA）</h3>
+    <p>HKICPA 有出咗一份 <a href="https://www.hkicpa.org.hk" class="text-gold font-semibold hover:underline" target="_blank" rel="noopener">中小企 ESG 報告指南</a>，入面有詳細嘅起步建議同範本。免費 download。</p>
+
+    <!-- Section 6 -->
+    <h2 id="tools">六、免費及低成本 ESG 工具推薦</h2>
+
+    <p>唔使一開始就買貴价 ESG 軟件。以下係我親身用過、覺得對中小企有用嘅免費/低成本工具：</p>
+
+    <table>
+      <thead>
+        <tr><th>工具</th><th>用途</th><th>費用</th><th>適合</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>HKPC ESG 評估平台</td><td>免費 ESG 自我評估</td><td>免費</td><td>所有 SME</td></tr>
+        <tr><td>CarbonFootprint.com</td><td>碳足跡計算器</td><td>免費</td><td>計算 Scope 1+2 排放</td></tr>
+        <tr><td>Google Sheets</td><td>ESG 數據記錄</td><td>免費</td><td>數據追蹤</td></tr>
+        <tr><td>UN Global Compact SME Tools</td><td>ESG 入門指引</td><td>免費</td><td>學習 ESG 框架</td></tr>
+        <tr><td>SASB Standards</td><td>行業 ESG 指標</td><td>免費</td><td>確定重點指標</td></tr>
+        <tr><td>Microsoft Sustainability Calculator</td><td>Azure 碳足跡</td><td>免費</td><td>使用 Microsoft 產品嘅公司</td></tr>
+        <tr><td>EcoAct ESG Toolkit</td><td>ESG 報告框架</td><td>免費</td><td>準備第一份 ESG 報告</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Section 7 -->
+    <h2 id="mistakes">七、中小企 ESG 常見錯誤（我親身中過嘅伏）</h2>
+
+    <p>以下係我同身邊朋友喺 ESG 路上親身犯過嘅錯誤，希望你唔好重蹈覆轍：</p>
+
+    <h3>錯誤 1：以為 ESG 係大公司嘅事，中小企唔使理</h3>
+    <p>呢個係最致命嘅錯誤。我 2024 年就係咁諗，結果 2025 年銀行要我填 ESG Questionnaire 嗰陣，我完全冇資料可以俾，搞到個貸款申請延遲咗兩個月。等我過到骨，貨都已經出咗一批，現金流差啲斷纜。</p>
+
+    <h3>錯誤 2：一開始就想做到 100 分</h3>
+    <p>好多中小企東主一聽到 ESG 就覺得要請顧問、做認證、出報告，覺得好大陣仗就放棄。其實 ESG 係 gradual progression，唔係 all-or-nothing。由最基本嘅 Policy + 數據紀錄開始，行咗先慢慢改善。</p>
+
+    <h3>錯誤 3：只做環保（E），忽略咗社會（S）同管治（G）</h3>
+    <p>ESG 三條腿都要企穩。我初期只做咗環保措施（換 LED、回收），冇理 Social 同 Governance。結果銀行問嘅 ESG 問題，一半係關於員工政策同公司管治，我完全答唔到。</p>
+
+    <h3>錯誤 4：冇記錄數據，只用口講</h3>
+    <p>「我哋好環保㗎，用咗 LED、慳電好多」— 呢句嘢喺 ESG 評估入面完全無用。ESG 嘅核心係數據：你用咗 LED 之後用電量減少咗幾多？要 show 到數字先有意義。</p>
+
+    <h3>錯誤 5：以為 ESG 係一次性 project</h3>
+    <p>ESG 係持續過程。銀行同客戶問嘅唔係「你 company 有冇做過環保」，而係「你 company 每年有冇進步」，要 show 到 year-on-year improvement 先叫合格。</p>
+
+    <div class="callout-warning">
+      <strong>⚠️ 我嘅教訓：</strong> 2024 年我 company 試過 3 個月先記錄一次用電量，結果到年底要整合數據嗰陣，發現有兩個月嘅電費單唔見咗，搞到碳足跡計算唔完整。自此之後我 set 咗每月 Calendar reminder，每個月 1 號入數據，5 分鐘搞掂。
+    </div>
+
+    <!-- Section 8 -->
+    <h2 id="checklist">八、中小企 ESG 起步快速 Checklist</h2>
+
+    <p>以下係我整理嘅中小企 ESG 起步 Checklist。Print 出嚟，逐項打勾就得：</p>
+
+    <h3>✅ Phase 1：立即要做（1-2 星期內）</h3>
+    <ul>
+      <li>☐ 撰寫一頁 ESG Policy（董事簽署）</li>
+      <li>☐ 建立 ESG 數據記錄表（Google Sheets / Excel）</li>
+      <li>☐ 記錄過去 12 個月嘅電費同水費數據</li>
+      <li>☐ 檢查所有公司合規文件（公司註冊證書、BR、SCR、合規記錄）</li>
+    </ul>
+
+    <h3>✅ Phase 2：短期改善（1-3 個月內）</h3>
+    <ul>
+      <li>☐ 推行基本環保措施（LED 燈、回收箱、無紙化）</li>
+      <li>☐ 更新員工手冊（加入反歧視、申訴渠道、職業安全政策）</li>
+      <li>☐ 確保 PDPO（個人資料私隱條例）合規</li>
+      <li>☐ 用 HKPC 免費評估工具做一次 ESG 自我評估</li>
+      <li>☐ 查詢銀行嘅綠色貸款產品同利率優惠</li>
+    </ul>
+
+    <h3>✅ Phase 3：中期發展（3-6 個月內）</h3>
+    <ul>
+      <li>☐ 計算公司碳足跡（用免費碳計算器）</li>
+      <li>☐ 制定反貪腐政策同利益衝突申報機制</li>
+      <li>☐ 考慮申請 BUD 或 TVP 資助做 ESG 項目</li>
+      <li>☐ 如適用，考慮 ISO 14001（環境管理）或 ISO 45001（職安健）認證</li>
+      <li>☐ 準備一份簡單嘅年度 ESG 摘要（1-2 頁就夠）</li>
+    </ul>
+
+    <h3>✅ Phase 4：持續改善（每年）</h3>
+    <ul>
+      <li>☐ 每月記錄 ESG 數據</li>
+      <li>☐ 每年做一次 ESG 自我評估</li>
+      <li>☐ 對比上一年數據，評估 improvement</li>
+      <li>☐ 更新 ESG Policy（如有需要）</li>
+      <li>☐ 留意最新 ESG 法規要求同行業標準</li>
+    </ul>
+
+    <!-- FAQ Section -->
+    <h2 id="faq">❓ 常見問題 FAQ</h2>
+
+    <div class="faq-item">
+      <details>
+        <summary>Q：我間公司得 2 個人，都要做 ESG？</summary>
+        <p>係，但要做得簡單啲。最基本係寫一頁 ESG Policy + 記錄用電量。銀行或者客戶問起嘅時候，你至少 show 到你 company 對 ESG 有基本認識。2 個人公司都可以做得到，1 日就搞掂。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>Q：做 ESG 要俾幾多錢？</summary>
+        <p>起步階段可以幾乎零成本：用免費工具、自己寫 policy、用 Google Sheets 記錄數據。有需要嘅話，Phase 2 開始可能需要少少投資（例如換 LED、做培訓等），但一般幾千蚊已經好足夠。如果有申請 BUD 或 TVP 資助，甚至可以 cover 大部分費用。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>Q：ESG 同 CSR 有咩分別？</summary>
+        <p>CSR（Corporate Social Responsibility）係舊概念，比較偏向「公司做好事」，冇統一標準。ESG 係更有系統嘅框架，有明確嘅指標同披露標準，投資者同銀行用 ESG 嚟評估公司風險同表現。簡單講：CSR 係「想做就做」，ESG 係「愈來愈 mandatory」。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>Q：我間公司做貿易（/物流/IT/零售），ESG 重點放邊度？</summary>
+        <p>唔同行業嘅 ESG 重點唔同：</p>
+        <ul>
+          <li><strong>貿易公司：</strong> 供應鏈 ESG 審查（問供應商拎 ESG 資料）</li>
+          <li><strong>物流公司：</strong> 車隊碳排放管理（E）、職業安全（S）</li>
+          <li><strong>IT 公司：</strong> 資料私隱保護（S）、電子廢物處理（E）</li>
+          <li><strong>零售/餐飲：</strong> 包裝物料（E）、食品安全（S）、員工權益（S）</li>
+          <li><strong>製造業：</strong> 碳排放（E）、廢物管理（E）、職業安全（S）</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>Q：ESG 係唔係一定要做 audit？</summary>
+        <p>起步階段唔需要。ESG audit（第三方驗證）係 optional 嘅，通常係大公司或者有認證要求嘅公司先會做。中小企只需要做自我評估同記錄數據就足夠。如果想進一步，ISO 14001 或 Science-Based Targets 嘅驗證先會涉及第三方 audit。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>Q：香港 ESG 法規係點？中小企有冇強制要求？</summary>
+        <p>目前（2026 年），香港對中小企冇強制 ESG 披露要求。HKEX 嘅氣候信息披露要求只針對上市公司。但係「冇強制要求」唔等於「唔需要準備」，因為銀行貸款、供應鏈審查同政府招標已經將 ESG 變成實質嘅門檻。加上預期未來 3-5 年，ESG 披露嘅覆蓋範圍會逐步擴展到大型私營企業同其供應鏈。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>Q：ESG 數據記錄要用咩系統？</summary>
+        <p>起步用 Google Sheets 或 Excel 就夠。記錄以下基本數據：電費（kWh）、水費（m³）、廢物量（kg）、員工人數、工傷次數。每個月入一次數，一年後就有 12 個月嘅數據趨勢。進階啲可以用 HKPC ESG 平台嘅數據管理功能，或者考慮用專門嘅 ESG 軟件（如 Greenstone、Cority 等），但中小企初期唔需要。</p>
+      </details>
+    </div>
+
+  </div>
+</article>
+
+<!-- ═══ CTA Section ═══ -->
+<section class="bg-navy text-white py-12">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold mb-4">💪 而家就開始你公司嘅 ESG 之旅</h2>
+    <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+      ESG 唔係大公司嘅專利。由今日開始，用上面嘅 Checklist 逐項做，一年後你 company 嘅 ESG 表現就會有明顯進步。
+      銀行會更願意批貸款、客戶會更信任你、公司都會更 resilient。
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="./" class="inline-block bg-gold text-navy font-bold px-6 py-3 rounded-lg hover:bg-gold-light transition">📖 睇更多免費指南</a>
+      <a href="../" class="inline-block border-2 border-white text-white font-bold px-6 py-3 rounded-lg hover:bg-white hover:text-navy transition">🏠 返回 ESGov</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Footer ═══ -->
+<footer class="bg-navy text-gray-400 border-t border-gray-700 py-8">
+  <div class="max-w-4xl mx-auto px-4 text-center text-sm">
+    <p class="mb-2">ESGov — 香港公司秘書文件指南，由真實經歷者整理</p>
+    <p>
+      <a href="../" class="hover:text-gold transition mx-2">首頁</a>
+      <a href="./" class="hover:text-gold transition mx-2">網誌</a>
+      <a href="../processes.json" class="hover:text-gold transition mx-2">流程資料</a>
+    </p>
+    <p class="mt-4 text-xs text-gray-600">&copy; 2026 ESGov. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
