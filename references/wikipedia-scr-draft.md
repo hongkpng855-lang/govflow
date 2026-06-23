@@ -124,7 +124,7 @@ Unlike the UK register, which is freely accessible online through Companies Hous
 
 * [Hong Kong Companies Registry — SCR Thematic Section](https://www.cr.gov.hk/en/legislation/scr/)
 * [Companies Ordinance (Cap. 622) Full Text](https://www.elegislation.gov.hk/hk/cap622)
-* [ESGov — Hong Kong SCR Compliance Guide](https://esgov.org/scr-guide/)
+* [ESGov — 重要控制人登記冊 (SCR) 完整指南](https://esgov.org/significant-controllers-register/)
 * [Guidelines on Keeping of Significant Controllers Register (PDF)](https://www.cr.gov.hk/en/publications/docs/Guidelines_scr_e.pdf)
 
 ---
