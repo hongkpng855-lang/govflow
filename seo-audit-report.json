@@ -48,7 +48,7 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 4,
+      "jsonld": 5,
       "charset": true,
       "img_alt_pct": "4/4",
       "clean_urls": 0
@@ -111,8 +111,8 @@
       "score": 100,
       "title": "ESGov | 審計報告 Audit Report 範例 + 下載 — 需由執業會計師簽署",
       "title_len": 45,
-      "description": "香港公司審計報告（Audit Report）範例 + 可供參考的樣本下載。⚠️ 審計報告必須由香港執業會計師/核數師簽署...",
-      "desc_len": 119,
+      "description": "香港公司審計報告（Audit Report）範例及可供參考樣本下載。⚠️ 審計報告必須由香港執業會計師或核數師簽署，唔可...",
+      "desc_len": 123,
       "h1_count": 1,
       "h1_text": [
         "審計報告 Audit Report 範例 — 需由執業會計師處理"
@@ -163,8 +163,8 @@
       "score": 100,
       "title": "ESGov | NSC1 股份配發申請書 PDF 範例 + 下載 — 公司註冊處官方表格",
       "title_len": 44,
-      "description": "香港公司股份配發申請書 NSC1 真實填寫範例 + 可供參考的空白模板下載。如公司曾增加股本但未反映於章程細則或 NAR...",
-      "desc_len": 104,
+      "description": "香港公司股份配發申請書 NSC1 真實填寫範例及可供參考的空白模板下載。如公司曾增加股本但未反映於章程細則或 NAR1，...",
+      "desc_len": 127,
       "h1_count": 1,
       "h1_text": [
         "NSC1 股份配發申請書 PDF 官方表格 — 公司註冊處可填寫表格"
@@ -215,8 +215,8 @@
       "score": 100,
       "title": "ESGov | 香港有限公司更改公司名稱完整指南（5個步驟完成）",
       "title_len": 32,
-      "description": "香港公司更改名稱完整指南：5個步驟搞掂公司改名。含查冊教學、特別決議範本、Form NNC2 填寫教學、CR 提交流程、...",
-      "desc_len": 101,
+      "description": "香港公司更改名稱完整指南：5個步驟搞掂公司改名。含公司查冊教學、特別決議範本、Form NNC2 填寫教學、公司註冊處提...",
+      "desc_len": 124,
       "h1_count": 1,
       "h1_text": [
         "香港有限公司更改名稱完整指南"
@@ -230,7 +230,7 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 4,
+      "jsonld": 5,
       "charset": true,
       "img_alt_pct": "4/4",
       "clean_urls": 0

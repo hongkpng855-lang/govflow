@@ -368,13 +368,13 @@
 
             <!-- Details -->
             <div class="bg-white rounded-xl border border-gray-200 p-6 mb-8">
-              <h3 class="font-semibold text-navy text-lg mb-3">詳細說明</h3>
+              <h3 class="font-semibold text-navy text-lg mb-3">呢個步驟要點做？</h3>
               <div class="text-gray-700 leading-relaxed whitespace-pre-line text-sm" x-text="s.details"></div>
             </div>
 
             <!-- Documents -->
             <div x-show="s.documents && s.documents.length >= 1" class="mb-8">
-              <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
+              <h3 class="font-semibold text-navy text-lg mb-4">需要咩文件？</h3>
               <div class="grid sm:grid-cols-2 gap-4">
                 <template x-for="(doc, idx) in s.documents" :key="idx">
                   <a :href="doc['guideUrl'] || doc['generatorUrl'] || '#'"
@@ -401,7 +401,7 @@
               </div>
             </div>
             <div x-show="(!s.documents || s.documents.length === 0) && !isLoading" class="mb-8">
-              <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
+              <h3 class="font-semibold text-navy text-lg mb-4">需要咩文件？</h3>
               <div class="bg-gray-50 border-2 border-dashed border-gray-200 rounded-xl p-8 text-center">
                 <p class="text-3xl mb-2">👣</p>
                 <p class="text-gray-400 text-sm font-medium">此步驟不需要提交任何文件</p>
