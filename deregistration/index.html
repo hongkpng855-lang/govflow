@@ -244,6 +244,19 @@
   ]
 }
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "#step-content > div.bg-white.rounded-xl > p"
+    ]
+  },
+  "url": "https://esgov.org/deregistration/"
+}
+</script>
   </head>
 <body x-data="{
   processData: null,
@@ -651,6 +664,16 @@
           </p>
         </div>
 
+        <!-- Related guides -->
+        <div class="mt-8 mb-4 bg-gold/5 border border-gold/20 rounded-xl p-5">
+          <h3 class="text-base font-bold text-navy mb-3">📚 相關指南</h3>
+          <ul class="space-y-2 text-sm">
+            <li>• <a href="/blog/有限公司撤銷註冊終止營運指南.html" class="text-gold hover:text-gold-light transition font-medium">香港有限公司撤銷註冊終止營運完整指南 — Strike-off、除名程序、解散公司 2026</a></li>
+            <li>• <a href="/blog/香港有限公司零申報DormantCompany終極指南.html" class="text-gold hover:text-gold-light transition font-medium">香港有限公司零申報（Dormant Company）終極指南 2026 — 申請方法、條件同稅務風險</a></li>
+            <li>• <a href="/blog/香港有限公司清盤終極指南.html" class="text-gold hover:text-gold-light transition font-medium">香港有限公司清盤終極指南 — 自願清盤 vs 強制清盤程序完整教學</a></li>
+          </ul>
+        </div>
+
         <!-- Loading -->
         <div x-show="isLoading" class="text-center py-20">
           <div class="w-8 h-8 border-4 border-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
@@ -895,6 +918,7 @@
       </div>
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
+        <p class="text-xs text-gray-400 mt-2">最後更新：2026年6月</p>
         <p>© 2026 ESGov. All rights reserved.</p>
         <p class="mt-2 opacity-40">v12.52</p>
     </div>
