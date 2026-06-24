@@ -287,7 +287,7 @@
   <!-- ═══════════════ Sticky Header ═══════════════ -->
   <div class="sticky-header bg-navy text-white shadow-lg" x-init="init()">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="flex items-center justify-between h-14 sm:h-16">
+      <div class="flex items-center justify-between h-12 sm:h-16">
         <a href="/" class="flex items-center gap-2.5 shrink-0"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
         <div class="flex items-center gap-2 min-w-0 ml-3 pl-3 border-l border-white/20">
           <a href="/" class="text-gold shrink-0 hover:text-gold-light transition text-sm sm:text-base">←</a>
@@ -332,7 +332,7 @@
   </div>
 
   <!-- ═══════════════ Main Content ═══════════════ -->
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+  <div class="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
     <div class="flex gap-8">
 
       <!-- Desktop Sidebar -->
@@ -391,9 +391,9 @@
       <!-- ═══════════════ Content Area ═══════════════ -->
       <main id="step-content" class="flex-1 min-w-0">
 
-        <div class="bg-white rounded-xl border border-gray-200 p-6 mb-8">
-          <p class="text-gray-700 leading-relaxed text-sm">
-            公司改名係指香港有限公司更改註冊名稱嘅法定程序，需要通過股東特別決議同向公司註冊處提交申請。呢個指南詳細講解 5 個步驟：Step 1 查冊公司名 + 檢查商標, Step 2 通過特別決議（Special Resolution）, Step 3 遞交 Form NNC2 去公司註冊處, Step 4 領取改名證書 + 更新商業登記, Step 5 更新銀行、供應商同公司紀錄。全部免費公開，由親身經歷者分享實戰經驗。
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 sm:p-5 mb-8">
+          <p class="text-xs sm:text-sm text-gray-700 leading-relaxed line-clamp-3">
+            公司改名係指香港有限公司更改註冊名稱嘅法定程序，需要通過股東特別決議同向公司註冊處提交申請。呢個免費指南詳細講解 5 個步驟，由親身經歷者分享實戰經驗，幫你慳返律師費。
           </p>
         </div>
 
@@ -426,7 +426,7 @@
             <!-- Step Header -->
             <div class="mb-8">
               <div class="flex items-center gap-3 mb-2">
-                <span class="w-10 h-10 rounded-full bg-gold text-navy flex items-center justify-center font-bold text-lg">
+                <span class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gold text-navy flex items-center justify-center font-bold text-lg">
                   <span x-text="getStepIcon(s)"></span>
                 </span>
                 <span class="text-sm text-green-600 font-semibold">🆓 免費步驟 | Step <span x-text="s.stepNumber"></span></span>
@@ -443,15 +443,14 @@
             </div>
 
             <!-- Details -->
-            <div class="bg-white rounded-xl border border-gray-200 p-6 mb-8">
+            <div class="bg-white rounded-xl border border-gray-200 p-4 sm:p-6 mb-8">
               <h3 class="font-semibold text-navy text-lg mb-3">呢個步驟要點做？</h3>
               <div class="text-gray-700 leading-relaxed whitespace-pre-line text-sm" x-text="s.details"></div>
             </div>
-
             <!-- Documents -->
             <div x-show="s.documents && s.documents.length >= 1" class="mb-8">
               <h3 class="font-semibold text-navy text-lg mb-4">需要咩文件？</h3>
-              <div class="grid sm:grid-cols-2 gap-4">
+              <div class="grid sm:grid-cols-2 gap-3 sm:gap-4">
                 <template x-for="(doc, idx) in s.documents" :key="idx">
                   <a :href="doc['guideUrl'] || doc['generatorUrl'] || '#'"
                      @click="(!doc['guideUrl'] && !doc['generatorUrl']) ? (openDoc(s.documents[idx]), false) : null"
@@ -500,19 +499,19 @@
             </div>
 
             <!-- Step Navigation Buttons -->
-            <div class="flex justify-between items-center mt-8 mb-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0 mt-8 mb-4">
               <button
                 x-show="s.stepNumber > 1"
                 @click="goToStep(s.stepNumber - 1)"
-                class="btn-gov btn-gov-dark text-sm"
+                class="btn-gov btn-gov-dark text-sm w-full sm:w-auto"
               >
                 ← 上一步
               </button>
-              <div x-show="s.stepNumber === 1 || s.stepNumber === totalSteps"></div>
+              <div x-show="s.stepNumber === 1 || s.stepNumber === totalSteps" class="hidden sm:block"></div>
               <button
                 x-show="s.stepNumber < totalSteps"
                 @click="goToStep(s.stepNumber + 1)"
-                class="btn-gov btn-gov-dark text-sm"
+                class="btn-gov btn-gov-dark text-sm w-full sm:w-auto"
               >
                 下一步 →
               </button>
