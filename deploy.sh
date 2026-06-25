@@ -55,6 +55,7 @@ EOF
 # Pattern: mt-2 opacity-40">vX.Y ...
 SED_FILES=(
   index.html
+  share-transfer/index.html
   shareholder-transfer/index.html
   sold-note-generator/index.html
   instrument-transfer-generator/index.html

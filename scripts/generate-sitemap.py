@@ -15,6 +15,7 @@ OUTPUT = os.path.join(ROOT, 'sitemap.xml')
 # Priority mapping
 PRIORITY = {
     '': 1.0,
+    '/share-transfer/': 0.9,
     '/shareholder-transfer/': 0.9,
     '/sold-note-generator/': 0.8,
     '/instrument-transfer-generator/': 0.8,
