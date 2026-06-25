@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 股份賣出單（Sold Note）完整教學 — 範本、填寫教學、常見錯誤</title>
+  <meta name="description" content="股份賣出單（Sold Note）係股份轉讓嘅關鍵文件。呢篇文由範本下載、逐項填寫教學、到常見錯誤全包，附免費Sold Note生成器，幫你輕鬆完成股份轉讓文件。" />
+  <meta name="keywords" content="Sold Note 範本, 股份賣出單, 股份買入單, Bought Note, 股份轉讓文件, 香港股份轉讓, Instrument of Transfer" />
+  <meta property="og:title" content="股份賣出單（Sold Note）完整教學 — 範本、填寫教學、常見錯誤 | ESGov" />
+  <meta property="og:description" content="股份賣出單（Sold Note）係股份轉讓嘅關鍵文件。範本下載、逐項填寫教學、常見錯誤全包，附免費Sold Note生成器。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/股份賣出單Sold Note教學" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .blog-content h2 { font-size: 1.5rem; font-weight: 700; color: #1B2A4A; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f3f4f6; }
+    .blog-content h3 { font-size: 1.125rem; font-weight: 600; color: #1B2A4A; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .blog-content h4 { font-size: 1rem; font-weight: 600; color: #1B2A4A; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .blog-content p { line-height: 1.8; margin-bottom: 1rem; color: #374151; }
+    .blog-content ul, .blog-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: #374151; }
+    .blog-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .blog-content .tip-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .tip-box p { margin-bottom: 0; }
+    .blog-content .warn-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .warn-box p { margin-bottom: 0; }
+    .blog-content .flag-item { background: #fef3c7; border-left: 4px solid #C9A84C; padding: 1rem 1.25rem; margin-bottom: 1rem; border-radius: 0.5rem; }
+    .blog-content .flag-item p { margin-bottom: 0; }
+    .blog-content a { color: #C9A84C; text-decoration: underline; }
+    .blog-content a:hover { color: #b8942e; }
+    .blog-content strong { color: #1B2A4A; }
+    .blog-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    .blog-content th, .blog-content td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
+    .blog-content th { background: #1B2A4A; color: white; font-weight: 600; }
+    .blog-content .step-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content blockquote { border-left: 4px solid #C9A84C; background: #fefce8; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+    .blog-content blockquote p { margin-bottom: 0; color: #92400e; }
+    .blog-nav a { transition: all 0.2s ease; }
+    .blog-nav a:hover { color: #C9A84C; }
+    .sample-box { background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 0.75rem; padding: 1.5rem; margin: 1rem 0; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.6; }
+  </style>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/股份賣出單Sold Note教學" />
+  <meta property="og:url" content="https://esgov.org/blog/股份賣出單Sold Note教學" />
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "股份賣出單（Sold Note）完整教學 — 範本、填寫教學、常見錯誤",
+    "description": "股份賣出單（Sold Note）係股份轉讓嘅關鍵文件。範本下載、逐項填寫教學、常見錯誤全包，附免費Sold Note生成器。",
+    "url": "https://esgov.org/blog/股份賣出單Sold Note教學",
+    "author": { "@type": "Person", "name": "ESGov" },
+    "publisher": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-06-25",
+    "dateModified": "2026-06-25"
+  }
+  </script>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://esgov.org" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://esgov.org/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Sold Note教學", "item": "https://esgov.org/blog/股份賣出單Sold Note教學" }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Sold Note（股份賣出單）係咩？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sold Note（股份賣出單）係記錄股份轉讓交易細節嘅文件，包括轉讓股份數量、每股作價、總代價、交易日期同雙方資料。佢係股份轉讓嘅基礎文件，用嚟對應Instrument of Transfer嘅內容。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Sold Note同Bought Note有咩分別？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sold Note係賣方（Transferor）發出嘅賣出單，Bought Note係買方（Transferee）發出嘅買入單。兩者本質上係同一份嘢，只係從唔同角度記錄同一筆交易。實務上通常只需準備一份Sold Note，由雙方共同簽署確認。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Sold Note係咪一定要提交俾公司註冊處？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "唔需要。Sold Note係雙方嘅交易記錄，唔使提交俾公司註冊處或稅局。但係一定要保留作為內部記錄，因為之後嘅Instrument of Transfer同印花稅計算都要對返Sold Note嘅數字。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Sold Note要填啲咩資料？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sold Note需要填寫以下資料：公司名稱同編號、賣方全名同身份證號碼、買方全名同身份證號碼、轉讓股份數量同類別、每股作價、總代價、交易日期、雙方簽署。部分範本仲會包括成交地點同見證人資料。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "冇Sold Note可以直接做股份轉讓嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "雖然法律上冇強制要求一定要有Sold Note，但實務上強烈建議準備。因為Sold Note係雙方對交易條件嘅書面確認，冇咗佢，日後填寫Instrument of Transfer時好容易出錯（例如記錯轉讓價或股份數量）。而且如果雙方日後有爭議，Sold Note就係重要證據。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "邊度可以下載Sold Note範本？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ESGov提供免費嘅Sold Note生成工具，你只要輸入交易資料，就會自動生成一份專業嘅Sold Note PDF。另外我哋都有Sold Note範本俾你下載。兩個都係免費嘅。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Navigation -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="https://esgov.org" class="flex items-center gap-2.5">
+        <img src="https://esgov.org/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" />
+        <span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+      </a>
+      <a href="https://esgov.org/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 返回網誌總覽</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+      <div class="flex flex-wrap items-center gap-2 text-sm text-gray-400 mb-4">
+        <a href="/" class="hover:text-gold transition-colors">Home</a>
+        <span>/</span>
+        <a href="/blog/" class="hover:text-gold transition-colors">網誌總覽</a>
+        <span>/</span>
+        <span class="text-gray-600">Sold Note 教學</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-4">
+        股份賣出單（Sold Note）完整教學 — 範本、填寫教學、常見錯誤
+      </h1>
+      <div class="flex items-center text-xs text-gray-400 gap-3">
+        <span>📅 2026.06.25</span>
+        <span>🏷️ Sold Note · 股份賣出單 · Bought Note · 股份轉讓 · 股份轉讓文件</span>
+      </div>
+    </div>
+    <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
+      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span class="ml-4">📅 最後更新：2026年6月</span>
+    </div>
+  </header>
+
+  <!-- Article -->
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="blog-content">
+
+      <!-- Quick Answer Box for AEO -->
+      <div class="bg-navy/5 border border-navy/10 rounded-xl p-6 mb-8">
+        <p class="text-navy font-bold text-lg mb-2">💡 Sold Note 係咩？</p>
+        <p class="text-gray-700"><strong>Sold Note（股份賣出單）</strong>係股份轉讓嘅基礎文件，記錄賣方同意出售、買方同意購入若干股份嘅交易細節。佢唔使提交俾政府部門，但係後續所有文件（包括Instrument of Transfer同印花稅申報）都要對應返Sold Note嘅內容。</p>
+        <p class="text-gray-700 mt-2">👉 直接用我哋嘅免費工具：<a href="/sold-note-generator/" class="text-gold hover:underline font-semibold">Sold Note 生成器</a> — 填幾項資料就自動生成PDF</p>
+      </div>
+
+      <p class="text-lg text-gray-500 mb-6 leading-relaxed">做股份轉讓嘅第一步，通常就係準備<strong>Sold Note（股份賣出單）</strong>。但好多人其實唔知呢份文件係做咩、點樣填、有咩要注意。我見過有人用錯範本、填錯資料，搞到之後嘅Instrument of Transfer要重新做過晒。呢篇文會由零開始，逐個欄目教你點填Sold Note，仲有真實範本俾你參考。</p>
+
+      <div class="tip-box">
+        <p class="text-sm"><strong>📌 免費工具：</strong> 想即刻生成一份專業Sold Note？用我哋嘅 <a href="/sold-note-generator/" class="text-gold hover:underline font-semibold">Sold Note 生成器</a>，只需輸入基本資料，即時生成PDF，免費下載 🆓</p>
+      </div>
+
+      <h3>逐項填寫指南</h3>
+
+      <p><strong>① 公司名稱同編號</strong> — 填寫有限公司嘅全名（英文名，同公司註冊證書一致），同埋公司編號。公司編號可以喺公司註冊處網站查冊得到。</p>
+
+      <p><strong>② 日期</strong> — 填寫雙方簽署呢份Sold Note嘅日期。注意：呢個日期會影響之後印花稅嘅2個工作天deadline計算。</p>
+
+      <p><strong>③ 賣方資料</strong> — 填寫賣方嘅全名（同身份證一樣）、身份證號碼或護照號碼、同通訊地址。如果賣方係公司（例如控股公司轉讓子公司股份），就填公司名同公司編號。</p>
+
+      <p><strong>④ 買方資料</strong> — 同上，填寫買方嘅全名、身份證號碼、地址。如果係多個買方，可以加行或者用附件形式列明。</p>
+
+      <p><strong>⑤ 股份數量</strong> — 填寫轉讓嘅股份數量。例如轉讓10,000股，就寫「10,000」。如果轉讓嘅係全部股份，可以寫「All the shares held by the Transferor in the Company」。</p>
+      <div class="warn-box">
+        <p><strong>⚠️ 注意：</strong>股份數量一定要準確。如果寫多咗或少咗，會直接影響之後嘅Instrument of Transfer同印花稅計算。簽名之前double check。</p>
+      </div>
+
+      <p><strong>⑥ 股份類別</strong> — 普通股寫「Ordinary Shares」，優先股寫「Preference Shares」。大部分香港有限公司得一種普通股。</p>
+
+      <p><strong>⑦ 每股作價同總代價</strong> — 每股幾錢同總共幾錢。呢兩個數字要自己計清楚，總代價 = 股份數量 × 每股作價。</p>
+
+      <p><strong>⑧ 雙方簽署</strong> — 賣方同買方分別簽名。建議有獨立見證人（唔係交易任何一方）見證簽署，雖然唔係強制，但日後有爭議時會有用。</p>
+
+      <!-- Section 4 -->
+      <h2 id="example">4. 真實範例參考</h2>
+
+      <p>等我用一個真實情況做例子，等你更容易理解：</p>
+
+      <div class="sample-box">
+        <p class="font-bold text-navy mb-2">📄 SOLD NOTE（股份賣出單）— 範例</p>
+        <p>公司名稱：ABC TRADING LIMITED 公司編號：1234567</p>
+        <p class="mt-2">日期：2026年6月20日</p>
+        <p class="mt-2">——————————————</p>
+        <p><strong>賣方（Transferor）：</strong></p>
+        <p>姓名：陳大文 CHAN TAI MAN</p>
+        <p>身份證號碼：A123456(7)</p>
+        <p>地址：香港九龍旺角彌敦道1號20樓</p>
+        <p class="mt-2"><strong>買方（Transferee）：</strong></p>
+        <p>姓名：李小雯 LEE SIU MAN</p>
+        <p>身份證號碼：B789012(3)</p>
+        <p>地址：香港銅鑼灣怡和街10號8樓</p>
+        <p class="mt-2">——————————————</p>
+        <p>本人（賣方）現確認出售以下股份予買方：</p>
+        <p>股份數量：10,000 股</p>
+        <p>股份類別：普通股（Ordinary Shares）</p>
+        <p>每股作價：HK$10.00</p>
+        <p>總代價：HK$100,000.00</p>
+        <p class="mt-2">——————————————</p>
+        <p>雙方確認上述交易條款屬實。</p>
+        <p class="mt-2">賣方簽署：陳大文 日期：20/6/2026</p>
+        <p>買方簽署：李小雯 日期：20/6/2026</p>
+        <p>見證人簽署：王小明 姓名：WONG SIU MING</p>
+      </div>
+
+      <p>以呢個範例為例，之後嘅厘印費計算係：$100,000 × 0.2% + $5 = $205。所以準備好Sold Note之後，下一步就要準備Instrument of Transfer同提交印花稅。</p>
+
+      <!-- Section 5 -->
+      <h2 id="mistakes">5. 常見錯誤（唔好中招）</h2>
+
+      <p>以下係我見過最常見嘅Sold Note錯誤，你千祈唔好犯：</p>
+
+      <div class="border-l-4 border-red-400 pl-4 py-2 mb-4">
+        <p class="font-bold text-navy">❌ 錯誤 1：Sold Note冇簽名</p>
+        <p class="text-sm text-gray-600 mt-1">最常見嘅錯誤！有人當Sold Note係普通備忘錄，寫完冇簽名。冇簽名嘅Sold Note法律效力好低，如果日後有爭議，好難證明雙方確實同意咗呢個交易。</p>
+      </div>
+
+      <div class="border-l-4 border-red-400 pl-4 py-2 mb-4">
+        <p class="font-bold text-navy">❌ 錯誤 2：股份數量同Instrument of Transfer唔一致</p>
+        <p class="text-sm text-gray-600 mt-1">Sold Note寫10,000股，但Instrument of Transfer寫10,001股。呢啲mistakes通常係因為手填時寫錯。稅局會打返轉頭，要你解釋點解數字唔夾。</p>
+      </div>
+
+      <div class="border-l-4 border-red-400 pl-4 py-2 mb-4">
+        <p class="font-bold text-navy">❌ 錯誤 3：用錯公司名</p>
+        <p class="text-sm text-gray-600 mt-1">公司名一定要同公司註冊證書嘅英文名完全一致，包括大小楷同標點符號。例如 "ABC TRADING LIMITED" 唔可以寫成 "ABC Trading Ltd"。</p>
+      </div>
+
+      <div class="border-l-4 border-red-400 pl-4 py-2 mb-4">
+        <p class="font-bold text-navy">❌ 錯誤 4：唔記得保留副本</p>
+        <p class="text-sm text-gray-600 mt-1">Sold Note簽完之後，賣方同買方各自要keep一份正本。我見過有人簽完之後唔見咗份Sold Note，幾年後稅局查數時搵唔到，搞到好麻煩。</p>
+      </div>
+
+      <div class="border-l-4 border-red-400 pl-4 py-2 mb-4">
+        <p class="font-bold text-navy">❌ 錯誤 5：Sold Note日期同Instrument of Transfer日期唔匹配</p>
+        <p class="text-sm text-gray-600 mt-1">Sold Note嘅簽署日期應該早於或等於Instrument of Transfer嘅簽署日期。如果Instrument of Transfer日期早過Sold Note，邏輯上唔合理，稅局可能會質疑。</p>
+      </div>
+
+
+      <!-- Section 6 -->
+      <h2 id="generator">6. 免費Sold Note生成工具</h2>
+
+      <p>明白嘅，自己由零填寫Sold Note始終有啲麻煩。所以我特登整咗個<strong>免費Sold Note生成工具</strong>，你只要填幾個資料，就會自動幫你生成一份完整嘅Sold Note PDF。</p>
+
+      <div class="bg-navy/5 border border-navy/10 rounded-xl p-6 mb-6">
+        <p class="font-bold text-navy text-lg mb-3">🛠️ <a href="/sold-note-generator/" class="text-gold hover:underline">Sold Note 生成器</a></p>
+        <ul class="text-sm space-y-2">
+          <li>✅ 輸入公司名、雙方資料、股份數量同價錢</li>
+          <li>✅ 自動生成專業格式嘅Sold Note PDF</li>
+          <li>✅ 直接下載，免費使用</li>
+          <li>✅ 唔使註冊，唔使俾錢</li>
+        </ul>
+        <a href="/sold-note-generator/" class="inline-block mt-4 bg-navy text-white px-6 py-3 rounded-xl font-semibold hover:bg-navy-light transition-colors">🚀 立即使用 Sold Note 生成器</a>
+      </div>
+
+      <p>除咗Sold Note，我哋仲有埋<strong>Instrument of Transfer生成器</strong>同<strong>Letter of Transferee生成器</strong>，幫你一站式搞掂晒所有股份轉讓文件：</p>
+      <ul>
+        <li><a href="/instrument-transfer-generator/" class="text-gold hover:underline">📄 Instrument of Transfer 生成器</a> — 股份轉讓書自動生成</li>
+        <li><a href="/letter-of-transferee-generator/" class="text-gold hover:underline">📄 Letter of Transferee 生成器</a> — 承讓人確認信</li>
+        <li><a href="/share-transfer/" class="text-gold hover:underline">📋 股份轉讓完整指南</a> — 由頭到尾嘅Step-by-step</li>
+      </ul>
+
+      <div class="tip-box">
+        <p><strong>💡 建議工作流程：</strong></p>
+        <ol class="text-sm mt-2">
+          <li>先用Sold Note生成器製作賣出單 → 雙方簽署</li>
+          <li>再用Instrument of Transfer生成器製作轉讓書 → 雙方簽署</li>
+          <li>最後用Letter of Transferee生成器製作承讓人確認信</li>
+          <li>提交印花稅（厘印費）→ 完成股份轉讓</li>
+        </ol>
+        <p class="text-sm mt-2">成個流程唔使2小時，慳返$1,000-$3,000會計費。</p>
+      </div>
+
+      <!-- FAQ Section -->
+      <h2 id="faq" class="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6">常見問題（FAQ）</h2>
+
+      <div class="bg-white rounded-xl border border-gray-200 divide-y divide-gray-200 mb-8">
+        <div class="p-6">
+          <p class="font-bold text-navy text-lg mb-2">Q: Sold Note要唔要用英文寫？</p>
+          <p class="text-gray-700">香港公司嘅法定語言係英文，所以建議Sold Note用英文填寫（特別係公司名、股份類別等）。但係雙方資料可以用中文，只要同身份證一致就得。最穩陣係中英文對照。</p>
+        </div>
+        <div class="p-6">
+          <p class="font-bold text-navy text-lg mb-2">Q: Sold Note同Contract Note有咩分別？</p>
+          <p class="text-gray-700">其實係同一樣嘢嚟嘅。「Contract Note」係比較正式嘅叫法，常用於證券交易。香港私人有限公司嘅股份轉讓，一般都叫「Sold Note」或者「Bought Note」，本質上係一樣嘅。</p>
+        </div>
+        <div class="p-6">
+          <p class="font-bold text-navy text-lg mb-2">Q: 如果賣方係公司（法人），Sold Note點簽？</p>
+          <p class="text-gray-700">如果賣方係一間公司，就要由該公司嘅授權代表簽署（通常係董事或公司秘書），而且要蓋上公司印章（Company Chop）。最好附上董事會決議授權該代表簽署呢份Sold Note。</p>
+        </div>
+        <div class="p-6">
+          <p class="font-bold text-navy text-lg mb-2">Q: 網上Sold Note範本信得過嗎？</p>
+          <p class="text-gray-700">大部分網上範本都係可靠嘅，但你要確保個範本係for香港有限公司用嘅，唔好用錯海外公司嘅格式。ESGov提供嘅範本係根據香港《公司條例》同市場慣例編寫嘅，你可以放心使用。</p>
+        </div>
+        <div class="p-6">
+          <p class="font-bold text-navy text-lg mb-2">Q: 可唔可以冇Sold Note直接做股份轉讓？</p>
+          <p class="text-gray-700">法律上冇明文規定一定要有Sold Note先做到股份轉讓。但係實務上，冇Sold Note就好似冇買賣合約咁 — 你仍然可以完成交易，但風險好大。強烈建議至少準備一份簡單嘅Sold Note，保障雙方權益。</p>
+        </div>
+        <div class="p-6">
+          <p class="font-bold text-navy text-lg mb-2">Q: Sold Note同股票轉讓書（Stock Transfer Form）有咩關係？</p>
+          <p class="text-gray-700">Sold Note係交易協議，Stock Transfer Form（即係Instrument of Transfer）係執行文件。先有Sold Note確認交易條款，再有Stock Transfer Form去實際轉讓股份。兩者係前後關係，唔係同一份文件。</p>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="bg-navy text-white rounded-2xl p-8 sm:p-10 text-center mt-10 mb-8">
+        <p class="text-gold text-sm font-semibold tracking-widest uppercase mb-2">🛠️ 免費工具</p>
+        <h3 class="text-2xl font-bold mb-3">準備好製作你嘅Sold Note未？</h3>
+        <p class="text-gray-300 mb-6 max-w-md mx-auto">
+          用我哋嘅免費生成器，幾分鐘就搞掂一份專業Sold Note。
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="/sold-note-generator/" class="inline-flex items-center gap-2 bg-white text-navy font-semibold px-6 py-3 rounded-xl hover:bg-gold transition-colors">
+            📝 製作Sold Note →
+          </a>
+          <a href="/share-transfer/" class="inline-flex items-center gap-2 border-2 border-gold/40 text-gold font-semibold px-6 py-3 rounded-xl hover:bg-gold/10 transition-colors">
+            📋 睇股份轉讓完整指南 →
+          </a>
+        </div>
+      </div>
+
+      <!-- 📚 相關指南 -->
+      <div class="bg-navy/5 border border-navy/10 rounded-xl p-6 mt-8 mb-8">
+        <h3 class="text-lg font-bold text-navy mb-4 flex items-center gap-2">
+          <span>📚</span> 相關指南
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="/blog/香港公司股份轉讓費用指南2026.html" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">
+            💰 香港公司股份轉讓費用完整指南 2026
+          </a>
+          <a href="/blog/香港公司股份轉讓流程2026.html" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">
+            📋 香港有限公司股份轉讓完整流程 2026
+          </a>
+          <a href="/blog/香港公司股份證明書ShareCertificate終極指南.html" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">
+            📄 香港公司股份證明書終極指南
+          </a>
+          <a href="/blog/香港有限公司公司轉讓賣公司終極指南.html" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">
+            🏢 香港有限公司公司轉讓終極指南
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="bg-navy text-white py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-400">
+      <p>© 2026 ESGov. 由真實經歷者整理，實戰經驗分享。</p>
+      <p class="mt-1">本網站內容僅供參考，不構成專業意見。如有需要請諮詢合資格專業人士。</p>
+    </div>
+  </footer>
+
+</body>
+</html>
