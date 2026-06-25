@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 章程檢查清單 — Articles of Association 檢查表</title>
+  <meta name="description" content="香港公司組織章程細則（Articles of Association）互動檢查清單。檢查 Pre-emption Rights、e-Services Portal、Right of First Refusal 條文、股份類別限制等關鍵條款。一鍵得出 Clear / Needs Attention 結果，幫你快速確認章程係咪適合股份轉讓。完全免費。" />
+  <meta property="og:title" content="ESGov | 章程檢查清單 — Articles of Association 檢查表" />
+  <meta property="og:description" content="互動檢查清單，檢查 Pre-emption Rights、e-Services Portal、Right of First Refusal 條文、股份類別限制等關鍵條款。一鍵得出 Clear / Needs Attention 結果。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/articles-check-tool" />
+  <meta property="og:url" content="https://esgov.org/articles-check-tool" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "章程檢查清單 — Articles of Association 檢查表",
+    "description": "香港公司組織章程細則（Articles of Association）互動檢查清單。檢查 Pre-emption Rights、e-Services Portal、Right of First Refusal 條文、股份類別限制等關鍵條款。",
+    "url": "https://esgov.org/articles-check-tool"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "股份轉讓文件",
+      "item": "https://esgov.org/share-transfer"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "章程檢查清單",
+      "item": "https://esgov.org/articles-check-tool"
+    }
+  ]
+}
+  </script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <nav class="bg-navy text-white sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/share-transfer/" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回轉讓資源</a>
+    </div>
+  </nav>
+
+  <div class="max-w-4xl mx-auto px-4 py-6">
+
+    <!-- Trust Banner -->
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
+      📋 逐項檢查章程條款 → 睇清邊啲條文需要關注
+    </div>
+
+    <!-- 工具說明 -->
+    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
+      <div class="flex items-start gap-3 mb-3">
+        <span class="text-lg mt-0.5 shrink-0">📜</span>
+        <div>
+          <p class="font-semibold text-navy text-sm">組織章程細則（Articles of Association）檢查清單</p>
+          <p class="text-xs text-gray-500 mt-0.5">做股份轉讓前，先確認章程有冇限制性或特別條款</p>
+        </div>
+      </div>
+      <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 sm:p-4">
+        <h4 class="font-semibold text-blue-700 text-xs mb-2 flex items-center gap-1">💡 點樣用</h4>
+        <ul class="text-xs text-gray-700 space-y-1.5">
+          <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5 shrink-0">•</span>攞出公司嘅 Articles of Association（章程）</li>
+          <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5 shrink-0">•</span>逐項睇下有冇相關條文，然後㩒「有 ✅」或「冇 ❌」</li>
+          <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5 shrink-0">•</span>全部揀完之後，系統會俾你一個整體結果</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ═══════ 檢查清單 ═══════ -->
+    <div class="bg-white shadow-xl border border-gray-300 mx-auto rounded-xl overflow-hidden" style="max-width:600px;">
+      <div class="bg-navy text-white py-3 px-6 text-center">
+        <h1 class="sr-only">章程檢查清單 — ESGov</h1>
+        <div class="text-lg font-bold text-gold">ARTICLES CHECKLIST</div>
+        <p class="text-xs text-gray-400">組織章程細則檢查清單</p>
+      </div>
+      <div class="p-6 sm:p-8">
+
+        <p class="text-sm font-semibold text-navy mb-4">請檢查你公司嘅 Articles of Association，確認以下條文係咪存在：</p>
+
+        <!-- 檢查項目列表 -->
+        <div class="space-y-3" id="checklistItems">
+
+          <!-- Item 1: Pre-emption Rights -->
+          <div class="check-item border border-gray-200 rounded-xl p-4" data-id="item1">
+            <div class="flex items-start gap-3">
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-semibold text-navy">Pre-emption Rights（優先購買權）</p>
+                <p class="text-xs text-gray-500 mt-0.5">章程有冇規定現有股東有優先購買權？如有，轉讓前需先向現有股東發 offer</p>
+              </div>
+              <div class="flex gap-1.5 shrink-0">
+                <button onclick="setAnswer('item1', true)" class="ans-btn ans-yes px-3 py-1.5 text-xs font-bold rounded-lg border-2 transition border-gray-200 text-gray-400 hover:border-green-400 hover:text-green-600">有 ✅</button>
+                <button onclick="setAnswer('item1', false)" class="ans-btn ans-no px-3 py-1.5 text-xs font-bold rounded-lg border-2 transition border-gray-200 text-gray-400 hover:border-red-400 hover:text-red-600">冇 ❌</button>
+              </div>
+            </div>
+            <div class="mt-2 result-indicator hidden"></div>
+          </div>
+
+          <!-- Item 2: e-Services Portal -->
+          <div class="check-item border border-gray-200 rounded-xl p-4" data-id="item2">
+            <div class="flex items-start gap-3">
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-semibold text-navy">e-Services Portal 相關條文</p>
+                <p class="text-xs text-gray-500 mt-0.5">章程有冇授權公司使用電子方式處理股東登記或通訊？影響後續 filing 效率</p>
+              </div>
+              <div class="flex gap-1.5 shrink-0">
+                <button onclick="setAnswer('item2', true)" class="ans-btn ans-yes px-3 py-1.5 text-xs font-bold rounded-lg border-2 transition border-gray-200 text-gray-400 hover:border-green-400 hover:text-green-600">有 ✅</button>
+                <button onclick="setAnswer('item2', false)" class="ans-btn ans-no px-3 py-1.5 text-xs font-bold rounded-lg border-2 transition border-gray-200 text-gray-400 hover:border-red-400 hover:text-red-600">冇 ❌</button>
+              </div>
+            </div>
+            <div class="mt-2 result-indicator hidden"></div>
+          </div>
+
+          <!-- Item 3: Right of First Refusal -->
+          <div class="check-item border border-gray-200 rounded-xl p-4" data-id="item3">
+            <div class="flex items-start gap-3">
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-semibold text-navy">"Right of First Refusal" 字眼</p>
+                <p class="text-xs text-gray-500 mt-0.5">章程有冇寫明「First Refusal」條款？如有，股東出售股份前必須先問其他股東係咪想買</p>
+              </div>
+              <div class="flex gap-1.5 shrink-0">
+                <button onclick="setAnswer('item3', true)" class="ans-btn ans-yes px-3 py-1.5 text-xs font-bold rounded-lg border-2 transition border-gray-200 text-gray-400 hover:border-green-400 hover:text-green-600">有 ✅</button>
+                <button onclick="setAnswer('item3', false)" class="ans-btn ans-no px-3 py-1.5 text-xs font-bold rounded-lg border-2 transition border-gray-200 text-gray-400 hover:border-red-400 hover:text-red-600">冇 ❌</button>
+              </div>
+            </div>
+            <div class="mt-2 result-indicator hidden"></div>
+          </div>
+
+          <!-- Item 4: Share Class Restrictions -->
+          <div class="check-item border border-gray-200 rounded-xl p-4" data-id="item4">
+            <div class="flex items-start gap-3">
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-semibold text-navy">股份類別限制（Share Class Restrictions）</p>
+                <p class="text-xs text-gray-500 mt-0.5">章程有冇限制某類股份嘅轉讓？例如普通股同優先股有唔同轉讓規則</p>
+              </div>
+              <div class="flex gap-1.5 shrink-0">
+                <button onclick="setAnswer('item4', true)" class="ans-btn ans-yes px-3 py-1.5 text-xs font-bold rounded-lg border-2 transition border-gray-200 text-gray-400 hover:border-green-400 hover:text-green-600">有 ✅</button>
+                <button onclick="setAnswer('item4', false)" class="ans-btn ans-no px-3 py-1.5 text-xs font-bold rounded-lg border-2 transition border-gray-200 text-gray-400 hover:border-red-400 hover:text-red-600">冇 ❌</button>
+              </div>
+            </div>
+            <div class="mt-2 result-indicator hidden"></div>
+          </div>
+
+        </div>
+
+        <!-- 整體結果 -->
+        <div id="overallResult" class="mt-6 hidden">
+          <div class="border-t-2 border-dashed border-gray-300 pt-5">
+            <div id="resultCard" class="rounded-xl p-4 text-center">
+              <!-- 由 JS 動態填入 -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 重設 -->
+        <div class="mt-4">
+          <button onclick="resetAll()" class="w-full bg-gray-200 text-gray-600 font-semibold py-2.5 rounded-xl hover:bg-gray-300 transition text-sm">
+            🔄 重新檢查
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 返回 -->
+    <div class="text-center mt-4">
+      <a href="/share-transfer/"
+         class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+        ← 返回股份轉讓資源
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // ===== 答案狀態 =====
+    const answers = {};
+
+    // ===== 設定答案 =====
+    function setAnswer(id, value) {
+      answers[id] = value;
+      const item = document.querySelector('.check-item[data-id="' + id + '"]');
+      const btns = item.querySelectorAll('.ans-btn');
+      const indicator = item.querySelector('.result-indicator');
+
+      // 更新按鈕樣式
+      btns.forEach(btn => {
+        btn.classList.remove('border-green-500', 'text-green-600', 'bg-green-50', 'border-red-500', 'text-red-600', 'bg-red-50');
+        btn.classList.add('border-gray-200', 'text-gray-400');
+      });
+
+      if (value === true) {
+        btns[0].classList.remove('border-gray-200', 'text-gray-400');
+        btns[0].classList.add('border-green-500', 'text-green-600', 'bg-green-50');
+        // 顯示 clear 標記
+        indicator.className = 'mt-2 result-indicator flex items-center gap-1.5 text-xs text-green-600';
+        indicator.innerHTML = '<span class="w-2 h-2 rounded-full bg-green-500"></span> Clear — 章程有包含此條文，請留意操作流程';
+      } else {
+        btns[1].classList.remove('border-gray-200', 'text-gray-400');
+        btns[1].classList.add('border-red-500', 'text-red-600', 'bg-red-50');
+        // 顯示 needs attention
+        indicator.className = 'mt-2 result-indicator flex items-center gap-1.5 text-xs text-amber-600';
+        indicator.innerHTML = '<span class="w-2 h-2 rounded-full bg-amber-500"></span> Needs Attention — 章程冇相關條文，建議諮詢公司秘書';
+      }
+
+      updateOverall();
+    }
+
+    // ===== 更新整體結果 =====
+    function updateOverall() {
+      const total = Object.keys(answers).length;
+      const resultDiv = document.getElementById('overallResult');
+      const resultCard = document.getElementById('resultCard');
+
+      if (total === 0) {
+        resultDiv.classList.add('hidden');
+        return;
+      }
+
+      resultDiv.classList.remove('hidden');
+
+      const allClear = Object.values(answers).every(v => v === true);
+      const allNeedsAttention = Object.values(answers).every(v => v === false);
+      const someMixed = !allClear && !allNeedsAttention;
+
+      if (allClear) {
+        resultCard.className = 'rounded-xl p-4 text-center bg-green-50 border border-green-200';
+        resultCard.innerHTML = `
+          <p class="text-2xl mb-1">✅</p>
+          <p class="text-sm font-bold text-green-700">全部 Clear！</p>
+          <p class="text-xs text-green-600 mt-1">你公司嘅 Articles of Association 已涵蓋所有檢查項目。<br/>請按相關條文執行股份轉讓程序。</p>
+        `;
+      } else if (allNeedsAttention) {
+        resultCard.className = 'rounded-xl p-4 text-center bg-red-50 border border-red-200';
+        resultCard.innerHTML = `
+          <p class="text-2xl mb-1">⚠️</p>
+          <p class="text-sm font-bold text-red-700">全部 Needs Attention</p>
+          <p class="text-xs text-red-600 mt-1">你公司嘅 Articles of Association 完全冇相關條文。<br/>強烈建議先諮詢公司秘書或律師再進行轉讓。</p>
+        `;
+      } else {
+        // Mixed
+        const clearCount = Object.values(answers).filter(v => v === true).length;
+        resultCard.className = 'rounded-xl p-4 text-center bg-amber-50 border border-amber-200';
+        resultCard.innerHTML = `
+          <p class="text-2xl mb-1">📋</p>
+          <p class="text-sm font-bold text-amber-700">部分項目需要關注</p>
+          <p class="text-xs text-amber-600 mt-1">${clearCount}/${total} 項已確認 Clear，其餘項目建議進一步查閱章程或諮詢專業意見。</p>
+        `;
+      }
+    }
+
+    // ===== 重設全部 =====
+    function resetAll() {
+      // Clear answers
+      Object.keys(answers).forEach(k => delete answers[k]);
+
+      // Reset UI
+      document.querySelectorAll('.check-item').forEach(item => {
+        const btns = item.querySelectorAll('.ans-btn');
+        btns.forEach(btn => {
+          btn.classList.remove('border-green-500', 'text-green-600', 'bg-green-50', 'border-red-500', 'text-red-600', 'bg-red-50');
+          btn.classList.add('border-gray-200', 'text-gray-400');
+        });
+        const indicator = item.querySelector('.result-indicator');
+        indicator.className = 'mt-2 result-indicator hidden';
+        indicator.innerHTML = '';
+      });
+
+      document.getElementById('overallResult').classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>

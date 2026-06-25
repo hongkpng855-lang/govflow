@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 印花稅計算器 — 股份轉讓印花稅即時計</title>
+  <meta name="description" content="香港公司股份轉讓印花稅計算器。輸入轉讓價，即時計出卖方印花稅（0.1%）、買方印花稅（0.1%）及合共應繳印花稅（0.2%+$5）。附逾期罰款警告（2個月內未繳罰10倍）。完全免費，唔使 Excel。適合中小企東主同公司秘書使用。" />
+  <meta property="og:title" content="ESGov | 印花稅計算器 — 股份轉讓印花稅即時計" />
+  <meta property="og:description" content="輸入轉讓價，即時計出卖方印花稅（0.1%）、買方印花稅（0.1%）及合共應繳印花稅（0.2%+$5）。附逾期罰款警告。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' }, gold: { DEFAULT: '#C9A84C', light: '#E8D48B' } }, fontFamily: { sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/stamp-duty-calculator" />
+  <meta property="og:url" content="https://esgov.org/stamp-duty-calculator" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "印花稅計算器 — 股份轉讓印花稅即時計",
+    "description": "香港公司股份轉讓印花稅計算器。輸入轉讓價，即時計出卖方印花稅（0.1%）、買方印花稅（0.1%）及合共應繳印花稅（0.2%+$5）。",
+    "url": "https://esgov.org/stamp-duty-calculator"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "股份轉讓文件",
+      "item": "https://esgov.org/share-transfer"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "印花稅計算器",
+      "item": "https://esgov.org/stamp-duty-calculator"
+    }
+  ]
+}
+  </script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <nav class="bg-navy text-white sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/share-transfer/" class="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white font-semibold px-3 py-1.5 rounded-xl border border-white/20 hover:border-gold/50 hover:bg-white/5 transition-all duration-200">← 返回轉讓資源</a>
+    </div>
+  </nav>
+
+  <div class="max-w-4xl mx-auto px-4 py-6">
+
+    <!-- Trust Banner -->
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
+      💰 輸入轉讓價 → 即時計出印花稅金額
+    </div>
+
+    <!-- 工具說明 -->
+    <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
+      <div class="flex items-start gap-3 mb-3">
+        <span class="text-lg mt-0.5 shrink-0">🧮</span>
+        <div>
+          <p class="font-semibold text-navy text-sm">印花稅計算器</p>
+          <p class="text-xs text-gray-500 mt-0.5">香港股份轉讓印花稅（Stamp Duty）即時計算 — 按《印花稅條例》第117章</p>
+        </div>
+      </div>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 sm:p-4">
+        <h4 class="font-semibold text-amber-700 text-xs mb-2 flex items-center gap-1">📌 稅率概要</h4>
+        <ul class="text-xs text-gray-700 space-y-1.5">
+          <li class="flex items-start gap-2"><span class="text-amber-500 mt-0.5 shrink-0">•</span><strong>賣方（轉讓人）：</strong>轉讓價嘅 0.1%（每 $1,000 收 $1）</li>
+          <li class="flex items-start gap-2"><span class="text-amber-500 mt-0.5 shrink-0">•</span><strong>買方（承讓人）：</strong>轉讓價嘅 0.1%（每 $1,000 收 $1）</li>
+          <li class="flex items-start gap-2"><span class="text-amber-500 mt-0.5 shrink-0">•</span><strong>合共：</strong>轉讓價嘅 0.2% + $5 定額印花稅</li>
+          <li class="flex items-start gap-2"><span class="text-amber-500 mt-0.5 shrink-0">•</span><strong>計算公式：</strong>轉讓價 × 0.002 + $5</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ⚠️ 逾期警告 -->
+    <div class="mb-4 bg-red-50 border border-red-200 rounded-xl p-3 sm:p-4">
+      <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 重要提醒：逾期罰款</h4>
+      <ul class="text-xs text-gray-700 space-y-1.5">
+        <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>印花稅須喺簽署轉讓書後 <strong>2 個月內</strong> 繳交</li>
+        <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>逾期未繳 — 罰款可高達 <strong>應繳稅額嘅 10 倍</strong></li>
+        <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>如果逾期超過 1 個月，除咗罰款之外仲可能要加利息</li>
+        <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>建議喺簽署轉讓書後 <strong>立即</strong> 處理，唔好等到 deadline</li>
+      </ul>
+    </div>
+
+    <!-- ═══════ 計算器表單 ═══════ -->
+    <div class="bg-white shadow-xl border border-gray-300 mx-auto rounded-xl overflow-hidden" style="max-width:600px;">
+      <div class="bg-navy text-white py-3 px-6 text-center">
+        <h1 class="sr-only">印花稅計算器 — ESGov</h1>
+        <div class="text-lg font-bold text-gold">STAMP DUTY CALCULATOR</div>
+        <p class="text-xs text-gray-400">股份轉讓印花稅計算器</p>
+      </div>
+      <div class="p-6 sm:p-8">
+
+        <!-- 輸入轉讓價 -->
+        <div class="mb-6">
+          <label for="transferPrice" class="block text-sm font-bold text-navy mb-2">轉讓價 (HK$)</label>
+          <div class="relative">
+            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 font-semibold text-sm">HK$</span>
+            <input type="number" id="transferPrice" value="100000"
+                   min="0" step="1000"
+                   class="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl text-lg font-bold text-navy focus:border-gold focus:ring-4 focus:ring-gold/10 transition outline-none" />
+          </div>
+          <p class="text-xs text-gray-400 mt-1.5">輸入股份轉讓嘅總代價金額</p>
+        </div>
+
+        <!-- 計算結果 -->
+        <div class="bg-gray-50 rounded-xl border border-gray-200 divide-y divide-gray-200">
+          <!-- 賣方 -->
+          <div class="flex items-center justify-between px-5 py-4">
+            <div>
+              <p class="text-sm font-semibold text-gray-700">賣方印花稅（0.1%）</p>
+              <p class="text-xs text-gray-400">轉讓人（Transferor）支付</p>
+            </div>
+            <p class="text-xl font-bold text-navy" id="sellerDuty">$100</p>
+          </div>
+          <!-- 買方 -->
+          <div class="flex items-center justify-between px-5 py-4">
+            <div>
+              <p class="text-sm font-semibold text-gray-700">買方印花稅（0.1%）</p>
+              <p class="text-xs text-gray-400">承讓人（Transferee）支付</p>
+            </div>
+            <p class="text-xl font-bold text-navy" id="buyerDuty">$100</p>
+          </div>
+          <!-- 定額 -->
+          <div class="flex items-center justify-between px-5 py-4">
+            <div>
+              <p class="text-sm font-semibold text-gray-700">定額印花稅</p>
+              <p class="text-xs text-gray-400">每份轉讓書劃一收費</p>
+            </div>
+            <p class="text-xl font-bold text-navy">$5</p>
+          </div>
+          <!-- 合共 -->
+          <div class="flex items-center justify-between px-5 py-4 bg-navy/5 rounded-b-xl">
+            <div>
+              <p class="text-sm font-bold text-navy">合共應繳印花稅</p>
+              <p class="text-xs text-gray-400">總額＝ 0.2% × 轉讓價 + $5</p>
+            </div>
+            <p class="text-2xl font-bold text-gold" id="totalDuty">$205</p>
+          </div>
+        </div>
+
+        <!-- 詳細算式 -->
+        <div class="mt-4 bg-amber-50 border border-amber-100 rounded-xl px-4 py-3">
+          <p class="text-xs font-semibold text-amber-800 mb-1">📐 算式明細</p>
+          <p class="text-xs text-gray-600 leading-relaxed" id="formulaDetail">
+            $100,000 × 0.002 + $5 = $200 + $5 = $205
+          </p>
+        </div>
+
+        <!-- 一按複製 -->
+        <div class="mt-4 flex gap-2">
+          <button onclick="copyResult()" class="flex-1 bg-navy text-white font-bold py-3 px-4 rounded-xl hover:bg-navy-light transition shadow text-sm flex items-center justify-center gap-2">
+            📋 複製結果
+          </button>
+          <button onclick="resetCalc()" class="flex-none bg-gray-200 text-gray-600 font-semibold py-3 px-4 rounded-xl hover:bg-gray-300 transition text-sm">
+            🔄 重設
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 返回 -->
+    <div class="text-center mt-4">
+      <a href="/share-transfer/"
+         class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+        ← 返回股份轉讓資源
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // ===== 格式化數字 =====
+    function formatMoney(n) {
+      return '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+    }
+
+    // ===== 計算 =====
+    function calculate() {
+      const input = document.getElementById('transferPrice');
+      let price = parseFloat(input.value) || 0;
+      if (price < 0) price = 0;
+
+      const sellerDuty = price * 0.001;
+      const buyerDuty = price * 0.001;
+      const fixedDuty = 5;
+      const totalDuty = price * 0.002 + fixedDuty;
+
+      document.getElementById('sellerDuty').textContent = formatMoney(sellerDuty);
+      document.getElementById('buyerDuty').textContent = formatMoney(buyerDuty);
+      document.getElementById('totalDuty').textContent = formatMoney(totalDuty);
+
+      // 算式明細
+      const formattedPrice = Number(price).toLocaleString('en-US');
+      const pctVal = (price * 0.002).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+      document.getElementById('formulaDetail').textContent =
+        formattedPrice + ' × 0.002 + $5 = $' + pctVal + ' + $5 = ' + formatMoney(totalDuty);
+    }
+
+    // ===== 複製結果 =====
+    function copyResult() {
+      const price = document.getElementById('transferPrice').value || '0';
+      const sellerDuty = document.getElementById('sellerDuty').textContent;
+      const buyerDuty = document.getElementById('buyerDuty').textContent;
+      const totalDuty = document.getElementById('totalDuty').textContent;
+
+      const text = '📊 ESGov 印花稅計算結果\n' +
+        '轉讓價：HK$' + Number(price).toLocaleString('en-US') + '\n' +
+        '賣方印花稅（0.1%）：' + sellerDuty + '\n' +
+        '買方印花稅（0.1%）：' + buyerDuty + '\n' +
+        '定額印花稅：$5\n' +
+        '合共應繳：' + totalDuty + '\n\n' +
+        '⚠️ 須喺簽署轉讓書後 2 個月內繳交，逾期罰款可達 10 倍';
+
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('[onclick="copyResult()"]');
+        const orig = btn.innerHTML;
+        btn.innerHTML = '✅ 已複製！';
+        setTimeout(() => { btn.innerHTML = orig; }, 2000);
+      }).catch(() => {
+        // fallback
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        const btn = document.querySelector('[onclick="copyResult()"]');
+        const orig = btn.innerHTML;
+        btn.innerHTML = '✅ 已複製！';
+        setTimeout(() => { btn.innerHTML = orig; }, 2000);
+      });
+    }
+
+    // ===== 重設 =====
+    function resetCalc() {
+      document.getElementById('transferPrice').value = '100000';
+      calculate();
+    }
+
+    // ===== 即時更新 =====
+    document.addEventListener('DOMContentLoaded', function() {
+      calculate();
+      document.getElementById('transferPrice').addEventListener('input', calculate);
+    });
+  </script>
+
+</body>
+</html>

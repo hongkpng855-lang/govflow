@@ -31,6 +31,9 @@ PRIORITY = {
     '/deregistration-ir1263-generator/': 0.8,
     '/deregistration-ndr1-generator/': 0.8,
     '/deregistration-irc3113-generator/': 0.8,
+    '/stamp-duty-calculator/': 0.8,
+    '/articles-check-tool/': 0.8,
+    '/post-transfer-checklist/': 0.8,
 }
 
 urlset = Element('urlset', xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')

@@ -60,6 +60,9 @@ SED_FILES=(
   sold-note-generator/index.html
   instrument-transfer-generator/index.html
   letter-of-transferee-generator/index.html
+  stamp-duty-calculator/index.html
+  articles-check-tool/index.html
+  post-transfer-checklist/index.html
   nar1-generator/index.html
   nsc1-generator/index.html
   audit-report-generator/index.html
