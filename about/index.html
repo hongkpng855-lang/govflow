@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>關於 ESGov — 香港公司秘書真實經驗分享平台</title>
+  <meta name="description" content="ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。全部免費公開，所有內容都係真實經驗分享，幫香港 SME 東主自己搞掂公司文件，唔使俾會計公司賺幾千蚊。" />
+  <meta property="og:title" content="關於 ESGov — 香港公司秘書真實經驗分享平台" />
+  <meta property="og:description" content="ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。全部免費公開，所有內容都係真實經驗分享，幫香港 SME 東主自己搞掂公司文件。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/about/" />
+  <link rel="canonical" href="https://esgov.org/about/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script defer src="/assets/js/app.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首頁",
+        "item": "https://esgov.org"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "關於 ESGov",
+        "item": "https://esgov.org/about/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- WebPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "關於 ESGov — 香港公司秘書真實經驗分享平台",
+    "description": "ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。全部免費公開，所有內容都係真實經驗分享，幫香港 SME 東主自己搞掂公司文件。",
+    "url": "https://esgov.org/about/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "ESGov"
+    }
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "ESGov 係咩平台？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ESGov 係一個免費嘅香港公司秘書文件指南平台，由一位親身經歷過香港公司文件流程嘅創業者建立。我哋提供 step-by-step 嘅文件教學、真實範例對照、可編輯 Word 模板同埋線上 PDF 生成工具，幫 SME 東主自己搞掂公司文件，唔使俾會計公司賺幾千蚊。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ESGov 嘅內容係咪真係免費？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "係，所有內容同工具都係完全免費公開。我哋唔收會員費、唔收下載費。如果你覺得有用，可以請我飲杯咖啡支持下，但絕對唔強制。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ESGov 嘅內容由邊個寫？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ESGov 嘅所有內容都由一位親身經歷過香港公司秘書文件流程嘅創業者撰寫。每一篇指南都係基於真實處理經驗整理，唔係 copy and paste 政府官網嘅資訊。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ESGov 嘅內容準確嗎？可以信賴嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ESGov 嘅內容全部嚟自真實處理經驗同公開嘅政府資訊。我哋會定期更新以反映最新嘅法規同費用變動。但請注意，本網站內容僅供參考，唔構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "點解 ESGov 要免費公開呢啲資訊？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "因為我哋親身經歷過 SME 東主面對文件流程嘅無奈同困難。會計公司收費幾千蚊做嘅嘢，其實好多都可以自己搞掂。我哋希望透過分享真實經驗，幫其他香港創業者慳錢慳時間，專注做好自己嘅生意。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "我可以點樣支持 ESGov？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "如果你覺得 ESGov 嘅內容對你有用，你可以（1）請我飲杯咖啡（buymeacoffee.com/esgov），（2）分享個網站俾同樣需要嘅朋友，（3）如果有任何建議或者想補充嘅內容，歡迎 email 聯絡我哋。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ═══════════════ Navigation ═══════════════ -->
+  <nav class="bg-navy text-white sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+        <div class="text-sm text-gray-400 tracking-tight">關於我哋</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ Hero ═══════════════ -->
+  <section class="bg-navy text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+          關於 <span class="text-gold">ESGov</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-300 leading-relaxed">
+          香港公司秘書文件真實經驗分享平台 — <span class="text-gold font-semibold">全部免費公開</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ Main Content ═══════════════ -->
+  <section class="py-12 sm:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Author Photo Placeholder -->
+      <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-10">
+        <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gold/20 flex items-center justify-center shrink-0 border-2 border-gold/30">
+          <span class="text-5xl">👤</span>
+        </div>
+        <div class="text-center sm:text-left">
+          <h2 class="text-2xl font-bold text-navy mb-2">創辦人嘅故事</h2>
+          <p class="text-gray-500 text-sm">一位親身經歷過香港公司秘書文件流程嘅創業者</p>
+        </div>
+      </div>
+
+      <!-- Story Content -->
+      <div class="space-y-6 text-gray-600 leading-relaxed">
+
+        <div class="bg-amber-50 border-l-4 border-gold rounded-r-xl p-5">
+          <p class="text-amber-800 font-semibold">💡 全部免費 · 真實經歷 · 幫到一個得一個</p>
+        </div>
+
+        <h3 class="text-xl font-bold text-navy mt-8">點解會有 ESGov？</h3>
+
+        <p>
+          2025 年，我一個人開咗自己第一間香港有限公司。開公司本身好簡單，網上搞一個鐘搞掂。但我好快就發現，麻煩嘅嘢喺後頭——股份轉讓、商業登記變更、公司秘書辭任、審計報稅、董事變更……每一樣都涉及一大堆政府表格同文件。
+        </p>
+
+        <p>
+          我試過搵會計公司幫手，報價嚇親人：一份股份轉讓文件要收我 $1,000+，公司秘書辭任又收 $800，改個公司名又話要 $500。對於一個 single founder 嚟講，呢啲費用加埋真係唔講得笑。
+        </p>
+
+        <p>
+          於是我開始自己研究。上網搵資料，發現政府官網嘅指引唔易明；搵 blog 文，好多都係 SEO 農場 copy and paste；問朋友，個個都話「俾錢俾人搞啦」。但我唔信邪——文件係死嘅，人係生嘅，點解唔可以自己搞掂？
+        </p>
+
+        <p>
+          <strong class="text-navy">結果我花咗大量時間試錯、踩坑、研究，最後成功自己搞掂晒所有文件。</strong> 慳咗幾千蚊之餘，仲學識晒成個流程。
+        </p>
+
+        <h3 class="text-xl font-bold text-navy mt-8">點解要免費公開？</h3>
+
+        <p>
+          搞掂晒之後，我諗：<strong class="text-navy">如果我當初有份清晰嘅指南，跟住做就得，我使唔使嘥咁多時間同金錢？</strong>
+        </p>
+
+        <p>
+          香港有成千上萬嘅 SME 東主，同我一樣單拖作戰，每一分錢都要慳住用。會計公司收幾千蚊做嘅嘢，其實有好多係可以自己搞掂嘅。佢哋只係賺你「唔識」——但如果你有份清楚嘅指南、有真實範例對照、有可編輯嘅模板，你自己都做到。
+        </p>
+
+        <div class="bg-navy/5 border border-navy/10 rounded-xl p-5 my-6">
+          <p class="font-semibold text-navy mb-2">🎯 ESGov 嘅使命</p>
+          <p class="text-gray-600">將我親身經歷過嘅香港公司秘書文件流程，全部免費公開，逐個步驟拆解，提供真實範例同可編輯模板，令每個 SME 東主都可以自己搞掂公司文件，唔使俾人賺幾千蚊。</p>
+        </div>
+
+        <h3 class="text-xl font-bold text-navy mt-8">我嘅背景</h3>
+
+        <p>
+          我係一個香港創業者，多年嚟一直營運自己嘅公司。由開公司、股份轉讓、商業登記、公司秘書合規、審計報稅到公司解散，全部親手處理過。過程中踩過唔少坑（真係用錢同時間換返嚟嘅經驗），所以特別明白其他東主面對文件流程嘅無奈。
+        </p>
+
+        <p>
+          ESGov 嘅每一篇指南都係基於真實處理經驗，配合公開嘅政府資訊同條例撰寫。我唔係律師、唔係會計師、唔係專業公司秘書——<strong class="text-navy">我係一個親身經歷過呢啲流程嘅創業者，同你一樣。</strong>
+        </p>
+
+        <p>
+          正因為咁，我寫嘅內容先至貼地、實戰、有用。唔會同你講抽象嘅法律概念，而係 step-by-step 話你知：呢份文件要點填、呢個步驟要做咩、呢個陷阱要避開。
+        </p>
+
+      </div>
+
+      <!-- Contact / Social Links -->
+      <div class="mt-12 bg-white rounded-xl border border-gray-200 p-6 sm:p-8">
+        <h3 class="text-lg font-bold text-navy mb-4 text-center">📬 聯絡我</h3>
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 text-gray-600">
+            <span class="text-xl">📧</span>
+            <a href="mailto:hello@esgov.org" class="text-gold font-semibold hover:underline">hello@esgov.org</a>
+          </div>
+          <div class="flex items-center gap-3 text-gray-600">
+            <span class="text-xl">💼</span>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="text-gold font-semibold hover:underline">LinkedIn</a>
+            <span class="text-xs text-gray-400">（即將開通）</span>
+          </div>
+          <div class="flex items-center gap-3 text-gray-600">
+            <span class="text-xl">☕</span>
+            <a href="https://buymeacoffee.com/esgov" target="_blank" rel="noopener noreferrer" class="text-gold font-semibold hover:underline">請我飲杯咖啡</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ Footer ═══════════════ -->
+  <footer class="bg-navy text-white py-8">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-2 text-white font-bold text-xl">
+          <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+        </div>
+        <div class="text-sm text-gray-400">
+          <a href="/" class="hover:underline">返回首頁</a>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
+        <p class="mb-2">
+          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          如有具體法律問題，請諮詢執業律師或專業公司秘書。
+        </p>
+        <p>© 2026 ESGov. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

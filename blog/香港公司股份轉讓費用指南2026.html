@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -194,9 +195,39 @@
     </div>
   </header>
 
-  <!-- Article Content -->
-  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-    <div class="blog-content">
+  <!-- Article Content with Sticky TOC -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="flex flex-col lg:flex-row gap-8">
+
+      <!-- ═══ Sticky TOC Sidebar ═══ -->
+      <aside class="lg:w-56 xl:w-64 shrink-0" x-data="{ tocOpen: false }">
+        <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden lg:sticky lg:top-24">
+          <!-- Mobile toggle -->
+          <button @click="tocOpen = !tocOpen" class="lg:hidden w-full flex items-center justify-between p-3 bg-navy text-white">
+            <span class="font-bold text-sm flex items-center gap-2">📑 本文目錄</span>
+            <span class="text-sm transition-transform" :class="tocOpen ? 'rotate-180' : ''">▼</span>
+          </button>
+          <!-- Desktop heading -->
+          <div class="hidden lg:block p-3 bg-navy text-white">
+            <p class="font-bold text-sm flex items-center gap-2">📑 本文目錄</p>
+          </div>
+          <!-- TOC items -->
+          <nav class="text-sm space-y-0.5 p-2" :class="tocOpen ? 'block' : 'hidden lg:block'">
+            <a href="#fees-overview" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">1. 費用總覽</a>
+            <a href="#stamp-duty" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">2. 厘印費計算</a>
+            <a href="#accountant-cost" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">3. 會計師收費分析</a>
+            <a href="#diy-cost" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">4. 自己搞真實成本</a>
+            <a href="#comparison" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">5. DIY vs 會計師</a>
+            <a href="#hidden-costs" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">6. 隱藏費用</a>
+            <a href="#save-tips" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">7. 慳錢貼士</a>
+            <a href="#faq" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">常見問題（FAQ）</a>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Article -->
+      <article class="flex-1 min-w-0">
+        <div class="blog-content">
 
       <!-- Quick Answer Box for AEO -->
       <div class="bg-navy/5 border border-navy/10 rounded-xl p-6 mb-8">
@@ -209,21 +240,6 @@
 
       <div class="tip-box">
         <p class="text-sm"><strong>📌 真實故事：</strong> 我朋友上年同partner拆夥，會計師報價$2,800做股份轉讓文件。佢覺得貴，跟住我分享嘅方法自己搞，最後淨係俾咗$205印花稅（轉讓價$100,000）。佢話：「早知咁簡單，慳返$2,600可以同屋企人食餐好嘅。」呢篇文就係想幫更多SME東主慳返呢筆錢。</p>
-      </div>
-
-      <!-- Table of Contents -->
-      <div class="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-8">
-        <p class="font-bold text-navy text-sm mb-3">📑 本文目錄</p>
-        <ul class="text-sm space-y-1.5">
-          <li><a href="#fees-overview">1. 股份轉讓費用總覽 — 逐項拆解</a></li>
-          <li><a href="#stamp-duty">2. 厘印費（印花稅）詳細計算</a></li>
-          <li><a href="#accountant-cost">3. 會計師／秘書公司收費分析</a></li>
-          <li><a href="#diy-cost">4. 自己搞股份轉讓真實成本</a></li>
-          <li><a href="#comparison">5. DIY vs 會計師 — 全面比較</a></li>
-          <li><a href="#hidden-costs">6. 隱藏費用你要知</a></li>
-          <li><a href="#save-tips">7. 慳錢貼士（親身經驗）</a></li>
-          <li><a href="#faq">常見問題（FAQ）</a></li>
-        </ul>
       </div>
 
       <!-- Section 1 -->
@@ -659,7 +675,26 @@
     </div>
   </article>
 
+    </div>
+  </div>
+
   <!-- Footer -->
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="bg-navy text-white py-8">
     <div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-400">
       <p>© 2026 ESGov. 由真實經歷者整理，實戰經驗分享。</p>

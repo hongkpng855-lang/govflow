@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -186,9 +187,34 @@
     </div>
   </header>
 
-  <!-- Article -->
-  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-    <div class="blog-content">
+  <!-- Article with Sticky TOC -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="flex flex-col lg:flex-row gap-8">
+
+      <!-- ═══ Sticky TOC Sidebar ═══ -->
+      <aside class="lg:w-56 xl:w-64 shrink-0" x-data="{ tocOpen: false }">
+        <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden lg:sticky lg:top-24">
+          <button @click="tocOpen = !tocOpen" class="lg:hidden w-full flex items-center justify-between p-3 bg-navy text-white">
+            <span class="font-bold text-sm flex items-center gap-2">📑 本文目錄</span>
+            <span class="text-sm transition-transform" :class="tocOpen ? 'rotate-180' : ''">▼</span>
+          </button>
+          <div class="hidden lg:block p-3 bg-navy text-white">
+            <p class="font-bold text-sm flex items-center gap-2">📑 本文目錄</p>
+          </div>
+          <nav class="text-sm space-y-0.5 p-2" :class="tocOpen ? 'block' : 'hidden lg:block'">
+            <a href="#overview" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">1. 罰則總覽</a>
+            <a href="#data" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">2. 檢控數據分析</a>
+            <a href="#cases" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">3. 真實罰款案例</a>
+            <a href="#types" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">4. 違規行為同罰則</a>
+            <a href="#avoid" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">5. 點樣避免罰款</a>
+            <a href="#faq" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">常見問題（FAQ）</a>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Article -->
+      <article class="flex-1 min-w-0">
+        <div class="blog-content">
 
       <!-- Quick Answer Box for AEO -->
       <div class="bg-navy/5 border border-navy/10 rounded-xl p-6 mb-8">
@@ -201,19 +227,6 @@
 
       <div class="warn-box">
         <p><strong>⚠️ 真實故事：</strong> 我朋友阿輝開咗間貿易公司，由2018年SCR制度生效以嚟一直都冇理過。2024年佢收到公司註冊處嘅警告信，話佢違反《公司條例》第653條，要求14日內整改。佢先死死地氣搵我幫手。如果佢再唔理，下一步就係檢控，最高罰款$25,000。最後我跟住ESGov嘅工具同佢搞返好晒，先避過一劫。</p>
-      </div>
-
-      <!-- Table of Contents -->
-      <div class="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-8">
-        <p class="font-bold text-navy text-sm mb-3">📑 本文目錄</p>
-        <ul class="text-sm space-y-1.5">
-          <li><a href="#overview">1. SCR 罰則總覽 — 罰款金額逐項睇</a></li>
-          <li><a href="#data">2. 公司註冊處檢控數據分析</a></li>
-          <li><a href="#cases">3. 真實罰款案例</a></li>
-          <li><a href="#types">4. 各類違規行為同罰則</a></li>
-          <li><a href="#avoid">5. 點樣避免SCR罰款？</a></li>
-          <li><a href="#faq">常見問題（FAQ）</a></li>
-        </ul>
       </div>
 
       <!-- Section 1 -->
@@ -486,7 +499,26 @@
     </div>
   </article>
 
+    </div>
+  </div>
+
   <!-- Footer -->
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="bg-navy text-white py-8">
     <div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-400">
       <p>© 2026 ESGov. 由真實經歷者整理，實戰經驗分享。</p>

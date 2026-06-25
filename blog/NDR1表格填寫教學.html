@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -186,9 +187,34 @@
     </div>
   </header>
 
-  <!-- Article -->
-  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-    <div class="blog-content">
+  <!-- Article with Sticky TOC -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="flex flex-col lg:flex-row gap-8">
+
+      <!-- ═══ Sticky TOC Sidebar ═══ -->
+      <aside class="lg:w-56 xl:w-64 shrink-0" x-data="{ tocOpen: false }">
+        <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden lg:sticky lg:top-24">
+          <button @click="tocOpen = !tocOpen" class="lg:hidden w-full flex items-center justify-between p-3 bg-navy text-white">
+            <span class="font-bold text-sm flex items-center gap-2">📑 本文目錄</span>
+            <span class="text-sm transition-transform" :class="tocOpen ? 'rotate-180' : ''">▼</span>
+          </button>
+          <div class="hidden lg:block p-3 bg-navy text-white">
+            <p class="font-bold text-sm flex items-center gap-2">📑 本文目錄</p>
+          </div>
+          <nav class="text-sm space-y-0.5 p-2" :class="tocOpen ? 'block' : 'hidden lg:block'">
+            <a href="#prep" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">1. 填寫前準備</a>
+            <a href="#stepbystep" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">2. 逐項填寫教學</a>
+            <a href="#submit" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">3. 提交步驟</a>
+            <a href="#mistakes" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">4. 常見錯誤</a>
+            <a href="#timeline" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">5. 時間線同費用</a>
+            <a href="#faq" class="block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-navy transition border-l-2 border-transparent hover:border-gold">常見問題（FAQ）</a>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Article -->
+      <article class="flex-1 min-w-0">
+        <div class="blog-content">
 
       <!-- Quick Answer Box for AEO -->
       <div class="bg-navy/5 border border-navy/10 rounded-xl p-6 mb-8">
@@ -201,19 +227,6 @@
 
       <div class="tip-box">
         <p><strong>📌 真實故事：</strong> 我有個 friend 上年決定 close 咗間開咗3年嘅網店公司。佢上網搵咗份NDR1，求其填咗就交，結果俾公司註冊處打回頭三次 — 第一次話簽名唔啱格式，第二次話冇附IR1263，第三次話公司名同註冊證書唔一致。晒咗成個半月。如果佢一早睇咗呢篇教學，一日就搞得掂。</p>
-      </div>
-
-      <!-- Table of Contents -->
-      <div class="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-8">
-        <p class="font-bold text-navy text-sm mb-3">📑 本文目錄</p>
-        <ul class="text-sm space-y-1.5">
-          <li><a href="#prep">1. 填NDR1前嘅準備工作</a></li>
-          <li><a href="#stepbystep">2. NDR1 逐項填寫教學</a></li>
-          <li><a href="#submit">3. 提交NDR1嘅步驟</a></li>
-          <li><a href="#mistakes">4. 常見錯誤（唔好中招）</a></li>
-          <li><a href="#timeline">5. 撤銷註冊時間線同費用</a></li>
-          <li><a href="#faq">常見問題（FAQ）</a></li>
-        </ul>
       </div>
 
       <!-- Section 1 -->
@@ -536,7 +549,26 @@
     </div>
   </article>
 
+    </div>
+  </div>
+
   <!-- Footer -->
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="bg-navy text-white py-8">
     <div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-400">
       <p>© 2026 ESGov. 由真實經歷者整理，實戰經驗分享。</p>
