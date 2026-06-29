@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/style.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -851,7 +852,7 @@
                     </template>
                     <div class="p-4">
                       <p class="font-bold text-sm text-navy" x-text="doc.name"></p>
-                      <p class="text-xs text-gray-500 mt-1 leading-relaxed" x-text="doc.description"></p>
+                      <p class="text-xs text-gray-500 mt-1 leading-relaxed line-clamp-2" x-text="doc.description"></p>
                       <div class="flex items-center gap-2 mt-3">
                         <span x-show="doc.hasGenerator" class="inline-flex items-center gap-1.5 text-xs font-bold bg-gold text-navy px-4 py-2 rounded-lg hover:bg-gold-light transition shadow-sm">🚀 填寫 + 生成 PDF</span>
                         <span x-show="!doc.hasGenerator && doc['generatorUrl']" class="inline-flex items-center gap-1 text-xs font-medium bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition">📄 下載官方表格</span>
