@@ -1,0 +1,161 @@
+{
+  "processId": "shareholder-transfer",
+  "title": "香港有限公司股份轉讓完整指南",
+  "description": "由真實經歷者整理，7個步驟、15+份文件模板，避免補交文件",
+  "estimatedTime": "1-2 星期（視乎公司秘書效率）",
+  "difficulty": "中等",
+  "totalSteps": 7,
+  "freeSteps": 2,
+  "price": 149,
+  "currency": "HKD",
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "準備股份轉讓書 (Instrument of Transfer)",
+      "summary": "轉讓人與承讓人簽署轉讓文件，釐定每股作價",
+      "isFree": true,
+      "details": "股份轉讓書（又稱 Bought and Sold Note / Instrument of Transfer）係整個轉讓程序嘅起點。你需要在文件上填寫轉讓雙方嘅資料、股份數量及作價，然後由轉讓人（賣方）同承讓人（買方）簽署確認。呢份文件係證明交易嘅基礎文件，稅務局同公司註冊處都會核查。",
+      "documents": [
+        {
+          "name": "股份轉讓書",
+          "description": "Bought and Sold Note / Instrument of Transfer",
+          "demoImage": "_placeholder_",
+          "templateFile": "_placeholder_",
+          "commonMistakes": [
+            "未填寫完整公司名稱（必須與商業登記證一致）",
+            "轉讓日期留空或倒填",
+            "股份數目與股東名冊不符",
+            "漏填寫轉讓雙方的完整地址"
+          ]
+        }
+      ]
+    },
+    {
+      "stepNumber": 2,
+      "title": "計算並繳付印花稅 (Stamp Duty)",
+      "summary": "前往稅務局繳納轉讓股份價值的 0.2% 印花稅（買賣雙方各 0.1%）",
+      "isFree": true,
+      "details": "股份轉讓需要繳納印花稅（俗稱厘印費）。稅率為轉讓價值的 0.2%（買賣雙方各付 0.1%），另加每張轉讓書 $5 定額印花稅。你需要帶同已簽署的股份轉讓書前往稅務局印花稅署（位於灣仔稅務大樓）辦理。稅務局會喺文件上蓋章（俗稱「打厘印」），證明已繳付印花稅。建議以支票或銀行本票支付。",
+      "documents": [
+        {
+          "name": "已填妥嘅股份轉讓書正本",
+          "description": "須帶同正本前往稅務局",
+          "demoImage": "_placeholder_",
+          "commonMistakes": [
+            "未帶齊所有轉讓書正本",
+            "計錯印花稅金額",
+            "用現金支付（稅局唔收現金）"
+          ]
+        }
+      ]
+    },
+    {
+      "stepNumber": 3,
+      "title": "準備董事會書面決議",
+      "summary": "召開董事會會議或通過書面決議批准股份轉讓",
+      "isFree": false,
+      "details": "公司需要通過董事會決議（Board Resolution）正式批准股份轉讓。你可以召開董事會會議並記錄會議記錄，或者由全體董事簽署書面決議（Written Resolution）。決議內容應包括：批准股份轉讓、確認轉讓價格、授權更新股東名冊及簽發新股份證明書。呢個步驟確保股份轉讓符合公司內部管治要求。",
+      "documents": [
+        {
+          "name": "董事會書面決議",
+          "description": "Board Resolution 模板，由全體董事簽署",
+          "demoImage": "_placeholder_",
+          "commonMistakes": [
+            "決議內容未涵蓋所有授權事項",
+            "漏咗董事簽署或簽署不全",
+            "日期早於股份轉讓書簽署日"
+          ]
+        },
+        {
+          "name": "公司章程細則副本",
+          "description": "Articles of Association — 確認董事會權限",
+          "demoImage": "_placeholder_",
+          "commonMistakes": [
+            "章程有限制條款（如 Pre-emption Rights）但冇跟程序"
+          ]
+        }
+      ]
+    },
+    {
+      "stepNumber": 4,
+      "title": "更新股東名冊 (Register of Members)",
+      "summary": "將股份由轉讓人名下轉至承讓人名下，更新公司股東記錄",
+      "isFree": false,
+      "details": "當董事會批准及印花稅搞定後，你需要更新公司的股東名冊（Register of Members）。將轉讓人的股份數目扣除，加入承讓人的持股記錄。股東名冊係公司的法定記錄，必須準確反映最新的股權結構，公司註冊處同稅務局日後可能會查閱。",
+      "documents": [
+        {
+          "name": "股東名冊更新頁",
+          "description": "Register of Members — 記錄股份轉讓變更",
+          "demoImage": "_placeholder_",
+          "commonMistakes": [
+            "未及時更新或記錄錯誤",
+            "新舊股東資料填寫唔完整",
+            "冇保留舊記錄以供查核"
+          ]
+        }
+      ]
+    },
+    {
+      "stepNumber": 5,
+      "title": "簽發新股份證明書 (Share Certificate)",
+      "summary": "向承讓人簽發新股份證明書，同時收回註銷轉讓人嘅舊證明書",
+      "isFree": false,
+      "details": "更新股東名冊後，公司需要向新股東（承讓人）簽發新的股份證明書（Share Certificate），證明佢持有公司股份。同時要收回舊股東（轉讓人）的舊股份證明書並註銷作廢。股份證明書係重要嘅產權文件，必須妥善處理。",
+      "documents": [
+        {
+          "name": "新股份證明書",
+          "description": "Share Certificate — 承讓人持有股份的憑證",
+          "demoImage": "_placeholder_",
+          "commonMistakes": [
+            "證明書編號混亂或重複",
+            "冇係公司記錄中標明舊證明書已註銷",
+            "證明書上嘅股份數目與股東名冊不符"
+          ]
+        },
+        {
+          "name": "舊股份證明書（已註銷）",
+          "description": "轉讓人交回嘅舊證明書，須蓋「已註銷」章",
+          "demoImage": "_placeholder_",
+          "commonMistakes": []
+        }
+      ]
+    },
+    {
+      "stepNumber": 6,
+      "title": "提交公司註冊處文件 (ND2A)",
+      "summary": "向公司註冊處提交更改股份架構嘅申報表",
+      "isFree": false,
+      "details": "股份轉讓完成後，公司需要向公司註冊處提交 ND2A 表格（更改股份架構通知書），申報股份轉讓後的股權結構變動。公司註冊處會更新其記錄。提交方式可以網上提交或親身前往金鐘道政府合署辦理。",
+      "documents": [
+        {
+          "name": "ND2A 表格",
+          "description": "更改股份架構通知書",
+          "demoImage": "_placeholder_",
+          "commonMistakes": [
+            "逾期提交（必須在變更後 15 日內）",
+            "填錯公司編號或股份類別",
+            "漏咗董事簽署"
+          ]
+        }
+      ]
+    },
+    {
+      "stepNumber": 7,
+      "title": "通知稅務局及更新商業登記",
+      "summary": "將股權變更通知稅務局，確保商業登記資料同步更新",
+      "isFree": false,
+      "details": "最後一步係將股權變更通知稅務局（IRD）。雖然公司註冊處會同稅務局有資料交換，但建議你主動通知稅務局，以確保商業登記記錄同步更新。你可以書面通知稅務局，附上更新後的股東名冊副本及股份轉讓書副本。",
+      "documents": [
+        {
+          "name": "致稅務局嘅股權變更通知書",
+          "description": "通知 IRD 股權變更，確保商業登記同步",
+          "demoImage": "_placeholder_",
+          "commonMistakes": [
+            "以為公司註冊處會自動通知稅局",
+            "冇保留遞交證明"
+          ]
+        }
+      ]
+    }
+  ]
+}
