@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🧪 產品一歷史版本 (1-10)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body { font-family: 'Noto Sans TC', system-ui, sans-serif; }</style>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-3xl mx-auto">
+    <h1 class="text-2xl font-bold text-navy mb-2">🧪 產品一歷史版本</h1>
+    <p class="text-sm text-gray-500 mb-6">最新 → 最舊，逐個開新 tab 睇</p>
+    <div class="space-y-3" id="versions"></div>
+    <div class="bg-gray-50 border rounded-xl p-4 mt-8 text-sm text-gray-500">
+      <p class="font-bold text-navy mb-1">📋 點樣用？</p>
+      <p>由 v01 開始，逐個開新 tab，睇完話我知邊個先係正常 👍</p>
+    </div>
+  </div>
+  <script>
+    const versions = [
+      {num: 1, desc: "Current live (main branch HEAD)", note: "而家上線緊"},
+      {num: 2, desc: "GEO optimization", note: "GEO優化後"},
+      {num: 3, desc: "share-transfer created", note: "最初搬去 share-transfer/" },
+      {num: 4, desc: "Feature branch latest", note: "feature branch 最新版" },
+      {num: 5, desc: "AEO Phase 2", note: "answer-first openings" },
+      {num: 6, desc: "HowTo JSON-LD schema", note: "加 HowTo schema" },
+      {num: 7, desc: "Email gate", note: "v12.50 email gate" },
+      {num: 8, desc: "Product 4 deregistration", note: "產品4時期" },
+      {num: 9, desc: "SCR 準備中", note: "v12.16 SCR時期" },
+      {num: 10, desc: "URL restructure", note: "首次 folder/index.html 結構" }
+    ];
+    const container = document.getElementById('versions');
+    versions.forEach(v => {
+      const div = document.createElement('div');
+      div.className = 'bg-white rounded-xl border border-gray-200 p-4 shadow-sm';
+      div.innerHTML = `
+        <div class="flex items-center gap-2 mb-1">
+          <span class="bg-navy text-white text-xs font-bold px-2 py-0.5 rounded-full">v${String(v.num).padStart(2,'0')}</span>
+          <span class="bg-amber-100 text-amber-700 text-xs px-2 py-0.5 rounded-full">${v.note}</span>
+        </div>
+        <p class="text-sm text-gray-700">${v.desc}</p>
+        <a href="/test-share-transfer/history/v${v.num}.html" target="_blank" class="mt-2 inline-block bg-navy text-white text-sm px-4 py-2 rounded-lg hover:bg-navy-light transition">🔗 睇 v${String(v.num).padStart(2,'0')}</a>
+      `;
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>
