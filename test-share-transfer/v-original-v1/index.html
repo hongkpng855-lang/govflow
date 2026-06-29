@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港有限公司股份轉讓完整流程（2026 最新）— 5 個步驟搞掂，免費工具</title>
+  <meta name="description" content="香港公司股份轉讓流程全面拆解：Check 公司章程、準備 Sold Note、簽署 Instrument of Transfer、交印花稅（厘印費）、更新公司紀錄。免費 Sold Note 同轉讓書生成工具，自己搞掂慳 $1,000+。" />
+  <meta property="og:title" content="ESGov | 香港有限公司股份轉讓完整流程（2026 最新）— 5 個步驟搞掂，免費工具" />
+  <meta property="og:description" content="香港公司股份轉讓流程全面拆解：Check 公司章程、準備 Sold Note、簽署 Instrument of Transfer、交印花稅（厘印費）、更新公司紀錄。免費 Sold Note 同轉讓書生成工具，自己搞掂慳 $1,000+。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/share-transfer/" />
+  <link rel="canonical" href="https://esgov.org/share-transfer/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script defer src="/assets/js/app.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- WebPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "香港有限公司股份轉讓完整流程（5 個步驟搞掂）",
+    "description": "香港公司股份轉讓流程全面拆解：Check 公司章程、準備 Sold Note、簽署 Instrument of Transfer、交印花稅（厘印費）、更新公司紀錄。免費 Sold Note 同轉讓書生成工具，自己搞掂慳 $1,000+。",
+    "url": "https://esgov.org/share-transfer/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "ESGov"
+    }
+  }
+  </script>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首頁",
+        "item": "https://esgov.org"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "股份轉讓指南",
+        "item": "https://esgov.org/share-transfer/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "香港公司股份轉讓要幾耐時間？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "一般嚟講，由準備文件到完成所有程序，大約需要 1 至 2 個星期。但係最關鍵嘅係「2 個工作天規則」：如果轉讓雙方都喺香港簽署，遞交印花稅嘅 Deadline 係簽署日起計 2 個工作天內，呢個期限好 tight，一定要留意。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "股份轉讓嘅印花稅（厘印費）點計？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "印花稅係按轉讓價計算：賣方俾 0.1%，買方俾 0.1%，即係合共 0.2%，另加每張轉讓書 $5 定額印花稅。舉個例，如果股份轉讓價係 $100,000，總印花稅就係 $200 + $5 = $205。如果超過 2 個月未交印花稅，罰款可以高達原本稅額嘅 10 倍，絕對唔好遲交。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "股份轉讓可唔可以自己搞？定係一定要搵會計師？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "股份轉讓完全可以自己搞。只要跟足步驟、準備齊文件，自己搞可以慳返會計公司收嘅 $1,000 至 $3,000 行政費。ESGov 提供晒所有範本同工具，包括 Sold Note、Instrument of Transfer、Letter of Transferee 等，全部免費。當然，如果公司章程有複雜限制，或者牽涉大額交易，建議先諮詢律師。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "股份轉讓之後，買方要唔要重新開銀行戶口？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "唔使。公司銀行戶口係公司名義嘅，唔會因為股東變動而改變。但如果董事有變，就要去銀行 update 簽名授權人，呢點好多人唔記得。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "股份可以送俾人（零代價轉讓）嗎？要唔要俾印花稅？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "可以。但注意：就算係零代價（$0 轉讓），稅局一樣會要求你申報印花稅。稅局會按股份嘅公平市值（Fair Market Value）去計算應繳稅款，唔係話 $0 就唔使俾錢。所以建議都要準備公司最近期嘅審計報告，證明股份嘅合理價值。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "股份轉讓會影響公司嘅稅務狀況嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "一般嚟講唔會直接影響公司稅務。公司仍然係同一個法律實體，稅務編號（BR）唔會變。但係要留意：如果轉讓價明顯低過市場價值，稅局有可能會質疑係咪意圖避稅。另外，如果轉讓導致最終控制權變更，可能會影響之前嘅虧損結轉（Tax Loss Carry Forward）安排。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如果股份轉讓涉及多個股東，程序會唔會好複雜？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "如果只係一個賣方同一個買方，程序好簡單。但如果牽涉多個股東（例如同時有幾個股東賣俾一個買方，或者一個股東賣俾幾個買方），就需要準備多份 Instrument of Transfer，每份都要獨立計算印花稅。建議用 ESGov 嘅工具逐份生成，確保數字準確。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "轉讓完成後要保留啲咩文件？保留幾耐？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "完成股份轉讓後，建議保留以下文件最少 7 年：已簽署嘅 Sold Note、經 stamp 嘅 Instrument of Transfer、印花稅收據、更新後嘅股東名冊、新嘅股份證明書副本。這些文件喺將來公司賣盤、融資或稅務審計時都可能需要用到。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-gray-50" x-data="productPage()" x-init="init()">
+
+  <!-- ═══ Sticky Header ═══ -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5">
+        <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" onerror="this.style.display='none'" />
+        <span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+      </a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition flex items-center gap-1">← 返回首頁</a>
+    </div>
+  </nav>
+
+  <!-- ═══ Breadcrumb (visible on mobile above H1) ═══ -->
+  <div class="bg-white border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <div class="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-gray-400">
+        <a href="/" class="hover:text-gold transition-colors">首頁</a>
+        <span>/</span>
+        <span class="text-gray-600">股份轉讓指南</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Page Header ═══ -->
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-3">
+        香港有限公司股份轉讓完整指南
+      </h1>
+      <p class="text-gray-600 text-base sm:text-lg max-w-3xl">
+        5 個步驟由零開始搞掂股份轉讓 — Check 章程、準備 Sold Note、簽 Instrument of Transfer、交印花稅、更新公司紀錄。免費 PDF 工具幫你慳返會計公司 $1,000–$3,000 行政費。
+      </p>
+    </div>
+  </header>
+
+  <!-- ═══ Main Content + Sidebar ═══ -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex flex-col lg:flex-row gap-8">
+
+      <!-- ═══ Sidebar Navigation ═══ -->
+      <aside class="lg:w-72 shrink-0">
+        <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden lg:sticky lg:top-24">
+          <div class="p-4 bg-navy text-white">
+            <p class="font-bold text-sm flex items-center gap-2">📋 全部步驟（全部免費 🆓）</p>
+          </div>
+          <nav class="p-2 space-y-0.5">
+            <template x-for="(item, index) in navItems" :key="index">
+              <button @click="goToStep(index)"
+                :class="currentStep === index ? 'bg-navy/10 border-gold/80 text-navy font-semibold' : 'text-gray-600 hover:bg-gray-50 border-transparent'"
+                class="w-full text-left px-3 py-2.5 rounded-lg text-sm transition-all border-l-4 flex items-center gap-2"
+              >
+                <span x-text="item.emoji" class="text-base shrink-0"></span>
+                <span class="flex-1 leading-tight"><span x-text="item.label"></span></span>
+                <span class="text-xs bg-green-100 text-green-700 px-1.5 py-0.5 rounded shrink-0" x-show="item.free">🆓</span>
+              </button>
+            </template>
+
+            <hr class="my-2 border-gray-200" />
+
+            <button @click="goToStep(5)"
+              :class="currentStep === 5 ? 'bg-navy/10 border-gold/80 text-navy font-semibold' : 'text-gray-600 hover:bg-gray-50 border-transparent'"
+              class="w-full text-left px-3 py-2.5 rounded-lg text-sm transition-all border-l-4 flex items-center gap-2">
+              <span class="text-base shrink-0">⏱️</span>
+              <span class="flex-1 leading-tight">時間費用預算</span>
+              <span class="text-xs bg-green-100 text-green-700 px-1.5 py-0.5 rounded shrink-0">🆓</span>
+            </button>
+
+            <button @click="goToStep(6)"
+              :class="currentStep === 6 ? 'bg-navy/10 border-gold/80 text-navy font-semibold' : 'text-gray-600 hover:bg-gray-50 border-transparent'"
+              class="w-full text-left px-3 py-2.5 rounded-lg text-sm transition-all border-l-4 flex items-center gap-2">
+              <span class="text-base shrink-0">❌</span>
+              <span class="flex-1 leading-tight">常見錯誤</span>
+              <span class="text-xs bg-green-100 text-green-700 px-1.5 py-0.5 rounded shrink-0">🆓</span>
+            </button>
+
+            <button @click="goToStep(7)"
+              :class="currentStep === 7 ? 'bg-navy/10 border-gold/80 text-navy font-semibold' : 'text-gray-600 hover:bg-gray-50 border-transparent'"
+              class="w-full text-left px-3 py-2.5 rounded-lg text-sm transition-all border-l-4 flex items-center gap-2">
+              <span class="text-base shrink-0">❓</span>
+              <span class="flex-1 leading-tight">常見問題（FAQ）</span>
+              <span class="text-xs bg-green-100 text-green-700 px-1.5 py-0.5 rounded shrink-0">🆓</span>
+            </button>
+
+            <hr class="my-2 border-gray-200" />
+
+            <div class="px-3 py-2">
+              <p class="text-xs text-gray-500 mb-2">🤝 呢份指南全部免費公開</p>
+              <a href="https://buymeacoffee.com/esgov" target="_blank" rel="noopener noreferrer" class="block w-full bg-amber-50 hover:bg-amber-100 border border-amber-200 rounded-lg py-2 px-3 text-sm font-semibold text-navy text-center transition mb-2">☕ 請我飲咖啡</a>
+              <div x-data="{ email: '', subscribed: false }">
+                <template x-if="!subscribed">
+                  <form @submit.prevent="subscribed = true; email = ''" class="flex gap-1">
+                    <input x-model="email" type="email" placeholder="留低 email →" required class="flex-1 text-xs border border-gray-200 rounded-lg px-2 py-1.5 focus:outline-none focus:border-gold" />
+                    <button type="submit" class="bg-navy text-white text-xs px-2.5 py-1.5 rounded-lg hover:bg-navy-light transition shrink-0">📬</button>
+                  </form>
+                </template>
+                <template x-if="subscribed">
+                  <p class="text-xs text-green-600 font-medium text-center py-1.5">✅ 多謝！有新指南會通知你 📬</p>
+                </template>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- ═══ Main Content Area ═══ -->
+      <main class="flex-1 min-w-0">
+
+        <!-- 📚 Related Guides -->
+        <div class="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 mb-6">
+          <h3 class="font-bold text-navy text-sm mb-2">📚 相關指南</h3>
+          <ul class="text-sm space-y-1.5">
+            <li>• <a href="/blog/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%8F%B8%E8%82%A1%E4%BB%BD%E8%BD%89%E8%AE%93%E6%B5%81%E7%A8%8B2026.html" class="text-gold hover:underline">香港有限公司股份轉讓完整流程2026 — 詳細網誌版本</a></li>
+            <li>• <a href="/blog/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%8F%B8%E5%8D%B0%E8%8A%B1%E7%A8%8E%EF%BC%88%E5%8E%98%E5%8D%B0%E8%B2%BB%EF%BC%89%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold hover:underline">香港公司印花稅（厘印費）終極指南</a></li>
+            <li>• <a href="/blog/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%8F%B8%E7%99%BC%E5%87%BA%E8%82%A1%E4%BB%BD%E8%AD%89%E6%98%8E%E6%9B%B8%EF%BC%88Share%20Certificate%EF%BC%89%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold hover:underline">香港公司發出股份證明書（Share Certificate）終極指南</a></li>
+          </ul>
+        </div>
+
+        <!-- ═══ Section: Overview (股份轉讓係咩？幾時需要做？) ═══ -->
+        <div class="bg-white rounded-xl border border-gray-200 p-6 sm:p-8 mb-6 leading-relaxed text-gray-700 space-y-4">
+          <h2 class="text-2xl sm:text-3xl font-bold text-navy flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center text-lg shrink-0">i</span>
+            股份轉讓係咩？幾時需要做？
+          </h2>
+          <p>股份轉讓，簡單講就係公司嘅股東將手上股份賣俾另一個人（或者另一間公司）。喺香港，有限公司嘅股份轉讓受《公司條例》（第 622 章）規管，唔係話兩邊傾好就轉得，要跟足程序做文件。</p>
+          <p>通常咩情況下會需要做股份轉讓：</p>
+          <ul class="list-disc pl-6 space-y-1.5">
+            <li><strong>新投資者入股</strong> — 有人想投資你間公司，你要將部份股份轉俾佢</li>
+            <li><strong>股東退股／拆夥</strong> — 拍檔唔做啦，要將佢啲股份轉返俾你或者第三方</li>
+            <li><strong>家族傳承</strong> — 老豆想將公司股份轉俾仔女，最常見嘅情況</li>
+            <li><strong>公司重組</strong> — 公司架構執位，將股份喺關聯公司之間調配</li>
+            <li><strong>賣公司</strong> — 成間公司賣俾人，其實就係股份轉讓嘅一種</li>
+          </ul>
+
+          <!-- 真實案例 callout -->
+          <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm">
+            <p class="font-bold text-navy">🔍 真實案例</p>
+            <p class="mt-1">有間 marketing 公司嘅東主同 partner 一人一半股份。做咗三年，partner 話要移民，要將 50% 股份賣俾佢。原先以為要搵律師搞，報價 $5,000。後嚟佢用咗呢個指南嘅方法自己搞晒全部文件，最後淨係俾咗印花稅 $800 搞掂，慳返超過 $4,000。</p>
+          </div>
+
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm">
+            <p class="font-bold text-navy">📌 想直接睇範本同工具？</p>
+            <p class="mt-1">我哋有齊 Sold Note、Instrument of Transfer、Letter of Transferee 嘅範本同 PDF 生成工具，全部免費 🆓 跟住下面嘅步驟逐個用就得。</p>
+          </div>
+        </div>
+
+        <!-- ═══ Dynamic Step Content ═══ -->
+        <template x-for="(item, index) in navItems" :key="index">
+          <div x-show="currentStep === index" x-transition:enter.duration.300ms class="bg-white rounded-xl border border-gray-200 p-6 sm:p-8 mb-6 leading-relaxed text-gray-700 space-y-4">
+            <!-- Step Header -->
+            <div class="flex items-start justify-between gap-4">
+              <h2 class="text-xl sm:text-2xl font-bold text-navy flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-gold text-navy flex items-center justify-center text-sm font-bold shrink-0" x-text="index + 1"></span>
+                <span x-text="item.title"></span>
+              </h2>
+              <a href="https://buymeacoffee.com/esgov" target="_blank" rel="noopener noreferrer" class="shrink-0 text-xs bg-amber-50 hover:bg-amber-100 border border-amber-200 rounded-lg px-2.5 py-1.5 text-navy font-medium transition whitespace-nowrap">☕ 請咖啡</a>
+            </div>
+
+            <!-- Step Content (rendered inline via x-html) -->
+            <div x-html="item.content"></div>
+
+            <!-- 下一步 Button -->
+            <div class="flex justify-end pt-2" x-show="index < 4">
+              <button @click="nextStep()" class="bg-navy hover:bg-navy-light text-white font-semibold px-6 py-2.5 rounded-lg transition flex items-center gap-2 text-sm">
+                下一步 →
+              </button>
+            </div>
+          </div>
+        </template>
+
+        <!-- ═══ Section: 時間費用預算 (index 5) ═══ -->
+        <div x-show="currentStep === 5" x-transition:enter.duration.300ms class="bg-white rounded-xl border border-gray-200 p-6 sm:p-8 mb-6 leading-relaxed text-gray-700 space-y-4">
+          <h2 class="text-2xl sm:text-3xl font-bold text-navy flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center text-lg shrink-0">⏱️</span>
+            股份轉讓要幾耐？幾錢？
+          </h2>
+          <p>呢個係最多人問嘅問題。以下係 realistic 嘅估算：</p>
+
+          <!-- 時間預算表 -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+            <p class="font-bold text-navy text-lg mb-3">⏱️ 時間預算</p>
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-gray-300">
+                  <th class="text-left py-2 font-bold text-navy">階段</th>
+                  <th class="text-right py-2 font-bold text-navy">預計時間</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-100">
+                  <td class="py-2">準備文件（Sold Note + Instrument of Transfer）</td>
+                  <td class="text-right py-2">1-2 日</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-2">簽署文件</td>
+                  <td class="text-right py-2">即日</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-2">遞交印花稅（IRS 電子系統）</td>
+                  <td class="text-right py-2">即日（網上即時處理）</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-2">獲取厘印（Stamped Instrument）</td>
+                  <td class="text-right py-2">1-3 個工作天</td>
+                </tr>
+                <tr>
+                  <td class="py-2 font-semibold">更新公司紀錄 + 提交申報</td>
+                  <td class="text-right py-2 font-semibold">可以同日搞掂</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="text-sm text-gray-500 mt-2">📌 <strong>總計：</strong>順利嘅話，1 個星期內可以 complete 晒成個流程。</p>
+          </div>
+
+          <!-- 費用預算表 -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-5 mt-4">
+            <p class="font-bold text-navy text-lg mb-3">💰 費用預算</p>
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-gray-300">
+                  <th class="text-left py-2 font-bold text-navy">項目</th>
+                  <th class="text-right py-2 font-bold text-navy">費用</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-100">
+                  <td class="py-2">印花稅（以 $100,000 轉讓價為例）</td>
+                  <td class="text-right py-2">$205</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-2">公司註冊處查冊費（optional）</td>
+                  <td class="text-right py-2">$30 – $60</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-2">文件範本／工具</td>
+                  <td class="text-right py-2 font-bold text-green-700">$0（ESGov 免費提供）</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-2">會計師／秘書公司收費（參考）</td>
+                  <td class="text-right py-2 text-red-600">$1,000 – $3,000</td>
+                </tr>
+                <tr>
+                  <td class="py-2 font-semibold">自己搞總成本（< $100,000 轉讓價）</td>
+                  <td class="text-right py-2 font-bold text-green-700">約 $250 – $300</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-4 text-sm mt-4">
+            <p class="font-bold text-navy">💡 自己搞 vs 俾人做，慳幾多？</p>
+            <p class="mt-1">睇到個差距未？自己搞 vs 俾會計師搞，慳到成千甚至幾千蚊。對於中小企嚟講，呢啲錢用嚟做 marketing 或者請人唔好？</p>
+          </div>
+
+          <div class="flex justify-end pt-2">
+            <button @click="goToStep(6)" class="bg-navy hover:bg-navy-light text-white font-semibold px-6 py-2.5 rounded-lg transition flex items-center gap-2 text-sm">
+              下一節：常見錯誤 →
+            </button>
+          </div>
+        </div>
+
+        <!-- ═══ Section: 常見錯誤 (index 6) ═══ -->
+        <div x-show="currentStep === 6" x-transition:enter.duration.300ms class="bg-white rounded-xl border border-gray-200 p-6 sm:p-8 mb-6 leading-relaxed text-gray-700 space-y-4">
+          <h2 class="text-2xl sm:text-3xl font-bold text-navy flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center text-lg shrink-0">❌</span>
+            常見錯誤（唔好做）
+          </h2>
+          <p>以下係親身見過同聽過嘅血淚教訓，千祈唔好犯同樣嘅錯：</p>
+
+          <div class="space-y-4 mt-2">
+            <div class="border-l-4 border-red-400 pl-4 py-2">
+              <p class="font-bold text-navy">❌ 錯誤 1：冇睇公司章程就過數</p>
+              <p class="text-sm text-gray-600 mt-1">傾好咗轉讓價錢，對方過咗錢先發現章程有優先購買權條款。結果另一個股東話要買，搞到成鑊粥，最後要退錢俾朋友，晒咗成個月時間。</p>
+            </div>
+            <div class="border-l-4 border-red-400 pl-4 py-2">
+              <p class="font-bold text-navy">❌ 錯誤 2：超過 2 個工作天先交印花稅</p>
+              <p class="text-sm text-gray-600 mt-1">呢個係最多人中嘅陷阱。簽好文件之後以為可以慢慢搞，點知原來香港簽名嘅 deadline 係 2 個工作天。過咗 deadline 要俾罰款，過咗 2 個月罰款可以高達 10 倍。</p>
+            </div>
+            <div class="border-l-4 border-red-400 pl-4 py-2">
+              <p class="font-bold text-navy">❌ 錯誤 3：Sold Note 同 Instrument of Transfer 數字唔一致</p>
+              <p class="text-sm text-gray-600 mt-1">Sold Note 寫 $100,000，但 Instrument of Transfer 寫 $90,000，或者股份數量唔 match。咁樣稅局會打回頭，要重新做過晒文件。</p>
+            </div>
+            <div class="border-l-4 border-red-400 pl-4 py-2">
+              <p class="font-bold text-navy">❌ 錯誤 4：轉讓後冇 update 股東名冊</p>
+              <p class="text-sm text-gray-600 mt-1">完成轉讓之後冇及時更新公司內部紀錄。有人成三年冇 update 股東名冊，結果搞到公司要賣嘅時候先發現紀錄亂晒龍，要花錢請人追返啲記錄。</p>
+            </div>
+            <div class="border-l-4 border-red-400 pl-4 py-2">
+              <p class="font-bold text-navy">❌ 錯誤 5：董事變更冇交 ND2A</p>
+              <p class="text-sm text-gray-600 mt-1">如果股份轉讓之後董事有變動（例如賣方同時係董事，退股後辭任董事），要喺 <strong>15 日內</strong> 提交 ND2A 通知公司註冊處。錯過 deadline 公司註冊處會罰款，仲會留 record。</p>
+            </div>
+          </div>
+
+          <div class="flex justify-end pt-2">
+            <button @click="goToStep(7)" class="bg-navy hover:bg-navy-light text-white font-semibold px-6 py-2.5 rounded-lg transition flex items-center gap-2 text-sm">
+              下一節：常見問題 →
+            </button>
+          </div>
+        </div>
+
+        <!-- ═══ Section: FAQ (index 7) ═══ -->
+        <div x-show="currentStep === 7" x-transition:enter.duration.300ms class="bg-white rounded-xl border border-gray-200 p-6 sm:p-8 mb-6 leading-relaxed text-gray-700">
+          <h2 class="text-2xl sm:text-3xl font-bold text-navy mb-6 flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center text-lg shrink-0">❓</span>
+            常見問題（FAQ）
+          </h2>
+
+          <div class="divide-y divide-gray-200">
+            <div class="py-4 first:pt-0" x-data="{ open: false }">
+              <button @click="open = !open" class="w-full text-left flex items-center justify-between gap-2 font-bold text-navy text-base">
+                <span>Q: 香港公司股份轉讓要幾耐時間？</span>
+                <span class="shrink-0 text-lg transition-transform" :class="open ? 'rotate-180' : ''">▼</span>
+              </button>
+              <p x-show="open" x-transition:enter.duration.200ms class="mt-2 text-gray-700 text-sm">
+                一般嚟講，由準備文件到完成所有程序，大約需要 1 至 2 個星期。但係最關鍵嘅係「2 個工作天規則」：如果轉讓雙方都喺香港簽署，遞交印花稅嘅 Deadline 係簽署日起計 2 個工作天內，呢個期限好 tight，一定要留意。
+              </p>
+            </div>
+            <div class="py-4" x-data="{ open: false }">
+              <button @click="open = !open" class="w-full text-left flex items-center justify-between gap-2 font-bold text-navy text-base">
+                <span>Q: 股份轉讓嘅印花稅（厘印費）點計？</span>
+                <span class="shrink-0 text-lg transition-transform" :class="open ? 'rotate-180' : ''">▼</span>
+              </button>
+              <p x-show="open" x-transition:enter.duration.200ms class="mt-2 text-gray-700 text-sm">
+                印花稅係按轉讓價計算：賣方俾 0.1%，買方俾 0.1%，即係合共 0.2%，另加每張轉讓書 $5 定額印花稅。舉個例，如果股份轉讓價係 $100,000，總印花稅就係 $200 + $5 = $205。如果超過 2 個月未交印花稅，罰款可以高達原本稅額嘅 10 倍，絕對唔好遲交。
+              </p>
+            </div>
+            <div class="py-4" x-data="{ open: false }">
+              <button @click="open = !open" class="w-full text-left flex items-center justify-between gap-2 font-bold text-navy text-base">
+                <span>Q: 股份轉讓可唔可以自己搞？定係一定要搵會計師？</span>
+                <span class="shrink-0 text-lg transition-transform" :class="open ? 'rotate-180' : ''">▼</span>
+              </button>
+              <p x-show="open" x-transition:enter.duration.200ms class="mt-2 text-gray-700 text-sm">
+                股份轉讓完全可以自己搞。只要跟足步驟、準備齊文件，自己搞可以慳返會計公司收嘅 $1,000 至 $3,000 行政費。ESGov 提供晒所有範本同工具，包括 Sold Note、Instrument of Transfer、Letter of Transferee 等，全部免費。當然，如果公司章程有複雜限制，或者牽涉大額交易，建議先諮詢律師。
+              </p>
+            </div>
+            <div class="py-4" x-data="{ open: false }">
+              <button @click="open = !open" class="w-full text-left flex items-center justify-between gap-2 font-bold text-navy text-base">
+                <span>Q: 股份轉讓之後，買方要唔要重新開銀行戶口？</span>
+                <span class="shrink-0 text-lg transition-transform" :class="open ? 'rotate-180' : ''">▼</span>
+              </button>
+              <p x-show="open" x-transition:enter.duration.200ms class="mt-2 text-gray-700 text-sm">
+                唔使。公司銀行戶口係公司名義嘅，唔會因為股東變動而改變。但如果董事有變，就要去銀行 update 簽名授權人，呢點好多人唔記得。
+              </p>
+            </div>
+            <div class="py-4" x-data="{ open: false }">
+              <button @click="open = !open" class="w-full text-left flex items-center justify-between gap-2 font-bold text-navy text-base">
+                <span>Q: 股份可以送俾人（零代價轉讓）嗎？要唔要俾印花稅？</span>
+                <span class="shrink-0 text-lg transition-transform" :class="open ? 'rotate-180' : ''">▼</span>
+              </button>
+              <p x-show="open" x-transition:enter.duration.200ms class="mt-2 text-gray-700 text-sm">
+                可以。但注意：就算係零代價（$0 轉讓），稅局一樣會要求你申報印花稅。稅局會按股份嘅公平市值（Fair Market Value）去計算應繳稅款，唔係話 $0 就唔使俾錢。所以建議都要準備公司最近期嘅審計報告，證明股份嘅合理價值。
+              </p>
+            </div>
+            <div class="py-4" x-data="{ open: false }">
+              <button @click="open = !open" class="w-full text-left flex items-center justify-between gap-2 font-bold text-navy text-base">
+                <span>Q: 股份轉讓會影響公司嘅稅務狀況嗎？</span>
+                <span class="shrink-0 text-lg transition-transform" :class="open ? 'rotate-180' : ''">▼</span>
+              </button>
+              <p x-show="open" x-transition:enter.duration.200ms class="mt-2 text-gray-700 text-sm">
+                一般嚟講唔會直接影響公司稅務。公司仍然係同一個法律實體，稅務編號（BR）唔會變。但係要留意：如果轉讓價明顯低過市場價值，稅局有可能會質疑係咪意圖避稅。另外，如果轉讓導致最終控制權變更，可能會影響之前嘅虧損結轉（Tax Loss Carry Forward）安排。
+              </p>
+            </div>
+            <div class="py-4" x-data="{ open: false }">
+              <button @click="open = !open" class="w-full text-left flex items-center justify-between gap-2 font-bold text-navy text-base">
+                <span>Q: 如果股份轉讓涉及多個股東，程序會唔會好複雜？</span>
+                <span class="shrink-0 text-lg transition-transform" :class="open ? 'rotate-180' : ''">▼</span>
+              </button>
+              <p x-show="open" x-transition:enter.duration.200ms class="mt-2 text-gray-700 text-sm">
+                如果只係一個賣方同一個買方，程序好簡單。但如果牽涉多個股東（例如同時有幾個股東賣俾一個買方，或者一個股東賣俾幾個買方），就需要準備多份 Instrument of Transfer，每份都要獨立計算印花稅。建議用 ESGov 嘅工具逐份生成，確保數字準確。
+              </p>
+            </div>
+            <div class="py-4 last:pb-0" x-data="{ open: false }">
+              <button @click="open = !open" class="w-full text-left flex items-center justify-between gap-2 font-bold text-navy text-base">
+                <span>Q: 轉讓完成後要保留啲咩文件？保留幾耐？</span>
+                <span class="shrink-0 text-lg transition-transform" :class="open ? 'rotate-180' : ''">▼</span>
+              </button>
+              <p x-show="open" x-transition:enter.duration.200ms class="mt-2 text-gray-700 text-sm">
+                完成股份轉讓後，建議保留以下文件最少 7 年：已簽署嘅 Sold Note、經 stamp 嘅 Instrument of Transfer、印花稅收據、更新後嘅股東名冊、新嘅股份證明書副本。這些文件喺將來公司賣盤、融資或稅務審計時都可能需要用到。
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm mt-6">
+            <p class="font-bold text-navy">📖 想了解更全面嘅公司合規資訊？</p>
+            <p class="mt-1">睇我哋嘅 <a href="/blog/" class="text-gold hover:underline font-semibold">網誌總覽</a>，有齊股份轉讓、印花稅、SCR、股份證明書等詳細文章。</p>
+          </div>
+
+          <div class="flex justify-end pt-2">
+            <button @click="goToStep(0)" class="bg-navy hover:bg-navy-light text-white font-semibold px-6 py-2.5 rounded-lg transition flex items-center gap-2 text-sm">
+              從頭睇過 →
+            </button>
+          </div>
+        </div>
+
+        <!-- ═══ Bottom CTA ═══ -->
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 sm:p-8 text-center mt-6">
+          <p class="text-xl font-bold text-navy mb-3">想自己搞掂股份轉讓？我哋有齊晒所有範本同工具</p>
+          <p class="text-gray-600 mb-4">全部免費 🆓 · 含 Sold Note、Instrument of Transfer、Letter of Transferee 生成工具</p>
+          <a href="/share-transfer/" class="inline-block bg-navy hover:bg-navy-light text-white font-semibold px-8 py-3 rounded-lg transition">📄 開始免費指南</a>
+          <p class="text-xs text-gray-500 mt-3">唔使俾會計公司賺幾千蚊服務費</p>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ═══ Footer ═══ -->
+  <footer class="bg-navy text-white py-8 mt-10">
+    <div class="max-w-6xl mx-auto px-4 text-center text-sm text-gray-400">
+      <p>© 2026 ESGov. 由真實經歷者整理，實戰經驗分享。</p>
+      <p class="mt-1">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
+      <p class="mt-1">最後更新：2026年6月 · v12.52</p>
+    </div>
+  </footer>
+
+  <script>
+    function productPage() {
+      return {
+        currentStep: 0,
+        navItems: [
+          {
+            emoji: '📋',
+            label: 'Step 1: 確認章程冇限制',
+            title: 'Step 1 — 確認公司章程冇限制',
+            free: true,
+            content: `
+              <h3 class="text-lg font-bold text-navy mt-4 mb-3">呢個步驟要點做？</h3>
+              <p>好多人一嚟就諗住填文件，但其實第一步唔係填 form，係睇公司章程（Articles of Association）。</p>
+              <p>點解？因為公司章程有機會有 <strong class="text-navy">優先購買權（Pre-emption Rights）</strong> 條款。簡單講，如果公司有呢條款，股東想賣股份出去之前，一定要 <strong class="text-navy">優先 offer 俾現有股東</strong>，現有股東話唔要，你先可以賣俾街外人。</p>
+              <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4 text-sm mt-4">
+                <p class="font-bold text-navy">✅ 點樣 check？</p>
+                <ul class="list-disc pl-5 mt-2 space-y-1">
+                  <li>搵返公司註冊嗰陣嘅章程文件</li>
+                  <li>或者上公司註冊處嘅 <a href="https://www.e-services.cr.gov.hk/" class="text-gold hover:underline" target="_blank" rel="noopener noreferrer">e-Services Portal</a> 查冊</li>
+                  <li>睇下有冇 "Pre-emption" 或者 "Right of first refusal" 字眼</li>
+                  <li>有嘅話就要跟程序做 Offer 通知，等現有股東 reply</li>
+                </ul>
+              </div>
+
+              <h3 class="text-lg font-bold text-navy mt-4 mb-3">需要咩文件？</h3>
+              <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm">
+                <p class="font-bold text-navy">📋 章程檢查清單 🆓</p>
+                <p class="mt-1">逐項 check 公司章程有冇限制條款，確保唔會踩中 Pre-emption Rights 陷阱。</p>
+                <a href="/articles-check-tool/" class="mt-2 inline-block bg-navy hover:bg-navy-light text-white font-semibold px-4 py-2 rounded-lg text-xs transition">🚀 下載清單</a>
+              </div>
+
+              <h4 class="font-bold text-red-700 mt-4 mb-2 flex items-center gap-2">⚠️ 常見錯誤導致補交</h4>
+              <div class="bg-red-50 border border-red-200 rounded-xl p-3 text-sm">
+                <p class="text-red-600"><strong>冇睇章程就簽文件</strong> — 如果章程有 Pre-emption Rights，已簽文件可能無效，公司註冊處唔會 accept，仲可能要賠償俾受影響嘅股東。</p>
+              </div>
+
+              <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm mt-4">
+                <p class="font-bold text-navy">🔍 真實案例</p>
+                <p class="mt-1">有 partner 傾好咗轉讓價錢，對方過咗錢先發現章程有優先購買權條款。結果另一個股東話要行使權利買埋啲股份，搞到成鑊粥，最後要退錢，晒咗成個月時間。呢個 case 話俾你聽：Step 1 絕對唔可以 skip。</p>
+              </div>
+            `
+          },
+          {
+            emoji: '📄',
+            label: 'Step 2: 準備股份賣出單',
+            title: 'Step 2 — 準備股份賣出單（Sold Note）',
+            free: true,
+            content: `
+              <h3 class="text-lg font-bold text-navy mt-4 mb-3">呢個步驟要點做？</h3>
+              <p>確認章程冇問題之後，第一份要準備嘅文件係 <strong class="text-navy">股份賣出單（Sold Note）</strong>，或者叫買入單（Bought Note）。</p>
+              <p>呢份文件係記錄雙方嘅交易細節，包括：</p>
+              <ul class="list-disc pl-6 space-y-1 mt-2">
+                <li>轉讓股份嘅數量同類別（普通股定優先股）</li>
+                <li>每股作價同總代價</li>
+                <li>交易日期</li>
+                <li>賣方同買方嘅資料（全名、身份證／護照號碼、地址）</li>
+              </ul>
+              <p class="mt-2">呢份文件雖然係雙方 agreement，唔使交俾公司註冊處，但一定要留底。因為之後嘅 Instrument of Transfer 同印花稅計算都要對住 Sold Note 嘅數字。</p>
+              <p class="mt-1"><strong class="text-navy">強調：</strong> Sold Note 係後續所有文件嘅基礎，數字一定要準確。</p>
+
+              <h3 class="text-lg font-bold text-navy mt-4 mb-3">需要咩文件？</h3>
+              <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm">
+                <p class="font-bold text-navy">📄 股份賣出單（Sold Note）生成器 🆓</p>
+                <p class="mt-1">輸入股數、作價、雙方資料，即生成完整 PDF，慳返你搵範本嘅時間。</p>
+                <a href="/sold-note-generator/" class="mt-2 inline-block bg-navy hover:bg-navy-light text-white font-semibold px-4 py-2 rounded-lg text-xs transition">🚀 填寫 + 生成 PDF</a>
+              </div>
+
+              <h4 class="font-bold text-red-700 mt-4 mb-2 flex items-center gap-2">⚠️ 常見錯誤導致補交</h4>
+              <div class="bg-red-50 border border-red-200 rounded-xl p-3 text-sm">
+                <p class="text-red-600"><strong>Sold Note 同 Instrument of Transfer 數字唔一致</strong> — 稅局會打回頭，要重新做過晒文件。所以數字一定要 double check。</p>
+              </div>
+
+              <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm mt-4">
+                <p class="font-bold text-navy">🔍 真實案例</p>
+                <p class="mt-1">有人同買家傾好口頭就算，冇寫 Sold Note。結果去到填 Instrument of Transfer 嗰陣，兩個人都唔記得確實係咩價錢成交，搞到要返轉頭再傾，晒咗成個星期。</p>
+              </div>
+            `
+          },
+          {
+            emoji: '✍️',
+            label: 'Step 3: 簽署股份轉讓書',
+            title: 'Step 3 — 簽署股份轉讓書（Instrument of Transfer）',
+            free: true,
+            content: `
+              <h3 class="text-lg font-bold text-navy mt-4 mb-3">呢個步驟要點做？</h3>
+              <p>呢份就係最核心嘅文件 — <strong class="text-navy">股份轉讓書（Instrument of Transfer）</strong>，係一份法定文件，證明股份由賣方正式轉讓俾買方。</p>
+              <p>香港一般用嘅係 <strong class="text-navy">Stock Transfer Form</strong> 格式（類似英國嗰隻），內容包括：</p>
+              <ul class="list-disc pl-6 space-y-1 mt-2">
+                <li>公司名稱同公司編號</li>
+                <li>股份數量同類別</li>
+                <li>轉讓代價（即係 Sold Note 上面嗰個總價錢）</li>
+                <li>賣方簽署（Transferor）</li>
+                <li>買方簽署（Transferee）</li>
+                <li>見證人簽署（最好有，唔係強制但強烈建議）</li>
+              </ul>
+
+              <div class="bg-red-50 border border-red-200 rounded-xl p-4 text-sm mt-4">
+                <p class="font-bold text-red-700">⚠️ 關鍵 Deadline：2 個工作天規則</p>
+                <p class="mt-1 text-red-600">如果轉讓雙方都喺香港簽署，份 Instrument of Transfer 簽好之後，你一定要喺 <strong class="text-red-800">簽署日起計 2 個工作天內</strong> 遞交俾稅局打印花稅（厘印）。呢個係法定要求，唔係講笑。超過 2 個月未交印花稅，罰款可以高達原本稅額嘅 <strong class="text-red-800">10 倍</strong>！</p>
+              </div>
+              <p class="mt-2">建議：簽名之前就準備好晒所有嘢，約埋同一日簽，簽完即日 scan 同 upload 去稅局嘅電子印花稅系統（IRSD120），唔好拖。</p>
+
+              <h3 class="text-lg font-bold text-navy mt-4 mb-3">需要咩文件？</h3>
+              <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm">
+                <p class="font-bold text-navy">📄 Instrument of Transfer 生成器 🆓</p>
+                <p class="mt-1">輸入公司名、編號、股份數量、代價，即時生成 PDF，唔知點填都冇問題。</p>
+                <a href="/instrument-transfer-generator/" class="mt-2 inline-block bg-navy hover:bg-navy-light text-white font-semibold px-4 py-2 rounded-lg text-xs transition">🚀 填寫 + 生成 PDF</a>
+              </div>
+
+              <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm mt-4">
+                <p class="font-bold text-navy">📄 承讓人確認信（Letter of Transferee）🆓</p>
+                <p class="mt-1">轉讓完成後需要承讓人確認信？我哋都整咗個生成器俾你。</p>
+                <a href="/letter-of-transferee-generator/" class="mt-2 inline-block bg-navy hover:bg-navy-light text-white font-semibold px-4 py-2 rounded-lg text-xs transition">🚀 填寫 + 生成 PDF</a>
+              </div>
+
+              <h4 class="font-bold text-red-700 mt-4 mb-2 flex items-center gap-2">⚠️ 常見錯誤導致補交</h4>
+              <div class="bg-red-50 border border-red-200 rounded-xl p-3 text-sm">
+                <p class="text-red-600"><strong>超過 2 個工作天先交印花稅</strong> — 呢個係最多人中嘅陷阱！簽好文件後以為可以慢慢搞，過咗 deadline 要俾罰款，過咗 2 個月罰款可達 10 倍。</p>
+              </div>
+            `
+          },
+          {
+            emoji: '💵',
+            label: 'Step 4: 俾印花稅（厘印費）',
+            title: 'Step 4 — 俾印花稅（厘印費）',
+            free: true,
+            content: `
+              <h3 class="text-lg font-bold text-navy mt-4 mb-3">呢個步驟要點做？</h3>
+              <p>文件簽好之後，就要去 <strong class="text-navy">稅局（IRD）</strong> 打厘印（即係俾印花稅）。呢一步好多人覺得複雜，但其實而家可以網上搞。</p>
+              <p>經稅局 <a href="https://www.gov.hk/tc/residents/taxes/stamp/duty/stampduty.htm" class="text-gold hover:underline" target="_blank" rel="noopener noreferrer">IRSD120 電子系統</a> 遞交，上載已簽署嘅 Instrument of Transfer，俾印花稅就得。</p>
+
+              <h3 class="text-lg font-bold text-navy mt-4 mb-3">印花稅點計？</h3>
+              <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+                <table class="w-full text-sm">
+                  <thead>
+                    <tr class="border-b border-gray-300">
+                      <th class="text-left py-2 font-bold text-navy">項目</th>
+                      <th class="text-right py-2 font-bold text-navy">費率</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b border-gray-100">
+                      <td class="py-2">賣方（Transferor）</td>
+                      <td class="text-right py-2">0.10%</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                      <td class="py-2">買方（Transferee）</td>
+                      <td class="text-right py-2">0.10%</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                      <td class="py-2 font-semibold">合共</td>
+                      <td class="text-right py-2 font-semibold">0.20%</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2">每張轉讓書定額</td>
+                      <td class="text-right py-2">$5</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="mt-2"><strong class="text-navy">舉個例：</strong> 假設股份轉讓價係 $100,000，咁印花稅就係：</p>
+              <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center text-lg font-bold text-navy">
+                $100,000 × 0.2% + $5 = $200 + $5 = <span class="text-gold">$205</span>
+              </div>
+
+              <h3 class="text-lg font-bold text-navy mt-4 mb-3">需要咩文件？</h3>
+              <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm">
+                <p class="font-bold text-navy">🧮 印花稅計算器 🆓</p>
+                <p class="mt-1">輸入轉讓價，自動計算買方/賣方印花稅 + 總額，唔怕計錯數。</p>
+                <a href="/stamp-duty-calculator/" class="mt-2 inline-block bg-navy hover:bg-navy-light text-white font-semibold px-4 py-2 rounded-lg text-xs transition">🚀 即時計算</a>
+              </div>
+
+              <h4 class="font-bold text-red-700 mt-4 mb-2 flex items-center gap-2">⚠️ 遲交印花稅罰則</h4>
+              <div class="bg-red-50 border border-red-200 rounded-xl p-3 text-sm">
+                <ul class="list-disc pl-5 space-y-1 text-red-600">
+                  <li>超過 2 個月：罰款最高可達原本稅額嘅 <strong class="text-red-800">10 倍</strong></li>
+                  <li>就算只係遲一日提交，都已經開始計罰款</li>
+                  <li>所以簽好文件之後，第一個要搞嘅就係印花稅，唔好等</li>
+                </ul>
+              </div>
+            `
+          },
+          {
+            emoji: '📋',
+            label: 'Step 5: 更新公司紀錄',
+            title: 'Step 5 — 更新公司紀錄 + 交 NAR1',
+            free: true,
+            content: `
+              <h3 class="text-lg font-bold text-navy mt-4 mb-3">呢個步驟要點做？</h3>
+              <p>印花稅搞掂之後，最後一步就係更新公司嘅內部紀錄同埋向公司註冊處申報。呢步係最容易被忽略嘅，但係最關鍵嘅一步。</p>
+
+              <h3 class="text-lg font-bold text-navy mt-4 mb-3">要更新嘅公司紀錄</h3>
+              <ul class="list-disc pl-6 space-y-2">
+                <li><strong>股東名冊（Register of Members）</strong> — 記錄新嘅股東名單，包括邊個持有幾多股</li>
+                <li><strong>董事名冊（Register of Directors）</strong> — 如果股權變動導致董事變更</li>
+                <li><strong>股份證明書（Share Certificate）</strong> — 發新嘅俾新股東，舊嘅收返</li>
+                <li><strong>重要控制人登記冊（SCR）</strong> — 如果最終控制人有變都要 update</li>
+              </ul>
+
+              <h3 class="text-lg font-bold text-navy mt-4 mb-3">要交俾公司註冊處嘅文件</h3>
+              <ul class="list-disc pl-6 space-y-2">
+                <li><strong>NAR1（周年申報表）</strong> — 喺每年公司成立周年日提交，更新股東資料</li>
+                <li><strong>ND2A（更改董事及公司秘書通知）</strong> — 如果轉讓後董事有變動，必須喺 <strong class="text-navy">15 日內</strong> 提交</li>
+                <li><strong>經 stamped 嘅 Instrument of Transfer</strong> — 證明股份轉讓已經打咗厘印</li>
+                <li><strong>最近期嘅審計報告（Financial Statements）</strong> — 税局間中會要求提交去核實轉讓價是否合理</li>
+              </ul>
+
+              <div class="bg-red-50 border border-red-200 rounded-xl p-4 text-sm mt-4">
+                <p class="font-bold text-red-700">⚠️ 唔更新紀錄嘅後果</p>
+                <p class="mt-1 text-red-600">未更新紀錄 = 公司法律文件唔準確，可能影響將來公司賣盤或融資。有人成三年冇 update 股東名冊，結果搞到公司要賣嘅時候先發現紀錄亂晒龍，要花錢請人追返啲記錄。</p>
+              </div>
+
+              <h3 class="text-lg font-bold text-navy mt-4 mb-3">需要咩文件？</h3>
+              <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm">
+                <p class="font-bold text-navy">📋 轉讓後跟進 Checklist 🆓</p>
+                <p class="mt-1">逐項完成轉讓後申報：更新股東名冊、ND2A、SCR、銀行授權人，唔怕漏咗任何一步。</p>
+                <a href="/post-transfer-checklist/" class="mt-2 inline-block bg-navy hover:bg-navy-light text-white font-semibold px-4 py-2 rounded-lg text-xs transition">🚀 下載 Checklist</a>
+              </div>
+
+              <h4 class="font-bold text-red-700 mt-4 mb-2 flex items-center gap-2">⚠️ 常見錯誤導致補交</h4>
+              <div class="bg-red-50 border border-red-200 rounded-xl p-3 text-sm">
+                <p class="text-red-600"><strong>轉讓後冇 update 股東名冊</strong> — 公司紀錄唔準確，影響將來公司賣盤或融資。另外董事變更冇交 ND2A 會被罰款同留 record。</p>
+              </div>
+
+              <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm mt-4">
+                <p class="font-bold text-navy">🔍 延伸閱讀</p>
+                <p class="mt-1">了解更多：<a href="/blog/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%8F%B8%E7%99%BC%E5%87%BA%E8%82%A1%E4%BB%BD%E8%AD%89%E6%98%8E%E6%9B%B8%EF%BC%88Share%20Certificate%EF%BC%89%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97.html" class="text-gold hover:underline font-semibold">股份證明書終極指南</a> 同 <a href="/scr/" class="text-gold hover:underline font-semibold">SCR 重要控制人登記冊指南</a></p>
+              </div>
+            `
+          }
+        ],
+        init() {
+          // Scroll to top on step change / page load
+        },
+        goToStep(index) {
+          this.currentStep = index;
+          window.scrollTo({ top: 200, behavior: 'smooth' });
+        },
+        nextStep() {
+          if (this.currentStep < 4) {
+            this.goToStep(this.currentStep + 1);
+          }
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
