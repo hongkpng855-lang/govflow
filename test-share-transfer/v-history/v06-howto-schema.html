@@ -12,7 +12,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/style.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -101,66 +100,6 @@
   ]
 }
   </script>
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SiteNavigationElement",
-  "name": "ESGov Main Navigation",
-  "description": "Main site navigation for esgov.org — Hong Kong company secretarial guides",
-  "hasPart": [
-    {
-      "@type": "SiteNavigationElement",
-      "name": "首頁",
-      "url": "https://esgov.org",
-      "position": 1
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "name": "股份轉讓",
-      "url": "https://esgov.org/shareholder-transfer/",
-      "position": 2
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "name": "重要控制人登記冊 (SCR)",
-      "url": "https://esgov.org/significant-controllers-register/",
-      "position": 3
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "name": "公司改名",
-      "url": "https://esgov.org/company-name-change/",
-      "position": 4
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "name": "撤銷註冊",
-      "url": "https://esgov.org/deregistration/",
-      "position": 5
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "name": "Blog",
-      "url": "https://esgov.org/blog/",
-      "position": 6
-    }
-  ]
-}
-  </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": [
-      "#step-content > div.bg-gray-50 > p"
-    ]
-  },
-  "url": "https://esgov.org/shareholder-transfer/"
-}
-</script>
   </head>
 <body x-data="{
   processData: null,
@@ -288,7 +227,7 @@
   <!-- ═══════════════ Sticky Header ═══════════════ -->
   <div class="sticky-header bg-navy text-white shadow-lg" x-init="init()">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="flex items-center justify-between h-12 sm:h-16">
+      <div class="flex items-center justify-between h-14 sm:h-16">
         <a href="/" class="flex items-center gap-2.5 shrink-0"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
         <div class="flex items-center gap-2 min-w-0 ml-3 pl-3 border-l border-white/20">
           <a href="/" class="text-gold shrink-0 hover:text-gold-light transition text-sm sm:text-base">←</a>
@@ -333,7 +272,7 @@
   </div>
 
   <!-- ═══════════════ Main Content ═══════════════ -->
-  <div class="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
     <div class="flex gap-8">
 
       <!-- Desktop Sidebar -->
@@ -392,22 +331,6 @@
       <!-- ═══════════════ Content Area ═══════════════ -->
       <main id="step-content" class="flex-1 min-w-0">
 
-        <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 sm:p-5 mb-8">
-          <p class="text-xs sm:text-sm text-gray-700 leading-relaxed line-clamp-3">
-            股份轉讓係指香港有限公司將股權由現有股東轉移俾新股東嘅法定程序。呢個免費指南詳細講解 5 個步驟，跟住做就搞掂晒，慳返會計公司幾千蚊服務費。
-          </p>
-        </div>
-
-        <!-- Related guides -->
-        <div class="mt-8 mb-4 bg-gold/5 border border-gold/20 rounded-xl p-5">
-          <h3 class="text-base font-bold text-navy mb-3">📚 相關指南</h3>
-          <ul class="space-y-2 text-sm">
-            <li>• <a href="/blog/香港公司股份轉讓流程2026.html" class="text-gold hover:text-gold-light transition font-medium">香港有限公司股份轉讓完整流程（2026 最新）— 5 個步驟搞掂</a></li>
-            <li>• <a href="/blog/香港公司股份證明書ShareCertificate終極指南.html" class="text-gold hover:text-gold-light transition font-medium">香港公司發出股份證明書（Share Certificate）終極指南 — 發新股、轉股東後必做</a></li>
-            <li>• <a href="/blog/香港公司印花稅厘印費終極指南.html" class="text-gold hover:text-gold-light transition font-medium">香港公司印花稅（厘印費）終極指南 — 股份轉讓、物業買賣、租約全面拆解</a></li>
-          </ul>
-        </div>
-
         <!-- Loading -->
         <div x-show="isLoading" class="text-center py-20">
           <div class="w-8 h-8 border-4 border-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
@@ -427,7 +350,7 @@
             <!-- Step Header -->
             <div class="mb-8">
               <div class="flex items-center gap-3 mb-2">
-                <span class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gold text-navy flex items-center justify-center font-bold text-lg">
+                <span class="w-10 h-10 rounded-full bg-gold text-navy flex items-center justify-center font-bold text-lg">
                   <span x-text="getStepIcon(s)"></span>
                 </span>
                 <span class="text-sm text-green-600 font-semibold">🆓 免費步驟 | Step <span x-text="s.stepNumber"></span></span>
@@ -444,15 +367,15 @@
             </div>
 
             <!-- Details -->
-            <div class="bg-white rounded-xl border border-gray-200 p-4 sm:p-6 mb-8">
-              <h3 class="font-semibold text-navy text-lg mb-3">呢個步驟要點做？</h3>
+            <div class="bg-white rounded-xl border border-gray-200 p-6 mb-8">
+              <h3 class="font-semibold text-navy text-lg mb-3">詳細說明</h3>
               <div class="text-gray-700 leading-relaxed whitespace-pre-line text-sm" x-text="s.details"></div>
             </div>
 
                         <!-- Documents -->
             <div x-show="s.documents && s.documents.length >= 1" class="mb-8">
-              <h3 class="font-semibold text-navy text-lg mb-4">需要咩文件？</h3>
-              <div class="grid sm:grid-cols-2 gap-3 sm:gap-4">
+              <h3 class="font-semibold text-navy text-lg mb-4">所需文件</h3>
+              <div class="grid sm:grid-cols-2 gap-4">
                 <template x-for="(doc, idx) in s.documents" :key="idx">
                   <a :href="doc['generatorUrl'] || '#'" @click="doc['generatorUrl'] || (openDoc(s.documents[idx]), false)"
                      class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md">
@@ -490,19 +413,19 @@
             </div>
 
             <!-- Step Navigation Buttons -->
-            <div class="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0 mt-8 mb-4">
+            <div class="flex justify-between items-center mt-8 mb-4">
               <button
                 x-show="s.stepNumber > 1"
                 @click="goToStep(s.stepNumber - 1)"
-                class="btn-gov btn-gov-dark text-sm w-full sm:w-auto"
+                class="btn-gov btn-gov-dark text-sm"
               >
                 ← 上一步
               </button>
-              <div x-show="s.stepNumber === 1 || s.stepNumber === totalSteps" class="hidden sm:block"></div>
+              <div x-show="s.stepNumber === 1 || s.stepNumber === totalSteps"></div>
               <button
                 x-show="s.stepNumber < totalSteps"
                 @click="goToStep(s.stepNumber + 1)"
-                class="btn-gov btn-gov-dark text-sm w-full sm:w-auto"
+                class="btn-gov btn-gov-dark text-sm"
               >
                 下一步 →
               </button>
@@ -700,8 +623,7 @@
           ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
           如有具體法律問題，請諮詢執業律師或專業公司秘書。
         </p>
-        <p class="text-xs text-gray-400 mt-2">最後更新：2026年6月</p>
-        <p>© 2026 ESGov. All rights reserved.</p>
+        <p>© 2025 ESGov. All rights reserved.</p>
         <p class="mt-2 opacity-40">v12.52</p>
       </div>
     </div>

@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/style.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -709,27 +710,30 @@
                   <a :href="doc['generatorUrl'] || '#'"
                      @click="doc['generatorUrl'] || (openDoc(s.documents[idx]), false)"
                      class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md">
-                    <template x-if="doc.demoImage">
+                    <template x-if="doc.demoImage && doc.demoImage !== '_placeholder_'">
                       <div class="h-32 sm:h-40 bg-gray-100 overflow-hidden relative">
                         <img :src="doc.demoImage" :alt="doc.name" class="w-full h-full object-cover" />
                         <div x-show="doc.hasGenerator" class="absolute top-2 right-2 bg-gold text-navy text-xs font-bold px-2 py-0.5 rounded-full shadow">互動工具</div>
                       </div>
                     </template>
-                    <template x-if="!doc.demoImage">
-                      <div class="h-32 sm:h-40 bg-gray-50 overflow-hidden relative flex items-center justify-center">
+                    <template x-if="!doc.demoImage || doc.demoImage === '_placeholder_'">
+                      <div class="h-32 sm:h-40 bg-gradient-to-br from-navy/5 to-gold/5 overflow-hidden relative flex items-center justify-center">
                         <div class="text-center">
-                          <div class="text-3xl mb-1">🛠️</div>
-                          <div class="text-sm font-semibold text-gray-400">準備中</div>
-                          <div class="text-xs text-gray-300 mt-0.5">真實範例即將上載</div>
+                          <div class="text-3xl mb-1">📄</div>
+                          <div class="text-sm font-semibold text-navy/60">線上工具</div>
+                          <div class="text-xs text-gray-400 mt-0.5">即時生成 PDF</div>
                         </div>
+                        <div x-show="doc.hasGenerator" class="absolute top-2 right-2 bg-gold text-navy text-xs font-bold px-2 py-0.5 rounded-full shadow">互動工具</div>
                       </div>
                     </template>
                     <div class="p-4">
                       <p class="font-bold text-sm text-navy" x-text="doc.name"></p>
-                      <p class="text-xs text-gray-500 mt-1 leading-relaxed" x-text="doc.description"></p>
-                      <div class="flex items-center gap-2 mt-3">
-                        <span x-show="doc.hasGenerator" class="inline-flex items-center gap-1.5 text-xs font-bold bg-gold text-navy px-4 py-2 rounded-lg hover:bg-gold-light transition shadow-sm">🚀 填寫 + 生成 PDF</span>
-                        <span x-show="!doc.hasGenerator" class="inline-flex items-center gap-1 text-xs font-medium bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition">👁️ 檢視範例 PDF</span>
+                      <p class="text-xs text-gray-500 mt-1 line-clamp-2" x-text="doc.description"></p>
+                      <div class="mt-2 flex items-center gap-1.5">
+                        <template x-if="doc.hasGenerator">
+                          <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">🚀 即時生成</span>
+                        </template>
+                        <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">🆓 免費</span>
                       </div>
                     </div>
                   </a>

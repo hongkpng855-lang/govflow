@@ -7,6 +7,7 @@ Usage: python3 scripts/generate-sitemap.py
 import os, datetime
 from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
+from urllib.parse import quote
 
 ROOT = '/mnt/c/Users/hongk/Desktop/esgov'
 BASE_URL = 'https://esgov.org'
@@ -71,7 +72,8 @@ for dirpath, dirnames, filenames in os.walk(ROOT):
         if url_path.endswith('.html') and url_path != '':
             url_path = url_path[:-5]  # Remove .html
         
-        full_url = f'{BASE_URL}/{url_path}'
+        safe_chars = '/,'
+        full_url = f'{BASE_URL}/{quote(url_path, safe=safe_chars)}'
         priority = PRIORITY.get(url_path, 0.5)
         
         url = SubElement(urlset, 'url')
