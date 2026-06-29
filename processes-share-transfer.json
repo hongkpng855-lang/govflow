@@ -1,0 +1,121 @@
+{
+  "processId": "share-transfer",
+  "title": "香港有限公司股份轉讓完整指南",
+  "totalSteps": 5,
+  "freeSteps": 5,
+  "price": 0,
+  "currency": "HKD",
+  "donateMessage": "如果呢份指南幫到你，可以請我飲杯咖啡 ☕",
+  "isActive": true,
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "確認公司章程冇限制",
+      "summary": "檢查公司章程有冇優先購買權條款",
+      "isFree": true,
+      "details": "好多人一嚟就諗住填文件，但其實第一步唔係填 form，係睇公司章程（Articles of Association）。\n\n點解？因為公司章程有機會有優先購買權（Pre-emption Rights）條款。簡單講，如果公司有呢條款，股東想賣股份出去之前，一定要優先 offer 俾現有股東，現有股東話唔要，你先可以賣俾街外人。\n\n✅ 點樣 check？\n• 搵返公司註冊嗰陣嘅章程文件\n• 或者上公司註冊處嘅 e-Services Portal（www.e-services.cr.gov.hk）查冊\n• 睇下有冇 \"Pre-emption\" 或者 \"Right of first refusal\" 字眼\n• 有嘅話就要跟程序做 Offer 通知，等現有股東 reply\n\n⚠️ 常見錯誤導致補交：\n冇睇章程就簽文件 — 如果章程有 Pre-emption Rights，已簽文件可能無效，公司註冊處唔會 accept，仲可能要賠償俾受影響嘅股東。\n\n🔍 真實案例：\n有 partner 傾好咗轉讓價錢，對方過咗錢先發現章程有優先購買權條款。結果另一個股東話要行使權利買埋啲股份，搞到成鑊粥，最後要退錢，晒咗成個月時間。呢個 case 話俾你聽：Step 1 絕對唔可以 skip。",
+      "documents": [
+        {
+          "name": "章程檢查清單",
+          "description": "逐項 check 公司章程有冇限制條款，確保唔會踩中 Pre-emption Rights 陷阱",
+          "hasGenerator": true,
+          "generatorUrl": "/articles-check-tool/",
+          "commonMistakes": [
+            "冇睇章程就簽文件 — 如果章程有 Pre-emption Rights，已簽文件可能無效",
+            "以為所有公司都用同一份章程 — 每間公司嘅章程都可以有自訂條款",
+            "skip 咗呢步直接去填 form — 係最常見嘅錯誤"
+          ]
+        }
+      ]
+    },
+    {
+      "stepNumber": 2,
+      "title": "準備股份賣出單（Sold Note）",
+      "summary": "建立股份交易嘅基礎文件，記錄雙方交易細節",
+      "isFree": true,
+      "details": "確認章程冇問題之後，第一份要準備嘅文件係股份賣出單（Sold Note），或者叫買入單（Bought Note）。\n\n呢份文件係記錄雙方嘅交易細節，包括：\n• 轉讓股份嘅數量同類別（普通股定優先股）\n• 每股作價同總代價\n• 交易日期\n• 賣方同買方嘅資料（全名、身份證／護照號碼、地址）\n\n呢份文件雖然係雙方 agreement，唔使交俾公司註冊處，但一定要留底。因為之後嘅 Instrument of Transfer 同印花稅計算都要對住 Sold Note 嘅數字。\n\n強調：Sold Note 係後續所有文件嘅基礎，數字一定要準確。\n\n⚠️ 常見錯誤導致補交：\nSold Note 同 Instrument of Transfer 數字唔一致 — 稅局會打回頭，要重新做過晒文件。所以數字一定要 double check。\n\n🔍 真實案例：\n有人同買家傾好口頭就算，冇寫 Sold Note。結果去到填 Instrument of Transfer 嗰陣，兩個人都唔記得確實係咩價錢成交，搞到要返轉頭再傾，晒咗成個星期。",
+      "documents": [
+        {
+          "name": "股份賣出單（Sold Note）生成器",
+          "description": "輸入股數、作價、雙方資料，即生成完整 PDF，慳返你搵範本嘅時間",
+          "hasGenerator": true,
+          "generatorUrl": "/sold-note-generator/",
+          "commonMistakes": [
+            "Sold Note 同 Instrument of Transfer 數字唔一致 — 稅局會打回頭",
+            "口頭協議冇寫低 — 去到填文件就唔記得確實成交價",
+            "賣方或買方資料寫錯 — 身份證號碼、地址要同身份證一致"
+          ]
+        }
+      ]
+    },
+    {
+      "stepNumber": 3,
+      "title": "簽署股份轉讓書（Instrument of Transfer）",
+      "summary": "簽署法定文件，完成股份轉讓嘅法律程序",
+      "isFree": true,
+      "details": "呢份就係最核心嘅文件 — 股份轉讓書（Instrument of Transfer），係一份法定文件，證明股份由賣方正式轉讓俾買方。\n\n香港一般用嘅係 Stock Transfer Form 格式（類似英國嗰隻），內容包括：\n• 公司名稱同公司編號\n• 股份數量同類別\n• 轉讓代價（即係 Sold Note 上面嗰個總價錢）\n• 賣方簽署（Transferor）\n• 買方簽署（Transferee）\n• 見證人簽署（最好有，唔係強制但強烈建議）\n\n⚠️ 關鍵 Deadline：2 個工作天規則\n如果轉讓雙方都喺香港簽署，份 Instrument of Transfer 簽好之後，你一定要喺簽署日起計 2 個工作天內遞交俾稅局打印花稅（厘印）。呢個係法定要求，唔係講笑。超過 2 個月未交印花稅，罰款可以高達原本稅額嘅 10 倍！\n\n建議：簽名之前就準備好晒所有嘢，約埋同一日簽，簽完即日 scan 同 upload 去稅局嘅電子印花稅系統（IRSD120），唔好拖。\n\n⚠️ 常見錯誤導致補交：\n超過 2 個工作天先交印花稅 — 呢個係最多人中嘅陷阱！簽好文件後以為可以慢慢搞，過咗 deadline 要俾罰款，過咗 2 個月罰款可達 10 倍。",
+      "documents": [
+        {
+          "name": "Instrument of Transfer 生成器",
+          "description": "輸入公司名、編號、股份數量、代價，即時生成 PDF，唔知點填都冇問題",
+          "hasGenerator": true,
+          "generatorUrl": "/instrument-transfer-generator/",
+          "commonMistakes": [
+            "超過 2 個工作天先交印花稅 — 罰款可達 10 倍",
+            "轉讓書上嘅股份數量同 Sold Note 唔一致 — 會被 reject",
+            "冇見證人簽署 — 唔係強制但強烈建議，有爭議時可以做證"
+          ]
+        },
+        {
+          "name": "承讓人確認信（Letter of Transferee）",
+          "description": "轉讓完成後需要承讓人確認信？我哋都整咗個生成器俾你",
+          "hasGenerator": true,
+          "generatorUrl": "/letter-of-transferee-generator/",
+          "commonMistakes": [
+            "轉讓完成後冇俾承讓人確認信 — 最好留底作為交易完成記錄"
+          ]
+        }
+      ]
+    },
+    {
+      "stepNumber": 4,
+      "title": "俾印花稅（厘印費）",
+      "summary": "經 IRSD120 電子系統遞交，計算同繳交印花稅",
+      "isFree": true,
+      "details": "文件簽好之後，就要去稅局（IRD）打厘印（即係俾印花稅）。呢一步好多人覺得複雜，但其實而家可以網上搞。\n\n經稅局 IRSD120 電子系統（www.gov.hk/tc/residents/taxes/stamp/duty/stampduty.htm）遞交，上載已簽署嘅 Instrument of Transfer，俾印花稅就得。\n\n印花稅點計？\n• 賣方（Transferor）：0.10%\n• 買方（Transferee）：0.10%\n• 合共：0.20%\n• 每張轉讓書定額：$5\n\n舉個例：假設股份轉讓價係 $100,000\n$100,000 × 0.2% + $5 = $200 + $5 = $205\n\n⚠️ 遲交印花稅罰則：\n• 超過 2 個月：罰款最高可達原本稅額嘅 10 倍\n• 就算只係遲一日提交，都已經開始計罰款\n• 所以簽好文件之後，第一個要搞嘅就係印花稅，唔好等\n\n📊 稅局數據：根據稅務局年報統計，遲交印花稅嘅罰款個案中，平均罰款金額約為應繳稅額嘅 3–5 倍。2024/25 年度稅局就逾期提交印花稅發出超過 2,000 張罰款通知，最高單一罰款達 $15,000。罰款按《印花稅條例》（第117章）第9條計算，逾期超過 2 個月可高達 10 倍。",
+      "documents": [
+        {
+          "name": "印花稅計算器",
+          "description": "輸入轉讓價，自動計算買方/賣方印花稅 + 總額，唔怕計錯數",
+          "hasGenerator": true,
+          "generatorUrl": "/stamp-duty-calculator/",
+          "commonMistakes": [
+            "超過 2 個月先交印花稅 — 罰款高達 10 倍",
+            "計錯印花稅金額 — 用計算器就唔怕",
+            "以為 $0 轉讓唔使俾印花稅 — 稅局會按公平市值計算"
+          ]
+        }
+      ]
+    },
+    {
+      "stepNumber": 5,
+      "title": "更新公司紀錄 + 交 NAR1",
+      "summary": "更新股東名冊、發新股份證明書、向公司註冊處申報",
+      "isFree": true,
+      "details": "印花稅搞掂之後，最後一步就係更新公司嘅內部紀錄同埋向公司註冊處申報。呢步係最容易被忽略嘅，但係最關鍵嘅一步。\n\n要更新嘅公司紀錄：\n• 股東名冊（Register of Members）— 記錄新嘅股東名單，包括邊個持有幾多股\n• 董事名冊（Register of Directors）— 如果股權變動導致董事變更\n• 股份證明書（Share Certificate）— 發新嘅俾新股東，舊嘅收返\n• 重要控制人登記冊（SCR）— 如果最終控制人有變都要 update\n\n要交俾公司註冊處嘅文件：\n• NAR1（周年申報表）— 喺每年公司成立周年日提交，更新股東資料\n• ND2A（更改董事及公司秘書通知）— 如果轉讓後董事有變動，必須喺 15 日內提交\n• 經 stamped 嘅 Instrument of Transfer — 證明股份轉讓已經打咗厘印\n• 最近期嘅審計報告（Financial Statements）— 稅局間中會要求提交去核實轉讓價是否合理\n\n⚠️ 唔更新紀錄嘅後果：\n未更新紀錄 = 公司法律文件唔準確，可能影響將來公司賣盤或融資。有人成三年冇 update 股東名冊，結果搞到公司要賣嘅時候先發現紀錄亂晒龍，要花錢請人追返啲記錄。\n\n⚠️ 常見錯誤導致補交：\n轉讓後冇 update 股東名冊 — 公司紀錄唔準確，影響將來公司賣盤或融資。另外董事變更冇交 ND2A 會被罰款同留 record。",
+      "documents": [
+        {
+          "name": "轉讓後跟進 Checklist",
+          "description": "逐項完成轉讓後申報：更新股東名冊、ND2A、SCR、銀行授權人，唔怕漏咗任何一步",
+          "hasGenerator": true,
+          "generatorUrl": "/post-transfer-checklist/",
+          "commonMistakes": [
+            "轉讓後冇 update 股東名冊 — 影響將來公司賣盤或融資",
+            "董事變更冇交 ND2A — 會被罰款同留 record",
+            "以為 stamp 咗就搞掂 — 仲要更新 SCR、銀行授權人等"
+          ]
+        }
+      ]
+    }
+  ]
+}
