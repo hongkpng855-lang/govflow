@@ -6,116 +6,166 @@
   "price": 0,
   "currency": "HKD",
   "donateMessage": "如果呢份指南幫到你，可以請我飲杯咖啡 ☕",
-  "isActive": true,
   "steps": [
     {
       "stepNumber": 1,
-      "title": "確認公司章程冇限制",
-      "summary": "檢查公司章程有冇優先購買權條款",
+      "title": "簽署股份賣出單（Sold Note / Bought Note）",
+      "summary": "記錄轉讓股數、作價及交易條款，雙方確認",
       "isFree": true,
-      "details": "好多人一嚟就諗住填文件，但其實第一步唔係填 form，係睇公司章程（Articles of Association）。\n\n點解？因為公司章程有機會有優先購買權（Pre-emption Rights）條款。簡單講，如果公司有呢條款，股東想賣股份出去之前，一定要優先 offer 俾現有股東，現有股東話唔要，你先可以賣俾街外人。\n\n✅ 點樣 check？\n• 搵返公司註冊嗰陣嘅章程文件\n• 或者上公司註冊處嘅 e-Services Portal（www.e-services.cr.gov.hk）查冊\n• 睇下有冇 \"Pre-emption\" 或者 \"Right of first refusal\" 字眼\n• 有嘅話就要跟程序做 Offer 通知，等現有股東 reply\n\n⚠️ 常見錯誤導致補交：\n冇睇章程就簽文件 — 如果章程有 Pre-emption Rights，已簽文件可能無效，公司註冊處唔會 accept，仲可能要賠償俾受影響嘅股東。\n\n🔍 真實案例：\n有 partner 傾好咗轉讓價錢，對方過咗錢先發現章程有優先購買權條款。結果另一個股東話要行使權利買埋啲股份，搞到成鑊粥，最後要退錢，晒咗成個月時間。呢個 case 話俾你聽：Step 1 絕對唔可以 skip。",
+      "details": "第一份文件，記錄雙方交易細節。份文件 confirm 咗之後先簽正式轉讓書。\n\n⚠️ 唔好做嘅事：\n• 唔好 skip 呢一步 → 冇 Sold Note，口頭 agreement 就到填轉讓書嗰陣數字亂晒龍\n• 股份類別唔好寫錯 → 普通股同優先股要分開列明，唔可以溝埋\n• 唔好只寫總額 → 要分開寫每股作價同總額，否則計印花稅要返轉頭計\n• 日期唔好寫錯 → 交易日期同之後嘅轉讓書日期要 match\n\n✅ 一定要做：\n• 雙方簽署確認約定\n• 列明每股作價同總代價\n• 保留簽署副本作記錄",
       "documents": [
         {
-          "name": "章程檢查清單",
-          "description": "逐項 check 公司章程有冇限制條款，確保唔會踩中 Pre-emption Rights 陷阱",
+          "name": "股份賣出單（Sold Note）",
+          "description": "記錄轉讓股數、作價及交易條款，雙方確認用。可使用互動工具直接填寫並一鍵生成 PDF。",
+          "demoImage": "/assets/demo/sold-note-realdemo-1.png?v=9.0",
+          "templateFile": "/templates/sold-note.docx",
           "hasGenerator": true,
-          "generatorUrl": "/articles-check-tool/",
           "commonMistakes": [
-            "冇睇章程就簽文件 — 如果章程有 Pre-emption Rights，已簽文件可能無效",
-            "以為所有公司都用同一份章程 — 每間公司嘅章程都可以有自訂條款",
-            "skip 咗呢步直接去填 form — 係最常見嘅錯誤"
-          ]
+            "冇做 Sold Note — 口頭 agreement 就算，到填轉讓書嗰陣數字亂晒龍",
+            "股份類別寫錯 — 普通股同優先股要分開列明，唔可以溝埋",
+            "冇寫每股作價 — 只寫總額，到計印花稅嗰陣要返轉頭計",
+            "日期寫錯 — 交易日期同轉讓書日期要 match"
+          ],
+          "generatorUrl": "/sold-note-generator"
         }
+      ],
+      "rejectionRisks": [
+        "數字唔一致 = Sold Note 同 Instrument of Transfer 對唔上，要重新確認"
       ]
     },
     {
       "stepNumber": 2,
-      "title": "準備股份賣出單（Sold Note）",
-      "summary": "建立股份交易嘅基礎文件，記錄雙方交易細節",
+      "title": "簽署股份轉讓書（Instrument of Transfer）",
+      "summary": "正式轉讓文件，轉讓人同承讓人雙方簽署，係提交政府嘅核心文件",
       "isFree": true,
-      "details": "確認章程冇問題之後，第一份要準備嘅文件係股份賣出單（Sold Note），或者叫買入單（Bought Note）。\n\n呢份文件係記錄雙方嘅交易細節，包括：\n• 轉讓股份嘅數量同類別（普通股定優先股）\n• 每股作價同總代價\n• 交易日期\n• 賣方同買方嘅資料（全名、身份證／護照號碼、地址）\n\n呢份文件雖然係雙方 agreement，唔使交俾公司註冊處，但一定要留底。因為之後嘅 Instrument of Transfer 同印花稅計算都要對住 Sold Note 嘅數字。\n\n強調：Sold Note 係後續所有文件嘅基礎，數字一定要準確。\n\n⚠️ 常見錯誤導致補交：\nSold Note 同 Instrument of Transfer 數字唔一致 — 稅局會打回頭，要重新做過晒文件。所以數字一定要 double check。\n\n🔍 真實案例：\n有人同買家傾好口頭就算，冇寫 Sold Note。結果去到填 Instrument of Transfer 嗰陣，兩個人都唔記得確實係咩價錢成交，搞到要返轉頭再傾，晒咗成個星期。",
+      "details": "核心文件，要交政府。格式錯即時退回。\n\n⚠️ 唔好做嘅事：\n• 唔好 download 通用模板 → 官方唔收，成個流程遲一個月\n• 公司名唔好寫錯 → 「Limited」漏咗即退\n• 見證人唔好搵親戚 → 被質疑獨立性\n• 日期唔好倒填 → 邏輯唔通被質疑\n\n✅ 一定要做：\n• 用公司註冊處認可格式\n• 雙方親筆簽署 + 見證人（獨立第三方）\n• 公司名同商業登記證 100% 一致\n• 部分轉讓列明：轉讓前 → 轉讓股數 → 轉讓後",
       "documents": [
         {
-          "name": "股份賣出單（Sold Note）生成器",
-          "description": "輸入股數、作價、雙方資料，即生成完整 PDF，慳返你搵範本嘅時間",
-          "hasGenerator": true,
-          "generatorUrl": "/sold-note-generator/",
+          "name": "股份轉讓書（Instrument of Transfer）",
+          "description": "公司註冊處認可格式，雙方簽署嘅正式轉讓文件。可使用互動工具直接填寫並一鍵生成 PDF。",
+          "demoImage": "/assets/demo/step3-instrument.png?v=9.0",
+          "templateFile": "/templates/instrument-of-transfer.docx",
           "commonMistakes": [
-            "Sold Note 同 Instrument of Transfer 數字唔一致 — 稅局會打回頭",
-            "口頭協議冇寫低 — 去到填文件就唔記得確實成交價",
-            "賣方或買方資料寫錯 — 身份證號碼、地址要同身份證一致"
-          ]
+            "用錯格式 — 上網 download 通用模板，官方唔收，我錯過兩次先識",
+            "公司名唔一致 — 商業登記證寫 'Limited' 你寫 'Ltd'，即時退回",
+            "日期倒填 — 轉讓日期唔可以早過 Sold Note 日期，邏輯唔通",
+            "簽署位置錯 — 轉讓人同承讓人調轉咗簽",
+            "見證人資格不符 — 見證人係轉讓人嘅親戚，被質疑獨立性"
+          ],
+          "hasGenerator": true,
+          "generatorUrl": "/instrument-transfer-generator"
         }
+      ],
+      "rejectionRisks": [
+        "格式錯誤 = 整份文件作廢，要重新簽過（我經歷過）",
+        "公司名稱不一致 = 即時退回",
+        "見證人唔合格 = 文件有效性被質疑"
       ]
     },
     {
       "stepNumber": 3,
-      "title": "簽署股份轉讓書（Instrument of Transfer）",
-      "summary": "簽署法定文件，完成股份轉讓嘅法律程序",
+      "title": "簽署承讓人確認信（Letter of Transferee of Shares）",
+      "summary": "承讓人書面確認接收股份，同意受公司組織章程細則約束",
       "isFree": true,
-      "details": "呢份就係最核心嘅文件 — 股份轉讓書（Instrument of Transfer），係一份法定文件，證明股份由賣方正式轉讓俾買方。\n\n香港一般用嘅係 Stock Transfer Form 格式（類似英國嗰隻），內容包括：\n• 公司名稱同公司編號\n• 股份數量同類別\n• 轉讓代價（即係 Sold Note 上面嗰個總價錢）\n• 賣方簽署（Transferor）\n• 買方簽署（Transferee）\n• 見證人簽署（最好有，唔係強制但強烈建議）\n\n⚠️ 關鍵 Deadline：2 個工作天規則\n如果轉讓雙方都喺香港簽署，份 Instrument of Transfer 簽好之後，你一定要喺簽署日起計 2 個工作天內遞交俾稅局打印花稅（厘印）。呢個係法定要求，唔係講笑。超過 2 個月未交印花稅，罰款可以高達原本稅額嘅 10 倍！\n\n建議：簽名之前就準備好晒所有嘢，約埋同一日簽，簽完即日 scan 同 upload 去稅局嘅電子印花稅系統（IRSD120），唔好拖。\n\n⚠️ 常見錯誤導致補交：\n超過 2 個工作天先交印花稅 — 呢個係最多人中嘅陷阱！簽好文件後以為可以慢慢搞，過咗 deadline 要俾罰款，過咗 2 個月罰款可達 10 倍。",
+      "details": "承讓人確認接收股份，內部記錄用。封信係向印花稅署（Stamp Duty Office）發出，確認股份轉讓嘅詳情。\n\n封信入面可以涵蓋最多 3 點確認事項（根據實際情況，需要嘅點數就寫，唔需要嘅可以得 1 點）：\n\n**第 1 點：股票買賣協議確認**\n呢點係最重要嘅一點。如果雙方之間冇簽訂正式嘅股票買賣協議（Sale and Purchase Agreement），就需要用呢封信做書面確認，代替協議嘅核證副本。\n\n⚠️ 注意：呢一點只適用於「雙方冇簽訂 Sale and Purchase Agreement」嘅情況。如果有正式協議，就唔需要用呢一點，直接提供協議核證副本就得。\n\n**第 2 點、第 3 點（按需要填寫）：**\n根據實際情況，封信可能需要涵蓋其他確認事項。填寫嘅人可以根據需要加入其餘嘅確認點，唔一定要用到 3 點。如果冇需要，淨係用第 1 點亦可以。\n\n⚠️ 唔好做嘅事：\n• 唔好 skip 呢份 → 內部記錄唔完整，貸款會出事\n• 公司買股份要有授權代表簽署 → 否則文件失效\n• 唔好夾硬填 3 點 — 根據實際情況，需要先寫\n\n✅ 一定要做：\n• 寫明公司名同股份轉讓詳情\n• 承讓人地址同身份證一致\n• 公司買股份要列公司註冊編號 + 授權代表\n• 夾附公司組織章程細則（Memorandum and Articles of Association）",
       "documents": [
         {
-          "name": "Instrument of Transfer 生成器",
-          "description": "輸入公司名、編號、股份數量、代價，即時生成 PDF，唔知點填都冇問題",
-          "hasGenerator": true,
-          "generatorUrl": "/instrument-transfer-generator/",
+          "name": "承讓人確認信（Letter of Transferee of Shares）",
+          "description": "向印花稅署發出嘅確認信，確認股份轉讓詳情",
+          "demoImage": "/assets/demo/step2-transferee-realdemo.png?v=9.2",
+          "templateFile": "/templates/letter-of-transferee.docx",
           "commonMistakes": [
-            "超過 2 個工作天先交印花稅 — 罰款可達 10 倍",
-            "轉讓書上嘅股份數量同 Sold Note 唔一致 — 會被 reject",
-            "冇見證人簽署 — 唔係強制但強烈建議，有爭議時可以做證"
-          ]
-        },
-        {
-          "name": "承讓人確認信（Letter of Transferee）",
-          "description": "轉讓完成後需要承讓人確認信？我哋都整咗個生成器俾你",
+            "Skip 咗呢份文件 — 以為簽轉讓書就得，其實承讓人確認信係必須嘅內部記錄",
+            "冇列明 3 點確認事項 — 至少要涵蓋交易確認呢一點",
+            "承讓人係公司但冇授權代表簽署 — 公司買公司股份要列明授權代表",
+            "地址同身份證明唔一致 — 承讓人地址要同身份證/護照一致",
+            "冇夾附公司章程 — 信件本身註明要附上 Memorandum and Articles of Association"
+          ],
           "hasGenerator": true,
-          "generatorUrl": "/letter-of-transferee-generator/",
-          "commonMistakes": [
-            "轉讓完成後冇俾承讓人確認信 — 最好留底作為交易完成記錄"
-          ]
+          "generatorUrl": "/letter-of-transferee-generator"
         }
+      ],
+      "rejectionRisks": [
+        "冇承讓人確認信 = 內部記錄唔完整，將來盡職調查或銀行貸款會有問題"
       ]
     },
     {
       "stepNumber": 4,
-      "title": "俾印花稅（厘印費）",
-      "summary": "經 IRSD120 電子系統遞交，計算同繳交印花稅",
+      "title": "準備 6 個月內審計報告（Audit Report）",
+      "summary": "提交最近期嘅審計報告，用於印花稅計算及證明公司財務狀況",
       "isFree": true,
-      "details": "文件簽好之後，就要去稅局（IRD）打厘印（即係俾印花稅）。呢一步好多人覺得複雜，但其實而家可以網上搞。\n\n經稅局 IRSD120 電子系統（www.gov.hk/tc/residents/taxes/stamp/duty/stampduty.htm）遞交，上載已簽署嘅 Instrument of Transfer，俾印花稅就得。\n\n印花稅點計？\n• 賣方（Transferor）：0.10%\n• 買方（Transferee）：0.10%\n• 合共：0.20%\n• 每張轉讓書定額：$5\n\n舉個例：假設股份轉讓價係 $100,000\n$100,000 × 0.2% + $5 = $200 + $5 = $205\n\n⚠️ 遲交印花稅罰則：\n• 超過 2 個月：罰款最高可達原本稅額嘅 10 倍\n• 就算只係遲一日提交，都已經開始計罰款\n• 所以簽好文件之後，第一個要搞嘅就係印花稅，唔好等\n\n📊 稅局數據：根據稅務局年報統計，遲交印花稅嘅罰款個案中，平均罰款金額約為應繳稅額嘅 3–5 倍。2024/25 年度稅局就逾期提交印花稅發出超過 2,000 張罰款通知，最高單一罰款達 $15,000。罰款按《印花稅條例》（第117章）第9條計算，逾期超過 2 個月可高達 10 倍。",
+      "details": "⚠️ 重要：審計報告必須由香港嘅**執業會計師 / 核數師**簽署，唔可以自己整。下面嘅範例只供參考格式，唔係叫你照抄。\n\n稅局用呢份報告計印花稅。作價太低會補稅。\n\n⚠️ 唔好做嘅事：\n• 唔好自己寫審計報告 → 必須由執業會計師簽署，否則稅局唔收\n• 唔好以為跟 Sold Note 作價就得 → 低過資產淨值要補稅\n• 唔好用過期報告 → 超過 6 個月稅局唔收\n• 公司未做審計唔好唔理 → 管理帳目都得，但要董事簽署\n\n✅ 一定要做：\n• **揾執業會計師**幫手出報告\n• 審計報告要 6 個月內\n• 冇 audit → 準備管理帳目 + 董事簽署\n• 印花稅 = 代價 0.2%（最低 $5）\n• 新公司可出「董事聲明」代替",
       "documents": [
         {
-          "name": "印花稅計算器",
-          "description": "輸入轉讓價，自動計算買方/賣方印花稅 + 總額，唔怕計錯數",
-          "hasGenerator": true,
-          "generatorUrl": "/stamp-duty-calculator/",
+          "name": "6個月內審計報告（Audit Report）",
+          "description": "由核數師簽署嘅公司財務報告，用於證明股份價值",
+          "demoImage": "/assets/demo/step4-audit.jpg",
+          "templateFile": "/assets/demo/step4-audit.jpg",
+          "generatorUrl": "/audit-report-generator",
           "commonMistakes": [
-            "超過 2 個月先交印花稅 — 罰款高達 10 倍",
-            "計錯印花稅金額 — 用計算器就唔怕",
-            "以為 $0 轉讓唔使俾印花稅 — 稅局會按公平市值計算"
+            "自己寫審計報告 — 審計報告必須由執業會計師簽署，自己寫稅局一定唔收",
+            "審計報告過咗 6 個月 — 稅局有權要求最新嘅財務資料，要重新出報告",
+            "冇核對資產淨值 — 作價寫得太低，稅局用 audit report 重新估值，要補稅",
+            "用舊年嘅報告 — 公司財務狀況可能有重大變動，要用最新嘅",
+            "公司未做審計就唔理 — 可以用管理帳目代替，但要有董事簽署確認"
           ]
         }
+      ],
+      "rejectionRisks": [
+        "審計報告過期 = 稅局可能要求最新財務資料，延遲處理",
+        "作價同報告唔符 = 被稅局重新估值，要補交印花稅差額"
       ]
     },
     {
       "stepNumber": 5,
-      "title": "更新公司紀錄 + 交 NAR1",
-      "summary": "更新股東名冊、發新股份證明書、向公司註冊處申報",
+      "title": "提交 NAR1 或 NSC1 完成後續申報",
+      "summary": "向公司註冊處提交周年申報表（NAR1），如有曾增加股本則提交股份配發申請書（NSC1），更新公司股本紀錄",
       "isFree": true,
-      "details": "印花稅搞掂之後，最後一步就係更新公司嘅內部紀錄同埋向公司註冊處申報。呢步係最容易被忽略嘅，但係最關鍵嘅一步。\n\n要更新嘅公司紀錄：\n• 股東名冊（Register of Members）— 記錄新嘅股東名單，包括邊個持有幾多股\n• 董事名冊（Register of Directors）— 如果股權變動導致董事變更\n• 股份證明書（Share Certificate）— 發新嘅俾新股東，舊嘅收返\n• 重要控制人登記冊（SCR）— 如果最終控制人有變都要 update\n\n要交俾公司註冊處嘅文件：\n• NAR1（周年申報表）— 喺每年公司成立周年日提交，更新股東資料\n• ND2A（更改董事及公司秘書通知）— 如果轉讓後董事有變動，必須喺 15 日內提交\n• 經 stamped 嘅 Instrument of Transfer — 證明股份轉讓已經打咗厘印\n• 最近期嘅審計報告（Financial Statements）— 稅局間中會要求提交去核實轉讓價是否合理\n\n⚠️ 唔更新紀錄嘅後果：\n未更新紀錄 = 公司法律文件唔準確，可能影響將來公司賣盤或融資。有人成三年冇 update 股東名冊，結果搞到公司要賣嘅時候先發現紀錄亂晒龍，要花錢請人追返啲記錄。\n\n⚠️ 常見錯誤導致補交：\n轉讓後冇 update 股東名冊 — 公司紀錄唔準確，影響將來公司賣盤或融資。另外董事變更冇交 ND2A 會被罰款同留 record。",
+      "details": "最後申報步驟。唔交或遲交會罰錢。\n\n⚠️ 唔好做嘅事：\n• 唔好以為搞掂轉讓書就完 → 仲要交 NAR1\n• 唔好逾期 → 罰 $870，越耐越罰得多\n• 唔好用舊年董事資料 → 被要求解釋\n\n✅ 一定要做：\n• 成立周年日後 42 日內交\n• 股東資料同轉讓書 match\n• 網上提交最快（eCR 系統）\n• 費用：登記費 $105\n• 轉讓同 annual return 時間差太遠就主動提交\n\n📌 特別情況 — 曾增加股本：\n如果該公司曾增加股本（Allotment of Shares），而呢次股本變動尚未喺組織章程細則（Articles of Association）或週年申報表（NAR1）上反映，請額外提供最近一份已遞交於公司註冊處的股份配發申請書（表格 NSC1）副本，以證明股本變更已獲正規申報。",
       "documents": [
         {
-          "name": "轉讓後跟進 Checklist",
-          "description": "逐項完成轉讓後申報：更新股東名冊、ND2A、SCR、銀行授權人，唔怕漏咗任何一步",
-          "hasGenerator": true,
-          "generatorUrl": "/post-transfer-checklist/",
+          "name": "NAR1（周年申報表）",
+          "description": "向公司註冊處申報公司最新狀況，包括股東及股本變更",
+          "demoImage": "/assets/demo/step5-nar1.png",
+          "templateFile": "/templates/NAR1_official.pdf",
+          "officialFormUrl": "https://www.cr.gov.hk/tc/companies_ordinance/docs/NAR1_fillable.pdf",
+          "generatorUrl": "/nar1-generator",
           "commonMistakes": [
-            "轉讓後冇 update 股東名冊 — 影響將來公司賣盤或融資",
-            "董事變更冇交 ND2A — 會被罰款同留 record",
-            "以為 stamp 咗就搞掂 — 仲要更新 SCR、銀行授權人等"
+            "以為唔使交 NAR1 — 轉讓完成後要更新公司紀錄，唔交會罰錢",
+            "逾期提交 — 成立周年日後 42 日內要交，遲交罰 HK$870",
+            "資料同轉讓書唔一致 — NAR1 嘅股東資料要同轉讓書 match",
+            "董事資料過期 — NAR1 嘅董事資料要係最新，唔可以用舊年嘅",
+            "冇簽署就交 — NAR1 要有董事簽署，網上提交都要數碼簽署"
           ]
+        },
+        {
+          "name": "NSC1（股份配發申請書）【如有需要】",
+          "description": "如公司曾增加股本但未反映於章程細則或 NAR1，須一併提交最近一份已遞交公司註冊處嘅 NSC1 副本，證明股本變更已正規申報",
+          "demoImage": "/assets/demo/step5-nsc1.png",
+          "templateFile": "/templates/NSC1_official.pdf",
+          "generatorUrl": "/nsc1-generator",
+          "commonMistakes": [
+            "公司曾增加股本但冇提交 NSC1 — 股本記錄唔完整，公司註冊處會追問",
+            "以為 NAR1 反映咗就算 — 如果章程細則未更新，NSC1 係必需嘅佐證",
+            "用咗 draft 版本 — NSC1 必須係已遞交公司註冊處嘅正式申報版本"
+          ],
+          "officialFormUrl": "https://www.cr.gov.hk/sc/companies_ordinance/docs/NSC1_fillable.pdf"
         }
+      ],
+      "rejectionRisks": [
+        "逾期提交 NAR1 = 公司註冊處罰款 HK$870，遲交越耐罰得越多",
+        "資料唔一致 = 被公司註冊處要求補充解釋",
+        "曾增加股本但冇 NSC1 = 股本記錄不完整，有機會被要求補交文件"
       ]
     }
-  ]
+  ],
+  "finalDonate": {
+    "title": "幫到你嗎？請我飲杯咖啡 ☕",
+    "message": "呢份指南係我親身經歷整理，全部免費公開。如果幫到你節省時間同金錢，可以請我飲杯咖啡支持下，等我繼續製作更多免費指南！",
+    "goalMessage": "目標：100 次支持下載後，我會擴展到更多流程指南 🎯",
+    "buyMeACoffeeUrl": "https://buymeacoffee.com/esgov",
+    "emailCollectionTitle": "想我哋提供咩指南？",
+    "emailCollectionMessage": "可以通知我哋，話俾我哋知你想睇咩文件 😊"
+  },
+  "isActive": true
 }
