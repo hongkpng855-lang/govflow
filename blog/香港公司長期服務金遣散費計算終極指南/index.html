@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港公司長期服務金及遣散費計算終極指南 2026｜取消強積金對沖後新規則</title>
+  <meta name="description" content="2026 年取消強積金對沖後，長期服務金（LSP）同遣散費（Severance Payment）點計算？僱主仲有咩慳錢策略？由真實僱主分享完整教學：計算公式、實例對照、IRS 表格填寫示範、常見勞資糾紛陷阱全面拆解，幫你慳返唔少錢同避免勞審處告票。" />
+  <meta property="og:title" content="香港公司長期服務金及遣散費計算終極指南 2026 — 取消強積金對沖後全新規則" />
+  <meta property="og:description" content="2026 年取消 MPF 對沖後，LSP 同 Severance Payment 點計算？僱主慳錢策略、真實案例、常見陷阱全面拆解。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港公司長期服務金遣散費計算終極指南" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-default.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港公司長期服務金遣散費計算終極指南" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .blog-content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1B2A4A;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f3f4f6;
+    }
+    .blog-content h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1B2A4A;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-content p {
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      color: #4b5563;
+    }
+    .blog-content ul, .blog-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+    .blog-content li {
+      line-height: 1.8;
+      margin-bottom: 0.25rem;
+      color: #4b5563;
+    }
+    .blog-content .flag-item {
+      background: #fef3c7;
+      border-left: 4px solid #C9A84C;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+    .blog-content .flag-item p {
+      margin-bottom: 0;
+    }
+    .blog-content .tip-box {
+      background: #ecfdf5;
+      border-left: 4px solid #10b981;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+    .blog-content .tip-box p {
+      margin-bottom: 0;
+    }
+    .blog-content .warn-box {
+      background: #fef2f2;
+      border-left: 4px solid #ef4444;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+    .blog-content .warn-box p {
+      margin-bottom: 0;
+    }
+    .blog-content strong {
+      color: #1B2A4A;
+    }
+    .blog-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .blog-content table th {
+      background: #1B2A4A;
+      color: #C9A84C;
+      padding: 0.75rem 0.5rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    .blog-content table td {
+      padding: 0.75rem 0.5rem;
+      border-bottom: 1px solid #e5e7eb;
+      color: #4b5563;
+    }
+    .blog-content table tr:nth-child(even) {
+      background: #f9fafb;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <!-- Schema: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港公司長期服務金及遣散費計算終極指南 2026 — 取消強積金對沖後全新規則",
+    "description": "2026 年取消強積金對沖後，長期服務金（LSP）同遣散費（Severance Payment）點計算？僱主仲可以點慳錢？完整教學、真實案例、IRS 表格填寫示範。",
+    "datePublished": "2026-06-11",
+    "dateModified": "2026-06-11",
+    "author": {
+      "@type": "Organization",
+      "name": "ESGov",
+      "url": "https://esgov.org"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "ESGov 團隊",
+    "description": "香港公司秘書及合規顧問，專注提供公司註冊、股份轉讓、SCR 合規等免費指南",
+    "url": "https://esgov.org",
+    "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
+  }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 網誌總覽</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ Article Header ═══════════════ -->
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+      <div class="flex flex-wrap items-center gap-2 text-sm text-gray-400 mb-4">
+        <a href="../" class="hover:text-gold transition-colors">Home</a>
+        <span>/</span>
+        <a href="/blog/" class="hover:text-gold transition-colors">Blog</a>
+        <span>/</span>
+        <span class="text-gray-600">長期服務金及遣散費計算</span>
+      </div>
+
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="inline-block text-xs font-medium bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">🏷️ 長期服務金</span>
+        <span class="inline-block text-xs font-medium bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">🏷️ 遣散費</span>
+        <span class="inline-block text-xs font-medium bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">🏷️ MPF 對沖</span>
+        <span class="inline-block text-xs font-medium bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">🏷️ 僱傭條例</span>
+        <span class="inline-block text-xs font-medium bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">🏷️ 僱主責任</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-4">
+        🧮 香港公司長期服務金及遣散費計算終極指南 2026<br />
+        <span class="text-xl sm:text-2xl text-gold">取消強積金對沖後嘅全新計算方法</span>
+      </h1>
+      <p class="text-base sm:text-lg text-gray-500 leading-relaxed mb-3">
+        2026 年 6 月 · 由俾過總額超過 $30 萬遣散費嘅 SME 東主撰寫
+      </p>
+      <div class="flex items-center text-sm text-gray-400 gap-4">
+        <span>📅 2026.06.11</span>
+        <span>📖 約 25 分鐘閱讀</span>
+      </div>
+    </div>
+  
+    <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
+      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span class="ml-4">📅 最後更新：2026年6月</span>
+    </div>
+</header>
+
+  <!-- ═══════════════ Article Content ═══════════════ -->
+  <article class="py-8 sm:py-10">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 blog-content">
+
+      <!-- ═══ Summary / TL;DR ═══ -->
+      <div class="bg-navy/5 rounded-xl p-6 border border-navy/10 mb-8">
+        <p class="font-bold text-navy text-lg mb-2">📌 重點懶人包</p>
+        <ul class="space-y-1">
+          <li><strong>2025 年 5 月 1 日起</strong> — 取消強積金對沖正式生效，僱主唔可以再用 MPF 僱主供款抵銷 LSP／遣散費</li>
+          <li><strong>長期服務金（LSP）</strong> — 受僱滿 5 年、被解僱、65 歲退休、因病辭職等情況合資格</li>
+          <li><strong>遣散費（Severance Payment）</strong> — 受僱滿 24 個月、因裁員／停工被解僱</li>
+          <li><strong>計算公式一樣：</strong>（月薪 × ⅔ × 年資）或（$22,500 × ⅔ × 年資），以較低者為準</li>
+          <li><strong>上限：</strong>$390,000（年薪 $15,000 以下冇上限）</li>
+          <li><strong>僱主新慳錢方法：</strong>開設「專項儲蓄戶口」、購買保險產品、調整薪酬結構</li>
+        </ul>
+      </div>
+
+      <!-- ═══ Section 1 ═══ -->
+      <h2>1. 😅 開場白 — 我第一次俾遣散費嘅經歷</h2>
+      <p>
+        2019 年，我公司第一次要裁員。嗰位同事跟咗我 6 年，由 startup 得 3 個人做到成 team 十幾人。但疫情開頭生意跌咗 70%，頂唔順要 cut cost。計遣散費嗰陣我先知道：<strong>原來 MPF 僱主供款可以用嚟對沖（抵銷）遣散費</strong>。嗰陣我仲以為「供咗咁多 MPF 可以慳返」，點知 2025 年新例一過，呢個玩法就唔同晒。
+      </p>
+      <p>
+        2025 年 5 月 1 日，《2022 年僱傭及退休計劃法例（抵銷安排）（修訂）條例》正式生效，<strong>取消強積金對沖</strong>。即係話：由呢日開始，僱主唔可以用 MPF 強制性供款嚟抵銷長期服務金（LSP）或者遣散費。
+      </p>
+      <p>
+        呢篇文我會用最白話嘅方式，拆解 LSP 同遣散費嘅計算方法、資格條件、2026 年嘅新規則，同埋作為僱主可以點樣慳錢。
+      </p>
+
+      <!-- ═══ Section 2 ═══ -->
+      <h2>2. 🆚 長期服務金（LSP）vs 遣散費（Severance Payment）</h2>
+      <p>兩者嘅計算公式一樣（下面會講），但資格條件好唔同：</p>
+
+      <div class="overflow-x-auto">
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>長期服務金（LSP）</th>
+              <th>遣散費（Severance Payment）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>年資要求</strong></td>
+              <td>受僱滿 <strong>5 年</strong></td>
+              <td>受僱滿 <strong>24 個月</strong></td>
+            </tr>
+            <tr>
+              <td><strong>適用情況</strong></td>
+              <td>被解僱（非因犯錯）、65 歲退休、因病辭職、死亡</td>
+              <td>因裁員／停工被解僱</td>
+            </tr>
+            <tr>
+              <td><strong>咩係「裁員」？</strong></td>
+              <td>—</td>
+              <td>僱主結束營業／縮減業務／工作崗位消失</td>
+            </tr>
+            <tr>
+              <td><strong>可否同時領取？</strong></td>
+              <td colspan="2">❌ 唔可以。同一事件只可以拎 LSP 或遣散費其一（以較高者為準）</td>
+            </tr>
+            <tr>
+              <td><strong>僱主可否用 MPF 對沖？</strong></td>
+              <td colspan="2"><strong>2025.5.1 前：</strong>可以（用僱主強制性供款）<br /><strong>2025.5.1 後：</strong>❌ 唔可以</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="flag-item">
+        <p><strong>💡 重點：</strong>「裁員」同「解僱」嘅分別好重要。如果你炒一個員工係因為佢表現唔好（ misconduct），唔係因為業務縮減，咁就唔使俾遣散費。但如果你係因為公司轉型、部門 cut 咗而炒佢，咁就要俾遣散費。</p>
+      </div>
+
+      <!-- ═══ Section 3 ═══ -->
+      <h2>3. 🧮 計算公式（LSP 同遣散費一樣）</h2>
+      <p>計算方法好簡單，就係以下其中一個數嘅 <strong>較低者</strong>：</p>
+
+      <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 mb-4">
+        <p class="font-bold text-lg text-navy mb-3">📐 計法 A — 用實際月薪計</p>
+        <p class="text-xl font-mono text-navy">（最後一個月嘅月薪 × ⅔）× 年資（年數）</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 mb-4">
+        <p class="font-bold text-lg text-navy mb-3">📐 計法 B — 用上限月薪計</p>
+        <p class="text-xl font-mono text-navy">（$22,500 × ⅔）× 年資（年數）</p>
+        <p class="text-sm text-gray-500 mt-1">上限月薪係 $22,500（2026 年仍然係呢個數）</p>
+      </div>
+
+      <p>即係：<strong>揀（A）同（B）之間嘅較低者</strong>。</p>
+
+      <div class="flag-item">
+        <p><strong>💰 上限：</strong>最高賠償額係 <strong>$390,000</strong>。但如果員工最後月薪唔超過 $15,000，就冇 $390,000 上限。</p>
+      </div>
+
+      <h3>3.1 真實案例一：普通文員（月薪 $18,000，年資 5 年）</h3>
+
+      <div class="overflow-x-auto">
+        <table>
+          <thead>
+            <tr>
+              <th>步驟</th>
+              <th>計算</th>
+              <th>結果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>計法 A（實際月薪）</td>
+              <td>$18,000 × ⅔ × 5</td>
+              <td>= <strong>$60,000</strong></td>
+            </tr>
+            <tr>
+              <td>計法 B（上限月薪）</td>
+              <td>$22,500 × ⅔ × 5</td>
+              <td>= <strong>$75,000</strong></td>
+            </tr>
+            <tr>
+              <td><strong>揀較低者</strong></td>
+              <td>A ($60,000) < B ($75,000)</td>
+              <td>= <strong>$60,000</strong></td>
+            </tr>
+            <tr>
+              <td>上限測試</td>
+              <td>$60,000 < $390,000 ✅</td>
+              <td>冇超出上限</td>
+            </tr>
+            <tr>
+              <td class="font-bold text-navy">最終 LSP／遣散費</td>
+              <td></td>
+              <td class="font-bold text-gold text-lg">$60,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>3.2 真實案例二：高層管理（月薪 $50,000，年資 12 年）</h3>
+
+      <div class="overflow-x-auto">
+        <table>
+          <thead>
+            <tr>
+              <th>步驟</th>
+              <th>計算</th>
+              <th>結果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>計法 A（實際月薪）</td>
+              <td>$50,000 × ⅔ × 12</td>
+              <td>= <strong>$400,000</strong></td>
+            </tr>
+            <tr>
+              <td>計法 B（上限月薪）</td>
+              <td>$22,500 × ⅔ × 12</td>
+              <td>= <strong>$180,000</strong></td>
+            </tr>
+            <tr>
+              <td><strong>揀較低者</strong></td>
+              <td>B ($180,000) < A ($400,000)</td>
+              <td>= <strong>$180,000</strong></td>
+            </tr>
+            <tr>
+              <td>上限測試</td>
+              <td>$180,000 < $390,000 ✅</td>
+              <td>冇超出上限</td>
+            </tr>
+            <tr>
+              <td class="font-bold text-navy">最終 LSP／遣散費</td>
+              <td></td>
+              <td class="font-bold text-gold text-lg">$180,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>3.3 真實案例三：低薪兼職（月薪 $8,000，年資 3 年）</h3>
+
+      <div class="overflow-x-auto">
+        <table>
+          <thead>
+            <tr>
+              <th>步驟</th>
+              <th>計算</th>
+              <th>結果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>計法 A（實際月薪）</td>
+              <td>$8,000 × ⅔ × 3</td>
+              <td>= <strong>$16,000</strong></td>
+            </tr>
+            <tr>
+              <td>計法 B（上限月薪）</td>
+              <td>$22,500 × ⅔ × 3</td>
+              <td>= <strong>$45,000</strong></td>
+            </tr>
+            <tr>
+              <td><strong>揀較低者</strong></td>
+              <td>A ($16,000) < B ($45,000)</td>
+              <td>= <strong>$16,000</strong></td>
+            </tr>
+            <tr>
+              <td>上限測試</td>
+              <td>月薪 $8,000 ≤ $15,000</td>
+              <td>冇上限 ✅</td>
+            </tr>
+            <tr>
+              <td class="font-bold text-navy">最終 LSP／遣散費</td>
+              <td></td>
+              <td class="font-bold text-gold text-lg">$16,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="flag-item">
+        <p><strong>💡 有趣嘅位：</strong>月薪越高唔代表 LSP／遣散費越多。因為有 $22,500 上限月薪同 $390,000 總上限。如果你員工月薪已經超過 $22,500，佢嘅年資先係決定性因素。</p>
+      </div>
+
+      <!-- ═══ Section 4 ═══ -->
+      <h2>4. 🔄 取消強積金對沖 — 2026 年僱主嘅新處境</h2>
+      <p>呢 part 係最多人問嘅：<strong>取消對沖之後，僱主係咪要俾多咗錢？</strong></p>
+
+      <p>長答案係：<strong>係，但冇想像中咁恐怖。</strong></p>
+
+      <p>2025 年 5 月 1 日前，僱主可以將 MPF 強制性供款（即係你每個月供員工人工 5% 嗰部分）嘅累算權益，用嚟抵銷 LSP 或者遣散費。例如你員工遣散費係 $60,000，而佢強積金戶口入面有 $40,000 係你（僱主）供嘅，你就可以用呢 $40,000 抵銷，淨係俾 $20,000。</p>
+
+      <p><strong>2025 年 5 月 1 日起，呢個玩法正式結束。</strong></p>
+
+      <h3>4.1 過渡安排</h3>
+      <p>政府設立咗一個 <strong>「取消對沖」過渡期</strong>：</p>
+      <ul>
+        <li>2025 年 5 月 1 日 <strong>之前</strong>嘅年資 — 仍然可以用 MPF 僱主供款對沖</li>
+        <li>2025 年 5 月 1 日 <strong>之後</strong>嘅年資 — 唔可以用 MPF 僱主供款對沖</li>
+      </ul>
+
+      <p>即係話，如果你員工喺 2025 年 5 月 1 日前已經做咗 10 年，之後再做多 2 年先離開，頭 10 年嘅 LSP 可以用 MPF 對沖，後 2 年嘅就唔得。</p>
+
+      <div class="warn-box">
+        <p><strong>⚠️ 好多人中招嘅位：</strong>「取消對沖」條例生效後，<strong>自願性供款（Voluntary Contribution）</strong>一直以嚟都唔可以用嚟對沖 LSP／遣散費，呢個冇變過。但有好多人誤會咗，以為 2025 年 5 月 1 日前連自願性供款都可以對沖 — 其實從來都唔得。</p>
+      </div>
+
+      <h3>4.2 政府嘅支援措施</h3>
+      <p>為咗幫僱主適應新制度，政府推出咗：</p>
+      <ul>
+        <li><strong>「專項儲蓄戶口」計劃：</strong>僱主可以開一個指定戶口，每月按薪酬嘅 1% 儲錢，用嚟未來支付 LSP／遣散費。戶口嘅存款唔計入公司利得稅，提取時亦免稅。</li>
+        <li><strong>25 年補貼：</strong>政府會喺 25 年內向僱主提供補貼，分擔部分 LSP／遣散費支出。補貼比例逐步遞減：首年 50% → 第 10 年 30% → 第 25 年 0%。</li>
+        <li><strong>再就業津貼：</strong>僱主重新聘用年滿 60 歲嘅長者員工，可獲政府津貼。</li>
+      </ul>
+
+      <!-- ═══ Section 5 ═══ -->
+      <h2>5. 💡 僱主 4 大慳錢策略（合法）</h2>
+      <p>取消對沖之後，僱主可以點樣減少 LSP／遣散費嘅開支？以下係我親身用過或者研究過嘅方法：</p>
+
+      <h3>5.1 開設「專項儲蓄戶口」</h3>
+      <p>政府推廣嘅方案。每月按薪酬 1% 儲落專用戶口，到要俾 LSP 嗰陣就有一筆錢頂住。好處係呢筆存款免利得稅，提取時亦免稅。以一個月薪 $20,000 嘅員工計，每月儲 $200，一年 $2,400，5 年 $12,000。雖然唔係好多，但勝在係「強制自己儲定」。未用過嘅錢仲可以攞去低風險投資（國債、定期存款），賺多少少。</p>
+
+      <div class="tip-box">
+        <p><strong>👍 建議：</strong>如果你公司有 5 個或以上員工，強烈建議開呢個戶口。用唔用嚟俾 LSP 係其次，最重要係迫自己每個月撥備一筆錢，到炒人或裁員嗰陣唔使 cash flow 崩潰。</p>
+      </div>
+
+      <h3>5.2 購買保險產品</h3>
+      <p>市面上有保險公司推出「LSP／遣散費保險」，概念類似勞保。你每月俾保費，到要俾 LSP 嘅時候保險公司賠償俾你。呢種做法嘅好處係：</p>
+      <ul>
+        <li>支出可以預算（每月固定保費）</li>
+        <li>唔使自己儲一大筆錢</li>
+        <li>保費可以扣稅</li>
+      </ul>
+      <p>但壞處係：保險產品有條款限制（例如年資要求、賠償上限），同埋長期計貴過自己儲。我自己就冇買，但聽同行講今年開始多咗呢類產品。</p>
+
+      <h3>5.3 調整薪酬結構（⚠️ 小心法律風險）</h3>
+      <p>部分僱主會將員工部分薪酬轉為「佣金」或者「獎金」，因為 LSP 同遣散費係根據「最後一個月嘅月薪」計算，而佣金同獎金嘅計算方法唔同。但呢個做法有風險：</p>
+
+      <div class="warn-box">
+        <p><strong>⚠️ 勞工處有權審視你嘅薪酬結構是否「合理商業安排」。如果被認定為刻意逃避 LSP 責任，可能會被檢控。</strong>唔建議為咗慳 LSP 而亂改薪酬結構，尤其係大幅降低底薪。</p>
+      </div>
+
+      <h3>5.4 靈活運用試用期同合約制</h3>
+      <p>遣散費要求受僱滿 24 個月，LSP 要求受僱滿 5 年。如果你是但改動員工嘅合約（例如由長約變短期合約），可能會影響年資計算。但要注意：<strong>連續性合約（Continuous Contract）</strong>嘅定義好闊，就算你係短期合約，只要員工連續受僱 4 星期、每星期至少工作 18 小時，就當係連續性合約，年資會累計。唔好以為轉合約就 reset 年資。</p>
+
+      <!-- ═══ Section 6 ═══ -->
+      <h2>6. 📋 完整流程：僱主收到離職通知後要做嘅嘢</h2>
+
+      <ol>
+        <li><strong>確認離職原因：</strong>係裁員、辭職、退休定 misconduct？呢個決定 LSP／遣散費嘅責任</li>
+        <li><strong>核對年資：</strong>由入職日計到離職日，確認係咪夠 24 個月（遣散費）或 5 年（LSP）</li>
+        <li><strong>計算法定權益：</strong>用上面嘅公式計算 LSP／遣散費金額</li>
+        <li><strong>扣減 MPF 對沖（如適用）：</strong>確認員工嘅 MPF 僱主供款累算權益（只限 2025.5.1 前嘅年資部分）</li>
+        <li><strong>申請政府補貼（如適用）：</strong>喺終止僱傭後 3 個月內向勞工處申請</li>
+        <li><strong>準備 IR56G 表格：</strong>通知稅局僱員離職</li>
+        <li><strong>發出付款：</strong>喺離職日或之前支付 LSP／遣散費</li>
+        <li><strong>發出僱傭證明書（Reference Letter）：</strong>按《僱傭條例》要求</li>
+      </ol>
+
+      <div class="flag-item">
+        <p><strong>📌 記住：</strong>LSP 同遣散費係「離職時即期支付」嘅權益，唔可以分期付款。僱主如果唔俾或者遲俾，員工可以入稟勞資審裁處追討。</p>
+      </div>
+
+      <!-- ═══ Section 7 ═══ -->
+      <h2>7. 🚨 7 個僱主最容易中招嘅陷阱</h2>
+
+      <h3>陷阱 1：誤以為試用期唔計年資</h3>
+      <p>試用期一樣計年資。由你員工第一日返工開始，份合約就係連續性合約，試用期都係受僱期。我見過有公司炒人嗰陣計少咗 3 個月試用期，俾人告上勞審處。</p>
+
+      <h3>陷阱 2：誤以為「炒人梗係唔使俾遣散費」</h3>
+      <p>如果你係因為業務縮減而炒人（裁員），就一定要俾遣散費。好多老闆炒完人先知要俾錢，個 cash flow 即刻見紅。</p>
+
+      <h3>陷阱 3：計算年資時用錯基數</h3>
+      <p>年資係用「年」做單位，唔係「日」。例如員工做咗 6 年 3 個月，年資係 6.25 年，唔係 6 年。公式：6 + (3 ÷ 12) = 6.25。</p>
+
+      <h3>陷阱 4：唔記得計佣金同津貼</h3>
+      <p>「最後一個月嘅月薪」包括基本薪金、佣金、津貼、勤工獎等所有固定或非固定收入。但如果係實報實銷嘅開支（例如交通費、飯錢），就唔計。</p>
+
+      <h3>陷阱 5：唔清楚取消對沖後嘅計算方法</h3>
+      <p>2026 年仲有好多僱主以為可以用 MPF 對沖 LSP。記住：2025.5.1 之後嘅年資係唔得嘅。如果你仲用舊方法計算，會俾少咗錢俾員工，隨時俾人告。</p>
+
+      <h3>陷阱 6：漏報 IR56G／IR56F 俾稅局</h3>
+      <p>員工離職時，僱主必須喺離職日後 1 個月內通知稅局（IR56G 表格）。LSP ／遣散費嘅稅務處理亦好複雜：<strong>$15 萬（遣散費）或 $50 萬（長期服務金）以內嘅部分係免稅嘅</strong>，超出嘅部分要計入員工嘅應課稅收入。</p>
+
+      <h3>陷阱 7：唔知「僱傭保障」同「破產欠薪保障基金」嘅分別</h3>
+      <p>如果你公司真係冇錢俾 LSP／遣散費，員工可以向<strong>破產欠薪保障基金</strong>申請特惠金。但呢個基金只 cover 遣散費（唔 cover LSP），而且上限係首 $50,000 + 餘額嘅 50%，最高 $315,000。所以如果員工服務咗好多年，遣散費超過呢個數，佢係追唔足嘅。</p>
+
+      <!-- ═══ Section 8 ═══ -->
+      <h2>8. 📊 LSP／遣散費嘅稅務處理（僱主角度）</h2>
+      <p>好多僱主唔知：<strong>你俾員工嘅 LSP 同遣散費係可以扣稅㗎！</strong></p>
+      <ul>
+        <li>LSP 同遣散費屬於「營業開支」，可以喺公司利得稅申報時扣除</li>
+        <li>只要係根據《僱傭條例》計算嘅法定權益，稅局一般都接受</li>
+        <li>保留付款紀錄（ bank transfer record、收據）同計算表，以備稅局查核</li>
+      </ul>
+
+      <p><strong>員工角度：</strong>遣散費首 $15 萬免稅，LSP 首 $50 萬免稅（以較高者為準）。超出部分按標準稅率計算。</p>
+
+      <div class="flag-item">
+        <p><strong>💡 慳稅貼士：</strong>如果員工願意，你可以將部分 LSP／遣散費以「自願性退休金供款」形式，直接供入員工嘅 MPF 戶口。咁樣員工唔使即時交稅，你可以扣稅，員工退休先拎錢。但要員工書面同意。</p>
+      </div>
+
+      <!-- ═══ Section 9 ═══ -->
+      <h2>9. ❓ FAQ — 10 個最常見問題</h2>
+
+      <h3>Q1：遣散費同長期服務金可以同時拎嗎？</h3>
+      <p><strong>唔可以。</strong>同一離職事件只可以選擇 LSP 或遣散費其中一樣。僱主應該揀對員工有利嘅方式（即係金額較高嗰個）。</p>
+
+      <h3>Q2：員工自己辭職有冇 LSP？</h3>
+      <p>一般冇。除非員工因為<strong>法定原因</strong>辭職（例如：被僱主不合理對待、工作有即時危險），或者因為<strong>醫生證明身體唔適合繼續工作</strong>而辭職。</p>
+
+      <h3>Q3：兼職員工有冇 LSP／遣散費？</h3>
+      <p>有，只要係「連續性合約」（4 星期 × 每星期 18 小時），就同全職員工享有一樣嘅權益。人工按實際月薪計算。</p>
+
+      <h3>Q4：取消對沖後，MPF 供款會點？</h3>
+      <p>MPF 供款比例冇變：僱主供 5%、僱員供 5%。只係僱主唔可以再用呢筆錢抵銷 LSP／遣散費。但僱員嗰 5% 仍然係佢嘅錢，同 LSP 冇關係。</p>
+
+      <h3>Q5：我係獨資經營（一人公司），要唔要幫自己俾 LSP？</h3>
+      <p>唔使。東主本人、合夥人、公司董事如果冇同公司簽僱傭合約，就唔受《僱傭條例》保障。但如果董事有簽僱傭合約，就有機會享有 LSP 權益。</p>
+
+      <h3>Q6：LSP／遣散費可以分期付款嗎？</h3>
+      <p><strong>唔可以。</strong>法定要求係離職時一次過支付。如果僱主 cash flow 真係好緊，可以同員工商量「分期」，但一定要員工書面同意，同埋要有法律約束力嘅還款協議。</p>
+
+      <h3>Q7：合約到期冇續約有冇遣散費？</h3>
+      <p>如果係固定期合約到期後唔續約，而原因係業務縮減或崗位消失，都可能構成「裁員」，需要俾遣散費。但如果係員工表現問題或者雙方自然唔續約，就唔使。</p>
+
+      <h3>Q8：員工出咗事（死亡），LSP 點計？</h3>
+      <p>員工因工作死亡，僱主需要支付 LSP 俾佢嘅遺產承辦人。計算方法同上。</p>
+
+      <h3>Q9：我俾遣散費之後，員工可以申請失業救濟嗎？</h3>
+      <p>香港冇「失業救濟金」（綜援除外，但資產審查好嚴）。但有遣散費記錄可能會影響員工申請「在職家庭津貼」嘅資產審查。</p>
+
+      <h3>Q10：我收到勞工處查詢 LSP 計算，點算？</h3>
+      <p>唔使驚，勞工處通常係收到員工查詢後先會聯絡僱主。你只需要準備：員工入職紀錄、薪金紀錄、MPF 供款紀錄、離職文件。如果你嘅計算正確，一般唔會有問題。如果有爭議，可以去勞資審裁處解決。</p>
+
+      <!-- ═══ Section 10 ═══ -->
+      <h2>10. ✅ 總結 Checklist — 每個僱主都應該做嘅嘢</h2>
+
+      <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+        <ul class="space-y-2">
+          <li>✅ <strong>了解 LSP 同遣散費嘅分別</strong> — 唔好炒錯人俾錯錢</li>
+          <li>✅ <strong>計算公式背熟：</strong>（月薪 × ⅔ × 年資）vs（$22,500 × ⅔ × 年資），揀較低者</li>
+          <li>✅ <strong>記錄員工準確入職日期</strong> — 年資計錯差好遠</li>
+          <li>✅ <strong>開設「專項儲蓄戶口」</strong> — 為未來 LSP／遣散費做好準備</li>
+          <li>✅ <strong>購買 LSP 保險</strong> — 評估成本效益後決定</li>
+          <li>✅ <strong>員工離職時確認原因</strong> — 係裁員定 misconduct？影響好大</li>
+          <li>✅ <strong>留意過渡期安排</strong> — 2025.5.1 前後嘅年資要分開計</li>
+          <li>✅ <strong>按時通知稅局</strong> — 離職後 1 個月內交 IR56G</li>
+          <li>✅ <strong>保留付款紀錄</strong> — 扣稅同將來查核都要用</li>
+          <li>✅ <strong>定期 review 薪酬結構</strong> — 確保合規同時做好成本規劃</li>
+        </ul>
+      </div>
+
+      <!-- ═══ Closing ═══ -->
+      <h2>後記</h2>
+      <p>
+        寫呢篇文嘅時候，我諗返起 2019 年第一次俾遣散費嘅經歷。嗰陣我完全唔知有 MPF 對沖呢樣嘢，俾足全數 $60,000 俾員工。後來先知可以對沖，但已經俾咗。雖然蝕咗錢，但嗰位員工後來創業成功，仲同我保持聯絡，話返當年我「俾足錢」令佢度過難關。
+      </p>
+      <p>
+        取消對沖之後，僱主嘅成本一定會增加。但老實講：<strong>員工跟咗你咁多年，遣散費係佢應得嘅權益，唔係 bonus</strong>。與其諗點樣走法律罅去慳呢筆錢，不如提早 planning，用專用戶口或者保險產品做好準備。
+      </p>
+      <p>
+        如果你對 LSP 或者遣散費嘅計算仲有疑問，或者想了解更多關於僱傭條例嘅內容，可以睇吓我哋嘅其他指南：
+      </p>
+      <ul>
+        <li><a href="/blog/香港公司僱傭條例EmploymentOrdinance終極指南/" class="text-gold hover:underline">香港公司僱傭條例終極指南</a></li>
+        <li><a href="/blog/香港有限公司第一次請人終極指南/" class="text-gold hover:underline">香港有限公司第一次請人終極指南</a></li>
+        <li><a href="/blog/香港有限公司強積金MPF安排終極指南/" class="text-gold hover:underline">香港公司強積金安排終極指南</a></li>
+      </ul>
+
+      <!-- ═══ CTA ═══ -->
+      <div class="bg-navy rounded-xl p-6 sm:p-8 text-center mt-8">
+        <p class="text-gold font-bold text-lg mb-2">📋 你需要幫手處理員工離職文件？</p>
+        <p class="text-white/80 text-sm mb-4">我哋嘅指南幫你搞清所有僱傭條例要求，避免法律風險</p>
+        <a href="/" class="inline-block bg-gold text-navy font-bold px-6 py-3 rounded-lg hover:bg-gold/90 transition-colors">
+          瀏覽所有僱傭相關指南 →
+        </a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ═══════════════ Footer ═══════════════ -->
+  <footer class="bg-gray-900 text-gray-400 py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center text-sm">
+      <p class="mb-2">© 2026 ESGov — 香港公司秘書文件實戰指南</p>
+      <p class="text-xs text-gray-500">由真實經歷者撰寫，唔係律師樓，唔構成法律意見。有需要請諮詢專業人士。</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

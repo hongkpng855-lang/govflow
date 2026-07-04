@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESGov | 香港公司開公司銀行戶口 2026 實戰指南 — 被拒絕點算？所需文件、銀行選擇全攻略</title>
+<meta name="description" content="2026 年香港公司開銀行戶口完整實戰教學：所需文件清單、傳統銀行 vs 虛擬銀行比較、各銀行審批要求及開戶門檻、開戶被拒嘅解決方案及替代方案、分行選擇心得。由真實公司東主經歷整理，唔想俾中介食炒價就睇呢篇，附銀行開戶 Checklist。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gold { color: #C9A84C; }
+  .border-gold { border-color: #C9A84C; }
+  .hover:bg-gold/90 { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"香港有限公司開公司戶口要咩文件？","acceptedAnswer":{"@type":"Answer","text":"最基本需要：公司註冊證（CI）、商業登記證（BR）、公司章程（M&A）、董事身份證/護照、公司地址證明（如水電費單或銀行月結單）、業務證明（發票/合約/公司網站）。部分銀行要求所有董事親身到場，亦可能需要公司秘書信。"}},
+    {"@type":"Question","name":"開公司戶口被拒絕點算？","acceptedAnswer":{"@type":"Answer","text":"首先搞清楚被拒原因。常見原因包括：業務性質不明確、文件唔齊全、公司架構複雜、或者銀行內部政策收緊。解決方法：1) 整理好完整業務證明；2) 試另一間銀行（每間審批標準唔同）；3) 考慮虛擬銀行（如 ZA Bank、Mox Business、Livi）；4) 等 3-6 個月後再試同一間。"}},
+    {"@type":"Question","name":"傳統銀行 vs 虛擬銀行開戶邊間好？","acceptedAnswer":{"@type":"Answer","text":"傳統銀行（HSBC、中銀、渣打）優點：信譽強、服務全面、適合有大額交易或跨境業務嘅公司。缺點：開戶門檻高、審批時間長（2-8 星期）、文件要求嚴格。虛擬銀行（ZA Bank Business、Mox Business、Livi Business）優點：網上辦理、審批快（幾日到一星期）、門檻低。缺點：服務較基本、跨境功能有限、大額交易可能有上限。建議：初期用虛擬銀行開住先，同時申請傳統銀行。"}},
+    {"@type":"Question","name":"開公司戶口要預約嗎？需要幾耐？","acceptedAnswer":{"@type":"Answer","text":"傳統銀行需要預約，建議直接打去分行或經網上系統預約。審批時間：傳統銀行約 2-8 星期（匯豐較快約 1-2 星期，其他銀行可能更耐）。虛擬銀行全程網上辦理，約 3-7 個工作天。建議預約偏遠地區分行（如元朗、上水、屯門），等候時間通常比中環分行短。"}},
+    {"@type":"Question","name":"開公司戶口可以一人辦理嗎？其他董事唔在香港？","acceptedAnswer":{"@type":"Answer","text":"部分銀行接受授權辦理，但多數傳統銀行要求所有董事親身到場簽名。如果其他董事唔喺香港：1) 選擇接受授權書嘅銀行（如中銀可以授權一人辦理，但要有公證授權書）；2) 考慮虛擬銀行（部分接受遙距見證開戶）；3) 或者去該董事所在國家嘅分行辦理（如 HSBC 可以 cross-border 開戶）。"}}
+  ]
+}
+</script>
+<!-- Open Graph -->
+<meta property="og:title" content="香港公司開公司銀行戶口 2026 實戰指南 — 被拒絕點算？所需文件、銀行選擇全攻略">
+<meta property="og:description" content="2026 年開公司戶口完整教學：文件清單、銀行比較、被拒點算。由真實公司東主經歷整理，唔想俾人食炒價搵中介就睇呢篇。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://esgov.org/blog/香港公司開銀行戶口2026實戰指南" />
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港公司開銀行戶口2026實戰指南" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ESGov",
+    "url": "https://esgov.org",
+    "description": "Hong Kong company compliance platform — free PDF generators, compliance guides, and company secretarial resources.",
+    "foundingDate": "2024",
+    "areaServed": "HK",
+    "knowsLanguage": "zh-HK,en"
+  }
+  </script>
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "ESGov 團隊",
+    "description": "香港公司秘書及合規顧問，專注提供公司註冊、股份轉讓、SCR 合規等免費指南",
+    "url": "https://esgov.org",
+    "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
+  }
+  </script>
+</head>
+<body>
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+<!-- Article Header -->
+<section class="bg-navy text-white py-12">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="flex items-center space-x-2 text-gold text-sm mb-3">
+      <span>🏦 公司財務</span>
+      <span>·</span>
+      <span>8 分鐘閱讀</span>
+      <span>·</span>
+      <span>2026 年 6 月</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-4">
+      香港公司開公司銀行戶口 2026 實戰指南<br>
+      <span class="text-gold text-xl sm:text-2xl font-normal">被拒絕點算？所需文件、銀行選擇全攻略</span>
+    </h1>
+    <p class="text-gray-300 text-lg max-w-3xl">
+      開公司銀行戶口？我呢兩年開過 5 間公司戶口（失敗過 2 次），
+      中環分行俾人當人球咁踢，最後喺屯門搞掂。呢篇文話你知點樣做先唔會浪費時間。
+    </p>
+  </div>
+
+    <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
+      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span class="ml-4">📅 最後更新：2026年6月</span>
+    </div>
+</section>
+
+<!-- Article Content -->
+<article class="max-w-4xl mx-auto px-4 py-8">
+
+  <!-- Table of Contents -->
+  <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+    <h2 class="text-xl font-bold text-gov-navy mb-4">📋 本文目錄</h2>
+    <ul class="space-y-2">
+      <li><a href="#reality" class="toc-item text-gray-700 hover:text-gold no-underline">1️⃣ 殘酷現實：開公司戶口比以前難咗好多</a></li>
+      <li><a href="#documents" class="toc-item text-gray-700 hover:text-gold no-underline">2️⃣ 所需文件清單 Check List</a></li>
+      <li><a href="#banks" class="toc-item text-gray-700 hover:text-gold no-underline">3️⃣ 傳統銀行 vs 虛擬銀行全面比較</a></li>
+      <li><a href="#strategy" class="toc-item text-gray-700 hover:text-gold no-underline">4️⃣ 開戶策略：點樣提高成功率</a></li>
+      <li><a href="#rejected" class="toc-item text-gray-700 hover:text-gold no-underline">5️⃣ 被拒絕咗點算？</a></li>
+      <li><a href="#tips" class="toc-item text-gray-700 hover:text-gold no-underline">6️⃣ 真實經驗：分行選擇好重要</a></li>
+      <li><a href="#faq" class="toc-item text-gray-700 hover:text-gold no-underline">❓ 常見問題</a></li>
+    </ul>
+  </div>
+
+  <!-- 1. Reality -->
+  <div class="prose-custom" id="reality">
+    <h2>1️⃣ 殘酷現實：開公司戶口比以前難咗好多</h2>
+    
+    <p>
+      如果你係近年先開公司，可能會覺得開公司戶口好麻煩。
+      但其實唔係你嘅問題，係成個 banking industry 都收緊咗。
+    </p>
+    <p>
+      2018 年之前，開公司戶口基本上帶齊三寶（CI、BR、M&A）就得。
+      但自從反洗錢（AML）同 KYC 要求越嚟越嚴，銀行開戶審批變得非常謹慎。
+      特別係 2024-2026 年，多家銀行因為合規問題被罰款，審批更加收緊。
+    </p>
+
+    <div class="callout-warning">
+      <strong>😅 真人真事：</strong> 我第一次開公司戶口，去咗中環某大銀行。帶齊晒文件，排咗半個鐘，見到 RM（客戶經理），
+      佢望咗我一眼就話：「你公司做咩業務㗎？」我答「數碼營銷」，佢面有難色，話「呢類業務我哋審批比較嚴格」，
+      然後就叫我留低文件等消息。結果等咗 3 星期，收到一封標準拒絕信，原因寫「銀行商業決定」。
+      咩叫商業決定？即係佢唔想做你生意，但又唔想話你知真正原因。
+    </div>
+
+    <p>
+      我果陣好沮喪，上網搵資料仲見到啲中介話「俾 $3,000-$8,000 幫你搞掂開戶」。
+      問咗幾間，開價 $5,000 起，唔包成功。我當時諗：唔通真係要俾人食呢個炒價？
+    </p>
+    <p>
+      最後我冇俾呢個錢。前後試咗 3 間銀行 + 2 間虛擬銀行，最終用一個好簡單嘅策略搞掂晒。
+      等陣話你知。
+    </p>
+  </div>
+
+  <!-- 2. Documents -->
+  <div class="prose-custom" id="documents">
+    <h2>2️⃣ 所需文件清單 Check List</h2>
+
+    <p>
+      開公司戶口嘅基本文件，每間銀行大同小異。以下係最常見嘅要求：
+    </p>
+
+    <h3>必備文件（基本盤）</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>文件</th>
+          <th>說明</th>
+          <th>備註</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>公司註冊證書（CI）</td><td>Certificate of Incorporation</td><td>正本或核實副本</td></tr>
+        <tr><td>商業登記證（BR）</td><td>最新嘅一年證或三年證</td><td>未過期</td></tr>
+        <tr><td>公司章程（M&A）</td><td>Articles of Association</td><td>最好帶正本</td></tr>
+        <tr><td>董事身份證明</td><td>身份證 + 護照（如有）</td><td>所有董事都要</td></tr>
+        <tr><td>住址證明</td><td>最近 3 個月內嘅水電費單或銀行月結單</td><td>中英文都得</td></tr>
+        <tr><td>股東名冊</td><td>Register of Members</td><td>部分銀行要求</td></tr>
+        <tr><td>董事名冊</td><td>Register of Directors</td><td>部分銀行要求</td></tr>
+      </tbody>
+    </table>
+
+    <h3>業務證明文件（加分項）</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>文件</th>
+          <th>點解有用</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>公司網站／社交媒體專頁</td><td>證明你公司係「真係做生意」</td></tr>
+        <tr><td>與客戶嘅合約／Invoice</td><td>證明你有實際業務往來</td></tr>
+        <tr><td>供應商報價單／採購單</td><td>證明業務鏈完整</td></tr>
+        <tr><td>公司卡片（如有）</td><td>加分項，但冇都唔緊要</td></tr>
+        <tr><td>銀行月結單（個人戶口）</td><td>證明你有資金來源</td></tr>
+        <tr><td>公司業務計劃書</td><td>特別係新公司，有 Business Plan 會加分</td></tr>
+      </tbody>
+    </table>
+
+    <h3>公司架構文件（如有需要）</h3>
+    <ul>
+      <li>如果股東係公司（而非個人）：需要最終受益人（UBO）嘅身份證明同持股證明</li>
+      <li>如果有多層控股架構：每層嘅公司註冊證書</li>
+      <li>如果係信託架構：信託契約</li>
+    </ul>
+
+    <div class="callout-danger">
+      <strong>⚠️ 重要提醒：</strong> 所有文件建議準備 <strong>最少 2 份副本</strong>。
+      銀行好大機會叫你留低文件，如果只得一份正本，風險好高。
+      我中過招：第一次去中銀，RM 話要留低 CI 正本審批，我俾咗，結果等咗 2 星期話要補文件，
+      但我冇 CI 正本喺手，搞到要俾錢公司註冊處買多份。
+    </div>
+  </div>
+
+  <!-- 3. Banks Comparison -->
+  <div class="prose-custom" id="banks">
+    <h2>3️⃣ 傳統銀行 vs 虛擬銀行全面比較</h2>
+
+    <p>
+      2026 年嘅香港，開公司戶口嘅選擇比五年前多咗好多。
+      傳統銀行之外，仲有虛擬銀行（Virtual Bank）可以揀。
+    </p>
+
+    <h3>傳統銀行</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>銀行</th>
+          <th>審批時間</th>
+          <th>最低存款</th>
+          <th>每月收費</th>
+          <th>開戶難度</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>HSBC 匯豐</td><td>1-2 星期</td><td>$0（商業理財）</td><td>$0-$200</td><td>⭐⭐⭐ 中等</td></tr>
+        <tr><td>BOCHK 中銀</td><td>2-4 星期</td><td>$0</td><td>$0-$150</td><td>⭐⭐⭐ 中等</td></tr>
+        <tr><td>渣打 Standard Chartered</td><td>3-6 星期</td><td>$0</td><td>$0-$200</td><td>⭐⭐⭐⭐ 較難</td></tr>
+        <tr><td>東亞 BEA</td><td>2-4 星期</td><td>$0</td><td>$0-$100</td><td>⭐⭐ 較易</td></tr>
+        <tr><td>恒生 Hang Seng</td><td>2-3 星期</td><td>$0</td><td>$0-$180</td><td>⭐⭐⭐ 中等</td></tr>
+        <tr><td>大新 Dah Sing</td><td>1-3 星期</td><td>$0</td><td>$0-$80</td><td>⭐⭐ 較易</td></tr>
+        <tr><td>工銀亞洲 ICBC (Asia)</td><td>3-6 星期</td><td>$0</td><td>$0-$100</td><td>⭐⭐⭐⭐ 較難</td></tr>
+      </tbody>
+    </table>
+    <p class="text-sm text-gray-500">* 以上資料僅供參考，實際收費同要求以各大銀行為準。月費通常可豁免（如達到最低存款或交易量）。</p>
+
+    <h3>虛擬銀行</h3>
+    <p>虛擬銀行係近幾年開公司戶口嘅新選擇，全程網上辦理，好適合初創同中小企。</p>
+    <table>
+      <thead>
+        <tr>
+          <th>銀行</th>
+          <th>審批時間</th>
+          <th>最低存款</th>
+          <th>月費</th>
+          <th>開戶難度</th>
+          <th>跨境功能</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>ZA Bank Business</td><td>3-7 日</td><td>$0</td><td>免費</td><td>⭐⭐ 較易</td><td>一般</td></tr>
+        <tr><td>Mox Business（渣打旗下）</td><td>5-10 日</td><td>$0</td><td>免費</td><td>⭐⭐ 較易</td><td>中等</td></tr>
+        <tr><td>Livi Business（中銀旗下）</td><td>5-10 日</td><td>$0</td><td>免費</td><td>⭐⭐ 較易</td><td>基本</td></tr>
+        <tr><td>WeLab Bank Business</td><td>3-5 日</td><td>$0</td><td>免費</td><td>⭐ 最易</td><td>基本</td></tr>
+      </tbody>
+    </table>
+    <p class="text-sm text-gray-500">* 虛擬銀行嘅服務範圍同功能會持續更新，開戶前建議上官網確認最新資訊。</p>
+
+    <h3>點樣揀？</h3>
+    <div class="callout-success">
+      <strong>💡 建議策略：</strong> 最理想係「<strong>傳統銀行 + 虛擬銀行</strong>」雙軌並行。
+      <br><br>
+      <strong>先開虛擬銀行</strong>（幾日就搞掂，即時有戶口可以收付款）→
+      <strong>同時申請傳統銀行</strong>（慢慢等審批，將來有實體分行服務同跨境功能）。
+      <br><br>
+      我就係咁做：先用 ZA Bank Business 開住先，一個星期內有戶口，完全免費。
+      同時申請緊中銀，等咗 3 星期開到。而家兩個都用緊，各有各好處。
+    </div>
+  </div>
+
+  <!-- 4. Strategy -->
+  <div class="prose-custom" id="strategy">
+    <h2>4️⃣ 開戶策略：點樣提高成功率</h2>
+
+    <p>
+      經過 5 次開戶經驗（3 次成功、2 次失敗），我總結咗以下提高成功率嘅策略：
+    </p>
+
+    <h3>策略一：揀分行好重要</h3>
+    <p>
+      中環分行日日排長龍，RM 見慣大生意，你間初創公司佢未必有興趣。
+      試下以下策略：
+    </p>
+    <ul>
+      <li><strong>避開中環、金鐘、尖沙咀</strong> — 呢啲區嘅 RM 見慣大客，對中小企唔太熱情</li>
+      <li><strong>試新界分行</strong> — 元朗、屯門、上水、大埔嘅分行，RM 比較願意幫中小企</li>
+      <li><strong>試屋邨分行</strong> — 例如慈雲山、彩虹、黃大仙，唔好以為細分行就做唔到公司戶口</li>
+      <li><strong>預約早啲</strong> — 朝早 9:00-10:00 嘅時段通常最少人，RM 都比較精神</li>
+    </ul>
+
+    <div class="callout-info">
+      <strong>😅 真人真事—屯門奇蹟：</strong> 我喺中環俾人拒絕之後，打去屯門某大銀行分行，話想開公司戶口。
+      對方話「可以呀，你帶齊文件過嚟就得，唔使預約都得」。我半信半疑去咗，
+      結果 RM 係個好後生嘅 staff，好有心機幫我 check 文件，仲話「你公司做數碼營銷？好 common 㗎，冇問題」。
+      一個星期就開到戶口。中環 RM 同屯門 RM，對同一間公司嘅態度可以完全唔同。
+    </div>
+
+    <h3>策略二：準備好業務故事</h3>
+    <p>
+      RM 見你第一件事就係問你做咩生意。你嘅回答會直接影響佢審批嘅意願。
+    </p>
+    <ul>
+      <li><strong>清楚講到你嘅業務模式</strong> — 客戶係邊類人、收入來源、預期交易量</li>
+      <li><strong>帶業務證明</strong> — 有網站 show 網站，有 app show app，有合約 show 合約</li>
+      <li><strong>交代資金來源</strong> — 公司資金係點嚟嘅（自己出資？投資者？貸款？）</li>
+      <li><strong>預期交易模式</strong> — 主要收付款地區、大致金額、交易頻率</li>
+    </ul>
+
+    <div class="callout-warning">
+      <strong>⚠️ 避免用嘅字眼：</strong> 「加密貨幣」、「虛擬資產」、「跨境代購」、「未確定業務方向」。
+      呢啲字眼一出口，銀行就會標記為高風險，審批難度大增。
+    </div>
+
+    <h3>策略三：一次過申請多間</h3>
+    <p>
+      唔好一間等 rejected 先試下一間。同時申請 2-3 間銀行，邊間快就先用邊間。
+      開到戶口之後，就算其他銀行 reject 都唔使驚。
+    </p>
+    <ul>
+      <li>同一時間申請：一間傳統銀行 + 一間虛擬銀行</li>
+      <li>虛擬銀行開得快，可以即刻用到</li>
+      <li>傳統銀行開得慢，但服務全面啲</li>
+    </ul>
+  </div>
+
+  <!-- 5. Rejected -->
+  <div class="prose-custom" id="rejected">
+    <h2>5️⃣ 被拒絕咗點算？</h2>
+
+    <p>
+      開戶被拒絕係好常見嘅事，唔好灰心。我同你分析下被拒嘅原因同解決方法。
+    </p>
+
+    <h3>常見被拒原因</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>原因</th>
+          <th>點解</th>
+          <th>解決方法</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>業務性質不明確</td>
+          <td>銀行唔知你公司做咩，怕係空殼公司</td>
+          <td>準備好業務證明文件同清晰解釋</td>
+        </tr>
+        <tr>
+          <td>文件唔齊全</td>
+          <td>某啲文件冇帶或格式唔啱</td>
+          <td>對清楚 Check List，所有文件預備多份</td>
+        </tr>
+        <tr>
+          <td>公司架構複雜</td>
+          <td>有多層控股、境外股東等</td>
+          <td>準備好最終受益人（UBO）嘅完整資料</td>
+        </tr>
+        <tr>
+          <td>行業風險高</td>
+          <td>金融科技、加密貨幣、貿易公司較敏感</td>
+          <td>試其他銀行，特別係對該行業較寬鬆嘅</td>
+        </tr>
+        <tr>
+          <td>董事背景</td>
+          <td>曾有信貸問題或同敏感地區有關聯</td>
+          <td>考慮轉董事或增加本地董事</td>
+        </tr>
+        <tr>
+          <td>銀行內部政策</td>
+          <td>該分行/該期政策收緊</td>
+          <td>等 3-6 個月後再試，或者試另一間</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>被拒絕後嘅行動計劃</h3>
+    <ol>
+      <li><strong>搞清楚原因</strong> — 打去問 RM 或分行經理，禮貌啲問「可唔可以話我知邊方面改善？」（雖然多數都唔會講真話，但問下冇壞）</li>
+      <li><strong>整理好文件再試另一間</strong> — 每間銀行嘅審批標準唔同，呢間 reject 唔代表第二間都會</li>
+      <li><strong>先開虛擬銀行</strong> — ZA Bank Business 同 WeLab Bank Business 門檻最低，通常 3-7 日就開到</li>
+      <li><strong>3 個月後再試</strong> — 如果係同一間銀行，建議等 3-6 個月，期間公司有更多業務記錄再試</li>
+      <li><strong>考慮加簽公司秘書信</strong> — 部分銀行如果見到由會計師或律師發出嘅公司秘書信會提高成功率</li>
+    </ol>
+
+    <div class="callout-success">
+      <strong>✅ 我自己嘅經驗：</strong> 第一次開戶被中環某銀行拒絕後，我冇放棄。同一個月申請咗 ZA Bank Business，
+      1 個星期搞掂，仲有 HK$300 開戶獎賞。同一時間申請屯門分行嘅中銀，3 星期後成功開戶。
+      而家兩間都用緊，完全冇影響業務運作。
+    </div>
+  </div>
+
+  <!-- 6. Tips -->
+  <div class="prose-custom" id="tips">
+    <h2>6️⃣ 真實經驗：分行選擇好重要</h2>
+
+    <p>
+      最後分享幾個親身測試過嘅 tips，幫你慳時間慳氣力：
+    </p>
+
+    <h3>分行紅黑榜（個人經驗）</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>分區</th>
+          <th>經驗</th>
+          <th>建議</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>❌ 中環（任何銀行）</td>
+          <td>RM 冇乜耐性，審批嚴格，等候時間長</td>
+          <td>除非你公司年收入過千萬，否則唔建議</td>
+        </tr>
+        <tr>
+          <td>❌ 金鐘</td>
+          <td>同上，仲要偏貴</td>
+          <td>避開</td>
+        </tr>
+        <tr>
+          <td>❌ 尖沙咀</td>
+          <td>多遊客多內地客，RM 忙到冇時間理你</td>
+          <td>如果附近無其他選擇先好去</td>
+        </tr>
+        <tr>
+          <td>✅ 屯門</td>
+          <td>RM 好傾、有耐性、審批相對寬鬆</td>
+          <td>強烈推薦，如果唔嫌遠</td>
+        </tr>
+        <tr>
+          <td>✅ 元朗</td>
+          <td>同屯門類似，中小企友善</td>
+          <td>推薦</td>
+        </tr>
+        <tr>
+          <td>✅ 上水</td>
+          <td>少人、快、RM 有heart</td>
+          <td>推薦，特別係北區公司</td>
+        </tr>
+        <tr>
+          <td>✅ 慈雲山／黃大仙</td>
+          <td>屋邨分行反而好服務</td>
+          <td>值得一試</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="text-sm text-gray-500">* 以上係個人經歷，僅供參考。每個分行都可能因 staff 流動而有變化。</p>
+
+    <h3>時間策略</h3>
+    <ul>
+      <li><strong>最佳時間：</strong> 星期二至四 9:00-10:00（星期一銀行多人、星期五大家就快收工）</li>
+      <li><strong>避開時間：</strong> 月頭同月尾（太多人處理出糧同找數）、農曆新年後（開戶高峰期）</li>
+      <li><strong>預約技巧：</strong> 打電話去分行直接問「我想開公司戶口，可唔可以約個時間上嚟傾下？」
+        而唔係透過銀行 hotline 預約（hotline 會推你去中環旗艦店）</li>
+    </ul>
+
+    <h3>開戶後</h3>
+    <div class="callout-info">
+      <strong>📌 開到戶口之後要做嘅事：</strong>
+      <ol>
+        <li>立即 set 好網上銀行同雙重認證（2FA）</li>
+        <li>登記埋轉數快（FPS）— 公司 FPS 好重要，好多客戶都要求 FPS 過數</li>
+        <li>設定交易限額同授權簽署人權限</li>
+        <li>記低戶口嘅最低存款要求（如果有），避免俾月費</li>
+        <li>保留開戶嘅所有文件副本同確認信</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8 my-8 text-center border-2 border-gold">
+    <span class="bg-gov-gold text-gov-navy text-xs font-bold px-3 py-1 rounded-full">🔥 相關指南</span>
+    <h2 class="text-2xl font-bold text-gov-navy mt-3 mb-2">有限公司周年申報表完整指南</h2>
+    <p class="text-gray-600 mb-2">開到戶口之後，記得準時交周年申報表同商業登記續期！</p>
+    <div class="flex items-center justify-center space-x-2 text-sm text-gray-500 mb-4">
+      <span>📄 重要日期提醒</span>
+      <span>·</span>
+      <span>💰 最新費用</span>
+      <span>·</span>
+      <span>⚠️ 逾期後果</span>
+    </div>
+    <a href="/blog/有限公司周年申報表/" class="inline-block bg-navy text-white font-bold px-8 py-4 rounded-lg hover:bg-blue-900 transition text-lg">
+      睇周年申報表指南 →
+    </a>
+  </div>
+
+  <!-- FAQ -->
+  <div class="prose-custom" id="faq">
+    <h2>❓ 常見問題</h2>
+
+    <div class="faq-item">
+      <details>
+        <summary>香港有限公司開公司戶口要咩文件？</summary>
+        <p>最基本需要公司註冊證書（CI）、商業登記證（BR）、公司章程（M&A）、所有董事嘅身份證明同住址證明。業務證明方面有合約、Invoice、公司網站會大大提高成功率。每間銀行要求略有不同，建議去之前打電話問清楚。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>開公司戶口被拒絕點算？</summary>
+        <p>先搞清楚可能原因，然後試另一間銀行。建議同時申請一間虛擬銀行（如 ZA Bank Business）做 backup，幾日就開到。整理好業務證明文件，3個月後再試被拒個間。唔好俾錢搵中介，除非你真係試咗 5 間以上都唔得先考慮。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>傳統銀行 vs 虛擬銀行邊間好？</summary>
+        <p>初期建議兩個都用。虛擬銀行開得快、零收費，適合日常營運。傳統銀行有實體分行、跨境功能強，適合有國際業務或需要大額交易嘅公司。我自己就 ZA Bank Business + 中銀咁用，靈活好多。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>開公司戶口要預約嗎？需要幾耐？</summary>
+        <p>傳統銀行需要預約，最好直接打去分行約而唔經 hotline。審批時間約 2-8 星期。虛擬銀行全程網上搞掂，約 3-7 個工作天。揀分行方面建議試新界區分行（屯門、元朗、上水），成功率同服務質素通常比中環好。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>開公司戶口可以一個人辦理嗎？其他董事唔喺香港？</summary>
+        <p>部分銀行接受授權辦理，但多數傳統銀行要求所有董事親身到場。如果董事唔喺香港，可以考慮中銀（接受公證授權）、或者虛擬銀行（部分接受遙距見證）。HSBC 亦可以 cross-border 開戶，喺董事所在國家嘅分行辦理。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>開公司戶口要俾錢中介嗎？</summary>
+        <p>唔建議。市面中介開價 $3,000-$8,000，而且唔保證成功。只要你準備好文件、揀啱分行、同時申請虛擬銀行做 backup，成功率好高。俾錢中介唔會令你嘅文件多咗或公司業務「真實咗」，唔值得。</p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>公司剛註冊未有業務可以開戶口嗎？</summary>
+        <p>可以，但難度會高啲。建議準備一份簡單嘅 Business Plan，講清楚公司計劃做咩業務、目標客戶、預計收入來源。部分虛擬銀行（如 WeLab Bank Business）對新公司比較友善，可以優先試。</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="bg-navy text-white rounded-lg p-6 text-center mt-8">
+    <p class="text-lg font-bold">📌 跟進指南</p>
+    <p class="text-gray-300 text-sm mb-4">開咗公司戶口之後，下一步就係處理公司秘書、周年申報表、同商業登記續期</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="/blog/有限公司周年申報表/" class="inline-block bg-gov-gold text-gov-navy font-bold px-6 py-3 rounded-lg hover-gov-gold transition">
+        睇周年申報表指南 →
+      </a>
+      <a href="/blog/商業登記續期全攻略/" class="inline-block bg-gray-700 text-white font-bold px-6 py-3 rounded-lg hover:bg-gray-600 transition">
+        商業登記續期攻略 →
+      </a>
+    </div>
+  </div>
+
+</article>
+
+<!-- Footer -->
+<footer class="bg-navy text-gray-400 py-8 mt-8">
+  <div class="max-w-4xl mx-auto px-4 text-center text-sm">
+    <p class="text-gold font-bold text-lg mb-2">ESGov</p>
+    <p>香港公司流程指南 · 由真實經歷者整理</p>
+    <p class="mt-2">以上內容僅供參考，不構成法律或專業意見。如有疑問請諮詢專業會計師或律師。</p>
+    <p class="mt-2 text-gray-500">銀行服務條款同收費可能隨時更改，開戶前請向相關銀行查詢最新資訊。</p>
+    <div class="mt-4">
+      <a href="/" class="hover:text-white mx-2">首頁</a>
+      <a href="/shareholder-transfer/" class="hover:text-white mx-2">股份轉讓指南</a>
+      <a href="/#blog" class="hover:text-white mx-2">文章</a>
+    </div>
+  </div>
+</footer>
+
+
+
+  <!-- Auto-added: related tool links -->
+  <div class="max-w-3xl mx-auto px-4 mt-10 mb-8">
+    <div class="bg-navy/5 border border-navy/10 rounded-xl p-6">
+      <h3 class="text-lg font-bold text-navy mb-4">📍 相關免費工具</h3>
+      <div class="space-y-3">
+        <a href="https://esgov.org/nar1-generator/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📋 ESGov NAR1 周年申報表 PDF 填寫工具</a>
+        <a href="https://esgov.org/shareholder-transfer/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📄 免費使用 ESGov 股份轉讓文件生成工具</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

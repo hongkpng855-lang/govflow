@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港公司股東協議（Shareholders' Agreement）終極指南｜合夥開公司必睇</title>
+  <meta name="description" content="同朋友合夥開公司冇股東協議？好多人以為公司章程（AoA）就夠，其實 Shareholders' Agreement 先係真正保護你嘅關鍵文件。由親身經歷股東糾紛嘅東主分享股東協議必備條款（Drag Along/Tag Along/死局解決機制）、常見陷阱同實戰貼士。" />
+  <meta name="keywords" content="股東協議, Shareholders Agreement, 香港有限公司, 合夥開公司, 公司章程, AoA, 股東糾紛, 股份轉讓限制" />
+  <meta property="og:title" content="香港公司股東協議（Shareholders' Agreement）終極指南｜合夥開公司必睇" />
+  <meta property="og:description" content="同朋友合夥開公司冇股東協議？好多人以為章程就夠，其實股東協議先係保護你嘅關鍵文件。由親身經歷者分享必備條款、常見陷阱。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港公司股東協議終極指南" />
+  <meta property="og:image" content="https://esgov.org/assets/demo/og-blog-shareholders-agreement.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .blog-content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1B2A4A;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f3f4f6;
+    }
+    .blog-content h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1B2A4A;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-content p {
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      color: #374151;
+    }
+    .blog-content ul, .blog-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #374151;
+    }
+    .blog-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    .blog-content blockquote {
+      border-left: 4px solid #C9A84C;
+      background: #fefce8;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+      font-style: normal;
+    }
+    .blog-content blockquote p {
+      margin-bottom: 0;
+      color: #92400e;
+    }
+    .blog-content .tip-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .blog-content .tip-box p {
+      margin-bottom: 0.25rem;
+    }
+    .blog-content .warn-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .blog-content .warn-box p {
+      margin-bottom: 0.25rem;
+    }
+    .blog-content .gold-box {
+      background: #fefce8;
+      border: 1px solid #fde68a;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .blog-content .gold-box p {
+      margin-bottom: 0.25rem;
+    }
+    .blog-content strong {
+      color: #1B2A4A;
+    }
+    .blog-content a {
+      color: #C9A84C;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    .blog-content a:hover {
+      color: #b89420;
+    }
+    .blog-nav a {
+      transition: all 0.2s ease;
+    }
+    .blog-nav a:hover {
+      color: #C9A84C;
+    }
+  </style>
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港公司股東協議（Shareholders' Agreement）終極指南 — 合夥開公司必睇",
+    "description": "同朋友合夥開公司冇股東協議？好多人以為公司章程（AoA）就夠，其實股東協議先係真正保護你嘅關鍵文件。由親身經歷者分享股東協議必備條款、常見陷阱。",
+    "author": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-06-06",
+    "inLanguage": "zh-HK"
+  }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港公司股東協議終極指南" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "ESGov 團隊",
+    "description": "香港公司秘書及合規顧問，專注提供公司註冊、股份轉讓、SCR 合規等免費指南",
+    "url": "https://esgov.org",
+    "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
+  }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+  <!-- ═══ Article Header ═══ -->
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+      <div class="flex flex-wrap items-center gap-2 text-sm text-gray-400 mb-4">
+        <a href="../" class="hover:text-gold transition-colors">Home</a>
+        <span>/</span>
+        <a href="/#blog" class="hover:text-gold transition-colors">網誌</a>
+        <span>/</span>
+        <span class="text-gray-600">股東協議</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-4">
+        香港公司股東協議（Shareholders' Agreement）終極指南
+      </h1>
+      <p class="text-lg text-gray-500 leading-relaxed mb-5">
+        同朋友合夥開公司冇股東協議？好多人以為公司章程（AoA）就夠，
+        點知一到有分歧嗰陣先發現乜都保障唔到自己。
+        由一個差啲同合夥人反面嘅東主親身分享股東協議嘅所有須知。
+      </p>
+      <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400">
+        <span>📅 2026 年 6 月 6 日</span>
+        <span>📝 真實經歷者</span>
+        <span>🏷️ 股東協議 · 合夥經營 · 公司管治</span>
+        <span>⏱️ 閱讀需時 10 分鐘</span>
+      </div>
+    </div>
+  
+    <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
+      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span class="ml-4">📅 最後更新：2026年6月</span>
+    </div>
+</header>
+
+  <!-- ═══ Article Content ═══ -->
+  <article class="py-8 sm:py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row gap-10">
+
+        <!-- Sidebar TOC (Desktop) -->
+        <aside class="hidden lg:block w-64 shrink-0">
+          <div class="sticky top-24">
+            <h4 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">目錄</h4>
+            <nav class="space-y-1.5 text-sm blog-nav">
+              <a href="#intro" class="block text-gray-500 hover:text-navy transition-colors">開場白</a>
+              <a href="#diff" class="block text-gray-500 hover:text-navy transition-colors">① 股東協議 vs 章程</a>
+              <a href="#clauses" class="block text-gray-500 hover:text-navy transition-colors">② 必備條款</a>
+              <a href="#preemptive" class="block text-gray-500 hover:text-navy transition-colors">③ 新股發行 & 優先權</a>
+              <a href="#transfer" class="block text-gray-500 hover:text-navy transition-colors">④ 股份轉讓限制</a>
+              <a href="#deadlock" class="block text-gray-500 hover:text-navy transition-colors">⑤ 僵局機制</a>
+              <a href="#board" class="block text-gray-500 hover:text-navy transition-colors">⑥ 董事會 & 投票權</a>
+              <a href="#noncompete" class="block text-gray-500 hover:text-navy transition-colors">⑦ 非競爭 & 保密</a>
+              <a href="#mistakes" class="block text-gray-500 hover:text-navy transition-colors">常見錯誤</a>
+              <a href="#checklist" class="block text-gray-500 hover:text-navy transition-colors">Checklist</a>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 min-w-0 blog-content">
+
+          <section id="intro">
+            <p class="text-lg text-gray-600 font-medium leading-relaxed">
+              三年前，我同一個 friend 夾份開公司。我出 60%，佢出 40%，大家傾好一人做一瓣。
+              我諗住「大家 friend 底，有咩就傾掂數」，冇簽任何額外協議，
+              只係公司註冊嗰陣填咗公司章程（Articles of Association）俾公司註冊處。
+            </p>
+            <p>
+              結果一年之後，我哋喺公司方向上有咗嚴重分歧——我覺得應該擴大團隊，
+              佢想 keep 住細規模慢慢做。最後發展到佢自己開咗另一間公司，
+              用同一套技術做緊同我哋公司差唔多嘅生意。
+            </p>
+            <p>
+              我打開公司章程睇，發現<strong>完全冇條款阻止佢咁做</strong>，
+              亦冇任何機制逼佢賣返股份俾我。最後我焗住用溢價買返佢啲股份，
+              賠咗一大筆錢。如果我哋當初有簽一份完整的<strong>股東協議（Shareholders' Agreement）</strong>，
+              呢啲嘢一早寫清楚，就唔使搞到咁難睇。
+            </p>
+            <div class="gold-box">
+              <p class="font-semibold text-amber-800">💡 先講重點</p>
+              <p class="text-sm text-amber-700">
+                公司章程（AoA）係法定文件，用嚟滿足公司註冊要求，主要規範公司內部行政管理。
+                <strong>股東協議係股東之間嘅私人合約</strong>，可以涵蓋股份轉讓限制、優先認購權、
+                退出機制、非競爭條款等等公司章程做唔到嘅嘢。
+                兩者有咩分別下文會詳細講。
+              </p>
+            </div>
+          </section>
+
+          <!-- ───────── Section 1 ───────── -->
+          <section id="diff">
+            <h2>① 股東協議 vs 公司章程（AoA）有咩分別？</h2>
+            <p>
+              好多第一次開公司嘅人以為「有咗公司章程就夠」，唔使另外簽股東協議。
+              <strong>呢個係好常見嘅誤解。</strong>
+            </p>
+            <p>
+              我直接講結論：<strong>公司章程做唔到股東協議嘅事，股東協議亦取代唔到公司章程。</strong>
+              兩者有唔同用途，最好一齊有。
+            </p>
+
+            <h3>公司章程（Articles of Association）</h3>
+            <ul>
+              <li><strong>法定要求</strong>：公司註冊時一定要提交俾公司註冊處</li>
+              <li><strong>公開文件</strong>：任何人都可以去公司註冊處查閱</li>
+              <li><strong>規範範圍</strong>：股東大會點樣召開、董事人數同權力、股份類別等行政管理</li>
+              <li><strong>修改門檻</strong>：要有 75% 股東通過嘅特別決議先改得</li>
+              <li><strong>法律效力</strong>：對所有股東有約束力，包括未來新股東</li>
+            </ul>
+
+            <h3>股東協議（Shareholders' Agreement）</h3>
+            <ul>
+              <li><strong>私人合約</strong>：股東之間自願簽署，唔使交俾任何政府機構</li>
+              <li><strong>保密</strong>：協議內容非公開，只有簽約各方知道</li>
+              <li><strong>規範範圍</strong>：股份轉讓限制、優先認購權、僵局機制、非競爭條款等</li>
+              <li><strong>修改方式</strong>：按協議條款修改（一般要全體股東同意）</li>
+              <li><strong>法律效力</strong>：只約束簽約方；新股東要簽署加入先受約束</li>
+            </ul>
+
+            <div class="warn-box">
+              <p class="font-semibold text-red-800">⚠️ 我中過嘅伏</p>
+              <p class="text-sm text-red-700">
+                我當時以為公司章程入面寫咗「股東可以自由轉讓股份」就叫保障。
+                點知當合夥人自己開公司競爭嘅時候，章程入面完全冇條款阻止佢。
+                股東協議先可以加入 Non-compete clause、Tag-along right 呢啲嘢。
+                公司章程入面寫嘅嘢係公開嘅，你唔會想全香港都睇到你同合夥人之間嘅約定。
+              </p>
+            </div>
+
+            <div class="tip-box">
+              <p class="font-semibold text-blue-800">💡 專業建議</p>
+              <p class="text-sm text-blue-700">
+                如果你同 partner 開公司，最好同時有公司章程（符合法律要求）
+                同股東協議（保障股東之間嘅權益）。股東協議最好喺公司成立初期就簽好，
+                因為嗰陣大家關係最好、最容易傾得埋。
+                等有咗矛盾先嚟傾股東協議，就好似離婚先嚟傾婚前協議咁——難。
+              </p>
+            </div>
+          </section>
+
+          <!-- ───────── Section 2 ───────── -->
+          <section id="clauses">
+            <h2>② 股東協議必備條款逐個數</h2>
+            <p>
+              一份基本嘅股東協議，最少要包以下條款。我會逐個解釋點解重要同點樣寫。
+            </p>
+
+            <h3>1. 公司業務範圍同目標</h3>
+            <p>
+              寫明公司係做咩業務、未來幾年嘅發展方向。呢個好似好 basic，
+              但係當股東之間對公司方向有分歧嗰陣，呢條就係「大家當初同意咗」嘅基準線。
+            </p>
+
+            <h3>2. 股權比例同出資安排</h3>
+            <p>
+              寫清楚每個股東持有幾多股份、出資幾多、幾時出資。
+              如果將來需要額外資金，股東係咪按比例出資？唔出資嘅後果係咩？
+            </p>
+
+            <h3>3. 董事會組成同投票權</h3>
+            <p>
+              邊個股東有權任命董事？董事會有幾多人？每條決議要幾多票先通過？
+              邊啲重大決策需要全體股東同意？呢啲係最易拗嘅地方。
+            </p>
+
+            <h3>4. 股息政策</h3>
+            <p>
+              公司幾時派息、派息比例點決定？有啲股東想拎現金走，
+              有啲想留喺公司發展。寫清楚就唔使每年拗一次。
+            </p>
+
+            <h3>5. 股份轉讓限制</h3>
+            <p>
+              Right of First Refusal（優先購買權）、Tag-along（共同出售權）、
+              Drag-along（強制出售權）——呢啲係股東協議最核心嘅條款，
+              下文會詳細講。
+            </p>
+
+            <h3>6. 新股發行</h3>
+            <p>
+              如果公司需要集資發行新股，現有股東有冇優先認購權？
+              新股作價點樣決定？如果某股東唔認購新股份，股權會被點樣攤薄？
+            </p>
+
+            <h3>7. 非競爭同保密</h3>
+            <p>
+              股東唔可以喺公司業務範圍內自己開公司競爭。
+              公司嘅商業秘密、客戶資料、技術等，股東要保密。
+            </p>
+
+            <h3>8. 僵局機制</h3>
+            <p>
+              如果股東之間有重大分歧解決唔到，點算？
+              「俄羅斯輪盤條款」（Russian Roulette / Buy-Sell）係常見嘅做法，
+              下文會詳細解釋。
+            </p>
+
+            <h3>9. 退出機制</h3>
+            <p>
+              股東想退出嘅時候點處理？可以賣俾邊個？價格點決定？
+              公司有冇權回購股份？
+            </p>
+
+            <h3>10. 爭議解決</h3>
+            <p>
+              有爭議嗰陣先 mediation 定直接去 court？
+              香港定海外仲裁？用邊個法律管轄？
+            </p>
+          </section>
+
+          <!-- ───────── Section 3 ───────── -->
+          <section id="preemptive">
+            <h2>③ 新股發行同優先認購權（Pre-emptive Rights）</h2>
+            <p>
+              公司要集資發行新股嗰陣，現有股東有權按持股比例優先認購新股份。
+              呢個叫 <strong>Pre-emptive Rights</strong>，係股東協議入面好重要嘅條款。
+            </p>
+            <p>
+              假設你公司有兩個股東：你（60%）同 partner（40%）。
+              公司需要集資 $100 萬，打算發行新股。
+            </p>
+            <ul>
+              <li>你有權認購 $60 萬（等於維持 60% 股權）</li>
+              <li>Partner 有權認購 $40 萬（維持 40% 股權）</li>
+              <li>如果你 partner 放棄認購（冇錢或者唔想再投資），你可以認購埋佢嗰份</li>
+              <li>如果雙方都放棄，先可以搵 external investor</li>
+            </ul>
+            <p>
+              呢個條款保障你唔會因為公司集資而被 <strong>強制攤薄股權</strong>。
+              如果冇呢條款，股東會可以就咁通過決議發行新股俾第三方，你嘅股權就無端端被攤薄。
+            </p>
+            <div class="warn-box">
+              <p class="font-semibold text-red-800">⚠️ 冇 Pre-emptive Rights 嘅風險</p>
+              <p class="text-sm text-red-700">
+                我朋友嘅公司就係咁出事：大股東想踢走其中一個小股東，
+                「合法」地通過股東會決議發行大量新股俾自己人。
+                小股東嘅股權由 30% 攤薄到得返 5%，完全喪失話事權。
+                如果有股東協議寫明 Pre-emptive Rights，呢種情況就唔會發生。
+              </p>
+            </div>
+          </section>
+
+          <!-- ───────── Section 4 ───────── -->
+          <section id="transfer">
+            <h2>④ 股份轉讓限制：ROFR、Tag-Along、Drag-Along</h2>
+            <p>
+              呢三條係股份轉讓嘅核心保障條款，好多第一次開公司嘅人完全冇聽過。
+              我直接講清楚：
+            </p>
+
+            <h3>優先購買權（Right of First Refusal, ROFR）</h3>
+            <p>
+              如果一個股東想賣股份，佢要 <strong>先問其他股東想唔想買</strong>。
+              現有股東有權按持股比例買呢批股份。如果其他股東放棄，先可以賣俾街外人。
+            </p>
+            <p>
+              呢個條款防止唔相熟嘅人突然成為你嘅 partner。
+              你 partner 唔可以就咁將股份賣俾你唔識嘅人，而係要俾你優先買。
+            </p>
+
+            <h3>共同出售權（Tag-Along Right）</h3>
+            <p>
+              如果大股東想賣股份俾街外人，<strong>小股東有權跟住一齊賣</strong>。
+              假設大股東揾到買家想用 $100 萬買佢 60% 股份，小股東可以話：
+              「你賣我又賣，我都要用同樣價格賣我啲股份俾個買家。」
+            </p>
+            <p>
+              呢個條款保護小股東——大股東走佬嗰陣，小股東唔使留低俾新嘅大股東話事。
+            </p>
+
+            <h3>強制出售權（Drag-Along Right）</h3>
+            <p>
+              如果大股東想將成間公司賣俾第三方，佢可以 <strong>強制小股東跟住一齊賣</strong>。
+              假設有人想用 $500 萬買晒成間公司，大股東同意，但小股東唔同意。
+              有 Drag-along 條款，大股東就可以逼小股東一齊賣。
+            </p>
+            <p>
+              呢個條款保護大股東——唔會因為小股東阻攔而搞唔成單刁。
+              一般會設定一個 <strong>最少要幾多% 股東同意先可以啟動 Drag-along</strong>
+              （例如 75% 股權同意）。
+            </p>
+
+            <blockquote>
+              <p>
+                「Tag-along 同 Drag-along 嘅關係就好似巴士：Tag-along 係『你上車我跟住上』（小股東跟大股東走），
+                Drag-along 係『你要一齊落車』（大股東逼小股東一齊走）。」
+              </p>
+            </blockquote>
+          </section>
+
+          <!-- ───────── Section 5 ───────── -->
+          <section id="deadlock">
+            <h2>⑤ 僵局機制（Deadlock Resolution）</h2>
+            <p>
+              50/50 或者勢均力敵嘅股東結構，最怕就係<strong>僵局（Deadlock）</strong>。
+              大家各有各意見，投票打成平手，公司咩 decision 都做唔到。
+            </p>
+            <p>
+              常見嘅僵局解決機制有幾種：
+            </p>
+
+            <h3>1. 主席決定權（Chairman's Casting Vote）</h3>
+            <p>
+              董事會或者股東會打成平手嗰陣，主席有額外一票。
+              不過如果主席本身係其中一個股東，呢個可能唔夠公平。
+            </p>
+
+            <h3>2. 俄羅斯輪盤條款（Russian Roulette / Buy-Sell）</h3>
+            <p>
+              呢個係好常見嘅僵局解決機制：
+            </p>
+            <ul>
+              <li>任何一個股東可以啟動 Russian Roulette，提出一個價格買對方嘅股份</li>
+              <li>對方可以選擇：<strong>用呢個價格賣俾你，或者用呢個價格買你啲股份</strong></li>
+              <li>所以出價要公道——你唔會出一個太低嘅價，因為對方可以反過來用呢個價買你啲股份</li>
+            </ul>
+            <p>
+              呢個機制逼雙方理性報價，因為最終可能係你自己要按呢個價賣出或者買入。
+            </p>
+
+            <h3>3. 第三方仲裁</h3>
+            <p>
+              指定一個雙方都同意嘅第三方專家做仲裁，用 mediation 或者 arbitration 解決爭議。
+              有啲協議會寫明先 mediation 後 arbitration。
+            </p>
+
+            <div class="tip-box">
+              <p class="font-semibold text-blue-800">💡 專業建議</p>
+              <p class="text-sm text-blue-700">
+                Russian Roulette 條款係我個人認為最公平嘅僵局機制。
+                因為出價方要俾一個公道價，否則對方會用呢個價買你啲股份。
+                如果你係小股東，建議加入呢條款，保障自己唔會被大股東拖住做唔到 decision。
+              </p>
+            </div>
+          </section>
+
+          <!-- ───────── Section 6 ───────── -->
+          <section id="board">
+            <h2>⑥ 董事會組成同投票權</h2>
+            <p>
+              股東協議入面要寫清楚董事會嘅組成同權力分配。
+              好多公司糾紛嘅根源就係董事會嘅決策權限冇寫清楚。
+            </p>
+
+            <h3>董事名額點分配？</h3>
+            <ul>
+              <li>每個股東按持股比例有權任命若干名董事</li>
+              <li>或者係「大股東有權任命 X 名，小股東有權任命 Y 名」</li>
+              <li>寫清楚董事任期同更換程序</li>
+            </ul>
+
+            <h3>保留事項（Reserved Matters）</h3>
+            <p>
+              有啲重大決策唔可以只係董事會通過，而要 <strong>全體股東同意或者指定比例股東同意</strong>。
+              常見嘅保留事項包括：
+            </p>
+            <ul>
+              <li>公司業務性質變更</li>
+              <li>公司合併、收購、出售重大資產</li>
+              <li>發行新股或者改變股本結構</li>
+              <li>公司清盤或者撤銷註冊</li>
+              <li>派發股息或者改變股息政策</li>
+              <li>向股東或者董事提供貸款</li>
+              <li>公司做超過某個金額嘅擔保或者借款</li>
+            </ul>
+
+            <p>
+              保留事項係保護小股東嘅重要機制。如果某啲重大決策只要有過半數董事通過就得，
+              小股東嘅利益就好容易被犧牲。
+            </p>
+
+            <h3>Quorum（法定人數）</h3>
+            <p>
+              董事會會議要最少幾多人先開得成？一般係過半數董事。
+              但如果大股東控制咗大多數董事席位，小股東可以要求 quorum 要包括最少一個小股東代表。
+            </p>
+          </section>
+
+          <!-- ───────── Section 7 ───────── -->
+          <section id="noncompete">
+            <h2>⑦ 非競爭條款同保密協議</h2>
+            <p>
+              呢個就係我一開始講嘅故事入面最大嘅漏洞——
+              <strong>我 partner 開咗另一間公司同我競爭，但我完全冇辦法阻止佢。</strong>
+            </p>
+
+            <h3>非競爭條款（Non-Compete）</h3>
+            <p>
+              股東協議可以加入非競爭條款，限制股東喺持有公司股份期間同退出後一段時間內：
+            </p>
+            <ul>
+              <li>唔可以自己開公司同公司競爭</li>
+              <li>唔可以喺競爭對手公司做董事或者顧問</li>
+              <li>唔可以挖走公司嘅員工或者客戶</li>
+            </ul>
+
+            <p>
+              非競爭條款嘅有效期要合理——一般係持股期間加離職後 1-2 年。
+              太長嘅非競爭期可能被法院認為 unreasonably restraint of trade 而失效。
+            </p>
+
+            <h3>保密條款（Confidentiality）</h3>
+            <p>
+              股東有權知道公司嘅營運狀況，但同時要承擔保密責任，唔可以將公司嘅
+              商業秘密、客戶名單、財務資料、技術等透露俾第三方。
+            </p>
+
+            <h3>知識產權歸屬</h3>
+            <p>
+              如果股東本身有技術或者知識產權拎入公司，要寫清楚：
+            </p>
+            <ul>
+              <li>係授權俾公司用定係轉讓俾公司？</li>
+              <li>如果股東退股，仲可唔可以用呢啲技術？</li>
+              <li>由股東開發嘅新技術係屬於股東定係公司？</li>
+            </ul>
+
+            <div class="warn-box">
+              <p class="font-semibold text-red-800">⚠️ 我中過嘅伏</p>
+              <p class="text-sm text-red-700">
+                我 partner 當初帶咗一啲技術入公司，我哋口頭講過「呢啲係公司嘅」。
+                但冇寫低。佢退出之後用返同一套技術開新公司，我完全冇法律基礎去阻止佢。
+                如果當初有寫清楚 IP 歸屬，我就可以 claim 佢侵權。
+              </p>
+            </div>
+          </section>
+
+          <!-- ───────── Mistakes ───────── -->
+          <section id="mistakes">
+            <h2>最常見嘅 5 個錯誤</h2>
+
+            <h3>❌ 錯誤 1：「我同 partner 咁 friend，唔使協議啦」</h3>
+            <p>
+              朋友之間開公司最易出事。關係好嗰陣乜都話「冇問題」，
+              一有分歧就冇得返轉頭。股東協議唔係因為信唔過對方，
+              而係<strong>確保將來有任何變化，大家都有一個公平嘅遊戲規則</strong>。
+            </p>
+
+            <h3>❌ 錯誤 2：以為公司章程（AoA）就等於股東協議</h3>
+            <p>
+              公司章程係法定公開文件，做唔到股份轉讓限制、Tag-along、Non-compete 呢啲嘢。
+              而且章程嘅內容係公開㗎，任何人都可以去公司註冊處查。
+              你唔會想成個香港都睇到你同 partner 嘅商業安排掛？
+            </p>
+
+            <h3>❌ 錯誤 3：50/50 股份但冇僵局機制</h3>
+            <p>
+              50/50 係最危險嘅股權結構。乜都打成平手，公司決策完全癱瘓。
+              一定要喺股東協議入面加入僵局解決機制，例如 Russian Roulette。
+            </p>
+
+            <h3>❌ 錯誤 4：冇寫清楚知識產權歸屬</h3>
+            <p>
+              技術型 startup 最常見嘅錯誤。合夥人帶技術入股，
+              但冇寫清楚技術係授權定係轉讓。
+              將來 partner 退出，佢可以話「個技術係我嘅，我而家要拎走」。
+            </p>
+
+            <h3>❌ 錯誤 5：股東協議簽完就放埋一邊，冇定期更新</h3>
+            <p>
+              公司嘅情況會變——有新投資者、有新業務、有新董事。
+              股東協議要定期 review，確保跟得上公司嘅實際情況。
+              所有新股東加入嗰陣都要簽署加入股東協議。
+            </p>
+          </section>
+
+          <!-- ───────── Checklist ───────── -->
+          <section id="checklist">
+            <h2>股東協議簽署前 Checklist（對住做就唔會漏）</h2>
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">1</span>
+                  <span class="text-gray-700">✅ 確認股權比例同出資金額（寫清楚每個股東嘅實際出資）</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">2</span>
+                  <span class="text-gray-700">✅ 寫明公司業務範圍同發展方向（避免將來有歧義）</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">3</span>
+                  <span class="text-gray-700">✅ 董事會組成同重大決策保留事項（咩事要開股東會）</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">4</span>
+                  <span class="text-gray-700">✅ 加入 ROFR、Tag-along、Drag-along 股份轉讓條款</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">5</span>
+                  <span class="text-gray-700">✅ 加入 Pre-emptive Rights（新股優先認購權）</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">6</span>
+                  <span class="text-gray-700">✅ 設計僵局解決機制（Russian Roulette / 仲裁條款）</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">7</span>
+                  <span class="text-gray-700">✅ 加入非競爭條款（持股期間 + 退出後 1-2 年）</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">8</span>
+                  <span class="text-gray-700">✅ 寫清楚知識產權歸屬（技術入股最關鍵）</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">9</span>
+                  <span class="text-gray-700">✅ 加入股息政策同財務披露安排</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">10</span>
+                  <span class="text-gray-700">✅ 寫明爭議解決方式（Mediation → Arbitration / Court）</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">11</span>
+                  <span class="text-gray-700">✅ 所有股東簽署，各持一份正本</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">12</span>
+                  <span class="text-gray-700">✅ 設定定期 review 機制（建議每年一次）</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- ───────── FAQ ───────── -->
+          <section id="faq">
+            <h2>常見問題（FAQ）</h2>
+
+            <h3>Q: 股東協議係咪一定要律師起草？</h3>
+            <p>
+              唔一定要，但<strong>強烈建議搵律師</strong>。
+              股東協議涉及好多法律概念（如 Tag-along、Russian Roulette），
+              自己寫可能會漏咗重要條款或者寫得唔夠清楚。
+              一般律師起草一份基本嘅股東協議收費約 $5,000 - $15,000，視乎複雜程度。
+              同將來可能嘅官司費比，呢個錢絕對係值得投資。
+            </p>
+
+            <h3>Q: 股東協議同公司章程有衝突嘅時候，邊個優先？</h3>
+            <p>
+              一般嚟講，股東協議係私人合約，公司章程係法定文件。
+              如果兩者有衝突，可以喺股東協議入面寫明「如果同公司章程有衝突，
+              以股東協議為準」。但某啲公司法嘅強制性規定係股東協議唔可以 override 嘅。
+            </p>
+
+            <h3>Q: 新投資者加入要點處理股東協議？</h3>
+            <p>
+              新股東加入之前，要簽署一份 <strong>Deed of Adherence</strong>
+              （加入契據），表示同意受現有股東協議約束。
+              同時可以趁機 review 同更新協議條款。
+            </p>
+
+            <h3>Q: 一人公司需要股東協議嗎？</h3>
+            <p>
+              如果你係 100% 唯一股東，股東協議嘅作用唔大。
+              但如果將來打算引入 partner 或者投資者，建議提前準備好 template，
+              到時直接修改就得。
+            </p>
+
+            <h3>Q: 股東協議可以後補嗎？</h3>
+            <p>
+              <strong>可以，但越遲越難傾。</strong>
+              公司啱啱成立嗰陣大家關係最好，乜都容易傾。
+              等有咗矛盾先嚟傾，就好似離婚先嚟傾分身家一樣——每個人嘅立場都企硬咗。
+            </p>
+          </section>
+
+          <!-- ───────── Recap ───────── -->
+          <section>
+            <h2>總結：股東協議係你同 partner 之間嘅「婚姻契約」</h2>
+            <p>
+              開公司同結婚有啲似——起初大家都滿腔熱誠，覺得「我哋唔同，我哋唔會有事」。
+              但現實係，<strong>越親密嘅合作關係，越需要有清晰嘅規則</strong>。
+            </p>
+            <p>
+              股東協議唔係因為你信唔過 partner，而係<strong>確保將來無論發生咩事，
+              大家都有個公平同可預測嘅處理方式</strong>。
+              咁樣大家先可以專心做好盤生意，而唔使擔心 partner 會唔會突然走佬、
+              開競爭公司、或者用股份嚟威脅你。
+            </p>
+            <p>
+              如果你同 partner 仲未有股東協議，建議你搵日坐低傾一傾。
+              我當年就係覺得「唔急嘅」，結果一年後付出咗沉重代價。
+              唔好重複我嘅錯誤。
+            </p>
+          </section>
+
+          <!-- ───────── CTA ───────── -->
+          <div class="mt-12 bg-navy text-white rounded-2xl p-8 sm:p-10 text-center">
+            <p class="text-gold text-sm font-semibold tracking-widest uppercase mb-2">📚 延伸閱讀</p>
+            <h3 class="text-2xl font-bold mb-3">想睇更多公司營運實戰指南？</h3>
+            <p class="text-gray-300 mb-6 max-w-md mx-auto">
+              由真實經歷者分享，幫你避開所有公司文件陷阱。
+              我哋有股份轉讓指南、董事法律責任指南、董事借貸指南等。
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+              <a href="../" class="inline-flex items-center gap-2 bg-white text-navy font-semibold px-6 py-3 rounded-xl hover:bg-gold transition-colors">
+                睇其他指南 →
+              </a>
+              <a href="/blog/香港有限公司董事法律責任終極指南/" class="inline-flex items-center gap-2 border-2 border-gold/40 text-gold font-semibold px-6 py-3 rounded-xl hover:bg-gold/10 transition-colors">
+                董事法律責任 →
+              </a>
+              <a href="/blog/香港有限公司董事借貸終極指南/" class="inline-flex items-center gap-2 border-2 border-gold/40 text-gold font-semibold px-6 py-3 rounded-xl hover:bg-gold/10 transition-colors">
+                董事借貸指南 →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══ Footer ═══ -->
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-navy py-12 mt-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-2 text-white font-bold text-xl">
+          <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+        </div>
+        <div class="text-sm text-gray-400">
+          香港公司秘書文件指南
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
+        <p class="mb-2">
+          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          如有具體法律問題，請諮詢執業律師或專業公司秘書。
+        </p>
+        <p>© 2026 ESGov. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Auto-added: related tool links -->
+  <div class="max-w-3xl mx-auto px-4 mt-10 mb-8">
+    <div class="bg-navy/5 border border-navy/10 rounded-xl p-6">
+      <h3 class="text-lg font-bold text-navy mb-4">📍 相關免費工具</h3>
+      <div class="space-y-3">
+        <a href="https://esgov.org/shareholder-transfer/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📄 免費使用 ESGov 股份轉讓文件生成工具</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESGov | 香港有限公司ESOP/Share Option終極指南 — 點樣出股份俾員工？稅務安排全面拆解</title>
+<meta name="description" content="香港有限公司員工股權激勵計劃 ESOP 終極指南：Share Option Scheme vs Share Award 全面比較、公司條例第 622 章法律程序、稅務安排（公司稅/個人稅/印花稅）、真實情景計算、常見錯誤，由親身設計過 ESOP 嘅東主分享實戰經驗。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .navy { color: #1B2A4A; }
+  .bg-navy { background: #1B2A4A; }
+  .bg-gold { background: #C9A84C; }
+  .text-gold { color: #C9A84C; }
+  .border-gold { border-color: #C9A84C; }
+  .hover-bg-gold\/90:hover { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  table th { background: #1B2A4A; color: #fff; padding: 0.6rem; text-align: left; }
+  table td { padding: 0.6rem; border-bottom: 1px solid #dee2e6; }
+  table tr:nth-child(even) { background: #f1f3f5; }
+  @media (max-width: 640px) { table { font-size: 0.85rem; } table th, table td { padding: 0.4rem; } }
+</style>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港有限公司員工股權激勵計劃ESOP終極指南" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司員工股權激勵計劃ESOP終極指南" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <meta property="og:title" content="ESGov | 香港有限公司ESOP/Share Option終極指南 — 點樣出股份俾員工？稅務安排全面拆解" />
+  <meta property="og:description" content="香港有限公司員工股權激勵計劃 ESOP 終極指南：Share Option Scheme vs Share Award 全面比較、公司條例第 622 章法律程序、稅務安排、真實情景計算、常見錯誤，由親身設計過 ESOP 嘅東主分享實戰經驗。" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ESGov | 香港有限公司員工股權激勵計劃(ESOP/Share Option)終極指南 — 點樣出股份俾員工？稅務安排同法律程序全面拆解",
+  "description": "香港有限公司員工股權激勵計劃 ESOP 終極指南：Share Option Scheme vs Share Award 全面比較、公司條例第 622 章法律程序、稅務安排（公司稅/個人稅/印花稅）、真實情景計算、常見錯誤，由親身設計過 ESOP 嘅東主分享實戰經驗。",
+  "url": "https://esgov.org/blog/香港有限公司員工股權激勵計劃ESOP終極指南",
+  "author": {
+    "@type": "Person",
+    "name": "ESGov"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ESGov"
+  }
+}
+  </script>
+  
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+  </head>
+<body>
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5">
+        <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" />
+        <span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+      </a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+  <!-- ═══ Article Header ═══ -->
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+      <div class="flex flex-wrap items-center gap-2 text-sm text-gray-400 mb-3">
+        <a href="../" class="hover:text-gold transition-colors">Home</a>
+        <span>/</span>
+        <a href="/blog/" class="hover:text-gold transition-colors">Blog</a>
+        <span>/</span>
+        <span class="text-gray-600">ESOP · 股權激勵 · Startup</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-3">
+        香港有限公司員工股權激勵計劃（ESOP / Share Option Scheme）終極指南 — 點樣出股份俾員工？稅務安排同法律程序全面拆解
+      </h1>
+      <p class="text-base sm:text-lg text-gray-500 leading-relaxed mb-4">
+        想用股份留住好員工、但唔知點入手？ESOP（員工股權激勵計劃）係香港 startup 同中小企愈來愈流行嘅做法。但香港有限公司唔同美國，冇 ISO / NSO 呢啲稅務優惠類別，法律程序同稅務處理相對複雜。由親身幫公司設計過 ESOP 嘅東主，逐個步驟話你知。
+      </p>
+      <div class="flex flex-wrap items-center text-sm text-gray-400 gap-4">
+        <span>📅 2026.06.09</span>
+        <span>⏱ 閱讀時間：12 分鐘</span>
+        <span>🏷️ ESOP · 員工股權 · Share Option · 股份獎勵 · 公司條例第622章 · 印花稅 · Startup</span>
+      </div>
+    </div>
+  
+    <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
+      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span class="ml-4">📅 最後更新：2026年6月</span>
+    </div>
+</header>
+
+  <!-- ═══ Article Body ═══ -->
+  <article class="py-8 sm:py-10">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+
+      <!-- Table of Contents -->
+      <div class="bg-white rounded-xl border border-gray-200 p-5 mb-8">
+        <h3 class="font-bold text-lg text-navy mb-3">📖 本文內容</h3>
+        <ul class="space-y-1.5 text-gray-600">
+          <li><a href="#intro" class="text-blue-600 hover:underline">1. 開場：點解要用股份留住員工？</a></li>
+          <li><a href="#what-is-esop" class="text-blue-600 hover:underline">2. 咩係員工股權激勵計劃（ESOP）？</a></li>
+          <li><a href="#types" class="text-blue-600 hover:underline">3. 香港常見嘅兩種模式：Share Option vs Share Award</a></li>
+          <li><a href="#comparison" class="text-blue-600 hover:underline">4. 全面比較表：Option vs Award 揀邊種？</a></li>
+          <li><a href="#legal" class="text-blue-600 hover:underline">5. 法律程序：公司條例第 622 章要求</a></li>
+          <li><a href="#tax" class="text-blue-600 hover:underline">6. 稅務安排：公司扣稅 vs 個人稅 vs 印花稅</a></li>
+          <li><a href="#scenarios" class="text-blue-600 hover:underline">7. 真實情景分析：3 個常見 case</a></li>
+          <li><a href="#steps" class="text-blue-600 hover:underline">8. 實施步驟：由零開始搞 ESOP</a></li>
+          <li><a href="#mistakes" class="text-blue-600 hover:underline">9. 5 個常見錯誤（我親身踩過嘅）</a></li>
+          <li><a href="#faq" class="text-blue-600 hover:underline">10. FAQ — 打工仔角度問嘅問題</a></li>
+          <li><a href="#summary" class="text-blue-600 hover:underline">11. 總結：你要唔要做 ESOP？</a></li>
+        </ul>
+      </div>
+
+      <!-- 1. Intro -->
+      <div id="intro" class="prose-custom">
+        <h2>1. 開場：點解要用股份留住員工？</h2>
+        <p>
+          我 2018 年第一次諗 ESOP，當時公司得 3 個人。有個合作好耐嘅 developer，我唔想佢走，但又俾唔起大公司嗰種人工。於是諗：「不如俾啲股份佢？等佢覺得自己係 part-owner，唔會咁易走。」
+        </p>
+        <p>
+          結果我花咗 3 個月先搞清楚成個程序 — 原來香港有限公司要做員工股份期權計劃，唔係簽份 agreement 就得。要開董事會、要通過股東決議、要改公司章程（如果冇授權股本限制）、仲要考慮員工收到股份之後嘅稅務問題。
+        </p>
+        <p>
+          最後我搞掂咗，嗰個 developer 留咗 4 年，公司成長咗 3 倍。但成個過程，我真係後悔冇早啲搵到一份清晰嘅指南。
+        </p>
+        <div class="callout-info">
+          <strong>💡 一句講晒：</strong>ESOP 唔係大公司專利，香港有限公司一樣可以做。只要你搞清法律程序同稅務安排，就可以用股份綁住核心團隊。但做錯咗，稅局同公司註冊處會搵你，員工俾意外稅會嬲你。
+        </div>
+      </div>
+
+      <!-- 2. What is ESOP -->
+      <div id="what-is-esop" class="prose-custom">
+        <h2>2. 咩係員工股權激勵計劃（ESOP）？</h2>
+        <p>
+          ESOP（Employee Stock Ownership Plan）係公司用股份嚟激勵員工嘅制度。核心邏輯好簡單：員工做得好 → 公司 value 升 → 員工嘅股份升值 → 員工賺錢 → 員工更投入。
+        </p>
+        <p>
+          香港法例冇一個叫「ESOP」嘅法定計劃，而係透過以下方式實現：
+        </p>
+        <ul>
+          <li><strong>Share Option Scheme（股份期權計劃）</strong> — 俾員工一個權利，喺未來某個時間用某個價錢買公司股份</li>
+          <li><strong>Share Award Scheme（股份獎勵計劃）</strong> — 直接俾股份員工，通常有歸屬期（Vesting Schedule）</li>
+          <li><strong>直接發行新股俾員工</strong> — 最簡單，但冇綁定期</li>
+        </ul>
+        <p>
+          美國常見嘅 ISO（Incentive Stock Options）同 NSO（Non-Qualified Stock Options），喺香港稅制之下係唔存在嘅。香港稅局唔會因為你係「員工期權」就有特別稅務優惠——所有股份相關收入都係按薪俸稅或利得稅處理。
+        </p>
+      </div>
+
+      <!-- 3. Types -->
+      <div id="types" class="prose-custom">
+        <h2>3. 香港常見嘅兩種模式：Share Option vs Share Award</h2>
+
+        <h3>🥇 Share Option Scheme（股份期權計劃）</h3>
+        <p>
+          Option 係「俾員工一個權利，但唔係義務」去買股份。員工唔使錢就有 option，但到佢想行使（Exercise）嗰陣先要俾錢買。
+        </p>
+        <p><strong>典型條款：</strong></p>
+        <ul>
+          <li>Grant Price（行使價）— 通常等於 grant 嗰刻嘅 fair market value</li>
+          <li>Vesting Schedule — 通常 4 年，每年 25% 歸屬</li>
+          <li>Exercise Period — 歸屬後 3-5 年內可以行使</li>
+          <li>Cliff — 通常 1 年（做夠一年先開始歸屬）</li>
+        </ul>
+        <p><strong>適合：</strong>早期 startup，公司 value 未確定，員工願意等 company exit 先賺錢。</p>
+
+        <h3>🥈 Share Award Scheme（股份獎勵計劃）</h3>
+        <p>
+          Award 係直接俾股份員工，只係有歸屬期（Vesting）。員工唔使俾錢，時間到就自動攞到股份。
+        </p>
+        <p><strong>典型條款：</strong></p>
+        <ul>
+          <li>Restricted Shares — 限制性股份，歸屬前不能賣</li>
+          <li>Vesting Schedule — 類似 Option，通常 3-4 年</li>
+          <li>Repurchase Right — 公司有權用原價買返未歸屬嘅股份</li>
+        </ul>
+        <p><strong>適合：</strong>較成熟嘅公司，公司 value 比較明確，員工想即刻有 equity 而唔係等 exit。</p>
+
+        <div class="callout-warning">
+          <strong>⚠️ 重要分別：</strong>Option 嘅好處係員工可以揀「幾時」俾稅——佢唔行使就唔會有稅務責任。但 Award 係「收到嗰刻」就要報稅，就算未歸屬都可能有稅務影響。呢個係好多人忽略嘅地方。
+        </div>
+      </div>
+
+      <!-- 4. Comparison -->
+      <div id="comparison" class="prose-custom">
+        <h2>4. 全面比較表：Option vs Award 揀邊種？</h2>
+        <table>
+          <tr>
+            <th>項目</th>
+            <th>Share Option</th>
+            <th>Share Award</th>
+          </tr>
+          <tr>
+            <td>員工要唔要比錢</td>
+            <td>行使時要比 Grant Price（通常係面值）</td>
+            <td>唔使比錢</td>
+          </tr>
+          <tr>
+            <td>員工稅務</td>
+            <td>行使嗰刻俾薪俸稅（差價）</td>
+            <td>收到 Award 嗰刻俾薪俸稅</td>
+          </tr>
+          <tr>
+            <td>公司扣稅</td>
+            <td>差額可以扣利得稅</td>
+            <td>發行成本可以扣稅</td>
+          </tr>
+          <tr>
+            <td>印花稅</td>
+            <td>行使時 0.2%（買賣雙方各 0.1%）</td>
+            <td>發行時 0.2%（同上）</td>
+          </tr>
+          <tr>
+            <td>員工風險</td>
+            <td>股價跌可以唔行使，冇損失</td>
+            <td>股價跌都持有，有虧損可能</td>
+          </tr>
+          <tr>
+            <td>公司行政</td>
+            <td>較複雜，要追蹤 option pool</td>
+            <td>較簡單，直接發行就搞掂</td>
+          </tr>
+          <tr>
+            <td>員工歸屬感</td>
+            <td>中等（要俾錢先有股份）</td>
+            <td>高（直接擁有些股份）</td>
+          </tr>
+          <tr>
+            <td>適合公司階段</td>
+            <td>早期 startup</td>
+            <td>成長期至成熟期</td>
+          </tr>
+        </table>
+
+        <p><strong>我嘅建議：</strong></p>
+        <ul>
+          <li>如果你係早期 startup（冇收入 / 早期收入），用 <strong>Share Option</strong> — 員工唔需要即刻俾 cash 買股份，公司都唔需要 valuation</li>
+          <li>如果你係穩定盈利嘅公司，用 <strong>Share Award</strong> — 員工即刻有股份，歸屬感更強</li>
+          <li>如果只得一個核心員工想俾股份，直接發行新股都得，但一定要有 buyback agreement</li>
+        </ul>
+      </div>
+
+      <!-- 5. Legal -->
+      <div id="legal" class="prose-custom">
+        <h2>5. 法律程序：公司條例第 622 章要求</h2>
+        <p>
+          呢 part 係最多人忽略嘅。好多 startup 以為簽份 agreement 就得，但其實要跟足公司條例。
+        </p>
+
+        <h3>5.1 檢查公司章程（Articles of Association）</h3>
+        <p>
+          公司條例第 622 章規定，公司發行股份嘅權限要喺公司章程列明。尤其要留意：
+        </p>
+        <ul>
+          <li><strong>授權股本（Authorized Share Capital）</strong> — 如果公司用舊版章程（Pre-2014 Model Articles），可能有限制總發行股數</li>
+          <li><strong>股份類別</strong> — 可以用普通股，或者創立「ESOP 類別股份」（如無投票權、有優先贖回權）</li>
+          <li>如果章程冇授權董事發行新股，要改章程（Special Resolution）</li>
+        </ul>
+
+        <h3>5.2 通過董事決議</h3>
+        <p>
+          董事會要正式通過決議，批准設立 ESOP 計劃，包括：
+        </p>
+        <ul>
+          <li>計劃目的同範圍</li>
+          <li>總 Option / Award 數量（Option Pool Size）</li>
+          <li>Grant Price / 估值基礎</li>
+          <li>Vesting Schedule</li>
+          <li>行政安排（誰負責管理 Option Pool）</li>
+        </ul>
+
+        <h3>5.3 通過股東決議</h3>
+        <p>
+          根據公司條例第 140 條，公司發行新股需要股東批准，除非章程有相反規定。一般做法：
+        </p>
+        <ul>
+          <li>如果係設立 Option Pool（預留股份未發行）：「普通決議」即可（過半數通過）</li>
+          <li>如果係直接發行新股俾員工：「普通決議」即可</li>
+          <li>如果係改章程 + 設立 ESOP：「特別決議」（75% 通過）</li>
+        </ul>
+
+        <div class="callout-danger">
+          <strong>🚨 我犯過嘅錯誤：</strong>我第一次搞 ESOP 冇開正式董事會，只係 WhatsApp 群組傾掂就算。後來 investor due diligence 嗰陣先發現，所有 option grants 嘅 legal validity 有問題。結果要補開董事會同股東會，再簽返所有同意書。浪費咗 3 個星期同 $8,000 律師費。
+        </div>
+
+        <h3>5.4 準備文件</h3>
+        <table>
+          <tr><th>文件</th><th>用途</th></tr>
+          <tr><td>ESOP 計劃書（Scheme Document）</td><td>詳細列明計劃條款</td></tr>
+          <tr><td>Option Award Agreement</td><td>個別員工嘅期權協議</td></tr>
+          <tr><td>Board Resolution</td><td>董事會決議記錄</td></tr>
+          <tr><td>Shareholder Resolution</td><td>股東決議記錄</td></tr>
+          <tr><td>NSC1（Return of Allotment）</td><td>發行新股後向公司註冊處申報（1 個月內）</td></tr>
+          <tr><td>Share Certificate</td><td>員工收到股份後發出嘅證明書</td></tr>
+        </table>
+
+        <h3>5.5 申報公司註冊處</h3>
+        <p>
+          每次實際發行新股俾員工（不論係 Option Exercise 定直接 Award），都要喺 1 個月內提交 NSC1（Return of Allotment of Shares）俾公司註冊處。延遲提交可被罰款 HK$1,000 或以上。
+        </p>
+      </div>
+
+      <!-- 6. Tax -->
+      <div id="tax" class="prose-custom">
+        <h2>6. 稅務安排：公司扣稅 vs 個人稅 vs 印花稅</h2>
+        <p>
+          呢 part 係最多人搞錯嘅。我當初都俾稅局追過一次稅，因為搞錯咗課稅時點。
+        </p>
+
+        <h3>6.1 員工角度：薪俸稅</h3>
+        <p>
+          根據稅局慣例，員工從 ESOP 得到嘅利益屬於「入息」（Income），要課薪俸稅。
+        </p>
+        <table>
+          <tr><th>事件</th><th>Share Option</th><th>Share Award</th></tr>
+          <tr><td>Grant（授予）</td><td>❌ 唔使課稅（未變現）</td><td>⚠️ Award 可能被視為即刻入息</td></tr>
+          <tr><td>Vesting（歸屬）</td><td>❌ 唔使課稅（未行使）</td><td>✅ 課稅點：收到股份當日嘅 FMV</td></tr>
+          <tr><td>Exercise（行使）</td><td>✅ 課稅點：行使價 vs FMV 差額</td><td>N/A</td></tr>
+          <tr><td>Sell（賣出）</td><td>✅ 可能再課利得稅或資本增值</td><td>✅ 同左</td></tr>
+        </table>
+
+        <div class="callout-warning">
+          <strong>⚠️ 稅務陷阱：</strong>Option 員工最大嘅問題係「意外稅」（Dry Income Tax）— 佢行使 option 嗰刻要俾稅，但未賣股冇 cash 入口袋。如果行使價同 FMV 差額 HK$500,000，員工要即時俾最多 17%（即 HK$85,000）稅。呢個係員工最常 complain 嘅地方，一定要提前講清楚。
+        </div>
+
+        <h3>6.2 公司角度：利得稅</h3>
+        <p>
+          公司可以申報邊啲開支扣稅？
+        </p>
+        <ul>
+          <li><strong>Option 差額：</strong>員工行使 option 時，差額（FMV − 行使價）可以扣公司利得稅</li>
+          <li><strong>發行成本：</strong>法律費用、估值費用等可直接扣稅</li>
+          <li><strong>Award 成本：</strong>發行股份俾員工，相關支出可扣稅</li>
+        </ul>
+
+        <h3>6.3 印花稅</h3>
+        <p>
+          呢個係好多人忽略嘅。香港股份轉讓（包括新發行股份）需要俾印花稅：
+        </p>
+        <ul>
+          <li><strong>稅率：</strong>0.2%（買賣雙方各 0.1%）</li>
+          <li><strong>時點：</strong>Option 係行使時俾；Award 係發行時俾</li>
+          <li><strong>最低：</strong>每張文件 HK$5</li>
+          <li><strong>遲交罰款：</strong>唔交印花稅，文件冇法律效力，股份轉讓冇效</li>
+        </ul>
+      </div>
+
+      <!-- 7. Scenarios -->
+      <div id="scenarios" class="prose-custom">
+        <h2>7. 真實情景分析：3 個常見 case</h2>
+
+        <h3>Case 1：早期 Startup — 用 Option</h3>
+        <p>
+          你開咗公司 1 年，想搵個 CTO 合伙。俾唔起好高人工，決定俾 5% Option，4-year vesting，1-year cliff。
+        </p>
+        <ul>
+          <li><strong>Grant：</strong>公司總股本 100 萬股，Option 池 10 萬股。Grant Price = $0.1（面值）</li>
+          <li><strong>Year 1 後：</strong>CTO vest 25%（2.5 萬股），cliff 過咗可以開始行使</li>
+          <li><strong>Year 4 後：</strong>全部 vest。如果公司估值俾投資者睇到 $10/股，CTO 用 $0.1 買入值 $10 嘅股份，賺差額 $9.9/股</li>
+          <li><strong>稅務：</strong>CTO 行使時，差額（$9.9 × 10 萬 = $99 萬）要課薪俸稅</li>
+        </ul>
+
+        <h3>Case 2：穩定盈利 — 用 Share Award</h3>
+        <p>
+          你公司每年賺 $500 萬，想留一個重要嘅 sales director。決定俾 3% 股份 Award，3-year vesting。
+        </p>
+        <ul>
+          <li><strong>Grant：</strong>公司估值 $2,000 萬，3% = $60 萬股份</li>
+          <li><strong>Vesting：</strong>每年 1%，第 3 年全部歸屬</li>
+          <li><strong>稅務：</strong>員工每年收到 1% 嗰刻，按 $20 萬（1% × $2,000 萬）課薪俸稅</li>
+          <li><strong>公司扣稅：</strong>$20 萬 × 3 年 = $60 萬可以扣利得稅</li>
+        </ul>
+
+        <h3>Case 3：一人公司想俾 partner 股份</h3>
+        <p>
+          你一人有限公司，想俾 10% 股份俾業務 partner。最簡單直接發行新股：
+        </p>
+        <ul>
+          <li>董事決議通過發行新股</li>
+          <li>股東決議通過（如果得你一個股東，自己簽就得）</li>
+          <li>發行 NSC1 申報公司註冊處</li>
+          <li>印花稅：$0.1/股 × 10% × 0.2%</li>
+          <li>Partner 收到股份當日按 FMV 課薪俸稅</li>
+        </ul>
+      </div>
+
+      <!-- 8. Steps -->
+      <div id="steps" class="prose-custom">
+        <h2>8. 實施步驟：由零開始搞 ESOP</h2>
+        <p>以下係我自己行過嘅 step-by-step 流程：</p>
+
+        <table>
+          <tr><th>Step</th><th>做咩</th><th>需時</th><th>費用估算</th></tr>
+          <tr><td>1. 決定計劃類型</td><td>揀 Option / Award / 直接發行</td><td>1-2 日</td><td>免費</td></tr>
+          <tr><td>2. 估值</td><td>確定公司 FMV（可用股價或資產淨值）</td><td>視乎複雜度</td><td>$0 - $15,000</td></tr>
+          <tr><td>3. 檢查章程</td><td>睇授權股本同董事權限</td><td>1 日</td><td>免費（自己睇）</td></tr>
+          <tr><td>4. 準備計劃文件</td><td>Scheme Document + Agreement</td><td>3-5 日</td><td>$5,000 - $20,000（律師）</td></tr>
+          <tr><td>5. 通過董事決議</td><td>開會 + 記錄</td><td>1 日</td><td>$0</td></tr>
+          <tr><td>6. 通過股東決議</td><td>普通決議或特別決議</td><td>1 日</td><td>$0</td></tr>
+          <tr><td>7. Grant 俾員工</td><td>簽 Option Award Agreement</td><td>1 日</td><td>$0</td></tr>
+          <tr><td>8. 管理 Option Pool</td><td>追蹤 vesting、exercise、termination</td><td>持續</td><td>$0 (spreadsheet) / $ (軟件)</td></tr>
+          <tr><td>9. 員工行使／歸屬</td><td>發行新股 + 印花稅 + NSC1</td><td>每 event</td><td>$ 印花稅</td></tr>
+        </table>
+
+        <div class="callout-success">
+          <strong>💡 慳錢貼士：</strong>如果公司規模細（少過 5 人），可以唔使律師，自己用 template 改 Scheme Document。但法律文件始終有風險，建議至少比律師 review 一次。我當年俾咗 $8,000 律師費搞 ESOP，比起之後慳返嘅稅同工作量，絕對值得。
+        </div>
+      </div>
+
+      <!-- 9. Mistakes -->
+      <div id="mistakes" class="prose-custom">
+        <h2>9. 5 個常見錯誤（我親身踩過嘅）</h2>
+
+        <div class="callout-danger">
+          <strong>❌ 錯誤 1：冇 document 就 grant option</strong><br>
+          我第一次話俾員工聽「俾 5% 你」，乜都冇簽就 whatapp 講咗。半年後員工離職，claim 公司欠佢 5% 股份。最後要俾 $15,000 律師費 settle。<br>
+          <em>✅ 正確：一定要有 Option Award Agreement，列明 vesting schedule、termination condition。</em>
+        </div>
+
+        <div class="callout-danger">
+          <strong>❌ 錯誤 2：冇考慮稅務影響</strong><br>
+          我 grant option 俾員工時完全冇提稅務。到員工行使 option 嗰陣，要俾成 $30,000 稅，佢即刻黑面。要公司墊支先搞得掂。<br>
+          <em>✅ 正確：Grant option 前就要同員工講清楚稅務責任，建議俾稅務計算例子。</em>
+        </div>
+
+        <div class="callout-danger">
+          <strong>❌ 錯誤 3：Option Pool Size 定得太細</strong><br>
+          我當年 set 咗 5% Option Pool，後來想 grant 俾更多人先發現唔夠。要再開股東會擴張 pool，麻煩兼唔專業。<br>
+          <em>✅ 正確：一般建議 Option Pool 設定喺 10-20% total 已發行股本，預留未來 hiring 需要。</em>
+        </div>
+
+        <div class="callout-danger">
+          <strong>❌ 錯誤 4：冇諗員工離職點處理</strong><br>
+          Employee leaves — 佢手上嘅 unvested option 點計？Vested 但未 exercise 嘅點計？我完全冇係 agreement 寫明，結果離職員工同我拗。<br>
+          <em>✅ 正確：一定要寫「Good Leaver vs Bad Leaver」條款，同埋離職後幾耐要 exercise。</em>
+        </div>
+
+        <div class="callout-danger">
+          <strong>❌ 錯誤 5：冇更新股東名冊（Register of Members）</strong><br>
+          我 grant 咗 option 後冇即時更新公司嘅 Statutory Records。到 investor due diligence 發現問題，要補簽好多文件。<br>
+          <em>✅ 正確：每次發行新股後即時更新股東名冊、發出 Share Certificate、提交 NSC1。</em>
+        </div>
+      </div>
+
+      <!-- 10. FAQ -->
+      <div id="faq" class="prose-custom">
+        <h2>10. FAQ — 打工仔角度問嘅問題</h2>
+
+        <h3>Q：我得一人公司，做 ESOP 有冇用？</h3>
+        <p>
+          如果而家只得你一個人，可以等請人先做。但如果你想搵合伙人，直接發行新股俾佢（或者用 Award）會簡單過搞成個 Scheme。如果得 2-3 個人，可以考慮用 Direct Share Award 代替 Option Scheme。
+        </p>
+
+        <h3>Q：員工收到 Option 要唔要報稅？</h3>
+        <p>
+          Grant 同 Vesting 嗰陣唔需要報稅。只有當員工行使 Option（即俾錢買股份）嗰陣，差額先需要課薪俸稅。但 Award 係收到嗰刻就要報。
+        </p>
+
+        <h3>Q：可唔可以 set 不同股權類別俾員工？</h3>
+        <p>
+          可以。好多公司會創立「ESOP Shares」— 冇投票權、有優先贖回權、或者係「B 股」形式。咁樣員工有經濟利益但不影響公司控制權。但創立新股份類別要改公司章程（特別決議）。
+        </p>
+
+        <h3>Q：投資者會唔會唔鍾意 ESOP？</h3>
+        <p>
+          相反，Professional investor 好鍾意見到公司有 ESOP，因為代表管理層諗過長遠團隊激勵。但投資者會關注 Option Pool 大細同 Dilution Effect，通常會要求喺投資前 pre-set Option Pool。
+        </p>
+
+        <h3>Q：員工離職後點處理已 vest 嘅 Option？</h3>
+        <p>
+          一般 agreement 會寫：離職後 90 日內可以行使已 vest 嘅 Option，過期無效。Unvested Option 自動 forfeit。如果是 Bad Leaver（違約、跳槽競爭對手），可以 forfeit 全部已 vest 嘅 Option。
+        </p>
+
+        <h3>Q：點樣 valuation？使唔使請人做？</h3>
+        <p>
+          早期 startup 可以用面值（Par Value，通常 $0.1-$1）做 Grant Price。但當公司有收入或投資者估值後，建議用 Fair Market Value。如果需要精確估值，可以請 valuation firm（約 $10,000-$30,000）。唔做合理估值，稅局有權用 market value 重新評估課稅額。
+        </p>
+      </div>
+
+      <!-- 11. Summary -->
+      <div id="summary" class="prose-custom">
+        <h2>11. 總結：你要唔要做 ESOP？</h2>
+        <p>
+          ESOP 唔係適合所有公司。以下係我個人嘅「快篩測試」：
+        </p>
+
+        <table>
+          <tr><th>條件</th><th>✅ 適合做 ESOP</th><th>❌ 未必要做</th></tr>
+          <tr><td>團隊規模</td><td>3 人以上核心團隊</td><td>1-2 人公司</td></tr>
+          <tr><td>未來招聘</td><td>計劃請高質人才，想用 equity 吸引</td><td>用 cash 吸引人都夠</td></tr>
+          <tr><td>公司階段</td><td>有成長潛力，exit 可能性合理</td><td>穩定收租型生意</td></tr>
+          <tr><td>員工期望</td><td>員工想有 ownership</td><td>員工只想穩定返工</td></tr>
+          <tr><td>投資者要求</td><td>投資者 expect Option Pool</td><td>冇 external investors</td></tr>
+        </table>
+
+        <p>
+          如果你符合大部分 ✅，我強烈建議你開始計劃 ESOP。
+        </p>
+
+        <div class="callout-success">
+          <strong>🎯 最後一句：</strong>員工股權唔係「分餅仔」，而係「做大個餅」。用得好，團隊同公司一齊成長。用得唔好，員工會覺得你「俾張空頭支票」。建議你先用 Option Scheme 試水溫，行順咗先考慮 Award。
+        </div>
+
+        <p>
+          我嘅 ESOP experience 就係咁多。如果你有咩問題，或者想我詳細講某個部分，留個 comment 話我知。之後我會出另一篇詳細講 Option Agreement 嘅條款逐條拆解，仲有 Share Option Scheme Document 嘅 template 俾大家參考。
+        </p>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ═══ Related Articles ═══ -->
+  <section class="bg-white py-10 border-t border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h3 class="text-xl font-bold text-navy mb-6">📚 你可能都會有興趣</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="/blog/香港有限公司分紅派息終極指南/" class="block border border-gray-200 rounded-xl p-4 hover:border-gold/30 hover:shadow transition-all group">
+          <h4 class="font-bold text-navy group-hover:text-gold transition-colors mb-1">香港有限公司分紅派息終極指南</h4>
+          <p class="text-sm text-gray-500">公司賺咗錢點樣合法派俾股東？股息同董事袍金有咩分別？</p>
+        </a>
+        <a href="/blog/香港有限公司股東大會AGM暨書面決議終極指南/" class="block border border-gray-200 rounded-xl p-4 hover:border-gold/30 hover:shadow transition-all group">
+          <h4 class="font-bold text-navy group-hover:text-gold transition-colors mb-1">股東大會（AGM）暨書面決議終極指南</h4>
+          <p class="text-sm text-gray-500">一定要開會？一人公司可以點做？發行新股嘅決議程序詳細睇。</p>
+        </a>
+        <a href="/blog/香港公司股份證明書ShareCertificate終極指南/" class="block border border-gray-200 rounded-xl p-4 hover:border-gold/30 hover:shadow transition-all group">
+          <h4 class="font-bold text-navy group-hover:text-gold transition-colors mb-1">股份證明書（Share Certificate）終極指南</h4>
+          <p class="text-sm text-gray-500">發行新股後一定要出證書，法定要求同格式範例。</p>
+        </a>
+        <a href="/blog/香港公司章程修改完整指南/" class="block border border-gray-200 rounded-xl p-4 hover:border-gold/30 hover:shadow transition-all group">
+          <h4 class="font-bold text-navy group-hover:text-gold transition-colors mb-1">公司章程（Article of Association）修改完整指南</h4>
+          <p class="text-sm text-gray-500">想做 ESOP 但章程限制咗？教你點樣修改章程。</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Footer ═══ -->
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-navy text-gray-400 py-10 mt-8">
+    <div class="max-w-4xl mx-auto px-4 text-center text-sm">
+      <p class="mb-2">© 2026 ESGov — 香港公司流程實戰指南</p>
+      <p>由真實經歷者整理 · 每篇文章都係親身試過嘅經驗</p>
+      <div class="mt-4 flex justify-center gap-4">
+        <a href="/" class="hover:text-gold transition">首頁</a>
+        <a href="/blog/" class="hover:text-gold transition">網誌</a>
+        <a href="/shareholder-transfer/" class="hover:text-gold transition">股份轉讓指南</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Auto-added: related tool links -->
+  <div class="max-w-3xl mx-auto px-4 mt-10 mb-8">
+    <div class="bg-navy/5 border border-navy/10 rounded-xl p-6">
+      <h3 class="text-lg font-bold text-navy mb-4">📍 相關免費工具</h3>
+      <div class="space-y-3">
+        <a href="https://esgov.org/shareholder-transfer/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📄 免費使用 ESGov 股份轉讓文件生成工具</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

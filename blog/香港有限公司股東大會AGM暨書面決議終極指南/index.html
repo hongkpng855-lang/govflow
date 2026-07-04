@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESGov | 香港有限公司股東大會（AGM & EGM）暨書面決議終極指南 — 一定要開會？一人公司可以點做？</title>
+<meta name="description" content="香港有限公司股東大會（AGM）同書面決議全面解讀：公司條例點規定？一人公司係咪一定要開會？年度股東大會（AGM）、特別股東大會（EGM）、書面決議（Written Resolution）嘅程序、要求同實戰貼士。由真實經歷者整理，附Checklist同範本。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gold { color: #C9A84C; }
+  .border-gold { border-color: #C9A84C; }
+  .hover:bg-gold\/90 { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"香港有限公司一定要開股東週年大會（AGM）嗎？","acceptedAnswer":{"@type":"Answer","text":"根據《公司條例》（第622章），私人有限公司可以透過書面決議（Written Resolution）代替AGM，唔一定要親身開會。但公司條例要求每年要通過某些決議（如審計報告、股息、董事重選），你可以用書面方式處理。唯一例外係如果有股東要求開會，或者公司章程（AoA）有特別規定，就需要開實體會議。"}},
+    {"@type":"Question","name":"書面決議（Written Resolution）同開會有咩分別？","acceptedAnswer":{"@type":"Answer","text":"書面決議係俾私人公司用嘅替代方式——唔使開會，只需將決議文本發俾全體股東簽署同意。通過門檻：普通決議需要過半數票（超過50%）、特別決議需要75%票。書面決議嘅好處係彈性、快、唔使夾時間開會。缺點係冇得即場討論修訂，同埋要等股東簽返嚟。一人公司基本上用書面決議就搞掂。"}},
+    {"@type":"Question","name":"AGM要喺幾時之前舉行？","acceptedAnswer":{"@type":"Answer","text":"公開公司（public company）必須喺每個財政年度結束後9個月內舉行AGM。私人公司（private company）則可以透過書面決議代替，冇硬性規定一定要喺特定時間內開實體AGM。但無論用邊種方式，公司每年都需要通過審計報告、考慮股息、重選董事等決議，呢啲都係年度程序。"}},
+    {"@type":"Question","name":"特別決議（Special Resolution）同普通決議有咩分別？","acceptedAnswer":{"@type":"Answer","text":"普通決議（Ordinary Resolution）：需要簡單過半數（超過50%）贊成票通過。適用於一般事項，如委任董事、通過審計報告、宣告股息。特別決議（Special Resolution）：需要不少於75%贊成票通過。適用於重大事項，如修改公司章程（AoA）、更改公司名稱、股本重組、自願清盤、減少股本等。特別決議必須提前21日書面通知股東。"}},
+    {"@type":"Question","name":"一人公司點樣處理年度決議？","acceptedAnswer":{"@type":"Answer","text":"一人公司最簡單——你可以用書面決議嘅方式，由唯一股東簽署一份書面決議，記錄當年嘅決定（如通過審計報告、委任董事等）。唔使開會，唔使通知期（因為得你一個人），簽名就得。但要keep低份決議記錄作為公司紀錄。建議每年做一份，確保公司紀錄完整。"}},
+    {"@type":"Question","name":"股東可以要求開EGM（特別股東大會）嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。根據《公司條例》（第622章），持有不少於5%投票權嘅股東可以書面要求董事召開EGM。收到要求後，董事必須21日內召開會議（會議日期必須喺發出通知後28日內）。如果董事唔理，提出要求嘅股東可以自己召開，費用由公司承擔。EGM嘅通知期至少14日（特別決議要21日）。"}}
+  ]
+}
+</script>
+<!-- Open Graph -->
+<meta property="og:title" content="香港有限公司股東大會（AGM & EGM）暨書面決議終極指南">
+<meta property="og:description" content="公司條例點規定？一人公司係咪一定要開會？AGM、EGM、書面決議程序、要求同實戰貼士。附Checklist同範本。">
+<meta property="og:type" content="article">
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港有限公司股東大會AGM暨書面決議終極指南" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司股東大會AGM暨書面決議終極指南" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ESGov",
+    "url": "https://esgov.org",
+    "description": "Hong Kong company compliance platform — free PDF generators, compliance guides, and company secretarial resources.",
+    "foundingDate": "2024",
+    "areaServed": "HK",
+    "knowsLanguage": "zh-HK,en"
+  }
+  </script>
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "ESGov 團隊",
+    "description": "香港公司秘書及合規顧問，專注提供公司註冊、股份轉讓、SCR 合規等免費指南",
+    "url": "https://esgov.org",
+    "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ═══ Navigation ═══ -->
+<nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+  <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+    <a href="/" class="flex items-center gap-2.5">
+      <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" />
+      <span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+    </a>
+    <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 返回網誌總覽</a>
+  </div>
+</nav>
+
+<!-- ═══ Article Header ═══ -->
+<header class="bg-white border-b border-gray-100">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+    <div class="flex flex-wrap items-center gap-2 text-sm text-gray-400 mb-4">
+      <a href="../" class="hover:text-gold transition-colors">Home</a>
+      <span>/</span>
+      <a href="/blog/" class="hover:text-gold transition-colors">網誌</a>
+      <span>/</span>
+      <span class="text-gray-600">股東大會暨書面決議終極指南</span>
+    </div>
+    <div class="flex items-center gap-2 mb-3">
+      <span class="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full">2026.06.07</span>
+      <span class="text-xs bg-green-50 text-green-700 px-2.5 py-1 rounded-full">新</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-5">
+      香港有限公司股東大會（AGM & EGM）暨書面決議終極指南
+    </h1>
+    <p class="text-lg text-gray-500 leading-relaxed">
+      一定要開會？一人公司可以點做？由真實經歷者拆解公司條例要求、程序同實戰貼士。
+    </p>
+  </div>
+
+    <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
+      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span class="ml-4">📅 最後更新：2026年6月</span>
+    </div>
+</header>
+
+<!-- ═══ Article Body ═══ -->
+<article class="py-8 sm:py-12">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- ═══ Table of Contents ═══ -->
+    <div class="bg-white rounded-xl border border-gray-200 p-6 mb-8 shadow-sm">
+      <h2 class="text-lg font-bold text-navy mb-4">📋 本文目錄</h2>
+      <ol class="space-y-2 text-sm">
+        <li><a href="#intro" class="toc-item text-navy hover:text-gold">1️⃣ 開場：我嘅AGM經歷</a></li>
+        <li><a href="#legal" class="toc-item text-navy hover:text-gold">2️⃣ 公司條例點規定？一定要開會嗎？</a></li>
+        <li><a href="#agm-vs-written" class="toc-item text-navy hover:text-gold">3️⃣ 實體AGM vs 書面決議：分別同選擇</a></li>
+        <li><a href="#written-resolution" class="toc-item text-navy hover:text-gold">4️⃣ 書面決議（Written Resolution）完整教學</a></li>
+        <li><a href="#egm" class="toc-item text-navy hover:text-gold">5️⃣ 特別股東大會（EGM）幾時要用？</a></li>
+        <li><a href="#procedure" class="toc-item text-navy hover:text-gold">6️⃣ 開會程序詳細拆解（通知、法定人數、投票）</a></li>
+        <li><a href="#special" class="toc-item text-navy hover:text-gold">7️⃣ 普通決議 vs 特別決議</a></li>
+        <li><a href="#one-person" class="toc-item text-navy hover:text-gold">8️⃣ 一人公司最簡單做法</a></li>
+        <li><a href="#mistakes" class="toc-item text-navy hover:text-gold">9️⃣ 常見錯誤同陷阱</a></li>
+        <li><a href="#checklist" class="toc-item text-navy hover:text-gold">🔟 年度AGM/書面決議 Checklist</a></li>
+        <li><a href="#faq" class="toc-item text-navy hover:text-gold">❓ 常見問題（FAQ）</a></li>
+      </ol>
+    </div>
+
+    <!-- ═══ Section 1: Intro ═══ -->
+    <div class="prose-custom" id="intro">
+      <h2>1️⃣ 開場：我嘅AGM經歷</h2>
+
+      <p>第一年開公司嘅时候，我以為有限公司開完就乜都唔使理。點知公司秘書同我講：「喂，你公司要搞AGM㗎。」我個反應係：「吓？AGM？我一個人股東，開咩會呀？自己同自己開會？」</p>
+
+      <p>後尾先知，原來好多香港有限公司東主都有同樣嘅困惑——以為AGM係大公司先要做，又或者以為一人公司可以skip晒所有年度決議程序。結果去到做銀行貸款或者盡職調查（Due Diligence）嘅時候，先發現公司紀錄唔齊全，臨急抱佛腳。</p>
+
+      <div class="callout-warning">
+        <strong>💡 我當初嘅誤解：</strong>
+        <ul class="mb-0">
+          <li>❌ 一人公司唔使開會 — 其實要通過年度決議，不過可以用書面搞掂</li>
+          <li>❌ AGM一定要開實體會議 — 私人公司可以用書面決議代替</li>
+          <li>❌ 書面決議冇法律效力 — 同開會通過嘅決議一樣有效</li>
+          <li>❌ 唔做年度決議冇人知 — 到銀行貸款就知死</li>
+        </ul>
+      </div>
+
+      <p>呢篇文章會由我親身經歷出發，用最白話嘅方式同你拆解：咩係AGM、EGM、書面決議、公司條例點規定、一人公司可以點樣慳水慳力搞掂。</p>
+
+      <p>利申：我唔係律師，以下係親身經驗同研究整理。如有具體法律問題，請諮詢專業人士。</p>
+    </div>
+
+    <!-- ═══ Section 2: Legal Requirements ═══ -->
+    <div class="prose-custom" id="legal">
+      <h2>2️⃣ 公司條例點規定？一定要開會嗎？</h2>
+
+      <p>根據香港《公司條例》（第622章），所有公司每年都要考慮財務報表、審計報告、股息、董事重選等事項。但方式有兩種：</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>公司類型</th>
+            <th>AGM要求</th>
+            <th>替代方式</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>私人有限公司（Private Company）</td>
+            <td>可以唔開實體AGM</td>
+            <td>✅ 可以用書面決議（Written Resolution）</td>
+          </tr>
+          <tr>
+            <td>公開公司（Public Company）</td>
+            <td>❌ 必須每年開AGM</td>
+            <td>❌ 唔可以用書面決議代替</td>
+          </tr>
+          <tr>
+            <td>上市公司（Listed Company）</td>
+            <td>❌ 必須每年開AGM</td>
+            <td>❌ 受上市規則監管</td>
+          </tr>
+          <tr>
+            <td>擔保有限公司（Company Limited by Guarantee）</td>
+            <td>可以唔開實體AGM</td>
+            <td>✅ 可以用書面決議</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>簡單講：如果你係私人有限公司（99%香港公司都係呢隻），你可以選擇：</p>
+      <ol>
+        <li><strong>開實體AGM</strong> — 約齊股東開會討論</li>
+        <li><strong>用書面決議</strong> — 將決議寫低，俾股東簽名就得</li>
+      </ol>
+
+      <div class="callout-success">
+        <strong>✅ 關鍵重點：</strong><br>
+        私人有限公司唔一定要開AGM，但你一定要做年度決議（annual resolution），無論係用邊種形式。公司條例要求每年要通過審計報告、考慮股息同董事重選等事項，唔做嘅話公司紀錄唔完整。
+      </div>
+
+      <p>不過，以下情況就一定要開實體會議：</p>
+      <ul>
+        <li>公司章程（AoA）有特別規定一定要開AGM</li>
+        <li>有股東書面要求開會（持股5%以上可以要求）</li>
+        <li>要免去董事職務（可以用書面決議，但董事有權要求開會）</li>
+        <li>要罷免核數師（有特別程序）</li>
+      </ul>
+    </div>
+
+    <!-- ═══ Section 3: AGM vs Written Resolution ═══ -->
+    <div class="prose-custom" id="agm-vs-written">
+      <h2>3️⃣ 實體AGM vs 書面決議：分別同選擇</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>比較項目</th>
+            <th>實體AGM</th>
+            <th>書面決議</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>適合邊啲公司</td>
+            <td>多股東、要討論事項複雜</td>
+            <td>股東少、事情簡單</td>
+          </tr>
+          <tr>
+            <td>通知期</td>
+            <td>普通決議：14日／特別決議：21日</td>
+            <td>可以即時（但要俾股東合理時間考慮）</td>
+          </tr>
+          <tr>
+            <td>彈性</td>
+            <td>可以即場討論修改</td>
+            <td>要俾晒所有股東睇咗先簽</td>
+          </tr>
+          <tr>
+            <td>通過門檻</td>
+            <td>出席投票計數</td>
+            <td>要全體股東簽署（或者足夠票數）</td>
+          </tr>
+          <tr>
+            <td>時間成本</td>
+            <td>高（要夾時間、開會）</td>
+            <td>低（寫好、傳閱、簽名）</td>
+          </tr>
+          <tr>
+            <td>一人公司</td>
+            <td>自己同自己開會，怪怪地</td>
+            <td>最適合：簽名就得</td>
+          </tr>
+        </tbody>
+      </tbody></table>
+
+      <p><strong>我嘅建議：</strong>如果你公司得1-2個股東，用書面決議就夠。如果你有幾個股東兼且要傾股息政策、重大投資等事項，就開實體AGM。</p>
+
+      <div class="callout-info">
+        <strong>📌 記住：</strong>即使你用書面決議代替AGM，你仍然需要每年通過年度決議——包括確認審計報告、考慮股息、重選董事（如適用）。唔好以為全部skip咗都得。
+      </div>
+    </div>
+
+    <!-- ═══ Section 4: Written Resolution ═══ -->
+    <div class="prose-custom" id="written-resolution">
+      <h2>4️⃣ 書面決議（Written Resolution）完整教學</h2>
+
+      <p>書面決議係我最常用嘅方式，尤其係一人公司嘅時候，真係好方便。等我話你知點用：</p>
+
+      <h3>4.1 書面決議嘅法律基礎</h3>
+      <p>根據《公司條例》第548-552條，私人有限公司可以透過書面決議通過任何股東決議（除咗罷免董事同核數師有特別程序）。書面決議同開會通過嘅決議有同等法律效力。</p>
+
+      <h3>4.2 書面決議嘅程序</h3>
+      <ol>
+        <li><strong>起草決議：</strong>寫清楚決議內容（例如：通過2025年度審計報告）</li>
+        <li><strong>發送俾股東：</strong>將決議文本發俾每位股東</li>
+        <li><strong>股東簽署：</strong>每位股東簽名同意（可以係紙本或電子方式）</li>
+        <li><strong>記錄存檔：</strong>將簽好嘅決議放入公司紀錄</li>
+      </ol>
+
+      <h3>4.3 書面決議嘅通過門檻</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>決議類型</th>
+            <th>門檻</th>
+            <th>常見用途</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>普通書面決議</td>
+            <td>過半數（>50%）股東表決權贊成</td>
+            <td>通過審計報告、委任董事、宣告股息</td>
+          </tr>
+          <tr>
+            <td>特別書面決議</td>
+            <td>不少於75%股東表決權贊成</td>
+            <td>修改章程、公司改名、股本重組、清盤</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout-warning">
+        <strong>⚠️ 書面決議注意事項：</strong>
+        <ul class="mb-0">
+          <li>書面決議必須發俾<strong>所有</strong>有權投票嘅股東（唔可以skip任何一個）</li>
+          <li>即使股東唔投票，都要俾佢睇到份決議</li>
+          <li>書面決議喺最後一位股東簽署嘅當日生效</li>
+          <li>特別決議必須提前21日通知股東（即使係書面形式）</li>
+        </ul>
+      </div>
+
+      <h3>4.4 年度書面決議範本（一人公司適用）</h3>
+      <blockquote>
+        <strong>香港有限公司股東書面決議</strong><br>
+        （根據《公司條例》第548條通過）<br><br>
+        公司名稱：[公司英文全名]<br>
+        決議日期：[日期]<br><br>
+        <strong>決議：</strong><br>
+        1. 確認及通過截至[年份]年[月][日]止年度嘅經審計財務報表及董事報告；<br>
+        2. 批准不派發末期股息（或：批准派發末期股息每股HK$[金額]）；<br>
+        3. 重選[董事姓名]為公司董事。<br><br>
+        <strong>簽署：</strong><br>
+        唯一股東：[姓名]<br>
+        日期：[日期]
+      </blockquote>
+    </div>
+
+    <!-- ═══ Section 5: EGM ═══ -->
+    <div class="prose-custom" id="egm">
+      <h2>5️⃣ 特別股東大會（EGM）幾時要用？</h2>
+
+      <p>EGM（Extraordinary General Meeting）即係「特別股東大會」，處理年度AGM以外嘅事項。通常係需要股東批准但等唔到下一次AGM嘅事情。</p>
+
+      <h3>5.1 幾時要開EGM？</h3>
+      <ul>
+        <li>重大交易（如買賣公司主要資產）</li>
+        <li>修改公司章程（AoA）</li>
+        <li>發行新股／股份配發</li>
+        <li>股本重組／減少股本</li>
+        <li>公司自願清盤</li>
+        <li>更改公司名稱</li>
+        <li>罷免董事或核數師</li>
+        <li>股東要求嘅事項（持股5%以上可以要求召開）</li>
+      </ul>
+
+      <h3>5.2 股東可以點樣要求開EGM？</h3>
+      <p>根據公司條例第567條，持有不少於5%投票權嘅股東可以書面要求董事召開EGM。程序如下：</p>
+      <ol>
+        <li>股東寫信／電郵俾公司董事，列明要討論嘅事項</li>
+        <li>董事收到要求後，必須21日內發出會議通知</li>
+        <li>會議必須喺通知發出後28日內舉行</li>
+        <li>如果董事唔理，股東可以自己召開（費用由公司負責）</li>
+      </ol>
+
+      <div class="callout-danger">
+        <strong>🚨 真實經歷：</strong>我朋友同拍檔拆夥，拍檔話要賣公司主要資產。因為公司章程寫明出售重大資產要股東批准，我朋友逼住開EGM處理。如果你公司章程寫得唔清唔楚，呢啲情况好易拗數。
+      </div>
+    </div>
+
+    <!-- ═══ Section 6: Procedure ═══ -->
+    <div class="prose-custom" id="procedure">
+      <h2>6️⃣ 開會程序詳細拆解</h2>
+
+      <p>如果你決定開實體AGM或EGM，以下係程序詳情：</p>
+
+      <h3>6.1 通知期</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>決議類型</th>
+            <th>通知期（最少）</th>
+            <th>法例依據</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AGM（普通決議）</td>
+            <td>14日</td>
+            <td>公司條例第571條</td>
+          </tr>
+          <tr>
+            <td>特別決議</td>
+            <td>21日</td>
+            <td>公司條例第565條</td>
+          </tr>
+          <tr>
+            <td>免除通知期</td>
+            <td>全體股東同意可以縮短</td>
+            <td>公司條例第571(5)條</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>6.2 通知內容</h3>
+      <ul>
+        <li>會議日期、時間、地點</li>
+        <li>會議類型（AGM / EGM）</li>
+        <li>議程（要討論嘅決議事項）</li>
+        <li>特別決議要列明「特別決議」字樣，並寫清楚決議全文</li>
+        <li>有權委任代表投票嘅安排</li>
+      </ul>
+
+      <h3>6.3 法定人數（Quorum）</h3>
+      <ul>
+        <li>標準：公司章程通常寫明最少2位股東親自或委任代表出席</li>
+        <li>一人公司：1位股東就夠（就算得你一個人都可以開會）</li>
+        <li>如果章程無特別規定：最少2人（公司條例第584條）</li>
+        <li>開會前半小時仲未夠法定人數：會議取消</li>
+      </ul>
+
+      <h3>6.4 投票方式</h3>
+      <ul>
+        <li><strong>舉手投票（Show of Hands）：</strong>每個人一票（最簡單）</li>
+        <li><strong>按股數投票（Poll Vote）：</strong>每股一票（股東可以要求用呢種方式）</li>
+        <li><strong>書面決議：</strong>簽名表示意向</li>
+      </ul>
+
+      <div class="callout-info">
+        <strong>💡 實戰貼士：</strong>私人公司通常用舉手投票就得。如果股東之間有拗撬，可以要求按股數投票，確保大股東嘅權益反映返出嚟。
+      </div>
+    </div>
+
+    <!-- ═══ Section 7: Ordinary vs Special Resolution ═══ -->
+    <div class="prose-custom" id="special">
+      <h2>7️⃣ 普通決議 vs 特別決議</h2>
+
+      <p>好多人搞唔清楚兩者分別。簡單講：</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>比較</th>
+            <th>普通決議</th>
+            <th>特別決議</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>通過門檻</td>
+            <td>簡單過半數（>50%）</td>
+            <td>不少於75%</td>
+          </tr>
+          <tr>
+            <td>通知期</td>
+            <td>14日</td>
+            <td>21日</td>
+          </tr>
+          <tr>
+            <td>適用範圍</td>
+            <td>日常營運事項</td>
+            <td>重大改變事項</td>
+          </tr>
+          <tr>
+            <td>需要向註冊處申報</td>
+            <td>通常唔使</td>
+            <td>係（要交NR1等表格）</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>7.1 需要特別決議嘅常見情況</h3>
+      <ul>
+        <li>✏️ 修改公司章程（Articles of Association）</li>
+        <li>📛 更改公司名稱</li>
+        <li>🏛️ 股本重組、減少股本</li>
+        <li>📊 股份回購（Share Buyback）</li>
+        <li>🔚 公司自願清盤</li>
+        <li>🔄 更改公司股本結構</li>
+      </ul>
+
+      <h3>7.2 需要普通決議嘅常見情況</h3>
+      <ul>
+        <li>✅ 通過年度審計報告同財務報表</li>
+        <li>💰 宣告股息</li>
+        <li>👤 委任或重選董事</li>
+        <li>👨‍⚖️ 委任核數師</li>
+        <li>📋 批准董事酬金</li>
+      </ul>
+
+      <div class="callout-warning">
+        <strong>⚠️ 特別決議注意點：</strong>
+        <ul class="mb-0">
+          <li>特別決議通知期21日係最低要求，就算全體股東同意都唔可以縮短（公司條例第565條強制規定）</li>
+          <li>特別決議通過後，通常要喺15日內向公司註冊處提交相關文件（如NR1更改公司名稱）</li>
+          <li>如果係修改章程，要喺通過後15日內提交修改後嘅章程全文俾公司註冊處</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ═══ Section 8: One Person Company ═══ -->
+    <div class="prose-custom" id="one-person">
+      <h2>8️⃣ 一人公司最簡單做法</h2>
+
+      <p>呢個係最多人問嘅問題：「我得一個人股東，仲要開會？」答案係：唔使。</p>
+
+      <p>一人公司建議做法：</p>
+      <ol>
+        <li><strong>每年做一份書面決議</strong> — 記錄當年嘅年度決定</li>
+        <li><strong>內容包括：</strong>通過審計報告、確認股東權益、委任董事、股息決定</li>
+        <li><strong>簽名：</strong>唯一股東簽名、寫日期</li>
+        <li><strong>存檔：</strong>放入公司法定紀錄（Statutory Records）</li>
+      </ol>
+
+      <div class="callout-success">
+        <strong>✅ 一人公司年度決議 Checklist：</strong>
+        <ul class="mb-0">
+          <li>📄 書面決議一份（包含所有年度事項）</li>
+          <li>✍️ 唯一股東簽署</li>
+          <li>📅 每年財政年度結束後做（或者同審計報告一齊做）</li>
+          <li>📁 放入公司紀錄（股東決議 folder）</li>
+        </ul>
+      </div>
+
+      <p>我自已就係每年審計報告出咗之後，一次過簽一份書面決議，搞掂。成個過程唔使15分鐘。</p>
+    </div>
+
+    <!-- ═══ Section 9: Common Mistakes ═══ -->
+    <div class="prose-custom" id="mistakes">
+      <h2>9️⃣ 常見錯誤同陷阱</h2>
+
+      <p>我見過同經歷過嘅錯誤：</p>
+
+      <div class="callout-danger">
+        <strong>❌ 錯誤 1：完全冇做年度決議</strong><br>
+        好多一人公司東主以為公司營運緊就得，完全冇做任何年度決議或者紀錄。去到銀行貸款做盡職調查（KYC），銀行問你要公司決議紀錄先發現冇做過，要臨時補做。雖然補做係可以嘅，但俾銀行睇到臨急抱佛腳嘅紀錄，印象分差好多。
+      </div>
+
+      <div class="callout-warning">
+        <strong>❌ 錯誤 2：特別決議冇提前21日通知</strong><br>
+        有朋友要改公司名，以為星期一通知股東，星期四簽名就得。點知公司條例規定特別決議要提前21日通知，搞到佢嘅改名申請被公司註冊處拒絕咗，要重新嚟過。
+      </div>
+
+      <div class="callout-danger">
+        <strong>❌ 錯誤 3：書面決議冇發俾所有股東</strong><br>
+        就算你係大股東，書面決議都要俾晒所有股東睇到。有個 case 係大股東直接簽咗決議就算，冇通知細股東。細股東後來告上法庭，話程序不當，最後成個決議被撤銷。
+      </div>
+
+      <div class="callout-warning">
+        <strong>❌ 錯誤 4：唔知特別決議同普通決議嘅分別</strong><br>
+        修改章程呢啲重大事項要用特別決議（75%），但有人用普通決議（50%）就當通過咗。公司註冊處一睇就 reject，因為門檻唔啱。
+      </div>
+
+      <div class="callout-danger">
+        <strong>❌ 錯誤 5：冇keep返決議紀錄</strong><br>
+        公司條例要求公司備存所有股東決議嘅紀錄。如果你俾公司註冊處巡查，或者將來賣公司俾人做 Due Diligence，冇紀錄就好大件事。
+      </div>
+    </div>
+
+    <!-- ═══ Section 10: Checklist ═══ -->
+    <div class="prose-custom" id="checklist">
+      <h2>🔟 年度AGM/書面決議 Checklist</h2>
+
+      <p>每年做一次嘅 Checklist（無論係開AGM定書面決議）：</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>事項</th>
+            <th>文件</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>✅ 確定財政年度結束日期</td>
+            <td>公司章程</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>✅ 準備經審計財務報表</td>
+            <td>審計報告、損益表、資產負債表</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>✅ 決定係開AGM定用書面決議</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>✅ 起草決議文本</td>
+            <td>決議草案</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>✅ 確定通知期（14日普通／21日特別）</td>
+            <td>會議通知</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>✅ 發出通知俾股東</td>
+            <td>電郵／書面</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>✅ 開會／收集簽名</td>
+            <td>會議紀錄／簽署決議</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>✅ 記錄決議結果</td>
+            <td>決議紀錄</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>✅ 將決議放入公司法定紀錄</td>
+            <td>Statutory Records</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>✅ 如需申報註冊處（特別決議），15日內提交</td>
+            <td>NR1表格等</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout-info">
+        <strong>💡 建議：</strong>將呢個 Checklist save低，每年審計報告出咗之後就拎出嚟跟一次。養成習慣之後，每年搞掂唔使一個鐘。
+      </div>
+    </div>
+
+    <!-- ═══ Bonus: Real Case ═══ -->
+    <div class="prose-custom">
+      <h2>📖 真實案例：我點樣搞錯AGM程序</h2>
+
+      <p>等我又分享一次自己嘅瘀事。</p>
+
+      <p>我第一年開公司，審計報告出咗之後，秘書公司同我講要「通過決議」。我以為要開AGM，就約晒啲股東（其實得我同另外一個friend）出嚟食飯，順便簽名。</p>
+
+      <p>點知我Friend嗰日唔得閒，我以為「算啦，我代佢簽埋就得啦反正大家都agree」。結果秘書公司話：「唔得㗎，書面決議一定要每位股東親自簽署，唔可以代簽。」我當時心諗：哎呀要再約多次。</p>
+
+      <p>最後我學精咗：每年審計報告出咗之後，我print兩份決議出嚟，一份俾自己，一份寄俾另一個股東簽。佢簽完寄返俾我，我放埋一齊就搞掂。完全唔使約食飯。</p>
+
+      <p>經驗教訓：書面決議真係比開會方便好多，但要確保每位股東都有機會睇到同簽署。</p>
+    </div>
+
+    <!-- ═══ FAQ ═══ -->
+    <div class="prose-custom" id="faq">
+      <h2>❓ 常見問題（FAQ）</h2>
+
+      <div class="faq-item">
+        <details>
+          <summary>私人有限公司一定唔使開AGM？</summary>
+          <p>公司條例並無強制要求私人有限公司開AGM，但公司每年仍然需要通過某些決議（如審計報告、股息、董事重選）。你可以用書面決議處理。不過，如果你嘅公司章程有特別規定話一定要開AGM，咁就要跟章程做。建議檢查一下你嘅AoA。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>書面決議要全部股東同意先得？</summary>
+          <p>唔一定。書面決議嘅通過門檻同開會一樣：普通決議只需要過半數票（>50%），特別決議需要75%票。如果某個股東唔簽名，只要夠票數就通過到。不過你要俾佢睇到份決議（發送紀錄要做低），同埋俾佢合理時間考慮。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>AGM可以網上視像進行嗎？</summary>
+          <p>可以。公司條例冇禁止視像會議，只要所有參與者能夠同時聽到同見到對方就ok。好多公司而家都用Zoom / Google Meet / Teams開AGM。但要注意：如果章程有規定會議地點，最好睇清楚有冇限制。同埋要確保投票安排清晰。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>可以委託代表投票嗎？</summary>
+          <p>可以。根據公司條例，每名股東有權委任一個人作為代表（Proxy）出席會議並投票。代表唔需要係公司股東。委任代表要提前書面通知公司（通常係會議前48小時）。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>錯過咗年度決議可以補做嗎？</summary>
+          <p>可以補做，只要股東同意就得。不過如果已經過咗好耐（例如幾年），最好將所有未做嘅決議一次過處理，並喺決議入面註明係補充通過之前年度嘅事項。不過要注意：如果公司要進行銀行貸款、融資或者賣盤，銀行/買方會睇你啲紀錄，太遲補做可能會影響信心。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>股東決議需要俾公司註冊處嗎？</summary>
+          <p>普通決議（如通過審計報告、委任董事）唔需要主動申報。但以下情況需要：特別決議（如修改章程、公司改名、自願清盤）必須喺通過後15日內提交公司註冊處；董事變更要交ND2A；股份配發要交NSC1。如果唔申報，公司同董事都可能被檢控。</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>公司條例對AGM紀錄有咩要求？</summary>
+          <p>所有股東決議（無論係AGM通過定書面決議）都要保存紀錄。紀錄要包括：會議日期（或決議日期）、決議內容、投票結果（贊成/反對票數）。紀錄必須備存10年。如果係書面決議，要保留簽署原件。公司註冊處可以隨時要求查閱。</p>
+        </details>
+      </div>
+    </div>
+
+    <!-- ═══ Conclusion ═══ -->
+    <div class="prose-custom">
+      <h2>📝 總結</h2>
+
+      <p>股東大會同書面決議聽落好似好formal，但其實：</p>
+
+      <ul>
+        <li><strong>一人公司：</strong>每年做一份書面決議，簽名就得，15分鐘搞掂</li>
+        <li><strong>多股東公司：</strong>可以用書面決議或者開AGM，睇你哋嘅溝通方式</li>
+        <li><strong>重大事項：</strong>用特別決議（75%），記住最少21日通知期</li>
+        <li><strong>最重要：</strong>一定要keep紀錄！用唔用書面決議都好，做咗決定就要記低</li>
+      </ul>
+
+      <p>有限公司合規唔難，最緊要你知道要做咩、幾時做。每年固定時間做一次，就唔會甩漏。</p>
+
+      <p>希望呢篇文章幫到你！如果有問題，歡迎留言或者電郵問我。</p>
+    </div>
+
+  </div>
+</article>
+
+<!-- ═══ Related Articles ═══ -->
+<section class="bg-gray-50 py-12 border-t border-gray-200">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-xl font-bold text-navy mb-6">📚 你可能仲想睇</h2>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <a href="/blog/香港有限公司公司秘書職責終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <h3 class="font-bold text-navy group-hover:text-gold transition-colors mb-2">有限公司公司秘書職責終極指南</h3>
+        <p class="text-sm text-gray-500">一人公司都要有公司秘書？法定紀錄、申報、會議記錄、股權變更全面拆解。</p>
+      </a>
+      <a href="/blog/香港有限公司法定紀錄StatutoryRecords終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <h3 class="font-bold text-navy group-hover:text-gold transition-colors mb-2">法定紀錄終極指南</h3>
+        <p class="text-sm text-gray-500">股東名冊、董事名冊、會議記錄、公司印章⋯⋯存放要求同罰則全面拆解。</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Footer ═══ -->
+<footer class="bg-navy py-10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
+      <div class="flex items-center gap-2 text-white font-bold text-xl">
+        <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-7 h-7" style="filter:drop-shadow(0 0 5px rgba(255,255,255,0.6))" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+      </div>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+    <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
+      <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
+      <p>© 2026 ESGov. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+  <!-- Auto-added: related tool links -->
+  <div class="max-w-3xl mx-auto px-4 mt-10 mb-8">
+    <div class="bg-navy/5 border border-navy/10 rounded-xl p-6">
+      <h3 class="text-lg font-bold text-navy mb-4">📍 相關免費工具</h3>
+      <div class="space-y-3">
+        <a href="https://esgov.org/audit-report-generator/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📊 ESGov 審計報告範例下載</a>
+        <a href="https://esgov.org/company-name-change-generator/special-resolution/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">🛠️ ESGov 公司改名特別決議 PDF 生成工具</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

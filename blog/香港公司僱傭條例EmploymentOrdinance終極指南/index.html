@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESGov | 香港公司僱傭條例（Employment Ordinance）終極指南 — 僱主必知嘅勞工法例權益與責任</title>
+<meta name="description" content="香港有限公司僱主全面了解《僱傭條例》：僱傭合約必備條款、試用期安排、法定假日及有薪年假計算方法、病假津貼、產假侍產假、終止僱傭程序、遣散費及長期服務金。由真實僱主分享血淚經驗，幫你避開勞工法例陷阱同勞審處告票。附假日計算表同終止僱傭程序 Checklist。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gold { color: #C9A84C; }
+  .border-gold { border-color: #C9A84C; }
+  .hover\:bg-gold\/90 { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"香港公司請人一定要簽書面僱傭合約嗎？","acceptedAnswer":{"@type":"Answer","text":"根據《僱傭條例》（第57章），僱主必須在僱員就職前或就職後 60 日內，向僱員提供一份書面僱傭合約（即僱傭合約副本），列明工資、工作時間、假期、終止合約通知期等重要條款。就算口頭協議，法律上仍然係有效僱傭合約，但為咗避免爭拗，強烈建議一定要簽書面合約。"}},
+    {"@type":"Question","name":"試用期最長可以幾耐？","acceptedAnswer":{"@type":"Answer","text":"《僱傭條例》冇規定試用期最長期限，一般公司會定 1-3 個月。但試用期嘅通知期通常較短：試用期內第一個月，雙方可以隨時終止合約而無需通知期或代通知金；之後如果合約冇訂明通知期，就需要唔少於 7 日通知。超過試用期後終止合約，通知期就係合約訂明嘅通知期（最少 7 日）。"}},
+    {"@type":"Question","name":"法定假日同有薪年假有咩分別？","acceptedAnswer":{"@type":"Answer","text":"法定假日係《僱傭條例》規定嘅指定假日（每年 12 日，包括農曆年初一至三、勞動節、國慶日等），無論僱員服務年期，都有權放假。有薪年假係按僱員連續受僱年期累積嘅有薪假期，連續受僱滿 12 個月後每年可享有 7-14 日年假（按年資遞增）。兩者都係有薪假期，但來源同計算方式唔同。"}},
+    {"@type":"Question","name":"員工病假點計算？要出糧嗎？","acceptedAnswer":{"@type":"Answer","text":"僱員連續受僱滿 1 個月後，如果病假連續不少於 4 日（即「病假紙」），並能出示醫生證明，就可以領取疾病津貼（即病假期間嘅工資），金額為每日平均工資嘅 4/5。累積有薪病假上限為 120 日：第一年每月可累積 2 日，之後每月可累積 4 日。睇普通門診嘅單日病假（<4日）一般唔計有薪病假。"}},
+    {"@type":"Question","name":"辭退員工要點做？通知期同遣散費點計？","acceptedAnswer":{"@type":"Answer","text":"終止僱傭合約需要按合約訂明嘅通知期通知（或支付代通知金）。如果僱員連續受僱不少於 24 個月，而因裁員理由被解僱，僱主需要支付遣散費。計算方式：月薪僱員 = (最後一個月工資 × 2/3) × 服務年期。遣散費上限為 HK$390,000（2026年）。另外，僱員連續受僱不少於 5 年解僱時可能需要支付長期服務金。"}},
+    {"@type":"Question","name":"僱員懷孕有咩權益？","acceptedAnswer":{"@type":"Answer","text":"懷孕僱員有權放產假：連續受僱不少於 40 星期嘅僱員可享 14 星期有薪產假。產假薪酬為每日平均工資嘅 4/5。僱主唔可以喺僱員懷孕期間解僱佢（產假保障）。另外仲有男性僱員嘅侍產假：連續受僱不少於 40 星期可享 5 日有薪侍產假。"}}
+  ]
+}
+</script>
+<!-- Open Graph -->
+<meta property="og:title" content="香港公司僱傭條例（Employment Ordinance）終極指南 — 僱主必知嘅勞工法例權益與責任">
+<meta property="og:description" content="香港僱主全面了解僱傭條例：合約、試用期、假期、病假、產假、終止僱傭、遣散費。避開勞工法例陷阱。" />
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://esgov.org/blog/香港公司僱傭條例EmploymentOrdinance終極指南" />
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港公司僱傭條例EmploymentOrdinance終極指南" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ESGov",
+    "url": "https://esgov.org",
+    "description": "Hong Kong company compliance platform — free PDF generators, compliance guides, and company secretarial resources.",
+    "foundingDate": "2024",
+    "areaServed": "HK",
+    "knowsLanguage": "zh-HK,en"
+  }
+  </script>
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "ESGov 團隊",
+    "description": "香港公司秘書及合規顧問，專注提供公司註冊、股份轉讓、SCR 合規等免費指南",
+    "url": "https://esgov.org",
+    "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
+  }
+  </script>
+</head>
+<body>
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+<!-- Article Header -->
+<section class="bg-navy text-white py-12">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="flex items-center space-x-2 text-gold text-sm mb-3">
+      <span>⚖️ 勞工法例</span>
+      <span>·</span>
+      <span>12 分鐘閱讀</span>
+      <span>·</span>
+      <span>2026 年 6 月</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-4">
+      香港公司僱傭條例（Employment Ordinance）終極指南
+    </h1>
+    <p class="text-lg text-gray-300 leading-relaxed max-w-3xl">
+      由第一次請人到管理團隊，全面了解僱傭條例下嘅僱主權益同責任。合約點簽、假點放、炒人點賠，一文搞清。
+    </p>
+    <div class="flex flex-wrap items-center text-sm text-gray-400 mt-6 gap-x-6 gap-y-2">
+      <span>✍️ 真實僱主分享</span>
+      <span>📅 2026 年 6 月 8 日</span>
+      <span>📖 約 3000 字</span>
+    </div>
+  </div>
+
+    <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
+      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span class="ml-4">📅 最後更新：2026年6月</span>
+    </div>
+</section>
+
+<!-- Article Content -->
+<article class="max-w-4xl mx-auto px-4 py-8">
+  <div class="flex flex-col lg:flex-row gap-8">
+
+    <!-- Sidebar TOC (Desktop) -->
+    <aside class="hidden lg:block w-64 shrink-0">
+      <div class="sticky top-24 bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+        <h4 class="font-bold text-navy text-sm mb-3">📑 目錄</h4>
+        <nav class="space-y-1.5 text-sm">
+          <a href="#intro" class="block toc-item text-gray-600">開場白：我嘅僱主血淚史</a>
+          <a href="#contract" class="block toc-item text-gray-600">① 僱傭合約必須有嘅條款</a>
+          <a href="#probation" class="block toc-item text-gray-600">② 試用期玩法</a>
+          <a href="#wages" class="block toc-item text-gray-600">③ 工資保障同出糧規則</a>
+          <a href="#holidays" class="block toc-item text-gray-600">④ 假日、年假、休息日</a>
+          <a href="#sick" class="block toc-item text-gray-600">⑤ 病假同疾病津貼</a>
+          <a href="#maternity" class="block toc-item text-gray-600">⑥ 產假同侍產假</a>
+          <a href="#termination" class="block toc-item text-gray-600">⑦ 終止僱傭合約</a>
+          <a href="#severance" class="block toc-item text-gray-600">⑧ 遣散費同長期服務金</a>
+          <a href="#mpf" class="block toc-item text-gray-600">⑨ 強積金</a>
+          <a href="#checklist" class="block toc-item text-gray-600">✅ 僱主必做 Checklist</a>
+          <a href="#faq" class="block toc-item text-gray-600">❓ 常見問題 FAQ</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-1 min-w-0 prose-custom">
+
+      <!-- ═══ Price Comparison Banner ═══ -->
+      <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-5 mb-8">
+        <div class="flex items-start gap-4">
+          <span class="text-2xl">💡</span>
+          <div>
+            <p class="font-bold text-navy text-lg">外判 HR 顧問公司收費 $2,000+ 寫一份員工手冊</p>
+            <p class="text-gray-600 mt-1">呢篇指南幫你免費搞清《僱傭條例》基本盤，自己寫合約、自己管理員工，唔使俾顧問費。</p>
+            <p class="text-sm text-amber-700 mt-2">⭐ 真實僱主親身經歷 — 罰款同官司都係錢買返嚟嘅教訓</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ Intro ═══ -->
+      <section id="intro">
+        <p>我係一間香港有限公司嘅東主，創業頭三年完全唔知《僱傭條例》（香港法例第57章）係乜。第一次請人嘅時候，我喺 WhatsApp 同個新員工講「聽日返工啦，月薪 $16,000」，就咁就算請咗人。</p>
+        <p>結果？半年後我同佢有勞資糾紛，勞工處調解會議上面，我連一份正式嘅僱傭合約都拎唔出嚟。好彩最後和解咗，但果次之後我發誓要搞清楚所有僱主責任。</p>
+        <p>呢篇指南係我用親身經歷同罰款換返嚟嘅教訓整合。唔係律師寫嘅法律文章，係一個真實僱主將僱傭條例入面最關鍵、最易中招嘅部分，用人話講返俾你知。</p>
+
+        <div class="callout-info">
+          <strong>💡 懶人包</strong>：如果你咩都唔想睇，最少記住呢三件事 — <strong>① 一定要書面合約</strong>、<strong>② 法定假日一定要放假</strong>、<strong>③ 炒人要跟足通知期</strong>。三樣中一樣都夠你上勞資審裁處。
+        </div>
+      </section>
+
+      <!-- ═══ ① Contract ═══ -->
+      <section id="contract">
+        <h2>① 僱傭合約 — 唔好再口頭請人</h2>
+        <p>根據《僱傭條例》，僱主必須喺僱員就職前或就職後 <strong>60 日內</strong>，向僱員提供一份書面僱傭合約，清楚列明所有僱傭條款。就算你只係請 Part-time，都一樣受規管。</p>
+
+        <h3>合約必須包含嘅條款</h3>
+        <ul>
+          <li><strong>工資</strong>：月薪 / 時薪 / 日薪，工資期（例如每月1號至月尾）</li>
+          <li><strong>工作時間</strong>：每日工時、用膳時間</li>
+          <li><strong>假期</strong>：法定假日、有薪年假、休息日安排</li>
+          <li><strong>終止合約通知期</strong>：試用期內同試用期後嘅通知期</li>
+          <li><strong>年終酬金</strong>：雙糧 / 花紅嘅計算方法（如有）</li>
+          <li><strong>其他津貼</strong>：交通津貼、勤工獎、佣金等</li>
+        </ul>
+
+        <div class="callout-warning">
+          <strong>⚠️ 我嘅教訓</strong>：我試過用 WhatsApp 文字訊息當合約，入面只寫咗「月薪 $18,000，返星期一到五」。到員工辭職時，佢話公司冇俾年假，我拎唔出任何證據證明有跟《僱傭條例》提供年假。結果？賠咗 $6,000 和解。<br><br>
+          <strong>解決方案</strong>：用勞工處嘅標準僱傭合約範本（網上有得 download），填好基本條款之後簽返兩份，一份俾員工、一份公司保留。成本 $0，但保障大好多。
+        </div>
+
+        <h3>合約可以「優於條例」</h3>
+        <p>《僱傭條例》訂明嘅係最低標準。只要你俾嘅條件好過條例要求（例如更多年假、更長通知期），完全合法。但唔可以少過條例嘅最低要求。</p>
+      </section>
+
+      <!-- ═══ ② Probation ═══ -->
+      <section id="probation">
+        <h2>② 試用期 — 僱主嘅觀察期</h2>
+        <p>《僱傭條例》<strong>冇規定試用期最長期限</strong>，但一般公司會定 1-3 個月。試用期最主要嘅分別係通知期唔同：</p>
+
+        <table>
+          <tr><th>情況</th><th>通知期要求</th></tr>
+          <tr><td>試用期內首個月</td><td>任何一方可隨時終止合約，無需通知期或代通知金</td></tr>
+          <tr><td>試用期內（超過首月），合約有訂明通知期</td><td>跟合約通知期（通常 7 日）</td></tr>
+          <tr><td>試用期內（超過首月），合約冇訂明</td><td>唔少於 7 日通知</td></tr>
+          <tr><td>試用期後</td><td>跟合約通知期（最少 7 日）</td></tr>
+        </table>
+
+        <div class="callout-info">
+          <strong>💡 實戰建議</strong>：試用期定 3 個月最 common。合約寫明「首個月任何一方可即時終止合約，之後雙方需 7 日書面通知」。咁樣頭一個月如果覺得唔啱，你可以即日叫佢唔使返工。
+        </div>
+      </section>
+
+      <!-- ═══ ③ Wages ═══ -->
+      <section id="wages">
+        <h2>③ 工資保障 — 出糧都有規矩</h2>
+        <p>《僱傭條例》對出糧有以下要求：</p>
+        <ul>
+          <li><strong>出糧週期</strong>：工資期結束後 7 日内一定要出糧</li>
+          <li><strong>工資收據</strong>：每次出糧要俾工資單（可以用 email），列明工資、扣減項目（強積金、請假扣薪等）</li>
+          <li><strong>扣薪限制</strong>：除咗法定扣減（MPF、法院命令、預支工資還款），僱主唔可以隨意扣薪。唔可以因為員工做錯嘢就扣人工</li>
+          <li><strong>最低工資</strong>：2026 年法定最低工資為 <strong>每小時 $42.5</strong>（2025年5月起實施）</li>
+        </ul>
+
+        <div class="callout-danger">
+          <strong>🚨 嚴重提醒</strong>：欠薪係刑事罪行！如果你故意唔出糧或拖延出糧，勞工處可以提出檢控，最高罰款 $350,000 及監禁 3 年。<br><br>
+          我朋友試過因為公司現金周轉問題遲咗 3 日出糧，俾員工去勞工處投訴，最後要俾附加費（欠薪金額嘅 8% 年利率）兼俾勞工處警告信。
+        </div>
+      </section>
+
+      <!-- ═══ ④ Holidays ═══ -->
+      <section id="holidays">
+        <h2>④ 假日、年假同休息日</h2>
+
+        <h3>法定假日（Statutory Holidays）</h3>
+        <p>每年 <strong>12 日</strong>法定假日，無論僱員服務年期，都有權放假：</p>
+        <table>
+          <tr><th>日期</th><th>假日</th></tr>
+          <tr><td>1 月 1 日</td><td>元旦</td></tr>
+          <tr><td>農曆年初一至三</td><td>農曆新年（3 日）</td></tr>
+          <tr><td>清明節前後</td><td>清明節</td></tr>
+          <tr><td>5 月 1 日</td><td>勞動節</td></tr>
+          <tr><td>農曆四月初八前後</td><td>佛誕</td></tr>
+          <tr><td>端午節</td><td>端午節</td></tr>
+          <tr><td>7 月 1 日</td><td>香港特別行政區成立紀念日</td></tr>
+          <tr><td>中秋節翌日</td><td>中秋節翌日</td></tr>
+          <tr><td>10 月 1 日</td><td>國慶日</td></tr>
+          <tr><td>重陽節</td><td>重陽節</td></tr>
+          <tr><td>12 月 25 日</td><td>聖誕節</td></tr>
+          <tr><td>12 月 26 日</td><td>聖誕節後第一個周日</td></tr>
+        </table>
+        <p class="text-sm text-gray-500">* 部分假日日期每年浮動，以政府公佈為準</p>
+
+        <h3>有薪年假（Annual Leave）</h3>
+        <ul>
+          <li>連續受僱滿 <strong>12 個月</strong>後，可享有有薪年假</li>
+          <li>第 1 年：7 日年假；之後每年遞增 1 日，直至 14 日（第 8 年起）</li>
+          <li>年假可以累積到下一年（視乎合約條款），但最長可以累積唔超過 2 年嘅總額</li>
+          <li>僱主可以指定年假嘅放取日期（例如公司農曆新年期間全廠放假），但要提前 14 日通知</li>
+        </ul>
+
+        <h3>休息日（Rest Day）</h3>
+        <p>每 7 日最少要有 <strong>1 日休息日</strong>（通常係星期日）。休息日係無薪嘅（除非合約寫明有薪），而且僱主唔可以強迫員工喺休息日返工。除非有機器或工廠緊急事故，先可以要求員工喺休息日工作，但要安排補假。</p>
+
+        <div class="callout-warning">
+          <strong>⚠️ 常見錯誤</strong>：好多僱主以為「每月 4 日例假」就得，但其實條例要求係「每 7 日最少 1 日」，即係唔可以連續 14 日冇休息日。如果你公司係輪班制或服務業，要小心排班安排，確保每 7 日內有 1 日休息。
+        </div>
+      </section>
+
+      <!-- ═══ ⑤ Sick Leave ═══ -->
+      <section id="sick">
+        <h2>⑤ 病假同疾病津貼 — 4 日病假紙先有錢收</h2>
+        <p>呢 part 係最多僱主誤解嘅部分。</p>
+
+        <h3>累積有薪病假</h3>
+        <table>
+          <tr><th>受僱年期</th><th>每月可累積病假日數</th><th>累積上限</th></tr>
+          <tr><td>第 1 年</td><td>每月 2 日</td><td>24 日</td></tr>
+          <tr><td>第 2 年起</td><td>每月 4 日</td><td>120 日</td></tr>
+        </table>
+
+        <h3>領取疾病津貼嘅條件</h3>
+        <ul>
+          <li>連續受僱滿 <strong>1 個月</strong></li>
+          <li>病假連續不少於 <strong>4 日</strong>（即使星期六日夾埋都 ok）</li>
+          <li>能出示 <strong>醫生證明書</strong>（病假紙）</li>
+          <li>已經累積足夠嘅有薪病假</li>
+        </ul>
+
+        <p>疾病津貼金額 = <strong>每日平均工資嘅 4/5</strong>（即係出 80% 糧）</p>
+
+        <div class="callout-info">
+          <strong>💡 重要提醒</strong>：如果員工只係睇醫生攞咗 1 日病假紙（例如感冒睇普通門診），呢日通常 <strong>唔符合</strong> 領取疾病津貼嘅條件，因為連續病假日數少過 4 日。但你可以喺合約入面寫明願意俾呢啲單日病假（即「有薪病假」），呢個係優於條例嘅福利。
+        </div>
+
+        <p>另外，<strong>懷孕僱員因產前檢查或產後治療</strong> 而攞嘅病假，即使少過 4 日都可以拎疾病津貼。</p>
+      </section>
+
+      <!-- ═══ ⑥ Maternity ═══ -->
+      <section id="maternity">
+        <h2>⑥ 產假同侍產假 — 員工有 BB 你要點做</h2>
+
+        <h3>女性僱員產假（2026 年最新）</h3>
+        <ul>
+          <li>連續受僱不少於 <strong>40 星期</strong>（約 10 個月）</li>
+          <li>可享 <strong>14 星期</strong>有薪產假</li>
+          <li>產假薪酬 = 每日平均工資嘅 <strong>4/5</strong></li>
+          <li>僱主 <strong>唔可以</strong> 喺僱員懷孕期間解僱佢（產假保障）</li>
+          <li>僱員須喺預產期前最少 4 星期通知僱主，並出示醫生證明書</li>
+        </ul>
+
+        <h3>男性僱員侍產假</h3>
+        <ul>
+          <li>連續受僱不少於 <strong>40 星期</strong></li>
+          <li>可享 <strong>5 日</strong>有薪侍產假</li>
+          <li>可以喺嬰兒預產期前 4 星期至實際出生日後 14 星期內放取</li>
+        </ul>
+
+        <div class="callout-success">
+          <strong>✅ 實戰貼士</strong>：產假期間你需要搵臨時人手替補。可以考慮請合約工（Contract）或 Part-time，期滿後完結合約。同時要預留產假薪酬嘅現金流，14 星期嘅 80% 工資係一筆唔細嘅開支。
+        </div>
+      </section>
+
+      <!-- ═══ ⑦ Termination ═══ -->
+      <section id="termination">
+        <h2>⑦ 終止僱傭合約 — 好嚟好去嘅藝術</h2>
+
+        <h3>通知期嘅要求</h3>
+        <ul>
+          <li>通知期要跟合約條款，但最少唔少於 <strong>7 日</strong></li>
+          <li>常見通知期：試用期後 1 個月（或 30 日）</li>
+          <li>可以選擇 <strong>代通知金</strong>：即係賠返通知期嘅工資，代替返工</li>
+          <li>通知期內，員工有權放取已累積嘅年假同法定假日</li>
+        </ul>
+
+        <h3>即時終止合約（Instant Dismissal）</h3>
+        <p>喺以下情況，僱主可以即時解僱員工而無需通知期或代通知金：</p>
+        <ul>
+          <li>故意唔聽從合理指令</li>
+          <li>行為不當（例如盜竊、欺詐）</li>
+          <li>習慣性疏忽職責</li>
+          <li>嚴重疏忽職責，導致公司損失</li>
+        </ul>
+        <div class="callout-danger">
+          <strong>⚠️ 非常小心</strong>：即時解僱係高風險操作。如果員工去勞審處話你「不合理解僱」，你要有足夠證據證明佢嘅行為達到可即時解僱嘅程度。唔好因為員工表現差就話炒就炒，一定要有書面警告紀錄同改善期。建議先諮詢勞工處或法律意見。
+        </div>
+
+        <h3>僱員辭職</h3>
+        <p>員工辭職都要跟通知期（除非合約寫明僱員可以即時辭職）。如果員工冇跟通知期就走咗，你可以要求佢賠代通知金，但追討成本可能高過代通知金金額。通常 small business 會選擇放下，好嚟好去。</p>
+      </section>
+
+      <!-- ═══ ⑧ Severance ═══ -->
+      <section id="severance">
+        <h2>⑧ 遣散費同長期服務金</h2>
+
+        <h3>遣散費（Severance Payment）</h3>
+        <p>如果因為 <strong>裁員</strong> 而解僱員工（公司縮減規模、轉型或執笠），而員工連續受僱不少於 <strong>24 個月</strong>，就需要支付遣散費。</p>
+
+        <p><strong>計算方法</strong>（一般算式）：</p>
+        <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+          <p class="font-mono text-sm">月薪僱員：遣散費 = (最後一個月工資 × 2/3) × 服務年資（年）</p>
+          <p class="text-xs text-gray-500 mt-2">* 年資不足 1 年按比例計算</p>
+          <p class="font-mono text-sm mt-2">日薪/件薪僱員：遣散費 = (最後 30 日平均工資 × 18日) × 服務年資（年）</p>
+          <p class="text-xs text-gray-500 mt-1">* 上限：HK$390,000（2026年水平，每年調整）</p>
+        </div>
+
+        <h3>長期服務金（Long Service Payment）</h3>
+        <p>如果員工連續受僱不少於 <strong>5 年</strong>，而以下情況解僱，需要支付長期服務金：</p>
+        <ul>
+          <li>員工因病或意外導致不勝任工作而被解僱</li>
+          <li>僱員年滿 65 歲辭職</li>
+          <li>僱員死亡</li>
+          <li>非因裁員而被解僱（但連續受僱 5 年以上）</li>
+        </ul>
+        <p>計算方式同遣散費類似，但遣散費同長期服務金 <strong>只能拎一樣</strong>，唔可以 double dip。</p>
+      </section>
+
+      <!-- ═══ ⑨ MPF ═══ -->
+      <section id="mpf">
+        <h2>⑨ 強積金（MPF）— 請人就要供</h2>
+        <p>呢 part 詳細喺我哋另一篇 <a href="/blog/香港公司強積金MPF安排終極指南/" class="text-gold font-medium hover:underline">香港公司強積金安排終極指南</a> 有詳細講，簡單 recap：</p>
+        <ul>
+          <li>僱員受僱首 60 日內要登記 MPF 計劃</li>
+          <li>僱主供款：僱員入息嘅 5%（上限 $1,500/月）</li>
+          <li>僱員供款：僱員入息嘅 5%（上限 $1,500/月）</li>
+          <li>月薪低於 $7,100：僱主都要供 5%，僱員可以唔供</li>
+          <li>遲供款要俾附加費（年利率 8%）</li>
+        </ul>
+      </section>
+
+      <!-- ═══ ⑩ Checklist ═══ -->
+      <section id="checklist">
+        <h2>✅ 僱主每月/每年必做 Checklist</h2>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 space-y-3">
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="checkbox" class="mt-1 h-4 w-4 text-gold border-gray-300 rounded" disabled>
+            <span><strong>第一次請人前</strong>：準備書面僱傭合約（用勞工處範本）</span>
+          </label>
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="checkbox" class="mt-1 h-4 w-4 text-gold border-gray-300 rounded" disabled>
+            <span><strong>入職 60 日內</strong>：俾員工簽書面合約副本、登記 MPF</span>
+          </label>
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="checkbox" class="mt-1 h-4 w-4 text-gold border-gray-300 rounded" disabled>
+            <span><strong>每個月</strong>：按時出糧（7日內）、俾工資單、供 MPF</span>
+          </label>
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="checkbox" class="mt-1 h-4 w-4 text-gold border-gray-300 rounded" disabled>
+            <span><strong>每年</strong>：更新法定假日表、確認年假安排、準備報稅（IR56B）</span>
+          </label>
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="checkbox" class="mt-1 h-4 w-4 text-gold border-gray-300 rounded" disabled>
+            <span><strong>員工離職時</strong>：計算最後薪金、未放年假補償、通知 MPF 受託人、準備僱傭證明書（Reference Letter）</span>
+          </label>
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="checkbox" class="mt-1 h-4 w-4 text-gold border-gray-300 rounded" disabled>
+            <span><strong>員工離職 24 個月以上</strong>：評估是否需要遣散費或長期服務金</span>
+          </label>
+        </div>
+      </section>
+
+      <!-- ═══ FAQ ═══ -->
+      <section id="faq" class="mt-10">
+        <h2>❓ 僱主常見問題 FAQ</h2>
+
+        <div class="faq-item">
+          <details>
+            <summary>Part-time 員工係咪都有法定假日同有薪年假？</summary>
+            <p>係。只要係連續受僱（即係每星期都有固定工時），Part-time 員工都受《僱傭條例》保障。佢哋嘅法定假日同有薪年假係按比例計算嘅。唯一分別係 Part-time 嘅休息日安排可以更 flexible，但每 7 日仍然要有一日休息。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>Freelancer / Contractor 算唔算僱員？</summary>
+            <p>呢個係灰色地帶。如果對方係 self-employed（自己有商業登記、自負盈虧、提供服務俾多個客戶），通常唔算僱員，唔需要供 MPF 或俾有薪假期。但如果佢實際上係「朝九晚五喺你公司返工、用你嘅工具、受你管理」，勞工處同稅局可能視佢為僱員。建議簽一份清晰嘅「服務合約」（Service Agreement）而唔係「僱傭合約」（Employment Contract），並且唔好對佢嘅工作做太嚴格嘅管理。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>員工唔簽合約可以點？</summary>
+            <p>如果員工拒絕簽書面合約，你仍然有責任提供一份合約副本俾佢（可以係 email 或 WhatsApp 發出）。保留你已經提供合約嘅證據（例如 email sent record、WhatsApp 已讀紀錄）。如果員工之後聲稱唔知道合約條款，你有提供記錄就可以證明你已履行僱主責任。但最好嘅做法係：合約簽署係入職嘅條件之一。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>可以叫員工「自願」唔放年假嗎？</summary>
+            <p>唔得。有薪年假係法定權益，員工唔可以「放棄」年假（即使佢話唔要）。如果員工喺離職時未放晒年假，僱主需要支付「年假薪酬」作為補償。唯一例外係：如果員工喺合約終止時同意以 pay 代替部分年假，但最少年假仍然要放（即係至少放 7-14 日年假，唔可以全部折算現金）。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>僱傭條例有冇規定食飯時間？</summary>
+            <p>《僱傭條例》<strong>冇直接規定</strong>用膳時間（食飯時間）嘅長短或是否有薪。呢啲係由僱傭合約約定。但普遍做法係：每天工作 8-9 小時，提供 30 分鐘至 1 小時嘅無薪用膳時間。如果係連續工作 5 小時以上，建議安排最少 30 分鐘嘅休息時間。部分行業（例如飲食業、零售業）有特定嘅行業指引。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>員工疫情期間或颱風黑雨返工安排？</summary>
+            <p><strong>颱風/黑雨</strong>：勞工處有《颱風及暴雨警告下工作安排》指引。如果懸掛 8 號或以上風球 / 黑色暴雨警告，僱主應該同員工事先約定返工安排（例如：家居辦公、遲到唔扣薪、提早放工）。僱主唔應該因為員工因惡劣天氣而遲到或缺勤而扣薪或處分。<br><br><strong>傳染病疫情</strong>：如果員工確診傳染病需要隔離，呢段時間建議按有薪病假處理（如有病假紙）。如果公司要求員工家居辦公，薪金應如常支付。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>勞工處調解係咪免費？程序係點？</summary>
+            <p>勞工處嘅 <strong>勞資關係科</strong> 提供免費嘅調解服務。流程：① 員工或僱主去勞工處提出申索 → ② 勞工處安排調解會議（約 2-4 星期後）→ ③ 雙方傾和解方案 → ④ 傾唔掂，轉介去勞資審裁處（要俾法庭費用，約 $50-$200）。調解本身係免費嘅，而且唔強制，但大部分 case 會喺調解階段和解到。建議：收到勞工處信唔好 Hea，認真準備文件同證據去調解。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- ═══ Conclusion ═══ -->
+      <section class="mt-12 bg-navy text-white rounded-xl p-6 sm:p-8">
+        <h2 class="text-white border-gold border-b-2 pb-3 mb-4 !text-white">🎯 總結：做好僱主責任，避免無謂勞資糾紛</h2>
+        <p class="text-gray-200">《僱傭條例》對好多第一次請人嘅中小企東主嚟講，好似一座大山。但其實只要做齊基本嘢，你已經避開 80% 嘅陷阱：</p>
+        <ol class="text-gray-200 mt-4 space-y-2">
+          <li><strong>① 用書面合約</strong>（唔好再 WhatsApp 請人）</li>
+          <li><strong>② 法定假日一定要俾</strong>（12 日，冇得傾）</li>
+          <li><strong>③ 炒人要跟通知期</strong>（唔好衝動炒人）</li>
+          <li><strong>④ 出糧要準時</strong>（7 日內，唔好拖）</li>
+          <li><strong>⑤ MPF 要供</strong>（唔好慳呢 5%）</li>
+        </ol>
+        <p class="text-gray-200 mt-4">以上五樣做齊，你已經係合格嘅香港僱主。更高級嘅 HR 管理（員工手冊、績效評核、股權激勵等），可以慢慢學。</p>
+        <p class="text-gold mt-4 font-medium">記住：勞工處嘅網站有齊所有範本同指引，全部免費。唔明就上勞工處網站睇，好過去 court。</p>
+      </section>
+
+      <!-- ═══ Related Articles ═══ -->
+      <section class="mt-10">
+        <h3 class="text-navy font-bold text-xl mb-4">📚 你可能都啱睇</h3>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <a href="/blog/香港公司強積金MPF安排終極指南/" class="block bg-white rounded-xl border border-gray-200 p-4 hover:shadow-lg hover:border-gold/30 transition-all">
+            <div class="flex items-start gap-3">
+              <span class="text-2xl">💰</span>
+              <div>
+                <h4 class="font-bold text-navy text-sm">香港公司強積金 MPF 安排終極指南</h4>
+                <p class="text-xs text-gray-500 mt-1">僱主第一次供款必睇</p>
+              </div>
+            </div>
+          </a>
+          <a href="/blog/香港有限公司第一次請人終極指南/" class="block bg-white rounded-xl border border-gray-200 p-4 hover:shadow-lg hover:border-gold/30 transition-all">
+            <div class="flex items-start gap-3">
+              <span class="text-2xl">👥</span>
+              <div>
+                <h4 class="font-bold text-navy text-sm">香港有限公司第一次請人終極指南</h4>
+                <p class="text-xs text-gray-500 mt-1">由招聘到入職，step by step</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</article>
+
+<!-- Footer -->
+<footer class="bg-navy text-white py-8 mt-12">
+  <div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-400">
+    <p>© 2026 ESGov. 由真實經歷者整理，實戰經驗分享。</p>
+    <p class="mt-1">本網站內容僅供參考，不構成專業法律意見。如有需要請諮詢合資格勞工顧問或律師。</p>
+    <p class="mt-4">
+      <a href="/" class="text-gold hover:underline">← 返回 ESGov 首頁</a>
+      <span class="mx-2">|</span>
+      <a href="/blog/" class="text-gold hover:underline">所有文章</a>
+    </p>
+  </div>
+</footer>
+
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

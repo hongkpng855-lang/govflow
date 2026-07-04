@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港有限公司董事借貸終極指南｜法律規定、稅務影響、實戰操作</title>
+  <meta name="description" content="公司錢同自己錢撈亂晒？董事借貸（Director's Loan）有咩法律限制、《公司條例》第486條點規定、點樣正規化借款還款程序、稅局點樣處理董事貸款利息同還款安排？由親身踩過坑嘅 SME 東主分享所有須知，避免誤踩公司法陷阱同稅務風險。" />
+  <meta name="keywords" content="董事借貸, Director's Loan, 公司條例, 股東貸款, 還款, 利得稅, 香港有限公司" />
+  <meta property="og:title" content="香港有限公司董事借貸終極指南 — 法律規定、稅務影響、實戰操作" />
+  <meta property="og:description" content="公司錢同自己錢撈亂晒？董事借貸有咩法律限制、點樣正規化還款、稅局點樣處理？由親身經歷者分享 Director's Loan 嘅所有須知。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司董事借貸終極指南" />
+  <meta property="og:image" content="https://esgov.org/assets/demo/og-blog-directorsloan.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .blog-content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1B2A4A;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f3f4f6;
+    }
+    .blog-content h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1B2A4A;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-content p {
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      color: #374151;
+    }
+    .blog-content ul, .blog-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #374151;
+    }
+    .blog-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    .blog-content blockquote {
+      border-left: 4px solid #C9A84C;
+      background: #fefce8;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+      font-style: normal;
+    }
+    .blog-content blockquote p {
+      margin-bottom: 0;
+      color: #92400e;
+    }
+    .blog-content .tip-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .blog-content .tip-box p {
+      margin-bottom: 0.25rem;
+    }
+    .blog-content .warn-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .blog-content .warn-box p {
+      margin-bottom: 0.25rem;
+    }
+    .blog-content .gold-box {
+      background: #fefce8;
+      border: 1px solid #fde68a;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .blog-content .gold-box p {
+      margin-bottom: 0.25rem;
+    }
+    .blog-content strong {
+      color: #1B2A4A;
+    }
+    .blog-content a {
+      color: #C9A84C;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    .blog-content a:hover {
+      color: #b89420;
+    }
+    .blog-nav a {
+      transition: all 0.2s ease;
+    }
+    .blog-nav a:hover {
+      color: #C9A84C;
+    }
+  </style>
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港有限公司董事借貸終極指南 — 法律規定、稅務影響、實戰操作",
+    "description": "公司錢同自己錢撈亂晒？董事借貸有咩法律限制、點樣正規化還款、稅局點樣處理？由親身經歷者分享 Director's Loan 嘅所有須知。",
+    "author": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-06-06",
+    "inLanguage": "zh-HK"
+  }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港有限公司董事借貸終極指南" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "ESGov 團隊",
+    "description": "香港公司秘書及合規顧問，專注提供公司註冊、股份轉讓、SCR 合規等免費指南",
+    "url": "https://esgov.org",
+    "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
+  }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+  <!-- ═══ Article Header ═══ -->
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+      <div class="flex flex-wrap items-center gap-2 text-sm text-gray-400 mb-4">
+        <a href="../" class="hover:text-gold transition-colors">Home</a>
+        <span>/</span>
+        <a href="/#blog" class="hover:text-gold transition-colors">網誌</a>
+        <span>/</span>
+        <span class="text-gray-600">董事借貸</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-4">
+        香港有限公司董事借貸終極指南
+      </h1>
+      <p class="text-lg text-gray-500 leading-relaxed mb-5">
+        公司戶口啲錢可唔可以自己攞嚟用？借俾自己得唔得？要唔要簽文件？
+        還款點計？稅局會唔會當係收入？
+        一個踩過坑嘅 SME 東主同你拆解 Director's Loan 嘅所有法律同稅務問題。
+      </p>
+      <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400">
+        <span>📅 2026 年 6 月 6 日</span>
+        <span>📝 真實經歷者</span>
+        <span>🏷️ 公司條例 · 稅務 · 董事責任 · 會計</span>
+        <span>⏱️ 閱讀需時 10 分鐘</span>
+      </div>
+    </div>
+  
+    <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
+      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span class="ml-4">📅 最後更新：2026年6月</span>
+    </div>
+</header>
+
+  <!-- ═══ Article Content ═══ -->
+  <article class="py-8 sm:py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row gap-10">
+
+        <!-- Sidebar TOC (Desktop) -->
+        <aside class="hidden lg:block w-64 shrink-0">
+          <div class="sticky top-24">
+            <h4 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">目錄</h4>
+            <nav class="space-y-1.5 text-sm blog-nav">
+              <a href="#intro" class="block text-gray-500 hover:text-navy transition-colors">開場白</a>
+              <a href="#what" class="block text-gray-500 hover:text-navy transition-colors">① 乜嘢係董事借貸？</a>
+              <a href="#legal" class="block text-gray-500 hover:text-navy transition-colors">② 公司法規定</a>
+              <a href="#tax" class="block text-gray-500 hover:text-navy transition-colors">③ 稅務影響</a>
+              <a href="#document" class="block text-gray-500 hover:text-navy transition-colors">④ 點樣正規化</a>
+              <a href="#repayment" class="block text-gray-500 hover:text-navy transition-colors">⑤ 還款安排</a>
+              <a href="#mistakes" class="block text-gray-500 hover:text-navy transition-colors">常見錯誤</a>
+              <a href="#faq" class="block text-gray-500 hover:text-navy transition-colors">常見問題 FAQ</a>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 min-w-0 blog-content">
+
+          <!-- ───────── Intro ───────── -->
+          <section id="intro">
+            <p class="text-lg text-gray-600 font-medium leading-relaxed">
+              開公司頭兩年，我嘅心態係：「公司啲錢就係我啲錢，要用就撳返出嚟。」
+              相信好多 SME 東主都係咁。
+            </p>
+            <p>
+              直到我嘅會計師幫我埋數嗰陣問我：「喂，你呢半年由公司戶口轉走咗 30 萬去自己戶口，
+              呢筆係董事借貸定係人工？定係股東分紅？你冇記錄我好難同你做數。」
+              我至知 — <strong>原來公司錢同自己錢係要分開計數㗎！</strong>
+            </p>
+            <p>
+              之後我先慢慢研究咗成個 Director's Loan 嘅玩法，仲因為太耐冇還俾公司，
+              差啲踩中《公司條例》嘅紅線。如果你都係公司唯一董事兼股東，
+              覺得「公司＝我自己」，呢篇文章你一定要睇。
+            </p>
+            <div class="gold-box">
+              <p class="font-semibold text-amber-800">💰 一句講晒</p>
+              <p class="text-sm text-amber-700">
+                公司係一個獨立嘅法律實體。公司嘅錢唔等於你嘅錢。
+                你由公司攞錢出去，無論係「借」定係「用」，都要有清楚記錄同埋法律依據。
+                唔係嘅話，輕則會計亂晒數，重則違反《公司條例》兼負上個人責任。
+              </p>
+            </div>
+          </section>
+
+          <!-- ───────── Section 1 ───────── -->
+          <section id="what">
+            <h2>① 乜嘢係董事借貸（Director's Loan）？</h2>
+            <p>
+              董事借貸（Director's Loan），簡單講就係<strong>公司借錢俾董事</strong>，
+              或者<strong>董事借錢俾公司</strong>。
+            </p>
+            <p>
+              最常見嘅情況係董事（即係你）由公司戶口轉走一筆錢去私人戶口用，
+              之後再還返俾公司。或者反轉頭，公司周轉唔掂，你自己攞私己錢入返公司戶口頂住。
+            </p>
+            <h3>常見嘅董事借貸場景：</h3>
+            <ul>
+              <li>🏠 <strong>個人使費</strong>：用公司錢交自己租、供樓、買嘢</li>
+              <li>💳 <strong>公司卡私人用</strong>：用公司信用卡找私人數</li>
+              <li>💰 <strong>墊支公司開支</strong>：自己先俾錢，之後等公司找返</li>
+              <li>📊 <strong>年度埋數</strong>：會計師發現公司有錢俾你「借走咗」，要入賬做 Director's Loan</li>
+              <li>🚗 <strong>公司買車俾董事用</strong>：名義上係公司資產，但實際係董事私人用</li>
+            </ul>
+            <div class="warn-box">
+              <p class="font-semibold text-red-800">⚠️ 重要概念</p>
+              <p class="text-sm text-red-700">
+                即使你係公司 100% 股東，公司嘅錢都唔可以直接當係你嘅錢。
+                公司有獨立法律人格。你由公司攞錢出去，如果冇正式嘅分紅決議或者借貸協議，
+                喺法律上就係「董事借貸」。
+              </p>
+            </div>
+          </section>
+
+          <!-- ───────── Section 2 ───────── -->
+          <section id="legal">
+            <h2>② 《公司條例》對董事借貸嘅規定</h2>
+            <p>
+              好多人唔知，<strong>香港《公司條例》（第 622 章）對董事借貸有好嚴格嘅規定</strong>。
+              唔係話「我自己的公司，我想點就點」。
+            </p>
+
+            <h3>原則：上市公司嚴格，私人公司寬鬆</h3>
+            <p>
+              上市公司嘅董事借貸基本上係被禁止或者要股東批准嘅。
+              但<strong>私人公司（Private Company）相對冇咁嚴格</strong>，
+              只要符合以下條件就冇問題：
+            </p>
+            <ul>
+              <li>借貸係喺公司嘅 <strong>正常業務範圍內</strong>（例如公司本身係做金融貸款嘅）</li>
+              <li>或者借貸金額 <strong>不超過 HK$150,000</strong>（公司條例 s.486）</li>
+              <li>或者借貸有 <strong>股東書面批准</strong></li>
+            </ul>
+            <p>
+              注意：以上嘅豁免只係針對「借貸本身係咪合法」。
+              即使係合法，都要<strong>喺公司賬目同董事報告中披露</strong>。
+            </p>
+
+            <h3>一定要披露！</h3>
+            <p>
+              《公司條例》s.484 要求：如果董事借貸總額喺年度任何時候超過 HK$150,000，
+              就要喺公司嘅<strong>財務報表（Financial Statements）</strong>入面披露，
+              包括：
+            </p>
+            <ul>
+              <li>借貸金額</li>
+              <li>利息（如果有）</li>
+              <li>還款條款</li>
+              <li>截至年結日嘅未還餘額</li>
+            </ul>
+            <p>
+              換句話講，你嘅會計師一見到公司資產負債表有「Due from Director」呢個 item，
+              就要跟足規定披露。想藏都藏唔到。
+            </p>
+
+            <h3>仲有潛在嘅法律風險</h3>
+            <ul>
+              <li><strong>濫用公司資金（Misapplication）</strong>：如果董事借貸冇正當商業理由，
+              可能被視為違反董事誠信責任（Fiduciary Duty），股東可以告你</li>
+              <li><strong>欺詐性優先償還（Unlawful Distribution）</strong>：如果公司資不抵債
+              嘅情況下仲借錢俾董事，清盤人會追究</li>
+              <li><strong>個人擔保</strong>：部份銀行貸款嘅董事個人擔保條款可能因為董事借貸太大而被 trigger</li>
+            </ul>
+            <blockquote>
+              <p>
+                「我 friend 間公司因為董事借貸記錄混亂，audit 嗰陣會計師出咗 qualified opinion，
+                銀行見到份 audit report 之後即刻 freeze 咗佢嘅 credit line。
+                所以千祈唔好睇小董事借貸嘅記錄要求。」
+              </p>
+            </blockquote>
+          </section>
+
+          <!-- ───────── Section 3 ───────── -->
+          <section id="tax">
+            <h2>③ 稅務影響：稅局點樣睇董事借貸</h2>
+            <p>
+              稅局（IRD）對董事借貸嘅態度係：<strong>「借貸還借貸，唔好同收入撈亂」</strong>。
+              以下係最常見嘅稅務問題同處理方法：
+            </p>
+
+            <h3>公司角度（利得稅 Profits Tax）</h3>
+            <p>
+              董事借貸本身<strong>唔係公司嘅收入</strong>，而係公司嘅資產（應收賬款）。
+              所以你唔需要為董事借貸交利得稅。
+            </p>
+            <p>
+              但如果借貸係<strong>用公司資金俾董事作私人用途而冇收利息</strong>，
+              稅局可能會視為公司冇收應收嘅利息收入，從而<strong>調整公司嘅應評稅利潤</strong>。
+            </p>
+            <p>
+              簡單講：<strong>如果公司借錢俾董事冇收商業利息，稅局可以 deemed 公司有利息收入，
+              然後徵稅。</strong>
+            </p>
+
+            <h3>董事個人角度（薪俸稅 Salaries Tax）</h3>
+            <p>
+              董事借貸<strong>唔係董事嘅收入</strong>，所以唔需要報薪俸稅。
+              但係！如果：
+            </p>
+            <ul>
+              <li>借貸金額<strong>太大或者太耐唔還</strong>，稅局可能 deem 呢筆錢係董事嘅「薪酬」或者「分紅」</li>
+              <li>如果公司最後<strong>豁免咗還款（Waiver of Loan）</strong>，
+              豁免嘅金額就會被視為董事嘅收入，要報薪俸稅</li>
+            </ul>
+            <div class="warn-box">
+              <p class="font-semibold text-red-800">⚠️ 我見過嘅真實個案</p>
+              <p class="text-sm text-red-700">
+                有個東主五年嚟不斷由公司戶口攞錢，總共超過 200 萬，從來冇還過。
+                會計師每年都入賬做 Director's Loan，但稅局 audit 嗰陣話：
+                「呢個 pattern 唔似借貸，似係持續嘅薪酬提取。」
+                最終稅局將其中 120 萬 deemed 做董事薪酬，要佢補交薪俸稅連罰款，成 40 幾萬。
+              </p>
+            </div>
+
+            <h3>印花稅（Stamp Duty）？</h3>
+            <p>
+              純粹嘅董事借貸唔需要俾印花稅。但如果借貸係用公司股份做抵押，
+              或者涉及股份轉讓嘅 deferred payment，就可能要俾印花稅。
+            </p>
+          </section>
+
+          <!-- ───────── Section 4 ───────── -->
+          <section id="document">
+            <h2>④ 點樣正規化董事借貸？實戰操作</h2>
+            <p>
+              如果你想由公司借錢俾自己，或者公司短期周轉要你墊支，最理想嘅做法係：
+            </p>
+
+            <h3>Step 1：簽署借貸協議（Loan Agreement）</h3>
+            <p>
+              呢份文件係保護你同公司雙方。唔需要好複雜，但一定要有：
+            </p>
+            <ul>
+              <li>借貸日期同金額</li>
+              <li>借款人同貸款人（公司 vs 董事）</li>
+              <li>利息條款（建議用商業利率，一般參考銀行最優惠利率 P + 1-2%）</li>
+              <li>還款 schedule（例如分 12 期每月還）</li>
+              <li>違約條款（例如遲還款要罰息）</li>
+              <li>雙方簽署同日期</li>
+            </ul>
+
+            <h3>Step 2：董事會書面批准</h3>
+            <p>
+              就算你係唯一董事，都應該出返份<strong>書面董事決議（Written Resolution）</strong>，
+              記錄董事會批准呢筆借貸。內容包括：
+            </p>
+            <ul>
+              <li>借貸目的（例如「董事個人周轉」）</li>
+              <li>金額同條款</li>
+              <li>確認借貸符合公司利益</li>
+              <li>記錄喺公司會議記錄冊（Minutes Book）</li>
+            </ul>
+
+            <h3>Step 3：會計入賬</h3>
+            <p>
+              將借貸記錄喺公司會計系統：
+            </p>
+            <ul>
+              <li>Dr: Director's Loan Receivable（資產）</li>
+              <li>Cr: Bank / Cash</li>
+            </ul>
+            <p>
+              <strong>唔好就咁入一筆「Other Expenses」</strong>，
+              咁樣會 distort 公司嘅 profit & loss。
+            </p>
+
+            <h3>Step 4：定期對賬</h3>
+            <p>
+              每個月 check 返 Director's Loan 嘅未還餘額，
+              確保還款記錄準確。年結嗰陣會計師會同你 reconcile。
+            </p>
+            <div class="tip-box">
+              <p class="font-semibold text-blue-800">💡 實戰建議</p>
+              <p class="text-sm text-blue-700">
+                我之後 set 咗個 rule：所有公司同個人之間嘅資金往來，
+                一定要經一個獨立嘅「Director's Loan Account」處理。
+                每個月睇一次仲爭公司幾多錢，盡量喺年結前清還或者減少。
+                咁樣會計師做數唔使猜，稅局 audit 都唔驚。
+              </p>
+            </div>
+          </section>
+
+          <!-- ───────── Section 5 ───────── -->
+          <section id="repayment">
+            <h2>⑤ 還款安排：點樣還先至正確</h2>
+            <p>
+              還款唔係就咁入返錢落公司戶口就算。
+              都要有清楚記錄，證明呢筆係「還款」而唔係「新嘅資金流入」。
+            </p>
+
+            <h3>還款方法：</h3>
+            <ul>
+              <li><strong>直接銀行轉賬</strong>：由個人戶口轉返去公司戶口，備註寫「Director's Loan Repayment」</li>
+              <li><strong>支票</strong>：開個人支票俾公司，票面寫「Repayment of Director's Loan」</li>
+              <li><strong>實物還款</strong>：例如用個人資產（如汽車）轉讓俾公司抵債，但要估值同簽文件</li>
+            </ul>
+
+            <h3>還款要留意嘅稅務問題：</h3>
+            <ul>
+              <li><strong>還款本金</strong>：唔需要交稅，因為係還返原本嘅錢</li>
+              <li><strong>利息部分</strong>：公司收返嘅利息係公司收入，要報利得稅</li>
+              <li><strong>如果冇收利息</strong>：稅局可能用「市場利率」 deemed 利息收入</li>
+            </ul>
+
+            <h3>如果一直唔還會有咩後果？</h3>
+            <ul>
+              <li><strong>會計問題</strong>：資產負債表長期有 large Due from Director，auditor 會有 concern</li>
+              <li><strong>稅務風險</strong>：稅局 deem 係董事薪酬，要補交薪俸稅 + 利息 + 罰款</li>
+              <li><strong>公司清盤</strong>：如果公司清盤，清盤人會追討董事借貸，你可以被 personal bankruptcy</li>
+              <li><strong>銀行貸款</strong>：銀行審查公司賬目時，大額董事借貸係 red flag，影響公司借貸能力</li>
+            </ul>
+            <blockquote>
+              <p>
+                「我公司頭三年累積咗差唔多 50 萬嘅 Director's Loan。會計師叫我『最好還返或者出分紅決議』。
+                最後我將部分轉咗做正式分紅（要交股息稅），部分分期還返俾公司。
+                ️而家每半年 Clean Up 一次，會計師 happy，我安心。」
+              </p>
+            </blockquote>
+          </section>
+
+          <!-- ───────── Mistakes ───────── -->
+          <section id="mistakes">
+            <h2>最常見嘅 5 個錯誤</h2>
+
+            <h3>❌ 錯誤 1：公司錢 = 自己錢，隨便攞</h3>
+            <p>
+              呢個係最常見亦最危險嘅誤解。公司係獨立法律實體，
+              即使你係 100% 股東，公司嘅錢都唔可以直接當係你嘅錢。
+              <strong>正確做法</strong>：出糧俾自己、出分紅、或者簽借貸協議。
+            </p>
+
+            <h3>❌ 錯誤 2：借貸冇任何書面記錄</h3>
+            <p>
+              就咁 ATM 轉錢，WhatsApp 講句「借住先」。到會計師埋數嗰陣，
+              完全唔知筆錢係借貸、人工、分紅定係還款。
+              <strong>正確做法</strong>：每一次資金往來都要有文件支持，最簡單係 loan agreement + 董事決議。
+            </p>
+
+            <h3>❌ 錯誤 3：董事借貸冇收利息</h3>
+            <p>
+              覺得「自己公司借俾自己，收咩利息」。稅局唔係咁睇 — 佢哋會 deemed 公司有應收嘅利息收入，
+              然後調整應評稅利潤。
+              <strong>正確做法</strong>：收取商業利率利息（例如 P+1%），或者至少喺 loan agreement 寫明利息條款。
+            </p>
+
+            <h3>❌ 錯誤 4：年結前唔清還董事借貸</h3>
+            <p>
+              年結日（公司財政年度 end date）嗰日嘅 Director's Loan balance 好重要。
+              如果太大，auditor 會 concern，稅局會注意。
+              <strong>正確做法</strong>：年結前盡量清還或大幅減少 Director's Loan，
+              出年再借過都得。
+            </p>
+
+            <h3>❌ 錯誤 5：董事借錢俾公司都冇記錄</h3>
+            <p>
+              反轉頭，你借錢俾公司都要有記錄。否則公司還錢俾你嗰陣，
+              稅局可能 deem 公司係 in distribution（分紅）而要交稅。
+              <strong>正確做法</strong>：董事借錢俾公司，同樣要有 loan agreement，
+              記錄利息同還款條款。呢啲利息收入你要報個人入息稅。
+            </p>
+          </section>
+
+          <!-- ───────── FAQ ───────── -->
+          <section id="faq">
+            <h2>常見問題 FAQ</h2>
+
+            <h3>Q1：董事借貸同股東分紅（Dividend）有咩分別？</h3>
+            <p>
+              董事借貸係<strong>要還嘅</strong>，係公司資產（應收賬款）。
+              分紅係<strong>唔使還嘅</strong>，係將公司利潤分派俾股東。
+              分紅要經股東決議，而且公司要有足夠嘅可供分配利潤（Distributable Profits）。
+              簡單講：借貸係「借」，分紅係「派」。
+            </p>
+
+            <h3>Q2：董事借貸上限係幾多？</h3>
+            <p>
+              私人公司一般冇法定上限，但如果超過 HK$150,000 就要喺財務報表披露。
+              實際上，銀行同 auditor 會關注 Director's Loan 嘅 size relative to 公司資產。
+              建議唔好超過公司淨資產（Net Assets）嘅 20-30%。
+            </p>
+
+            <h3>Q3：可唔可以公司幫董事俾租（Rent paid by company for director）？</h3>
+            <p>
+              可以，但要記錄為董事借貸或董事薪酬嘅一部分。
+              如果公司幫你交租而唔扣你人工，就變成董事借貸，要還。
+              如果當係薪酬福利，就要報稅（ fringe benefit）。
+            </p>
+
+            <h3>Q4：董事借貸要唔要俾印花稅？</h3>
+            <p>
+              一般唔需要。但如果你用公司股份做抵押，或者借貸涉及 property transfer，
+              就可能要俾。建議問會計師或者律師。
+            </p>
+
+            <h3>Q5：公司清盤咗，董事借貸點計？</h3>
+            <p>
+              清盤人會追討所有董事借貸。如果董事還唔到，清盤人可以申請董事破產。
+              而且如果董事借貸係喺公司無力償債（Insolvent）嘅情況下發生，
+              清盤人可以告董事違反信託責任。
+            </p>
+
+            <h3>Q6：我已經累積咗大額董事借貸，而家點算好？</h3>
+            <p>
+              唔使驚，有得救：
+            </p>
+            <ol>
+              <li><strong>第一步</strong>：同會計師傾，整理所有董事借貸記錄</li>
+              <li><strong>第二步</strong>：補簽 Loan Agreement 同董事決議（日期寫返實際日期）</li>
+              <li><strong>第三步</strong>：制定還款 plan，逐步清還</li>
+              <li><strong>第四步</strong>：如果公司有足夠可供分配利潤，可以考慮將部分轉做正式分紅</li>
+              <li><strong>第五步</strong>：之後嚴格跟足程序，唔好再 Cut Corners</li>
+            </ol>
+          </section>
+
+          <!-- ───────── Recap ───────── -->
+          <section>
+            <h2>總結：董事借貸唔可怕，最緊要有記錄</h2>
+            <p>
+              董事借貸本身唔係犯法，好多 SME 東主都有咁做。
+              <strong>問題在於冇記錄、冇文件、冇利息、一直唔還</strong> —
+              呢啲先係令你踩中法律陷阱嘅原因。
+            </p>
+            <p>
+              只要跟住以下 3 個原則，你就可以安心處理董事借貸：
+            </p>
+            <ol>
+              <li><strong>每次資金往來都要有文件</strong>：Loan Agreement + 董事決議</li>
+              <li><strong>收取商業利率利息</strong>：唔好俾稅局有 deemed 收入嘅空間</li>
+              <li><strong>年結前 Clean Up</strong>：盡量清還或大幅減少 Director's Loan</li>
+            </ol>
+            <p>
+              我當初如果一早知道呢啲，就唔使俾會計師鬧到飛起，仲要嘥時間補文件。
+              希望你呢篇文幫你省返呢啲麻煩。
+            </p>
+          </section>
+
+          <!-- ───────── CTA ───────── -->
+          <div class="mt-12 bg-navy text-white rounded-2xl p-8 sm:p-10 text-center">
+            <p class="text-gold text-sm font-semibold tracking-widest uppercase mb-2">📚 延伸閱讀</p>
+            <h3 class="text-2xl font-bold mb-3">想睇更多公司營運實戰指南？</h3>
+            <p class="text-gray-300 mb-6 max-w-md mx-auto">
+              由真實經歷者整理，幫你避開所有公司行政管理嘅陷阱。
+              我哋有董事法律責任、審計報稅、股份轉讓等實戰指南。
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+              <a href="../" class="inline-flex items-center gap-2 bg-white text-navy font-semibold px-6 py-3 rounded-xl hover:bg-gold transition-colors">
+                睇所有指南 →
+              </a>
+              <a href="/blog/香港有限公司董事法律責任終極指南/" class="inline-flex items-center gap-2 border-2 border-gold/40 text-gold font-semibold px-6 py-3 rounded-xl hover:bg-gold/10 transition-colors">
+                董事法律責任 →
+              </a>
+              <a href="/blog/有限公司撤銷註冊終止營運指南/" class="inline-flex items-center gap-2 border-2 border-gold/40 text-gold font-semibold px-6 py-3 rounded-xl hover:bg-gold/10 transition-colors">
+                撤銷註冊指南 →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══ Footer ═══ -->
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-navy py-12 mt-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-2 text-white font-bold text-xl">
+          <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+        </div>
+        <div class="text-sm text-gray-400">
+          香港公司秘書文件指南
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
+        <p class="mb-2">
+          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          如有具體法律問題，請諮詢執業律師或專業公司秘書。
+        </p>
+        <p>© 2026 ESGov. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Auto-added: related tool links -->
+  <div class="max-w-3xl mx-auto px-4 mt-10 mb-8">
+    <div class="bg-navy/5 border border-navy/10 rounded-xl p-6">
+      <h3 class="text-lg font-bold text-navy mb-4">📍 相關免費工具</h3>
+      <div class="space-y-3">
+        <a href="https://esgov.org/audit-report-generator/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📊 ESGov 審計報告範例下載</a>
+        <a href="https://esgov.org/shareholder-transfer/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📄 免費使用 ESGov 股份轉讓文件生成工具</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

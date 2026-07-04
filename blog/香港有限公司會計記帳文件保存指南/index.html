@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港公司會計記帳及文件保存完整指南 — 公司條例要求保存會計紀錄，違者罰款$30萬！自己記帳定俾會計師？</title>
+  <meta name="description" content="香港有限公司會計記帳同文件保存法定要求全面拆解：公司條例第373條要求保存會計紀錄至少7年，違者可罰款 $300,000！自己記帳得唔得？Excel vs QuickBooks vs Xero 會計軟件點揀？附每月記帳流程、實戰教學同即用 Checklist。" />
+  <meta name="keywords" content="香港有限公司記帳, 會計紀錄保存, 公司條例第373條, 文件保存7年, 中小企記帳, QuickBooks香港, Xero會計軟件, 香港會計系統, Invoice保存, 香港稅務條例第51C條" />
+  <meta property="og:title" content="香港公司會計記帳及文件保存完整指南 — 公司條例要求保存會計紀錄，違者罰款$30萬！自己記帳定俾會計師？" />
+  <meta property="og:description" content="香港有限公司會計記帳同文件保存法定要求全面拆解：公司條例第373條要求保存足夠會計紀錄，稅務條例要求保存7年，違者可罰款$300,000！中小企東主自己點樣記帳？Excel vs QuickBooks vs Xero 點揀？" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司會計記帳文件保存指南" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .blog-content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1B2A4A;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f3f4f6;
+    }
+    .blog-content h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1B2A4A;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-content p {
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      color: #374151;
+    }
+    .blog-content ul, .blog-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #374151;
+    }
+    .blog-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    .blog-content blockquote {
+      border-left: 4px solid #C9A84C;
+      background: #fefce8;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+      font-style: normal;
+    }
+    .blog-content blockquote p {
+      margin-bottom: 0;
+      color: #92400e;
+    }
+    .blog-content .tip-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .blog-content .tip-box p {
+      margin-bottom: 0.25rem;
+    }
+    .blog-content .warn-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .blog-content .warn-box p {
+      margin-bottom: 0.25rem;
+    }
+    .blog-content .gold-box {
+      background: #fefce8;
+      border: 1px solid #fde68a;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .blog-content .gold-box p {
+      margin-bottom: 0.25rem;
+    }
+    .blog-content .compare-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .blog-content .compare-box p {
+      margin-bottom: 0.25rem;
+    }
+    .blog-content strong {
+      color: #1B2A4A;
+    }
+    .blog-content a {
+      color: #C9A84C;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    .blog-content a:hover {
+      color: #b89420;
+    }
+    .blog-nav a {
+      transition: all 0.2s ease;
+    }
+    .blog-nav a:hover {
+      color: #C9A84C;
+    }
+  </style>
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港公司會計記帳及文件保存完整指南 — 公司條例要求保存會計紀錄，違者罰款$30萬！自己記帳定俾會計師？",
+    "description": "香港有限公司會計記帳同文件保存法定要求全面拆解：公司條例第373條要求保存足夠會計紀錄，稅務條例要求保存7年，違者可罰款$300,000！附實戰記帳教學同 Checklist。",
+    "author": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-06-11",
+    "dateModified": "2026-06-11",
+    "inLanguage": "zh-HK"
+  }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港有限公司會計記帳文件保存指南" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "ESGov 團隊",
+    "description": "香港公司秘書及合規顧問，專注提供公司註冊、股份轉讓、SCR 合規等免費指南",
+    "url": "https://esgov.org",
+    "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
+  }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+  <!-- ═══ Article Header ═══ -->
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+      <div class="flex flex-wrap items-center gap-2 text-sm text-gray-400 mb-4">
+        <a href="../" class="hover:text-gold transition-colors">Home</a>
+        <span>/</span>
+        <a href="/blog/" class="hover:text-gold transition-colors">網誌</a>
+        <span>/</span>
+        <span class="text-gray-600">會計記帳</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-4">
+        香港有限公司會計記帳及文件保存完整指南
+      </h1>
+      <p class="text-lg text-gray-500 leading-relaxed mb-5">
+        公司條例話你要保存會計紀錄，稅局話你要 Keep 7 年，唔做最高罰 <strong>$300,000</strong>！
+        自己記帳得唔得？Excel 定買會計軟件？收到單據要點處理？
+        由親身俾稅局查過數嘅東主同你分享，由零開始搞掂公司記帳。
+      </p>
+      <div class="flex flex-wrap items-center gap-3 text-xs text-gray-400">
+        <span>📅 2026.06.11</span>
+        <span class="w-px h-4 bg-gray-300"></span>
+        <span>📖 約 15 分鐘閱讀</span>
+        <span class="w-px h-4 bg-gray-300"></span>
+        <span>🏷️ 記帳 · 會計 · 文件保存 · 合規 · Bookkeeping · 稅務</span>
+      </div>
+    </div>
+  
+    <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
+      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span class="ml-4">📅 最後更新：2026年6月</span>
+    </div>
+</header>
+
+  <!-- ═══ Article Content ═══ -->
+  <article class="py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="blog-content max-w-3xl mx-auto">
+
+        <!-- ═══ TOC ═══ -->
+        <div class="bg-white rounded-xl border border-gray-200 p-5 mb-8 shadow-sm">
+          <p class="font-bold text-navy mb-2">📑 本文目錄</p>
+          <ul class="text-sm space-y-1 text-gray-600">
+            <li><a href="#legal" class="text-gold font-medium">1. 法定要求：公司條例點規定？</a></li>
+            <li><a href="#what-records" class="text-gold font-medium">2. 要保存啲咩紀錄？</a></li>
+            <li><a href="#how-long" class="text-gold font-medium">3. 保存幾耐？公司條例 vs 稅務條例</a></li>
+            <li><a href="#methods" class="text-gold font-medium">4. 記帳方法：Excel vs 軟件 vs 俾人做</a></li>
+            <li><a href="#comparison" class="text-gold font-medium">5. 熱門會計軟件比較（2026）</a></li>
+            <li><a href="#workflow" class="text-gold font-medium">6. 每月記帳流程</a></li>
+            <li><a href="#mistakes" class="text-gold font-medium">7. 中小企最常見嘅會計錯誤</a></li>
+            <li><a href="#checklist" class="text-gold font-medium">8. 文件保存 Checklist</a></li>
+            <li><a href="#faq" class="text-gold font-medium">9. 常見問題 FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- ═══ Section 1 ═══ -->
+        <h2 id="legal">1. 法定要求：公司條例點規定？</h2>
+
+        <p>好多中小企東主都唔知，<strong>《公司條例》（第622章）第373條</strong>明確規定：<strong>每間公司都必须保存足以顯示及解釋公司交易嘅會計紀錄</strong>。違反呢個規定嘅公司，最高可被罰款 <strong>$300,000</strong>，而每名負責嘅董事仲有可能被監禁。</p>
+
+        <p>唔止公司條例，<strong>《稅務條例》（第112章）第51C條</strong>都有規定：每個人（包括公司）要備存足夠嘅紀錄，以便計算應課稅利潤。稅局有權要求你喺 7 年內出示所有相關紀錄。</p>
+
+        <div class="warn-box">
+          <p><strong>⚠️ 我親身經歷：</strong>開公司頭兩年，我以為「有啲單據就得」，根本冇 systematic 咁記帳。直到第3年俾稅局 query，要拿出一疊疊散亂嘅單據去解釋，嗰陣先知死。搞咗成個月先砌返盤數，仲要比會計師 charge 多 $8,000 整理費。所以話，早啲搞掂記帳係慳錢。</p>
+        </div>
+
+        <p>公司條例第373條要求會計紀錄必須達到以下效果：</p>
+        <ul>
+          <li><strong>顯示公司交易</strong> — 邊日同邊個交易、金額多少、交易性質</li>
+          <li><strong>解釋公司財務狀況</strong> — 資產、負債、收入、支出一目了然</li>
+          <li><strong>令董事能夠確保</strong> — 資產負債表同損益表嘅編製符合條例要求</li>
+        </ul>
+
+        <p>簡單講：你唔可以淨係 keep 住啲單，要有一套系統令到你（同你嘅會計師）睇到盤數係點嚟。</p>
+
+        <!-- ═══ Section 2 ═══ -->
+        <h2 id="what-records">2. 要保存啲咩紀錄？</h2>
+
+        <p>法令講得抽象，我直接用實際例子話你知要 keep 啲咩：</p>
+
+        <h3>✅ 一定要保存嘅</h3>
+        <ul>
+          <li><strong>所有 Invoice（發票）</strong> — 開俾客嘅同供應商俾你嘅，全部都要</li>
+          <li><strong>收據（Receipt / Official Receipt）</strong> — 現金交易嘅收據</li>
+          <li><strong>銀行月結單（Bank Statements）</strong> — 所有公司戶口嘅月結單</li>
+          <li><strong>存款單／轉賬記錄</strong> — 入數紙、FPS 記錄、匯款單</li>
+          <li><strong>支票存根</strong> — 開出支票嘅 stub 或記錄</li>
+          <li><strong>合約／協議</strong> — 同供應商、客戶、合作夥伴簽嘅約</li>
+          <li><strong>員工薪酬紀錄</strong> — 出糧記錄、MPF供款紀錄、IR56B</li>
+          <li><strong>固定資產發票</strong> — 買電腦、家具、機器嘅單</li>
+          <li><strong>現金帳記錄</strong> — 每日現金收支日記帳</li>
+          <li><strong>庫存紀錄</strong> — 存貨進出記錄（如有存貨業務）</li>
+        </ul>
+
+        <h3>❌ 好多東主唔知要 Keep 嘅</h3>
+        <ul>
+          <li><strong>董事墊款記錄</strong> — 董事用自己錢俾公司、或者公司錢俾董事用，都要有正式記錄</li>
+          <li><strong>股東貸款協議</strong> — 股東借錢俾公司或者還款，要寫清楚條款</li>
+          <li><strong>關聯交易記錄</strong> — 同董事、股東或其關聯公司嘅交易，稅局好鍾意查</li>
+          <li><strong>電子單據</strong> — 電子 Invoice 同實體 Invoice 有同等法律效力，但要確保可以轉換成 readable format</li>
+        </ul>
+
+        <div class="tip-box">
+          <p><strong>💡 慳位貼士：</strong>電子單據可以慳好多 storage 空間！稅局同公司註冊處都接受電子紀錄，只要你可以 print 返出嚟就得。我而家做緊「無紙化記帳」，全部都係用會計軟件 + 雲端存檔，唔使再 print 幾十箱單。</p>
+        </div>
+
+        <!-- ═══ Section 3 ═══ -->
+        <h2 id="how-long">3. 保存幾耐？公司條例 vs 稅務條例</h2>
+
+        <p>呢個位好多人 confuse：公司條例話 <strong>7 年</strong>，稅局又話 <strong>7 年</strong>，咁係咪 keep 7 年就得？</p>
+
+        <p>冇錯，兩個法例都要求保存 <strong>最少 7 年</strong>，不過計法有啲唔同：</p>
+
+        <div class="compare-box">
+          <p><strong>📋 《公司條例》第373條：</strong></p>
+          <ul>
+            <li>私營公司：由交易完成日起計 <strong>7 年</strong></li>
+            <li>上市公司：<strong>10 年</strong></li>
+            <li>違者：罰款 $300,000</li>
+          </ul>
+          <p class="mt-3"><strong>📋 《稅務條例》第51C條：</strong></p>
+          <ul>
+            <li>由交易完成日起計 <strong>不少於 7 年</strong></li>
+            <li>違者：最高罰款 $100,000</li>
+          </ul>
+        </div>
+
+        <div class="gold-box">
+          <p><strong>✅ 實戰建議：</strong>唔好計到咁盡，最好 Keep 夠 <strong>8-10 年</strong>。點解？稅局有權追查過去 6 年嘅稅務（如果涉嫌欺詐就冇時限），公司註冊處又可以查你啲紀錄。save 多幾年，唔使煩。</p>
+        </div>
+
+        <p>仲有一點好重要：<strong>公司解散後</strong>，公司條例要求董事繼續保存會計紀錄 <strong>5 年</strong>。所以就算你 close 咗公司，啲單都唔好掉住！</p>
+
+        <!-- ═══ Section 4 ═══ -->
+        <h2 id="methods">4. 記帳方法：Excel vs 軟件 vs 俾人做</h2>
+
+        <p>中小企東主最常問嘅問題：「我可唔可以用 Excel 記帳？」</p>
+
+        <p>答案係：<strong>可以，但要小心</strong>。</p>
+
+        <p>我用過晒三個方法，逐一講吓優缺點：</p>
+
+        <h3>方法一：Excel / Google Sheets</h3>
+        <p><strong>適合：</strong>每月交易少（< 30 筆）、一人公司、收入支出簡單</p>
+        <ul>
+          <li>✅ 免費、靈活</li>
+          <li>✅ 唔使學新系統</li>
+          <li>❌ 容易出錯（打錯 formula、入錯 column）</li>
+          <li>❌ 冇 audit trail，改咗都唔知</li>
+          <li>❌ 會計師要嘔血 — 每次 audit 要重新對數，會收多你錢</li>
+        </ul>
+
+        <h3>方法二：會計軟件（QuickBooks / Xero / 在用）</h3>
+        <p><strong>適合：</strong>每月交易 30-200 筆、有存貨、想慳 audit 費用</p>
+        <ul>
+          <li>✅ 自動分類、報表即出</li>
+          <li>✅ 銀行 feed auto-import</li>
+          <li>✅ 會計師可以直接 login 睇，audit 費用即減</li>
+          <li>✅ Audit trail 齊全</li>
+          <li>❌ 每月要俾月費（~$100-$300/月）</li>
+          <li>❌ 初學要少少時間適應</li>
+        </ul>
+
+        <h3>方法三：俾會計師樓做</h3>
+        <p><strong>適合：</strong>忙到冇時間、交易量好大、或者完全唔想掂</p>
+        <ul>
+          <li>✅ 完全唔使自己搞</li>
+          <li>✅ 專業人士幫你跟</li>
+          <li>❌ 最貴 — 每月 $1,500-$5,000+</li>
+          <li>❌ 自己要 keep 好所有單，唔係會俾人 charge extra</li>
+          <li>❌ 唔知公司盤數（出事時先知死）</li>
+        </ul>
+
+        <div class="gold-box">
+          <p><strong>💰 慳錢建議：</strong>我自己嘅做法係 <strong>買會計軟件（$100-200/月）+ 自己入數</strong>，然後每年先俾會計師 audit 時 review 一次。相比俾會計師樓 monthly bookkeeping（$1,500/月），一年慳到 <strong>$15,000+</strong>。而且自己入數嘅好處係 — 好清楚公司盤數，budget 同 forecast 都可以自己做。</p>
+        </div>
+
+        <!-- ═══ Section 5 ═══ -->
+        <h2 id="comparison">5. 熱門會計軟件比較（2026 年）</h2>
+
+        <p>如果你決定用會計軟件（強烈推薦），以下係香港中小企最常用嘅選擇：</p>
+
+        <div class="compare-box">
+          <p><strong>📊 QuickBooks Online（Intuit）</strong></p>
+          <ul>
+            <li>月費：~$108 HKD/月（Simple Start）</li>
+            <li>語言：中文/英文</li>
+            <li>銀行 feed：支援香港主要銀行（HSBC, BOC, Standard Chartered）</li>
+            <li>適合：貿易公司、零售、服務業</li>
+            <li>優點：用戶體驗好、多教學資源、會計師普遍熟悉</li>
+            <li>缺點：進階功能要加錢、客戶支援有時差</li>
+          </ul>
+        </div>
+
+        <div class="compare-box">
+          <p><strong>📊 Xero</strong></p>
+          <ul>
+            <li>月費：~$180 HKD/月（Starter）</li>
+            <li>語言：英文（可轉中文介面）</li>
+            <li>銀行 feed：支援香港銀行+自動分類</li>
+            <li>適合：中小企、Startup、有 inventory 嘅公司</li>
+            <li>優點：UI 靚、自動 reconciliation 強大、多第三方 app 整合</li>
+            <li>缺點：比 QuickBooks 貴少少、中文支援一般</li>
+          </ul>
+        </div>
+
+        <div class="compare-box">
+          <p><strong>📊 MYOB（香港版）</strong></p>
+          <ul>
+            <li>月費：~$150 HKD/月（Essentials）</li>
+            <li>語言：中文/英文</li>
+            <li>銀行 feed：支援本地銀行</li>
+            <li>適合：本地中小企、傳統行業</li>
+            <li>優點：本地支援好、Payroll module 可用</li>
+            <li>缺點：UI 較舊、自動化功能弱</li>
+          </ul>
+        </div>
+
+        <div class="compare-box">
+          <p><strong>📊 Wave（免費）</strong></p>
+          <ul>
+            <li>月費：免費（但信用卡收費 2.9%+$0.30）</li>
+            <li>語言：英文</li>
+            <li>銀行 feed：唔支援香港銀行</li>
+            <li>適合：Freelancer、微型公司（每月 < 10 單）</li>
+            <li>優點：完全免費、開 Invoice 方便</li>
+            <li>缺點：唔支援香港銀行 feed、功能有限、冇中文</li>
+          </ul>
+        </div>
+
+        <div class="gold-box">
+          <p><strong>💡 我的推薦：</strong>如果你係香港中小企，<strong>QuickBooks Online</strong> 係最穩陣嘅選擇。價錢合理、會計師普遍識用、香港銀行 feed 齊全。Xero 都好用但貴少少。如果你嘅會計師有偏好嘅 software，就跟佢 — 因為 audit 時佢可以直接用你個 account 睇數，節省雙方時間。</p>
+        </div>
+
+        <!-- ═══ Section 6 ═══ -->
+        <h2 id="workflow">6. 每月記帳流程（實戰）</h2>
+
+        <p>以下係我而家用緊嘅 monthly bookkeeping workflow，你可以參考：</p>
+
+        <h3>🗓️ 每星期（15 分鐘）</h3>
+        <ul>
+          <li>用手機 scan 所有新單據（我用 Google Drive + Adobe Scan）</li>
+          <li>將單據分類：收入 / 支出 / 資產 / 人工 / 稅費</li>
+          <li>覆核銀行入數紀錄</li>
+        </ul>
+
+        <h3>🗓️ 每月尾（30 分鐘）</h3>
+        <ul>
+          <li>銀行 reconciliation：對返所有銀行交易</li>
+          <li>入 Invoice：開俾客嘅同收到嘅全部入 software</li>
+          <li>信用卡單：核對公司卡消費</li>
+          <li>出糧記錄：更新 payroll 資料</li>
+          <li>Check 資產負債表：確保 Balance Sheet 平咗（Debit = Credit）</li>
+        </ul>
+
+        <h3>🗓️ 每季（1 小時）</h3>
+        <ul>
+          <li>Profit & Loss 檢視：睇 profitability</li>
+          <li>應收帳 Aging：追數！</li>
+          <li>應付帳檢視：安排找數</li>
+          <li>稅務估算：預留稅款</li>
+        </ul>
+
+        <h3>🗓️ 每年（同會計師夾）</h3>
+        <ul>
+          <li>年結調整（Year-end adjustments）</li>
+          <li>折舊計算（Depreciation）</li>
+          <li>存貨盤點（Inventory count）</li>
+          <li>準備 audit 文件</li>
+          <li>報稅表填寫</li>
+        </ul>
+
+        <div class="tip-box">
+          <p><strong>💡 心得：</strong>最緊要係 <strong>定時做</strong>，唔好積埋一次過。我以前試過半年先入一次數，結果有張 $8,000 嘅單唔見咗，搞到 audit 時俾會計師 charge 多 $5,000 去追返張單。每月花 30 分鐘，慳返 audit 費用 $3,000-$5,000。</p>
+        </div>
+
+        <!-- ═══ Section 7 ═══ -->
+        <h2 id="mistakes">7. 中小企最常見嘅會計錯誤</h2>
+
+        <p>以下係我親身犯過、同身邊東主朋友成日踩中嘅會計錯誤：</p>
+
+        <h3>❌ 錯誤 1：公司錢同自己錢撈埋</h3>
+        <p>最常見！用公司戶口找私人數，或者用私人卡找公司數。搞到 audit 時要逐筆拆返開，會計師 charge 多 $3,000-$10,000「拆數費」。</p>
+        <p><strong>✅ 解決：</strong>公司同私人錢要分得清清楚楚。如果要用自己錢墊支，寫低張董事墊款單，註明日期、金額、原因。</p>
+
+        <h3>❌ 錯誤 2：冇 keep 電子單據備份</h3>
+        <p>以為 print 咗出嚟就得，點知熱感紙一個月就 fade 晒。稅局 query 時俾唔出單據，被 inferred assessment。</p>
+        <p><strong>✅ 解決：</strong>所有單據 + 收據要 <strong>scan 存檔</strong>（Google Drive / Dropbox / 會計軟件內置），同時保留實體副本。</p>
+
+        <h3>❌ 錯誤 3：混淆資本支出同營運支出</h3>
+        <p>買電腦 $15,000 — 呢個係「固定資產」，唔可以一次過扣稅，要分 3-5 年折舊。好多東主直接當 expenses 入，搞到稅局 query。</p>
+        <p><strong>✅ 解決：</strong>同會計師確認邊啲係 capital items（一般超過 $3,000-$5,000 同有使用年期 > 1 年嘅資產）。</p>
+
+        <h3>❌ 錯誤 4：唔小心冇報所有收入</h3>
+        <p>收到現金、或者客入錯戶口、或者有退貨退款冇正確記錄，導致報稅時收入數字同銀行紀錄對唔上。稅局一對 bank statements 就捉到。</p>
+        <p><strong>✅ 解決：</strong>每月做銀行 reconciliation，確保 bank 同 accounting system 嘅數字 match。</p>
+
+        <h3>❌ 錯誤 5：低估 prepayment 同 accrual 嘅重要性</h3>
+        <p>年初俾咗全年保險 $12,000，你一次過入晒一月嘅 expenses。但會計上要分 12 個月慢慢攤銷。唔做 accrual/prepayment 嘅話，盤數會好唔準確。</p>
+        <p><strong>✅ 解決：</strong>年結時一定要同會計師做 year-end adjustments。平時可以用會計軟件嘅 recurring transactions 功能。</p>
+
+        <!-- ═══ Section 8 ═══ -->
+        <h2 id="checklist">8. 文件保存 Checklist</h2>
+
+        <p>以下係你可以 print 出嚟每月對住 check 嘅 Checklist：</p>
+
+        <div class="tip-box">
+          <p><strong>📋 每月文件保存 Checklist</strong></p>
+          <ul>
+            <li>☐ 銀行月結單（所有戶口）已下載存檔</li>
+            <li>☐ 已 scan 所有實體單據（電子存檔）</li>
+            <li>☐ 已分類：收入／支出／資產／人工</li>
+            <li>☐ Invoice 已全部入 system（開出 + 收到）</li>
+            <li>☐ 銀行 reconciliation 已做（Balance matches）</li>
+            <li>☐ 員工出糧紀錄已更新</li>
+            <li>☐ MPF 供款紀錄已保存</li>
+          </ul>
+        </div>
+
+        <div class="tip-box">
+          <p><strong>📋 年結文件保存 Checklist</strong></p>
+          <ul>
+            <li>☐ 全年 Bank statements 已整理</li>
+            <li>☐ 所有 Invoice 齊全（開出 + 收到）</li>
+            <li>☐ 固定資產登記冊更新（折舊計算）</li>
+            <li>☐ 庫存盤點記錄（如有存貨）</li>
+            <li>☐ 董事墊款記錄清晒（如有）</li>
+            <li>☐ 關聯交易記錄齊全</li>
+            <li>☐ 僱主報稅表 IR56B 已提交</li>
+            <li>☐ 審計報告已存檔</li>
+            <li>☐ 利得稅報稅表副本已保存</li>
+          </ul>
+        </div>
+
+        <!-- ═══ Section 9 ═══ -->
+        <h2 id="faq">9. 常見問題 FAQ</h2>
+
+        <h3>Q：公司冇營業（Dormant），仲要唔要記帳？</h3>
+        <p>要！就算公司係「休眠狀態」、冇任何收入支出，仍然要保存會計紀錄。你可以向公司註冊處申請「休眠公司」通知（特別決議），但紀錄仍然要 keep。</p>
+
+        <h3>Q：收據用熱感紙，好快 fade 咗點算？</h3>
+        <p>熱感紙一個月就開始 fade，半年後就睇唔到。一定要 scan / 影相存檔。我用緊 Adobe Scan（免費）配合 Google Drive，每張單 scan 完就分類放入 folder。</p>
+
+        <h3>Q：電子 Invoice 得唔得？</h3>
+        <p>得。《電子交易條例》下電子 Invoice 同實體有同等法律效力，只要有齊：公司名、地址、BR number、Invoice number、日期、金額、貨品/服務描述。記住 export 做 PDF 保存。</p>
+
+        <h3>Q：我自己記帳，仲要唔要請會計師做 Audit？</h3>
+        <p>有限公司每年都要審計（除咗小型公司可以申請「小型公司豁免」），審計報告係報稅必需文件。你自己入數可以慳 bookkeeping fee，但 audit 仍然要俾合資格會計師做。不過如果你盤數整齊，audit fee 可以平好多。</p>
+
+        <h3>Q：我喺淘寶買嘢，冇正式 Invoice 點算好？</h3>
+        <p>淘寶訂單記錄 + 付款記錄（支付寶/信用卡）可以當收據。建議 print out 訂單頁面同付款記錄保存。如果金額大（>$5,000），最好叫供應商補返張正式 Invoice。</p>
+
+        <h3>Q：用會計軟件，啲 data 安唔安全？</h3>
+        <p>QuickBooks / Xero 呢類大廠都有銀行級加密，data 放喺雲端比你放 office 電腦安全（起碼唔會火災水災）。但要 set 好 2FA（雙重認證），同埋定期 export backup。</p>
+
+        <h3>Q：文件保存超過 7 年後，可以掉嗎？</h3>
+        <p>理論上可以，但建議保留重要文件（如公司註冊文件、物業買賣合約、長期合約）無限保存。一般單據 > 7 年可以銷毀，但要確保冇 pending tax query / legal case。</p>
+
+        <!-- ═══ Conclusion ═══ -->
+        <div class="border-t border-gray-200 pt-8 mt-10">
+          <div class="gold-box">
+            <p><strong>🎯 總結：記帳係法律責任，唔係選擇</strong></p>
+            <p>公司條例同稅務條例都要求你保存會計紀錄，違者罰款可以好甘。但其實做好記帳有好多好處：</p>
+            <ul>
+              <li>✅ 清楚公司係賺定蝕</li>
+              <li>✅ 報稅唔使臨急抱佛腳</li>
+              <li>✅ Audit fee 可以平 30-50%</li>
+              <li>✅ 稅局 query 都唔使怕</li>
+              <li>✅ 將來賣公司/融資時 due diligence 冇問題</li>
+            </ul>
+            <p class="mt-3">就算你而家亂緊，都唔使驚。一步一腳印：</p>
+            <ol>
+              <li><strong>今日</strong> — 開個 Google Drive folder，開始 scan 所有單據</li>
+              <li><strong>今個月</strong> — 揀個會計 software，setup 好 chart of accounts</li>
+              <li><strong>今年</strong> — 逐個月做 reconciliation，年結時俾會計師 review</li>
+            </ol>
+            <p class="mt-3">一年後你會多謝自己。相信我，我經歷過。</p>
+          </div>
+        </div>
+
+        <!-- ═══ Related Articles ═══ -->
+        <div class="border-t border-gray-200 pt-8 mt-8">
+          <p class="font-bold text-navy mb-4">📚 你可能也會有興趣：</p>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <a href="/blog/香港公司利得稅報稅及審計完整指南/" class="block bg-white rounded-xl border border-gray-200 p-4 hover:border-gold/30 hover:shadow transition-all">
+              <p class="text-sm font-semibold text-navy">香港公司利得稅報稅及審計完整指南</p>
+              <p class="text-xs text-gray-400 mt-1">有限公司報稅要做咩？審計報告點樣準備？</p>
+            </a>
+            <a href="/blog/有限公司審計核數實戰指南/" class="block bg-white rounded-xl border border-gray-200 p-4 hover:border-gold/30 hover:shadow transition-all">
+              <p class="text-sm font-semibold text-navy">有限公司審計核數實戰指南</p>
+              <p class="text-xs text-gray-400 mt-1">核數師會 check 啲乜？點樣 prepare for audit？</p>
+            </a>
+            <a href="/blog/香港公司Invoice收據法律要求終極指南/" class="block bg-white rounded-xl border border-gray-200 p-4 hover:border-gold/30 hover:shadow transition-all">
+              <p class="text-sm font-semibold text-navy">香港公司 Invoice 及收據法律要求終極指南</p>
+              <p class="text-xs text-gray-400 mt-1">自己印 Invoice 得唔得？電子單據有冇法律效力？</p>
+            </a>
+            <a href="/blog/香港有限公司違反公司條例罰則終極指南/" class="block bg-white rounded-xl border border-gray-200 p-4 hover:border-gold/30 hover:shadow transition-all">
+              <p class="text-sm font-semibold text-navy">香港有限公司違反《公司條例》罰則終極指南</p>
+              <p class="text-xs text-gray-400 mt-1">最容易踩中嘅 10 大違規行為同罰款金額</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- ═══ Donate hint ═══ -->
+        <div class="border-t border-gray-200 pt-8 mt-8 text-center">
+          <p class="text-gray-500 text-sm">
+            ☕ 如果呢篇文幫到你，可以 <a href="https://buymeacoffee.com/esgov" target="_blank" rel="noopener" class="text-gold font-semibold hover:underline">請我飲杯咖啡</a> 支持下
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══ Footer ═══ -->
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-navy text-white py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-400">
+      <a href="/" class="hover:text-gold transition">← 返回 ESGov 首頁</a>
+      <p class="mt-3">© 2026 ESGov. 由真實經歷者整理，實戰經驗分享。</p>
+      <p class="mt-1">本網站內容僅供參考，不構成專業意見。如有需要請諮詢合資格專業人士。</p>
+    </div>
+  </footer>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港有限公司會計記帳及文件保存完整指南",
+    "description": "香港有限公司會計記帳同文件保存法定要求全面拆解：公司條例第373條、稅務條例第51C條，違者可罰款$300,000！附實戰記帳教學、軟件比較同 Checklist。",
+    "author": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-06-11",
+    "dateModified": "2026-06-11",
+    "inLanguage": "zh-HK"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "公司冇營業仲要唔要記帳？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "要。就算公司係休眠狀態、冇任何收入支出，仍然要保存會計紀錄。可以向公司註冊處申請休眠公司通知，但紀錄仍然要 keep。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "電子 Invoice 得唔得？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "得。電子交易條例下電子 Invoice 同實體有同等法律效力，只要有齊公司名、地址、BR number、Invoice number、日期、金額、貨品描述。記住 export 做 PDF 保存。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "我自己記帳仲要唔要請會計師做 Audit？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "有限公司每年都要審計（除咗小型公司可以申請豁免），審計報告係報稅必需文件。你自己入數可以慳 bookkeeping fee，但 audit 仍然要俾合資格會計師做。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "用會計軟件啲 data 安唔安全？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "QuickBooks / Xero 呢類大廠都有銀行級加密，data 放喺雲端比放 office 電腦安全。但要 set 好雙重認證（2FA），同埋定期 export backup。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "文件保存超過 7 年後可以掉嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "理論上可以，但建議保留重要文件（如公司註冊文件、物業買賣合約、長期合約）無限保存。一般單據超過 7 年可以銷毀，但要確保冇 pending tax query 或 legal case。"
+        }
+      }
+    ]
+  }
+  </script>
+
+
+
+  <!-- Auto-added: related tool links -->
+  <div class="max-w-3xl mx-auto px-4 mt-10 mb-8">
+    <div class="bg-navy/5 border border-navy/10 rounded-xl p-6">
+      <h3 class="text-lg font-bold text-navy mb-4">📍 相關免費工具</h3>
+      <div class="space-y-3">
+        <a href="https://esgov.org/audit-report-generator/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📊 ESGov 審計報告範例下載</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

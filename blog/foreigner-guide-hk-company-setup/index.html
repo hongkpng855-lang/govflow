@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESGov | Foreigner's Guide to HK Company Setup 外國人香港開公司指南</title>
+<meta name="description" content="Complete guide for foreigners registering a company in Hong Kong — no local address? Covers registration, bank account, visa, nominee services, fees & timeline." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gold { color: #C9A84C; }
+  .border-gold { border-color: #C9A84C; }
+  .hover:bg-gold/90 { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .en { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Can a foreigner register a company in Hong Kong without being a resident?","acceptedAnswer":{"@type":"Answer","text":"Yes. Hong Kong company law does not require directors or shareholders to be Hong Kong residents. You can be 100% foreign-owned and remotely incorporate your company. There is no requirement to have a local director unless you choose a structure that needs one."}},
+    {"@type":"Question","name":"I don't have a Hong Kong address — how can I register a company?","acceptedAnswer":{"@type":"Answer","text":"You can use a registered office service provider (virtual office or company secretary). Many licensed company secretaries and service providers offer a Hong Kong address as part of their incorporation package. Prices range from HK$2,000-$6,000 per year. This address serves as your company's registered office and for receiving government correspondence."}},
+    {"@type":"Question","name":"What bank accounts can a foreign-owned Hong Kong company open?","acceptedAnswer":{"@type":"Answer","text":"Major options include HSBC, Standard Chartered, Bank of China (HK), Citibank, DBS, and virtual banks like Airwallex, Statrys, or ZA Bank. Most traditional banks require the director(s) to visit Hong Kong in person for account opening. Virtual banks and fintech platforms may allow remote onboarding. Requirements typically include: company incorporation certificate, BR, Articles of Association, and director/shareholder ID & proof of address."}},
+    {"@type":"Question","name":"What visa do I need to live and work in Hong Kong after registering my company?","acceptedAnswer":{"@type":"Answer","text":"If you want to relocate to Hong Kong, the most common route is the Investment / Entrepreneurship Visa under the General Employment Policy (GEP) or the Top Tier Pass Scheme. You'll need to demonstrate that your business can contribute to Hong Kong's economy, show a viable business plan, and meet financial requirements (typically HK$1M+ in company funds). The visa is usually granted for 2 years initially, renewable."}},
+    {"@type":"Question","name":"Do I need a company secretary for my Hong Kong company?","acceptedAnswer":{"@type":"Answer","text":"Yes, every Hong Kong company must appoint a Company Secretary. The secretary can be an individual (HK resident) or a corporate body (with a HK business address). For foreign-owned companies, it's strongly recommended to engage a licensed corporate secretarial service provider who handles compliance, annual returns, and government filings automatically."}}
+  ]
+}
+</script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/foreigner-guide-hk-company-setup" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/foreigner-guide-hk-company-setup" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <meta property="og:title" content="Foreigner's Guide to HK Company Setup 外國人香港開公司指南" />
+  <meta property="og:description" content="Complete guide for foreigners registering a company in Hong Kong — no local address? No problem. Covers registration, bank account, visa, nominee services." />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ESGov",
+    "url": "https://esgov.org",
+    "description": "Hong Kong company compliance platform — free PDF generators, compliance guides, and company secretarial resources.",
+    "foundingDate": "2024",
+    "areaServed": "HK",
+    "knowsLanguage": "zh-HK,en"
+  }
+  </script>
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "ESGov 團隊",
+    "description": "香港公司秘書及合規顧問，專注提供公司註冊、股份轉讓、SCR 合規等免費指南",
+    "url": "https://esgov.org",
+    "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
+  }
+  </script>
+</head>
+<body>
+
+<!-- Navigation -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← Back to Home 返回首頁</a>
+    </div>
+  </nav>
+
+<div class="max-w-4xl mx-auto px-4 pt-20 pb-12">
+
+  <!-- Header -->
+  <header class="text-center mb-10">
+    <div class="text-sm text-gold font-semibold mb-2">🌏 Company Formation Guide for Expats</div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold gov-navy leading-tight">Foreigner's Guide to HK Company Setup<br/><span class="text-2xl">外國人香港開公司完整指南</span></h1>
+    <p class="text-lg text-gray-600 mt-3">No HK address? No problem. The complete step-by-step guide to incorporating, banking, and relocating to Hong Kong as a foreign entrepreneur.</p>
+    <div class="flex justify-center items-center gap-4 mt-4 text-sm text-gray-500">
+      <span>📅 13 June 2026</span>
+      <span>⏱ ~15 min read</span>
+      <span>👤 ESGov Editorial Team</span>
+    </div>
+  
+    <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
+      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span class="ml-4">📅 最後更新：2026年6月</span>
+    </div>
+</header>
+
+  <!-- ═══════════════ Highlight Banner ═══════════════ -->
+  <div class="bg-navy text-white rounded-xl p-5 mb-8 text-center shadow-lg">
+    <p class="text-sm font-semibold text-gold">🇭🇰 Hong Kong — #1 in World Bank's Ease of Doing Business</p>
+    <p class="text-2xl font-extrabold text-white mt-1">100% foreign ownership allowed • No minimum capital</p>
+    <p class="text-sm text-gray-300 mt-1">Tax at 8.25% on first HK$2M profit • No capital gains tax • No VAT/GST</p>
+  </div>
+
+  <!-- ═══════════════ Table of Contents ═══════════════ -->
+  <div class="bg-white rounded-xl shadow-sm p-6 mb-8 border border-gray-100">
+    <h2 class="text-xl font-bold gov-navy mb-4">📑 Contents 目錄</h2>
+    <ul class="space-y-2">
+      <li><a href="#why-hk" class="toc-item text-gray-700 hover:text-gold">1️⃣ Why Hong Kong? 點解揀香港？</a></li>
+      <li><a href="#structure" class="toc-item text-gray-700 hover:text-gold">2️⃣ Company Types 公司類型選擇</a></li>
+      <li><a href="#process" class="toc-item text-gray-700 hover:text-gold">3️⃣ Step-by-Step Registration 註冊流程</a></li>
+      <li><a href="#address" class="toc-item text-gray-700 hover:text-gold">4️⃣ No HK Address? Solutions 冇香港地址嘅解決方案</a></li>
+      <li><a href="#banking" class="toc-item text-gray-700 hover:text-gold">5️⃣ Bank Account Opening 銀行開戶要求</a></li>
+      <li><a href="#visa" class="toc-item text-gray-700 hover:text-gold">6️⃣ Visa & Immigration 簽證安排</a></li>
+      <li><a href="#costs" class="toc-item text-gray-700 hover:text-gold">7️⃣ Costs & Ongoing Compliance 費用同合規要求</a></li>
+      <li><a href="#traps" class="toc-item text-gray-700 hover:text-gold">8️⃣ Common Pitfalls 常見陷阱（我搞過）</a></li>
+      <li><a href="#faq" class="toc-item text-gray-700 hover:text-gold">❓ FAQ 常見問題</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════ Content ═══════════════ -->
+  <div class="prose-custom bg-white rounded-xl shadow-sm p-6 sm:p-8 border border-gray-100">
+
+    <div class="callout-danger">
+      <strong>🚨 Real Story 親身經驗：</strong> When I first moved to Hong Kong from the UK to set up my company, I made every mistake in the book. I tried to use my WeWork address as the registered office (bad idea — lost government letters), picked a cheap secretary who never filed annual returns, and almost got my company struck off. I also thought I could open a bank account from London remotely back in 2019... nope. This guide covers <strong>everything I wish someone had told me</strong> before I started.<br/><br/>
+      我當年由英國嚟香港開公司，差唔多所有錯都犯過一次。用共享空間做註冊地址（收唔到政府信）、揀咗間平價秘書公司但佢冇幫我交周年申報表、仲以為可以喺倫敦 remote 開銀行戶口……呢篇文係我嘅血淚教訓。
+    </div>
+
+    <h2 id="why-hk">1️⃣ Why Hong Kong? 點解咁多人揀香港開公司？</h2>
+
+    <p>Hong Kong remains one of the most popular jurisdictions for foreign entrepreneurs, and for good reason. Here's why I chose it and why thousands of expats do the same every year:</p>
+
+    <table>
+      <tr><th>Advantage 優勢</th><th>Details 詳情</th></tr>
+      <tr><td>100% Foreign Ownership</td><td>No local partner required. You can own 100% of your HK company as a foreigner.</td></tr>
+      <tr><td>Low Tax</td><td>8.25% on first HK$2M profits, 16.25% thereafter. No capital gains tax, no VAT, no GST.</td></tr>
+      <tr><td>Territorial Taxation</td><td>Only profits sourced in Hong Kong are taxed. Offshore income can be claimed as non-taxable (subject to conditions).</td></tr>
+      <tr><td>No Minimum Capital</td><td>You can register with HK$1 share capital. No minimum paid-up capital requirement.</td></tr>
+      <tr><td>No Foreign Exchange Control</td><td>Free capital flow in and out of Hong Kong. No restrictions on repatriating profits.</td></tr>
+      <tr><td>Common Law System</td><td>English-friendly legal system, independent judiciary, strong IP protection.</td></tr>
+      <tr><td>Strategic Location</td><td>Gateway to Greater Bay Area, China, and Asia-Pacific markets.</td></tr>
+    </table>
+
+    <div class="callout-info">
+      <strong>💡 My take 我嘅睇法：</strong> I've set up companies in Singapore, the UK, and the US. Hong Kong still wins for speed (1-3 days to incorporate) and cost-effectiveness (under HK$5,000 all-in). The lack of capital controls is a huge plus for international trading businesses. 新加坡、英國、美國我都開過公司，香港仍然係最快最平嘅選擇。
+    </div>
+
+    <h2 id="structure">2️⃣ Company Types — Which Structure Is Right for You?</h2>
+
+    <p>For most foreign entrepreneurs, a <strong>Private Limited Company (私人有限公司)</strong> is the default choice. Here are the common options:</p>
+
+    <table>
+      <tr><th>Structure</th><th>Best For</th><th>Key Features</th></tr>
+      <tr><td>Private Limited Company<br/>私人有限公司</td><td>Most businesses — trading, consulting, e-commerce, holding</td><td>Limited liability, separate legal entity, can have foreign directors, most flexible</td></tr>
+      <tr><td>Branch Office<br/>分公司</td><td>Overseas companies wanting an HK presence</td><td>HK branch of a foreign company, same liability as parent, more compliance</td></tr>
+      <tr><td>Representative Office<br/>代表辦事處</td><td>Market research only (cannot generate revenue)</td><td>No revenue-generating activities allowed, limited scope</td></tr>
+      <tr><td>Sole Proprietorship<br/>獨資經營</td><td>Freelancers, low-risk small operations</td><td>Unlimited liability, simpler registration, personal tax</td></tr>
+    </table>
+
+    <p><strong>Strongly recommended for most foreigners:</strong> Private Limited Company. It gives you limited liability, professional credibility, and the most flexibility for future expansion.</p>
+
+    <h2 id="process">3️⃣ Step-by-Step Registration Process 註冊流程</h2>
+
+    <p>I've done this process myself multiple times. Here's exactly what happens: 我自己搞過幾次，以下係實際流程：</p>
+
+    <h3>Step 1: Choose Your Company Name 揀公司名</h3>
+    <ul>
+      <li>English name (required) + Chinese name (optional but recommended for local business)</li>
+      <li>Must not be identical to any existing company on the Companies Register</li>
+      <li>Check name availability for free on the <a href="https://www.e-cr.gov.hk" target="_blank">eCRIS website</a></li>
+      <li>Reserve the name at the same time as incorporation (HK$1,295 per name check)</li>
+    </ul>
+
+    <h3>Step 2: Prepare Documents 準備文件</h3>
+    <ul>
+      <li><strong>Articles of Association (AA):</strong> Can use standard model AA (free) or custom AA</li>
+      <li><strong>Incorporation Form (NNC1):</strong> Details of company name, registered office address, directors, shareholders, and secretary</li>
+      <li><strong>Business Registration (BR) Application:</strong> Filed simultaneously with Inland Revenue Department</li>
+    </ul>
+
+    <div class="callout-warning">
+      <strong>⚠️ 親身提醒：</strong> If you're from a non-English-speaking country, you'll need a certified translation of your passport and proof of address. Make sure the translator is qualified and the certification is acceptable in Hong Kong. I once had a client whose Russian notary translation was rejected — cost him 2 extra weeks.
+    </div>
+
+    <h3>Step 3: Submit to Companies Registry 提交公司註冊處</h3>
+    <ul>
+      <li>Can be done online via <strong>eCRIS</strong> (electronic form) or paper-based</li>
+      <li><strong>Processing time:</strong> eCRIS ≈ 1-2 hours (instant for simple cases), paper ≈ 4-7 working days</li>
+      <li><strong>Government fees:</strong> 
+        <ul>
+          <li>Incorporation fee: HK$1,545</li>
+          <li>Business Registration fee: HK$2,250 (1-year certificate) or HK$5,750 (3-year certificate) — as of 2026</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Step 4: Receive Your Documents 收取文件</h3>
+    <p>Once approved, you'll receive:</p>
+    <ul>
+      <li><strong>Certificate of Incorporation (CI)</strong> — your company's "birth certificate"</li>
+      <li><strong>Business Registration Certificate (BR)</strong> — tax registration</li>
+      <li><strong>Articles of Association (AA)</strong> — certified copy</li>
+      <li>Company stamp (chop) if ordered</li>
+    </ul>
+
+    <p>Total time from Step 1 to receiving documents: <strong>1-3 working days</strong> (if done electronically).</p>
+
+    <div class="callout-success">
+      <strong>✅ Quick fact:</strong> A Hong Kong company can be fully registered in under 24 hours with eCRIS. I've done it in 3 hours before. The BR takes another 2 days to issue but you can start operations right away.
+    </div>
+
+    <h2 id="address">4️⃣ No Hong Kong Address? Here's Your Solution 冇香港地址點搞？</h2>
+
+    <p>This is the #1 question I get from foreign founders. Every Hong Kong company must have a <strong>registered office address in Hong Kong</strong>. If you're not physically in HK, here are your options:</p>
+
+    <h3>Option A: Virtual Office / Service Address (Recommended)</h3>
+    <ul>
+      <li>Cost: HK$1,500 - HK$6,000 per year</li>
+      <li>Includes: Registered address, mail forwarding, sometimes phone/ fax services</li>
+      <li>Providers: Regus, Servcorp, The Executive Centre, many local secretarial firms</li>
+      <li><strong>My recommendation:</strong> Use a reputable provider. I tried a HK$800/year "cheap address" once — lost 3 government letters and almost got my company struck off.</li>
+    </ul>
+
+    <h3>Option B: Company Secretary's Address</h3>
+    <ul>
+      <li>Many licensed company secretaries include their office address in the incorporation package</li>
+      <li>Cost: Usually bundled — total incorporation package HK$3,000 - HK$8,000</li>
+      <li>Make sure they forward all government correspondence promptly</li>
+    </ul>
+
+    <h3>Option C: Coworking Space Address</h3>
+    <ul>
+      <li>Some coworking spaces allow you to use their address as your registered office</li>
+      <li>Risk: If you leave the coworking space, you must update the address with Companies Registry</li>
+      <li>I don't recommend this for long-term — I've seen too many people lose track of address changes</li>
+    </ul>
+
+    <div class="callout-danger">
+      <strong>🚨 我中過嘅伏 — Lost Government Letters:</strong> I used a cheap virtual office that cost HK$800/year. They received my Companies Registry letter about an SCR spot check but "forgot" to forward it to me. By the time I found out (through a reminder from my secretary), I'd missed the deadline. HK$8,000 fine for something that should have cost HK$80/month in proper service. Don't be cheap on your registered address, seriously. 千祈唔好慳註冊地址嘅錢，我試過為咗慳每月百幾蚊，最後罰咗八千蚊。
+    </div>
+
+    <h2 id="banking">5️⃣ Bank Account Opening 銀行開戶要求</h2>
+
+    <p>Opening a bank account for a foreign-owned Hong Kong company has become significantly harder since 2018 due to AML/KYC regulations. Here's what you need to know:</p>
+
+    <h3>Traditional Banks (require physical visit to HK)</h3>
+    <table>
+      <tr><th>Bank</th><th>Difficulty</th><th>Minimum Deposit</th><th>Notes</th></tr>
+      <tr><td>HSBC</td><td>Medium-Hard</td><td>HK$50,000 - HK$200,000</td><td>Most popular, strict on documentation</td></tr>
+      <tr><td>Standard Chartered</td><td>Medium</td><td>HK$50,000 - HK$100,000</td><td>Better for trading companies</td></tr>
+      <tr><td>Bank of China (HK)</td><td>Medium</td><td>HK$50,000 - HK$100,000</td><td>Good for businesses with China links</td></tr>
+      <tr><td>Citibank</td><td>Hard</td><td>HK$200,000+</td><td>Premium service, high minimum</td></tr>
+      <tr><td>DBS</td><td>Medium-Hard</td><td>HK$50,000</td><td>Good for digital / fintech companies</td></tr>
+    </table>
+
+    <h3>Virtual Banks & Fintech (may allow remote opening)</h3>
+    <table>
+      <tr><th>Provider</th><th>Type</th><th>Remote Opening?</th><th>Notes</th></tr>
+      <tr><td>Airwallex</td><td>Multi-currency platform</td><td>Yes (mostly)</td><td>Great for cross-border e-commerce</td></tr>
+      <tr><td>Statrys</td><td>Business account</td><td>Yes</td><td>HK-based, designed for SMEs</td></tr>
+      <tr><td>ZA Bank</td><td>Virtual bank</td><td>Requires HK visit</td><td>Licensed virtual bank in HK</td></tr>
+      <tr><td>Neat</td><td>Business account</td><td>Yes (mostly)</td><td>Good for startups</td></tr>
+      <tr><td>Wise Business</td><td>Multi-currency</td><td>Yes</td><td>Not a full HK bank account but useful</td></tr>
+    </table>
+
+    <h3>Documents Required (Standard)</h3>
+    <ul>
+      <li>Certificate of Incorporation (CI)</li>
+      <li>Business Registration Certificate (BR)</li>
+      <li>Articles of Association (AA)</li>
+      <li>Director(s) and Shareholder(s) passport copy</li>
+      <li>Proof of residential address (utility bill / bank statement, ≤3 months old)</li>
+      <li>Company business plan / source of funds explanation</li>
+      <li>Board resolution for opening the account</li>
+      <li>Reference letter from existing bank (sometimes required)</li>
+    </ul>
+
+    <div class="callout-warning">
+      <strong>⚠️ 親身經歷 — Bank Account Nightmare:</strong> In 2021, I tried to open an HSBC account for my new trading company. They asked for: 6 months of personal bank statements, 3 years of business history (for a new company???), a business plan, client contracts, supplier agreements, and a "personal interview with a relationship manager." I got rejected 3 times before finally getting approved through a referral. My advice: <strong>engage a professional banking referral service</strong> (costs HK$2,000-5,000 but saves months of frustration).
+    </div>
+
+    <h2 id="visa">6️⃣ Visa & Immigration 簽證安排</h2>
+
+    <p>If you want to <strong>live and work</strong> in Hong Kong while running your company, you need the right visa. Here are the main options:</p>
+
+    <table>
+      <tr><th>Visa Type</th><th>Requirements</th><th>Duration</th><th>Processing Time</th></tr>
+      <tr><td>Employment Visa (GEP)<br/>一般就業政策</td><td>Company registered, viable business plan, HK$1M+ in company funds, local office (can be virtual), must benefit HK economy</td><td>2 years initial<br/>3 years renewal</td><td>4-8 weeks</td></tr>
+      <tr><td>Top Tier Pass Scheme<br/>高端人才通行證</td><td>Annual income ≥ HK$2.5M in past year OR Degree from top 100 university + 3 years work exp</td><td>2 + 3 + 3 years</td><td>2-4 weeks</td></tr>
+      <tr><td>Investment Visa<br/>資本投資者入境計劃</td><td>HK$30M+ investment in permitted assets (funds, bonds, etc.) — <strong>Note: Suspended 2015-2025, relaunched March 2025</strong></td><td>2 + 3 + 3 years</td><td>6-12 weeks</td></tr>
+      <tr><td>Dependant Visa<br/>受養人簽證</td><td>Spouse and children under 18 of a valid visa holder</td><td>Tied to sponsor's visa</td><td>4-6 weeks</td></tr>
+    </table>
+
+    <h3>My Recommendation for Company Founders</h3>
+    <p>If you're serious about relocating, go for the <strong>Employment Visa under GEP</strong>. You'll need to prove:</p>
+    <ul>
+      <li>Your company has genuine business operations (bank account activity, client contracts, local office)</li>
+      <li>You have sufficient funds to support yourself and your business (typically HK$1M+ in company or personal funds)</li>
+      <li>Your business contributes to Hong Kong's economy (creates jobs, pays taxes, etc.)</li>
+      <li>Your presence in HK is necessary for the business</li>
+    </ul>
+
+    <div class="callout-success">
+      <strong>💡 Tip: </strong> Hire an immigration lawyer. Yes, it costs HK$15,000-30,000, but the success rate difference is huge. I applied for my first visa without a lawyer — rejected (took 3 months). Applied with a lawyer — approved in 5 weeks. The rejection also goes on your immigration record, so don't risk it. 我建議你搵移民律師搞簽證，第一次我自己搞被拒，第二次搵律師搞5個星期就批咗。
+    </div>
+
+    <h2 id="costs">7️⃣ Costs & Ongoing Compliance 費用同合規要求</h2>
+
+    <h3>One-Time Setup Costs (2026)</h3>
+    <table>
+      <tr><th>Item</th><th>Cost (HK$)</th></tr>
+      <tr><td>Company Incorporation (Govt fees)</td><td>$1,545</td></tr>
+      <tr><td>Business Registration (1 year)</td><td>$2,250</td></tr>
+      <tr><td>Name Check Fee</td><td>$1,295</td></tr>
+      <tr><td>Company Secretary (1 year package, including registered address)</td><td>$3,000 - $8,000</td></tr>
+      <tr><td>Certified Documents (passport, address)</td><td>$500 - $2,000</td></tr>
+      <tr><td>Company Chop (stamp)</td><td>$200 - $600</td></tr>
+      <tr><td><strong>Total Approximate</strong></td><td><strong>$8,790 - $15,690</strong></td></tr>
+    </table>
+
+    <h3>Annual Ongoing Compliance</h3>
+    <table>
+      <tr><th>Requirement</th><th>Frequency</th><th>Cost (HK$)</th></tr>
+      <tr><td>Annual Return (NAR1) filing</td><td>Yearly</td><td>$105 - $3,000 (govt fee depends on share capital)</td></tr>
+      <tr><td>Business Registration renewal</td><td>Yearly or 3-yearly</td><td>$2,250/year</td></tr>
+      <tr><td>Profits Tax Return (利得稅報稅表)</td><td>Yearly</td><td>Free (self) or $3,000-8,000 (accountant)</td></tr>
+      <tr><td>Audit (if profit > HK$2M or required by IRD)</td><td>Yearly</td><td>$5,000 - $20,000</td></tr>
+      <tr><td>Company Secretary service</td><td>Yearly</td><td>$3,000 - $10,000</td></tr>
+      <tr><td>Registered Office Address</td><td>Yearly</td><td>$1,500 - $6,000</td></tr>
+      <tr><td>SCR (Significant Controllers Register) maintenance</td><td>Ongoing</td><td>Free (self-managed)</td></tr>
+    </table>
+
+    <h2 id="traps">8️⃣ Common Pitfalls — Mistakes I've Made 常見陷阱（我搞過）</h2>
+
+    <h3>Pitfall 1: Choosing the Cheapest Company Secretary</h3>
+    <p>I've been burned by this. A HK$1,500/year secretary service sounds great until they don't file your NAR1 on time, and you get a HK$1,000+ late filing penalty. The cheapest options often outsource everything and have no accountability. Pay HK$4,000-6,000/year for a reputable secretary — it's worth every dollar.</p>
+
+    <h3>Pitfall 2: Thinking You Can Do Everything Remotely</h3>
+    <p>You CAN incorporate remotely. You CAN'T easily open a bank account remotely (with traditional banks). Most banks still require at least one director to visit HK in person. Plan a trip to HK specifically for bank opening. Don't assume it'll happen automatically.</p>
+
+    <h3>Pitfall 3: Ignoring the Audit Requirement</h3>
+    <p>All Hong Kong companies must prepare audited financial statements. Yes, even if your company has zero activity. The first audit can be done up to 18 months after incorporation, but you must plan for it. I've seen foreigners panic-buy auditors at 3x the normal price because they left it too late.</p>
+
+    <div class="callout-danger">
+      <strong>🚨 另一個教訓 — Offshore Claim Pitfall:</strong> Many people are told "Hong Kong doesn't tax offshore income." That's true, but you need to file an <strong>offshore claim</strong> with supporting evidence. It's not automatic. I once had a client who assumed all his trading income was offshore. The IRD assessed him for 3 years back. Interest + penalties added up to over HK$150,000. Get professional advice before assuming offshore treatment applies. 如果你想做離岸收入申報，千祈唔好自己亂估，一定要搵會計師處理，否則被追討過去幾年嘅稅款加罰款，真係好大件事。
+    </div>
+
+    <h3>Pitfall 4: Not Understanding the Director/Shareholder Distinction</h3>
+    <p>As a foreign founder, you can be the sole director AND sole shareholder. But if you want to protect your assets, consider having at least one other shareholder or using a holding company structure. Also: you can appoint a nominee director if you want privacy, but this adds cost and compliance complexity.</p>
+
+    <h3>Pitfall 5: Not Having a Local Bank Account for Daily Operations</h3>
+    <p>A multi-currency account with Wise or Airwallex is useful, but many clients and suppliers still prefer to pay into a "real" HK bank account. Don't rely solely on fintech platforms — maintain at least one traditional bank account alongside your digital accounts.</p>
+
+    <!-- ═══════════════ FAQ Section ═══════════════ -->
+    <h2 id="faq">❓ Frequently Asked Questions 常見問題</h2>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>Can a foreigner be 100% shareholder and director of a Hong Kong company?</summary>
+        <p>Yes. Hong Kong company law does not require any local directors or shareholders. A foreign individual can be the sole director and 100% shareholder. There is no nationality or residency requirement for directors or shareholders of a private limited company.</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>點解外國人喺香港開公司咁受歡迎？</summary>
+        <p>香港係少數容許100%外資持有嘅司法管轄區，冇最低資本要求、冇外匯管制、稅率低（首200萬利潤僅8.25%）、公司法例英文友善，而且註冊只需1-3日。對於做國際貿易、電商、金融科技嘅創業者嚟講，香港係進入亞洲市場嘅最佳跳板。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>How long does it take to register a Hong Kong company?</summary>
+        <p>If you use the electronic system (eCRIS), the incorporation itself takes 1-2 hours after submission. However, you should allow 1-3 working days to receive the physical Certificate of Incorporation and Business Registration certificate. The fastest I've ever done it is 3 hours from start to receiving the e-certificate.</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>我需要親身去香港註冊公司嗎？</summary>
+        <p>不需要。你可以完全遙距註冊香港公司。所有文件可以網上提交，公司秘書可以幫你處理政府文件。但開銀行戶口方面，大部分傳統銀行仍然需要董事親身到香港面見。虛擬銀行同 fintech 平台（如 Airwallex、Statrys）可能可以遙距開戶。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>What happens if I don't file annual returns?</summary>
+        <p>Late filing of Annual Return (NAR1) incurs a penalty ranging from HK$870 to HK$3,480 (depending on how late). If you don't file for several years, the Companies Registry can strike off your company and the directors can be personally fined up to HK$50,000. Your company secretary should be handling this — if they don't, change them immediately.</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>Is it mandatory to have audited accounts in Hong Kong?</summary>
+        <p>Yes, all Hong Kong companies are required by law to have their annual financial statements audited by a Certified Public Accountant (CPA), regardless of turnover. Companies with profit under HK$2M, or dormant companies, may qualify for a simplified reporting regime, but they still need an audit report and tax return filing. The only exception is companies that are wholly dormant with no transactions at all.</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>Can I use a virtual address for company registration?</summary>
+        <p>Yes, you can use a virtual office address as your registered office address. However, the address must be a physical Hong Kong address (not a PO Box), and you must be able to receive government correspondence there. Many company secretaries provide a registered address as part of their service package. Just make sure they actually forward your mail — I learned this the hard way.</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>What is a "Company Secretary" and do I need one?</summary>
+        <p>Yes, every HK company MUST appoint a Company Secretary. It's a legal requirement under the Companies Ordinance. The secretary can be an individual (must be HK resident) or a corporate body (with a HK business address). They handle compliance filings, maintain statutory records, and ensure the company meets its legal obligations. For foreign-owned companies, a professional corporate secretary is essential.</p>
+      </details>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════ Related Products CTA ═══════════════ -->
+  <div class="mt-10 bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+    <div class="text-center">
+      <h3 class="text-xl font-bold gov-navy">📘 More HK Company Resources 更多香港公司指南</h3>
+      <p class="text-gray-600 mt-2">Real experience guides on compliance, tax, and insurance for your Hong Kong company</p>
+      <div class="flex flex-wrap justify-center gap-3 mt-4">
+        <a href="/blog/香港公司重要控制人登記冊SCR終極指南/" class="inline-block bg-navy text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">📋 SCR Ultimate Guide →</a>
+        <a href="/blog/香港公司暫繳稅終極指南2026/" class="inline-block bg-navy text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">💰 Provisional Tax Guide →</a>
+        <a href="/" class="inline-block border border-gov-navy text-gov-navy px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition">🏠 Back to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Article Footer ═══════════════ -->
+  <div class="mt-6 bg-white rounded-xl shadow-sm p-6 border border-gray-100 text-center">
+    <p class="text-gray-500 text-sm">This article is for general reference only and does not constitute legal, tax, or professional advice. For specific situations, please consult a qualified professional. 本文章內容僅供一般參考，並不構成法律、稅務或專業意見。</p>
+    <hr class="my-4">
+    <p class="text-sm text-gray-500">© 2026 ESGov — Hong Kong Company Secretarial & Compliance Guide Platform</p>
+    <div class="flex flex-wrap justify-center gap-4 mt-3">
+      <a href="https://esgov.org/blog/香港公司僱員補償保險終極指南" class="text-gold font-semibold hover:underline">🛡️ 僱員補償保險終極指南</a>
+      <a href="https://esgov.org/blog/香港公司暫繳稅終極指南2026" class="text-gold font-semibold hover:underline">💰 暫繳稅終極指南 2026</a>
+      <a href="https://esgov.org/blog/香港公司重要控制人登記冊SCR終極指南" class="text-gold font-semibold hover:underline">📋 SCR 終極指南</a>
+    </div>
+  </div>
+
+</div>
+
+  <!-- Auto-added: related tool links -->
+  <div class="max-w-3xl mx-auto px-4 mt-10 mb-8">
+    <div class="bg-navy/5 border border-navy/10 rounded-xl p-6">
+      <h3 class="text-lg font-bold text-navy mb-4">📍 Related Free Tools 相關免費工具</h3>
+      <div class="space-y-3">
+        <a href="/significant-controllers-register/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📋 ESGov SCR Complete Guide + Generator</a>
+        <a href="https://esgov.org/nar1-generator/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📋 ESGov NAR1 Annual Return Filler Tool</a>
+        <a href="https://esgov.org/shareholder-transfer/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📄 ESGov Share Transfer Document Generator</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

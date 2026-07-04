@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港有限公司減資（Reduction of Share Capital）終極指南 2026</title>
+  <meta name="description" content="2026 年香港有限公司減資（Reduction of Share Capital）完整教學：咩係減資、點樣做、法院程序 vs Solvency Test 兩種途徑分別、需要咩文件、幾耐搞得掂。由親身經歷者分享，附所需文件 Checklist、費用預算同 5 個常見陷阱。" />
+  <meta name="keywords" content="有限公司減資, Reduction of Share Capital, 香港公司, 股本縮減, Solvency Test, 公司條例, 公司註冊處" />
+  <meta property="og:title" content="香港有限公司減資（Reduction of Share Capital）終極指南 2026" />
+  <meta property="og:description" content="2026 年香港有限公司減資完整教學：股本縮減點樣做、法院定 Solvency Test、需要咩文件、幾耐搞得掂。由親身經歷者分享，附 Checklist。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B8%9B%E8%B3%87%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港有限公司減資（Reduction of Share Capital）終極指南 2026",
+    "description": "2026 年香港有限公司減資完整教學：股本縮減點樣做、法院定 Solvency Test、需要咩文件、幾耐搞得掂。由親身經歷者分享。",
+    "author": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-06-08",
+    "inLanguage": "zh-HK"
+  }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港有限公司減資終極指南" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "ESGov 團隊",
+    "description": "香港公司秘書及合規顧問，專注提供公司註冊、股份轉讓、SCR 合規等免費指南",
+    "url": "https://esgov.org",
+    "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
+  }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-900 leading-relaxed">
+
+  <!-- Navigation -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <header class="bg-gradient-to-br from-navy via-navy-light to-navy text-white py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full">教學</span>
+        <span class="bg-white/10 text-white text-xs px-3 py-1 rounded-full">有限公司</span>
+        <span class="bg-white/10 text-white text-xs px-3 py-1 rounded-full">股本</span>
+        <span class="bg-white/10 text-white text-xs px-3 py-1 rounded-full">公司條例</span>
+      </div>
+      <h1 class="text-2xl md:text-4xl font-extrabold leading-tight mb-4">
+        🏗️ 香港有限公司減資（Reduction of Share Capital）終極指南 2026
+      </h1>
+    <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
+      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span class="ml-4">📅 最後更新：2026年6月</span>
+    </div>
+
+      <p class="text-lg md:text-xl text-gray-200 max-w-3xl">
+        公司蝕咗錢可以減資？股東想拎返啲錢走又得唔得？<br />
+        法院程序同 Solvency Test 嘅完整拆解，附真實案例同 Checklist
+      </p>
+      <div class="flex items-center text-sm text-gray-300 mt-4">
+        <span>📅 2026 年 6 月 8 日</span>
+        <span class="mx-3">·</span>
+        <span>⏱ 約 10 分鐘閱讀</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Trust Signal Banner -->
+  <div class="bg-gold/10 border-b border-gold/20">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-center text-sm">
+      <span class="text-navy font-semibold">💰 會計公司搞減資程序</span>
+      <span class="line-through text-gray-400 mx-2">$15,000+</span>
+      <span class="text-navy font-bold">→ 自己準備好文件，最低 $5,000 搞掂</span>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <article class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <div class="prose-custom max-w-none">
+
+      <!-- Lead -->
+      <div class="bg-navy/5 border-l-4 border-gold p-4 md:p-6 rounded-r-lg mb-8">
+        <p class="text-lg font-semibold text-navy">
+          「我間公司幾年都蝕錢，資產淨值得返 $1 嘅股本都蝕埋，點搞？」
+        </p>
+        <p class="mt-2">
+          呢個問題，我當年面對過。公司成立嗰陣設咗 $100 萬股本，但幾年營運唔順利，累積虧損食晒啲資本。嗰陣會計師同我講：「你公司盤數其實已經資不抵債。」我心諗：唔係啩，我又冇欠人錢，只係蝕咗本啫。
+        </p>
+        <p class="mt-2">
+          後嚟先知，公司可以透過「減資」嚟重整股本結構，將累積虧損同股本對沖。唔單止盤數好睇啲，將來引入投資者或者申請銀行貸款都會順利好多。
+        </p>
+      </div>
+
+      <p>
+        <strong>減資（Reduction of Share Capital）</strong>，簡單講就係公司將已發行股本嘅面值降低，用嚟抵銷累積虧損、退還資本俾股東、或者取消未繳付嘅股本。
+      </p>
+
+      <p>
+        香港《公司條例》（第 622 章）第 214-227 條規管減資程序。2014 年新例生效後，私人有限公司多咗一條路：<strong>唔使去法院</strong>，用 Solvency Test（償付能力測試）就得。呢個係好多人唔知嘅重點。
+      </p>
+
+      <div class="bg-red-50 border border-red-200 rounded-lg p-4 my-6">
+        <p class="text-red-800 font-semibold">⚠️ 唔跟程序做嘅後果：</p>
+        <ul class="text-red-700 mt-2">
+          <li>減資無效 — 股權結構混亂</li>
+          <li>董事個人承擔法律責任</li>
+          <li>債權人可以挑戰減資</li>
+          <li>影響將來融資／賣盤</li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <h2>🤔 點解要減資？4 個最常見場景</h2>
+      <p>唔係間間公司都需要減資，但以下情況你可能要考慮：</p>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6 shadow-sm">
+        <h3 class="text-xl font-bold text-navy mt-0 border-b-0">場景一：抵銷累積虧損（最常見）</h3>
+        <p class="mt-2">公司成立咗 $100 萬股本，但營運幾年後累積虧損 $60 萬。資產負債表嘅股本欄顯示 $100 萬，但保留盈利（Retained Earnings）係 -$60 萬，即係資產淨值得返 $40 萬。</p>
+        <p>透過減資，你可以將股本由 $100 萬降至 $40 萬，用嚟抵銷嗰 $60 萬虧損。盤數即刻乾淨晒。</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6 shadow-sm">
+        <h3 class="text-xl font-bold text-navy mt-0 border-b-0">場景二：退還過剩資本俾股東</h3>
+        <p class="mt-2">公司業務成熟，唔需要咁多營運資金。股東想拎返部分資本出嚟，但又唔想用股息方式（因為股息要交稅）。</p>
+        <p>透過減資退還資本，股東拎返嘅錢係「資本回報」（Return of Capital），唔當係股息，稅務處理唔同。</p>
+        <div class="bg-amber-50 border border-amber-200 rounded p-3 mt-3">
+          <p class="text-amber-800 font-semibold">⚠️ 注意：</p>
+          <p class="text-amber-700">稅局可能會 scrutinize，如果本質上似派息，仍然會被視為股息課稅。最好事前問稅局 Pre-assessment。</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6 shadow-sm">
+        <h3 class="text-xl font-bold text-navy mt-0 border-b-0">場景三：取消未繳付股本</h3>
+        <p class="mt-2">「我公司 $100 萬股本，得 $10 萬係 paid-up，其餘未 call…」呢個情況以前好常見。公司可以透過減資來取消未繳付嘅股本，將來唔需要再 call 錢。</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6 shadow-sm">
+        <h3 class="text-xl font-bold text-navy mt-0 border-b-0">場景四：股東退股（Reduction for Buyback）</h3>
+        <p class="mt-2">有股東想走，但公司冇足夠嘅 distributable profits 嚟回購股份。減資可以創造 distributable profits空間，等公司可以合法 buy back 股份。</p>
+      </div>
+
+      <!-- Section 2 -->
+      <h2>⚖️ 兩個方法：法院程序 vs Solvency Test</h2>
+      <p>呢個係最重要嘅決定。揀啱方法可以慳好多時間同錢。</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-navy text-white">
+              <th class="p-3 text-left font-semibold">比較</th>
+              <th class="p-3 text-left font-semibold">法院程序</th>
+              <th class="p-3 text-left font-semibold">Solvency Test</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="bg-white hover:bg-gray-50"><td class="p-3 font-medium">適用對象</td><td class="p-3">任何公司</td><td class="p-3">只有私人有限公司（Private Company）</td></tr>
+            <tr class="bg-gray-50 hover:bg-gray-100"><td class="p-3 font-medium">需時</td><td class="p-3">3-6 個月</td><td class="p-3">4-8 星期</td></tr>
+            <tr class="bg-white hover:bg-gray-50"><td class="p-3 font-medium">成本</td><td class="p-3">高（$50,000+，包律師費）</td><td class="p-3">低（$5,000 - $15,000）</td></tr>
+            <tr class="bg-gray-50 hover:bg-gray-100"><td class="p-3 font-medium">法院批核</td><td class="p-3">需要</td><td class="p-3">唔需要</td></tr>
+            <tr class="bg-white hover:bg-gray-50"><td class="p-3 font-medium">主要風險</td><td class="p-3">法院有權拒絕</td><td class="p-3">董事要承擔 solvency 責任</td></tr>
+            <tr class="bg-gray-50 hover:bg-gray-100"><td class="p-3 font-medium">透明度</td><td class="p-3">公開程序</td><td class="p-3">公司內部解決</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>方法一：法院程序（Court Order）</h3>
+      <p>傳統做法，適用於：</p>
+      <ul>
+        <li>公眾有限公司（Public Company）</li>
+        <li>涉及退還資本俾股東</li>
+        <li>債權人反對減資</li>
+      </ul>
+      <p>程序係：</p>
+      <ol>
+        <li>董事會通過決議建議減資</li>
+        <li>股東通過特別決議（75% 以上贊成）</li>
+        <li>入稟高等法院申請</li>
+        <li>法院可能要求登報通知債權人</li>
+        <li>法院聆訊，頒令批准</li>
+        <li>交公司註冊處存檔</li>
+      </ol>
+      <p><strong>我個人經驗：</strong>如果你只係想抵銷累積虧損而唔退錢俾股東，法院程序係 overkill。用 Solvency Test 快好多。</p>
+
+      <h3>方法二：Solvency Test（償付能力測試）</h3>
+      <p>2014 年新例引入，係私人有限公司嘅福音。你只需要：</p>
+      <ol>
+        <li>全體董事簽署 <strong>Solvency Statement</strong>（償付能力陳述書）</li>
+        <li>聲明公司通過減資後仍然有能力償還債務</li>
+        <li>股東通過特別決議</li>
+        <li>提交公司註冊處</li>
+      </ol>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 my-6">
+        <p class="text-blue-800 font-semibold">💡 Solvency Statement 嘅要求</p>
+        <p class="text-blue-700 mt-1">董事必須確認：</p>
+        <ul class="text-blue-700 mt-1">
+          <li>公司喺減資後，即刻有能力還清所有債務</li>
+          <li>公司喺可預見將來（一般係 12 個月內）有能力繼續還債</li>
+          <li>如果董事明知公司冇能力還錢都簽，係刑事罪行，最高罰款 $300,000 + 監禁 2 年</li>
+        </ul>
+      </div>
+
+      <!-- Section 3 -->
+      <h2>📋 完整程序（Solvency Test 路線，最推薦）</h2>
+      <p>以下係為私人有限公司抵銷累積虧損嘅標準程序：</p>
+
+      <h3>Step 1：確定減資方案</h3>
+      <p>先決定：</p>
+      <ul>
+        <li>你要減幾多股本（例如：$1,000,000 → $400,000）</li>
+        <li>減資方式（抵銷虧損 / 退還資本）</li>
+        <li>受影響嘅股東類別（有冇優先股？）</li>
+      </ul>
+      <p>最好先同會計師傾好方案，確保財務上合理。</p>
+
+      <h3>Step 2：準備財務報表</h3>
+      <p>你需要一份最近期嘅資產負債表，用嚟支持減資方案。核數師或者會計師會幫你準備。</p>
+
+      <h3>Step 3：董事簽署 Solvency Statement</h3>
+      <p>全體董事要開會，簽署償付能力陳述書。呢份文件係核心，董事嘅責任全部喺呢度。</p>
+
+      <div class="bg-red-50 border border-red-200 rounded-lg p-4 my-6">
+        <p class="text-red-800 font-semibold">⚠️ 董事責任提醒：</p>
+        <p class="text-red-700 mt-1">簽 Solvency Statement 唔係「例行公事」。如果你明知公司減資後冇能力還錢都照簽，你係要上身嘅。唔好以為係會計師叫你簽你就簽，你一定要親自確認公司嘅財務狀況。</p>
+      </div>
+
+      <h3>Step 4：股東通過特別決議（Special Resolution）</h3>
+      <p>你需要：</p>
+      <ul>
+        <li>發出 21 日通知（或者全體股東同意縮短通知期）</li>
+        <li>召開股東大會／書面決議</li>
+        <li>通過特別決議（不少於 75% 股東贊成）</li>
+        <li>決議要清楚列明減資金額及方式</li>
+      </ul>
+
+      <h3>Step 5：提交公司註冊處</h3>
+      <p>你需要喺通過特別決議後 15 日內提交：</p>
+      <ul>
+        <li><strong>表格 NSC1</strong>（Notice of Reduction of Share Capital）</li>
+        <li>特別決議副本</li>
+        <li>Solvency Statement 副本</li>
+        <li>修訂後嘅公司章程（如果減資涉及股本面值變更）</li>
+      </ul>
+
+      <h3>Step 6：更新公司紀錄</h3>
+      <p>收到公司註冊處嘅確認後：</p>
+      <ul>
+        <li>更新股東名冊（Share Register）</li>
+        <li>更新股份證明書（如有需要）</li>
+        <li>資產負債表反映新股本結構</li>
+        <li>下次審計時告知核數師</li>
+      </ul>
+
+      <!-- Timeline -->
+      <h2>⏱️ 預計時間線</h2>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6">
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <span class="bg-gold text-navy rounded-full w-7 h-7 flex items-center justify-center font-bold shrink-0 mt-0.5">1</span>
+            <div><span class="font-bold font-semibold text-navy">第 1-2 星期</span> — 準備計方案 + 財務報表 + Solvency Statement</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="bg-gold text-navy rounded-full w-7 h-7 flex items-center justify-center font-bold shrink-0 mt-0.5">2</span>
+            <div><span class="font-bold text-navy">第 3 星期</span> — 召開董事會 + 股東會 + 通過特別決議</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="bg-gold text-navy rounded-full w-7 h-7 flex items-center justify-center font-bold shrink-0 mt-0.5">3</span>
+            <div><span class="font-bold text-navy">第 4 星期</span> — 提交公司註冊處（NSC1 + 決議 + Solvency Statement）</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="bg-gold text-navy rounded-full w-7 h-7 flex items-center justify-center font-bold shrink-0 mt-0.5">4</span>
+            <div><span class="font-bold text-navy">第 5-8 星期</span> — 公司註冊處審批（通常 2-4 星期）</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="bg-gold text-navy rounded-full w-7 h-7 flex items-center justify-center font-bold shrink-0 mt-0.5">5</span>
+            <div><span class="font-bold text-navy">第 8-9 星期</span> — 更新公司紀錄 + 發新股份證明書</div>
+          </li>
+        </ul>
+      </div>
+
+      <p><strong>Total：約 6-9 星期</strong>（相比法院程序嘅 3-6 個月，快咗好多）</p>
+
+      <!-- Section 4: Traps -->
+      <h2>🚩 6 個我見過嘅陷阱</h2>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6 shadow-sm">
+        <h3 class="text-xl font-bold text-navy mt-0 border-b-0">🚩 陷阱一：以為減資就唔使還債</h3>
+        <p class="mt-2">「我公司蝕咗錢，減資咗咪可以唔還債？」</p>
+        <p><strong>絕對錯。</strong> 減資只係改股本結構，唔影響公司對外嘅債務。就算你將 $100 萬股本減到 $1，你欠銀行嘅 $50 萬貸款一樣要還。</p>
+        <p>如果有人話你聽可以透過減資嚟「走數」，佢係呃你嘅。</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6 shadow-sm">
+        <h3 class="text-xl font-bold text-navy mt-0 border-b-0">🚩 陷阱二：Solvency Statement 簽咗先算</h3>
+        <p class="mt-2">「會計師話簽得，我求其簽就算啦。」</p>
+        <p><strong>唔好。</strong> 公司條例第 218 條講到明，董事簽署 Solvency Statement 時如果冇合理理由相信公司能償還債務，係刑事罪行。唔係話「我信會計師」就可以卸膊。</p>
+        <p>你一定要親自審視公司嘅最新財務狀況，如果有疑問，要求會計師詳細解釋。</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6 shadow-sm">
+        <h3 class="text-xl font-bold text-navy mt-0 border-b-0">🚩 陷阱三：搞錯特別決議嘅通知期</h3>
+        <p class="mt-2">「啲股東 WhatsApp 話 agree 就得啦！」</p>
+        <p><strong>唔得。</strong> 特別決議要跟足程序：書面通知 + 21 日通知期（除非全體股東書面同意縮短）。如果通知期唔夠，決議可以被 challenge。</p>
+        <p>我見過有間公司因為通知期得 14 日，被其中一個股東 challenge，成個減資要重新做過。</p>
+        <div class="bg-green-50 border border-green-200 rounded p-3 mt-3">
+          <p class="text-green-800 font-semibold">✅ 解決方法：</p>
+          <p class="text-green-700">如果所有股東都同意，叫佢哋簽一份「書面同意縮短通知期」，咁就可以跳過 21 日。</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6 shadow-sm">
+        <h3 class="text-xl font-bold text-navy mt-0 border-b-0">🚩 陷阱四：退還資本俾股東時冇考慮稅務</h3>
+        <p class="mt-2">「減資退還資本，唔使交稅㗎！」</p>
+        <p>呢句說話係啱嘅，但又唔完全啱。如果減資嘅本質係回購股份（Share Buyback），稅局會當係股息處理，要交利得稅。</p>
+        <p>我之前有個朋友就係中咗呢個陷阱—佢以為用減資方式退錢俾股東就唔使交稅，點知稅局話呢個係「disguised dividend distribution」，要交 16.5% 利得稅。</p>
+        <div class="bg-amber-50 border border-amber-200 rounded p-3 mt-3">
+          <p class="text-amber-800 font-semibold">✅ 建議：</p>
+          <p class="text-amber-700">退還資本俾股東之前，先同稅局申請 Pre-assessment（事先裁定），確認稅務處理方法。</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6 shadow-sm">
+        <h3 class="text-xl font-bold text-navy mt-0 border-b-0">🚩 陷阱五：唔記得更新公司章程</h3>
+        <p class="mt-2">「減資搞掂咗，盤數好靚！」</p>
+        <p>但如果你公司嘅 Articles of Association 規定咗股本係 $1,000,000，但你減完之後冇改章程，咁你公司註冊處嘅記錄同章程就有矛盾。將來做 NAR1 或者任何申報都會出問題。</p>
+        <p>特別係章程第 5 條（股本條款），一定要跟住改。</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6 shadow-sm">
+        <h3 class="text-xl font-bold text-navy mt-0 border-b-0">🚩 陷阱六：想減資但冇最新審計報告</h3>
+        <p class="mt-2">「我公司上年冇做審計，照減資得唔得？」</p>
+        <p>如果你用 Solvency Test，你需要最新嘅財務報表嚟支持 Solvency Statement。如果冇審計報告，你可以用管理帳目（Management Accounts），但董事要特別小心確認帳目嘅真確性。</p>
+        <p>如果帳目有問題，董事簽 Solvency Statement 嘅風險好大。</p>
+      </div>
+
+      <!-- Checklist -->
+      <h2>✅ 減資 Checklist（Solvency Test 路線）</h2>
+      <p>跟住呢個清單逐項做，就唔會漏：</p>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6">
+        <ul class="space-y-3">
+          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 確認公司係私人有限公司（Public Company 要用法院程序）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 準備最新資產負債表 + 財務分析</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 確定減資方案（減幾多、點減、退唔退錢）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 全體董事開會，審閱財務狀況</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 董事簽署 <strong>Solvency Statement</strong>（NSC1 附件）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 發出股東大會通知（21 日）或取得全體股東書面同意縮短</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 召開股東大會，通過特別決議（≥ 75% 贊成）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 填妥 <strong>表格 NSC1</strong></li>
+          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 通過決議後 15 日內提交公司註冊處（NSC1 + 決議 + Solvency Statement）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 更新公司章程（股本條款）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 更新股東名冊（Share Register）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 發出新股份證明書（如有需要）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 通知核數師減資完成</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 下次周年申報確認股本結構正確</li>
+        </ul>
+      </div>
+
+      <!-- FAQ -->
+      <h2>❓ 常見問題</h2>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6">
+        <h3 class="text-lg font-bold text-navy mt-0">Q：減資後，董事嘅責任會唔會減少？</h3>
+        <p><strong>唔會。</strong> 減資只係改股本結構，董事嘅受信責任（Fiduciary Duty）完全唔受影響。你依然要為公司嘅營運同決策負責。</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6">
+        <h3 class="text-lg font-bold text-navy mt-0">Q：減資會影響我將來的借貸能力嗎？</h3>
+        <p>可能正面，可能負面。正面嚟講，減資抵銷虧損後盤數好睇啲，銀行可能更容易批貸款。負面嚟講，如果係退還資本，公司嘅資產淨值減少咗，銀行可能會審慎啲。</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6">
+        <h3 class="text-lg font-bold text-navy mt-0">Q：我可唔可以一年減幾次資？</h3>
+        <p>法例冇明文禁止，但實際上公司註冊處會 scrutiny 頻密減資。如果一年搞幾次，會俾人覺得公司財務狀況有問題。建議一次過做晒。</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6">
+        <h3 class="text-lg font-bold text-navy mt-0">Q：減資後可唔可以之後再加返股本？</h3>
+        <p>可以。減資同之後發行新股係兩件事。你減完資之後，如果將來需要資金，可以再 allot 新股份。</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6">
+        <h3 class="text-lg font-bold text-navy mt-0">Q：搵律師/會計師搞要幾錢？</h3>
+        <p>視乎複雜程度：</p>
+        <ul>
+          <li><strong>Solvency Test 路線（抵銷虧損）</strong>：$5,000 - $15,000（會計師 + 公司秘書費用）</li>
+          <li><strong>Solvency Test 路線（退還資本）</strong>：$15,000 - $30,000（較複雜，需要稅務意見）</li>
+          <li><strong>法院程序路線</strong>：$50,000 - $150,000+（包律師費 + 出庭費）</li>
+        </ul>
+      </div>
+
+      <!-- Conclusion -->
+      <h2>💁 最後想講嘅嘢</h2>
+      <p>減資係有限公司重組股本嘅有用工具，但唔係「魔法棒」。佢解決唔到公司嘅營運問題，只係幫你重整盤數。</p>
+
+      <p>如果你公司因為累積虧損令到盤數唔好睇，影響咗你引入投資者或者申請貸款，咁減資係一個好合理嘅做法。2014 年新例嘅 Solvency Test 路線令成個過程簡單咗好多，唔使再驚法院程序。</p>
+
+      <p>但係一定要記住：<strong>董事簽 Solvency Statement 係認真嘅責任</strong>。唔好因為會計師叫你簽你就簽，你一定要問清楚、睇清楚、諗清楚。</p>
+
+      <div class="bg-gold/10 border border-gold/30 rounded-lg p-4 md:p-6 my-6">
+        <p class="text-navy font-bold text-lg">📌 如果你考慮緊減資，建議你先做好呢 3 件事：</p>
+        <ol class="text-navy mt-2">
+          <li>叫會計師準備一份最新嘅資產負債表 + 簡單財務預測</li>
+          <li>確認公司係私人有限公司（Public 就要用法院程序）</li>
+          <li>問清楚減資嘅目的（抵銷虧損？退還資本？兩者稅務處理唔同）</li>
+        </ol>
+        <p class="mt-3 font-semibold text-navy">減資唔難，但程序要做足。</p>
+      </div>
+
+      <!-- Related Product -->
+      <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-200 rounded-xl p-6 my-8 text-center shadow-sm">
+        <p class="text-lg font-bold text-navy">💼 需要處理股份轉讓？</p>
+        <p class="text-sm text-gray-600 mt-1">我哋嘅完整指南幫你搞掂所有文件，避免被政府退回</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center mt-4">
+          <a href="/shareholder-transfer/" class="inline-flex items-center gap-2 bg-navy text-white font-bold px-6 py-3 rounded-xl hover:bg-navy-light transition shadow text-sm">
+            📖 免費睇 Step 1 →
+          </a>
+          <a href="https://1714457598663.gumroad.com/l/wkjykk" target="_blank" class="inline-flex items-center gap-2 bg-gold text-navy font-bold px-6 py-3 rounded-xl hover:bg-gold-light transition shadow text-sm">
+            🔓 解鎖完整指南 HK$149
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- Related Articles -->
+  <section class="bg-gray-100 py-10">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-navy mb-6">📖 你可能都啱睇</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="/blog/香港有限公司股東墊款董事貸款終極指南/" class="bg-white rounded-lg p-5 shadow-sm hover:shadow-md transition border border-gray-100">
+          <span class="text-sm text-gold font-semibold">教學</span>
+          <h3 class="text-lg font-bold text-navy mt-1">香港有限公司股東墊款／董事貸款終極指南</h3>
+          <p class="text-sm text-gray-600 mt-2">公司錢自己錢撈亂晒？Director's Loan 點樣正規化？稅局點處理？</p>
+        </a>
+        <a href="/blog/香港有限公司分紅派息終極指南/" class="bg-white rounded-lg p-5 shadow-sm hover:shadow-md transition border border-gray-100">
+          <span class="text-sm text-gold font-semibold">教學</span>
+          <h3 class="text-lg font-bold text-navy mt-1">香港有限公司分紅派息終極指南</h3>
+          <p class="text-sm text-gray-600 mt-2">股息、稅務、實戰流程全面睇。派息前必睇 6 步 Checklist</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-navy text-gray-300 py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center text-sm">
+      <p class="font-semibold"><span class="text-gold">ES</span><span class="text-white">Gov</span> — 香港公司秘書文件，原來可以好簡單</p>
+      <p class="mt-2">真實經歷者角度 · 可下載模板 · 對住範例填就唔會錯</p>
+      <div class="border-t border-gray-700 mt-6 pt-4">
+        <p>© 2026 ESGov. All rights reserved.</p>
+        <p class="mt-1">📧 hongkpixel+esgov@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Article Styles -->
+  <style>
+    * { font-family: 'Noto Sans TC', system-ui, -apple-system, sans-serif; }
+    .prose-custom h2 {
+      color: #1B2A4A;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #C9A84C;
+      padding-bottom: 0.5rem;
+    }
+    .prose-custom h3 {
+      color: #1B2A4A;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+    .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+    .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
+    th { background: #1B2A4A; color: white; font-weight: 600; }
+  </style>
+
+
+
+  <!-- Auto-added: related tool links -->
+  <div class="max-w-3xl mx-auto px-4 mt-10 mb-8">
+    <div class="bg-navy/5 border border-navy/10 rounded-xl p-6">
+      <h3 class="text-lg font-bold text-navy mb-4">📍 相關免費工具</h3>
+      <div class="space-y-3">
+        <a href="https://esgov.org/audit-report-generator/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📊 ESGov 審計報告範例下載</a>
+        <a href="https://esgov.org/nar1-generator/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📋 ESGov NAR1 周年申報表 PDF 填寫工具</a>
+        <a href="https://esgov.org/shareholder-transfer/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📄 免費使用 ESGov 股份轉讓文件生成工具</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

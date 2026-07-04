@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESGov | 香港公司暫繳稅終極指南 2026 — 第一次收到暫繳稅點算？計算方法 + 申請緩繳</title>
+<meta name="description" content="全面解說香港暫繳稅制度：點解第一年要交兩年稅？暫繳稅金額點計算？申請暫繳稅緩繳嘅條件、程序及時限同成功率。由親身申請成功嘅納稅人分享經驗，有限公司同個人報稅必睇，連 IRS 稅務計算方法都幫你拆解。由過來人分享，附完整步驟同實戰貼士，附完整步驟同實戰貼士，幫你一文搞掂。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', system-ui, sans-serif; }
+  body { background: #f8f9fa; color: #1a1a2e; }
+  .gov-navy { color: #1B2A4A; }
+  .bg-navy { background: #1B2A4A; }
+  .bg-gov-gold { background: #C9A84C; }
+  .text-gold { color: #C9A84C; }
+  .border-gold { border-color: #C9A84C; }
+  .hover:bg-gold/90 { background: #b8973a; }
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: italic; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"咩係暫繳稅？點解第一年要交兩年稅？","acceptedAnswer":{"@type":"Answer","text":"暫繳稅係稅務局預先收取下一個課稅年度嘅稅款。第一年要交兩年稅係因為：第一年嘅「實際稅款（已評定）」+「預估下一年嘅暫繳稅」。呢個係「預繳」制度，唔係雙倍徵稅，下一年度嘅暫繳稅會喺真正評稅後多除少補。"}},
+    {"@type":"Question","name":"暫繳稅點樣計算？","acceptedAnswer":{"@type":"Answer","text":"暫繳稅係根據上年嘅應評稅利潤或入息來估算。例如：2024/25年度你嘅應評稅利潤係$1,000,000，稅款$165,000。2025/26年度嘅暫繳稅會用同一金額（$1,000,000利潤估算）再計一次稅，除非你申請緩繳並提供證據話下年嘅利潤會大幅下跌。"}},
+    {"@type":"Question","name":"申請緩繳暫繳稅嘅條件係咩？","acceptedAnswer":{"@type":"Answer","text":"根據《稅務條例》第63E條，你可以申請緩繳全部或部分暫繳稅，條件包括：(1)你的應評稅利潤/入息將少於或可能少於上年嘅90%；(2)你已停止或將停止賺取應評稅收入；(3)你已選擇個人入息課稅而該選擇會減少稅款。必須在繳稅到期日28天前或評稅通知書發出後14天內（以較遲者為準）提交書面申請。"}},
+    {"@type":"Question","name":"申請緩繳暫繳稅嘅程序係點？","acceptedAnswer":{"@type":"Answer","text":"你需要填寫IR1121表格（個人）或IR1121C表格（公司），附上證明文件（例如管理帳目、損益表、預計利潤等），然後在限期前郵寄或親身提交至稅務局。稅務局一般會在4-6星期內回覆。成功申請後，緩繳部分嘅稅款會自動延後至下期評稅時再處理。"}},
+    {"@type":"Question","name":"如果收入跌咗但冇申請緩繳，可以退款嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。如果最後實際利潤比暫繳稅嘅估算低，稅務局會喺下一次評稅時自動「多除少補」——將多收嘅暫繳稅抵銷你下一期嘅稅款，或者直接退款俾你。但你要留意：如果你冇申請緩繳，你係要先交咗錢先，等到真正評稅嗰陣先拎返。緩繳嘅好處係你可以保留現金流，唔使先交後退。"}}
+  ]
+}
+</script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港公司暫繳稅終極指南2026" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港公司暫繳稅終極指南2026" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <meta property="og:title" content="ESGov | 香港公司暫繳稅終極指南 2026 — 第一次收到暫繳稅點算？計算方法 + 申請緩繳" />
+  <meta property="og:description" content="全面解說香港暫繳稅制度：點解第一年要交兩年稅？暫繳稅點計？申請暫繳稅緩繳嘅條件同程序、親身申請成功經驗。有限公司同個人報稅必睇，唔使再俾「交兩年稅」嚇親。" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ESGov",
+    "url": "https://esgov.org",
+    "description": "Hong Kong company compliance platform — free PDF generators, compliance guides, and company secretarial resources.",
+    "foundingDate": "2024",
+    "areaServed": "HK",
+    "knowsLanguage": "zh-HK,en"
+  }
+  </script>
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "ESGov 團隊",
+    "description": "香港公司秘書及合規顧問，專注提供公司註冊、股份轉讓、SCR 合規等免費指南",
+    "url": "https://esgov.org",
+    "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
+  }
+  </script>
+</head>
+<body>
+
+<!-- Navigation -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+<div class="max-w-4xl mx-auto px-4 pt-20 pb-12">
+
+  <!-- Header -->
+  <header class="text-center mb-10">
+    <div class="text-sm text-gold font-semibold mb-2">💰 香港稅務必修課</div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold gov-navy leading-tight">香港公司暫繳稅終極指南 2026</h1>
+    <p class="text-lg text-gray-600 mt-3">第一次收到暫繳稅點算？點解第一年要交兩年稅？計算方法 + 申請緩繳完整程序</p>
+    <div class="flex justify-center items-center gap-4 mt-4 text-sm text-gray-500">
+      <span>📅 2026 年 6 月 13 日</span>
+      <span>⏱ 約 13 分鐘閱讀</span>
+      <span>👤 ESGov 編輯部</span>
+    </div>
+  
+    <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
+      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span class="ml-4">📅 最後更新：2026年6月</span>
+    </div>
+</header>
+
+  <!-- ═══════════════ Highlight Banner ═══════════════ -->
+  <div class="bg-navy text-white rounded-xl p-5 mb-8 text-center shadow-lg">
+    <p class="text-sm font-semibold text-gold">💡 利得稅稅率：8.25%（首$200萬利潤）／16.5%（其後）</p>
+    <p class="text-2xl font-extrabold text-white mt-1">暫繳稅 = 預繳下一年度嘅稅款，唔係罰你</p>
+    <p class="text-sm text-gray-300 mt-1">搞清楚計算方法，每年可以幫公司慳到幾十萬現金流</p>
+  </div>
+
+  <!-- ═══════════════ Table of Contents ═══════════════ -->
+  <div class="bg-white rounded-xl shadow-sm p-6 mb-8 border border-gray-100">
+    <h2 class="text-xl font-bold gov-navy mb-4">📑 本文目錄</h2>
+    <ul class="space-y-2">
+      <li><a href="#what" class="toc-item text-gray-700 hover:text-gold">1️⃣ 咩係暫繳稅？點解第一年要交兩年稅？</a></li>
+      <li><a href="#calculation" class="toc-item text-gray-700 hover:text-gold">2️⃣ 暫繳稅點樣計算？（附實例）</a></li>
+      <li><a href="#provisional-vs-actual" class="toc-item text-gray-700 hover:text-gold">3️⃣ 暫繳稅 vs 實際稅款：多除少補機制</a></li>
+      <li><a href="#holdover" class="toc-item text-gray-700 hover:text-gold">4️⃣ 申請緩繳暫繳稅嘅條件同程序</a></li>
+      <li><a href="#reality" class="toc-item text-gray-700 hover:text-gold">5️⃣ 真實經歷：我點樣成功申請緩繳</a></li>
+      <li><a href="#common" class="toc-item text-gray-700 hover:text-gold">6️⃣ 常見錯誤同誤解</a></li>
+      <li><a href="#faq" class="toc-item text-gray-700 hover:text-gold">❓ 常見問題 FAQ</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════ Content ═══════════════ -->
+  <div class="prose-custom bg-white rounded-xl shadow-sm p-6 sm:p-8 border border-gray-100">
+
+    <div class="callout-danger">
+      <strong>🚨 親身經歷：</strong> 第一次收到稅單嗰陣，我嚇到成個人彈起——「$320,000？？點解我第一年做生意就要交咁多錢？」冷靜落嚟先發現，入面 $165,000 係上年嘅實際利得稅，另外 $165,000 係下一年嘅暫繳稅。即係我要預繳下年度嘅稅。搞清楚之後我先知，呢個唔係罰款，只係「預繳」。但如果你唔識申請緩繳，呢筆錢真係會扯到你嘅現金流好緊。
+    </div>
+
+    <h2 id="what">1️⃣ 咩係暫繳稅？點解第一年要交兩年稅？</h2>
+
+    <p><strong>暫繳稅（Provisional Tax）</strong> 係香港稅務局預先收取下一個課稅年度嘅稅款，目的係確保稅收穩定。簡單講，就係「先交後計，多除少補」。</p>
+
+    <p>香港嘅暫繳稅制度涵蓋三種稅項：</p>
+    <ul>
+      <li><strong>利得稅暫繳稅</strong>（公司／業務東主）</li>
+      <li><strong>薪俸稅暫繳稅</strong>（打工仔）</li>
+      <li><strong>物業稅暫繳稅</strong>（業主）</li>
+    </ul>
+
+    <p>呢篇文主力講<strong>利得稅暫繳稅</strong>，因為公司東主最常中招。</p>
+
+    <h3>點解第一年要「交兩年稅」？</h3>
+
+    <p>呢個係最常見嘅問題。第一次收到評稅通知書嘅人，通常會見到一筆分開咗兩部分嘅稅款：</p>
+
+    <table>
+      <tr><th>項目</th><th>金額</th><th>說明</th></tr>
+      <tr><td>2024/25 年度應課稅利潤稅款</td><td>$165,000</td><td>你上一課稅年度嘅<a href="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%8F%B8%E5%88%A9%E5%BE%97%E7%A8%85%E5%A0%B1%E7%A8%85%E5%8F%8A%E5%AF%A9%E8%A8%88%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97.html">實際利得稅</a>，已評定金額</td></tr>
+      <tr><td>2025/26 年度暫繳稅</td><td>$165,000</td><td>稅局預估下一年度嘅稅款，按上年利潤估算</td></tr>
+      <tr><td style="font-weight:700;">總數</td><td style="font-weight:700;">$330,000</td><td>一次性繳交「上年實際」+「下年預繳」</td></tr>
+    </table>
+
+    <p>所以你不是「俾多咗稅」，你只係「早咗俾」。下一年度真正評稅之後，之前交嘅暫繳稅會用嚟抵銷真正稅款，多咗嘅會退返俾你。</p>
+
+    <div class="callout-info">
+      <strong>💡 簡單比喻：</strong> 暫繳稅就好似你 subscribe Netflix——你預繳咗下個月嘅費用。如果你下個月取消服務，未用完嘅錢會退返俾你。稅局係先收錢後結算，唔係懲罰你。
+    </div>
+
+    <h2 id="calculation">2️⃣ 暫繳稅點樣計算？（附實例）</h2>
+
+    <p>利得稅暫繳稅嘅計算方法其實唔複雜：</p>
+
+    <h3>計算公式</h3>
+    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 my-4 font-mono text-sm">
+      暫繳稅 = 上年應評稅利潤 × 適用稅率
+    </div>
+
+    <p>即係稅局假設你下一年嘅利潤同今年一樣，然後用同一稅率計算。</p>
+
+    <h3>2026年利得稅稅率</h3>
+    <table>
+      <tr><th>情況</th><th>稅率</th></tr>
+      <tr><td>首 HK$2,000,000 應評稅利潤</td><td>8.25%（半額稅率）</td></tr>
+      <tr><td>超過 HK$2,000,000 嘅部分</td><td>16.25%（全額稅率）</td></tr>
+      <tr><td>法團（有限公司）</td><td>8.25% / 16.25%（兩級制）</td></tr>
+      <tr><td>獨資 / 合夥業務</td><td>7.5% / 15%（兩級制）</td></tr>
+    </table>
+
+    <div class="callout-warning">
+      <strong>⚠️ 注意：</strong> 2026年財政預算案如果再有稅率調整（例如利得稅寬減），會影響暫繳稅嘅計算。留意每年 Budget 公布後嘅更新。2025/26年度稅務寬免係上限 $3,000。
+    </div>
+
+    <h3>實例計算</h3>
+    <p><strong>案例：</strong> 小明公司 2024/25 年度應評稅利潤係 HK$1,500,000。</p>
+    <table>
+      <tr><th>項目</th><th>計算</th><th>金額</th></tr>
+      <tr><td>首 $200萬利潤稅款</td><td>$1,500,000 × 8.25%</td><td>$123,750</td></tr>
+      <tr><td>暫繳稅（同上年度估算）</td><td>$1,500,000 × 8.25%</td><td>$123,750</td></tr>
+      <tr><td style="font-weight:700;">合共應繳</td><td></td><td style="font-weight:700;">$247,500</td></tr>
+    </table>
+
+    <p><strong>如果利潤超過 $200萬：</strong></p>
+    <p>假設利潤係 HK$3,000,000：</p>
+    <table>
+      <tr><th>項目</th><th>計算</th><th>金額</th></tr>
+      <tr><td>首 $200萬利潤</td><td>$2,000,000 × 8.25%</td><td>$165,000</td></tr>
+      <tr><td>其後 $100萬利潤</td><td>$1,000,000 × 16.25%</td><td>$162,500</td></tr>
+      <tr><td>實際稅款</td><td></td><td>$327,500</td></tr>
+      <tr><td>暫繳稅（同上估算）</td><td></td><td>$327,500</td></tr>
+      <tr><td style="font-weight:700;">合共應繳</td><td></td><td style="font-weight:700;">$655,000</td></tr>
+    </table>
+
+    <p>見到未？公司利潤一過 $200萬，稅款可以跳一大截。所以如果下年利潤預計會跌，就一定要申請緩繳。</p>
+
+    <h2 id="provisional-vs-actual">3️⃣ 暫繳稅 vs 實際稅款：多除少補機制</h2>
+
+    <p>好多人擔心「交多咗點算？」。放心，香港稅局有個「多除少補」機制：</p>
+
+    <ol>
+      <li><strong>你先交暫繳稅</strong> — 按上年利潤預估</li>
+      <li><strong>下年度報稅</strong> — 你提交實際嘅財務報表同利得稅表</li>
+      <li><strong>稅局評定真正稅款</strong> — 計算你下年度真正要交幾多</li>
+      <li><strong>多除少補</strong> — 如果暫繳稅 > 實際稅款，差額會自動抵銷下一期稅款或退款</li>
+    </ol>
+
+    <div class="callout-success">
+      <strong>✅ 好消息：</strong> 如果你嘅實際利潤低過估算，稅局會自動退還多收嘅暫繳稅（通常連利息）。不過退款需時約 4-8 星期。如果你申請咗緩繳，就唔使先交咁多錢，保留現金流更好。
+    </div>
+
+    <h3>幾年後會點？</h3>
+    <p>由第二年開始，你唔會再見到「突然要交兩年稅」嘅情況，因為第二年嘅暫繳稅會用你第一次交嘅暫繳稅嚟抵銷。之後每年嘅稅單結構係：</p>
+    <ul>
+      <li>呢年嘅實際稅款（評定）</li>
+      <li>減去上年已經交嘅暫繳稅</li>
+      <li>加上下一年嘅新暫繳稅</li>
+      <li>加加減減之後先係你要俾嘅錢</li>
+    </ul>
+
+    <h2 id="holdover">4️⃣ 申請緩繳暫繳稅嘅條件同程序</h2>
+
+    <p>如果你覺得下一年嘅利潤一定會跌，唔想而家就交咁多暫繳稅，你可以申請<strong>緩繳（Holdover of Provisional Tax）</strong>。</p>
+
+    <p>法律根據：<strong>《稅務條例》第63E條（個人）及第63F條（公司）</strong></p>
+
+    <h3>申請緩繳嘅合法理由</h3>
+    <table>
+      <tr><th>理由</th><th>適用對象</th><th>條件</th></tr>
+      <tr><td>應評稅利潤會少過上年嘅 90%</td><td>所有納稅人</td><td>需提供預計損益表、管理帳目等證明</td></tr>
+      <tr><td>業務已停止或將會停止</td><td>所有納稅人</td><td>需提供業務結束嘅證明</td></tr>
+      <tr><td>已選擇或將會選擇個人入息課稅</td><td>個人／獨資經營者</td><td>需提交個人入息課稅選擇</td></tr>
+      <tr><td>暫繳稅款超出應課稅款</td><td>所有納稅人</td><td>計算錯誤或特殊情況</td></tr>
+    </ul>
+
+    <h3>申請程序</h3>
+    <ol>
+      <li><strong>填寫表格：</strong>
+        <ul>
+          <li>個人：IR1121 表格</li>
+          <li>公司：IR1121C 表格</li>
+        </ul>
+      </li>
+      <li><strong>準備證明文件：</strong>
+        <ul>
+          <li>公司管理帳目（Management Accounts）</li>
+          <li>預計損益表、資產負債表</li>
+          <li>銷售預測、成本分析</li>
+          <li>任何支持利潤下跌嘅證據</li>
+        </ul>
+      </li>
+      <li><strong>遞交方法：</strong>
+        <ul>
+          <li>郵寄：香港稅務局（告士打道5號稅務大樓）</li>
+          <li>親身提交：稅務大樓地下櫃位</li>
+        </ul>
+      </li>
+      <li><strong>遞交限期：</strong>
+        <ul>
+          <li><strong>繳稅到期日前 28 天</strong>；或</li>
+          <li><strong>評稅通知書發出後 14 天內</strong>（以較遲者為準）</li>
+        </ul>
+      </li>
+    </ol>
+
+    <div class="callout-danger">
+      <strong>🚨 最常犯嘅錯：</strong> 好多人等到就快到期先申請，或者過咗限期先交。稅局好 strict，過咗限期嘅申請通常直接拒絕。我試過有一次 deadline 係 12月15日，我12月10日先諗起要申請，差啲就遲咗。建議一收到稅單就決定係咪要申請緩繳。
+    </div>
+
+    <h3>緩繳可以申請幾多？</h3>
+    <p>你可以申請緩繳 <strong>全部或部分</strong> 暫繳稅。如果你預計利潤會跌一半，你可以申請緩繳一半嘅暫繳稅。稅局會按你提交嘅證明文件作決定。</p>
+
+    <h2 id="reality">5️⃣ 真實經歷：我點樣成功申請緩繳</h2>
+
+    <p>2024年，我其中一間公司因為主要客戶流失，生意大跌超過 60%。收到稅單見到暫繳稅成 $280,000，我即刻決定申請緩繳。</p>
+
+    <h3>我做咗嘅步驟</h3>
+    <ol>
+      <li><strong>整理管理帳目：</strong> 我搵會計師幫我 prepare 咗截至申請月份嘅管理帳目（Profit & Loss），清楚顯示 profit 比去年同期跌咗 65%</li>
+      <li><strong>準備預計損益表：</strong> 基於現有數據，推算全年利潤會跌 55-65%</li>
+      <li><strong>填 IR1121C：</strong> 表格唔複雜，主要填公司資料、稅單編號、申請理由、預計嘅應評稅利潤</li>
+      <li><strong>附上證明信：</strong> 我寫咗一封簡短嘅信解釋生意下跌原因（客戶流失、行業萎縮）</li>
+      <li><strong>親自遞交：</strong> 我去咗稅務大樓親身交表，順便問清楚職員有冇漏文件</li>
+    </ol>
+
+    <h3>結果</h3>
+    <p>大約 5 個星期後，稅局批咗我緩繳 <strong>60% 嘅暫繳稅</strong>，即係我只係需要交 $112,000（原額 $280,000 嘅 40%）。最後全年真正評稅，我嘅實際利潤的確跌咗，所以連尾數都唔使再補。成個 process 幫公司慳咗成 $168,000 嘅現金流。</p>
+
+    <div class="callout-success">
+      <strong>💡 緩繳小貼士：</strong> 唔好等到 profit 跌先做。如果你 pre-emptively 知道下年利潤會跌（例如已經知道有大客走咗），一收到稅單就即刻申請。稅局對誠實嘅納稅人其實好 reasonable，只要你有合理理據同證明，一般都批。
+    </div>
+
+    <h2 id="common">6️⃣ 常見錯誤同誤解</h2>
+
+    <h3>錯誤一：以為暫繳稅係罰款或者額外稅項</h3>
+    <p>唔係。暫繳稅只係預繳，係正常稅務制度嘅一部分。你交嘅暫繳稅會用嚟抵銷下一年度嘅真正稅款。</p>
+
+    <h3>錯誤二：以為「唔交暫繳稅就得」</h3>
+    <p>大錯。唔交暫繳稅 = 欠稅。稅局會收附加費（首期欠稅 5%，第二期再 5%），甚至會採取法律行動（扣押銀行戶口、禁止離境等）。</p>
+
+    <h3>錯誤三：以為申請緩繳好複雜</h3>
+    <p>好多人聽人講要填 form、要管理帳目就卻步。其實 IR1121C 得幾頁紙，管理帳目搵會計師整係基本嘢。整個 process 唔超過 3 個工作天就搞得掂，但可以慳返幾萬甚至幾十萬 cash flow。</p>
+
+    <h3>錯誤四：誤解「緩繳 = 唔使交稅」</h3>
+    <p>緩繳只係延期，唔係免稅。如果最終你嘅利潤冇跌到，稅局會要求你補交返緩繳部分嘅稅款，仲要加利息。所以申請緩繳時，你嘅估計必須合理。</p>
+
+    <h3>錯誤五：過咗 deadline 先諗起要申請</h3>
+    <p>稅局對限期好 strict。如果你過咗 deadline，即使理由充分都唔會受理。唯一例外係特殊情況（如天災、住院），但你仍然要書面解釋。</p>
+
+    <div class="callout-warning">
+      <strong>⚠️ 另一個好重要嘅提醒：</strong> 暫繳稅同「稅務寬免」係兩回事。每年財政預算案可能有一次性嘅利得稅寬免（例如 2025/26 寬免上限 $3,000），呢個寬免係扣喺最終稅款度，同暫繳稅計算無關。唔好混淆。
+    </div>
+
+    <!-- ═══════════════ FAQ Section ═══════════════ -->
+    <h2 id="faq">❓ 常見問題 FAQ</h2>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>暫繳稅可以分期付款嗎？</summary>
+        <p>可以。如果你遇到財政困難，可以向稅局申請分期繳稅。但要注意：分期要俾附加費（利息），年利率約 8-12%（視乎當時嘅判決利率）。建議如果只係短期現金周轉問題，可以考慮分期；但長遠嚟講，申請緩繳係更好嘅選擇。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>公司已經蝕緊錢，仲要交暫繳稅嗎？</summary>
+        <p>如果公司已經蝕錢，你嘅實際應評稅利潤係零或負數，你一定要申請緩繳全數暫繳稅。稅局唔會自動知道公司轉蝕，佢哋係根據你上年賺錢嘅紀錄去估算。所以蝕錢公司更加要申請緩繳，否則你就要先交錢再等退款。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>暫繳稅同個人入息課稅有咩關係？</summary>
+        <p>如果你係獨資經營者或合夥人，你可以選擇「個人入息課稅」——將業務利潤同其他收入合併計算，按累進稅率（最高17%）徵稅。有時候個人入息課稅嘅稅款會低過利得稅（標準15%）。如果你選擇個人入息課稅，可以申請緩繳相關嘅暫繳稅。不過要留意：個人入息課稅係一種「選擇」，唔係自動適用。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>如果我賣咗公司或者公司清盤，暫繳稅點計？</summary>
+        <p>如果你嘅業務已經停止或將會停止，你可以申請緩繳全部暫繳稅。公司清盤或撤銷註冊後，如果仲有暫繳稅未處理，清盤人或公司秘書需要向稅局提交最終報稅表，多繳嘅稅款會退俾公司。建議喺公司正式解散前處理好所有稅務事宜。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>申請緩繳被拒可以上訴嗎？</summary>
+        <p>可以。如果你嘅緩繳申請被稅局拒絕，你可以喺收到拒絕通知後 1 個月內向「稅務上訴委員會」提出上訴。但上訴需要合理理據，而且上訴期間你可能需要先繳交部分稅款。建議申請前先諮詢會計師，確保申請理由充分。</p>
+      </details>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-2">
+      <details>
+        <summary>每年都要交暫繳稅嗎？</summary>
+        <p>如果你每年都有應課稅利潤，係，每年都要交暫繳稅。但由第二年起，你唔會再見到「兩年稅款」一次過出現，因為上年嘅暫繳稅會用嚟抵銷今年嘅實際稅款，實際你要俾嘅淨額會細好多。簡單講：第一年係最重皮嘅，之後就穩定落嚟。</p>
+      </details>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════ Related Products CTA ═══════════════ -->
+  <div class="mt-10 bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+    <div class="text-center">
+      <h3 class="text-xl font-bold gov-navy">📘 想了解更多稅務同合規知識？</h3>
+      <p class="text-gray-600 mt-2">由真實 SME 東主分享，一文搞清公司成立、報稅同員工保險</p>
+      <div class="flex flex-wrap justify-center gap-3 mt-4">
+        <a href="/blog/香港公司僱員補償保險終極指南/" class="inline-block bg-navy text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">🛡️ 睇埋：僱員補償保險指南 →</a>
+        <a href="/blog/foreigner-guide-hk-company-setup/" class="inline-block bg-navy text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">🌏 睇埋：外國人開香港公司指南 →</a>
+        <a href="/" class="inline-block border border-gov-navy text-gov-navy px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition">🏠 返回首頁</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Article Footer ═══════════════ -->
+  <div class="mt-6 bg-white rounded-xl shadow-sm p-6 border border-gray-100 text-center">
+    <p class="text-gray-500 text-sm">本文章內容僅供一般參考，並不構成稅務或專業意見。如有具體稅務情況，建議諮詢執業會計師或稅務顧問。</p>
+    <hr class="my-4">
+    <p class="text-sm text-gray-500">© 2026 ESGov — 香港公司秘書及合規文件指南平台</p>
+    <div class="flex flex-wrap justify-center gap-4 mt-3">
+      <a href="https://esgov.org/blog/香港公司僱員補償保險終極指南.html" class="text-gold font-semibold hover:underline">🛡️ 睇埋：僱員補償保險終極指南</a>
+      <a href="https://esgov.org/blog/香港公司重要控制人登記冊SCR終極指南.html" class="text-gold font-semibold hover:underline">📋 睇埋：SCR 終極指南</a>
+      <a href="https://esgov.org/blog/foreigner-guide-hk-company-setup.html" class="text-gold font-semibold hover:underline">🌏 睇埋：外國人香港開公司指南</a>
+    </div>
+  </div>
+
+</div>
+
+  <!-- Auto-added: related tool links -->
+  <div class="max-w-3xl mx-auto px-4 mt-10 mb-8">
+    <div class="bg-navy/5 border border-navy/10 rounded-xl p-6">
+      <h3 class="text-lg font-bold text-navy mb-4">📍 相關免費工具</h3>
+      <div class="space-y-3">
+        <a href="/significant-controllers-register/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📋 ESGov 重要控制人登記冊 (SCR) 完整指南 + Generator</a>
+        <a href="https://esgov.org/nar1-generator/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📋 ESGov NAR1 周年申報表 PDF 填寫工具</a>
+        <a href="https://esgov.org/profits-tax-calculator/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">💰 ESGov 利得稅計算器</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 有限公司更換核數師終極指南 — 幾時換、點樣換、要準備咩？</title>
+  <meta name="description" content="有限公司想換核數師？審計費太貴想慳錢、服務質素唔好、定係 audit partner 離職？一文看清更換核數師嘅完整流程：Notice Period、董事決議、交接清單、公司註冊處通知。由轉過 3 次 auditor 嘅過來人分享真實經驗同慳錢貼士。" />
+  <meta property="og:title" content="有限公司更換核數師終極指南 — 轉過 3 次 auditor 嘅過來人分享" />
+  <meta property="og:description" content="審計費太貴想慳錢？服務唔好想轉行？一文看清更換核數師嘅完整流程、Notice Period、交接清單同常見陷阱。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .blog-content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1B2A4A;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f3f4f6;
+    }
+    .blog-content h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1B2A4A;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-content p {
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      color: #4b5563;
+    }
+    .blog-content ul, .blog-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+    .blog-content li {
+      line-height: 1.8;
+      margin-bottom: 0.25rem;
+      color: #4b5563;
+    }
+    .blog-content .flag-item {
+      background: #fef3c7;
+      border-left: 4px solid #C9A84C;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+    .blog-content .flag-item p {
+      margin-bottom: 0;
+    }
+    .blog-content strong {
+      color: #1B2A4A;
+    }
+    .blog-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    .blog-content th {
+      background: #1B2A4A;
+      color: white;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+    .blog-content td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .blog-content tr:nth-child(even) td {
+      background: #f9fafb;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/有限公司更換核數師終極指南" />
+  <meta property="og:url" content="https://esgov.org/blog/有限公司更換核數師終極指南" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ESGov | 有限公司更換核數師終極指南 — 幾時換、點樣換、要準備咩？",
+  "description": "有限公司想換核數師？審計費太貴想慳錢、服務質素唔好、定係 audit partner 離職？一文看清更換核數師嘅完整流程、Notice Period、交接清單、常見陷阱。由轉過 3 次 auditor 嘅過來人分享真實經驗。",
+  "url": "https://esgov.org/blog/有限公司更換核數師終極指南",
+  "author": {
+    "@type": "Person",
+    "name": "ESGov"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ESGov"
+  }
+}
+  </script>
+  
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+  </head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 返回網誌</a>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <section class="bg-navy text-white py-12 sm:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-sm text-gold mb-4 flex items-center gap-3">
+        <a href="../" class="hover:underline">首頁</a>
+        <span>›</span>
+        <a href="/blog/" class="hover:underline">網誌</a>
+        <span>›</span>
+        <span class="text-white/60">更換核數師</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold leading-tight mb-4">
+        🔄 有限公司更換核數師終極指南<br />幾時換、點樣換、要準備咩文件？
+      </h1>
+      <div class="flex flex-wrap items-center gap-4 text-sm text-white/60">
+        <span>📅 2026 年 6 月 10 日</span>
+        <span>🏷️ 核數師 · Auditor · 審計 · 公司秘書</span>
+        <span>⏱️ 7 分鐘閱讀</span>
+      </div>
+    </div>
+  
+    <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
+      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span class="ml-4">📅 最後更新：2026年6月</span>
+    </div>
+</section>
+
+  <!-- Article Content -->
+  <article class="py-12 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 blog-content">
+
+      <!-- Lead -->
+      <div class="bg-amber-50 border-l-4 border-gold rounded-r-xl p-5 mb-8">
+        <p class="text-base font-semibold text-navy !mb-0">
+          <strong>一句講晒：</strong>換核數師唔係「寫封信 Bye Bye 就得」— 有法定程序要行，仲有 Notice Period 同交接期，做錯咗會影響盤數。
+        </p>
+      </div>
+
+      <p>
+        我創業咁多年，總共轉過 <strong>3 次核數師</strong>。第一次係 Big 4 轉中型會計師行（因為太貴），第二次係中型轉本地細行（因為 partner 走咗），第三次係轉返大啲嘅 firm（因為公司業務複雜咗）。
+      </p>
+      <p>
+        每次轉 Auditor 我都以為「好簡單啫，寫封信講聲就得啦」，結果每次都遇到唔同嘅麻煩。<strong>最嚴重嗰次差啲影響埋 Annual Return 嘅 deadline。</strong>
+      </p>
+      <p>
+        如果你都諗緊轉核數師 — 無論係嫌貴、服務唔好、定係 audit partner 跳槽 — <strong>呢篇文幫你避開我中過嘅所有陷阱。</strong>
+      </p>
+
+      <!-- Section 1 -->
+      <h2>🧐 點解要換核數師？常見原因</h2>
+      <p>先了解下一般公司換 Auditor 嘅原因，睇吓你係咪同一 case：</p>
+      <table>
+        <thead>
+          <tr>
+            <th>原因</th>
+            <th>常見情況</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>💰 審計費太貴</strong></td>
+            <td>Big 4 一年收成幾萬蚊，但公司業務簡單，根本唔需要咁貴</td>
+          </tr>
+          <tr>
+            <td><strong>👋 Service Partner 離職</strong></td>
+            <td>跟開你盤數嘅 partner 轉咗行 / 轉咗 firm，新接嘅 partner 你唔熟</td>
+          </tr>
+          <tr>
+            <td><strong>🔄 業務擴張／縮減</strong></td>
+            <td>公司變大需要更專業嘅 audit firm，或者變細想轉細行慳錢</td>
+          </tr>
+          <tr>
+            <td><strong>⏰ 交數 deadline 成日 miss</strong></td>
+            <td>舊 auditor 手腳慢，成日拖到最後一刻先交到 report</td>
+          </tr>
+          <tr>
+            <td><strong>🔍 發現重大問題</strong></td>
+            <td>Auditor 同 management 有重大意見分歧，合作唔到落去</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="flag-item">
+        <p><strong>我第一轉嘅原因：</strong>Big 4 第一年收我 HK$38,000 做 audit，第二年話要加到 HK$45,000，我間公司一年營業額得 500 萬，盤數簡單過張單據簿，我覺得冇理由咁貴。最後轉咗間中型 firm，$15,000 搞掂，服務仲好咗。</p>
+      </div>
+
+      <!-- Section 2 -->
+      <h2>📋 更換核數師的法定程序（Step by Step）</h2>
+      <p>好多人以為換核數師只需「叫舊 auditor 辭職，請個新嘅就得」。<strong>唔係㗎。</strong>根據《公司條例》（第 622 章），程序係：</p>
+
+      <h3>Step 1：了解 Notice Period</h3>
+      <p>核數師要辭職，或者公司要撤換核數師，<strong>都要跟 Notice Period。</strong></p>
+      <ul>
+        <li><strong>核數師辭職：</strong>需要向公司遞交書面辭職通知，辭職生效日通常係通知日起計 28 日後</li>
+        <li><strong>公司撤換核數師：</strong>需要喺股東大會通過普通決議，或者通過書面決議</li>
+        <li><strong>任期未滿就換：</strong>公司需要喺通過決議後 14 日內通知公司註冊處</li>
+      </ul>
+
+      <h3>Step 2：召開股東大會或書面決議</h3>
+      <p>撤換核數師需要股東 approve，唔係董事話換就換。最簡單嘅方法係 <strong>書面決議（Written Resolution）</strong>，唔使開會。</p>
+      <p>決議要講清楚：</p>
+      <ul>
+        <li>撤換現任核數師（寫明 firm name）</li>
+        <li>委任新核數師（寫明新 firm name 同地址）</li>
+        <li>授權董事處理交接事宜</li>
+      </ul>
+      <p>權益注意事項：如果係撤換核數師，舊 auditor 有權向公司發出書面陳述，解釋佢哋對被撤換嘅睇法。公司必須將呢份陳述發俾每位股東。<strong>呢個位好多人唔知。</strong></p>
+
+      <h3>Step 3：新核數師嘅委任信（Engagement Letter）</h3>
+      <p>新 auditor 會出一份 Engagement Letter 俾你簽，確認佢哋接受委任、收費、同埋 audit scope。一定要 <strong>簽返</strong>，否則之後有咩爭拗冇依據。</p>
+      <p>簽之前睇清楚：</p>
+      <ul>
+        <li>收費係一次性定係分期</li>
+        <li>包唔包稅務申報（Tax Computation）</li>
+        <li>包唔包 Consolidated Financial Statements（如果有子公司）</li>
+        <li>Exit Clause — 如果合作唔愉快，點樣終止</li>
+      </ul>
+
+      <h3>Step 4：正式通知公司註冊處</h3>
+      <p>如果核數師係喺任期未滿時被撤換，公司需要喺決議通過後 14 日內，<strong>用指定表格（NR2）通知公司註冊處</strong>。呢個係法定要求，唔做係犯法㗎。</p>
+
+      <div class="flag-item">
+        <p><strong>我嘅中伏經歷：</strong>第一次換 auditor 嘅時候，我完全唔知要填 NR2。舊 auditor 辭職之後 3 個月，我收到公司註冊處嘅「最後警告信」，話我「未有委任核數師超過 3 個月」，可能要罰款。吓咗我一跳。</p>
+      </div>
+
+      <!-- Section 3 -->
+      <h2>📦 交接清單（Checklist）</h2>
+      <p>換核數師最麻煩嘅 part 唔係程序，而係 <strong>交接</strong>。以下係你一定要從舊 auditor 拎返嘅文件：</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>文件</th>
+            <th>用途</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>近年嘅 Audit Reports（已簽署版）</td>
+            <td>新 auditor 要睇 previous year 嘅 figures</td>
+          </tr>
+          <tr>
+            <td>Management Letter</td>
+            <td>舊 auditor 對公司內部控制嘅建議</td>
+          </tr>
+          <tr>
+            <td>Trial Balance 同 Working Papers</td>
+            <td>新 auditor 做 opening balance 核對</td>
+          </tr>
+          <tr>
+            <td>Tax Computation 同 Tax Returns</td>
+            <td>確保稅務申報連貫</td>
+          </tr>
+          <tr>
+            <td>公司組織章程大綱 (M&A)</td>
+            <td>核數師委任條款參考</td>
+          </tr>
+          <tr>
+            <td>歷年董事決議同股東決議</td>
+            <td>核數師更換嘅書面記錄</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="flag-item">
+        <p><strong>⚠️ 注意：</strong>舊 auditor 冇法律義務俾你所有 working papers，只有義務俾你「合理咁需要」嘅文件。如果 audit fee 未找清，佢哋有權扣起部分文件。所以最好 <strong>先找清尾數，先開始交接程序</strong>。</p>
+      </div>
+
+      <!-- Section 4 -->
+      <h2>🚩 我中過嘅 4 個陷阱</h2>
+
+      <h3>🚩 陷阱一：冇 check Notice Period，搞到 overlap</h3>
+      <p>第一次換 auditor，我以為舊 auditor 一辭職，新嘅就可以立即上任。結果舊 auditor 嘅辭職通知期係 28 日，而新 auditor 嘅 Engagement Letter 話「我哋由收到簽名起生效」，中間有個 <strong>overlap period</strong>。</p>
+      <p>技術上，呢段 overlap 期公司係有兩個核數師 — 舊嘅未正式離任，新嘅已接受委任。雖然實際上好少有事，但係如果有咩 legal issue，呢段時間嘅 audit opinion 歸邊個負責？<strong>好煩。</strong></p>
+      <p><strong>解決方法：</strong>同新 auditor 講清楚個 start date 係舊 auditor 正式離任之後，唔好急。</p>
+
+      <h3>🚩 陷阱二：尾數未清，新 auditor 開唔到工</h3>
+      <p>我第二次換 auditor，舊 firm 因為我仲爭緊 HK$5,000 audit fee 尾數，<strong>唔肯 release 上年嘅 working papers</strong>。新 auditor 話：「冇 previous year 嘅 working papers，我做唔到 opening balance review，冇辦法開始。」</p>
+      <p>最後我要即刻找清條數，先攞到文件。呢個一拖就拖咗 3 星期。<strong>所以一定要先找清尾數。</strong></p>
+
+      <h3>🚩 陷阱三：冇喺 Annual Return 更新核數師資料</h3>
+      <p>公司註冊處每年嘅 Annual Return（NAR1）入面，有一欄係要填 <strong>現任核數師資料</strong>。如果你換咗但冇 update，理論上公司註冊處嘅記錄係錯嘅。</p>
+      <p>好多人（包括我）都會唔記得。解決方法係：<strong>換完 auditor 之後，mark 低喺下次 NAR1 要 update。</strong></p>
+
+      <h3>🚩 陷阱四：以為換咗 auditor 就可以慳到 audit fee 係唯一考量</h3>
+      <p>Audit fee 平當然好，但係你要清楚：<strong>平得滯嘅 auditor，可能唔夠人手做你盤數</strong>，deadline 前先 rush 完，或者幫你慳稅嘅建議唔夠全面。</p>
+      <p>我第三次轉 auditor 就係因為之前嘅 firm 太細，得兩個 staff，一到 audit season 就冇人理我。所以要衡量嘅唔止係價錢，仲有 capacity、industry knowledge、同 responsiveness。</p>
+
+      <!-- Section 5 -->
+      <h2>🔑 揀新核數師嘅 5 個考慮因素</h2>
+      <p>如果你決定要轉，以下係我每次轉 auditor 前都會做嘅評估：</p>
+      <ol>
+        <li><strong>收費 vs 服務範圍</strong> — 報價包唔包 Tax Computation？包唔包 Consolidated accounts？唔好淨睇 headline price</li>
+        <li><strong>Industry Knowledge</strong> — 佢有冇做過你個行業嘅 audit？e-commerce、trading、construction 各自有唔同嘅 accounting treatment</li>
+        <li><strong>Team Size &amp; Capacity</strong> — 旺季嗰陣有冇足夠人手應付？會唔會做到一半先話做唔切？</li>
+        <li><strong>Partner 嘅 availability</strong> — 有問題嗰陣 partner 會唔會親自覆你，定係淨係派 junior 同你溝通？</li>
+        <li><strong>地理位置</strong> — Audit season 要交文件、開會，太遠會好麻煩</li>
+      </ol>
+
+      <!-- Section 6 -->
+      <h2>📅 換 Auditor 嘅最佳時間點</h2>
+      <p><strong>最佳時間：公司財政年度完結後、audit 開始前。</strong></p>
+      <p>舉個例，如果你公司係 12 月年結，最好係 1 月或者 2 月決定換 auditor。咁樣新 auditor 有足夠時間了解你盤數，唔會 rush。</p>
+      <p><strong>最差時間：</strong>審計期間先話換。舊 auditor 做到一半，要停低交 file 俾新 auditor，新 auditor 又要由頭睇過，兩邊都蝕底，你仲要比多啲錢（因為多咗銜接工作）。</p>
+
+      <!-- Summary -->
+      <div class="bg-gray-50 rounded-2xl border-2 border-gold/20 p-8 mt-10 mb-6">
+        <h2 class="!border-b-0 !mt-0 !mb-3">📝 總結：換核數師 Checklist（即用版）</h2>
+        <ol class="space-y-2">
+          <li>✅ 確認辭職/撤換嘅 Notice Period</li>
+          <li>✅ 先找清舊 auditor 尾數</li>
+          <li>✅ 通過股東書面決議（撤換 + 委任）</li>
+          <li>✅ 簽新 auditor 嘅 Engagement Letter</li>
+          <li>✅ 從舊 auditor 拎齊交接文件</li>
+          <li>✅ 14 日內用 NR2 通知公司註冊處（如需）</li>
+          <li>✅ 喺下一份 NAR1 更新核數師資料</li>
+          <li>✅ 通知稅局（如有需要更新聯絡人）</li>
+        </ol>
+      </div>
+
+      <!-- Related CTA -->
+      <div class="bg-navy text-white rounded-2xl p-8 mt-10 mb-6 text-center">
+        <h2 class="!border-b-0 !mt-0 !mb-3 text-gold !text-white">📚 仲有更多公司秘書實戰指南</h2>
+        <p class="text-gray-300 mb-6">
+          ESGov 有 50+ 篇由真實經歷者撰寫嘅香港公司流程指南，全部免費閱讀。
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="/blog/" class="inline-block bg-gold text-navy font-bold px-6 py-3 rounded-xl hover:bg-gold-light transition">
+            睇更多文章 →
+          </a>
+          <a href="/" class="inline-block bg-white/10 text-white font-bold px-6 py-3 rounded-xl hover:bg-white/20 transition">
+            返回首頁
+          </a>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="text-xs text-gray-400 mt-8 pt-6 border-t border-gray-100 leading-relaxed">
+        <p class="!mb-1"><em>本文由 ESGov 創辦人撰寫，一個親身經歷過香港公司秘書文件流程嘅香港人。所有內容皆為真實經歷，並非專業會計或法律意見，如需專業意見請諮詢執業會計師或律師。</em></p>
+      </div>
+
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2 mt-6">
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#核數師</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#Auditor</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#審計</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#有限公司</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#公司秘書</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">#ESGov</span>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- Related CTA footer -->
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-bold gov-heading mb-3">
+        想睇更多實戰指南？
+      </h2>
+      <p class="text-gray-500 mb-6">
+        我哋有 50+ 篇由真實經歷者撰寫嘅香港公司流程文章，全部免費
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="/blog/" class="btn-gov btn-gov-preview justify-center">
+          📖 瀏覽所有文章
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-navy py-12">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-2 text-white font-bold text-xl">
+          <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+        </div>
+        <div class="text-sm text-gray-400">
+          <a href="/blog/" class="hover:underline">瀏覽文章</a>
+          <span class="mx-2">·</span>
+          <a href="/" class="hover:underline">返回首頁</a>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
+        <p class="mb-2">
+          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成專業會計或法律意見。
+          如有具體問題，請諮詢執業會計師或律師。
+        </p>
+        <p>© 2026 ESGov. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Auto-added: related tool links -->
+  <div class="max-w-3xl mx-auto px-4 mt-10 mb-8">
+    <div class="bg-navy/5 border border-navy/10 rounded-xl p-6">
+      <h3 class="text-lg font-bold text-navy mb-4">📍 相關免費工具</h3>
+      <div class="space-y-3">
+        <a href="https://esgov.org/audit-report-generator/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">📊 ESGov 審計報告範例下載</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

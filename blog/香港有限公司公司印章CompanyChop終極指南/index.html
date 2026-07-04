@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESGov | 香港有限公司公司印章（Company Chop）終極指南 — 公司印仲有冇法律效力？一定要用？</title>
+<meta name="description" content="香港有限公司公司印章（Company Chop）全面拆解：2014年新《公司條例》廢除強制使用公司印章後，公司印仲有冇法律效力？開銀行戶口、簽合同、大陸業務幾時一定要用印？長鋼印、圓印、簽名檔分別同用途。附真實常見陷阱同實戰建議。附印章類型選擇指南同銀行開戶要求對照表。">
+<meta name="keywords" content="香港公司印章, Company Chop, 公司印, 公司條例第622章, 公司印章法律效力, 長鋼印, 圓印, 簽名定蓋章, 香港有限公司">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style>
+  .prose-custom h2 { color: #1B2A4A; font-weight: 700; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #C9A84C; padding-bottom: 0.5rem; }
+  .prose-custom h3 { color: #1B2A4A; font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .prose-custom p { line-height: 1.8; margin-bottom: 1rem; }
+  .prose-custom ul, .prose-custom ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; }
+  .prose-custom blockquote { border-left: 4px solid #C9A84C; padding-left: 1rem; color: #555; margin: 1rem 0; font-style: normal; background: #fefce8; padding: 1rem 1.25rem; border-radius: 0 0.5rem 0.5rem 0; }
+  .prose-custom blockquote p { margin-bottom: 0; color: #92400e; }
+  .prose-custom .callout-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-success { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .callout-info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+  .prose-custom .tip-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.75rem; padding: 1.25rem; margin: 1.5rem 0; }
+  .prose-custom .tip-box p { margin-bottom: 0.25rem; }
+  .prose-custom table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-custom th { background: #1B2A4A; color: white; padding: 0.75rem; text-align: left; }
+  .prose-custom td { padding: 0.75rem; border-bottom: 1px solid #dee2e6; }
+  .prose-custom tr:nth-child(even) { background: #f8f9fa; }
+  .prose-custom img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .toc-item { transition: all 0.2s; }
+  .toc-item:hover { color: #C9A84C; padding-left: 0.25rem; }
+  .faq-item details { cursor: pointer; }
+  .faq-item summary { font-weight: 600; color: #1B2A4A; padding: 0.75rem 0; }
+  .faq-item[open] summary { color: #C9A84C; }
+  .faq-item p { padding-left: 1rem; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .prose-custom h2 { font-size: 1.3rem; } }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+  .compare-col { border-radius: 0.75rem; padding: 1.25rem; }
+  .compare-old { background: #fef2f2; border: 1px solid #fecaca; }
+  .compare-new { background: #ecfdf5; border: 1px solid #6ee7b7; }
+  @media (max-width: 640px) { .compare-grid { grid-template-columns: 1fr; } }
+  .badge-legal { background: #1B2A4A; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; display: inline-block; font-size: 0.75rem; font-weight: 700; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"香港有限公司仲要用公司印章（Company Chop）嗎？","acceptedAnswer":{"@type":"Answer","text":"2014年新《公司條例》（第622章）生效後，香港有限公司已經唔再強制要有公司印章（common seal）。你可以淨係用簽名嚟代表公司簽署文件。但實際上，好多銀行、政府部門、內地合作夥伴仍然要求你蓋公司印，所以市面上大部分公司仍然會保留一個印章。"}},
+    {"@type":"Question","name":"公司印章同公司長鋼印有咩分別？","acceptedAnswer":{"@type":"Answer","text":"長鋼印（Common Seal）係傳統嘅公司正式印章，金屬製，用嚟加蓋喺股份證明書、債券等重要文件上。公司印章（Company Chop）係一般嘅橡膠或原子印，用嚟蓋合同、發票、銀行文件等日常用途。新《公司條例》後兩者都唔係強制，但長鋼印喺部分場合（如發行股份證明書）仍然係慣常做法。"}},
+    {"@type":"Question","name":"簽名定蓋章邊個有法律效力？","acceptedAnswer":{"@type":"Answer","text":"根據現行法例，簽名同蓋章同樣有法律效力。公司可以授權董事或授權代表簽署文件，唔一定要蓋印。不過，部分商業對手、銀行或者內地合作夥伴可能會堅持要蓋印，呢個係商業慣例多過法律要求。建議兩種方式都準備好，視乎對方要求而用。"}},
+    {"@type":"Question","name":"開銀行戶口一定要公司印章嗎？","acceptedAnswer":{"@type":"Answer","text":"絕大部分香港銀行開公司戶口時仍然要求提交公司印章（圓印或長鋼印）。雖然法例上冇規定，但銀行基於內部風控政策，通常會要求公司授權簽署人嘅簽名加上公司蓋章先至有效。建議開戶前先問清楚銀行嘅具體要求。"}},
+    {"@type":"Question","name":"公司印章唔見咗點算？","acceptedAnswer":{"@type":"Answer","text":"公司印章冇法定報失程序，但建議：(1) 董事會通過書面決議宣布舊印章作廢；(2) 製作新印章（可以略有不同以作區分）；(3) 通知主要合作夥伴、銀行同重要客戶新印章嘅生效日期；(4) 考慮是否需要向公司註冊處提交特別決議（視乎公司組織章程細則有冇相關條文）。"}},
+    {"@type":"Question","name":"內地業務一定要用公司印章嗎？","acceptedAnswer":{"@type":"Answer","text":"係！內地同香港唔同，內地仍然實行嚴格嘅印章管理制度。公司公章、合同章、發票章、財務專用章喺內地具有極高嘅法律效力，冇蓋章嘅文件幾乎等同無效。如果你嘅香港公司有內地業務，建議另外刻製一套內地用嘅印章（公章、財務章、發票章），並喺內地公安局備案。"}},
+    {"@type":"Question","name":"公司條例廢除強制使用印章後，公司章程點寫？","acceptedAnswer":{"@type":"Answer","text":"新《公司條例》嘅標準組織章程細則已經冇再提及公司印章。如果你嘅公司係用舊《公司條例》（第32章）註冊嘅，章程可能仍然有要求使用印章。建議檢視你嘅 Articles of Association，如果仍然有相關條文，可以考慮通過特別決議更新章程，或者繼續跟隨舊有做法。"}},
+    {"@type":"Question","name":"一人公司都要公司印章嗎？","acceptedAnswer":{"@type":"Answer","text":"法例上唔需要。一人公司可以由唯一董事兼股東直接簽署文件，唔一定要蓋印。不過現實中，銀行開戶、租用辦公室、簽署商業合約時，對方仍然可能會問你拎公司印。建議最少準備一個最平嘅橡膠原子印（約$50），以備不時之需。"}}
+  ]
+}
+</script>
+<!-- Open Graph -->
+<meta property="og:title" content="香港有限公司公司印章（Company Chop）終極指南 — 公司印仲有冇法律效力？一定要用？">
+<meta property="og:description" content="香港有限公司公司印章全面拆解：2014年廢除強制使用後，公司印仲有冇法律效力？開銀行、簽合同、大陸業務幾時要用？一文搞懂公司印嘅前世今生。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%85%AC%E5%8F%B8%E5%8D%B0%E7%AB%A0CompanyChop%E7%B5%82%E6%A5%B5%E6%8C%87%E5%8D%97" />
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港有限公司公司印章CompanyChop終極指南" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://esgov.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://esgov.org/blog"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ESGov",
+    "url": "https://esgov.org",
+    "description": "Hong Kong company compliance platform — free PDF generators, compliance guides, and company secretarial resources.",
+    "foundingDate": "2024",
+    "areaServed": "HK",
+    "knowsLanguage": "zh-HK,en"
+  }
+  </script>
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "ESGov 團隊",
+    "description": "香港公司秘書及合規顧問，專注提供公司註冊、股份轉讓、SCR 合規等免費指南",
+    "url": "https://esgov.org",
+    "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+    </div>
+  </nav>
+
+  <!-- ═══ Article Header ═══ -->
+  <section class="bg-navy text-white py-12">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex items-center space-x-2 text-gold text-sm mb-3">
+        <span>🔏 公司印章</span>
+        <span>·</span>
+        <span>2026.06.08</span>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-extrabold leading-tight mb-4">
+        香港有限公司公司印章（Company Chop）終極指南<br class="hidden sm:block">
+        <span class="text-xl sm:text-2xl font-semibold text-gold">— 公司印仲有冇法律效力？簽名定蓋章？一文搞清</span>
+      </h1>
+      <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-3xl">
+        2014 年新《公司條例》廢除強制使用公司印章後，好多人問：「仲要唔要公司印？」「簽名得唔得？」「銀行開戶點解一定要蓋章？」呢篇由真實公司東主親身經歷寫成嘅指南，幫你搞清公司印章嘅法律地位、實際用途同所有常見陷阱。
+      </p>
+    </div>
+  
+    <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
+      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span class="ml-4">📅 最後更新：2026年6月</span>
+    </div>
+</section>
+
+  <!-- ═══ Table of Contents ═══ -->
+  <section class="bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 py-6">
+      <h2 class="text-lg font-bold text-navy mb-3">📑 本文目錄</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+        <a href="#intro" class="toc-item text-gray-600">1. 我嘅親身經歷：公司印差點累我冇咗份合約</a>
+        <a href="#law" class="toc-item text-gray-600">2. 法律點講？2014 年《公司條例》嘅改變</a>
+        <a href="#types" class="toc-item text-gray-600">3. 三種公司印章：長鋼印、圓印、簽名檔</a>
+        <a href="#when" class="toc-item text-gray-600">4. 幾時一定要用公司印章？（實戰情況）</a>
+        <a href="#bank" class="toc-item text-gray-600">5. 銀行開戶同公司印章 — 最常見嘅誤解</a>
+        <a href="#china" class="toc-item text-gray-600">6. 內地業務：公司印章嘅重要性（同香港好唔同）</a>
+        <a href="#lost" class="toc-item text-gray-600">7. 公司印章唔見咗／被盜用點算？</a>
+        <a href="#mistakes" class="toc-item text-gray-600">8. 真實犯錯經歷：公司印章嘅 5 個常見錯誤</a>
+        <a href="#faq" class="toc-item text-gray-600">9. 常見問題 FAQ</a>
+        <a href="#summary" class="toc-item text-gray-600">10. 總結：我應該點做？</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Main Content ═══ -->
+  <section class="py-10">
+    <div class="max-w-4xl mx-auto px-4">
+
+      <div class="prose-custom">
+
+        <!-- Section 1: Personal Story -->
+        <h2 id="intro">1. 我嘅親身經歷：公司印差點累我冇咗份合約</h2>
+
+        <p>開第一間有限公司嗰陣，秘書公司俾咗我一套嘢：長鋼印、圓印、簽名檔、公司文件盒。我當時諗：「哦，公司印章嘛，間間公司都有㗎啦。」收埋喺櫃桶底就冇理過。</p>
+
+        <p>直到有一日，我要同一個大客簽約。對方公司嘅採購部話：「請提供貴公司嘅授權簽署人資料同公司蓋章。」我心諗：「下？我係董事，簽名就得啦，點解要蓋章？」</p>
+
+        <p>結果對方堅持要蓋章先肯收貨。我返公司摷返個圓印出嚟 — 嘩，啲墨水乾晒，個印都裂咗。焗住請秘書公司急刻一個新嘅，盛惠 $200，仲要等兩日。份合約就因為咁遲咗三日先簽到，差啲比競爭對手搶走單生意。</p>
+
+        <div class="callout-danger">
+          <strong>💡 我學到嘅教訓：</strong>就算法律上公司印章已經唔係強制，但現實商業世界仍然好多人「習慣」要蓋章。與其同對方拗法律，不如準備好一個印章，有備無患。
+        </div>
+
+        <p>之後我深入研究咗一下公司印章嘅法律地位，發現有好多迷思同誤解。呢篇文章就係想分享俾你，等你可以避免我犯過嘅錯。</p>
+
+        <!-- Section 2: Law -->
+        <h2 id="law">2. 法律點講？2014 年《公司條例》嘅改變</h2>
+
+        <p>要理解公司印章嘅法律地位，首先要講一個好多人唔知嘅事：<strong>2014 年新《公司條例》（第622章）已經廢除咗公司必須要有公司印章（common seal）嘅規定</strong>。</p>
+
+        <div class="compare-grid">
+          <div class="compare-col compare-old">
+            <h3 class="text-red-700 text-lg font-bold mb-2" style="border:none;margin:0;padding:0;">🔴 舊例（第32章）</h3>
+            <p class="text-sm" style="margin-bottom:0.25rem;">有限公司必須要有 company seal</p>
+            <p class="text-sm" style="margin-bottom:0.25rem;">文件必須蓋章先至有效</p>
+            <p class="text-sm">章程通常寫明用印規定</p>
+          </div>
+          <div class="compare-col compare-new">
+            <h3 class="text-green-700 text-lg font-bold mb-2" style="border:none;margin:0;padding:0;">🟢 新例（第622章）</h3>
+            <p class="text-sm" style="margin-bottom:0.25rem;">公司可以選擇有或者冇 company seal</p>
+            <p class="text-sm" style="margin-bottom:0.25rem;">簽名同樣有效</p>
+            <p class="text-sm">標準章程已刪除用印條文</p>
+          </div>
+        </div>
+
+        <p>即係話，由 2014 年 3 月 3 日開始，你嘅有限公司：</p>
+        <ul>
+          <li><strong>可以冇公司印章</strong> — 法例唔再要求你一定要有</li>
+          <li><strong>董事簽名就代表公司</strong> — 簽署文件唔一定要蓋章</li>
+          <li><strong>但如果章程（AA）仍然寫明要用</strong> — 你就仍然要跟章程做（舊公司比較常見）</li>
+        </ul>
+
+        <div class="tip-box">
+          <p><strong>💡 重點：</strong>法例嘅改變係「放寬」，唔係「禁止」。公司仍然可以有印章，法律效力不變。只係你多咗一個選擇：可以淨係簽名，唔一定要蓋章。</p>
+        </div>
+
+        <p>但呢度有一個好大嘅 gap：<strong>法例同現實商業慣例係兩回事</strong>。法律上你唔需要公司印章，但實際上⋯⋯</p>
+
+        <!-- Section 3: Types -->
+        <h2 id="types">3. 三種公司印章：你知唔知有咩分別？</h2>
+
+        <p>好多人以為「公司印章得一款」，其實一般有限公司會有以下三種：</p>
+
+        <table>
+          <tr><th>類型</th><th>外觀</th><th>用途</th><th>法律需要？</th></tr>
+          <tr>
+            <td><strong>長鋼印（Common Seal）</strong></td>
+            <td>金屬圓形，有公司名 + 成立年份</td>
+            <td>股份證明書、債券、正式契約（Deed）</td>
+            <td>❌ 非強制，但部分場合慣常使用</td>
+          </tr>
+          <tr>
+            <td><strong>圓印／公司印章（Company Chop）</strong></td>
+            <td>圓形橡膠或原子印，公司名 + 「有限公司」</td>
+            <td>合同、銀行文件、發票、日常商業文件</td>
+            <td>❌ 非強制，但銀行同商業夥伴通常要求</td>
+          </tr>
+          <tr>
+            <td><strong>簽名檔（Signature Block）</strong></td>
+            <td>長方形，公司名 + 「授權簽署人」</td>
+            <td>日常文件、授權書、確認信</td>
+            <td>❌ 純商業慣例</td>
+          </tr>
+        </table>
+
+        <div class="callout-warning">
+          <strong>⚠️ 很多人都唔知道：</strong>長鋼印同圓印嘅法律地位其實一樣。分別只係：長鋼印傳統上用嚟蓋「重要文件」（股份證明書、債券），而圓印用嚟蓋日常商業文件。新《公司條例》後，兩者都唔係強制。
+        </div>
+
+        <!-- Section 4: When to use -->
+        <h2 id="when">4. 幾時一定要用公司印章？（實戰情況）</h2>
+
+        <p>雖然法律上你可以唔用，但以下情況你「實際上」好可能需要公司印章：</p>
+
+        <h3>🟡 幾乎一定要用</h3>
+        <ul>
+          <li><strong>開銀行公司戶口</strong> — 99% 香港銀行要求公司授權簽署人簽名 + 蓋公司章</li>
+          <li><strong>內地相關文件</strong> — 香港公司在內地嘅合同、公證文件通常要蓋章</li>
+          <li><strong>法律公證</strong> — 例如要辦「香港公司主體資格證明」去大陸用，一定要蓋章</li>
+        </ul>
+
+        <h3>🟢 通常簽名就得</h3>
+        <ul>
+          <li><strong>公司內部文件</strong> — 董事會決議、股東決議（簽名就得）</li>
+          <li><strong>公司註冊處文件</strong> — NAR1、ND2A 等表格（董事簽名就得，唔使蓋章）</li>
+          <li><strong>稅局文件</strong> — 報稅表（董事簽名即可）</li>
+          <li><strong>一般商業合同</strong> — 取決於對方要求，好多公司已經接受簽名</li>
+        </ul>
+
+        <h3>🟠 視乎對方要求</h3>
+        <ul>
+          <li><strong>租約</strong> — 部分業主/代理堅持要蓋章，部分接受簽名</li>
+          <li><strong>政府投標</strong> — 視乎部門，部分仍然要蓋章</li>
+          <li><strong>大公司供應商登記</strong> — 大企業採購部門通常有固定要求</li>
+        </ul>
+
+        <div class="callout-success">
+          <strong>✅ 實戰建議：</strong>最穩陣嘅做法係「準備好但盡量唔用」— 刻定一個圓印（約 $50-100），放喺辦公室。對方要求你就俾，唔要求你就用簽名。靈活處理。
+        </div>
+
+        <!-- Section 5: Bank -->
+        <h2 id="bank">5. 銀行開戶同公司印章 — 最常見嘅誤解</h2>
+
+        <p>「我有董事簽名，點解銀行一定要我蓋章？」呢個係我聽過最多人問嘅問題。</p>
+
+        <p>答案好簡單：<strong>銀行嘅要求係銀行內部政策，唔係法例要求</strong>。</p>
+
+        <p>銀行要保障自己，唔想俾人冒簽。所以佢哋通常會要求：</p>
+        <ul>
+          <li>公司授權簽署人嘅簽名樣本（Signature Card）</li>
+          <li>公司蓋章（Confirm 呢個係公司嘅授權行為）</li>
+          <li>董事會決議授權開戶（Confirm 董事局同意）</li>
+        </ul>
+
+        <div class="callout-info">
+          <strong>📌 真實經歷：</strong>我開第二間公司嘅戶口時，諗住慳返唔刻印，帶齊董事會決議、公司註冊證書、商業登記證去銀行。結果銀行職員話：「先生，麻煩你蓋個公司印喺呢度。」我話：「法例唔使㗎喎。」佢話：「我知，但銀行系統要 scan 個印先開到戶口檔案。」最後我焗住去附近文具舖整個原子印 ($60)，返轉頭先開到戶口。
+        </div>
+
+        <p>唔同銀行嘅要求都有啲唔同。我整理咗幾間主要銀行嘅大致情況（實際以銀行最新政策為準）：</p>
+
+        <table>
+          <tr><th>銀行</th><th>公司印章要求</th><th>備註</th></tr>
+          <tr><td>匯豐 HSBC</td><td>✅ 要蓋章</td><td>開戶文件同支票都要蓋章</td></tr>
+          <tr><td>中銀香港 BOCHK</td><td>✅ 要蓋章</td><td>比較嚴格，長鋼印都有可能要</td></tr>
+          <tr><td>恆生 HSB</td><td>✅ 要蓋章</td><td>開戶一定要求</td></tr>
+          <tr><td>渣打 Standard Chartered</td><td>✅ 要蓋章</td><td>簽名 + 蓋章先得</td></tr>
+          <tr><td>眾安 ZA Bank</td><td>❌ 唔使</td><td>網上開戶，完全數碼簽署</td></tr>
+          <tr><td>Livi Bank</td><td>❌ 唔使</td><td>虛擬銀行，全數碼</td></tr>
+          <tr><td>Airwallex / Neat</td><td>❌ 唔使</td><td>主要做跨境業務</td></tr>
+        </table>
+
+        <div class="callout-warning">
+          <strong>⚠️ 注意：</strong>就算間銀行話「可以接受簽名」，都要問清楚「係咪所有文件都係？」。有時開戶文件可以簽名，但支票就要蓋章。唔好估，直接問銀行職員最穩陣。
+        </div>
+
+        <!-- Section 6: China -->
+        <h2 id="china">6. 內地業務：公司印章嘅重要性（同香港好唔同）</h2>
+
+        <p>如果你嘅香港公司有內地業務，呢 part 你一定要睇。因為<strong>內地嘅公司印章制度同香港完全唔同</strong>。</p>
+
+        <div class="callout-danger">
+          <strong>🔥 內地 vs 香港嘅核心分別：</strong><br>
+          • 香港：簽名同蓋章法律效力一樣<br>
+          • 內地：冇蓋章嘅文件幾乎等於無效（尤其係公章）
+        </div>
+
+        <p>香港公司喺內地通常需要以下印章：</p>
+        <ul>
+          <li><strong>香港公司公證章</strong> — 由香港嘅中國委託公證人發出，證明公司存在</li>
+          <li><strong>內地設立代表處/子公司嘅公章</strong> — 如果喺內地註冊咗公司，一定要刻內地公章</li>
+        </ul>
+
+        <p>好多香港公司東主嘅誤解係：「我喺香港簽咗名，內地合作夥伴就應該接受。」現實係：<strong>內地公司同政府機構唔接受淨簽名嘅文件</strong>。佢哋慣咗見公章先信。</p>
+
+        <div class="callout-warning">
+          <strong>⚠️ 常見陷阱：</strong>如果你嘅香港公司同內地公司簽合同，淨係香港簽名，內地公司可能話份合同冇效。同內地做生意，建議：<br>
+          1️⃣ 合同蓋香港公司圓印<br>
+          2️⃣ 如果對方要求公證，搵中國委託公證人做<br>
+          3️⃣ 重要合同考慮用長鋼印，增加「正式感」
+        </div>
+
+        <!-- Section 7: Lost -->
+        <h2 id="lost">7. 公司印章唔見咗／被盜用點算？</h2>
+
+        <p>公司印章唔見咗，係好多人嘅惡夢。因為「冇咗個印」同「俾人用咗個印」都可能帶來嚴重後果。</p>
+
+        <h3>如果你唔見咗公司印章：</h3>
+        <ol>
+          <li><strong>董事會通過書面決議</strong> — 正式宣布舊印章作廢（保留會議記錄作證據）</li>
+          <li><strong>刻製新印章</strong> — 可以同舊嘅有少少分別（例如加個細微嘅標記），以作區分</li>
+          <li><strong>通知銀行</strong> — 更新公司授權簽署人資料同印章樣本</li>
+          <li><strong>通知主要合作夥伴</strong> — 最好書面通知，附上新印章樣式</li>
+          <li><strong>向公司註冊處申報</strong> — 視乎章程有冇相關條文，一般唔需要特別申報</li>
+        </ol>
+
+        <h3>如果懷疑印章被盜用：</h3>
+        <ol>
+          <li><strong>立即報警</strong> — 保留警方報案編號</li>
+          <li><strong>通知銀行凍結戶口</strong> — 防止被冒簽支票</li>
+          <li><strong>諮詢律師</strong> — 評估法律責任同對策</li>
+          <li><strong>向公司註冊處申報</strong> — 如果涉及公司文件，可能需要</li>
+        </ol>
+
+        <div class="callout-info">
+          <strong>💡 預防勝於治療：</strong>將公司印章放喺辦公室嘅保險箱或鎖櫃，唔好擺喺枱面。記錄每次使用印章嘅日期、文件同經手人。如果公司員工比較多，考慮設一個「印章使用登記簿」制度。
+        </div>
+
+        <!-- Section 8: Mistakes -->
+        <h2 id="mistakes">8. 真實犯錯經歷：公司印章嘅 5 個常見錯誤</h2>
+
+        <p>我同周圍嘅創業朋友傾過，發現大家喺公司印章方面犯過好多相似嘅錯。分享出嚟等你可以避開：</p>
+
+        <div class="callout-danger">
+          <p><strong>❌ 錯誤 1：以為公司印章係「公司名就得」</strong></p>
+          <p>真人真事：有朋友開公司，去文具舖刻印，俾咗公司名但冇話要「有限公司」三個字。結果個印刻咗「ABC TRADING」而唔係「ABC TRADING LIMITED」。銀行見到即話唔收，因為個印同商業登記證嘅公司名唔一致。</p>
+        </div>
+
+        <div class="callout-danger">
+          <p><strong>❌ 錯誤 2：將公司印章亂放，俾員工亂蓋</strong></p>
+          <p>有創業朋友嘅員工，用公司印章蓋咗一份擔保書俾供應商，結果公司要承擔擔保責任。公司印章係「公司授權」嘅象徵，亂用可以令公司承擔法律責任。</p>
+        </div>
+
+        <div class="callout-danger">
+          <p><strong>❌ 錯誤 3：Signature 同 Chop 嘅授權人分開</strong></p>
+          <p>銀行開戶時，授權簽署人係董事 A，但用嘅係公司印章。後來董事 A 離職，但個印仲喺公司。新董事 B 用同一個印簽文件—銀行話唔得，因為授權簽署人已經唔同咗。公司印章係公司嘅，但用嘅人要同銀行授權紀錄一致。</p>
+        </div>
+
+        <div class="callout-danger">
+          <p><strong>❌ 錯誤 4：以為電子簽署可以完全取代公司印章</strong></p>
+          <p>香港法例接受電子簽署，但銀行同內地業務通常唔接受。我有朋友用 DocuSign 簽完份合約傳俾內地供應商，對方話：「你哋公司冇蓋章，呢份合約我哋唔收。」要補蓋一個實體印再 scan 過去先得。</p>
+        </div>
+
+        <div class="callout-danger">
+          <p><strong>❌ 錯誤 5：公司改名後用返舊印章</strong></p>
+          <p>公司改名後，舊印章即刻失效。一定要刻一個新印，公司名同商業登記證 100% 一致。用舊印簽嘅文件冇法律效力，銀行會拒收。</p>
+        </div>
+
+        <!-- Section 9: FAQ -->
+        <h2 id="faq">9. 常見問題 FAQ</h2>
+
+        <div class="faq-item">
+          <details>
+            <summary>公司印章一定要去邊度刻？有冇規格限制？</summary>
+            <p>法例上冇規定刻印嘅公司或規格。一般文具舖、鎖匙舖、專門刻印舖都有做。圓形常見直徑 38mm 或 42mm，內容通常包括公司全名（中英文）+「有限公司」字樣。唔少人喺深水埗、灣仔、旺角嘅刻印舖整，約 $50-200 不等。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>我間公司係舊公司，章程寫明要蓋章，可以改嗎？</summary>
+            <p>可以。如果你的 Articles of Association 仍然寫明要用公司印章，你可以通過特別決議（Special Resolution）修改章程，刪除相關條文。或者你可以繼續跟章程做，蓋章簽文件都得。建議開會傾吓邊個做法適合你公司。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>「公司印章」同「公司授權簽署人」有咩關係？</summary>
+            <p>公司印章係公司嘅「象徵」，但法律上真正代表公司簽署嘅係「授權簽署人」（董事或經董事會授權嘅人）。通常做法係：授權簽署人簽名 + 公司蓋章，構成完整嘅授權行為。有啲銀行會要求「two signatures」+「company chop」，即係兩個授權人簽名加蓋章。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>電子簽署（如 DocuSign）可以取代公司印章嗎？</summary>
+            <p>法律上可以，實際要睇對方。香港《電子交易條例》（第553章）承認電子簽署嘅法律效力。但現實中，銀行同內地業務多數唔接受純電子簽署。建議：香港內部文件用電子簽名（高效率），對外重要文件準備實體印章版本。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>公司授權簽署人離職，要點做？</summary>
+            <p>要立即做以下幾件事：(1) 董事會通過決議取消離職人士嘅授權簽署資格；(2) 通知銀行更新授權簽署人資料；(3) 如果離職人士有公司印章，要收回。確保公司印章只由現任授權人保管。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>公司印章可以俾人授權使用嗎？例如授權俾秘書公司？</summary>
+            <p>可以，但要好小心。你可以簽署「授權書」（Power of Attorney），授權特定人士喺特定範圍內使用公司印章。但要清楚列明授權範圍、有效期同限制。唔建議將印章直接交俾人任佢用，風險太大。</p>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>海外公司／離岸公司（如 BVI、Cayman）嘅印章要求一樣嗎？</summary>
+            <p>唔同。BVI、Cayman 等離岸公司嘅公司印章制度同香港唔一樣。大部分離岸司法管轄區仍然要求公司有 common seal，或者章程會寫明。建議查閱相關離岸公司嘅 Articles of Association，或者問你嘅註冊代理。</p>
+          </details>
+        </div>
+
+        <!-- Section 10: Summary -->
+        <h2 id="summary">10. 總結：我應該點做？</h2>
+
+        <p>寫到呢度，你應該明白公司印章嘅完整圖畫。如果你問我「我應該點做？」，我會咁樣建議：</p>
+
+        <table>
+          <tr><th>情況</th><th>建議</th></tr>
+          <tr>
+            <td>🆕 新開公司</td>
+            <td>刻一個最平嘅圓印（約 $50-100）備用。唔需要買貴嘅長鋼印住，有需要先用。</td>
+          </tr>
+          <tr>
+            <td>🏦 準備開銀行戶口</td>
+            <td>一定要有印章！開戶前刻定，避免白行一趟。</td>
+          </tr>
+          <tr>
+            <td>📄 日常文件</td>
+            <td>試用簽名先，如果對方接受就唔使特登蓋章。電子簽署更有效率。</td>
+          </tr>
+          <tr>
+            <td>🇨🇳 有內地業務</td>
+            <td>強烈建議準備印章，內地合作夥伴同政府機構會要求。</td>
+          </tr>
+          <tr>
+            <td>🔐 安全考慮</td>
+            <td>將印章放喺安全地方，記錄每次使用。考慮設使用登記制度。</td>
+          </tr>
+          <tr>
+            <td>🔄 公司改名</td>
+            <td>即刻刻新印，舊印停用。</td>
+          </tr>
+        </table>
+
+        <div class="callout-success">
+          <p><strong>一句講晒：</strong>法律上你唔需要公司印章，但現實商業世界佢仍然好有用。準備一個有備無患，靈活運用簽名同印章兩種方式，先係最慳錢又唔會失禮嘅做法。</p>
+        </div>
+
+        <div class="bg-navy text-white rounded-xl p-6 mt-8">
+          <h3 class="text-white text-lg font-extrabold" style="border-bottom: none; margin-top: 0; padding-bottom: 0;">📚 延伸閱讀</h3>
+          <ul class="text-gray-300 mt-3" style="margin-bottom: 0;">
+            <li><a href="/blog/" class="text-gold hover:underline">← 返回 ESGov 網誌總覽</a></li>
+            <li><a href="/blog/香港公司電子簽署終極指南/" class="text-gold hover:underline">🔏 香港公司電子簽署終極指南 — 電子簽名 vs 傳統簽署全面比較</a></li>
+            <li><a href="/blog/香港有限公司法定紀錄StatutoryRecords終極指南/" class="text-gold hover:underline">📋 香港有限公司法定紀錄終極指南</a></li>
+            <li><a href="/" class="text-gold hover:underline">🏠 返回 ESGov 首頁</a></li>
+          </ul>
+        </div>
+
+      </div><!-- /prose-custom -->
+
+    </div>
+  </section>
+
+  <!-- ═══ Footer ═══ -->
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-1">
+          <span class="text-xl">👤</span>
+        </div>
+        <div>
+          <p class="font-bold text-navy text-sm">👤 關於作者</p>
+          <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-navy text-white py-8 mt-8">
+    <div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-400">
+      <p class="mb-1">本文由真實經歷者撰寫，內容僅供參考，不構成法律意見。</p>
+      <p>如有具體法律問題，請諮詢執業律師或公司秘書。</p>
+      <p class="mt-4">&copy; 2026 ESGov. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+  <!-- Auto-added: related tool links -->
+  <div class="max-w-3xl mx-auto px-4 mt-10 mb-8">
+    <div class="bg-navy/5 border border-navy/10 rounded-xl p-6">
+      <h3 class="text-lg font-bold text-navy mb-4">📍 相關免費工具</h3>
+      <div class="space-y-3">
+        <a href="https://esgov.org/company-name-change-generator/special-resolution/" class="block bg-white border border-navy/10 hover:border-gold/40 hover:shadow-md transition rounded-lg px-4 py-3 text-navy font-medium">🛠️ ESGov 公司改名特別決議 PDF 生成工具</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
