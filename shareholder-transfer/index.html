@@ -392,20 +392,29 @@
       <!-- ═══════════════ Content Area ═══════════════ -->
       <main id="step-content" class="flex-1 min-w-0">
 
-        <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 sm:p-5 mb-8">
-          <p class="text-xs sm:text-sm text-gray-700 leading-relaxed line-clamp-3">
-            股份轉讓係指香港有限公司將股權由現有股東轉移俾新股東嘅法定程序。呢個免費指南詳細講解 5 個步驟，跟住做就搞掂晒，慳返會計公司幾千蚊服務費。
+        <!-- 📌 快速概覽 (merged) -->
+        <div class="bg-gradient-to-br from-amber-50 to-white border border-amber-200 rounded-xl p-4 sm:p-5 mb-8">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-base">📌</span>
+            <span class="font-bold text-navy text-sm sm:text-base">快速概覽：股份轉讓係指...</span>
+          </div>
+          <div class="grid sm:grid-cols-3 gap-3 text-xs sm:text-sm text-gray-700">
+            <div class="bg-white/70 rounded-lg p-2.5">
+              <span class="font-semibold text-navy block">🕐 需時</span>
+              <span>1–2 個星期（5 步驟）</span>
+            </div>
+            <div class="bg-white/70 rounded-lg p-2.5">
+              <span class="font-semibold text-navy block">💰 費用</span>
+              <span>約 $250–$300（自己搞）</span>
+            </div>
+            <div class="bg-white/70 rounded-lg p-2.5">
+              <span class="font-semibold text-navy block">⚖️ 法律</span>
+              <span>《公司條例》第47-52條</span>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+            股份轉讓係香港有限公司將股權由現有股東轉移俾新股東嘅法定程序。根據公司註冊處統計，2025年處理超過 12,000 宗股份轉讓登記。
           </p>
-        </div>
-
-        <!-- Related guides -->
-        <div class="mt-8 mb-4 bg-gold/5 border border-gold/20 rounded-xl p-5">
-          <h3 class="text-base font-bold text-navy mb-3">📚 相關指南</h3>
-          <ul class="space-y-2 text-sm">
-            <li>• <a href="/blog/香港公司股份轉讓流程2026.html" class="text-gold hover:text-gold-light transition font-medium">香港有限公司股份轉讓完整流程（2026 最新）— 5 個步驟搞掂</a></li>
-            <li>• <a href="/blog/香港公司股份證明書ShareCertificate終極指南.html" class="text-gold hover:text-gold-light transition font-medium">香港公司發出股份證明書（Share Certificate）終極指南 — 發新股、轉股東後必做</a></li>
-            <li>• <a href="/blog/香港公司印花稅厘印費終極指南.html" class="text-gold hover:text-gold-light transition font-medium">香港公司印花稅（厘印費）終極指南 — 股份轉讓、物業買賣、租約全面拆解</a></li>
-          </ul>
         </div>
 
         <!-- Loading -->
@@ -435,8 +444,8 @@
               <h2 class="text-2xl sm:text-3xl font-bold gov-heading mb-2" x-text="s.title"></h2>
               <p class="text-gray-500" x-text="s.summary"></p>
 
-              <!-- Donate micro-text -->
-              <div class="mt-3 flex items-center gap-2 text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
+              <!-- Donate micro-text (only step 1) -->
+              <div x-show="s.stepNumber === 1" class="mt-3 flex items-center gap-2 text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
                 <span class="shrink-0">☕</span>
                 <span>整理不易，支持下？</span>
                 <button @click="openDonate()" class="font-semibold text-gold hover:text-gold-light underline ml-auto shrink-0">請咖啡</button>
@@ -510,6 +519,57 @@
 
           </div>
         </template>
+
+        <!-- 📊 比較表（預設收埋） -->
+        <div x-data="{ open: false }" class="bg-gray-50 border border-gray-200 rounded-xl p-4 sm:p-5 mb-6">
+          <button @click="open = !open" class="w-full flex items-center justify-between text-left">
+            <span class="font-bold text-navy text-base">📊 自己搞 vs 會計公司 vs 秘書公司</span>
+            <span class="text-gold text-sm shrink-0 ml-2" x-text="open ? '▲ 收埋' : '▼ 睇對比'"></span>
+          </button>
+          <div x-show="open" x-transition.duration.200ms class="overflow-x-auto mt-3">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-gray-300 bg-navy/5">
+                  <th class="text-left py-2 px-2 font-bold text-navy text-xs">項目</th>
+                  <th class="text-center py-2 px-2 font-bold text-green-700 text-xs">🟢 自己搞</th>
+                  <th class="text-center py-2 px-2 font-bold text-amber-700 text-xs">🟡 會計公司</th>
+                  <th class="text-center py-2 px-2 font-bold text-red-700 text-xs">🔴 秘書公司</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-100"><td class="py-1.5 px-2 font-medium text-navy text-xs">費用</td><td class="text-center py-1.5 px-2 text-green-700 font-semibold text-xs">$250–$300</td><td class="text-center py-1.5 px-2 text-xs">$1,000–$3,000</td><td class="text-center py-1.5 px-2 text-xs">$2,000–$5,000</td></tr>
+                <tr class="border-b border-gray-100"><td class="py-1.5 px-2 font-medium text-navy text-xs">時間</td><td class="text-center py-1.5 px-2 text-green-700 font-semibold text-xs">1–2 星期</td><td class="text-center py-1.5 px-2 text-xs">1–3 星期</td><td class="text-center py-1.5 px-2 text-xs">2–4 星期</td></tr>
+                <tr class="border-b border-gray-100"><td class="py-1.5 px-2 font-medium text-navy text-xs">專業知識</td><td class="text-center py-1.5 px-2 text-green-700 text-xs">❌ 唔需要</td><td class="text-center py-1.5 px-2 text-xs">✅ 會計師跟</td><td class="text-center py-1.5 px-2 text-xs">✅ 秘書跟</td></tr>
+                <tr><td class="py-1.5 px-2 font-medium text-navy text-xs">適合</td><td class="text-center py-1.5 px-2 text-green-700 text-xs">簡單轉讓、慳錢</td><td class="text-center py-1.5 px-2 text-xs">複雜稅務</td><td class="text-center py-1.5 px-2 text-xs">大額交易、冇時間</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 📚 相關指南（搬咗落呢度） -->
+        <div class="bg-gold/5 border border-gold/20 rounded-xl p-4 mb-6">
+          <h3 class="font-bold text-navy text-sm mb-2">📚 相關指南</h3>
+          <ul class="space-y-1.5 text-xs">
+            <li>• <a href="/blog/香港公司股份轉讓流程2026.html" class="text-gold hover:underline">香港有限公司股份轉讓完整流程2026 — 詳細網誌版本</a></li>
+            <li>• <a href="/blog/香港公司印花稅厘印費終極指南.html" class="text-gold hover:underline">香港公司印花稅（厘印費）終極指南</a></li>
+            <li>• <a href="/blog/香港公司發出股份證明書（Share Certificate）終極指南.html" class="text-gold hover:underline">香港公司發出股份證明書（Share Certificate）終極指南</a></li>
+          </ul>
+        </div>
+
+        <!-- 📝 Cite this (subtle, 預設收埋) -->
+        <div class="border-t border-gray-200 pt-3 mb-6">
+          <details class="group">
+            <summary class="text-xs text-gray-400 cursor-pointer hover:text-gray-600 transition list-none flex items-center gap-1">
+              <span>📝 Cite this</span>
+              <span class="text-[10px] opacity-50 group-open:rotate-180 transition-transform">▾</span>
+            </summary>
+            <div class="text-xs text-gray-500 mt-2 leading-relaxed">
+              <p><strong>定義：</strong>股份轉讓係香港有限公司股東將所持股份依法轉讓予另一人嘅法定程序（《公司條例》第622章第47-52條）。</p>
+              <p><strong>關鍵數字：</strong>印花稅 = 轉讓價 0.2% + $5；遲交罰款可達 10 倍。</p>
+              <p><strong>來源：</strong><a href="https://esgov.org/share-transfer/" class="text-gold hover:underline">esgov.org/share-transfer/</a></p>
+            </div>
+          </details>
+        </div>
 
         <!-- ═══ Final Section (shown on last step) ═══ -->
         <div x-show="!isLoading && !error && currentStep === totalSteps" class="mt-8 mb-12">
