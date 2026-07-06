@@ -550,72 +550,40 @@
       <!-- Content Area -->
       <main id="step-content" class="flex-1 min-w-0">
 
-        <!-- ⚡ Quick Answer Box -->
-        <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-6">
-          <p class="font-bold text-navy text-base flex items-center gap-2 mb-2">⚡ 快速答案：SCR 係指...</p>
-          <ul class="text-sm space-y-1.5 text-gray-700">
-            <li><strong>需時：</strong>7 步驟，約 1–2 星期（視乎股東回覆速度）</li>
-            <li><strong>費用：</strong>自己搞免費（用 ESGov 範本）/ 會計公司 $2,000–$5,000</li>
-            <li><strong>法律依據：</strong>《公司條例》（第622章）第653-657條</li>
-          </ul>
-        </div>
-
-        <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 sm:p-5 mb-8">
-          <p class="text-xs sm:text-sm text-gray-700 leading-relaxed line-clamp-3">
-            重要控制人登記冊（SCR）係指香港有限公司按《公司條例》（第622章第653-657條）法定要求備存嘅登記冊，記錄對公司有重大控制權嘅自然人或者法團。呢個免費指南詳細講解 7 個步驟，避免被罰款 HK$25,000。
-          </p>
-          <div class="bg-gray-50 border-l-4 border-gold pl-4 py-2.5 text-xs text-gray-600 mt-3">
-            <p>📊 <strong>官方數據：</strong>根據公司註冊處資料，2025 年已有實際檢控案例，未備存 SCR 嘅罰款由 $3,000 至 $20,000 不等，最高可達 HK$25,000 另加每日 HK$700。提供虛假資料最高罰 HK$300,000 + 監禁 2 年。公司註冊處近年加強執法，定期抽查公司 SCR 備存情況。</p>
+        <!-- 📌 快速概覽 (merged) -->
+        <div class="bg-gradient-to-br from-amber-50 to-white border border-amber-200 rounded-xl p-4 sm:p-5 mb-6">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-base">📌</span>
+            <span class="font-bold text-navy text-sm sm:text-base">快速概覽：重要控制人登記冊（SCR）係指...</span>
           </div>
+          <div class="grid sm:grid-cols-3 gap-3 text-xs sm:text-sm text-gray-700">
+            <div class="bg-white/70 rounded-lg p-2.5">
+              <span class="font-semibold text-navy block">🕐 需時</span>
+              <span>7 步驟，約 1–2 星期（視乎股東回覆速度）</span>
+            </div>
+            <div class="bg-white/70 rounded-lg p-2.5">
+              <span class="font-semibold text-navy block">💰 費用</span>
+              <span>自己搞免費（用 ESGov 範本）/ 會計公司 $2,000–$5,000</span>
+            </div>
+            <div class="bg-white/70 rounded-lg p-2.5">
+              <span class="font-semibold text-navy block">⚖️ 法律</span>
+              <span>《公司條例》（第622章）第653-657條</span>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+            重要控制人登記冊（SCR）係香港有限公司按《公司條例》（第622章第653-657條）法定要求備存嘅登記冊，記錄對公司有重大控制權嘅自然人或者法團。根據公司註冊處資料，2025 年已有實際檢控案例，未備存 SCR 嘅罰款由 $3,000 至 $20,000 不等，最高可達 HK$25,000 另加每日 HK$700。提供虛假資料最高罰 HK$300,000 + 監禁 2 年。
+          </p>
         </div>
 
-        <!-- ═══ 常見錯誤 — SCR ═══ -->
-        <div class="bg-red-50 border border-red-200 rounded-xl p-4 sm:p-5 mb-8">
-          <h3 class="text-base font-bold text-red-700 mb-3 flex items-center gap-2">
-            <span>⚠️</span> 常見錯誤 — 重要控制人登記冊（SCR）
-          </h3>
-          <ul class="space-y-2 text-sm text-red-800">
-            <li class="flex items-start gap-2">
-              <span class="text-red-500 mt-0.5 shrink-0">•</span>
-              <span><strong>以為公司冇重要控制人就可以唔做 SCR</strong> — 即使冇控制人，公司仍然必須備存 SCR 並註明「經查核後無重要控制人」，留空係違規，最高罰 HK$25,000。</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-red-500 mt-0.5 shrink-0">•</span>
-              <span><strong>用郵政信箱做控制人地址</strong> — CR 指引清楚寫明通訊地址「不得為郵政信箱號碼」，必須為實際地址（可用服務地址）。</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-red-500 mt-0.5 shrink-0">•</span>
-              <span><strong>漏咗 NR2 通知</strong> — SCR 放喺註冊辦事處以外嘅地方，必須 15 日內提交 Form NR2 通知公司註冊處，否則違規。</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-red-500 mt-0.5 shrink-0">•</span>
-              <span><strong>冇書面委任指定代表</strong> — 指定代表必須經董事會決議正式委任，唔可以口頭叫阿邊個做，冇書面記錄亦違規。</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-red-500 mt-0.5 shrink-0">•</span>
-              <span><strong>更新 SCR 超過 7 日</strong> — 2025 年起，控制人資料變更後必須 7 日內更新 SCR（舊制 14 日），逾期可被罰款。</span>
-            </li>
-          </ul>
-        </div>
 
-        <!-- Related guides -->
-        <div class="mt-8 mb-4 bg-gold/5 border border-gold/20 rounded-xl p-5">
-          <h3 class="text-base font-bold text-navy mb-3">📚 相關指南</h3>
-          <ul class="space-y-2 text-sm">
-            <li>• <a href="/blog/香港公司重要控制人登記冊SCR終極指南.html" class="text-gold hover:text-gold-light transition font-medium">香港公司重要控制人登記冊 SCR 終極指南 2026 — 5 項測試、登記冊填寫、罰則全面解說</a></li>
-            <li>• <a href="/blog/SCR重要控制人登記冊魔鬼細節.html" class="text-gold hover:text-gold-light transition font-medium">SCR 重要控制人登記冊魔鬼細節 — 中伏位、真實經歷、罰則全面拆解</a></li>
-            <li>• <a href="/blog/香港有限公司法定紀錄StatutoryRecords終極指南.html" class="text-gold hover:text-gold-light transition font-medium">香港有限公司法定紀錄（Statutory Records）終極指南</a></li>
-          </ul>
-        </div>
 
-        <div class="bg-gray-50 border-l-4 border-gold pl-4 py-2.5 text-xs text-gray-600 mb-8">
-          <p>📊 <strong>公司註冊處數據：</strong>根據公司註冊處《CR 指引》第5.1章，SCR 通訊地址不得為郵政信箱，必須為實際地址。2025 年公司註冊處嘅 NR2 申報中，約 15% 嘅公司因存放位置填寫不當被要求重新提交。另據 CR 統計，超過 60% 嘅香港有限公司已備存 SCR，但仍有約 20% 公司未完全符合法定要求。</p>
-        </div>
-
-        <!-- ═══ G6 對比表：自己搞 vs 會計公司 vs 秘書公司 ═══ -->
-        <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 sm:p-5 mb-8">
-          <p class="font-bold text-navy text-base mb-3">📊 自己搞 vs 會計公司 vs 秘書公司</p>
-          <div class="overflow-x-auto">
+        <!-- 📊 比較表（預設收埋） -->
+        <div x-data="{ open: false }" class="bg-gray-50 border border-gray-200 rounded-xl p-4 sm:p-5 mb-6">
+          <button @click="open = !open" class="w-full flex items-center justify-between text-left">
+            <span class="font-bold text-navy text-base">📊 自己搞 vs 會計公司 vs 秘書公司</span>
+            <span class="text-gold text-sm shrink-0 ml-2" x-text="open ? '▲ 收埋' : '▼ 睇對比'"></span>
+          </button>
+          <div x-show="open" x-transition.duration.200ms class="overflow-x-auto mt-3">
             <table class="w-full text-sm">
               <thead>
                 <tr class="border-b border-gray-300 bg-navy/5">
@@ -689,7 +657,7 @@
               <h2 class="text-2xl sm:text-3xl font-bold gov-heading mb-2" x-text="s.title"></h2>
               <p class="text-gray-500" x-text="s.summary"></p>
 
-              <div class="mt-3 flex items-center gap-2 text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
+              <div x-show="s.stepNumber === 1" class="mt-3 flex items-center gap-2 text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
                 <span class="shrink-0">☕</span>
                 <span>整理不易，支持下？</span>
                 <button @click="openDonate()" class="font-semibold text-gold hover:text-gold-light underline ml-auto shrink-0">請咖啡</button>
@@ -797,6 +765,27 @@
           </div>
         </div>
 
+        <!-- 📚 相關指南 -->
+        <div class="bg-gold/5 border border-gold/20 rounded-xl p-4 mb-3">
+          <h3 class="font-bold text-navy text-sm mb-2">📚 相關指南</h3>
+          <ul class="space-y-1.5 text-xs">
+            <li>• <a href="/blog/香港公司重要控制人登記冊SCR終極指南.html" class="text-gold hover:underline">香港公司重要控制人登記冊 SCR 終極指南 2026 — 5 項測試、登記冊填寫、罰則全面解說</a></li>
+            <li>• <a href="/blog/SCR重要控制人登記冊魔鬼細節.html" class="text-gold hover:underline">SCR 重要控制人登記冊魔鬼細節 — 中伏位、真實經歷、罰則全面拆解</a></li>
+            <li>• <a href="/blog/香港有限公司法定紀錄StatutoryRecords終極指南.html" class="text-gold hover:underline">香港有限公司法定紀錄（Statutory Records）終極指南</a></li>
+          </ul>
+        </div>
+
+        <!-- ═══ G9 Citation — 「Cite this」摘要區塊 ═══ -->
+        <div class="bg-gray-100 border border-gray-300 rounded-xl p-5 mt-6 text-sm" itemscope itemtype="https://schema.org/CreativeWork">
+          <p class="font-bold text-navy text-base mb-2 flex items-center gap-2">📝 Cite this (引用此頁)</p>
+          <div class="space-y-1.5 text-gray-700">
+            <p><strong>定義：</strong>重要控制人登記冊（SCR）係指香港有限公司按《公司條例》（第622章第653-657條）法定要求備存嘅登記冊，記錄對公司有重大控制權嘅自然人或者法團。</p>
+            <p><strong>關鍵數字：</strong>未備存 SCR 最高罰 HK$25,000 + 每日 HK$700；提供虛假資料最高罰 HK$300,000 + 監禁 2 年；2025 年已有實際檢控案例罰款 $3,000–$20,000。</p>
+            <p><strong>法例依據：</strong>《公司條例》（第622章）第653-657條、附表E</p>
+            <p><strong>來源：</strong><a href="https://esgov.org/significant-controllers-register/" class="text-gold hover:underline font-medium">https://esgov.org/significant-controllers-register/</a> · ESGov SCR 完整指南</p>
+          </div>
+        </div>
+
       </main>
     </div>
   </div>
@@ -868,29 +857,6 @@
           </template>
           <button @click="closeDoc()" class="btn-gov bg-gray-100 text-gray-600 py-3 text-sm w-full hover:bg-gray-200 transition rounded-xl font-semibold">← 返回</button>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Blog Link -->
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
-    <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 text-center">
-      <p class="text-sm text-gray-700">
-        📖 想深入了解 SCR 嘅法律要求同罰則？睇我哋嘅完整文章： 
-        <a href="/blog/香港公司重要控制人登記冊SCR終極指南" class="text-gold font-semibold hover:underline">香港公司重要控制人登記冊（SCR）終極指南 →</a>
-      </p>
-    </div>
-  </div>
-
-  <!-- ═══ G9 Citation — 「Cite this」摘要區塊 ═══ -->
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
-    <div class="bg-gray-100 border border-gray-300 rounded-xl p-5 text-sm" itemscope itemtype="https://schema.org/CreativeWork">
-      <p class="font-bold text-navy text-base mb-2 flex items-center gap-2">📝 Cite this (引用此頁)</p>
-      <div class="space-y-1.5 text-gray-700">
-        <p><strong>定義：</strong>重要控制人登記冊（SCR）係指香港有限公司按《公司條例》（第622章第653-657條）法定要求備存嘅登記冊，記錄對公司有重大控制權嘅自然人或者法團。</p>
-        <p><strong>關鍵數字：</strong>未備存 SCR 最高罰 HK$25,000 + 每日 HK$700；提供虛假資料最高罰 HK$300,000 + 監禁 2 年；2025 年已有實際檢控案例罰款 $3,000–$20,000。</p>
-        <p><strong>法例依據：</strong>《公司條例》（第622章）第653-657條、附表E</p>
-        <p><strong>來源：</strong><a href="https://esgov.org/significant-controllers-register/" class="text-gold hover:underline font-medium">https://esgov.org/significant-controllers-register/</a> · ESGov SCR 完整指南</p>
       </div>
     </div>
   </div>
