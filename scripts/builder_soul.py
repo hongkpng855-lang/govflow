@@ -298,14 +298,13 @@ Exception: routine git pushes that don't affect live site.
 |     - 3格卡片：🕐 需時 / 💰 費用 / ⚖️ 法律
 |     - 底部 1句定義（含關鍵數據）
 |     - 取代咗：⚡ Quick Answer + Description + 📊 Official Data（3 blocks→1）
-|  2. ⚠️ 常見錯誤（保持不變）
-|  3. 📊 比較表（預設收埋，點「▼ 睇對比」先展開）
+|  2. 📊 比較表（預設收埋，點「▼ 睇對比」先展開）
 |     - Alpine.js x-data="{ open: false }" + x-show="open"
-|  4. Step-by-step 內容
+|  3. Step-by-step 內容
 |     - ☕ Donate micro-text 只喺 Step 1 顯示（x-show="s.stepNumber === 1"）
-|  5. 📄 開始免費指南 CTA（生成文件）
-|  6. 📚 相關指南（搬咗落生成文件下面）
-|  7. 📝 Cite this（原格式保留，bg-gray-100 box）
+|  4. 📄 開始免費指南 CTA（生成文件）
+|  5. 📚 相關指南（搬咗落生成文件下面）
+|  6. 📝 Cite this（原格式保留，bg-gray-100 box）
 |
 |生產文件（doc cards、step details、generator links、demo images）完全唔郁。
 |
