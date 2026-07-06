@@ -308,7 +308,11 @@ Exception: routine git pushes that don't affect live site.
 |
 |生產文件（doc cards、step details、generator links、demo images）完全唔郁。
 |
-|其餘 3 個產品頁（company-name-change、scr、deregistration）需要用相同佈局改動。
+||全部 4 個產品頁已套用新佈局（2026-07-06）：
+||  ✅ company-name-change
+||  ✅ scr (significant-controllers-register)
+||  ✅ deregistration
+||
 |
 
 """
