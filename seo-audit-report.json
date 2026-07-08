@@ -22,19 +22,21 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 4,
+      "jsonld": 5,
       "charset": true,
       "img_alt_pct": "2/2",
       "clean_urls": 0
     },
     {
       "path": "shareholder-transfer/index.html",
-      "issues": [],
-      "score": 100,
-      "title": "ESGov | 香港公司股份轉讓完整指南（5個步驟＋文件範例）",
-      "title_len": 31,
-      "description": "香港公司股份轉讓完整指南：由真實經歷者整理，5個步驟搞掂股份轉讓。含 Sold Note、Letter of Trans...",
-      "desc_len": 150,
+      "issues": [
+        "3 internal link(s) with .html extension"
+      ],
+      "score": 97,
+      "title": "Bought and Sold Note範本｜香港公司股份轉讓完整指南（附5份文件範例）",
+      "title_len": 44,
+      "description": "Bought and Sold Note點填？股份轉讓要咩文件？Sold Note、Letter of Transfer...",
+      "desc_len": 142,
       "h1_count": 1,
       "h1_text": [
         "香港有限公司股份轉讓完整指南"
@@ -48,10 +50,10 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 5,
+      "jsonld": 9,
       "charset": true,
       "img_alt_pct": "4/4",
-      "clean_urls": 0
+      "clean_urls": 3
     },
     {
       "path": "sold-note-generator/index.html",
@@ -211,12 +213,14 @@
     },
     {
       "path": "company-name-change/index.html",
-      "issues": [],
-      "score": 100,
-      "title": "ESGov | 香港有限公司更改公司名稱完整指南（5個步驟完成）",
-      "title_len": 32,
-      "description": "香港公司更改名稱完整指南：5個步驟搞掂公司改名。含公司查冊教學、特別決議範本、Form NNC2 填寫教學、公司註冊處提...",
-      "desc_len": 124,
+      "issues": [
+        "3 internal link(s) with .html extension"
+      ],
+      "score": 97,
+      "title": "香港有限公司更改公司名稱完整指南 — 5 個步驟搞掂公司改名 | ESGov",
+      "title_len": 38,
+      "description": "香港有限公司更改公司名稱完整指南：5個步驟搞掂公司改名，含查冊教學、Form NNC2 填寫範例、特別決議模板、銀行更新...",
+      "desc_len": 105,
       "h1_count": 1,
       "h1_text": [
         "香港有限公司更改名稱完整指南"
@@ -230,10 +234,10 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 5,
+      "jsonld": 8,
       "charset": true,
       "img_alt_pct": "4/4",
-      "clean_urls": 0
+      "clean_urls": 3
     },
     {
       "path": "company-name-change-generator/special-resolution/index.html",
