@@ -1,0 +1,217 @@
+{
+  "processId": "director-particulars-change",
+  "title": "香港公司董事及公司秘書詳情更改完整指南",
+  "totalSteps": 5,
+  "freeSteps": 5,
+  "price": 0,
+  "currency": "HKD",
+  "donateMessage": "如果呢份指南幫到你，可以請我飲杯咖啡 ☕",
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "了解申報義務 — 咩情況要申報董事詳情更改",
+      "summary": "了解公司註冊處對董事及公司秘書詳情更改嘅申報規定，確認申報責任",
+      "isFree": true,
+      "details": "📋 邊啲情況要用 ND2B？\n\n根據《公司條例》（第622章）第645(4)條（公司秘書登記冊）同第652(2)條（董事登記冊），公司必須喺董事或公司秘書嘅個人詳情有任何更改之後，15日內通知公司註冊處。呢個係法定責任，有刑事責任㗎！\n\n✅ ND2B 涵蓋嘅更改類型：\n• 姓名更改 — 中英文名都得，但必須同身份證或護照完全一致\n• 地址更改 — 董事申報通常住址（Usual Residential Address）；公司秘書只需申報通訊地址（Correspondence Address）\n• 香港身份證號碼更改 — 例如換咗新智能身份證\n• 護照號碼更改 — 如果冇香港身份證\n• 身份（Capacity）更改 — 例如由董事轉做候補董事（Alternate Director）\n• 法人團體董事/秘書嘅名稱、地址、身份更改\n\n一份 ND2B 可以同時申報多人嘅更改（用續頁 A 或 B），或者同一人多重身份嘅更改。\n\n🚫 唔適用 ND2B 嘅情況：\n• 委任新董事/公司秘書（Appointment）→ 要用 ND2A\n• 董事/公司秘書離職（Cessation）→ 要用 ND2A\n• 備任董事（Reserve Director）提名或停任 → 要用 ND5\n• 備任董事詳情更改 → 要用 ND7\n• 公司註冊辦事處地址更改 → 要用 NR1\n\n⏰ 15日時限係硬規定：\n• 由更改發生當日起計15個曆日（Calendar Days）\n• 包括星期六、日同公眾假期\n• 如果第15日係非工作日，最好提早一日交\n\n⚠️ 罰則認真㗎：\n• 最高罰款 HK$25,000（每次違規）\n• 每日違規罰款 HK$700（持續違規期間每日計）\n• 公司同每名「責任人」（包括董事、公司秘書、經理）都可能被檢控\n• 公司註冊處會出傳票（Summons），就算事後補交文件，傳票都唔會撤銷，公司都要派人出庭\n\n💡 真實經驗：好多公司以為公司秘書唔使申報地址更改，其實公司秘書嘅通訊地址更改一樣要報。另外，15日係曆日唔係工作日，好多人中招。建議喺公司日曆mark低所有deadline。",
+      "documents": [
+        {
+          "name": "ND2B 官方表格（可填寫 PDF）",
+          "description": "公司註冊處指明表格 ND2B「更改公司秘書及董事詳情通知書」（Notice of Change in Particulars of Company Secretary and Director）。可直接喺電腦填寫，支援中英文版本。",
+          "hasGenerator": false,
+          "generatorUrl": "https://www.cr.gov.hk/tc/companies_ordinance/docs/ND2B_fillable.pdf",
+          "commonMistakes": [
+            "🚫 混淆 ND2B（更改詳情）同 ND2A（委任/停任）— 兩張表用途唔同",
+            "🚫 以為公司秘書唔使申報 — 公司秘書嘅通訊地址更改一樣要報",
+            "🚫 以為15日係工作日 — 錯，係曆日（Calendar Days），星期六日紅日都計",
+            "🚫 以為備任董事（Reserve Director）適用 ND2B — 其實要用 ND7"
+          ]
+        },
+        {
+          "name": "公司註冊處董事及秘書 FAQ",
+          "description": "公司註冊處官方常見問題集，涵蓋董事同公司秘書嘅申報要求、罰則、常見錯誤等。建議提交前睇一次。",
+          "hasGenerator": false,
+          "generatorUrl": "https://www.cr.gov.hk/tc/faq/local-company/directors-secretary.htm",
+          "commonMistakes": [
+            "🚫 冇睇清楚邊啲情況先要用 ND2B",
+            "🚫 冇留意 CR 可能會更新 FAQ 內容"
+          ]
+        },
+        {
+          "name": "香港法例第622章《公司條例》",
+          "description": "公司條例全文，第645(4)條及第652(2)條係 ND2B 嘅法律基礎。罰則詳見第652(6)條。",
+          "hasGenerator": false,
+          "generatorUrl": "https://www.elegislation.gov.hk/hk/cap622",
+          "commonMistakes": [
+            "🚫 冇了解清楚法律責任就亂填"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "⚠️ 逾期申報 — 最高罰款 HK$25,000 + 每日 HK$700",
+        "⚠️ 搞錯表格 — 用 ND2A 申報更改（或掉轉）",
+        "⚠️ 以為公司秘書唔使申報地址更改",
+        "⚠️ 冇計清楚15日曆日（以為係工作日）",
+        "⚠️ 備任董事用錯 ND2B（應使用 ND7）"
+      ]
+    },
+    {
+      "stepNumber": 2,
+      "title": "填寫 ND2B 表格 — 記錄更改後嘅董事資料",
+      "summary": "填妥 ND2B「公司秘書及董事詳情更改通知書」，記錄更改後嘅詳情",
+      "isFree": true,
+      "details": "📝 ND2B 表格結構逐 Part 解構\n\nND2B 表格有幾個主要部分，搞清楚每部分填咩就唔會錯。\n\n🏢 Section 1：公司資料\n• 公司名稱（中英文都要）\n• 商業登記號碼（BR No.）— 只填首8位數字，「-」後面嘅數字唔使填\n\n👤 Section 2：自然人（Natural Person）嘅更改\n呢部分分 A、B 兩部分：\n\n【A 部分：現時喺 CR 登記嘅詳情】\n• Capacity（身份）：喺適用嘅方格打 ✓（公司秘書/董事/候補董事，可多選）\n• 中文姓名：同香港身份證相同\n• 英文姓名：Surname（姓氏）+ Other Names（名字）\n• 香港身份證部分號碼：例如 A123456( ) — 只填部分號碼，完整號碼留返 PI-ND2B 頁\n• 護照部分號碼：如果冇 HKID 先填\n• 通訊地址（公司秘書）/ 通常住址（董事）\n\n【B 部分：更改詳情】\n⚠️ 重點：只填報有更改嘅項目！\"Please complete item(s) with change(s) only\"\n• 新中文姓名（如有更改）\n• 新英文姓名（Surname / Other Names）\n• 新身份（如有更改）\n• 新通訊地址（公司秘書）/ 新通常住址（董事/候補董事）\n• 新商業登記號碼（只適用法人團體）\n\n🏢 Section 3：法人團體（Body Corporate）嘅更改\n• 同 Section 2 類似，但係為法人團體董事/秘書而設\n\n🔑 PI-ND2B 受保護資料頁（關鍵！）\n呢頁超級重要，好多人漏咗：\n• 用途：申報完整 HKID 號碼 + 通常住址\n• 公眾查閱：❌ 唔會公開，只限「指明人士」查閱\n• 每人一頁：每頁 PI-ND2B 只可填一名自然人\n• 放置位置：所有 PI-ND2B 頁要放喺表格最後\n• 公司秘書：只需要填身份證號碼，唔使填通常住址\n\n📌 地址要求重點：\n• 董事：通常住址（Usual Residential Address），可為非香港地址\n• 公司秘書：通訊地址（Correspondence Address），可為非香港地址\n• 法人團體秘書：必須為香港地址\n• ❌ 唔接受「轉交」地址（Care-of address）同郵政信箱號碼\n\n📌 語文要求：\n• 劃一使用中文（繁體字）或英文，唔好中英夾雜\n• 雙語表格必須一致使用同一語言\n\n💡 貼士：建議用電腦填寫 PDF，唔好手寫。公司註冊處有機會拒絕手寫表格。",
+      "documents": [
+        {
+          "name": "ND2B 可填寫 PDF（中文版）",
+          "description": "公司註冊處官方中文版 ND2B 表格，可直接喺電腦填寫及儲存。包含所有 Section 1-5 及 PI-ND2B 頁。",
+          "hasGenerator": false,
+          "generatorUrl": "https://www.cr.gov.hk/tc/companies_ordinance/docs/ND2B_fillable.pdf",
+          "commonMistakes": [
+            "🚫 主表格填完整身份證號碼 — 主表只填部分號碼，完整號碼要填喺 PI-ND2B",
+            "🚫 PI-ND2B 頁漏咗冇交 — 成份表格會被退回",
+            "🚫 地址用咗「轉交」地址或郵政信箱 — CR 唔接受",
+            "🚫 公司秘書填咗通常住址（唔需要）",
+            "🚫 中英文夾雜填寫 — 要劃一語言"
+          ]
+        },
+        {
+          "name": "ND2B 填寫樣本（Specimen）",
+          "description": "公司註冊處提供嘅 ND2B 填寫樣本，可以跟住嚟填，唔驚填錯格式。",
+          "hasGenerator": false,
+          "generatorUrl": "https://www.cr.gov.hk/tc/companies_ordinance/docs/ND2B_Specimen-c.pdf",
+          "commonMistakes": [
+            "🚫 冇參考樣本就直接填 — 容易錯格式",
+            "🚫 唔清楚部分號碼同完整號碼嘅分別"
+          ]
+        },
+        {
+          "name": "PI-ND2B 受保護資料頁",
+          "description": "受保護資料頁（Protected Information Sheet），用嚟申報完整香港身份證號碼及通常住址。呢頁資料唔會公開查閱。",
+          "hasGenerator": false,
+          "generatorUrl": "https://www.cr.gov.hk/tc/companies_ordinance/docs/ND2B_fillable.pdf",
+          "commonMistakes": [
+            "🚫 一張 PI-ND2B 填咗多個人 — 每人要獨立一頁",
+            "🚫 公司秘書填咗通常住址（唔需要）",
+            "🚫 冇將 PI-ND2B 放喺表格最後"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "⚠️ 姓名同身份證唔一致 — 公司註冊處會退回表格",
+        "⚠️ 漏咗 PI-ND2B 頁 — 成份表唔完整，會被退回",
+        "⚠️ 地址用錯類型（秘書填住址 / 董事填錯地址類型）",
+        "⚠️ 主表填咗完整身份證號碼（應該填部分號碼）",
+        "⚠️ 中英文夾雜填寫 — CR 要求劃一語言",
+        "⚠️ 手寫表格字跡潦草 — CR 可能拒絕接受"
+      ]
+    },
+    {
+      "stepNumber": 3,
+      "title": "董事簽署 ND2B — 由董事或公司秘書簽署",
+      "summary": "ND2B 必須由董事或公司秘書簽署確認，了解簽署要求同電子簽署方法",
+      "isFree": true,
+      "details": "✍️ 邊個可以簽 ND2B？\n\n根據表格註釋：「本表格必須由一名董事或公司秘書簽署。」\n\n✅ 可以簽署嘅人：\n• 董事（任何一位董事都得）\n• 公司秘書（任何一位聯名公司秘書都得）\n\n❌ 唔可以簽署嘅人：\n• 經理（除非佢同時係董事/秘書）\n• 會計師（除非佢同時係董事/秘書）\n• 律師（除非佢同時係董事/秘書）\n• 股東（除非佢同時係董事/秘書）\n\n簡單講：一定要係董事或者公司秘書身份先簽得。\n\n📱 電子簽署（推薦）\n經 e-Services Portal 提交嘅話：\n1. 去 https://www.e-services.cr.gov.hk 登記個人帳戶\n2. 登記需要身份證明文件（HKID/護照）\n3. 訂閱 e-Filing Services（免費）\n4. 用數碼證書（e-Cert 或 iAM Smart）可以即時完成登記\n5. 提交認證文件副本需時4-5個工作天，或者親身去 CR 即時辦妥\n6. 提交表格時，用已登記嘅個人用戶身份進行電子簽署\n\n好處：24/7 做到、即時確認、環保、唔怕寄失。\n\n📄 紙本簽署\n• 必須係正本簽名（Original Signature）\n• 唔接受傳真副本或者掃描打印版\n• CR 唔會接受未簽妥嘅表格\n\n提交方式：\n• 郵寄：金鐘道66號金鐘道政府合署14樓公司註冊處\n• 親身交付：同上址14樓收款處\n\n⚠️ 郵寄風險：如果 CR 冇收到郵件，該表格唔會視作已交付。建議用掛號郵件（Registered Mail）保留送達證明。\n\n💡 真實經驗：如果你係用 e-Filing，簽署過程好簡單直接。紙本嘅話，留意公司註冊處辦公時間（星期一至五 8:30-12:30, 2:00-5:30），星期六日公眾假期休息。",
+      "documents": [
+        {
+          "name": "e-Services Portal 用戶登記指南",
+          "description": "公司註冊處電子服務網站，登記個人帳戶後可以網上提交 ND2B、獲取即時確認。支援 24/7 全天候服務。",
+          "hasGenerator": false,
+          "generatorUrl": "https://www.cr.gov.hk/tc/electronic/e-servicesportal/user_registration.htm",
+          "commonMistakes": [
+            "🚫 冇預先登記帳戶就諗住即時電子提交",
+            "🚫 用咗公司帳戶但冇個人簽署授權",
+            "🚫 登記時提交嘅證明文件唔清晰，被延誤審批"
+          ]
+        },
+        {
+          "name": "ND2B 簽署指引（表格註釋）",
+          "description": "ND2B 表格內附嘅 Notes for Completion，清楚列明簽署要求同邊個可以簽署。建議填表前先睇一次。",
+          "hasGenerator": false,
+          "generatorUrl": "https://www.cr.gov.hk/tc/companies_ordinance/docs/ND2B_fillable.pdf",
+          "commonMistakes": [
+            "🚫 搵咗唔合資格嘅人簽署（例如經理、會計師）",
+            "🚫 紙本提交咗簽名副本唔係正本"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "⚠️ 簽署人唔符合資格（唔係董事或公司秘書）— 表格會被退回",
+        "⚠️ 紙本提交冇正本簽名 — CR 唔接受掃描/傳真副本",
+        "⚠️ 郵寄遺失 — 表格唔當作已交付，建議用掛號或電子提交",
+        "⚠️ e-Services Portal 帳戶未注册好就趕住提交"
+      ]
+    },
+    {
+      "stepNumber": 4,
+      "title": "遞交公司註冊處 — 15 日內完成登記",
+      "summary": "將已簽署嘅 ND2B 遞交公司註冊處登記，確認收到",
+      "isFree": true,
+      "details": "🚀 遞交方式揀邊種好？\n\n遞交 ND2B 有兩種方式，幫你分析利弊：\n\n【Option A：電子提交 e-Filing】✅ 強烈推薦\n• 平台：https://www.e-services.cr.gov.hk\n• 費用：免費\n• 可用時間：24/7 全天候\n• 處理時間：即時至1個工作天內完成登記\n• 簽署方式：以已登記嘅個人用戶身份電子簽署\n• 確認方式：系統即時發出確認通知（Acknowledgement）\n• 可以儲存草稿（Draft）之後先提交\n\n優點：最快最可靠，有即時確認，唔怕寄失。\n\n【Option B：紙本提交】\n• 郵寄：金鐘道66號金鐘道政府合署14樓公司註冊處\n• 親身交付：同上址14樓收款處\n• 費用：免費\n• 處理時間：約4-7個工作天（取決於郵遞時間及 CR 工作量）\n• 確認方式：CR 唔會個別發出確認收件通知\n\n⚠️ 郵寄風險：如果 CR 收唔到郵件，表格唔當作已交付。建議用掛號郵件。\n\n⏱️ 計時方法：\n由更改發生當日起計15日。例如：\n• 董事1月1日搬屋 → 1月16日或之前要交表\n• 第15日係星期六/日/紅日 → 最好提早交\n\n🔍 遞交後嘅流程：\n1. CR 收到後會更新公司嘅公開登記冊\n2. 公眾可以透過 e-Services Portal 嘅查冊服務查閱更新嘅資料（受保護資料除外）\n3. 受保護資料（完整身份證號碼、通常住址）唔會公開\n\n💡 真實經驗：電子提交真係方便好多，尤其係最後一刻先記得要交表嘅時候。親身去 CR 嘅話，記得帶齊所有文件，同埋預留排隊時間。",
+      "documents": [
+        {
+          "name": "e-Services Portal (提交平台)",
+          "description": "公司註冊處電子提交平台，24/7 可以網上遞交 ND2B。需要預先登記個人帳戶同訂閱 e-Filing Services（免費）。",
+          "hasGenerator": false,
+          "generatorUrl": "https://www.e-services.cr.gov.hk",
+          "commonMistakes": [
+            "🚫 臨急先登記帳戶 — 登記需時處理，建議提早辦好",
+            "🚫 唔記得 save 草稿 — 填到一半可以儲存草稿下次繼續",
+            "🚫 提交後冇保留確認通知 — 建議下載保存 Acknowledgement"
+          ]
+        },
+        {
+          "name": "IRC3111A 商業登記地址更改表格",
+          "description": "如果董事地址更改同時涉及公司商業登記地址更改，需要另外向稅務局商業登記署提交 IRC3111A（1個月內申報）。ND2B 同 IRC3111A 係兩個獨立程序。",
+          "hasGenerator": false,
+          "generatorUrl": "https://www.ird.gov.hk/chi/pdf/irc3111a.pdf",
+          "commonMistakes": [
+            "🚫 以為 ND2B 交咗就等於通知咗 IRD — 兩個部門獨立運作",
+            "🚫 搞亂董事地址更改同公司註冊地址更改"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "⚠️ 遞交後冇保留確認 — 日後難以證明已按時申報",
+        "⚠️ 郵寄遺失 — CR 冇收到就當冇交過，建議用掛號或電子方式",
+        "⚠️ 超過15日先交 — 即使 CR 受理，仍保留檢控權利",
+        "⚠️ 冇附上 PI-ND2B 頁 — 整份表格被視為不完整"
+      ]
+    },
+    {
+      "stepNumber": 5,
+      "title": "更新公司內部紀錄 — 董事名冊、商業登記等",
+      "summary": "同步更新公司內部嘅董事名冊、公司秘書名冊及其他相關紀錄",
+      "isFree": true,
+      "details": "📋 交完 ND2B 唔係就完事！仲有內部嘢要跟進\n\n好多公司以為交咗 ND2B 俾公司註冊處就搞掂，其實仲有幾樣內部紀錄要同步更新：\n\n1️⃣ 董事登記冊（Register of Directors）— 法定必須！\n根據《公司條例》，公司必須備存董事登記冊，記錄所有董事嘅詳情。提交 ND2B 後，必須同步更新呢本冊。\n• 記錄新嘅姓名、地址、身份證號碼\n• 保存地點必須係公司嘅註冊辦事處或指定地點\n\n2️⃣ 公司秘書登記冊（Register of Company Secretaries）\n如果更改涉及公司秘書，都要同步更新。\n\n3️⃣ 銀行紀錄 🏦\n如果董事姓名更改，一定要通知公司銀行：\n• 更新簽名人授權（Signatory）\n• 提交新嘅董事身份證明文件\n• 部分銀行可能需要董事親身去分行辦理\n\n4️⃣ 商業登記（BR）地址 🏢\n⚠️ 重要區別：董事個人地址更改（ND2B）同商業登記地址更改（IRC3111A）係兩個獨立程序！\n• 如果只係董事個人地址改，唔需要通知 IRD\n• 但如果公司商業登記地址改，就要用 IRC3111A 向稅務局申報（1個月內）\n\n5️⃣ 公司印章、名片、網站等\n如果董事改名：\n• 公司印章（Company Chop）可能要重新造\n• 名片、網站、公司簡介等嘅董事資料要更新\n• 通知合作夥伴、供應商、客戶\n\n6️⃣ 其他政府部門\n• 如果董事嘅身份證號碼或姓名更改，可能都需要通知其他相關部門（如海关、牌照機構等）\n\n💡 真實經驗：好多公司忽略咗銀行通知呢一步。試過有 case 係董事改咗名但銀行唔知，結果開支票俾銀行退返。另外，董事登記冊係法定文件，CR 查冊時可以要求查閱，一定要 keep 得準確。",
+      "documents": [
+        {
+          "name": "董事登記冊範本",
+          "description": "公司內部董事登記冊（Register of Directors）嘅標準格式。記錄董事姓名、地址、身份證號碼、委任日期等資料。必須保存喺公司註冊辦事處。",
+          "hasGenerator": false,
+          "generatorUrl": "",
+          "commonMistakes": [
+            "🚫 交咗 ND2B 但冇更新公司內部董事登記冊 — 違反公司條例",
+            "🚫 董事登記冊保存地點唔正確",
+            "🚫 冇紀錄更新日期同原因"
+          ]
+        },
+        {
+          "name": "IRC3111A 商業登記地址更改表格",
+          "description": "如公司商業登記地址有更改，須喺1個月內向稅務局商業登記署提交 IRC3111A 表格。注意：ND2B 同 IRC3111A 係兩個獨立申報程序。",
+          "hasGenerator": false,
+          "generatorUrl": "https://www.ird.gov.hk/chi/pdf/irc3111a.pdf",
+          "commonMistakes": [
+            "🚫 以為 ND2B 交咗就自動通知 IRD — 唔會㗎",
+            "🚫 搞亂董事個人地址更改同公司商業登記地址更改"
+          ]
+        }
+      ],
+      "rejectionRisks": [
+        "⚠️ 公司內部紀錄（董事名冊）冇同步更新 — 查冊時資料不一致，影響公司形象",
+        "⚠️ 銀行簽名人授權冇更新 — 支票/轉賬可能被銀行拒絕",
+        "⚠️ 商業登記（BR）地址同實際唔符 — 政府信件（稅局、CR）收唔到",
+        "⚠️ 董事姓名改咗但公司印章仲係舊名 — 合約簽署有問題"
+      ]
+    }
+  ]
+}
