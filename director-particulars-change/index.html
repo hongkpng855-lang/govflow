@@ -45,40 +45,25 @@
   <meta name="author" content="ESGov 公司秘書團隊" />
   <meta property="og:site_name" content="ESGov" />
 
-  <!-- BreadcrumbList Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "首頁",
-        "item": "https://esgov.org"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "董事詳情更改完整指南",
-        "item": "https://esgov.org/director-particulars-change"
-      }
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://esgov.org" },
+      { "@type": "ListItem", "position": 2, "name": "董事詳情更改完整指南", "item": "https://esgov.org/director-particulars-change" }
     ]
   }
   </script>
-
-  <!-- WebPage Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "香港公司董事詳情更改完整指南 — ND2B 表格遞交教學",
-    "description": "董事更改個人資料（姓名、地址、身份證號碼）點申報？表格 ND2B 完整填寫教學，教你 15 日內向公司註冊處申報董事詳情更改，附常見錯誤提醒，全部免費公開。",
+    "description": "董事更改個人資料（姓名、地址、身份證號碼）點申報？表格 ND2B 完整填寫教學，15 日內申報，全部免費公開。",
     "url": "https://esgov.org/director-particulars-change"
   }
   </script>
-
-  <!-- FAQPage Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -87,64 +72,31 @@
       {
         "@type": "Question",
         "name": "董事更改個人資料要用邊張表格？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "要用 ND2B「更改公司秘書及董事詳情通知書」（Notice of Change in Particulars of Company Secretary and Director）。無論係更改姓名、地址、身份證號碼，都係用呢張表格。必須喺更改後 15 日內交付公司註冊處登記。記住：委任或停任董事要用 ND2A，唔好用錯表。"
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "要用 ND2B「公司秘書及董事詳情更改通知書」。無論係更改姓名、地址、身份證號碼，都係用呢張表格。必須喺更改後 15 日內交付公司註冊處登記。" }
       },
       {
         "@type": "Question",
         "name": "董事更改地址要通知公司註冊處嗎？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "要。董事嘅通常住址（Usual Residential Address）如有更改，必須填 ND2B 通知公司註冊處。不過董事嘅通常住址係受保護資料（唔會公開查閱），要用 PI-ND2B 頁申報。公司秘書只需申報通訊地址，唔需要申報通常住址。"
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "要。董事嘅通常住址如有更改，必須填 ND2B 通知公司註冊處。不過董事嘅通常住址係受保護資料（唔會公開查閱），要用 PI-ND2B 頁申報。" }
       },
       {
         "@type": "Question",
         "name": "ND2B 表格要幾耐之前遞交？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "必須喺更改生效後 15 日內交付公司註冊處登記。呢 15 日係曆日（Calendar Days），即係星期六、日同公眾假期都計在內。逾期遞交可被檢控，最高罰款 HK$25,000 + 每日 HK$700 嘅失責罰款。"
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "必須喺更改生效後 15 日內交付公司註冊處登記。逾期遞交可被檢控，最高罰款 HK$25,000 + 每日 HK$700 嘅失責罰款。" }
       },
       {
         "@type": "Question",
-        "name": "ND2B 可以網上提交嗎？收唔收費？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "可以，而且免費。經公司註冊處嘅 e-Services Portal（www.e-services.cr.gov.hk）可以網上提交 ND2B。需要預先登記個人帳戶同訂閱 e-Filing Services（免費）。網上提交有即時確認通知，最快最可靠。紙本提交都係免費。"
-        }
+        "name": "ND2B 可以網上提交嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "可以。經公司註冊處嘅 e-Services Portal 可以網上提交 ND2B，需要預先登記 account 同有數碼證書。網上提交最快、有即時確認。" }
       },
       {
         "@type": "Question",
         "name": "公司秘書都要申報詳情更改嗎？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "要。公司秘書嘅詳情更改同樣要用 ND2B 申報，同樣係 15 日內。不過公司秘書只須申報通訊地址（Correspondence Address），唔需要申報通常住址。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "董事結婚後改姓，需要提交 ND2B 嗎？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "需要。更改姓名屬於「詳情更改」，須在 15 天內提交 ND2B，並附上證明文件（如結婚證書、新護照或身份證副本）。申報嘅姓名必須同香港身份證或護照上的姓名完全一致。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "ND2B 提交後發現填錯資料，可以修改嗎？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "可以。提交後如需修改，須提交另一份 ND2B（更正版本）或在公司註冊處要求的限期內提交補充文件。建議提交前再三核對所有資料，避免之後要更正咁麻煩。"
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "要。公司秘書嘅詳情更改同樣要用 ND2B 申報，不過公司秘書只須申報通訊地址（唔需要申報通常住址）。同樣係 15 日內申報。" }
       }
     ]
   }
   </script>
-
-  <!-- Organization Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -157,321 +109,223 @@
     "knowsLanguage": "zh-HK,en"
   }
   </script>
-
-  <!-- SiteNavigationElement Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SiteNavigationElement",
-    "name": [
-      "首頁",
-      "股份轉讓",
-      "公司改名",
-      "SCR",
-      "撤銷註冊",
-      "董事詳情更改",
-      "Blog"
-    ],
-    "url": [
-      "https://esgov.org/",
-      "https://esgov.org/share-transfer/",
-      "https://esgov.org/company-name-change/",
-      "https://esgov.org/significant-controllers-register/",
-      "https://esgov.org/deregistration/",
-      "https://esgov.org/director-particulars-change/",
-      "https://esgov.org/blog/"
-    ],
-    "position": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7
-    ]
+    "name": ["首頁","股份轉讓","公司改名","SCR","撤銷註冊","董事詳情更改","Blog"],
+    "url": ["https://esgov.org/","https://esgov.org/share-transfer/","https://esgov.org/company-name-change/","https://esgov.org/significant-controllers-register/","https://esgov.org/deregistration/","https://esgov.org/director-particulars-change/","https://esgov.org/blog/"],
+    "position": [1,2,3,4,5,6,7]
   }
   </script>
-
-  <!-- Speakable -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "speakable": {
-      "@type": "SpeakableSpecification",
-      "cssSelector": ["#step-content > div.bg-white.rounded-xl > p"]
-    },
+    "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["#step-content > div.bg-white.rounded-xl > p"] },
     "url": "https://esgov.org/director-particulars-change/"
   }
   </script>
-
-  <!-- Article Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "香港公司董事詳情更改完整指南 — ND2B 表格遞交教學",
-    "description": "董事更改個人資料（姓名、地址、身份證號碼）點申報？表格 ND2B 完整填寫教學，教你 15 日內向公司註冊處申報董事詳情更改，全部免費。",
-    "author": {
-      "@type": "Organization",
-      "name": "ESGov",
-      "url": "https://esgov.org"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ESGov",
-      "url": "https://esgov.org",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://esgov.org/assets/images/esgov-logo.png"
-      }
-    },
+    "description": "董事更改個人資料（姓名、地址、身份證號碼）點申報？表格 ND2B 完整填寫教學，15 日內申報，全部免費。",
+    "author": { "@type": "Organization", "name": "ESGov", "url": "https://esgov.org" },
+    "publisher": { "@type": "Organization", "name": "ESGov", "url": "https://esgov.org", "logo": { "@type": "ImageObject", "url": "https://esgov.org/assets/images/esgov-logo.png" } },
     "datePublished": "2026-07-08",
     "dateModified": "2026-07-08",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://esgov.org/director-particulars-change/"
-    }
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://esgov.org/director-particulars-change/" }
   }
   </script>
 </head>
 <body x-data="{
-  processData: null,
+  steps: [],
   currentStep: Number(new URLSearchParams(window.location.search).get('step')) || 1,
   totalSteps: 5,
   isLoading: false,
   error: null,
-  activeMobileTab: 1,
-  selectedDoc: null,
-  showOverlay: false,
   showDonate: false,
   showEmail: false,
   email: '',
   emailSubmitted: false,
-  _pendingDoc: null,
+  showOverlay: false,
+  selectedDoc: null,
 
   init() {
-    this.processData = {
-      processId: 'director-particulars-change',
-      title: '香港公司董事及公司秘書詳情更改完整指南',
-      totalSteps: 5,
-      freeSteps: 5,
-      price: 0,
-      currency: 'HKD',
-      donateMessage: '如果呢份指南幫到你，可以請我飲杯咖啡 ☕',
-      steps: [
-        {
-          stepNumber: 1,
-          title: '了解申報義務 — 咩情況要申報董事詳情更改',
-          summary: '了解公司註冊處對董事及公司秘書詳情更改嘅申報規定，確認申報責任',
-          isFree: true,
-          details: '📋 邊啲情況要用 ND2B？\\n\\n根據《公司條例》（第622章）第645(4)條（公司秘書登記冊）同第652(2)條（董事登記冊），公司必須喺董事或公司秘書嘅個人詳情有任何更改之後，15日內通知公司註冊處。呢個係法定責任，有刑事責任㗎！\\n\\n✅ ND2B 涵蓋嘅更改類型：\\n• 姓名更改 — 中英文名都得，但必須同身份證或護照完全一致\\n• 地址更改 — 董事申報通常住址（Usual Residential Address）；公司秘書只需申報通訊地址（Correspondence Address）\\n• 香港身份證號碼更改 — 例如換咗新智能身份證\\n• 護照號碼更改 — 如果冇香港身份證\\n• 身份（Capacity）更改 — 例如由董事轉做候補董事（Alternate Director）\\n• 法人團體董事/秘書嘅名稱、地址、身份更改\\n\\n一份 ND2B 可以同時申報多人嘅更改（用續頁 A 或 B），或者同一人多重身份嘅更改。\\n\\n🚫 唔適用 ND2B 嘅情況：\\n• 委任新董事/公司秘書（Appointment）→ 要用 ND2A\\n• 董事/公司秘書離職（Cessation）→ 要用 ND2A\\n• 備任董事（Reserve Director）提名或停任 → 要用 ND5\\n• 備任董事詳情更改 → 要用 ND7\\n• 公司註冊辦事處地址更改 → 要用 NR1\\n\\n⏰ 15日時限係硬規定：\\n• 由更改發生當日起計15個曆日（Calendar Days）\\n• 包括星期六、日同公眾假期\\n• 如果第15日係非工作日，最好提早一日交\\n\\n⚠️ 罰則認真㗎：\\n• 最高罰款 HK$25,000（每次違規）\\n• 每日違規罰款 HK$700（持續違規期間每日計）\\n• 公司同每名「責任人」（包括董事、公司秘書、經理）都可能被檢控\\n• 公司註冊處會出傳票（Summons），就算事後補交文件，傳票都唔會撤銷，公司都要派人出庭\\n\\n💡 真實經驗：好多公司以為公司秘書唔使申報地址更改，其實公司秘書嘅通訊地址更改一樣要報。另外，15日係曆日唔係工作日，好多人中招。建議喺公司日曆mark低所有deadline。',
-          documents: [
-            {
-              name: 'ND2B 官方表格（可填寫 PDF）',
-              description: '公司註冊處指明表格 ND2B「更改公司秘書及董事詳情通知書」。可直接喺電腦填寫，支援中英文版本。',
-              hasGenerator: false,
-              generatorUrl: 'https://www.cr.gov.hk/tc/companies_ordinance/docs/ND2B_fillable.pdf',
-              commonMistakes: [
-                '🚫 混淆 ND2B（更改詳情）同 ND2A（委任/停任）— 兩張表用途唔同',
-                '🚫 以為公司秘書唔使申報 — 公司秘書嘅通訊地址更改一樣要報',
-                '🚫 以為15日係工作日 — 錯，係曆日（Calendar Days），星期六日紅日都計',
-                '🚫 以為備任董事適用 ND2B — 其實要用 ND7'
-              ]
-            },
-            {
-              name: '公司註冊處董事及秘書 FAQ',
-              description: '公司註冊處官方常見問題集，涵蓋董事同公司秘書嘅申報要求、罰則、常見錯誤等。建議提交前睇一次。',
-              hasGenerator: false,
-              generatorUrl: 'https://www.cr.gov.hk/tc/faq/local-company/directors-secretary.htm',
-              commonMistakes: [
-                '🚫 冇睇清楚邊啲情況先要用 ND2B',
-                '🚫 冇留意 CR 可能會更新 FAQ 內容'
-              ]
-            },
-            {
-              name: '香港法例第622章《公司條例》',
-              description: '公司條例全文，第645(4)條及第652(2)條係 ND2B 嘅法律基礎。罰則詳見第652(6)條。',
-              hasGenerator: false,
-              generatorUrl: 'https://www.elegislation.gov.hk/hk/cap622',
-              commonMistakes: [
-                '🚫 冇了解清楚法律責任就亂填'
-              ]
-            }
-          ],
-          rejectionRisks: [
-            '⚠️ 逾期申報 — 最高罰款 HK$25,000 + 每日 HK$700',
-            '⚠️ 搞錯表格 — 用 ND2A 申報更改（或掉轉）',
-            '⚠️ 以為公司秘書唔使申報地址更改',
-            '⚠️ 冇計清楚15日曆日（以為係工作日）',
-            '⚠️ 備任董事用錯 ND2B（應使用 ND7）'
-          ]
-        },
-        {
-          stepNumber: 2,
-          title: '填寫 ND2B 表格 — 記錄更改後嘅董事資料',
-          summary: '填妥 ND2B「公司秘書及董事詳情更改通知書」，記錄更改後嘅詳情',
-          isFree: true,
-          details: '📝 ND2B 表格結構逐 Part 解構\\n\\nND2B 表格有幾個主要部分，搞清楚每部分填咩就唔會錯。\\n\\n🏢 Section 1：公司資料\\n• 公司名稱（中英文都要）\\n• 商業登記號碼（BR No.）— 只填首8位數字，「-」後面嘅數字唔使填\\n\\n👤 Section 2：自然人（Natural Person）嘅更改\\n呢部分分 A、B 兩部分：\\n\\n【A 部分：現時喺 CR 登記嘅詳情】\\n• Capacity（身份）：喺適用嘅方格打 ✓（公司秘書/董事/候補董事，可多選）\\n• 中文姓名：同香港身份證相同\\n• 英文姓名：Surname（姓氏）+ Other Names（名字）\\n• 香港身份證部分號碼：例如 A123456( ) — 只填部分號碼，完整號碼留返 PI-ND2B 頁\\n• 護照部分號碼：如果冇 HKID 先填\\n• 通訊地址（公司秘書）/ 通常住址（董事）\\n\\n【B 部分：更改詳情】\\n⚠️ 重點：只填報有更改嘅項目！「Please complete item(s) with change(s) only」\\n• 新中文姓名（如有更改）\\n• 新英文姓名（Surname / Other Names）\\n• 新身份（如有更改）\\n• 新通訊地址（公司秘書）/ 新通常住址（董事/候補董事）\\n• 新商業登記號碼（只適用法人團體）\\n\\n🏢 Section 3：法人團體（Body Corporate）嘅更改\\n• 同 Section 2 類似，但係為法人團體董事/秘書而設\\n\\n🔑 PI-ND2B 受保護資料頁（關鍵！）\\n呢頁超級重要，好多人漏咗：\\n• 用途：申報完整 HKID 號碼 + 通常住址\\n• 公眾查閱：❌ 唔會公開，只限「指明人士」查閱\\n• 每人一頁：每頁 PI-ND2B 只可填一名自然人\\n• 放置位置：所有 PI-ND2B 頁要放喺表格最後\\n• 公司秘書：只需要填身份證號碼，唔使填通常住址\\n\\n📌 地址要求重點：\\n• 董事：通常住址（Usual Residential Address），可為非香港地址\\n• 公司秘書：通訊地址（Correspondence Address），可為非香港地址\\n• 法人團體秘書：必須為香港地址\\n• ❌ 唔接受「轉交」地址（Care-of address）同郵政信箱號碼\\n\\n📌 語文要求：\\n• 劃一使用中文（繁體字）或英文，唔好中英夾雜\\n• 雙語表格必須一致使用同一語言\\n\\n💡 貼士：建議用電腦填寫 PDF，唔好手寫。公司註冊處有機會拒絕手寫表格。',
-          documents: [
-            {
-              name: 'ND2B 可填寫 PDF（中文版）',
-              description: '公司註冊處官方中文版 ND2B 表格，可直接喺電腦填寫及儲存。包含所有 Section 1-5 及 PI-ND2B 頁。',
-              hasGenerator: false,
-              generatorUrl: 'https://www.cr.gov.hk/tc/companies_ordinance/docs/ND2B_fillable.pdf',
-              commonMistakes: [
-                '🚫 主表格填完整身份證號碼 — 主表只填部分號碼，完整號碼要填喺 PI-ND2B',
-                '🚫 PI-ND2B 頁漏咗冇交 — 成份表格會被退回',
-                '🚫 地址用咗「轉交」地址或郵政信箱 — CR 唔接受',
-                '🚫 公司秘書填咗通常住址（唔需要）',
-                '🚫 中英文夾雜填寫 — 要劃一語言'
-              ]
-            },
-            {
-              name: 'ND2B 填寫樣本（Specimen）',
-              description: '公司註冊處提供嘅 ND2B 填寫樣本，可以跟住嚟填，唔驚填錯格式。',
-              hasGenerator: false,
-              generatorUrl: 'https://www.cr.gov.hk/tc/companies_ordinance/docs/ND2B_Specimen-c.pdf',
-              commonMistakes: [
-                '🚫 冇參考樣本就直接填 — 容易錯格式',
-                '🚫 唔清楚部分號碼同完整號碼嘅分別'
-              ]
-            },
-            {
-              name: 'PI-ND2B 受保護資料頁',
-              description: '受保護資料頁（Protected Information Sheet），用嚟申報完整香港身份證號碼及通常住址。呢頁資料唔會公開查閱。',
-              hasGenerator: false,
-              generatorUrl: 'https://www.cr.gov.hk/tc/companies_ordinance/docs/ND2B_fillable.pdf',
-              commonMistakes: [
-                '🚫 一張 PI-ND2B 填咗多個人 — 每人要獨立一頁',
-                '🚫 公司秘書填咗通常住址（唔需要）',
-                '🚫 冇將 PI-ND2B 放喺表格最後'
-              ]
-            }
-          ],
-          rejectionRisks: [
-            '⚠️ 姓名同身份證唔一致 — 公司註冊處會退回表格',
-            '⚠️ 漏咗 PI-ND2B 頁 — 成份表唔完整，會被退回',
-            '⚠️ 地址用錯類型（秘書填住址 / 董事填錯地址類型）',
-            '⚠️ 主表填咗完整身份證號碼（應該填部分號碼）',
-            '⚠️ 中英文夾雜填寫 — CR 要求劃一語言',
-            '⚠️ 手寫表格字跡潦草 — CR 可能拒絕接受'
-          ]
-        },
-        {
-          stepNumber: 3,
-          title: '董事簽署 ND2B — 由董事或公司秘書簽署',
-          summary: 'ND2B 必須由董事或公司秘書簽署確認，了解簽署要求同電子簽署方法',
-          isFree: true,
-          details: '✍️ 邊個可以簽 ND2B？\\n\\n根據表格註釋：「本表格必須由一名董事或公司秘書簽署。」\\n\\n✅ 可以簽署嘅人：\\n• 董事（任何一位董事都得）\\n• 公司秘書（任何一位聯名公司秘書都得）\\n\\n❌ 唔可以簽署嘅人：\\n• 經理（除非佢同時係董事/秘書）\\n• 會計師（除非佢同時係董事/秘書）\\n• 律師（除非佢同時係董事/秘書）\\n• 股東（除非佢同時係董事/秘書）\\n\\n簡單講：一定要係董事或者公司秘書身份先簽得。\\n\\n📱 電子簽署（推薦）\\n經 e-Services Portal 提交嘅話：\\n1. 去 https://www.e-services.cr.gov.hk 登記個人帳戶\\n2. 登記需要身份證明文件（HKID/護照）\\n3. 訂閱 e-Filing Services（免費）\\n4. 用數碼證書（e-Cert 或 iAM Smart）可以即時完成登記\\n5. 提交認證文件副本需時4-5個工作天，或者親身去 CR 即時辦妥\\n6. 提交表格時，用已登記嘅個人用戶身份進行電子簽署\\n\\n好處：24/7 做到、即時確認、環保、唔怕寄失。\\n\\n📄 紙本簽署\\n• 必須係正本簽名（Original Signature）\\n• 唔接受傳真副本或者掃描打印版\\n• CR 唔會接受未簽妥嘅表格\\n\\n提交方式：\\n• 郵寄：金鐘道66號金鐘道政府合署14樓公司註冊處\\n• 親身交付：同上址14樓收款處\\n\\n⚠️ 郵寄風險：如果 CR 冇收到郵件，該表格唔會視作已交付。建議用掛號郵件（Registered Mail）保留送達證明。\\n\\n💡 真實經驗：如果你係用 e-Filing，簽署過程好簡單直接。紙本嘅話，留意公司註冊處辦公時間（星期一至五 8:30-12:30, 2:00-5:30），星期六日公眾假期休息。',
-          documents: [
-            {
-              name: 'e-Services Portal 用戶登記指南',
-              description: '公司註冊處電子服務網站，登記個人帳戶後可以網上提交 ND2B、獲取即時確認。支援 24/7 全天候服務。',
-              hasGenerator: false,
-              generatorUrl: 'https://www.cr.gov.hk/tc/electronic/e-servicesportal/user_registration.htm',
-              commonMistakes: [
-                '🚫 冇預先登記帳戶就諗住即時電子提交',
-                '🚫 用咗公司帳戶但冇個人簽署授權',
-                '🚫 登記時提交嘅證明文件唔清晰，被延誤審批'
-              ]
-            },
-            {
-              name: 'ND2B 簽署指引（表格註釋）',
-              description: 'ND2B 表格內附嘅 Notes for Completion，清楚列明簽署要求同邊個可以簽署。建議填表前先睇一次。',
-              hasGenerator: false,
-              generatorUrl: 'https://www.cr.gov.hk/tc/companies_ordinance/docs/ND2B_fillable.pdf',
-              commonMistakes: [
-                '🚫 搵咗唔合資格嘅人簽署（例如經理、會計師）',
-                '🚫 紙本提交咗簽名副本唔係正本'
-              ]
-            }
-          ],
-          rejectionRisks: [
-            '⚠️ 簽署人唔符合資格（唔係董事或公司秘書）— 表格會被退回',
-            '⚠️ 紙本提交冇正本簽名 — CR 唔接受掃描/傳真副本',
-            '⚠️ 郵寄遺失 — 表格唔當作已交付，建議用掛號或電子提交',
-            '⚠️ e-Services Portal 帳戶未注册好就趕住提交'
-          ]
-        },
-        {
-          stepNumber: 4,
-          title: '遞交公司註冊處 — 15 日內完成登記',
-          summary: '將已簽署嘅 ND2B 遞交公司註冊處登記，確認收到',
-          isFree: true,
-          details: '🚀 遞交方式揀邊種好？\\n\\n遞交 ND2B 有兩種方式，幫你分析利弊：\\n\\n【Option A：電子提交 e-Filing】✅ 強烈推薦\\n• 平台：https://www.e-services.cr.gov.hk\\n• 費用：免費\\n• 可用時間：24/7 全天候\\n• 處理時間：即時至1個工作天內完成登記\\n• 簽署方式：以已登記嘅個人用戶身份電子簽署\\n• 確認方式：系統即時發出確認通知（Acknowledgement）\\n• 可以儲存草稿（Draft）之後先提交\\n\\n優點：最快最可靠，有即時確認，唔怕寄失。\\n\\n【Option B：紙本提交】\\n• 郵寄：金鐘道66號金鐘道政府合署14樓公司註冊處\\n• 親身交付：同上址14樓收款處\\n• 費用：免費\\n• 處理時間：約4-7個工作天（取決於郵遞時間及 CR 工作量）\\n• 確認方式：CR 唔會個別發出確認收件通知\\n\\n⚠️ 郵寄風險：如果 CR 收唔到郵件，表格唔當作已交付。建議用掛號郵件。\\n\\n⏱️ 計時方法：\\n由更改發生當日起計15日。例如：\\n• 董事1月1日搬屋 → 1月16日或之前要交表\\n• 第15日係星期六/日/紅日 → 最好提早交\\n\\n🔍 遞交後嘅流程：\\n1. CR 收到後會更新公司嘅公開登記冊\\n2. 公眾可以透過 e-Services Portal 嘅查冊服務查閱更新嘅資料（受保護資料除外）\\n3. 受保護資料（完整身份證號碼、通常住址）唔會公開\\n\\n💡 真實經驗：電子提交真係方便好多，尤其係最後一刻先記得要交表嘅時候。親身去 CR 嘅話，記得帶齊所有文件，同埋預留排隊時間。',
-          documents: [
-            {
-              name: 'e-Services Portal (提交平台)',
-              description: '公司註冊處電子提交平台，24/7 可以網上遞交 ND2B。需要預先登記個人帳戶同訂閱 e-Filing Services（免費）。',
-              hasGenerator: false,
-              generatorUrl: 'https://www.e-services.cr.gov.hk',
-              commonMistakes: [
-                '🚫 臨急先登記帳戶 — 登記需時處理，建議提早辦好',
-                '🚫 唔記得 save 草稿 — 填到一半可以儲存草稿下次繼續',
-                '🚫 提交後冇保留確認通知 — 建議下載保存 Acknowledgement'
-              ]
-            },
-            {
-              name: 'IRC3111A 商業登記地址更改表格',
-              description: '如果董事地址更改同時涉及公司商業登記地址更改，需要另外向稅務局商業登記署提交 IRC3111A（1個月內申報）。ND2B 同 IRC3111A 係兩個獨立程序。',
-              hasGenerator: false,
-              generatorUrl: 'https://www.ird.gov.hk/chi/pdf/irc3111a.pdf',
-              commonMistakes: [
-                '🚫 以為 ND2B 交咗就等於通知咗 IRD — 兩個部門獨立運作',
-                '🚫 搞亂董事地址更改同公司註冊地址更改'
-              ]
-            }
-          ],
-          rejectionRisks: [
-            '⚠️ 遞交後冇保留確認 — 日後難以證明已按時申報',
-            '⚠️ 郵寄遺失 — CR 冇收到就當冇交過，建議用掛號或電子方式',
-            '⚠️ 超過15日先交 — 即使 CR 受理，仍保留檢控權利',
-            '⚠️ 冇附上 PI-ND2B 頁 — 整份表格被視為不完整'
-          ]
-        },
-        {
-          stepNumber: 5,
-          title: '更新公司內部紀錄 — 董事名冊、商業登記等',
-          summary: '同步更新公司內部嘅董事名冊、公司秘書名冊及其他相關紀錄',
-          isFree: true,
-          details: '📋 交完 ND2B 唔係就完事！仲有內部嘢要跟進\\n\\n好多公司以為交咗 ND2B 俾公司註冊處就搞掂，其實仲有幾樣內部紀錄要同步更新：\\n\\n1️⃣ 董事登記冊（Register of Directors）— 法定必須！\\n根據《公司條例》，公司必須備存董事登記冊，記錄所有董事嘅詳情。提交 ND2B 後，必須同步更新呢本冊。\\n• 記錄新嘅姓名、地址、身份證號碼\\n• 保存地點必須係公司嘅註冊辦事處或指定地點\\n\\n2️⃣ 公司秘書登記冊（Register of Company Secretaries）\\n如果更改涉及公司秘書，都要同步更新。\\n\\n3️⃣ 銀行紀錄 🏦\\n如果董事姓名更改，一定要通知公司銀行：\\n• 更新簽名人授權（Signatory）\\n• 提交新嘅董事身份證明文件\\n• 部分銀行可能需要董事親身去分行辦理\\n\\n4️⃣ 商業登記（BR）地址 🏢\\n⚠️ 重要區別：董事個人地址更改（ND2B）同商業登記地址更改（IRC3111A）係兩個獨立程序！\\n• 如果只係董事個人地址改，唔需要通知 IRD\\n• 但如果公司商業登記地址改，就要用 IRC3111A 向稅務局申報（1個月內）\\n\\n5️⃣ 公司印章、名片、網站等\\n如果董事改名：\\n• 公司印章（Company Chop）可能要重新造\\n• 名片、網站、公司簡介等嘅董事資料要更新\\n• 通知合作夥伴、供應商、客戶\\n\\n6️⃣ 其他政府部門\\n• 如果董事嘅身份證號碼或姓名更改，可能都需要通知其他相關部門（如海关、牌照機構等）\\n\\n💡 真實經驗：好多公司忽略咗銀行通知呢一步。試過有 case 係董事改咗名但銀行唔知，結果開支票俾銀行退返。另外，董事登記冊係法定文件，CR 查冊時可以要求查閱，一定要 keep 得準確。',
-          documents: [
-            {
-              name: '董事登記冊範本',
-              description: '公司內部董事登記冊（Register of Directors）嘅標準格式。記錄董事姓名、地址、身份證號碼、委任日期等資料。必須保存喺公司註冊辦事處。',
-              hasGenerator: false,
-              generatorUrl: '',
-              commonMistakes: [
-                '🚫 交咗 ND2B 但冇更新公司內部董事登記冊 — 違反公司條例',
-                '🚫 董事登記冊保存地點唔正確',
-                '🚫 冇紀錄更新日期同原因'
-              ]
-            },
-            {
-              name: 'IRC3111A 商業登記地址更改表格',
-              description: '如公司商業登記地址有更改，須喺1個月內向稅務局商業登記署提交 IRC3111A 表格。注意：ND2B 同 IRC3111A 係兩個獨立申報程序。',
-              hasGenerator: false,
-              generatorUrl: 'https://www.ird.gov.hk/chi/pdf/irc3111a.pdf',
-              commonMistakes: [
-                '🚫 以為 ND2B 交咗就自動通知 IRD — 唔會㗎',
-                '🚫 搞亂董事個人地址更改同公司商業登記地址更改'
-              ]
-            }
-          ],
-          rejectionRisks: [
-            '⚠️ 公司內部紀錄（董事名冊）冇同步更新 — 查冊時資料不一致，影響公司形象',
-            '⚠️ 銀行簽名人授權冇更新 — 支票/轉賬可能被銀行拒絕',
-            '⚠️ 商業登記（BR）地址同實際唔符 — 政府信件（稅局、CR）收唔到',
-            '⚠️ 董事姓名改咗但公司印章仲係舊名 — 合約簽署有問題'
-          ]
-        }
-      ]
-    };
+    this.steps = [
+      {
+        stepNumber: 1,
+        title: '了解申報義務 — 咩情況要申報董事詳情更改',
+        summary: '了解公司註冊處對董事及公司秘書詳情更改嘅申報規定，確認申報責任',
+        isFree: true,
+        details: '第一步：搞清楚咩情況下要申報董事同公司秘書嘅詳情更改。根據《公司條例》（第622章）第 645(4) 條同第 652(2) 條，公司必須喺董事或公司秘書嘅詳情有任何更改後 15 日內，通知公司註冊處。\n\n✅ 需要用 ND2B 申報嘅更改包括：\n• 董事姓名更改（中英文姓名變更，須同身份證/護照一致）\n• 董事通常住址更改（搬屋要 update）\n• 董事香港身份證號碼更改（如換身份證）\n• 董事護照號碼更改（如換護照）\n• 董事身份（Capacity）更改（如由董事轉為候補董事）\n• 公司秘書姓名更改\n• 公司秘書通訊地址更改（注意：秘書只需申報通訊地址，唔係通常住址）\n\n👤 適用對象包括：\n• 自然人董事\n• 法人團體董事（Body Corporate Director）\n• 候補董事（Alternate Director）\n• 公司秘書或聯名公司秘書\n\n🚫 唔適用 ND2B 嘅情況：\n• 委任新董事／秘書 → 用 ND2A\n• 董事／秘書停任 → 用 ND2A\n• 註冊辦事處地址更改 → 用 NR1\n• 備任董事（Reserve Director）詳情更改 → 用 ND7\n\n⏰ 鐵則：更改後 15 日（日曆日，唔係工作天）內一定要遞交 ND2B！過了 deadline 就係犯法。日數由更改生效日（Effective Date）嘅翌日起計。例如 7 月 1 日搬屋，最遲 7 月 16 日要交表。\n\n⚠️ 逾期罰則：\n• 最高罰款 HK$25,000\n• 持續失責每日罰款 HK$700\n• 公司同每名失責董事均可被檢控\n\n🕐 預計時間：了解規定 + 準備文件約 1-3 日\n\n✅ 一定要做：\n• 確認更改類型係咪屬於 ND2B 範圍\n• 記錄更改生效日期，mark 低 15 日 deadline\n• 如果係委任或停任，用 ND2A 唔係 ND2B',
+        documents: [
+          {
+            name: 'ND2B 官方表格（可填寫 PDF）',
+            description: '公司秘書及董事詳情更改通知書，公司註冊處指明表格。必須喺更改後 15 日內提交。可經 e-Services Portal 網上遞交。',
+            hasGenerator: false,
+            generatorUrl: 'https://www.cr.gov.hk/en/companies_ordinance/docs/ND2B_fillable.pdf',
+            commonMistakes: ['用錯表格 — 委任用 ND2A 唔係 ND2B', '逾期遞交 — 超過 15 日 deadline', '填錯公司名 — 要同商業登記證 100% 一致']
+          },
+          {
+            name: '公司註冊處董事及秘書 FAQ',
+            description: '公司註冊處官網 FAQ，解答董事及秘書相關嘅申報問題，包括 ND2A、ND2B、ND4、ND5、ND7 嘅使用時機。',
+            hasGenerator: false,
+            generatorUrl: 'https://www.cr.gov.hk/tc/faq/local-company/directors-secretary.htm',
+            commonMistakes: ['冇參考 FAQ 直接用錯表格', '唔知公司秘書只需申報通訊地址']
+          },
+          {
+            name: '香港法例第622章《公司條例》',
+            description: '公司條例第 645(4) 及 652(2) 條，列明公司秘書及董事詳情更改嘅申報規定及罰則。',
+            hasGenerator: false,
+            generatorUrl: 'https://www.elegislation.gov.hk/hk/cap622',
+            commonMistakes: ['唔熟法律條文 — 唔知申報責任同罰則']
+          }
+        ],
+        rejectionRisks: [
+          '逾期申報 — 最高罰款 HK$25,000 + 每日 HK$700',
+          '用錯表格（ND2A vs ND2B）— 公司註冊處會退回',
+          '冇申報董事地址更改 — 公司紀錄唔準確，影響查冊',
+          '以為秘書地址同董事一樣要報住址 — 秘書只需通訊地址',
+          '生效日期同文件日期唔一致 — 紀錄混亂'
+        ]
+      },
+      {
+        stepNumber: 2,
+        title: '填寫 ND2B 表格 — 記錄更改後嘅董事資料',
+        summary: '填妥 ND2B「公司秘書及董事詳情更改通知書」，記錄更改後嘅詳情',
+        isFree: true,
+        details: '第二步：填寫 ND2B 表格。呢份係公司註冊處嘅指明表格，用嚟申報董事或公司秘書嘅詳情更改。\n\n📝 ND2B 表格結構：\n\n【第 1 部分 — 公司資料】\n• 公司名稱（同商業登記證 100% 一致，包括 Limited）\n• 公司註冊編號（CR No.）\n• 商業登記號碼（BR No.）\n\n【第 2 部分 — 更改類別（Part A）】\n揀選邊啲詳情有更改：\n• □ 名稱更改（Name Change）\n• □ 通訊地址更改（Correspondence Address Change）\n• □ 通常住址更改（Usual Residential Address Change）— 只適用於自然人董事\n• □ 身份證或護照號碼更改\n• □ 身份（Capacity）更改\n\n【第 3 部分 — 更改類別（Part B）】\n只適用於法人團體董事：\n• □ 名稱更改\n• □ 註冊辦事處或主要辦事處地址更改\n\n【第 4 部分 — 新詳情】\n填寫更改後嘅新資料，必須同身份證/護照/商業登記證一致。\n\n【第 5 部分 — 簽署】\n由董事或公司秘書簽署。\n\n🔒 關於 PI-ND2B（受保護資料頁）\n董事嘅完整香港身份證號碼及通常住址係受保護資料，唔會供公眾查閱。呢啲資料要用獨立嘅 PI-ND2B 頁申報：\n• 每張 PI-ND2B 只可以填報一名自然人嘅資料\n• 如果多過一名董事更改地址，每人要獨立一頁\n• PI-ND2B 必須放喺 ND2B 主表嘅最後\n\n⚠️ 重要貼士：\n• 主表（ND2B）只填身份證/護照嘅「部分號碼」（Partial Number）— 即頭 3-4 個字\n• 完整號碼先填喺 PI-ND2B 頁\n• 可揀中文或英文填寫，但唔可以中英夾雜\n• 手寫表格字跡必須清晰，否則 CR 可能拒絕接受\n\n🕐 預計時間：約 30 分鐘 - 1 小時（視乎資料齊全程度）\n\n✅ 一定要做：\n• 核對所有新資料同身份證明文件 100% 一致\n• 如適用，填妥 PI-ND2B 頁\n• 如果多過一人更改，每人用獨立 ND2B + PI-ND2B',
+        documents: [
+          {
+            name: 'ND2B 官方表格（可填寫 PDF）',
+            description: '公司秘書及董事詳情更改通知書。可喺電腦直接填寫。建議先 download 樣本睇清楚格式先開始填。',
+            hasGenerator: false,
+            generatorUrl: 'https://www.cr.gov.hk/en/companies_ordinance/docs/ND2B_fillable.pdf',
+            commonMistakes: ['冇參考樣本就直接填 — 容易錯格式', '唔清楚部分號碼同完整號碼嘅分別']
+          },
+          {
+            name: 'PI-ND2B 受保護資料頁',
+            description: '受保護資料頁（Protected Information Sheet），用嚟申報完整香港身份證號碼及通常住址。呢頁資料唔會公開查閱。',
+            hasGenerator: false,
+            generatorUrl: 'https://www.cr.gov.hk/tc/companies_ordinance/docs/ND2B_fillable.pdf',
+            commonMistakes: ['一張 PI-ND2B 填咗多個人 — 每人要獨立一頁', '公司秘書填咗通常住址（唔需要）', '冇將 PI-ND2B 放喺表格最後']
+          }
+        ],
+        rejectionRisks: [
+          '姓名同身份證唔一致 — 公司註冊處會退回表格',
+          '漏咗 PI-ND2B 頁 — 成份表唔完整，會被退回',
+          '地址用錯類型（秘書填住址 / 董事填錯地址類型）',
+          '主表填咗完整身份證號碼（應該填部分號碼）',
+          '中英文夾雜填寫 — CR 要求劃一語言',
+          '手寫表格字跡潦草 — CR 可能拒絕接受'
+        ]
+      },
+      {
+        stepNumber: 3,
+        title: '董事簽署 ND2B — 由董事或公司秘書簽署',
+        summary: 'ND2B 必須由董事或公司秘書簽署確認，了解簽署要求同電子簽署方法',
+        isFree: true,
+        details: '✍️ 邊個可以簽 ND2B？\n\n根據表格註釋：「本表格必須由一名董事或公司秘書簽署。」\n\n✅ 可以簽署嘅人：\n• 董事（任何一位董事都得）\n• 公司秘書（任何一位聯名公司秘書都得）\n\n❌ 唔可以簽署嘅人：\n• 經理（除非佢同時係董事/秘書）\n• 會計師（除非佢同時係董事/秘書）\n• 律師（除非佢同時係董事/秘書）\n• 股東（除非佢同時係董事/秘書）\n\n簡單講：一定要係董事或者公司秘書身份先簽得。\n\n📱 電子簽署（推薦）\n經 e-Services Portal 提交嘅話：\n1. 去 https://www.e-services.cr.gov.hk 登記個人帳戶\n2. 登記需要身份證明文件（HKID/護照）\n3. 訂閱 e-Filing Services（免費）\n4. 用數碼證書（e-Cert 或 iAM Smart）可以即時完成登記\n5. 提交認證文件副本需時 4-5 個工作天，或者親身去 CR 即時辦妥\n6. 提交表格時，用已登記嘅個人用戶身份進行電子簽署\n\n好處：24/7 做到、即時確認、環保、唔怕寄失。\n\n📄 紙本簽署\n• 必須係正本簽名（Original Signature）\n• 唔接受傳真副本或者掃描打印版\n• CR 唔會接受未簽妥嘅表格\n\n提交方式：\n• 郵寄：金鐘道 66 號金鐘道政府合署 14 樓公司註冊處\n• 親身交付：同上址 14 樓收款處\n\n⚠️ 郵寄風險：如果 CR 冇收到郵件，該表格唔會視作已交付。建議用掛號郵件（Registered Mail）保留送達證明。\n\n💡 真實經驗：如果你係用 e-Filing，簽署過程好簡單直接。紙本嘅話，留意公司註冊處辦公時間（星期一至五 8:30-12:30, 2:00-5:30），星期六日公眾假期休息。',
+        documents: [
+          {
+            name: 'e-Services Portal 用戶登記指南',
+            description: '公司註冊處電子服務網站，登記個人帳戶後可以網上提交 ND2B、獲取即時確認。支援 24/7 全天候服務。',
+            hasGenerator: false,
+            generatorUrl: 'https://www.cr.gov.hk/tc/electronic/e-servicesportal/user_registration.htm',
+            commonMistakes: ['冇預先登記帳戶就諗住即時電子提交', '唔知要數碼證書（e-Cert / iAM Smart）先簽到名']
+          },
+          {
+            name: '公司註冊處辦公時間及地址',
+            description: '親身遞交表格嘅辦公時間、地址同繳費方式。',
+            hasGenerator: false,
+            generatorUrl: 'https://www.cr.gov.hk/tc/contact/office.htm',
+            commonMistakes: ['過咗辦公時間先去 CR', '郵寄冇用掛號 — 寄失咗冇證明']
+          }
+        ],
+        rejectionRisks: [
+          '簽署人唔符合資格 — 表格會被退回',
+          '紙本簽名用咗掃描版 — CR 唔接受非正本',
+          '手寫表格字跡潦草 — 公司註冊處可能拒絕接受',
+          '冇保留遞交證明 — 日後難以證明已按時申報'
+        ]
+      },
+      {
+        stepNumber: 4,
+        title: '遞交公司註冊處 — 15 日內完成登記',
+        summary: '將已簽署嘅 ND2B 遞交公司註冊處登記，確認收到',
+        isFree: true,
+        details: '第四步：將已簽署嘅 ND2B 遞交公司註冊處，完成法定申報。\n\n📮 遞交方式對比：\n\n【網上提交（推薦）】\n• 平台：e-Services Portal（www.e-services.cr.gov.hk）\n• 費用：免費\n• 處理時間：即時確認\n• 好處：24/7、有提交記錄、環保\n• 需要：已登記帳戶 + 數碼證書\n\n【郵寄提交】\n• 地址：金鐘道 66 號金鐘道政府合署 14 樓公司註冊處\n• 費用：免費（ND2B 毋須繳費）\n• 處理時間：約 4-5 個工作天\n• 風險：郵寄遺失 — 建議用掛號郵件（Registered Mail）\n\n【親身提交】\n• 地址：同上 14 樓收款處\n• 辦公時間：星期一至五 8:30-12:30, 2:00-5:30\n• 費用：免費\n• 好處：即時有收件蓋章\n\n⏱️ 時限計算例子：\n• 董事 7 月 1 日搬屋 → 最遲 7 月 16 日要遞交\n• 7 月 16 日係星期六 → 最遲下星期一（7 月 18 日）都要交\n• 以 CR 收到日期為準，唔係寄出日期\n\n📄 提交後會收到：\n• 電子提交：即時確認通知（Email + Portal 記錄）\n• 紙本提交：CR 嘅收件蓋章副本（建議保留）\n\n✅ 一定要做：\n• 保留遞交證明（確認電郵 / 收件蓋章）\n• Mark 低提交日期喺公司日誌\n• 如用郵寄，用掛號 + 保留郵寄證明',
+        documents: [
+          {
+            name: '公司註冊處 e-Services Portal',
+            description: '一站式電子服務平台，可以網上提交 ND2B 及其他指明表格。24/7 運作，即時確認。',
+            hasGenerator: false,
+            generatorUrl: 'https://www.e-services.cr.gov.hk/',
+            commonMistakes: ['冇預先開 account 就 submit 唔到', '唔記得保留確認電郵']
+          },
+          {
+            name: 'IRC3111A 更改業務地址通知書',
+            description: '如果董事地址更改同時係公司嘅業務地址，要向商業登記署申報。注意：ND2B 係俾公司註冊處，IRC3111A 係俾稅局。',
+            hasGenerator: false,
+            generatorUrl: 'https://www.ird.gov.hk/tc/tax/dvs.htm',
+            commonMistakes: ['以為 ND2B 就等於報咗稅局', '唔知 IRC3111A 係另外嘅程序']
+          }
+        ],
+        rejectionRisks: [
+          '遞交後冇保留確認 — 日後難以證明已按時申報',
+          '郵寄遺失 — 建議用掛號或電子方式提交',
+          '以為 15 日係工作天 — 係日曆日，星期六日都計',
+          '用咗過期表格版本 — 一定要用 CR 官網最新版本'
+        ]
+      },
+      {
+        stepNumber: 5,
+        title: '更新公司內部紀錄 — 董事名冊、商業登記等',
+        summary: '同步更新公司內部嘅董事名冊及其他相關紀錄',
+        isFree: true,
+        details: '第五步：遞交 ND2B 俾公司註冊處之後，記得同步更新公司內部嘅紀錄。呢步好重要但成日被人忽略。\n\n📋 需要更新嘅紀錄：\n\n【1️⃣ 董事名冊（Register of Directors）】\n• 根據《公司條例》第 641 條，公司必須備存董事名冊\n• 名冊必須載有每位董事嘅最新姓名、地址、身份證號碼\n• 更改後要即時更新名冊\n• 名冊必須保存喺公司嘅註冊辦事處或指定位址\n\n【2️⃣ 公司秘書名冊（Register of Secretaries）】\n• 同樣需要更新\n• 如公司秘書嘅通訊地址有更改，記得 update\n\n【3️⃣ 銀行紀錄】\n• 通知公司嘅銀行更新董事簽署授權\n• 董事改名或換身份證號碼，銀行要更新 KYC 紀錄\n• 部分銀行可能需要董事親身去分行辦理\n\n【4️⃣ 商業登記（BR）— 如適用】\n• 如果係公司嘅業務地址（註冊辦事處）有更改，要另外用 IRC3111A 通知商業登記署\n• ND2B 係報公司註冊處，BR 地址更改係報稅局，兩回事\n\n【5️⃣ 公司印章／文件】\n• 如董事姓名更改，需更新公司授權簽署安排\n• 如有公司網站或業務文件顯示董事資料，同步更新\n\n⚠️ 常見中伏位：\n• 以爲遞交 ND2B 俾 CR 就等於自動更新咗所有紀錄 — 錯！銀行同稅局要另外通知\n• 以爲董事名冊可以求其放 — 法定要求必須備存喺指定地點\n\n✅ 一定要做：\n• 更新公司董事名冊同秘書名冊\n• 通知銀行更新 KYC 紀錄\n• 如業務地址有變，另外用 IRC3111A 通知稅局\n• 檢查公司網站同文件有冇顯示舊資料',
+        documents: [
+          {
+            name: '公司內部紀錄更新 Checklist',
+            description: '遞交 ND2B 後需要更新嘅公司紀錄清單：董事名冊、秘書名冊、銀行 KYC、商業登記（如適用）。',
+            hasGenerator: false,
+            commonMistakes: ['以為遞交 CR 就搞掂晒 — 銀行同稅局要另外通知', '冇更新董事名冊 — 查冊時顯示舊資料']
+          }
+        ],
+        rejectionRisks: [
+          '公司內部紀錄冇更新 — 查冊時顯示舊資料，影響公司形象',
+          '地址更改冇報稅局 — BR 地址同實際不符，政府信件收唔到',
+          '銀行 KYC 未更新 — 被銀行凍結戶口或限制交易',
+          '董事名冊冇備存喺指定地點 — 違反公司條例規定'
+        ]
+      }
+    ];
+    // Auto init
   },
 
-  // 切換步驟
+  getStepIcon(step) {
+    const icons = ['📄','📄','✍️','📮','📋'];
+    return icons[step.stepNumber - 1] || '📄';
+  },
+
+  openDonate() {
+    this.showDonate = true;
+  },
+
+  openEmail() {
+    this.showEmail = true;
+  },
+
+  submitEmail() {
+    if (!this.email.includes('@')) return;
+    this.emailSubmitted = true;
+    this.email = '';
+    // Could add API call here
+  },
+
   goToStep(step) {
     if (step < 1 || step > this.totalSteps) return;
     this.currentStep = step;
@@ -479,7 +333,6 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   },
 
-  // 開文件 overlay
   openDoc(doc) {
     if (!doc) return;
     this.selectedDoc = doc;
@@ -487,22 +340,15 @@
     document.body.style.overflow = 'hidden';
   },
 
-  // 閂文件 overlay
   closeDoc() {
     this.showOverlay = false;
     this.selectedDoc = null;
     document.body.style.overflow = '';
-  },
-
-  // 當前 step 資料
-  get currentStepData() {
-    if (!this.processData || !this.processData.steps) return null;
-    return this.processData.steps.find(s => s.stepNumber === this.currentStep) || null;
   }
 }"
 >
   <!-- Sticky Header -->
-  <div class="sticky-header bg-navy text-white shadow-lg" x-init="init()">
+  <div class="sticky-header bg-navy text-white shadow-lg">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex items-center justify-between h-12 sm:h-16">
         <a href="/" class="flex items-center gap-2.5 shrink-0"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
@@ -520,7 +366,7 @@
       <div class="max-w-3xl">
         <div class="flex flex-wrap gap-2 mb-4">
           <span class="inline-flex items-center gap-1 text-xs bg-gold/20 text-gold font-medium px-3 py-1 rounded-full border border-gold/30">📋 ND2B 表格</span>
-          <span class="inline-flex items-center gap-1 text-xs bg-white/10 text-white/80 font-medium px-3 py-1 rounded-full">免費 🆓</span>
+          <span class="inline-flex items-center gap-1 text-xs bg-white/10 text-white/80 font-medium px-3 py-1 rounded-full">🆓 免費</span>
         </div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold gov-heading leading-tight mb-4">
           香港公司<span class="text-gold">董事及公司秘書</span>詳情更改完整指南
@@ -532,251 +378,326 @@
     </div>
   </section>
 
-  <!-- Quick Overview -->
-  <div class="bg-white border-b border-gray-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="text-center p-3 rounded-xl bg-gray-50">
-          <div class="text-lg sm:text-2xl font-bold text-gold">5</div>
-          <div class="text-xs sm:text-sm text-gray-500">步驟</div>
-        </div>
-        <div class="text-center p-3 rounded-xl bg-gray-50">
-          <div class="text-lg sm:text-2xl font-bold text-gold">15 日</div>
-          <div class="text-xs sm:text-sm text-gray-500">申報時限</div>
-        </div>
-        <div class="text-center p-3 rounded-xl bg-gray-50">
-          <div class="text-lg sm:text-2xl font-bold text-gold">免費</div>
-          <div class="text-xs sm:text-sm text-gray-500">ND2B 費用</div>
-        </div>
-        <div class="text-center p-3 rounded-xl bg-gray-50">
-          <div class="text-lg sm:text-2xl font-bold text-gold">ND2B</div>
-          <div class="text-xs sm:text-sm text-gray-500">指定表格</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TL;DR -->
-  <div class="bg-blue-50 border-l-4 border-blue-400 rounded-r-xl p-3 mb-6 text-sm text-gray-700 leading-relaxed max-w-4xl mx-auto">
-    <strong class="text-navy">💡 TL;DR：</strong>董事改名、搬屋或換身份證，必須喺 15 日內用 ND2B 通知公司註冊處。ND2B 涵蓋董事同公司秘書嘅姓名、地址、身份證號碼同身份更改。表格免費，可經 e-Services Portal 網上提交（推薦，有即時確認）或郵寄紙本。公司秘書同樣適用，但只需申報通訊地址。逾期最高罰 HK$25,000 + 每日 HK$700。委任或停任董事要用 ND2A 唔係 ND2B，記得用啱表格。
-  </div>
-
-  <main class="bg-white" x-init="init()">
+  <main class="bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div class="lg:flex lg:gap-8" id="step-content">
+      <div class="lg:flex lg:gap-8">
 
         <!-- Sidebar (desktop) -->
         <aside class="hidden lg:block w-64 shrink-0">
           <nav class="sticky top-32">
-            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 px-4">全部步驟（免費 🆓）</div>
-            <template x-for="step in processData?.steps || []" :key="step.stepNumber">
-              <button @click="goToStep(step.stepNumber)"
-                :class="currentStep === step.stepNumber ? 'bg-gold/10 border-gold text-navy font-semibold' : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-200'"
-                class="w-full text-left px-4 py-2.5 rounded-lg text-sm transition-all duration-200 border-l-2 flex items-center gap-2.5 mb-1">
-                <span :class="currentStep === step.stepNumber ? 'bg-gold text-white' : 'bg-gray-200 text-gray-500'" class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0" x-text="'0' + step.stepNumber"></span>
-                <span class="truncate" x-text="step.title"></span>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 px-4">
+              全部步驟（全部免費 🆓）
+            </div>
+            <div class="space-y-0.5">
+            <template x-for="s in steps" :key="s.stepNumber">
+              <button
+                class="step-nav-item w-full text-left px-4 py-2.5 rounded-xl text-sm flex items-center gap-3 transition border border-transparent"
+                :class="{
+                  'bg-navy text-white shadow-sm border-gold/30': currentStep === s.stepNumber,
+                  'hover:bg-gray-50 hover:border-gray-200': currentStep !== s.stepNumber
+                }"
+                @click="goToStep(s.stepNumber)"
+              >
+                <span
+                  class="w-7 h-7 rounded-full flex items-center justify-center text-sm shrink-0 transition"
+                  :class="{
+                    'bg-gold text-navy': currentStep === s.stepNumber,
+                    'bg-gray-200 text-gray-500': currentStep !== s.stepNumber
+                  }"
+                  x-text="getStepIcon(s)"
+                ></span>
+                <div class="min-w-0 flex-1">
+                  <span class="block text-xs font-medium leading-snug" x-text="'Step '+s.stepNumber+': '+(s.title.split('（')[0] || s.title)"></span>
+                  <span class="block text-[10px] mt-0.5 text-green-600">🆓 免費</span>
+                </div>
               </button>
             </template>
+            </div>
+
+            <div class="mt-6 bg-amber-50 rounded-xl p-4 border border-amber-200">
+              <p class="text-xs text-gray-600 mb-3 leading-relaxed">
+                🤝 呢份指南全部免費公開。<br />
+                如果幫到你，可以請我飲杯咖啡 ☕
+              </p>
+              <button @click="openDonate()" class="w-full bg-gold text-navy font-bold text-sm py-2.5 rounded-xl hover:bg-gold-light transition shadow-sm">
+                ☕ 請我飲咖啡
+              </button>
+            </div>
+
+            <div class="mt-3 bg-white rounded-xl p-4 border border-gray-200">
+              <p class="text-xs text-gray-500 mb-2">📬 有新指南通知你？</p>
+              <button @click="openEmail()" class="w-full text-xs font-semibold text-navy bg-gray-100 py-2 rounded-xl hover:bg-gray-200 transition">
+                留低 email →
+              </button>
+            </div>
           </nav>
         </aside>
 
-        <!-- Main Content Area -->
-        <div class="flex-1 min-w-0">
+        <!-- Content Area -->
+        <main id="step-content" class="flex-1 min-w-0">
+
+          <!-- 📌 快速概覽 -->
+          <div class="bg-gradient-to-br from-amber-50 to-white border border-amber-200 rounded-xl p-4 sm:p-5 mb-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-base">📌</span>
+              <span class="font-bold text-navy text-sm sm:text-base">快速概覽：董事詳情更改係指...</span>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-3 text-xs sm:text-sm text-gray-700">
+              <div class="bg-white/70 rounded-lg p-2.5">
+                <span class="font-semibold text-navy block">🕐 需時</span>
+                <span>5 步驟，約 1-2 星期（最快 15 日內）</span>
+              </div>
+              <div class="bg-white/70 rounded-lg p-2.5">
+                <span class="font-semibold text-navy block">💰 費用</span>
+                <span>免費（ND2B 毋須繳費）</span>
+              </div>
+              <div class="bg-white/70 rounded-lg p-2.5">
+                <span class="font-semibold text-navy block">⚖️ 法律</span>
+                <span>《公司條例》第 645(4) 及 652(2) 條</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+              董事詳情更改（Change of Director's Particulars）係指香港有限公司嘅董事或公司秘書嘅個人資料（姓名、地址、身份證號碼等）有任何變更時，必須根據《公司條例》向公司註冊處申報嘅法定程序。用 ND2B 表格，免費，15 日內搞掂。逾期最高罰 HK$25,000 + 每日 HK$700。
+            </p>
+          </div>
+
+          <!-- 📝 TL;DR -->
+          <div class="bg-blue-50 border-l-4 border-blue-400 rounded-r-xl p-3 mb-6 text-sm text-gray-700 leading-relaxed">
+            <strong class="text-navy">💡 TL;DR：</strong>董事改名、搬屋或換身份證，必須喺 15 日內用 ND2B 通知公司註冊處。ND2B 涵蓋董事同公司秘書嘅姓名、地址、身份證號碼同身份更改。表格免費，可經 e-Services Portal 網上提交（推薦，有即時確認）或郵寄紙本。公司秘書同樣適用，但只需申報通訊地址。逾期最高罰 HK$25,000 + 每日 HK$700。委任或停任董事要用 ND2A 唔係 ND2B，記得用啱表格。
+          </div>
+
+          <!-- Loading -->
+          <div x-show="isLoading" class="text-center py-20">
+            <div class="w-8 h-8 border-4 border-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <p class="text-gray-500 text-sm">載入中…</p>
+          </div>
+
+          <!-- Error -->
+          <div x-show="error" class="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
+            <p class="text-red-700" x-text="error"></p>
+          </div>
 
           <!-- Step Content -->
-          <template x-if="currentStepData">
-            <div>
-              <!-- Mobile Step Tabs -->
-              <div class="flex lg:hidden gap-1 mb-6 overflow-x-auto pb-2 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide">
-                <template x-for="step in processData?.steps || []" :key="step.stepNumber">
-                  <button @click="goToStep(step.stepNumber)"
-                    :class="currentStep === step.stepNumber ? 'bg-gold text-navy font-bold border-gold' : 'bg-gray-100 text-gray-500 border-gray-200 hover:bg-gray-200'"
-                    class="snap-start shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 border flex items-center gap-1.5">
-                    <span x-text="'0' + step.stepNumber"></span>
-                    <span class="truncate max-w-[100px]" x-text="step.title"></span>
-                  </button>
-                </template>
-              </div>
+          <template x-for="s in steps" :key="s.stepNumber">
+            <div x-show="!isLoading && !error && currentStep === s.stepNumber"
+                 class="fade-in-up">
 
               <!-- Step Header -->
-              <div class="flex items-start gap-4 mb-6">
-                <div class="w-12 h-12 rounded-full bg-gold/10 border-2 border-gold/30 flex items-center justify-center shrink-0">
-                  <span class="text-xl font-bold text-gold" x-text="'0' + currentStepData.stepNumber"></span>
+              <div class="mb-8">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gold text-navy flex items-center justify-center font-bold text-lg">
+                    <span x-text="getStepIcon(s)"></span>
+                  </span>
+                  <span class="text-sm text-green-600 font-semibold">🆓 免費步驟 | Step <span x-text="s.stepNumber"></span></span>
                 </div>
-                <div class="min-w-0">
-                  <h2 class="text-xl sm:text-2xl font-bold gov-heading text-navy" x-text="currentStepData.title"></h2>
-                  <p class="text-sm text-gray-500 mt-1" x-text="currentStepData.summary"></p>
+                <h2 class="text-2xl sm:text-3xl font-bold gov-heading mb-2" x-text="s.title"></h2>
+                <p class="text-gray-500" x-text="s.summary"></p>
+
+                <div x-show="s.stepNumber === 1" class="mt-3 flex items-center gap-2 text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
+                  <span class="shrink-0">☕</span>
+                  <span>整理不易，支持下？</span>
+                  <button @click="openDonate()" class="font-semibold text-gold hover:text-gold-light underline ml-auto shrink-0">請咖啡</button>
                 </div>
               </div>
 
-              <!-- Step Details -->
-              <div class="bg-white border border-gray-200 rounded-xl p-4 sm:p-6 mb-6 leading-relaxed text-sm sm:text-base text-gray-700 whitespace-pre-line" x-html="currentStepData.details.replace(/\\n/g, '<br>')"></div>
+              <!-- Details -->
+              <div class="bg-white rounded-xl border border-gray-200 p-4 sm:p-6 mb-8">
+                <h3 class="font-semibold text-navy text-lg mb-3">呢個步驟要點做？</h3>
+                <div class="text-gray-700 leading-relaxed whitespace-pre-line text-sm" x-text="s.details"></div>
+              </div>
 
               <!-- Documents -->
-              <template x-if="currentStepData.documents && currentStepData.documents.length > 0">
-                <div class="mb-6">
-                  <h3 class="font-bold text-navy text-base mb-3 flex items-center gap-2">📄 需要嘅文件</h3>
-                  <div class="grid sm:grid-cols-2 gap-3">
-                    <template x-for="(doc, idx) in currentStepData.documents" :key="idx">
-                      <div @click="openDoc(doc)" class="bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md hover:border-gold/30 transition-all duration-200 cursor-pointer">
-                        <div class="flex items-start gap-3">
-                          <div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center shrink-0">
-                            <span class="text-lg">📄</span>
+              <div x-show="s.documents && s.documents.length >= 1" class="mb-8">
+                <h3 class="font-semibold text-navy text-lg mb-4">需要咩文件？</h3>
+                <div class="grid sm:grid-cols-2 gap-3 sm:gap-4">
+                  <template x-for="(doc, idx) in s.documents" :key="idx">
+                    <a :href="doc['generatorUrl'] || '#'"
+                       @click="doc['generatorUrl'] || (openDoc(s.documents[idx]), false)"
+                       class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md">
+                      <template x-if="doc.demoImage && doc.demoImage !== '_placeholder_'">
+                        <div class="h-32 sm:h-40 bg-gray-100 overflow-hidden relative">
+                          <img :src="doc.demoImage" :alt="doc.name" class="w-full h-full object-cover" />
+                          <div x-show="doc.hasGenerator" class="absolute top-2 right-2 bg-gold text-navy text-xs font-bold px-2 py-0.5 rounded-full shadow">互動工具</div>
+                        </div>
+                      </template>
+                      <template x-if="!doc.demoImage || doc.demoImage === '_placeholder_'">
+                        <div class="h-32 sm:h-40 bg-gradient-to-br from-navy/5 to-gold/5 overflow-hidden relative flex items-center justify-center">
+                          <div class="text-center">
+                            <div class="text-3xl mb-1">📄</div>
+                            <div class="text-sm font-semibold text-navy/60">官方文件</div>
+                            <div class="text-xs text-gray-400 mt-0.5">連結至 CR 網站</div>
                           </div>
-                          <div class="flex-1 min-w-0">
-                            <h4 class="font-semibold text-navy text-sm mb-1" x-text="doc.name"></h4>
-                            <p class="text-xs text-gray-500 line-clamp-2" x-text="doc.description"></p>
-                          </div>
+                          <div x-show="doc.hasGenerator" class="absolute top-2 right-2 bg-gold text-navy text-xs font-bold px-2 py-0.5 rounded-full shadow">互動工具</div>
+                        </div>
+                      </template>
+                      <div class="p-4">
+                        <p class="font-bold text-sm text-navy" x-text="doc.name"></p>
+                        <p class="text-xs text-gray-500 mt-1 line-clamp-2" x-text="doc.description"></p>
+                        <div class="mt-2 flex items-center gap-1.5">
+                          <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">🆓 免費</span>
                         </div>
                       </div>
-                    </template>
-                  </div>
-                </div>
-              </template>
-
-              <!-- Rejection Risks -->
-              <template x-if="currentStepData.rejectionRisks && currentStepData.rejectionRisks.length >= 1">
-                <div class="bg-red-50 border border-red-100 rounded-xl p-4 mb-6">
-                  <h4 class="font-semibold text-red-600 text-sm mb-2 flex items-center gap-1">⚠️ 常見錯誤／被拒原因</h4>
-                  <ul class="text-xs sm:text-sm text-gray-700 space-y-1.5">
-                    <template x-for="(risk, idx) in currentStepData.rejectionRisks" :key="idx">
-                      <li class="flex items-start gap-1.5"><span class="text-red-400 mt-0.5 shrink-0">•</span><span x-text="risk"></span></li>
-                    </template>
-                  </ul>
-                </div>
-              </template>
-
-              <!-- Navigation Buttons -->
-              <div class="flex justify-between items-center pt-4 border-t border-gray-100">
-                <div>
-                  <button x-show="currentStep > 1" @click="goToStep(currentStep - 1)" class="btn-gov bg-gray-100 text-gray-600 px-5 py-2 rounded-xl text-sm hover:bg-gray-200 transition font-semibold inline-flex items-center gap-1">
-                    ← 上一步
-                  </button>
-                </div>
-                <div>
-                  <button x-show="currentStep < totalSteps" @click="goToStep(currentStep + 1)" class="btn-gov bg-navy text-white px-5 py-2 rounded-xl text-sm hover:bg-navy-light transition font-semibold inline-flex items-center gap-1">
-                    下一步 →
-                  </button>
-                  <button x-show="currentStep === totalSteps" @click="goToStep(1)" class="btn-gov bg-gold text-navy px-5 py-2 rounded-xl text-sm hover:bg-gold-light transition font-semibold inline-flex items-center gap-1">
-                    🔄 重新開始
-                  </button>
+                    </a>
+                  </template>
                 </div>
               </div>
+              <div x-show="(!s.documents || s.documents.length === 0) && !isLoading" class="mb-8">
+                <h3 class="font-semibold text-navy text-lg mb-4">需要咩文件？</h3>
+                <div class="bg-gray-50 border-2 border-dashed border-gray-200 rounded-xl p-8 text-center">
+                  <p class="text-3xl mb-2">👣</p>
+                  <p class="text-gray-400 text-sm font-medium">此步驟不需要提交任何文件</p>
+                  <p class="text-gray-300 text-xs mt-1">純粹係程序性步驟，跟住做就得</p>
+                </div>
+              </div>
+
+              <!-- Rejection Risks -->
+              <div x-show="s.rejectionRisks && s.rejectionRisks.length >= 1" class="risk-callout mb-8">
+                <h4 class="font-semibold text-warning mb-2 flex items-center gap-2">
+                  ⚠️ 常見錯誤導致補交
+                </h4>
+                <ul class="text-sm text-gray-700 space-y-1">
+                  <template x-for="(risk, idx) in s.rejectionRisks" :key="idx">
+                    <li class="flex items-start gap-2">
+                      <span class="text-warning mt-0.5">•</span>
+                      <span x-text="risk"></span>
+                    </li>
+                  </template>
+                </ul>
+              </div>
+
+              <!-- Step Navigation -->
+              <div class="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0 mt-8 mb-4">
+                <button x-show="s.stepNumber > 1" @click="goToStep(s.stepNumber - 1)" class="btn-gov btn-gov-dark text-sm w-full sm:w-auto">← 上一步</button>
+                <div x-show="s.stepNumber === 1 || s.stepNumber === totalSteps" class="hidden sm:block"></div>
+                <button x-show="s.stepNumber < totalSteps" @click="goToStep(s.stepNumber + 1)" class="btn-gov btn-gov-dark text-sm w-full sm:w-auto">下一步 →</button>
+              </div>
+
             </div>
           </template>
 
-          <!-- Loading/Error states -->
-          <template x-if="!currentStepData">
-            <div class="text-center py-12">
-              <div class="text-4xl mb-4">📋</div>
-              <p class="text-gray-500">載入中…</p>
+          <!-- Final Section -->
+          <div x-show="!isLoading && !error && currentStep === totalSteps" class="mt-8 mb-12">
+            <div class="bg-navy text-white rounded-xl p-4 sm:p-5 text-center mb-4">
+              <div class="text-3xl mb-2">🎉</div>
+              <h3 class="text-lg font-bold mb-1">搞掂晒！5 個步驟全部完成</h3>
+              <p class="text-gray-300 text-xs max-w-md mx-auto">你而家有齊晒所有資料，可以安心申報董事詳情更改。</p>
             </div>
-          </template>
 
-        </div>
+            <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 text-center mb-4 shadow-sm">
+              <div class="text-3xl mb-2">☕</div>
+              <h3 class="text-base font-bold text-navy mb-1">幫到你嗎？請我飲杯咖啡</h3>
+              <p class="text-xs text-gray-600 max-w-lg mx-auto mb-3">免費公開全部內容，支持下我繼續製作更多指南！</p>
+              <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
+                 class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
+                ☕ 請我飲咖啡
+              </a>
+              <p class="text-xs text-gray-400 mt-2">每個支持都幫助我繼續製作更多免費指南 🎯</p>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 text-center mb-6 shadow-sm">
+              <div class="text-3xl mb-3">📬</div>
+              <h3 class="text-lg font-bold text-navy mb-2">想收到更多免費指南？</h3>
+              <p class="text-sm text-gray-500 mb-4 max-w-md mx-auto">留低 email，之後有新指南會通知你</p>
+              <div x-show="!emailSubmitted" class="max-w-sm mx-auto flex gap-2">
+                <input type="email" x-model="email" placeholder="your@email.com" class="flex-1 border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold" />
+                <button @click="submitEmail()" class="bg-navy text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-navy-light transition text-sm" :disabled="!email.includes('@')">訂閱</button>
+              </div>
+              <div x-show="emailSubmitted" class="text-green-600 font-semibold text-sm">✅ 多謝！有新指南會通知你 📬</div>
+            </div>
+          </div>
+
+          <!-- ❓ 常見問題 FAQ -->
+          <div class="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 mb-3">
+            <h3 class="font-bold text-navy text-base mb-2 flex items-center gap-2">❓ 常見問題</h3>
+            <div class="divide-y divide-gray-100">
+              <details class="py-2.5 group">
+                <summary class="cursor-pointer text-sm font-medium text-navy hover:text-gold transition list-none flex items-center gap-2">
+                  <span class="text-gold shrink-0">▸</span>
+                  董事更改個人資料要用邊張表格？
+                </summary>
+                <div class="pb-1 pl-6 text-xs text-gray-600 leading-relaxed mt-1">要用 ND2B「公司秘書及董事詳情更改通知書」。無論係更改姓名、地址、身份證號碼，都係用呢張表格。必須喺更改後 15 日內交付公司註冊處登記。注意：如果係委任或停任董事／秘書，要用 ND2A 唔係 ND2B。</div>
+              </details>
+              <details class="py-2.5 group">
+                <summary class="cursor-pointer text-sm font-medium text-navy hover:text-gold transition list-none flex items-center gap-2">
+                  <span class="text-gold shrink-0">▸</span>
+                  董事更改地址要通知公司註冊處嗎？
+                </summary>
+                <div class="pb-1 pl-6 text-xs text-gray-600 leading-relaxed mt-1">要。董事嘅通常住址如有更改，必須填 ND2B 通知公司註冊處。不過董事嘅通常住址係受保護資料（唔會公開查閱），要用 PI-ND2B 頁申報。公司秘書只需申報通訊地址，唔係通常住址。</div>
+              </details>
+              <details class="py-2.5 group">
+                <summary class="cursor-pointer text-sm font-medium text-navy hover:text-gold transition list-none flex items-center gap-2">
+                  <span class="text-gold shrink-0">▸</span>
+                  ND2B 遞交期限係幾耐？
+                </summary>
+                <div class="pb-1 pl-6 text-xs text-gray-600 leading-relaxed mt-1">必須喺更改生效後 15 日內交付公司註冊處登記。注意：呢 15 日係日曆日（Calendar Days），唔係工作天。星期六日同公眾假期都會計。逾期遞交可被檢控，最高罰款 HK$25,000 + 每日 HK$700 嘅失責罰款。</div>
+              </details>
+              <details class="py-2.5 group">
+                <summary class="cursor-pointer text-sm font-medium text-navy hover:text-gold transition list-none flex items-center gap-2">
+                  <span class="text-gold shrink-0">▸</span>
+                  ND2B 可以網上提交嗎？費用係幾多？
+                </summary>
+                <div class="pb-1 pl-6 text-xs text-gray-600 leading-relaxed mt-1">可以。經公司註冊處嘅 e-Services Portal（www.e-services.cr.gov.hk）可以網上提交 ND2B，需要預先登記 account 同有數碼證書。ND2B 係免費嘅，無論電子定紙本提交都唔使俾錢。</div>
+              </details>
+              <details class="py-2.5 group">
+                <summary class="cursor-pointer text-sm font-medium text-navy hover:text-gold transition list-none flex items-center gap-2">
+                  <span class="text-gold shrink-0">▸</span>
+                  公司秘書都要申報詳情更改嗎？
+                </summary>
+                <div class="pb-1 pl-6 text-xs text-gray-600 leading-relaxed mt-1">要。公司秘書嘅詳情更改同樣要用 ND2B 申報，不過公司秘書只須申報通訊地址（Correspondence Address），唔需要申報通常住址。同樣係 15 日內申報。</div>
+              </details>
+              <details class="py-2.5 group">
+                <summary class="cursor-pointer text-sm font-medium text-navy hover:text-gold transition list-none flex items-center gap-2">
+                  <span class="text-gold shrink-0">▸</span>
+                  結婚後改名，要用 ND2B 申報嗎？
+                </summary>
+                <div class="pb-1 pl-6 text-xs text-gray-600 leading-relaxed mt-1">要。董事或公司秘書結婚後改名，必須用 ND2B 申報姓名更改。新姓名必須同身份證/護照一致。建議同時更新銀行 KYC 紀錄同公司董事名冊。</div>
+              </details>
+              <details class="py-2.5 group">
+                <summary class="cursor-pointer text-sm font-medium text-navy hover:text-gold transition list-none flex items-center gap-2">
+                  <span class="text-gold shrink-0">▸</span>
+                  遞交 ND2B 後發現填錯資料可以點做？
+                </summary>
+                <div class="pb-1 pl-6 text-xs text-gray-600 leading-relaxed mt-1">如果發現 ND2B 有錯誤，應盡快重新提交一份更正後嘅 ND2B，並喺表格上註明係更正版本（Revision）。如果錯誤嚴重（如公司名錯），可以聯絡公司註冊處查詢更正程序。</div>
+              </details>
+            </div>
+          </div>
+
+          <!-- 📚 相關指南 -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 sm:p-5 mb-6">
+            <h3 class="font-bold text-navy text-base mb-3">📚 相關指南</h3>
+            <div class="space-y-2">
+              <a href="/company-name-change" class="block bg-white rounded-lg border border-gray-200 px-4 py-3 hover:shadow-md hover:border-gold/30 transition-all duration-200 group">
+                <div class="flex items-center gap-3">
+                  <div class="text-xl shrink-0">📄</div>
+                  <div>
+                    <p class="text-sm font-semibold text-navy group-hover:text-gold transition-colors">香港有限公司更改名稱完整指南 — NNC2 表格教學</p>
+                    <p class="text-xs text-gray-400">公司改名流程，由查冊到銀行更新</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/deregistration" class="block bg-white rounded-lg border border-gray-200 px-4 py-3 hover:shadow-md hover:border-gold/30 transition-all duration-200 group">
+                <div class="flex items-center gap-3">
+                  <div class="text-xl shrink-0">📄</div>
+                  <div>
+                    <p class="text-sm font-semibold text-navy group-hover:text-gold transition-colors">香港有限公司撤銷註冊完整指南 — 6 個步驟搞掂</p>
+                    <p class="text-xs text-gray-400">由資格檢査到正式解散，step-by-step</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 📝 Cite this -->
+          <div class="border-t border-gray-200 pt-4 mb-6">
+            <p class="text-xs text-gray-400 text-center">
+              📝 Cite this（引用此頁）：ESGov. (2026). 香港公司董事詳情更改完整指南 — ND2B 表格遞交教學. Retrieved from <a href="https://esgov.org/director-particulars-change/" class="text-gold hover:underline">https://esgov.org/director-particulars-change/</a>
+            </p>
+          </div>
+
+        </main>
       </div>
     </div>
   </main>
-
-  <!-- ❓ 常見問題 -->
-  <section class="bg-gray-50 py-12 sm:py-16">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl sm:text-3xl font-bold gov-heading text-center text-navy mb-8">❓ 常見問題</h2>
-      <div class="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 mb-3">
-        <h3 class="font-bold text-navy text-base mb-3 flex items-center gap-2">❓ 常見問題</h3>
-        <div class="divide-y divide-gray-100">
-          <details class="py-2.5 group">
-            <summary class="cursor-pointer text-sm font-medium text-navy hover:text-gold transition list-none flex items-center gap-2">
-              <span class="text-gold shrink-0">▸</span> 董事更改個人資料要用邊張表格？
-            </summary>
-            <div class="pb-1 pl-6 text-xs text-gray-600 leading-relaxed mt-1">要用 ND2B「更改公司秘書及董事詳情通知書」（Notice of Change in Particulars of Company Secretary and Director）。無論係更改姓名、地址、身份證號碼，都係用呢張表格。必須喺更改後 15 日內交付公司註冊處登記。記住：委任或停任董事要用 ND2A，唔好用錯表。</div>
-          </details>
-          <details class="py-2.5 group">
-            <summary class="cursor-pointer text-sm font-medium text-navy hover:text-gold transition list-none flex items-center gap-2">
-              <span class="text-gold shrink-0">▸</span> 董事更改地址要通知公司註冊處嗎？
-            </summary>
-            <div class="pb-1 pl-6 text-xs text-gray-600 leading-relaxed mt-1">要。董事嘅通常住址（Usual Residential Address）如有更改，必須填 ND2B 通知公司註冊處。不過董事嘅通常住址係受保護資料（唔會公開查閱），要用 PI-ND2B 頁申報。公司秘書就唔同，只需申報通訊地址，唔需要申報通常住址。</div>
-          </details>
-          <details class="py-2.5 group">
-            <summary class="cursor-pointer text-sm font-medium text-navy hover:text-gold transition list-none flex items-center gap-2">
-              <span class="text-gold shrink-0">▸</span> ND2B 表格要幾耐之前遞交？
-            </summary>
-            <div class="pb-1 pl-6 text-xs text-gray-600 leading-relaxed mt-1">必須喺更改生效後 15 日內交付公司註冊處登記。呢 15 日係曆日（Calendar Days），即係星期六、日同公眾假期都計在內。逾期遞交可被檢控，最高罰款 HK$25,000 + 每日 HK$700 嘅失責罰款。公司同每名責任人都可能被檢控。</div>
-          </details>
-          <details class="py-2.5 group">
-            <summary class="cursor-pointer text-sm font-medium text-navy hover:text-gold transition list-none flex items-center gap-2">
-              <span class="text-gold shrink-0">▸</span> ND2B 可以網上提交嗎？收唔收費？
-            </summary>
-            <div class="pb-1 pl-6 text-xs text-gray-600 leading-relaxed mt-1">可以，而且免費。經公司註冊處嘅 e-Services Portal（www.e-services.cr.gov.hk）可以網上提交 ND2B。需要預先登記個人帳戶同訂閱 e-Filing Services（免費）。用數碼證書（e-Cert 或 iAM Smart）可以即時完成登記。網上提交有即時確認通知，最快最可靠。紙本提交都係免費，但要留意郵寄風險同處理時間較長（4-7個工作天）。</div>
-          </details>
-          <details class="py-2.5 group">
-            <summary class="cursor-pointer text-sm font-medium text-navy hover:text-gold transition list-none flex items-center gap-2">
-              <span class="text-gold shrink-0">▸</span> 公司秘書都要申報詳情更改嗎？
-            </summary>
-            <div class="pb-1 pl-6 text-xs text-gray-600 leading-relaxed mt-1">要。公司秘書嘅詳情更改同樣要用 ND2B 申報，同樣係 15 日內。不過公司秘書只須申報通訊地址（Correspondence Address），唔需要申報通常住址。另外，公司秘書（自然人）必須「通常居於香港」（ordinarily reside in Hong Kong），而法人團體秘書必須在香港設有註冊辦事處或營業地點。</div>
-          </details>
-          <details class="py-2.5 group">
-            <summary class="cursor-pointer text-sm font-medium text-navy hover:text-gold transition list-none flex items-center gap-2">
-              <span class="text-gold shrink-0">▸</span> 董事結婚後改姓，需要提交 ND2B 嗎？
-            </summary>
-            <div class="pb-1 pl-6 text-xs text-gray-600 leading-relaxed mt-1">需要。更改姓名屬於「詳情更改」，須在 15 天內提交 ND2B，並附上證明文件（如結婚證書、新護照或身份證副本）。申報嘅姓名必須同香港身份證或護照上的姓名完全一致。</div>
-          </details>
-          <details class="py-2.5 group">
-            <summary class="cursor-pointer text-sm font-medium text-navy hover:text-gold transition list-none flex items-center gap-2">
-              <span class="text-gold shrink-0">▸</span> ND2B 提交後發現填錯資料，可以修改嗎？
-            </summary>
-            <div class="pb-1 pl-6 text-xs text-gray-600 leading-relaxed mt-1">可以。提交後如需修改，須提交另一份 ND2B（更正版本）或在公司註冊處要求的限期內提交補充文件。建議提交前再三核對所有資料，避免之後要更正咁麻煩。</div>
-          </details>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ☕ Coffee Section -->
-  <section class="py-12 bg-white text-center">
-    <div class="max-w-lg mx-auto px-4">
-      <div class="text-4xl mb-4">☕</div>
-      <h3 class="text-xl font-bold text-navy mb-2">整理不易，支持下？</h3>
-      <p class="text-sm text-gray-500 mb-4">如果呢份指南幫到你，可以請我飲杯咖啡，等我繼續整理更多免費指南 😊</p>
-      <button @click="showDonate = true" class="btn-gov inline-flex items-center gap-2 bg-gold/10 text-gold font-medium px-6 py-3 rounded-xl hover:bg-gold/20 transition">☕ 請咖啡</button>
-    </div>
-  </section>
-
-  <!-- 📚 相關指南 -->
-  <section class="bg-gray-50 py-12">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h3 class="font-bold text-navy text-lg mb-4">📚 相關指南</h3>
-      <div class="space-y-2">
-        <a href="/company-name-change" class="block bg-white rounded-lg border border-gray-200 px-4 py-3 hover:shadow-md hover:border-gold/30 transition-all duration-200 group">
-          <div class="flex items-center gap-3">
-            <div class="text-xl shrink-0">📄</div>
-            <div>
-              <p class="text-sm font-semibold text-navy group-hover:text-gold transition-colors">香港有限公司更改名稱完整指南 — NNC2 表格教學</p>
-              <p class="text-xs text-gray-400">公司改名流程，由查冊到銀行更新</p>
-            </div>
-          </div>
-        </a>
-        <a href="/deregistration" class="block bg-white rounded-lg border border-gray-200 px-4 py-3 hover:shadow-md hover:border-gold/30 transition-all duration-200 group">
-          <div class="flex items-center gap-3">
-            <div class="text-xl shrink-0">📄</div>
-            <div>
-              <p class="text-sm font-semibold text-navy group-hover:text-gold transition-colors">香港有限公司撤銷註冊（停業）完整指南 — 6 個步驟搞掂</p>
-              <p class="text-xs text-gray-400">由資格檢査到正式解散，step-by-step</p>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 📝 Cite this -->
-  <div class="bg-gray-50 border-t border-gray-200 py-4">
-    <div class="max-w-4xl mx-auto px-4">
-      <p class="text-xs text-gray-400 text-center">
-        📝 Cite this（引用此頁）：ESGov. (2026). 香港公司董事詳情更改完整指南 — ND2B 表格遞交教學. Retrieved from <a href="https://esgov.org/director-particulars-change/" class="text-gold hover:underline">https://esgov.org/director-particulars-change/</a>
-      </p>
-    </div>
-  </div>
 
   <!-- Document Overlay Modal -->
   <div x-show="showOverlay" x-cloak class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" @click.self="closeDoc()" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
@@ -830,6 +751,25 @@
       <p class="text-sm text-gray-500 mb-4">如果呢份指南幫到你，可以請我飲杯咖啡，等我繼續整理更多免費指南 😊</p>
       <a href="https://buymeacoffee.com/esgov" target="_blank" class="btn-gov bg-gold text-navy font-bold py-3 px-6 rounded-xl w-full inline-flex items-center justify-center gap-2 hover:bg-gold-light transition">☕ 請咖啡</a>
       <button @click="showDonate = false" class="mt-3 text-sm text-gray-400 hover:text-gray-600 transition w-full">關閉</button>
+    </div>
+  </div>
+
+  <!-- Email Subscription Modal -->
+  <div x-show="showEmail" x-cloak class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" @click.self="showEmail = false" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+    <div class="bg-white rounded-2xl max-w-sm w-full shadow-2xl p-6" @click.stop>
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="font-bold text-navy">📬 有新指南通知你</h3>
+        <button @click="showEmail = false" class="text-gray-400 hover:text-gray-600 transition text-xl">&times;</button>
+      </div>
+      <div x-show="!emailSubmitted">
+        <p class="text-sm text-gray-500 mb-4">留低 email，之後有新指南免費通知你。</p>
+        <input type="email" x-model="email" placeholder="your@email.com" class="w-full border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold mb-3" />
+        <button @click="submitEmail()" class="w-full bg-navy text-white font-semibold py-2.5 rounded-xl hover:bg-navy-light transition text-sm" :disabled="!email.includes('@')">訂閱</button>
+      </div>
+      <div x-show="emailSubmitted" class="text-center py-4">
+        <div class="text-4xl mb-2">✅</div>
+        <p class="text-green-600 font-semibold">多謝！有新指南會通知你 📬</p>
+      </div>
     </div>
   </div>
 
