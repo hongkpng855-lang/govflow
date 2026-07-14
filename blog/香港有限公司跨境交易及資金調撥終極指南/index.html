@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港有限公司跨境交易及資金調撥終極指南 2026 — 跨境貿易、資金匯出匯入、外匯管制全面拆解</title>
+  <meta name="description" content="2026 年香港有限公司跨境交易及資金調撥完整教學：由跨境貿易文件、資金匯出匯入程序、中國外匯管制、轉讓定價合規到雙重課稅安排全面覆蓋。由真實處理過跨境交易嘅東主分享，附常用文件範本同 7 個常見陷阱。" />
+  <meta name="keywords" content="跨境交易, 資金調撥, 外匯管制, 香港公司, 跨境貿易, 資金匯出, Transfer Pricing, 雙重課稅, 中國外匯, 離岸公司" />
+  <meta property="og:title" content="香港有限公司跨境交易及資金調撥終極指南 2026" />
+  <meta property="og:description" content="2026 年香港有限公司跨境交易完整教學：跨境貿易、資金匯出匯入、中國外匯管制、轉讓定價合規、雙重課稅安排，全部由真實經歷者拆解。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司跨境交易及資金調撥終極指南" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="香港有限公司跨境交易及資金調撥終極指南 2026" />
+  <meta name="twitter:description" content="跨境交易、資金匯出匯入、中國外匯管制、轉讓定價合規、雙重課稅安排全部拆解。" />
+  <meta name="twitter:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <meta name="author" content="ESGov 團隊" />
+  <meta property="og:site_name" content="ESGov" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .blog-content h2 { font-size: 1.5rem; font-weight: 700; color: #1B2A4A; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f3f4f6; }
+    .blog-content h3 { font-size: 1.125rem; font-weight: 600; color: #1B2A4A; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .blog-content h4 { font-size: 1rem; font-weight: 600; color: #1B2A4A; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .blog-content p { line-height: 1.8; margin-bottom: 1rem; color: #374151; }
+    .blog-content ul, .blog-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: #374151; }
+    .blog-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .blog-content .tip-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .tip-box p { margin-bottom: 0; }
+    .blog-content .warn-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .warn-box p { margin-bottom: 0; }
+    .blog-content .flag-item { background: #fef3c7; border-left: 4px solid #C9A84C; padding: 1rem 1.25rem; margin-bottom: 1rem; border-radius: 0.5rem; }
+    .blog-content .flag-item p { margin-bottom: 0; }
+    .blog-content a { color: #C9A84C; text-decoration: underline; }
+    .blog-content a:hover { color: #b8942e; }
+    .blog-content strong { color: #1B2A4A; }
+    .blog-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    .blog-content th, .blog-content td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
+    .blog-content th { background: #1B2A4A; color: white; font-weight: 600; }
+    .blog-content .step-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content blockquote { border-left: 4px solid #C9A84C; background: #fefce8; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+    .blog-content blockquote p { margin-bottom: 0; color: #92400e; }
+    .blog-nav a { transition: all 0.2s ease; }
+    .blog-nav a:hover { color: #C9A84C; }
+    .sample-box { background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 0.75rem; padding: 1.5rem; margin: 1rem 0; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.6; }
+  </style>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港有限公司跨境交易及資金調撥終極指南" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司跨境交易及資金調撥終極指南" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港有限公司跨境交易及資金調撥終極指南 2026",
+    "description": "2026 年香港有限公司跨境交易完整教學：跨境貿易、資金匯出匯入、中國外匯管制、轉讓定價合規、雙重課稅安排全部拆解。由真實經歷者分享，附文件範本同常見陷阱。",
+    "author": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-07-15",
+    "inLanguage": "zh-HK"
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://esgov.org" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://esgov.org/blog" },
+      { "@type": "ListItem", "position": 3, "name": "跨境交易及資金調撥終極指南", "item": "https://esgov.org/blog/香港有限公司跨境交易及資金調撥終極指南" }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "香港有限公司跨境匯款有冇限制？",
+        "acceptedAnswer": { "@type": "Answer", "text": "香港本身冇外匯管制，資金可以自由進出。但收款國家（尤其係中國大陸）可能有外匯管制，所以要留意對方國家嘅規定。香港銀行會按KYC要求問資金來源同用途，大額匯款要準備相關貿易文件。" }
+      },
+      {
+        "@type": "Question",
+        "name": "香港公司同關聯公司跨境交易要留意咩？",
+        "acceptedAnswer": { "@type": "Answer", "text": "關聯方交易（Related Party Transactions）要按公平原則定價，否則稅局可能調整利潤。香港2018年起實施轉讓定價（Transfer Pricing）條例，規定關聯交易要備有轉讓定價文檔，包括主體檔案、本地檔案同國別報告（視乎規模）。" }
+      },
+      {
+        "@type": "Question",
+        "name": "跨境電子商務使費點樣入帳？",
+        "acceptedAnswer": { "@type": "Answer", "text": "跨境電商支出（如Amazon/Facebook廣告費、Shopify月費、SaaS訂閱）屬於營運開支，可以扣稅。但要保留 invoice 同付款記錄，尤其係非香港供應商嘅服務，要確認係咪需要繳納香港利得稅或徵收 withholding tax。" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Nav -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="../../index.html" class="flex items-center gap-2.5">
+        <img src="../../assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-8 h-8 bg-gold/20 rounded-xl p-1.5" />
+        <span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+      </a>
+      <a href="../" class="text-sm text-gray-400 hover:text-gold transition">← 返回網誌</a>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <div class="bg-navy text-white">
+    <div class="max-w-3xl mx-auto px-4 py-12">
+      <div class="flex items-center gap-2 text-xs text-gold/80 mb-4">
+        <span>📅 2026.07.15</span>
+        <span>•</span>
+        <span>🏷️ 跨境交易 · 資金調撥 · 外匯 · 轉讓定價 · 合規</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">香港有限公司跨境交易及資金調撥終極指南 2026</h1>
+      <p class="text-lg text-gray-300 leading-relaxed">跨境貿易文件、資金匯出匯入程序、中國外匯管制、轉讓定價合規到雙重課稅安排全面覆蓋。</p>
+    </div>
+  </div>
+
+  <!-- Article Body -->
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="bg-white rounded-2xl shadow-sm p-6 md:p-10 blog-content">
+
+      <!-- TOC -->
+      <div class="bg-gray-50 rounded-xl p-5 mb-8 border border-gray-200">
+        <h3 class="font-bold text-navy text-lg mb-3">📖 本文目錄</h3>
+        <ul class="space-y-1.5 text-sm">
+          <li><a href="#intro" class="text-gold hover:text-gold/80">1. 前言：香港公司跨境交易點解咁重要</a></li>
+          <li><a href="#trade-types" class="text-gold hover:text-gold/80">2. 常見跨境交易類型</a></li>
+          <li><a href="#fund-transfer" class="text-gold hover:text-gold/80">3. 資金匯出匯入實戰</a></li>
+          <li><a href="#china-forex" class="text-gold hover:text-gold/80">4. 中國外匯管制攻略</a></li>
+          <li><a href="#transfer-pricing" class="text-gold hover:text-gold/80">5. 轉讓定價（Transfer Pricing）合規</a></li>
+          <li><a href="#tax-treaty" class="text-gold hover:text-gold/80">6. 雙重課稅安排</a></li>
+          <li><a href="#docs" class="text-gold hover:text-gold/80">7. 必備文件清單</a></li>
+          <li><a href="#mistakes" class="text-gold hover:text-gold/80">8. 7 個常見陷阱</a></li>
+          <li><a href="#faq" class="text-gold hover:text-gold/80">9. FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <h2 id="intro">1. 前言：香港公司跨境交易點解咁重要</h2>
+      <p>香港作為國際金融中心，大部分有限公司都需要處理跨境交易——無論係向內地供應商採購、收海外客戶美金、定係同集團公司之間資金調撥。但跨境交易唔係就咁轉帳就得，入面有好多法律、稅務同合規陷阱。</p>
+      <p>我公司第一年就試過因為唔識處理跨境匯款，筆錢俾銀行hold咗成個星期，因為冇準備齊貿易文件。之後仲試過俾稅局問關聯交易定價，好彩最後解釋得通，但已經嚇餐死。如果你都係第一次搞跨境交易，呢篇文幫你避開晒啲伏。</p>
+
+      <div class="flag-item">
+        <p><strong>📌 一句講晒：</strong>香港冇外匯管制，但銀行有KYC要求，收款國有外匯管制，稅局有關聯交易審查。跨境交易唔係就咁T/T就得，文件準備同合規安排先係關鍵。</p>
+      </div>
+
+      <!-- Section 2 -->
+      <h2 id="trade-types">2. 常見跨境交易類型</h2>
+      <p>香港公司跨境交易主要分以下幾類，每類嘅文件同合規要求都唔同。</p>
+
+      <div class="step-card">
+        <h3>2.1 貨物貿易（Import / Export）</h3>
+        <p>最常見嘅跨境交易。交易文件包括：</p>
+        <ul>
+          <li><strong>Commercial Invoice</strong> — 列明貨物描述、數量、單價、總額、貿易條款（Incoterms）</li>
+          <li><strong>Packing List</strong> — 包裝細節、件數、重量</li>
+          <li><strong>Bill of Lading / Air Waybill</strong> — 提單/空運提單</li>
+          <li><strong>合同 / Sales Contract / Purchase Order</strong> — 雙方簽署嘅買賣合約</li>
+          <li><strong>產地來源證（CO）</strong> — 如果需要申請關稅優惠</li>
+        </ul>
+        <p>銀行匯款時通常要求提供上述文件，尤其係第一次交易或者大額匯款。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>2.2 服務貿易（Service / Professional Fees）</h3>
+        <p>包括顧問費、設計費、IT服務費、市場推廣費等。文件要求：</p>
+        <ul>
+          <li><strong>Service Agreement</strong> — 服務合約，列明服務範圍、收費方式、付款條款</li>
+          <li><strong>Invoice</strong> — 服務費發票</li>
+          <li><strong>Statement of Work（SOW）</strong> — 工作範圍說明</li>
+          <li><strong>Completion Report</strong> — 完成報告（尤其大額交易）</li>
+        </ul>
+        <div class="tip-box"><p><strong>💡 貼士：</strong>服務貿易係稅局關注嘅重點，尤其係跨境關聯方服務費。要確保服務確實有提供，收費合理，否則稅局有權調整甚至罰款。</p></div>
+      </div>
+
+      <div class="step-card">
+        <h3>2.3 關聯方交易（Related Party Transactions）</h3>
+        <p>同集團公司、母公司、子公司、或有關連嘅個人之間嘅交易。常見包括：</p>
+        <ul>
+          <li>管理費（Management Fees）</li>
+          <li>特許權使用費（Royalty / License Fee）</li>
+          <li>貸款利息（Intercompany Loan Interest）</li>
+          <li>貨物及服務交易</li>
+          <li>成本分攤（Cost Sharing / Cost Contribution）</li>
+        </ul>
+        <div class="warn-box"><p><strong>⚠️ 高度注意：</strong>關聯方交易係稅局審查重點。所有關聯交易都要按公平原則定價（Arm's Length Principle），並備有轉讓定價文檔。詳情見第5節。</p></div>
+      </div>
+
+      <div class="step-card">
+        <h3>2.4 資金調撥（Fund Transfer / Capital Injection）</h3>
+        <p>包括股東貸款還款、股息分派、增資注資、集團內部資金池等。文件要求：</p>
+        <ul>
+          <li>貸款協議 / Loan Agreement</li>
+          <li>董事會決議 / Board Resolution（授權交易）</li>
+          <li>還款時間表</li>
+          <li>股息分派：審計報告 + 分紅決議</li>
+          <li>增資注資：股份配發文件 + 公司註冊處申報（NSC1）</li>
+        </ul>
+      </div>
+
+      <!-- Section 3 -->
+      <h2 id="fund-transfer">3. 資金匯出匯入實戰</h2>
+      <p>好多香港公司東主以為開咗公司戶口就可以任轉錢，但實際上銀行對跨境匯款有嚴格嘅KYC同AML審查。以下係實戰經驗：</p>
+
+      <h3>3.1 匯款前準備</h3>
+      <ul>
+        <li><strong>了解銀行嘅要求</strong> — 每間銀行嘅KYC要求唔同，HSBC、中銀、渣打各有自己嘅表格同文件要求</li>
+        <li><strong>準備貿易文件</strong> — 即使係細額匯款（幾萬蚊），銀行都有權要求睇文件</li>
+        <li><strong>申報交易性質</strong> — 要清楚填寫匯款用途，例如「貿易付款」、「服務費」、「股東貸款還款」</li>
+        <li><strong>SWIFT Code 同 IBAN</strong> — 確認收款銀行嘅SWIFT Code正確，錯一個字母就彈返轉頭</li>
+      </ul>
+
+      <h3>3.2 大額匯款注意事項</h3>
+      <div class="tip-box">
+        <p><strong>💡 實戰經驗：</strong>一般嚟講，單筆超過HK$50萬（或等值外幣）嘅跨境匯款，銀行多數會問背景。超過HK$100萬嘅，幾乎一定會要求提供合約同發票。我試過轉HK$200萬俾內地供應商，銀行hold咗3日，最後要補返成疊文件先放行。</p>
+      </div>
+
+      <h3>3.3 常用跨境匯款渠道比較</h3>
+      <table>
+        <tr><th>渠道</th><th>速度</th><th>手續費</th><th>匯率</th><th>適合</th></tr>
+        <tr><td>傳統銀行電匯（T/T）</td><td>1-3工作日</td><td>HK$150-300</td><td>銀行匯率（較差）</td><td>大額、正式交易</td></tr>
+        <tr><td>Wise / Airwallex / OFX</td><td>即時-1日</td><td>0.4-1%</td><td>市場中間價</td><td>中小額、快捷</td></tr>
+        <tr><td>虛擬銀行（ZA / Livi / Mox）</td><td>1-2日</td><td>HK$0-100</td><td>中等</td><td>細額、個人使用</td></tr>
+        <tr><td>加密貨幣（USDT/USDC）</td><td>即時</td><td>低</td><td>市場價</td><td>極細額、需合規</td></tr>
+      </table>
+
+      <h3>3.4 常見匯款用途代碼</h3>
+      <p>填匯款申請表時，要揀啱用途代碼（Transaction Purpose Code），最常見嘅有：</p>
+      <ul>
+        <li><strong>101</strong> — 貨物貿易付款</li>
+        <li><strong>201</strong> — 服務貿易付款</li>
+        <li><strong>301</strong> — 直接投資（如注資、股東貸款）</li>
+        <li><strong>401</strong> — 證券投資</li>
+        <li><strong>501</strong> — 貸款還款</li>
+        <li><strong>601</strong> — 股息/利潤匯出</li>
+      </ul>
+
+      <!-- Section 4 -->
+      <h2 id="china-forex">4. 中國外匯管制攻略</h2>
+      <p>如果你嘅跨境交易涉及中國大陸（香港公司最大嘅貿易伙伴），一定要了解中國外匯管制制度。以下係關鍵要點：</p>
+
+      <h3>4.1 中國外匯管制基本規則</h3>
+      <ul>
+        <li>中國實行嚴格外匯管制，人民幣不可自由兌換</li>
+        <li>所有跨境資金進出要有真實交易背景（真實性審核）</li>
+        <li>貨物貿易：要提供報關單、合同、發票</li>
+        <li>服務貿易：要提供合同、發票、稅務備案</li>
+        <li>直接投資：要經商務部/發改委審批或備案</li>
+      </ul>
+
+      <div class="step-card">
+        <h3>4.2 香港公司收人民幣（跨境貿易人民幣結算）</h3>
+        <p>香港係最大嘅離岸人民幣中心，收人民幣唔係問題，但要留意：</p>
+        <ul>
+          <li>香港銀行接受人民幣存款，但匯率同大陸有差價（CNH vs CNY）</li>
+          <li>跨境貿易人民幣結算要符合真實交易背景</li>
+          <li>人民幣資金可以自由喺香港兌換成港幣或外幣</li>
+          <li>如果想將人民幣匯返大陸，要有貿易背景</li>
+        </ul>
+      </div>
+
+      <div class="step-card">
+        <h3>4.3 內地公司匯款來港</h3>
+        <p>如果你嘅內地關聯公司或客戶需要匯款來香港，要留意：</p>
+        <ul>
+          <li><strong>經常項目</strong>（貿易、服務費）— 憑合同、發票、稅務備案表可匯出</li>
+          <li><strong>資本項目</strong>（投資、貸款）— 需要外管局審批或FDI備案</li>
+          <li><strong>利潤匯出</strong> — 要先完稅（繳納企業所得稅），再經審計確認可分配利潤</li>
+          <li><strong>個人結匯</strong> — 內地居民每年5萬美元結匯限額</li>
+        </ul>
+        <div class="warn-box"><p><strong>⚠️ 常見陷阱：</strong>唔好試圖用地下錢莊或虛假貿易方式將資金調出中國。近年中國嚴厲打擊地下錢莊同虛假貿易，一經發現可能面臨刑事責任。一定要用合法渠道。</p></div>
+      </div>
+
+      <h3>4.4 香港公司喺大陸開設辦事處/子公司</h3>
+      <p>香港公司如果想喺大陸經營，有以下選擇：</p>
+      <ul>
+        <li><strong>代表處（Rep Office）</strong> — 只能從事聯絡活動，唔可以有營業收入</li>
+        <li><strong>外商投資企業（WFOE）</strong> — 可以實際經營，需要商務部備案</li>
+        <li><strong>合資企業（JV）</strong> — 同內地合作方成立，要章程同合資協議</li>
+      </ul>
+      <p>成立WFOE後，資金進出要透過註冊資本（Capital Injection）同經常項目（如服務費、特許權費）方式進行。</p>
+
+      <!-- Section 5 -->
+      <h2 id="transfer-pricing">5. 轉讓定價（Transfer Pricing）合規</h2>
+      <p>轉讓定價係指關聯方之間交易嘅定價安排。香港2018年開始正式實施轉讓定價條例（《稅務條例》第50A條），所有關聯交易都要符合公平原則。</p>
+
+      <h3>5.1 邊啲公司要留意轉讓定價？</h3>
+      <ul>
+        <li>有關聯方跨境交易嘅香港公司</li>
+        <li>集團內部有管理費、特許權費、利息收支</li>
+        <li>香港公司同海外關聯公司有貨物/服務交易</li>
+        <li>利潤異常低或持續虧損但母公司賺錢</li>
+      </ul>
+
+      <h3>5.2 轉讓定價文檔要求</h3>
+      <p>根據稅局指引，符合以下條件嘅公司需要備有轉讓定價文檔：</p>
+      <table>
+        <tr><th>文檔類型</th><th>適用條件</th><th>內容</th></tr>
+        <tr><td>主體檔案（Master File）</td><td>集團總營業額≥HK$7.5億</td><td>集團業務架構、全球價值鏈、無形資產政策</td></tr>
+        <tr><td>本地檔案（Local File）</td><td>關聯交易超過門檻：貨物≥HK$2.2億；服務/其他≥HK$4,400萬</td><td>關聯交易詳情、定價政策、功能風險分析、可比分析</td></tr>
+        <tr><td>國別報告（CbCR）</td><td>集團總營業額≥HK$68億</td><td>各國收入、利潤、稅款分配</td></tr>
+      </table>
+
+      <div class="tip-box">
+        <p><strong>💡 中小企貼士：</strong>就算你嘅公司未達到上述門檻，稅局仍然有權要求你解釋關聯交易定價。建議至少要備有：關聯交易清單、定價政策說明、支持定價嘅市場分析或可比數據。尤其係首年有跨境關聯交易，更加要準備好。</p>
+      </div>
+
+      <h3>5.3 公平原則（Arm's Length Principle）</h3>
+      <p>簡單嚟講，關聯交易嘅定價要同非關聯方之間嘅交易價格一致。常用嘅定價方法包括：</p>
+      <ul>
+        <li><strong>可比非受控價格法（CUP）</strong> — 參考同類產品/服務嘅市場價格</li>
+        <li><strong>成本加成法（Cost Plus）</strong> — 成本 + 合理利潤率</li>
+        <li><strong>再銷售價格法（Resale Price）</strong> — 最終售價減合理利潤</li>
+        <li><strong>交易淨利潤法（TNMM）</strong> — 參考同行嘅利潤率水平</li>
+        <li><strong>利潤分割法（PSM）</strong> — 按貢獻比例分配利潤</li>
+      </ul>
+
+      <!-- Section 6 -->
+      <h2 id="tax-treaty">6. 雙重課稅安排</h2>
+      <p>香港與超過40個國家/地區簽訂咗全面性避免雙重課稅協定（CDTA），包括中國內地、日本、新加坡、英國、馬來西亞等。利用好稅務協定可以幫你慳返唔少稅。</p>
+
+      <h3>6.1 股息預扣稅優惠</h3>
+      <p>香港公司收取海外子公司股息時，如果當地有同香港簽訂稅務協定，預扣稅率可能大幅降低：</p>
+      <ul>
+        <li>中國內地：一般10% → 協定後5%（持股≥25%）</li>
+        <li>日本：一般20% → 協定後5%（持股≥25%）</li>
+        <li>新加坡：一般0%（新加坡唔徵收股息預扣稅）</li>
+        <li>英國：一般0%（英國唔徵收股息預扣稅）</li>
+      </ul>
+
+      <h3>6.2 特許權費/利息預扣稅</h3>
+      <ul>
+        <li>中國內地特許權費：一般10% → 協定後7%</li>
+        <li>中國內地利息：一般10% → 協定後7%（銀行貸款除外）</li>
+        <li>要享受協定優惠，需要向稅局申請「居民證明書」（COR）</li>
+      </ul>
+
+      <div class="flag-item">
+        <p><strong>📌 關鍵提醒：</strong>要享受稅務協定優惠，必須確保香港公司有經濟實質（Economic Substance）——即係有實際辦公室、員工、做實際決策。如果只係空殼公司，稅局可以拒絕發出COR，或者對方國家拒絕給予協定優惠。呢點近年在國際稅務環境下越嚟越重要。</p>
+      </div>
+
+      <!-- Section 7 -->
+      <h2 id="docs">7. 必備文件清單</h2>
+      <p>無論係邊種跨境交易，以下文件都建議準備齊全：</p>
+      <table>
+        <tr><th>文件</th><th>用途</th><th>備註</th></tr>
+        <tr><td>交易合約 / Agreement</td><td>證明交易背景</td><td>雙方簽署，列明價格、付款條款、交貨條件</td></tr>
+        <tr><td>商業發票 / Commercial Invoice</td><td>匯款依據</td><td>同合約一致</td></tr>
+        <tr><td>銀行匯款單 / SWIFT MT103</td><td>匯款憑證</td><td>保留銀行收據</td></tr>
+        <tr><td>董事會決議 / Board Resolution</td><td>授權大額交易</td><td>尤其關聯交易、貸款、投資決策</td></tr>
+        <tr><td>稅務申報文件</td><td>報稅用</td><td>轉讓定價文檔、COR申請</td></tr>
+        <tr><td>審計報告</td><td>利潤匯出/分紅</td><td>審計後確認可分配利潤</td></tr>
+        <tr><td>運單 / 報關記錄</td><td>貨物貿易</td><td>海關申報記錄</td></tr>
+      </table>
+
+      <!-- Section 8 -->
+      <h2 id="mistakes">8. 7 個常見陷阱</h2>
+
+      <div class="flag-item">
+        <p><strong>❌ 陷阱 1：冇準備文件就匯款</strong><br />銀行hold住筆錢成個星期係小事，最慘係交易告吹。解決方法：匯款前先問銀行要咩文件，準備好先submit。</p>
+      </div>
+      <div class="flag-item">
+        <p><strong>❌ 陷阱 2：關聯交易冇定價政策</strong><br />稅局查帳時會逐筆關聯交易問點解呢個定價。冇合理解釋嘅話，稅局有權重新調整利潤，補稅加罰款。</p>
+      </div>
+      <div class="flag-item">
+        <p><strong>❌ 陷阱 3：以為香港冇外匯管制就咩都得</strong><br />香港雖然冇外匯管制，但銀行有KYC責任。如果你嘅資金來源唔清唔楚，銀行可以凍結戶口甚至關閉戶口。</p>
+      </div>
+      <div class="flag-item">
+        <p><strong>❌ 陷阱 4：跨境服務費冇做Withholding Tax</strong><br />如果香港公司支付服務費俾境外公司，要留意當地有冇徵收預扣稅，尤其係特許權費、技術服務費。</p>
+      </div>
+      <div class="flag-item">
+        <p><strong>❌ 陷阱 5：跨境貸款協議冇寫清楚</strong><br />股東貸款俾公司或公司貸款俾附屬公司，一定要有書面貸款協議，列明利率、還款期、擔保條款。否則稅局可以質疑係咪真係貸款，定係股本投入。</p>
+      </div>
+      <div class="flag-item">
+        <p><strong>❌ 陷阱 6：冇考慮匯率風險</strong><br />跨境交易通常涉及外幣，匯率波動可以好大。尤其係長期合約，建議用遠期合約鎖定匯率，或者喺合約入面寫明匯率調整機制。</p>
+      </div>
+      <div class="flag-item">
+        <p><strong>❌ 陷阱 7：用地下錢莊調資金</strong><br />為咗慳手續費或者避開外匯管制，有人會用地下錢莊。呢個風險極高——唔單止違法，仲可能被騙，近年香港同內地聯手打擊，一經發現會面臨刑事檢控。</p>
+      </div>
+
+      <!-- Section 9: FAQ -->
+      <h2 id="faq">9. 常見問題（FAQ）</h2>
+
+      <div class="step-card">
+        <h3>香港有限公司跨境匯款有冇金額限制？</h3>
+        <p>香港冇法定外匯管制，所以冇法定金額上限。但銀行會按KYC政策進行審查，一般嚟講：</p>
+        <ul>
+          <li>HK$10萬以下：通常唔會點問</li>
+          <li>HK$10萬-HK$50萬：可能有簡單問題</li>
+          <li>HK$50萬以上：好大機會要求提供文件</li>
+          <li>HK$100萬以上：幾乎一定會要求齊全嘅貿易文件</li>
+        </ul>
+      </div>
+
+      <div class="step-card">
+        <h3>香港公司點樣匯款去大陸最方便？</h3>
+        <p>最常見嘅方法：</p>
+        <ul>
+          <li><strong>直接銀行電匯（T/T）</strong> — 匯港幣俾大陸供應商，對方自行兌換人民幣</li>
+          <li><strong>跨境人民幣結算</strong> — 直接匯人民幣，但要雙方銀行都有跨境人民幣結算服務</li>
+          <li><strong>Wise / Airwallex</strong> — 用FinTech平台匯款，匯率好、速度快、透明度高</li>
+          <li><strong>透過香港中資銀行</strong> — 中銀香港、工銀亞洲等有內地關聯銀行，匯款更方便</li>
+        </ul>
+      </div>
+
+      <div class="step-card">
+        <h3>跨境交易嘅文件要keep幾耐？</h3>
+        <p>根據《公司條例》同《稅務條例》，跨境交易相關文件至少保存 <strong>7年</strong>。建議：</p>
+        <ul>
+          <li>交易合約、發票、銀行記錄 — 7年</li>
+          <li>轉讓定價文檔 — 7年（由相關課稅年度完結起計）</li>
+          <li>公司決議、股權記錄 — 永久保存</li>
+        </ul>
+      </div>
+
+      <div class="step-card">
+        <h3>跨境服務費使費可以扣稅嗎？</h3>
+        <p>可以，但要符合以下條件：</p>
+        <ul>
+          <li>該服務確實用於產生應評稅利潤</li>
+          <li>費用係實際發生嘅（唔係虛構）</li>
+          <li>金額合理（符合公平原則）</li>
+          <li>有足夠文件證明（合約、發票、付款記錄）</li>
+        </ul>
+      </div>
+
+      <div class="step-card">
+        <h3>香港公司可以收加密貨幣作為跨境交易付款嗎？</h3>
+        <p>可以，但要留意：</p>
+        <ul>
+          <li>香港冇禁止公司收加密貨幣，但銀行戶口未必支援</li>
+          <li>收到加密貨幣後，要兌換返法幣先入到銀行戶口（除非用加密貨幣友善銀行）</li>
+          <li>稅務上，加密貨幣被視為資產或財產，交易要按市值計價</li>
+          <li>要保留完整嘅交易記錄供審計同報稅用</li>
+          <li>建議先用傳統貨幣做跨境交易，加密貨幣等熟悉咗先考慮</li>
+        </ul>
+      </div>
+
+      <div class="step-card">
+        <h3>點樣申請香港稅務居民證明書（COR）？</h3>
+        <p>申請COR係享受稅務協定優惠嘅第一步：</p>
+        <ul>
+          <li>向香港稅務局提交IR1313A表格（個別國家有專用表格）</li>
+          <li>證明公司在香港有實際經營（辦公室、員工、決策）</li>
+          <li>提供公司註冊證書、商業登記證、審計報告</li>
+          <li>處理時間約2-4星期</li>
+          <li>COR有效期通常係一個課稅年度</li>
+        </ul>
+      </div>
+
+      <!-- CTA -->
+      <div class="bg-gradient-to-r from-navy to-navy-light rounded-xl p-6 mt-10 text-center">
+        <h3 class="text-white text-xl font-bold mb-2">💼 跨境交易文件仲係一頭霧水？</h3>
+        <p class="text-gray-300 mb-4">我哋嘅指南幫你逐項文件解釋清楚，仲有範本可以參考</p>
+        <p class="text-gold text-sm">📖 睇多啲實戰指南 → <a href="../" class="text-white underline hover:text-gold">ESGov 網誌總覽</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-navy text-gray-400 mt-12">
+    <div class="max-w-4xl mx-auto px-4 py-8 text-center text-sm">
+      <p class="mb-2">© 2026 <a href="../../" class="text-gold hover:underline">ESGov</a> — 香港公司流程實戰指南</p>
+      <p class="text-xs">以上內容只供參考，唔構成法律或稅務意見。有需要請諮詢專業會計師或律師。</p>
+    </div>
+  </footer>
+
+</body>
+</html>
