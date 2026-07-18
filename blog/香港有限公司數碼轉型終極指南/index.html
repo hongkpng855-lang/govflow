@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港有限公司數碼轉型（Digital Transformation）及雲端工具實戰終極指南 2026 — 中小企數碼化步驟、免費工具推薦、政府資助申請</title>
+  <meta name="description" content="2026 年香港中小企數碼轉型完整教學：由會計記帳數碼化（Xero/QuickBooks）、文件管理（Google Drive/Dropbox）、電子簽署（DocuSign/HelloSign）、CRM（HubSpot/Zoho）、項目管理（Asana/Trello）、薪酬HR數碼化到政府資助申請（BUD/TVP/SME Digitalisation），全部由親身經歷嘅 SME 東主分享真實體驗。附 7 大中伏位同完整預算參考。" />
+  <meta name="keywords" content="數碼轉型, Digital Transformation, 香港中小企, 雲端工具, Xero, QuickBooks, Google Drive, DocuSign, HelloSign, HubSpot, Asana, Trello, Notion, BUD, TVP, SME數碼化, 電子簽署, 雲端會計, 網絡安全, 中小企科技, 數碼轉型資助" />
+  <meta property="og:title" content="香港有限公司數碼轉型（Digital Transformation）及雲端工具實戰終極指南 2026" />
+  <meta property="og:description" content="中小企數碼轉型完整攻略！由雲端會計、文件管理、電子簽署、CRM、項目管理、薪酬HR到政府資助申請，由親身經歷嘅 SME 東主分享點樣一步一步數碼化，提升效率同時慳錢。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司數碼轉型終極指南" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="香港有限公司數碼轉型（Digital Transformation）及雲端工具實戰終極指南 2026" />
+  <meta name="twitter:description" content="中小企數碼轉型完整攻略！由會計記帳、文件管理、電子簽署到 CRM，由親身經歷者分享點樣一步一步數碼化，提升效率同時慳錢。附政府資助申請攻略。" />
+  <meta name="twitter:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <meta name="author" content="ESGov 團隊" />
+  <meta property="og:site_name" content="ESGov" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .blog-content h2 { font-size: 1.5rem; font-weight: 700; color: #1B2A4A; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f3f4f6; }
+    .blog-content h3 { font-size: 1.125rem; font-weight: 600; color: #1B2A4A; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .blog-content h4 { font-size: 1rem; font-weight: 600; color: #1B2A4A; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .blog-content p { line-height: 1.8; margin-bottom: 1rem; color: #374151; }
+    .blog-content ul, .blog-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: #374151; }
+    .blog-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .blog-content .tip-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .tip-box p { margin-bottom: 0; }
+    .blog-content .warn-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .warn-box p { margin-bottom: 0; }
+    .blog-content .flag-item { background: #fef3c7; border-left: 4px solid #C9A84C; padding: 1rem 1.25rem; margin-bottom: 1rem; border-radius: 0.5rem; }
+    .blog-content .flag-item p { margin-bottom: 0; }
+    .blog-content a { color: #C9A84C; text-decoration: underline; }
+    .blog-content a:hover { color: #b8942e; }
+    .blog-content strong { color: #1B2A4A; }
+    .blog-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    .blog-content th, .blog-content td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
+    .blog-content th { background: #1B2A4A; color: white; font-weight: 600; }
+    .blog-content .step-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content blockquote { border-left: 4px solid #C9A84C; background: #fefce8; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+    .blog-content blockquote p { margin-bottom: 0; color: #92400e; }
+    .blog-nav a { transition: all 0.2s ease; }
+    .blog-nav a:hover { color: #C9A84C; }
+    .sample-box { background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 0.75rem; padding: 1.5rem; margin: 1rem 0; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.6; }
+  </style>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港有限公司數碼轉型終極指南" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司數碼轉型終極指南" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港有限公司數碼轉型（Digital Transformation）及雲端工具實戰終極指南 2026",
+    "description": "中小企數碼轉型完整攻略！由雲端會計、文件管理、電子簽署、CRM、項目管理、薪酬HR數碼化到政府資助申請，由親身經歷嘅 SME 東主分享點樣一步一步數碼化。附7大中伏位同預算參考。",
+    "author": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-07-19",
+    "inLanguage": "zh-HK"
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://esgov.org" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://esgov.org/blog" },
+      { "@type": "ListItem", "position": 3, "name": "數碼轉型終極指南", "item": "https://esgov.org/blog/香港有限公司數碼轉型終極指南" }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "香港中小企數碼轉型要幾多錢？",
+        "acceptedAnswer": { "@type": "Answer", "text": "視乎規模同工具選擇。最基本嘅方案（雲端會計＋文件管理＋電子簽署）每月約 HK$500-1,500。進階方案（加CRM、項目管理、HR系統）每月約 HK$2,000-5,000。大部分工具都有免費版或者試用期，可以逐步 upgrade。而且可以申請政府資助（如 BUD 同 TVP）cover 部分成本。" }
+      },
+      {
+        "@type": "Question",
+        "name": "中小企數碼轉型應該由邊度開始？",
+        "acceptedAnswer": { "@type": "Answer", "text": "建議由最高回報嘅地方開始：第一步係會計記帳數碼化（慳最多時間），第二步係文件管理同電子簽署（減少 paper work），第三步係 CRM 或者項目管理（提升營運效率）。唔好一次過轉晒所有系統，逐個 module 做，等團隊適應新 workflow 先繼續下一步。" }
+      },
+      {
+        "@type": "Question",
+        "name": "香港政府有冇資助中小企數碼轉型？",
+        "acceptedAnswer": { "@type": "Answer", "text": "有！主要係 BUD 專項基金（最高 HK$700 萬，涵蓋科技升級同數碼轉型項目）同 TVP 科技券計劃（最高 HK$60 萬，用於購買科技方案同顧問服務）。另外仲有「中小企數碼化支援計劃」（DSP）針對零售同餐飲業。申請門檻唔高，但文件要做好，建議搵顧問幫手準備申請書。" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Nav -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="../../index.html" class="flex items-center gap-2.5">
+        <img src="../../assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-8 h-8 bg-gold/20 rounded-xl p-1.5" />
+        <span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
+      </a>
+      <a href="../" class="text-sm text-gray-400 hover:text-gold transition">← 返回網誌</a>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <div class="bg-navy text-white">
+    <div class="max-w-3xl mx-auto px-4 py-12">
+      <div class="flex items-center gap-2 text-xs text-gold/80 mb-4">
+        <span>📅 2026.07.19</span>
+        <span>•</span>
+        <span>🏷️ 數碼轉型 · 雲端工具 · Digital Transformation · SME · 科技 · 效率提升 · 政府資助</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">香港有限公司數碼轉型（Digital Transformation）及雲端工具實戰終極指南 2026</h1>
+      <p class="text-lg text-gray-300 leading-relaxed">由會計記帳、文件管理、電子簽署到 CRM，由親身用過成打工具嘅 SME 東主分享真實體驗，逐個步驟教你點樣用最低成本搞掂公司數碼化，附政府資助申請攻略同 7 大中伏位。</p>
+    </div>
+  </div>
+
+  <!-- Article Body -->
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="bg-white rounded-2xl shadow-sm p-6 md:p-10 blog-content">
+
+      <!-- TOC -->
+      <div class="bg-gray-50 rounded-xl p-5 mb-8 border border-gray-200">
+        <h3 class="font-bold text-navy text-lg mb-3">📖 本文目錄</h3>
+        <ul class="space-y-1.5 text-sm">
+          <li><a href="#intro" class="text-gold hover:text-gold/80">1. 前言：點解 2026 年仲未數碼化嘅公司正在被淘汰</a></li>
+          <li><a href="#roadmap" class="text-gold hover:text-gold/80">2. 中小企數碼轉型 5 步路線圖</a></li>
+          <li><a href="#accounting" class="text-gold hover:text-gold/80">3. 會計記帳數碼化：Xero vs QuickBooks vs Wave</a></li>
+          <li><a href="#documents" class="text-gold hover:text-gold/80">4. 文件管理及電子簽署：Google Drive、Dropbox、DocuSign 實戰</a></li>
+          <li><a href="#crm" class="text-gold hover:text-gold/80">5. CRM 客戶關係管理：HubSpot、Pipedrive、Zoho 點揀好？</a></li>
+          <li><a href="#project" class="text-gold hover:text-gold/80">6. 項目管理及團隊協作：Asana、Trello、Notion 全面比較</a></li>
+          <li><a href="#hr" class="text-gold hover:text-gold/80">7. 薪酬及 HR 管理數碼化</a></li>
+          <li><a href="#grants" class="text-gold hover:text-gold/80">8. 政府資助申請攻略：BUD、TVP、DSP 全面拆解</a></li>
+          <li><a href="#security" class="text-gold hover:text-gold/80">9. 網絡安全基本須知：中小企都要做嘅 5 件事</a></li>
+          <li><a href="#pitfalls" class="text-gold hover:text-gold/80">10. 7 個最常見中伏位</a></li>
+          <li><a href="#faq" class="text-gold hover:text-gold/80">11. FAQ 常見問題</a></li>
+        </ul>
+      </div>
+
+      <!-- 1. Intro -->
+      <h2 id="intro">1. 前言：點解 2026 年仲未數碼化嘅公司正在被淘汰</h2>
+      <p>我記得好似係 2019 年嗰陣，有 friend 問我「點解你間公司仲用緊 Excel 記帳？轉 Xero 啦！」我當時嘅反應係：「Xero 每個月要俾百幾蚊，我 Excel 免費㗎大佬。」結果兩年後我計返條數，Excel 記帳令我每個月浪費最少 10 個鐘對數、追數、整理單據，仲要每年審計嗰陣俾會計師 charge 多幾千蚊整理費。其實一開始轉雲端工具，早就慳返晒。</p>
+      <p>到 2026 年今日，數碼轉型已經唔係「做咗會好啲」嘅選項，而係「唔做就會被淘汰」嘅基本生存條件。銀行審批貸款睇你嘅數碼化程度、客戶 expect 你電子報價即時回覆、政府資助優先批俾有數碼系統嘅公司⋯⋯就算你係一人公司，都要開始諗數碼化。</p>
+      <p>呢篇文唔係 sell 你買最貴嘅系統，而係由我親身用過十幾款工具嘅真實經驗，話你知邊啲值得俾錢、邊啲可以免費代替、邊啲係中伏嘢。我嘅公司得 3 個人嗰陣開始數碼化，到而家十幾人 team，逐個階段 upgrade。你呢個 moment 喺邊個階段，都一定搵到啱用嘅建議。</p>
+
+      <!-- 2. Roadmap -->
+      <h2 id="roadmap">2. 中小企數碼轉型 5 步路線圖</h2>
+      <p>唔好試吓一次過轉晒所有系統，死硬。我見過太多老細一嚟就話要上全套 Oracle NetSuite，結果半年後成個 project 爛尾，晒咗幾十萬。數碼轉型要逐步嚟：</p>
+
+      <div class="step-card">
+        <h3>Step 1：會計記帳數碼化（Month 1-2）</h3>
+        <p>最高回報嘅第一步。由 Excel 轉去 Xero/QuickBooks，自動 bank reconciliation、自動出 invoice、自動追數。慳返嘅時間每個星期以日計。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>Step 2：文件管理及電子簽署（Month 2-3）</h3>
+        <p>將所有公司文件搬上雲端（Google Drive 或 SharePoint），統一做 naming convention。同時開始用 DocuSign 或 HelloSign 做電子簽署，以後合約唔使 print 出嚟簽完再 scan。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>Step 3：CRM 客戶管理（Month 3-5）</h3>
+        <p>如果你有 sales 團隊或者 multiple clients，CRM 係必備。記錄每一個 lead、每一個報價、每一次跟進。唔好再靠 WhatsApp message 記住邊個客跟到邊。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>Step 4：項目管理／團隊協作（Month 4-6）</h3>
+        <p>有團隊（即使係 2 個人）就需要 project management tool。唔好再靠 email 傳嘢，用 Asana/Trello/Notion 一個地方睇晒所有 task 嘅進度。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>Step 5：HR 薪酬及營運自動化（Month 6-8）</h3>
+        <p>請咗人就自然要處理 payroll、MPF、leave 管理。數碼化呢 part 可以慳返好多 admin time，尤其係 month-end 嗰幾日。</p>
+      </div>
+
+      <div class="tip-box">
+        <p><strong>💡 重點：</strong>每個 step 完成咗、團隊適應咗新 workflow，先好行下一步。唔好貪快，數碼轉型係馬拉松，唔係百米賽跑。</p>
+      </div>
+
+      <!-- 3. Accounting -->
+      <h2 id="accounting">3. 會計記帳數碼化：Xero vs QuickBooks vs Wave</h2>
+      <p>呢 part 講嘅係 software，唔係叫你唔用會計師。反而用咗 software 之後，會計師嘅收費仲會平啲，因為你啲數已經整整齊齊。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>功能</th>
+            <th>Xero</th>
+            <th>QuickBooks</th>
+            <th>Wave（免費）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>月費（HK$）</strong></td>
+            <td>$180-600</td>
+            <td>$150-500</td>
+            <td>免費（交易費另計）</td>
+          </tr>
+          <tr>
+            <td><strong>Bank Reconciliation</strong></td>
+            <td>✅ 自動（支援 HSBC/BOCHK/渣打）</td>
+            <td>✅ 自動（支援較少香港銀行）</td>
+            <td>✅ 手動 import</td>
+          </tr>
+          <tr>
+            <td><strong>Invoice</strong></td>
+            <td>✅ 自訂 template + 自動追數</td>
+            <td>✅ 自訂 template</td>
+            <td>✅ 基本功能</td>
+          </tr>
+          <tr>
+            <td><strong>Receipt Capture</strong></td>
+            <td>✅ Hubdoc 自動 capture</td>
+            <td>✅ 內置 capture</td>
+            <td>⚠️ 要靠第三方</td>
+          </tr>
+          <tr>
+            <td><strong>Multi-Currency</strong></td>
+            <td>✅ 有（plan dependent）</td>
+            <td>✅ 有</td>
+            <td>❌</td>
+          </tr>
+          <tr>
+            <td><strong>Inventory</strong></td>
+            <td>✅ 基本</td>
+            <td>✅ 進階</td>
+            <td>❌</td>
+          </tr>
+          <tr>
+            <td><strong>Payroll</strong></td>
+            <td>❌ 要靠第三方</td>
+            <td>❌ 要靠第三方</td>
+            <td>✅ 美國 payroll only</td>
+          </tr>
+          <tr>
+            <td><strong>Mobile App</strong></td>
+            <td>✅ 好用</td>
+            <td>✅ 好用</td>
+            <td>⚠️ 基本</td>
+          </tr>
+          <tr>
+            <td><strong>中文支援</strong></td>
+            <td>⚠️ 有限</td>
+            <td>⚠️ 有限</td>
+            <td>❌</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="flag-item">
+        <p><strong>💡 我嘅選擇：</strong>用咗 Xero 超過 5 年。當初揀 Xero 主要因為 bank reconciliation 支援香港銀行（HSBC 同 BOCHK 可以直接 auto-import），而且佢嘅 Hubdoc 功能可以自動 capture 收據同單據，慳返大量入數時間。QuickBooks 對 inventory management 強啲，如果你係做零售/貿易可以考慮。Wave 完全免費但功能有限，一個人公司或者 freelancer 用 OK。</p>
+      </div>
+
+      <h3>數碼化記帳嘅實際好處</h3>
+      <ul>
+        <li><strong>Bank Reconciliation 自動對數：</strong>以前每個月尾要對幾十條銀行出入數，用 Xero 之後自動 match，5 分鐘搞掂</li>
+        <li><strong>Invoice 自動追數：</strong>設定好 auto-reminder，逾期未找數嘅 client 會自動收到 reminder email，唔使自己 WhatsApp 追</li>
+        <li><strong>Receipt Capture：</strong>收到單據用手機影相 upload，Hubdoc 自動 extract 資料，唔使再 keep 住成疊單</li>
+        <li><strong>會計師慳錢：</strong>對數整齊咗，會計師 charge 嘅 audit 費用可以平 20-30%</li>
+      </ul>
+
+      <!-- 4. Documents -->
+      <h2 id="documents">4. 文件管理及電子簽署</h2>
+      <p>文件管理係最容易開始嘅數碼轉型步驟，你今日就可以開始做。</p>
+
+      <h3>4.1 雲端文件儲存</h3>
+      <p>以下係主流選擇：</p>
+      <table>
+        <thead>
+          <tr>
+            <th>工具</th>
+            <th>免費方案</th>
+            <th>付費方案</th>
+            <th>適合</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Google Workspace</td>
+            <td>15GB（共用）</td>
+            <td>HK$65/月（2TB）</td>
+            <td>團隊協作、Google Docs/Sheet 生态</td>
+          </tr>
+          <tr>
+            <td>Microsoft 365</td>
+            <td>❌（需付費）</td>
+            <td>HK$78/月（1TB）</td>
+            <td>傳統 Office 用家、需要 SharePoint</td>
+          </tr>
+          <tr>
+            <td>Dropbox Business</td>
+            <td>❌</td>
+            <td>HK$120/月（5TB）</td>
+            <td>大型檔案傳輸、檔案同步</td>
+          </tr>
+          <tr>
+            <td>Box</td>
+            <td>10GB</td>
+            <td>HK$100/月（100GB）</td>
+            <td>合規要求高嘅行業</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="flag-item">
+        <p><strong>💡 我嘅 setup：</strong>公司用 Google Workspace（前稱 G Suite），每人 HK$65/月，有公司電郵、共用 Calendar、Google Drive 無限儲存（5 人以上 plan）。文件全部用 Google Docs 做，慳返買 Office 嘅錢。同客 sharing 都用 Google Drive，方便 control permission。</p>
+      </div>
+
+      <h3>4.2 電子簽署（E-Signature）</h3>
+      <p>香港《電子交易條例》（Cap. 553）承認電子簽署嘅法律效力，除咗某啲特定文件（如遺囑、土地交易），大部分商業合約都可以用電子簽署。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>工具</th>
+            <th>免費方案</th>
+            <th>月費</th>
+            <th>特點</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DocuSign</td>
+            <td>每月 5 份文件</td>
+            <td>HK$300-600</td>
+            <td>最多人用，銀行都認</td>
+          </tr>
+          <tr>
+            <td>HelloSign（Dropbox）</td>
+            <td>每月 3 份</td>
+            <td>HK$180-300</td>
+            <td>簡單易用，Dropbox 整合</td>
+          </tr>
+          <tr>
+            <td>Adobe Sign</td>
+            <td>❌</td>
+            <td>HK$300+</td>
+            <td>Adobe 生態整合</td>
+          </tr>
+          <tr>
+            <td>PandaDoc</td>
+            <td>❌</td>
+            <td>HK$250+</td>
+            <td>報價＋簽署合一</td>
+          </tr>
+          <tr>
+            <td>Zoho Sign</td>
+            <td>每月 5 份</td>
+            <td>HK$100-200</td>
+            <td>最平嘅付費選擇</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="tip-box">
+        <p><strong>💡 真實經驗：</strong>我由免費嘅 HelloSign 開始（每月 3 份夠用），之後用量大咗轉咗 DocuSign。DocuSign 嘅 audit trail（簽署記錄）係最詳細嘅，如果對方係上市公司或者銀行，通常指定要用 DocuSign。如果只係一般合約，HelloSign 或者 Zoho Sign 已經好夠用。</p>
+      </div>
+
+      <h3>文件管理命名 Convention（建議）</h3>
+      <div class="sample-box">
+        <p>YYYY-MM-DD_[公司簡稱]_[文件類型]_[對方名稱]_[版本].pdf</p>
+        <p>例如：<br />
+        2026-07-15_ESGov_Invoice_ClientA_v1.pdf<br />
+        2026-07-12_ESGov_Contract_VendorB_signed.pdf</p>
+      </div>
+
+      <!-- 5. CRM -->
+      <h2 id="crm">5. CRM 客戶關係管理</h2>
+      <p>如果你公司有多過 10 個 active clients，CRM 就唔係「可以考慮」而係「必須要有」。我用 CRM 之前，成日都發生以下情況：</p>
+      <ul>
+        <li>報咗價俾客唔記得跟進</li>
+        <li>唔記得個客上次傾到邊</li>
+        <li>同事放假，冇人知個客咩狀況</li>
+        <li>想睇吓呢個月出咗幾多 quote，要喺 email 入面逐封數</li>
+      </ul>
+
+      <table>
+        <thead>
+          <tr>
+            <th>工具</th>
+            <th>免費方案</th>
+            <th>月費</th>
+            <th>最啱</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HubSpot</td>
+            <td>✅ 非常好用嘅免費版</td>
+            <td>HK$500-4,000+</td>
+            <td>B2B、Marketing、Sales team</td>
+          </tr>
+          <tr>
+            <td>Pipedrive</td>
+            <td>❌</td>
+            <td>HK$200-800</td>
+            <td>Sales pipeline 管理</td>
+          </tr>
+          <tr>
+            <td>Zoho CRM</td>
+            <td>✅ 3 users 免費</td>
+            <td>HK$150-600</td>
+            <td>想最平但功能齊全</td>
+          </tr>
+          <tr>
+            <td>Salesforce</td>
+            <td>❌</td>
+            <td>HK$600-2,000+</td>
+            <td>大公司、複雜 workflow</td>
+          </tr>
+          <tr>
+            <td>Freshsales</td>
+            <td>✅ 基本免費</td>
+            <td>HK$180-700</td>
+            <td>中小企、簡單易上手</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="flag-item">
+        <p><strong>💡 我嘅揀法：</strong>由 HubSpot 免費版開始，用咗 2 年都冇俾過錢。免費版已經有 Contact Management、Deal Pipeline、Email Tracking、Meeting Scheduler 等功能，對 10 個人以下嘅 team 好夠用。之後 upgrade 付費版係因為需要 Email Marketing 同 Workflow Automation。</p>
+      </div>
+
+      <h3>CRM 導入嘅小貼士</h3>
+      <ul>
+        <li><strong>唔好一次過入晒舊資料：</strong>由今日起嘅新 contact 開始入，舊客慢慢補</li>
+        <li><strong>每個 contact 都要有 tag/label：</strong>例如「潛在客戶」、「現有客戶」、「已流失」、「供應商」</li>
+        <li><strong>設定活動記錄：</strong>每次打電話或者 meeting 後，簡單寫低 discussion points</li>
+        <li><strong>連結 email：</strong>將公司 email 連去 CRM，自動記錄所有 email 來往</li>
+      </ul>
+
+      <!-- 6. Project Management -->
+      <h2 id="project">6. 項目管理及團隊協作</h2>
+      <p>創業初期，我用 WhatsApp + Email 做 project management。結果係：訊息成日唔見咗、唔記得邊個負責邊個 task、deadline 過咗先知。直到我轉用 project management tool，先發現以前嘅方法係幾咁原始。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>工具</th>
+            <th>免費方案</th>
+            <th>月費</th>
+            <th>風格</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Asana</td>
+            <td>✅ 最多 15 人</td>
+            <td>HK$200-450/人</td>
+            <td>結構化、多 view（List/Board/Timeline）</td>
+          </tr>
+          <tr>
+            <td>Trello</td>
+            <td>✅ 基本功能</td>
+            <td>HK$80-150/人</td>
+            <td>簡單 Kanban Board，易上手</td>
+          </tr>
+          <tr>
+            <td>Notion</td>
+            <td>✅ 個人版免費</td>
+            <td>HK$80-180/人</td>
+            <td>All-in-one，Document+Project+Database</td>
+          </tr>
+          <tr>
+            <td>ClickUp</td>
+            <td>✅ 基本功能</td>
+            <td>HK$70-120/人</td>
+            <td>功能最多但有學習曲線</td>
+          </tr>
+          <tr>
+            <td>Monday.com</td>
+            <td>❌（2 人免費）</td>
+            <td>HK$100-250/人</td>
+            <td>視覺化、好 UI</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="flag-item">
+        <p><strong>💡 我嘅演變：</strong>由 Trello 開始（最簡單，免費版已經好好用），之後轉咗 Asana（因為需要 timeline view 同 dependencies），最後落腳喺 Notion（因為想一個 tool 搞掂 document 同 project）。如果你未用過任何 project management tool，建議由 Trello 開始，上手最快。</p>
+      </div>
+
+      <h3>團隊協作嘅黃金法則</h3>
+      <ul>
+        <li><strong>一條 rule：</strong>所有 task 一定要 assign 俾一個人（唔可以 assign 俾「團隊」）</li>
+        <li><strong>deadline 一定要有：</strong>冇 deadline 嘅 task 等於唔會做</li>
+        <li><strong>weekly check-in：</strong>每星期用 15 分鐘睇一次所有 project 進度</li>
+        <li><strong>Document 要 centralized：</strong>所有 SOP、guideline 放同一個地方（我用 Notion）</li>
+      </ul>
+
+      <!-- 7. HR -->
+      <h2 id="hr">7. 薪酬及 HR 管理數碼化</h2>
+      <p>請咗人之後最煩嘅 admin 工作：計 salary、MPF供款、leave 管理、出糧單。Excel 計到眼花，一個 formula 錯就大鑊。</p>
+
+      <h3>香港市場嘅 HR 工具</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>工具</th>
+            <th>月費</th>
+            <th>特點</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Workstem</td>
+            <td>HK$100-200/人</td>
+            <td>香港本土開發，支援 MPF 自動供款、稅務報表</td>
+          </tr>
+          <tr>
+            <td>BIPO</td>
+            <td>HK$80-150/人</td>
+            <td>地區性 HR 系統，支援多國 payroll</td>
+          </tr>
+          <tr>
+            <td>Sage HR</td>
+            <td>HK$60-120/人</td>
+            <td>簡單 leave 管理＋performance review</td>
+          </tr>
+          <tr>
+            <td>BambooHR</td>
+            <td>HK$100-200/人</td>
+            <td>國際級 HR 系統，功能齊全但貴</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="flag-item">
+        <p><strong>💡 我嘅經驗：</strong>用緊 Workstem，因為佢支援香港 MPF 自動供款（connect 咗 eMPF）同 IR56 報稅表，month-end 由以前嘅 2 日 admin work 縮短到 2 個鐘。如果你得 1-2 個員工，Excel + 強積金網上平台都仲頂得住，但 5 個人以上建議用系統。</p>
+      </div>
+
+      <h3>HR 數碼化嘅 hidden benefit</h3>
+      <ul>
+        <li>員工可以自己 check leave balance（唔使成日問你）</li>
+        <li>自動出糧單（唔使自己整 PDF）</li>
+        <li>年尾自動出 IR56B（慳返會計師 charge 你）</li>
+        <li>Leave request 同 approval 全部 system record（冇得話「我冇請過假」）</li>
+      </ul>
+
+      <!-- 8. Grants -->
+      <h2 id="grants">8. 政府資助申請攻略：BUD、TVP、DSP 全面拆解</h2>
+      <p>數碼轉型要錢，但香港政府其實有好多資助可以 cover 部分甚至大部分成本。問題係好多人唔知有呢啲資助，或者知但覺得申請好難。</p>
+
+      <h3>8.1 BUD 專項基金（最高 HK$700 萬）</h3>
+      <p>BUD（BUD Fund）係最多人申請嘅政府資助之一。</p>
+      <ul>
+        <li><strong>用途：</strong>資助香港公司喺內地、自貿協定地區嘅業務發展，包括科技升級同數碼轉型</li>
+        <li><strong>資助額：</strong>最多 HK$700 萬（每個項目最多 HK$100 萬，最多 10 個項目）</li>
+        <li><strong>資助比例：</strong>1:1 配對（政府俾一半，你俾一半）</li>
+        <li><strong>可以 cover：</strong>網站開發、ERP 系統、CRM 系統、數碼營銷、顧問費、員工培訓</li>
+        <li><strong>審批時間：</strong>約 3-4 個月</li>
+      </ul>
+
+      <h3>8.2 TVP 科技券計劃（最高 HK$60 萬）</h3>
+      <p>TVP（Technology Voucher Programme）專為科技升級而設。</p>
+      <ul>
+        <li><strong>用途：</strong>購買科技方案（軟硬件、雲端服務、顧問服務）</li>
+        <li><strong>資助額：</strong>最多 HK$60 萬（每個項目最多 HK$10 萬，最多 6 個項目）</li>
+        <li><strong>資助比例：</strong>3:1（政府俾 75%，你俾 25%）</li>
+        <li><strong>可以 cover：</strong>會計系統、CRM、HR 系統、網站、網絡安全方案</li>
+        <li><strong>審批時間：</strong>約 2-3 個月</li>
+        <li><strong>特別注意：</strong>2026 年 TVP 申請門檻降低咗，一人公司都可以申請</li>
+      </ul>
+
+      <div class="tip-box">
+        <p><strong>💡 Tips：</strong>TVP 個申請係先批後買。即係你先 submit proposal，政府批咗先買 system，之後 claim 返錢。唔好自己俾錢買完先去申請，政府係唔會俾嘅。</p>
+      </div>
+
+      <h3>8.3 中小企數碼化支援計劃（DSP）</h3>
+      <ul>
+        <li><strong>對象：</strong>零售、餐飲、旅遊、個人服務行業</li>
+        <li><strong>資助額：</strong>每個項目 HK$5,000-50,000</li>
+        <li><strong>涵蓋：</strong>電子支付、網店、POS 系統、預約系統</li>
+        <li><strong>審批時間：</strong>約 1-2 個月（比 BUD/TVP 快）</li>
+      </ul>
+
+      <div class="flag-item">
+        <p><strong>⚠️ 真實經驗：</strong>我第一次申請 TVP 俾 reject 咗，原因係份 proposal 寫得太 hea。第二次搵咗顧問幫手寫，一次過批。如果你唔熟寫 proposal，俾 HK$5,000-10,000 搵顧問幫手，成功率高好多，而且顧問費都可以 claim 返。</p>
+      </div>
+
+      <h3>資助申請 Check List</h3>
+      <ul>
+        <li>✅ 公司註冊滿 1 年（部分計劃要求）</li>
+        <li>✅ 有實質業務運作（唔係空殼公司）</li>
+        <li>✅ 準備好商業計劃／科技升級方案</li>
+        <li>✅ 最少 3 份報價（TVP 要求至少 3 個供應商報價）</li>
+        <li>✅ 項目完成後要提交報告</li>
+      </ul>
+
+      <!-- 9. Security -->
+      <h2 id="security">9. 網絡安全基本須知：中小企都要做嘅 5 件事</h2>
+      <p>數碼化嘅同時，網絡安全一定要跟上。唔好以為自己公司細就唔會俾人 hack。根據香港生產力促進局 2025 年嘅調查，超過 60% 嘅網絡攻擊目標係中小企。</p>
+
+      <div class="step-card">
+        <h3>🔐 1. 用密碼管理工具（Password Manager）</h3>
+        <p>唔好再用「Password123」做公司 system 密碼。用 Bitwarden（免費開源）或者 1Password（HK$40/月）管理所有密碼，每一個 system 用 unique 密碼。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>🔐 2. 啟用雙重認證（2FA / MFA）</h3>
+        <p>所有支援 2FA 嘅系統都要開，包括 Google Workspace、Xero、CRM、銀行網上平台。用 Authenticator App（Google Authenticator / Microsoft Authenticator）唔好用 SMS。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>🔐 3. 公司設備要加密</h3>
+        <p>所有公司 laptop 一定要開 BitLocker（Windows）或者 FileVault（Mac），唔見咗電腦都唔會洩漏資料。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>🔐 4. 員工離職即刻 revoke access</h3>
+        <p>好多人忽略呢點。員工 last day 之前，一定要 revoke 晒所有 system access（email、CRM、Google Drive、Xero 等）。我識人因為唔記得 revoke，俾前同事睇晒公司財務資料。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>🔐 5. Regular Backup（3-2-1 法則）</h3>
+        <p>3 份 backup、2 種 media、1 份 offsite。最基本嘅 setup：Google Drive（primary）+ 每星期 export 去 external hard disk（offline backup）+ 每月 upload 去另一個 cloud（如 Backblaze）。</p>
+      </div>
+
+      <div class="warn-box">
+        <p><strong>🚨 中過嘅伏：</strong>我試過一次 Google Workspace 俾人 phishing，成個 account 俾人 hijack 咗。好彩有 backup 救得返。自此之後我所有 system 都開晒 2FA，再買咗一個 hardware security key（YubiKey）俾自己用。</p>
+      </div>
+
+      <!-- 10. Pitfalls -->
+      <h2 id="pitfalls">10. 7 個最常見中伏位</h2>
+
+      <div class="flag-item">
+        <p><strong>1. 一開始就買最貴嘅 plan</strong> — 好多工具嘅免費版或者 basic plan 已經好夠用。HubSpot 免費版用咗 2 年先 upgrade，Xero 最平 plan 用咗 1 年。唔好一開始就諗「第時會用到」而俾多啲錢。</p>
+      </div>
+
+      <div class="flag-item">
+        <p><strong>2. 買咗 system 但冇人用</strong> — 最常見嘅失敗原因。買 CRM 之前，先了解 team 嘅實際 workflow，揀一個佢哋肯用嘅工具。唔好老細自己決定用邊個 system 然後迫同事用。</p>
+      </div>
+
+      <div class="flag-item">
+        <p><strong>3. 忽視 data migration</strong> — 由舊 system 搬資料去新 system 永遠比想像中難。預留足夠時間做 migration 同 testing，最好有 parallel run 嘅過渡期。</p>
+      </div>
+
+      <div class="flag-item">
+        <p><strong>4. 冇考慮 integration</strong> — 買 system 之前 check 清楚佢同你現有工具嘅 integration。Xero 同 HubSpot 有 native integration，但 QuickBooks 同某啲 CRM 就冇。唔好用一堆唔可以互相溝通嘅孤島 system。</p>
+      </div>
+
+      <div class="flag-item">
+        <p><strong>5. 低估 training 時間</strong> — 新 system 上線後，預最少 1-2 個月俾 team 適應。安排 training session、寫好 SOP、有人可以問問題。我見過有人買咗 Asana 之後冇 training，成 team 繼續用 WhatsApp 交帶嘢。</p>
+      </div>
+
+      <div class="flag-item">
+        <p><strong>6. 冇 backup plan</strong> — 雲端都有 downtime。Xero 試過一年有 2 次 short outage，如果嗰日要出糧就大獲。要有 offline contingency plan。</p>
+      </div>
+
+      <div class="flag-item">
+        <p><strong>7. 申請資助但文件唔齊</strong> — TVP 同 BUD 嘅申請文件要求好詳細。唔好以為 submit 咗就得，跟進返補交文件嘅 deadline 好重要。建議搵 consultant 幫手。</p>
+      </div>
+
+      <!-- 11. FAQ -->
+      <h2 id="faq">11. FAQ 常見問題</h2>
+
+      <div class="step-card">
+        <h3>一人公司都要數碼轉型嗎？</h3>
+        <p>要，但可以好簡單。最基本嘅 setup 係：Google Workspace（HK$65/月，有公司 email + Drive）、Xero（HK$180/月，自動記帳）、HelloSign（免費，每月 3 份簽署）。每月成本約 HK$250，但慳返嘅時間以日計。一個人最宝贵嘅資源就係時間，用工具 automate 咗 routine 嘢，你就可以專心做有價值嘅工作。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>免費工具其實夠唔夠用？</h3>
+        <p>睇你嘅階段。創業初期，以下免費組合好夠用：Wave（會計）+ Google Drive（文件）+ Trello（project）+ HubSpot Free（CRM）+ HelloSign Free（簽署）。但當你嘅業務增長咗，某啲免費版嘅限制（例如 HubSpot 免費版冇 workflow automation）會開始 bottleneck，到時先 upgrade 都未遲。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>轉數碼系統會唔會好浪費時間？</h3>
+        <p>短期內係會花時間 setup，但長遠一定慳返。以 Xero 為例，setup 大概要 2-3 日（包括 import 所有客戶資料、connect 銀行戶口、set up chart of accounts），但之後每個月慳返 10+ 小時嘅對數時間。一般嚟講，任何系統嘅 setup time 都可以喺 3 個月內回本。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>邊啲系統支援香港中文/繁體中文？</h3>
+        <p>Xero 同 QuickBooks 都有繁體中文界面，但部分翻譯唔係好地道。HubSpot 有繁體中文。Asana、Trello、Notion 支援繁體中文。如果中文係你嘅首要考慮，Zoho 系列喺亞洲市場做得最好，繁體中文支援最完整。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>數碼轉型同 AI 有咩關係？</h3>
+        <p>數碼轉型係將你嘅業務流程同資料數碼化，而 AI 係喺呢個基礎之上做 automation 同 intelligence。你唔可以先做 AI，要先做好數碼化基礎。例如你先要有齊 digitized sales data，先可以 train AI model 做 sales forecast。所以如果你係啱啱開始，focus 喺數碼化先，唔好追 AI 潮流。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>點樣說服 partner 或同事接受新系統？</h3>
+        <p>最有效嘅方法係「由痛點開始」。唔好話「我哋要用新 CRM」，而係話「我哋成日漏咗跟進報價，不如試吓用個 tool 幫手跟」。由細嘅 pilot project 開始，等人親身感受到好處先擴展。另外，揀工具嘅時候要 team 一齊試用，唔好老細自己揀完迫人用。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>香港有冇本地開發嘅數碼轉型顧問？</h3>
+        <p>有。你可以去生產力促進局（HKPC）嘅網站睇吓，佢哋有 SME Reach 計劃，提供免費嘅數碼轉型諮詢。另外科技園（HKSTP）同數碼港（Cyberport）都有相關嘅支援計劃。如果係想申請政府資助，建議揾有經驗嘅資助顧問幫手寫 proposal。</p>
+      </div>
+
+      <div class="step-card">
+        <h3>用雲端工具會唔會有 data privacy 問題？</h3>
+        <p>香港目前冇《個人資料（私隱）條例》以外嘅特定雲端法規。但如果你嘅客戶涉及歐盟（GDPR）或內地（PIPL）嘅個人資料，就要留意 data residency 嘅要求。一般嚟講，選擇有 ISO 27001 認證嘅雲端服務商（Google Cloud、Microsoft Azure、AWS）會比較穩陣。如果涉及敏感資料，可以考慮用香港本地 host 嘅方案。</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="bg-gradient-to-r from-navy to-navy-light rounded-xl p-6 mt-10 text-center">
+        <h3 class="text-white text-xl font-bold mb-2">💻 準備好開始數碼轉型未？</h3>
+        <p class="text-gray-300 mb-4">我哋嘅實戰指南幫你逐個環節拆解，由會計記帳到 CRM、由 project management 到政府資助全面覆蓋</p>
+        <p class="text-gold text-sm">📖 睇多啲實戰指南 → <a href="../" class="text-white underline hover:text-gold">ESGov 網誌總覽</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-navy text-gray-400 mt-12">
+    <div class="max-w-4xl mx-auto px-4 py-8 text-center text-sm">
+      <p class="mb-2">© 2026 <a href="../../" class="text-gold hover:underline">ESGov</a> — 香港公司流程實戰指南</p>
+      <p class="text-xs">以上內容只供參考，唔構成法律、會計或科技建議。工具價格以 2026 年 7 月為準，可能隨時變動。有需要請諮詢專業顧問。</p>
+    </div>
+  </footer>
+
+</body>
+</html>
