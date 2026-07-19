@@ -1,4 +1,19 @@
 
+## 2026-07-20 01:00（Cron 自動發佈 - ESGov Blog）
+
+- **文章標題**: 香港有限公司繼承計劃及家族企業傳承（Business Succession Planning）終極指南 2026
+- **分類**: 家族傳承 / 繼承計劃 / 股權安排
+- **文章路徑**: `blog/香港有限公司繼承計劃及家族企業傳承終極指南/index.html`
+- **文章大小**: 約 550 行 HTML
+- **結構**: 前言、5 大傳承方式比較、5 個 Step（確認目標、股權重整、接班人培育、稅務籌劃、法律文件）、家族信託指南、8 個中伏位、完整 Checklist、FAQ（7 條 Q&A）
+- **Schema**: Article + Breadcrumb + FAQPage（5 條 Q&A）
+- **狀態**: ✅ 完成（文章已建立 + sitemap 更新 + GitHub 已推送）
+- **blog index**: ✅ 已加入文章 Card（置頂 most recent）
+- **Hub page**: ✅ 已加入「公司變更・清盤・解散」分類
+- **SEO 檢查**: ✅ Title/Description/OG/Canonical/H1/FAQ Schema 全部通過
+
+---
+
 ## 2026-07-19 01:00（Cron 自動發佈 - ESGov Blog）
 
 - **文章標題**: 香港有限公司數碼轉型（Digital Transformation）及雲端工具實戰終極指南 2026
