@@ -54,3 +54,18 @@
 - **狀態**: ✅ 完成（文章已建立 + sitemap 更新 + GitHub 已推送）
 - **blog index**: ✅ 已加入文章 Card（置頂 most recent）
 - **SEO 檢查**: ✅ Title/Description/OG/Canonical/H1/alt/FAQ Schema 全部通過
+
+---
+
+## 2026-07-21 01:00（Cron 自動發佈 - ESGov Blog）
+
+- **文章標題**: 香港有限公司業務估值（Business Valuation）終極指南 2026 — 公司值幾錢？估值方法、稅局要求、轉讓定價全面拆解
+- **分類**: 銀行・財務 / 業務估值 / 公司轉讓
+- **文章路徑**: `blog/香港有限公司業務估值終極指南/index.html`
+- **文章大小**: 約 550 行 HTML
+- **結構**: 前言、8 個要估值嘅情境、3 大估值方法比較（資產基礎法/盈利倍數法/DCF）、表格（行業 PE 倍數參考）、5 步實戰流程、5 個常見中伏位、DIY vs 專業比較表、免費 DIY 工具介紹、FAQ（7 條 Q&A）
+- **Schema**: Article + Breadcrumb + FAQPage（5 條 Q&A）
+- **狀態**: ✅ 完成（文章已建立 + sitemap 更新 + GitHub 已推送）
+- **blog index**: ✅ 已加入文章 Card（置頂 most recent）
+- **Hub page**: ✅ 已加入「銀行・財務」分類
+- **SEO 檢查**: ✅ Title/Description/OG/Canonical/H1/FAQ Schema 全部通過
