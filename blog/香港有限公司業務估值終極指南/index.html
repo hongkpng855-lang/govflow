@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港有限公司業務估值（Business Valuation）終極指南 2026 — 公司值幾錢？估值方法、稅局要求、轉讓定價全面拆解</title>
+  <meta name="description" content="香港有限公司業務估值（Business Valuation）完整教學：資產基礎法、盈利倍數法、市場比較法全面比較。由真實經歷者分享，教你公司轉讓、股東退股、離婚分身家、稅務籌劃時點樣計公司值幾錢。附 Valuation Report 架構、常見陷阱同慳錢貼士。" />
+  <meta name="keywords" content="香港公司估值, Business Valuation, 業務估值, 公司值幾錢, SME估值, 香港有限公司轉讓, 股權估值, 盈利倍數法, 資產基礎法, DCF估值, 香港稅局估值, 轉讓定價, 公司估值報告, 股東退股, 印花稅估值, SME Valuation, 香港中小企估值" />
+  <meta property="og:title" content="香港有限公司業務估值（Business Valuation）終極指南 2026 — 公司值幾錢？估值方法、稅局要求、轉讓定價全面拆解" />
+  <meta property="og:description" content="香港有限公司業務估值完整教學：資產基礎法、盈利倍數法、市場比較法全面比較。教你公司轉讓、股東退股、離婚分身家時點樣計公司值幾錢。附 Valuation Report 架構同常見陷阱。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司業務估值終極指南" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="香港有限公司業務估值（Business Valuation）終極指南 2026 — 公司值幾錢？估值方法全面拆解" />
+  <meta name="twitter:description" content="香港有限公司業務估值完整教學：資產基礎法、盈利倍數法、市場比較法全面比較。教你點樣計公司值幾錢，附 Valuation Report 架構同常見陷阱。" />
+  <meta name="twitter:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <meta name="author" content="ESGov 團隊" />
+  <meta property="og:site_name" content="ESGov" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .blog-content h2 { font-size: 1.5rem; font-weight: 700; color: #1B2A4A; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f3f4f6; }
+    .blog-content h3 { font-size: 1.125rem; font-weight: 600; color: #1B2A4A; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .blog-content h4 { font-size: 1rem; font-weight: 600; color: #1B2A4A; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .blog-content p { line-height: 1.8; margin-bottom: 1rem; color: #374151; }
+    .blog-content ul, .blog-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: #374151; }
+    .blog-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .blog-content .tip-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .tip-box p { margin-bottom: 0; }
+    .blog-content .warn-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .warn-box p { margin-bottom: 0; }
+    .blog-content .flag-item { background: #fef3c7; border-left: 4px solid #C9A84C; padding: 1rem 1.25rem; margin-bottom: 1rem; border-radius: 0.5rem; }
+    .blog-content .flag-item p { margin-bottom: 0; }
+    .blog-content a { color: #C9A84C; text-decoration: underline; }
+    .blog-content a:hover { color: #b8942e; }
+    .blog-content strong { color: #1B2A4A; }
+    .blog-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    .blog-content th, .blog-content td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
+    .blog-content th { background: #1B2A4A; color: white; font-weight: 600; }
+    .blog-content .step-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content blockquote { border-left: 4px solid #C9A84C; background: #fefce8; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+    .blog-content blockquote p { margin-bottom: 0; color: #92400e; }
+    .blog-nav a { transition: all 0.2s ease; }
+    .blog-nav a:hover { color: #C9A84C; }
+    .sample-box { background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 0.75rem; padding: 1.5rem; margin: 1rem 0; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.6; }
+  </style>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港有限公司業務估值終極指南" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司業務估值終極指南" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港有限公司業務估值（Business Valuation）終極指南 2026 — 公司值幾錢？估值方法、稅局要求、轉讓定價全面拆解",
+    "description": "香港有限公司業務估值完整教學：資產基礎法、盈利倍數法、市場比較法全面比較。由真實經歷者分享，教你公司轉讓、股東退股、離婚分身家、稅務籌劃時點樣計公司值幾錢。附 Valuation Report 架構、常見陷阱同慳錢貼士。",
+    "author": {
+      "@type": "Organization",
+      "name": "ESGov"
+    },
+    "datePublished": "2026-07-21",
+    "dateModified": "2026-07-21",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ESGov",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://esgov.org/assets/images/esgov-logo.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://esgov.org" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://esgov.org/blog" },
+      { "@type": "ListItem", "position": 3, "name": "業務估值終極指南", "item": "https://esgov.org/blog/香港有限公司業務估值終極指南" }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "香港有限公司估值通常用邊種方法？",
+        "acceptedAnswer": { "@type": "Answer", "text": "最常用係盈利倍數法（PE Ratio / 市盈率法），即係將公司過去1-3年嘅平均盈利乘以一個行業倍數。香港中小企嘅PE倍數通常係3-8倍，視乎行業、穩定性同增長前景。資產基礎法常用於物業投資公司或冇持續盈利嘅公司。DCF法理論上最準確，但對中小企嚟講輸入參數太多，實際應用較少。" }
+      },
+      {
+        "@type": "Question",
+        "name": "公司估值咩情況下一定要做？",
+        "acceptedAnswer": { "@type": "Answer", "text": "（1）股權轉讓或新股東入股；（2）股份回購；（3）股東退股或股東拆夥；（4）離婚訴訟中嘅財產分配；（5）公司遺產承辦；（6）稅務局要求嘅轉讓定價報告；（7）申請銀行融資或政府資助；（8）公司清盤。稅局尤其關注關聯交易嘅定價係咪符合公平市價原則（Arm's Length Principle）。" }
+      },
+      {
+        "@type": "Question",
+        "name": "搵會計師做公司估值要幾錢？",
+        "acceptedAnswer": { "@type": "Answer", "text": "香港中小企估值報告費用約 $8,000-$30,000，視乎公司規模同複雜程度。大約價格範圍：好簡單嘅資產基礎法約 $8,000-$15,000；完整盈利倍數法連書面報告約 $15,000-$25,000；上市公司或複雜集團估值可以過 $100,000。價錢包唔包稅局查詢跟進都要問清楚。" }
+      },
+      {
+        "@type": "Question",
+        "name": "公司估值同印花稅有咩關係？",
+        "acceptedAnswer": { "@type": "Answer", "text": "股份轉讓嘅印花稅係按股份嘅公平市值（Fair Market Value）計算，唔係你同買家自己話個價就係個價。如果你報嘅轉讓價明顯低過公平市值，稅局有權按市場價值徵收印花稅。稅局會參考公司嘅資產淨值、盈利紀錄、行業倍數等因素。所以做股份轉讓前最好先做個簡化估值，確保印花稅報價合理。" }
+      },
+      {
+        "@type": "Question",
+        "name": "冇盈利嘅公司係咪唔值錢？",
+        "acceptedAnswer": { "@type": "Answer", "text": "唔一定。冇盈利嘅公司可以用資產基礎法估值，即係計公司嘅淨資產值（Total Assets - Total Liabilities）。如果公司持有物業、專利、品牌商譽、客戶合約等有價值資產，即使賬面蝕緊錢都可能值好多。另外，如果公司有潛在增長價值（例如已攞到牌照、有獨家代理權、有穩定客源），都可以用市場比較法估算。不過要留意傷亡虧損公司嘅商譽值通常係零甚至負數。" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
+      <a href="../" class="text-sm text-gray-400 hover:text-gold transition">← 返回 Blog</a>
+    </div>
+  </nav>
+
+  <!-- ═══ Article Header ═══ -->
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+      <div class="flex flex-wrap items-center gap-2 text-sm text-gray-400 mb-4 blog-nav">
+        <a href="../" class="hover:text-gold transition-colors">Blog</a>
+        <span>/</span>
+        <span class="text-gray-600">業務估值終極指南</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-4">
+        💰 香港有限公司業務估值（Business Valuation）終極指南 2026
+      </h1>
+      <p class="text-lg text-gray-500 leading-relaxed mb-6">
+        公司值幾錢？唔係你話事，係市場話事。由實戰角度拆解 3 大估值方法、8 個要估值嘅情境、同 5 個最常見中伏位。
+      </p>
+      <div class="flex flex-wrap items-center gap-3 text-sm text-gray-400">
+        <span>📅 2026.07.21</span>
+        <span>🏷️ 業務估值 · Business Valuation · 公司轉讓 · 股權估值 · 稅務籌劃 · SME</span>
+        <span>⏱ 閱讀時間：約 12 分鐘</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ Table of Contents ═══ -->
+  <nav class="bg-gray-50 border-b border-gray-100 py-4 sticky top-14 z-40 hidden sm:block">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap gap-2 text-sm">
+        <a href="#intro" class="text-navy hover:text-gold px-3 py-1.5 rounded-lg bg-white border border-gray-200 transition-colors">前言</a>
+        <a href="#why-value" class="text-navy hover:text-gold px-3 py-1.5 rounded-lg bg-white border border-gray-200 transition-colors">點解要估值</a>
+        <a href="#methods" class="text-navy hover:text-gold px-3 py-1.5 rounded-lg bg-white border border-gray-200 transition-colors">三大估值方法</a>
+        <a href="#step-by-step" class="text-navy hover:text-gold px-3 py-1.5 rounded-lg bg-white border border-gray-200 transition-colors">實戰流程</a>
+        <a href="#pitfalls" class="text-navy hover:text-gold px-3 py-1.5 rounded-lg bg-white border border-gray-200 transition-colors">常見陷阱</a>
+        <a href="#faq" class="text-navy hover:text-gold px-3 py-1.5 rounded-lg bg-white border border-gray-200 transition-colors">FAQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ Article Content ═══ -->
+  <article class="py-10">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 blog-content">
+
+      <!-- Intro -->
+      <section id="intro">
+        <h2>🤔 公司值幾錢？其實冇人識答</h2>
+        <p>「我間公司值幾錢？」</p>
+        <p>呢條問題，我俾人問過好多次。開親股東會、傾融資、甚至同老婆傾離婚分身家嘅時候，都一定會出現。</p>
+        <p>老實講，公司估值唔會有一個「絕對正確」嘅答案。同一間公司，用唔同方法、唔同假設，可以相差好遠。賣家話值 1,000 萬，買家話值 300 萬，唔一定有人講大話，可能只係用咗唔同嘅估值方法。</p>
+        <p>我當年第一個 Startup 退股嘅時候，就係因為唔識估值呢回事，俾 partner 用一條公式就收購咗我啲股份。後來先知我嗰 30% 股份如果用另一個方法計，最少值多一倍。蝕咗一大筆學費。</p>
+
+        <div class="flag-item">
+          <p class="font-semibold text-navy">💡 核心概念：估值係一個範圍，唔係一個數字</p>
+          <p class="text-sm mt-1">專業估值報告會俾一個估值範圍（Valuation Range），而唔係一個單一數字。因為估值本身包含咗好多判斷同假設，而唔係一條絕對數式。</p>
+        </div>
+      </section>
+
+      <!-- Why Valuation -->
+      <section id="why-value">
+        <h2>🎯 咩時候要幫公司估值？8 個常見情境</h2>
+        <p>好多香港中小企東主從來冇諗過幫公司估值，直到突然需要嘅時候先嚟急。以下係 8 個最常見要估值嘅情況：</p>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">1. 股權轉讓 / 新股東入股</p>
+          <p>最 common 嘅情況。舊股東想賣股、新股東想入股，大家要一個公平嘅參考價。尤其係創辦團隊有人想退場，點樣計佢嗰份值幾多錢？</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">2. 股東退股 / 股東拆夥</p>
+          <p>合作咗幾年，大家方向唔同想拆夥。如果股東協議冇寫明退股機制，估值就會成為最大嘅爭拗點。我見過朋友拆夥因為估值問題傾唔掂，最後要上法庭。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">3. 公司轉讓（賣公司）</p>
+          <p>成間公司賣俾人（無論係賣股份定賣業務），買賣雙方都需要一個估值基礎。賣家想最大化價值，買家想做 due diligence 確認冇俾多。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">4. 稅務籌劃 / 轉讓定價</p>
+          <p>稅局（IRD）對關聯交易嘅定價非常嚴格。如果你同關聯公司（例如同一集團嘅另一間公司）之間有交易，稅局有權要求你提供轉讓定價（Transfer Pricing）報告，證明交易價格係公平市價。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">5. 離婚訴訟嘅財產分配</p>
+          <p>離婚時法院會考慮雙方嘅總資產。如果你係公司東主，你嘅股權係資產嘅一部分，需要估值。呢啲情況通常要法庭認可嘅專業估值師（Forensic Valuer）出報告。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">6. 遺產承辦 / 家族傳承</p>
+          <p>公司東主過身後，遺產承辦人需要為公司股權估值，以便計算遺產稅（雖然香港已取消遺產稅，但仍需向遺產承辦處申報）同分配遺產。參考：<a href="../香港有限公司繼承計劃及家族企業傳承終極指南/">家族企業傳承終極指南</a>。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">7. 銀行融資 / 政府資助申請</p>
+          <p>申請 BUD、TVP 等政府資助，或者向銀行申請貸款時，銀行可能會要求公司估值作為抵押品價值嘅參考。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">8. 公司清盤 / 重組</p>
+          <p>公司清盤時，清盤人需要為公司資產估值，決定係咪繼續營運定係立即變賣資產。參考：<a href="../香港有限公司清盤終極指南/">有限公司清盤終極指南</a>。</p>
+        </div>
+      </section>
+
+      <!-- Methods -->
+      <section id="methods">
+        <h2>📊 三大估值方法全面比較</h2>
+        <p>國際通用嘅估值方法主要有三種。每種方法有唔同嘅適用場景，專業估值通常會用兩種或以上嘅方法交叉驗證（Triangulation）。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>估值方法</th>
+              <th>適合場景</th>
+              <th>優點</th>
+              <th>缺點</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>資產基礎法</strong><br/>（Asset-Based Approach）</td>
+              <td>物業公司、投資公司、冇持續盈利嘅公司</td>
+              <td>簡單直接、有客觀數字基礎</td>
+              <td>忽略商譽同盈利能力、唔適合輕資產公司</td>
+            </tr>
+            <tr>
+              <td><strong>盈利倍數法</strong><br/>（Market / PE Approach）</td>
+              <td>有穩定盈利嘅營運公司、SME 最常用</td>
+              <td>反映賺錢能力、行業可比較</td>
+              <td>倍數選擇主觀、盈利波動影響大</td>
+            </tr>
+            <tr>
+              <td><strong>現金流折現法</strong><br/>（DCF / Income Approach）</td>
+              <td>增長型公司、項目投資評估</td>
+              <td>理論最完整、考慮未來增長</td>
+              <td>假設太多、對 SME 嚟講太複雜</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>🔹 方法一：資產基礎法（Asset-Based Approach）</h3>
+        <p>最直接嘅方法：公司值幾多 ＝ 總資產 － 總負債。</p>
+        <p>但要留意：賬面值（Book Value）同市場值（Market Value）可能差好遠。例如公司 10 年前買咗層廠，賬面值可能已經折舊到好低，但市場值可能升咗 3 倍。專業估值會做資產重估（Revaluation），按公平市值計资产價值。</p>
+
+        <div class="tip-box">
+          <p class="font-semibold text-navy">💡 實戰貼士</p>
+          <p>如果公司主要資產係現金、應收賬款呢類流動資產，資產基礎法會比較準確。如果主要資產係品牌、專利呢類無形資產，呢個方法可能會嚴重低估公司價值。</p>
+        </div>
+
+        <h3>🔹 方法二：盈利倍數法（Market / PE Approach）— SME 最常用</h3>
+        <p>呢個係香港中小企最常用嘅估值方法，公式係：</p>
+
+        <div class="sample-box">
+          <strong>公司估值 ＝ 調整後盈利 × 行業 PE 倍數</strong>
+        </div>
+
+        <p><strong>調整後盈利（Adjusted Profit）</strong>：唔係就咁攞報稅嘅利潤。要加返非經常性支出、東主嘅私人開支、折舊等一次性項目。專業叫呢個做「正常化盈利」（Normalized Profit）。</p>
+
+        <p><strong>行業 PE 倍數</strong>：中小企嘅 PE 倍數通常喺 3-8 倍之間。以下係參考範圍：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>行業</th>
+              <th>常見 PE 倍數（中小企）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>貿易 / 批發</td>
+              <td>3 - 5 倍</td>
+            </tr>
+            <tr>
+              <td>專業服務（會計、顧問、IT）</td>
+              <td>4 - 7 倍</td>
+            </tr>
+            <tr>
+              <td>科技 / SaaS</td>
+              <td>5 - 10 倍（增長快嘅可以更高）</td>
+            </tr>
+            <tr>
+              <td>餐飲 / 零售</td>
+              <td>2 - 4 倍</td>
+            </tr>
+            <tr>
+              <td>製造業</td>
+              <td>3 - 6 倍</td>
+            </tr>
+            <tr>
+              <td>物業投資 / 收租</td>
+              <td>8 - 12 倍（視乎物業質素）</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="flag-item">
+          <p class="font-semibold text-navy">⚠️ 實際例子：我朋友間貿易公司</p>
+          <p>上年朋友想賣佢間貿易公司，每年 adjusted profit 大約 $200 萬。我同佢搵咗幾間同業嘅成交紀錄，PE 倍數大約 4 倍。即係估值大約 $800 萬（$200 萬 × 4）。最後佢用 $750 萬成交，因為買家話應收賬款有風險，要求 discount。</p>
+        </div>
+
+        <h3>🔹 方法三：現金流折現法（DCF / Discounted Cash Flow）</h3>
+        <p>呢個係理論上最完整嘅方法：預測未來 3-5 年嘅現金流，然後用一個折現率（Discount Rate）折返去今日嘅價值。</p>
+        <p>公式概念：</p>
+        <div class="sample-box">
+          公司估值 = Σ（第 N 年現金流 ÷ (1+r)ⁿ）+ 終值（Terminal Value）
+        </div>
+        <p>其中 r = 折現率，反映資金成本同風險。香港 SME 嘅折現率通常係 12%-25%，視乎行業風險。</p>
+
+        <div class="warn-box">
+          <p class="font-semibold text-navy">🚨 中小企用 DCF 嘅陷阱</p>
+          <p>DCF 對輸入假設極度敏感。增長率差 1%，最終估值可以差 20-30%。對大多數香港 SME 嚟講，盈利倍數法已經好夠用。除非你係準備融資或者賣公司俾 PE Fund，否則唔建議用 DCF。我用 DCF 計過自己間公司，改一個折現率假設，估值可以由 500 萬變到 1,200 萬，完全冇意思。</p>
+        </div>
+      </section>
+
+      <!-- Step by Step -->
+      <section id="step-by-step">
+        <h2>📋 SME 業務估值 5 步實戰流程</h2>
+        <p>以下係我自己幫朋友做估值（或者搵人幫手估值）嘅 5 步流程：</p>
+
+        <div class="step-card">
+          <p class="font-bold text-navy text-lg mb-2">Step 1：釐清估值目的同標準</p>
+          <p>先搞清楚做估值係為咗咩：</p>
+          <ul>
+            <li><strong>公平市值（Fair Market Value）</strong>：最常見，假設買賣雙方自願交易</li>
+            <li><strong>強制出售價值（Forced Sale Value）</strong>：清盤或急售時用，通常較低</li>
+            <li><strong>投資價值（Investment Value）</strong>：對特定買家嘅價值，可能包含 synergies</li>
+          </ul>
+          <p>目的唔同，用嘅方法同得出嘅數字都可以好唔同。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy text-lg mb-2">Step 2：準備財務資料</p>
+          <p>無論自己估定搵人估，都要準備好：</p>
+          <ul>
+            <li>最近 3 年嘅 Audit Financial Statements（經審計財務報表）</li>
+            <li>最近 2 年嘅 Management Accounts（管理賬目）</li>
+            <li>應收賬款 aging report 同壞帳紀錄</li>
+            <li>存貨清單同庫齡分析</li>
+            <li>固定資產清單（物業、設備、車輛等）</li>
+            <li>任何無形資產嘅評估（商標、專利、牌照）</li>
+            <li>股東貸款、董事貸款等關聯交易紀錄</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy text-lg mb-2">Step 3：選擇合適嘅估值方法</p>
+          <p>根據公司性質同估值目的，揀 1-2 個主要方法：</p>
+          <ul>
+            <li><strong>服務業 / 貿易公司</strong>：盈利倍數法（最常用）</li>
+            <li><strong>物業公司 / 資產密集型</strong>：資產基礎法</li>
+            <li><strong>科技 Startup / 高增長</strong>：DCF 或市場比較法</li>
+            <li><strong>多業務集團</strong>：分部估值（Sum of Parts Valuation）</li>
+          </ul>
+          <p>專業做法係用兩種方法做 cross-check。例如先用盈利倍數法計一次，再用資產基礎法做下限參考。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy text-lg mb-2">Step 4：計算並調整估值</p>
+          <p>計完初步估值之後，要考慮以下調整因素：</p>
+          <ul>
+            <li><strong>少數股權折讓（Minority Discount）</strong>：如果只係賣小部分股份，通常要打折 15-30%</li>
+            <li><strong>控制權溢價（Control Premium）</strong>：如果買家攞到控制權（>50%），可能要加溢價 20-40%</li>
+            <li><strong>非運營資產（Non-operating Assets）</strong>：例如公司有層自用物業，如果賣完公司後可以放租，呢類資產要分開計</li>
+            <li><strong>市場流通性折讓（Lack of Marketability）</strong>：私人公司股份冇公開市場，一般折讓 10-30%</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy text-lg mb-2">Step 5：撰寫 Valuation Report</p>
+          <p>一個專業嘅估值報告應該包括：</p>
+          <ul>
+            <li>估值目的同基準</li>
+            <li>公司背景同業務概述</li>
+            <li>行業分析同市場環境</li>
+            <li>財務分析（歷史表現、財務比率）</li>
+            <li>估值方法同假設</li>
+            <li>估值結果（可以係範圍）</li>
+            <li>限制條件同免責條款</li>
+            <li>估值師嘅資格聲明</li>
+          </ul>
+        </div>
+
+        <div class="flag-item">
+          <p class="font-semibold text-navy">📌 識自己估可以慳錢，但正式場合要搵專業估值師</p>
+          <p>自己做估值（Desktop Valuation）可以用嚟內部參考、傾初步價格。但如果要用嚟交稅、上法庭、或者正式轉讓，一定要搵合資格嘅估值師（通常係 CPA 或者 accredited valuation analyst）出報告。稅局同法院唔會接受你自己用 Excel 計嘅數字。</p>
+        </div>
+      </section>
+
+      <!-- Pitfalls -->
+      <section id="pitfalls">
+        <h2>🚨 5 個最常見嘅公司估值中伏位</h2>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">1. 用錯盈利數字</p>
+          <p>最常見嘅錯誤：就咁用報稅嘅利潤嚟計估值。報稅利潤通常係 lowest possible（因為要慳稅），唔反映公司真實嘅盈利能力。一定要做 Normalization Adjustment：加返東主嘅私人開支、一次性支出、非經常性項目。我見過朋友唔做調整，用報稅利潤去計估值，結果低估咗 40%。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">2. 忽略營運資金調整</p>
+          <p>估值唔單止係睇盈利，仲要考慮公司需要幾多營運資金（Working Capital）。如果公司有大量應收賬款或存貨，實際可用嘅現金可能比賬面少好多。專業估值會做 Net Working Capital Adjustment，確保買家接手下有足夠現金營運。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">3. 冇考慮 Non-compete 同關鍵人風險</p>
+          <p>對於中小企嚟講，公司嘅價值好多時喺個老細度。如果賣完公司之後老細走咗，啲客可能會跟埋走。所以估值時要考慮 Non-compete Agreement 同關鍵員工留任安排。如果賣方唔簽 non-compete，買家通常會要求打大折扣。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">4. 稅務負債冇計入</p>
+          <p>公司可能有未繳嘅稅務負債，例如暫繳稅、利得稅、或者潛在嘅補稅風險。如果公司之前嘅稅務安排比較進取（例如 offshore claim），潛在嘅稅務風險應該反映喺估值入面。呢點喺<a href="../香港有限公司離岸利得稅申報OffshoreClaim終極指南/">離岸利得稅申報指南</a>有詳細講。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">5. 用錯 PE 倍數比較對象</p>
+          <p>好多人會用上市公司嘅 PE 倍數去比較自己間 SME，呢個係大錯特錯。上市公司嘅 PE 倍數包括咗流通溢價（Liquidity Premium），因為上市公司股份可以隨時買賣。私人公司嘅股份冇流通性，一定要打 significant discount。參考：香港恆生指數成份股嘅 PE 約 10-15 倍，但同類型嘅 SME 通常只值 3-8 倍。</p>
+        </div>
+      </section>
+
+      <!-- DIY vs Professional -->
+      <section>
+        <h2>🛠️ 自己估 vs 搵專業估值師</h2>
+        <p>好多人問我：公司估值可唔可以自己做？</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>情況</th>
+              <th>自己估（Desktop Valuation）</th>
+              <th>專業估值師</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>內部參考</td>
+              <td>✅ 夠用，用 Excel 計吓就得</td>
+              <td>❌ 冇必要</td>
+            </tr>
+            <tr>
+              <td>傾 sell side 初步價格</td>
+              <td>✅ 可以初步摸底</td>
+              <td>✅ 比較好，有說服力</td>
+            </tr>
+            <tr>
+              <td>正式股權轉讓</td>
+              <td>❌ 稅局可能唔接受</td>
+              <td>✅ 必須</td>
+            </tr>
+            <tr>
+              <td>離婚 / 訴訟</td>
+              <td>❌ 法院唔接受</td>
+              <td>✅ 必須，要有法庭認可資格</td>
+            </tr>
+            <tr>
+              <td>稅務轉讓定價報告</td>
+              <td>❌ 稅局要求專業報告</td>
+              <td>✅ 必須</td>
+            </tr>
+            <tr>
+              <td>銀行融資</td>
+              <td>❌ 銀行唔接受</td>
+              <td>✅ 銀行要求獨立估值</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="tip-box">
+          <p class="font-semibold text-navy">💡 慳錢建議</p>
+          <p>先自己做一個 Desktop Valuation 了解大約價值範圍，再用呢個結果去同專業估值師傾，可以慳返好多前期討論時間。專業估值師按小時計費，你準備得愈好，佢嘅工作時間就愈短。</p>
+        </div>
+      </section>
+
+      <!-- Tools -->
+      <section>
+        <h2>🧰 免費 DIY 估值工具</h2>
+        <p>如果你淨係想做個初步估算，可以試吓呢啲方法：</p>
+        <ul>
+          <li><strong>簡單 PE 計算</strong>：攞過去 3 年嘅平均盈利（調整後）× 行業參考 PE 倍數</li>
+          <li><strong>資產淨值法</strong>：Balance Sheet 嘅 Total Assets - Total Liabilities（用市場值代替賬面值）</li>
+          <li><strong>收入倍數法</strong>：部分行業用 Annual Revenue × 0.5-2 倍（零售、貿易常用）</li>
+          <li><strong>重置成本法</strong>：開一間類似嘅公司要幾多錢？用呢個做 valuation floor</li>
+        </ul>
+        <p>不過再次提你：自己做嘅只可以參考。正式交易一定要搵專業人士。</p>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>❓ FAQ 常見問題</h2>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">Q: 香港有限公司估值通常用邊種方法？</p>
+          <p>最常用係盈利倍數法（PE Ratio / 市盈率法），即係將公司過去 1-3 年嘅平均盈利乘以一個行業倍數。香港中小企嘅 PE 倍數通常係 3-8 倍，視乎行業、穩定性同增長前景。資產基礎法常用於物業投資公司或冇持續盈利嘅公司。DCF 法理論上最準確，但對中小企嚟講輸入參數太多，實際應用較少。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">Q: 公司估值咩情況下一定要做？</p>
+          <p>（1）股權轉讓或新股東入股；（2）股份回購；（3）股東退股或股東拆夥；（4）離婚訴訟中嘅財產分配；（5）公司遺產承辦；（6）稅務局要求嘅轉讓定價報告；（7）申請銀行融資或政府資助；（8）公司清盤。稅局尤其關注關聯交易嘅定價係咪符合公平市價原則（Arm's Length Principle）。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">Q: 搵會計師做公司估值要幾錢？</p>
+          <p>香港中小企估值報告費用約 $8,000-$30,000，視乎公司規模同複雜程度。大約價格範圍：好簡單嘅資產基礎法約 $8,000-$15,000；完整盈利倍數法連書面報告約 $15,000-$25,000；上市公司或複雜集團估值可以過 $100,000。價錢包唔包稅局查詢跟進都要問清楚。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">Q: 公司估值同印花稅有咩關係？</p>
+          <p>股份轉讓嘅印花稅係按股份嘅公平市值（Fair Market Value）計算，唔係你同買家自己話個價就係個價。如果你報嘅轉讓價明顯低過公平市值，稅局有權按市場價值徵收印花稅。稅局會參考公司嘅資產淨值、盈利紀錄、行業倍數等因素。所以做股份轉讓前最好先做個簡化估值，確保印花稅報價合理。詳情可參考<a href="../../香港公司股份轉讓流程2026/">股份轉讓流程指南</a>。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">Q: 冇盈利嘅公司係咪唔值錢？</p>
+          <p>唔一定。冇盈利嘅公司可以用資產基礎法估值，即係計公司嘅淨資產值（Total Assets - Total Liabilities）。如果公司持有物業、專利、品牌商譽、客戶合約等有價值資產，即使賬面蝕緊錢都可能值好多。另外，如果公司有潛在增長價值（例如已攞到牌照、有獨家代理權、有穩定客源），都可以用市場比較法估算。不過要留意持續虧損公司嘅商譽值通常係零甚至負數。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">Q: 公司估值報告有效期幾耐？</p>
+          <p>一般估值報告嘅有效期係 3-6 個月。因為市場環境、公司業績、資產價值都會隨時間變動。過咗有效期嘅估值報告，稅局、銀行同法院通常唔會接受。如果交易過程超過 6 個月，建議要 update 估值。</p>
+        </div>
+
+        <div class="step-card">
+          <p class="font-bold text-navy">Q: 股東協議寫明嘅估值機制有冇效？</p>
+          <p>有效。如果股東協議入面寫咗退股嘅估值方法（例如「按最近一次經審計財務報表嘅資產淨值計算」），通常法院會尊重股東之間嘅協議。但要注意：如果估值方法明顯唔公平（例如 outdated 嘅數字），或者有隱瞞重要資料，另一方可以 challenge。建議喺股東協議入面寫清楚估值方法同更新機制。</p>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <section>
+        <h2>💬 總結：估值係藝術，唔係科學</h2>
+        <p>寫完呢篇嘢，諗返自己當年蝕嗰筆學費——如果早啲識估值嘅基本概念，可能唔會俾人用一條簡單公式就食咗我啲股份。</p>
+        <p>公司估值冇絕對嘅對錯，但掌握基本概念可以幫你：</p>
+        <ul>
+          <li>傾生意嘅時候心中有數</li>
+          <li>唔會俾人用唔合理嘅估值壓價</li>
+          <li>知道咩時候要搵專業人士幫手</li>
+          <li>避免因為用錯假設而蝕大錢</li>
+        </ul>
+
+        <blockquote>
+          <p>「公司估值最重要嘅唔係計到一個數字，而係知道點解你會得到呢個數字。」</p>
+        </blockquote>
+
+        <p>如果你有公司估值嘅經驗或者問題，歡迎留言討論。大家一齊分享，少啲人俾人呃。</p>
+
+        <div class="flex flex-wrap gap-3 mt-8">
+          <a href="../" class="inline-flex items-center gap-1.5 bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-navy-light transition-colors">← 返回 Blog 總覽</a>
+          <a href="/" class="inline-flex items-center gap-1.5 border border-navy text-navy px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-navy hover:text-white transition-colors">🏠 返回首頁</a>
+        </div>
+      </section>
+
+    </div>
+  </article>
+
+  <!-- ═══ Footer ═══ -->
+  <footer class="bg-navy text-gray-300 py-10">
+    <div class="max-w-4xl mx-auto px-4 text-center text-sm">
+      <p class="mb-2">© 2026 ESGov — 香港公司流程實戰指南平台</p>
+      <p class="text-gray-500">以上內容係個人經驗分享，唔構成專業法律或會計意見。</p>
+      <p class="text-gray-500">有需要請諮詢合資格嘅律師或會計師。</p>
+    </div>
+  </footer>
+
+</body>
+</html>
