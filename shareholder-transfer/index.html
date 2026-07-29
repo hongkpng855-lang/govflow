@@ -243,7 +243,7 @@
     } finally {
       this.isLoading = false;
     }
-    this.$nextTick(() => { setTimeout(() => { if(typeof lucide!==\'undefined\'){ try { lucide.createIcons(); } catch(e) {} } }, 300); });
+    var _i=0;var _t=setInterval(function(){if(typeof lucide!==\'undefined\'){try{lucide.createIcons()}catch(e){}};_i++;if(_i>10){clearInterval(_t)}},500);
   },
 
   get steps() { return this.processData?.steps || []; },
