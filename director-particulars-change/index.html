@@ -141,6 +141,7 @@
   </script>
   <script defer src="https://unpkg.com/lucide@latest"></script>
   <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+<script>const STEP_ICONS={hasDocs:'<i data-lucide="file-text" class="w-5 h-5 inline-block"></i>',noDocs:'<i data-lucide="footprints" class="w-5 h-5 inline-block"></i>'};</script>
 </head>
 <body x-data="{
   steps: [],
@@ -156,6 +157,7 @@
   selectedDoc: null,
 
   init() {
+    this.$nextTick(() => { if(typeof lucide!=='undefined') lucide.createIcons(); });
     this.steps = [
       {
         stepNumber: 1,
@@ -309,8 +311,8 @@
   },
 
   getStepIcon(step) {
-    const icons = ['<i data-lucide="file-text" class="inline-block w-4 h-4"></i>','<i data-lucide="file-text" class="inline-block w-4 h-4"></i>','✍️','<i data-lucide="mailbox" class="inline-block w-4 h-4"></i>','<i data-lucide="clipboard-list" class="inline-block w-4 h-4"></i>'];
-    return icons[step.stepNumber - 1] || '📄';
+    const icons = [STEP_ICONS.hasDocs, STEP_ICONS.hasDocs, STEP_ICONS.hasDocs, STEP_ICONS.hasDocs, STEP_ICONS.hasDocs];
+    return icons[step.stepNumber - 1] || STEP_ICONS.hasDocs;
   },
 
   openDonate() {
@@ -406,7 +408,7 @@
                     'bg-gold text-navy': currentStep === s.stepNumber,
                     'bg-gray-200 text-gray-500': currentStep !== s.stepNumber
                   }"
-                  x-text="getStepIcon(s)"
+                  x-html="getStepIcon(s)"
                 ></span>
                 <div class="min-w-0 flex-1">
                   <span class="block text-xs font-medium leading-snug" x-text="'Step '+s.stepNumber+': '+(s.title.split('（')[0] || s.title)"></span>
@@ -488,7 +490,7 @@
               <div class="mb-8">
                 <div class="flex items-center gap-3 mb-2">
                   <span class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gold text-navy flex items-center justify-center font-bold text-lg">
-                    <span x-text="getStepIcon(s)"></span>
+                    <span x-html="getStepIcon(s)"></span>
                   </span>
                   <span class="text-sm text-green-600 font-semibold">🆓 免費步驟 | Step <span x-text="s.stepNumber"></span></span>
                 </div>

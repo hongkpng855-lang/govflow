@@ -213,6 +213,7 @@
   </script>
     <script defer src="https://unpkg.com/lucide@latest"></script>
   <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+<script>const STEP_ICONS={hasDocs:'<i data-lucide="file-text" class="w-5 h-5 inline-block"></i>',noDocs:'<i data-lucide="footprints" class="w-5 h-5 inline-block"></i>'};</script>
 </head>
 <body x-data="{
   processData: null,
@@ -242,7 +243,7 @@
     } finally {
       this.isLoading = false;
     }
-    let _t=setInterval(()=>{if(typeof lucide!=='undefined'){lucide.createIcons();clearInterval(_t);}},200);
+    this.$nextTick(() => { setTimeout(() => { if(typeof lucide!==\'undefined\'){ try { lucide.createIcons(); } catch(e) {} } }, 300); });
   },
 
   get steps() { return this.processData?.steps || []; },
@@ -250,7 +251,7 @@
   get progressPercent() { return (this.currentStep / this.totalSteps) * 100; },
 
   getStepIcon(step) {
-    return '<i data-lucide=\'+(step.documents && step.documents.length > 0 ? "'file-text'" : "'footprints')"+' class=\'w-5 h-5 inline-block\'></i>';
+    return step.documents && step.documents.length > 0 ? STEP_ICONS.hasDocs : STEP_ICONS.noDocs;
   },
 
   goToStep(n) {
@@ -260,11 +261,12 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     if (n === this.totalSteps) {
-      setTimeout(() => { this.showDonate = true; }, 800);
+      this.isLoading = false;
     }
+    this.$nextTick(() => { setTimeout(() => { if(typeof lucide!=='undefined') lucide.createIcons(); }, 0); });
   },
 
-  openDoc(doc) {
+  get steps()
     // Email gate before viewing templates/docs
     const emailDone = localStorage.getItem('esgov_email_done');
     if (!emailDone) {
