@@ -228,6 +228,7 @@
     } finally {
       this.isLoading = false;
     }
+    this.$nextTick(() => { lucide.createIcons(); });
   },
 
   get steps() { return this.processData?.steps || []; },

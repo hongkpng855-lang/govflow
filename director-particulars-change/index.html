@@ -156,6 +156,7 @@
   selectedDoc: null,
 
   init() {
+    this.$nextTick(() => { lucide.createIcons(); });
     this.steps = [
       {
         stepNumber: 1,
