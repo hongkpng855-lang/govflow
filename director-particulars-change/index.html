@@ -311,7 +311,7 @@
 
   getStepIcon(step) {
     const icons = ['file-text','file-text','pen','mail','clipboard-list'];
-    return '<i data-lucide='+(icons[step.stepNumber - 1] || "'file-text'")+' class="inline-block w-5 h-5"></i>';
+    return '<i data-lucide="'+(icons[step.stepNumber - 1] || 'file-text')+'" class="inline-block w-5 h-5"></i>';
   },
 
   openDonate() {
