@@ -87,7 +87,9 @@
   ]
 }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body class="bg-gray-100 font-sans">
 
   <nav class="bg-navy text-white sticky top-0 z-50">
@@ -101,7 +103,7 @@
 
     <!-- Trust Banner -->
     <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
-      📄 睇範例 → 下載可供參考的空白模板 → 如曾增加股本須一併提交
+      <i data-lucide='file-text' class='w-4 h-4 inline-block'></i> 睇範例 → 下載可供參考的空白模板 → 如曾增加股本須一併提交
     </div>
 
 
@@ -126,15 +128,15 @@
     <!-- 文件說明 + 常見錯誤 -->
     <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
       <div class="flex items-start gap-3 mb-3">
-        <span class="text-lg mt-0.5 shrink-0">📄</span>
+        <span class="text-lg mt-0.5 shrink-0"><i data-lucide='file-text' class='w-4 h-4 inline-block'></i></span>
         <div>
           <p class="font-semibold text-navy text-sm">NSC1（股份配發申請書）</p>
           <p class="text-xs text-gray-500 mt-0.5">如公司曾增加股本但未反映於章程細則或 NAR1，須一併提交最近一份已遞交公司註冊處嘅 NSC1 副本</p>
         </div>
       </div>
-      <h2 class="font-semibold text-navy text-base mb-2 mt-4">⚠️ 常見錯誤與注意事項</h2>
+      <h2 class="font-semibold text-navy text-base mb-2 mt-4"><i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 常見錯誤與注意事項</h2>
       <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
-        <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
+        <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1"><i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 常見錯誤</h4>
         <ul class="text-xs text-gray-700 space-y-1.5">
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>公司曾增加股本但冇提交 NSC1 — 股本記錄唔完整，公司註冊處會追問</li>
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>以為 NAR1 反映咗就算 — 如果章程細則未更新，NSC1 係必需嘅佐證</li>
@@ -151,7 +153,7 @@
       </a>
       <a href="https://www.cr.gov.hk/sc/companies_ordinance/docs/NSC1_fillable.pdf" target="_blank"
          class="w-full flex items-center justify-center gap-2 bg-white border border-blue-300 text-blue-700 font-semibold py-3 px-6 rounded-xl hover:bg-blue-50 transition text-sm">
-        📄 查看官方表格（公司註冊處網站）
+        <i data-lucide='file-text' class='w-4 h-4 inline-block'></i> 查看官方表格（公司註冊處網站）
       </a>
       <a href="/shareholder-transfer?step=5"
          class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
@@ -190,7 +192,7 @@
     <div class="text-center mb-4">
       <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
          class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
-        ☕ 請咖啡
+        <i data-lucide='coffee' class='w-4 h-4 inline-block'></i> 請咖啡
       </a>
     </div>
   <footer class="gov-footer py-12">
@@ -200,14 +202,14 @@
           <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
         </div>
         <div class="text-sm text-gray-400 flex items-center gap-3">
-          <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="hover:text-gold transition">☕ 請咖啡</a>
+          <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="hover:text-gold transition"><i data-lucide='coffee' class='w-4 h-4 inline-block'></i> 請咖啡</a>
           <span class="opacity-30">|</span>
           <span>全部免費 🆓</span>
         </div>
       </div>
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">
-          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          <i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
           如有具體法律問題，請諮詢執業律師或專業公司秘書。
         </p>
         <p>© 2025 ESGov. All rights reserved.</p>

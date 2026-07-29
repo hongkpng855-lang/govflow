@@ -59,6 +59,8 @@
   ]
 }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-100 font-sans">
 
@@ -73,7 +75,7 @@
 
     <!-- Info Banner -->
     <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
-      📌 呢份係公司註冊處嘅官方表格範例。NR2 只係當 SCR 存放喺註冊辦事處以外嘅地方先需要提交。
+      <i data-lucide='pin' class='w-4 h-4 inline-block'></i> 呢份係公司註冊處嘅官方表格範例。NR2 只係當 SCR 存放喺註冊辦事處以外嘅地方先需要提交。
     </div>
 
     <!-- Page Title -->
@@ -88,7 +90,7 @@
                onerror="this.outerHTML='<div class=flex items-center justify-center py-20 text-gray-400 text-sm>🖼️ 範例圖片準備中</div>'" />
         </div>
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
-          <span class="text-white text-xs font-bold drop-shadow-sm flex items-center gap-1">🔍 按此放大檢視</span>
+          <span class="text-white text-xs font-bold drop-shadow-sm flex items-center gap-1"><i data-lucide='search' class='w-4 h-4 inline-block'></i> 按此放大檢視</span>
         </div>
       </div>
     </div>
@@ -96,13 +98,13 @@
     <!-- Document Info + Common Mistakes -->
     <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
       <div class="flex items-start gap-3 mb-3">
-        <span class="text-lg mt-0.5 shrink-0">📄</span>
+        <span class="text-lg mt-0.5 shrink-0"><i data-lucide='file-text' class='w-4 h-4 inline-block'></i></span>
         <div>
           <p class="font-semibold text-navy text-sm">指明地點通知書（Form NR2）— CR 指引 Annex G 範本</p>
           <p class="text-xs text-gray-500 mt-0.5">NR2 係指明地點通知書，當 SCR 備存於公司註冊辦事處以外嘅香港地址時，需 15 日內提交</p>
         </div>
       </div>
-      <h2 class="font-semibold text-navy text-base mb-2 mt-4">⚠️ 常見錯誤</h2>
+      <h2 class="font-semibold text-navy text-base mb-2 mt-4"><i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 常見錯誤</h2>
       <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
         <ul class="text-xs text-gray-700 space-y-1.5">
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>放喺註冊辦事處都照交 NR2（唔需要）</li>
@@ -116,7 +118,7 @@
     <div class="space-y-3">
       <button onclick="checkEmailGate()"
               class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-3 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm">
-        📄 下載官方 Form NR2（可填寫 PDF）
+        <i data-lucide='file-text' class='w-4 h-4 inline-block'></i> 下載官方 Form NR2（可填寫 PDF）
       </button>
       <a href="/significant-controllers-register?step=7"
          class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-3 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
@@ -126,7 +128,7 @@
     <div class="text-center mt-4">
       <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
          class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
-        ☕ 請咖啡
+        <i data-lucide='coffee' class='w-4 h-4 inline-block'></i> 請咖啡
       </a>
     </div>
 
@@ -180,7 +182,7 @@
 
     function submitDownloadEmail() {
       const email = document.getElementById('downloadEmail').value.trim();
-      if (!email || !email.includes('@')) { alert('⚠️ 請輸入有效嘅電郵地址'); return; }
+      if (!email || !email.includes('@')) { alert('<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 請輸入有效嘅電郵地址'); return; }
       try {
         var iframe = document.createElement('iframe');
         iframe.name = 'fsframe'; iframe.style.display = 'none';
@@ -188,7 +190,7 @@
         var f = document.createElement('form');
         f.method = 'POST'; f.action = 'https://formsubmit.co/tbstbs0613@gmail.com';
         f.target = 'fsframe'; f.style.display = 'none';
-        var fields = { email: email, page: 'scr-nr2-generator', docType: 'NR2 指明地點通知書 (撤銷注册申請書)', _subject: '📬 ESGov 新下載（NR2 指明地點通知書）：' + email, _captcha: 'false', _template: 'table' };
+        var fields = { email: email, page: 'scr-nr2-generator', docType: 'NR2 指明地點通知書 (撤銷注册申請書)', _subject: '<i data-lucide='mailbox' class='w-4 h-4 inline-block'></i> ESGov 新下載（NR2 指明地點通知書）：' + email, _captcha: 'false', _template: 'table' };
         for (var k in fields) { var inp = document.createElement('input'); inp.name = k; inp.value = fields[k]; f.appendChild(inp); }
         document.body.appendChild(f); f.submit();
         setTimeout(function(){ document.body.removeChild(f); document.body.removeChild(iframe); }, 1000);
@@ -208,7 +210,7 @@
   <!-- Email Gate Modal -->
   <div id="emailGateModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 capture-hide">
     <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" onclick="event.stopPropagation()">
-      <div class="text-3xl mb-3">📬</div>
+      <div class="text-3xl mb-3"><i data-lucide='mailbox' class='w-4 h-4 inline-block'></i></div>
       <h3 class="text-lg font-bold text-navy mb-2">下載前留低 email</h3>
       <p class="text-sm text-gray-500 mb-5">正在為你準備 <strong>NR2 指明地點通知書</strong> 嘅 PDF<br />留低 email，我哋會話你知邊份文件準備好咗 <i data-lucide='smile' class='w-4 h-4 inline-block'></i></p>
       <div class="flex flex-col gap-3">
@@ -232,13 +234,13 @@
           <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 inline-block bg-gold/20 rounded-xl p-1.5" /><span><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
         </div>
         <div class="text-sm text-gray-400 flex items-center gap-3">
-          <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="hover:text-gold transition">☕ 請咖啡</a>
+          <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;" class="hover:text-gold transition"><i data-lucide='coffee' class='w-4 h-4 inline-block'></i> 請咖啡</a>
           <span class="opacity-30">|</span>
           <span>全部免費 🆓</span>
         </div>
       </div>
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
-        <p class="mb-2">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
+        <p class="mb-2"><i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。如有具體法律問題，請諮詢執業律師或專業公司秘書。</p>
         <p>© 2026 ESGov. All rights reserved.</p>
         <p class="mt-2 opacity-40">v9.5</p>
       </div>

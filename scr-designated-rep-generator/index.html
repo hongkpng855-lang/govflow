@@ -256,6 +256,8 @@ display=swap" rel="stylesheet" />
       margin: 0 auto !important;
     }
   </style>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-100 font-sans">
 
@@ -270,7 +272,7 @@ display=swap" rel="stylesheet" />
 
     <!-- Trust Banner -->
     <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700 capture-hide">
-      📝 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅董事會決議及同意書 PDF
+      <i data-lucide='pen-line' class='w-4 h-4 inline-block'></i> 填好下面資料 → 㩒「下載 PDF」→ 直接下載已填好嘅董事會決議及同意書 PDF
     </div>
 
     <h1 class="text-xl sm:text-2xl font-bold text-navy text-center mb-4 capture-hide">指定代表委任決議及同意書 — PDF 填寫工具</h1>
@@ -304,14 +306,14 @@ display=swap" rel="stylesheet" />
     <!-- 文件說明 + 常見錯誤 -->
     <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm capture-hide">
       <div class="flex items-start gap-3 mb-3">
-        <span class="text-lg mt-0.5 shrink-0">📄</span>
+        <span class="text-lg mt-0.5 shrink-0"><i data-lucide='file-text' class='w-4 h-4 inline-block'></i></span>
         <div>
           <h2 class="font-semibold text-navy text-sm">董事會書面決議 + 指定代表同意書</h2>
           <p class="text-xs text-gray-500 mt-0.5">用於正式委任指定代表備存 SCR，及取得該代表同意擔任該職位</p>
         </div>
       </div>
       <div class="bg-red-50 border border-red-100 rounded-xl p-3 sm:p-4">
-        <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 常見錯誤</h4>
+        <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1"><i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 常見錯誤</h4>
         <ul class="text-xs text-gray-700 space-y-1.5">
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>未取得指定代表書面同意就委任</li>
           <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>決議未經全體董事簽署</li>
@@ -326,8 +328,8 @@ display=swap" rel="stylesheet" />
       <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
 
         <div class="flex border-b border-gray-200">
-          <button id="tabRealdemo" onclick="switchModalTab('realdemo')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition">📄 真實範例</button>
-          <button id="tabTemplate" onclick="switchModalTab('template')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition">📄 模板</button>
+          <button id="tabRealdemo" onclick="switchModalTab('realdemo')" class="flex-1 py-3 text-sm font-bold text-navy border-b-2 border-navy transition"><i data-lucide='file-text' class='w-4 h-4 inline-block'></i> 真實範例</button>
+          <button id="tabTemplate" onclick="switchModalTab('template')" class="flex-1 py-3 text-sm font-semibold text-gray-400 hover:text-navy transition"><i data-lucide='file-text' class='w-4 h-4 inline-block'></i> 模板</button>
           <button onclick="closeTemplateModal()" class="px-4 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
         </div>
 
