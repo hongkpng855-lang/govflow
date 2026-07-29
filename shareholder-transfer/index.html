@@ -215,8 +215,35 @@
   <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 <script>const STEP_ICONS={hasDocs:'<i data-lucide="file-text" class="w-5 h-5 inline-block"></i>',noDocs:'<i data-lucide="footprints" class="w-5 h-5 inline-block"></i>'};</script>
 <script>
-function formatDetails(t){if(!t)return t;var m={\uD83D\uDCC4:"file-text",\uD83D\uDC63:"footprints",\uD83C\uDD93:"sparkles",\u2615:"coffee",\uD83D\uDE80:"rocket",\u2753:"help-circle",\u26A0\uFE0F:"triangle-alert",\uD83C\uDFAF:"target",\uD83D\uDCA1:"lightbulb",\uD83D\uDCB0:"coins",\uD83D\uDCCC:"pin",\uD83C\uDF89:"party-popper",\uD83D\uDCCA:"bar-chart-3",\uD83D\uDCDA:"book-open",\uD83D\uDCDD:"pen-line",\uD83D\uDD0D:"search",\uD83D\uDE34:"sleep",\uD83D\uDDA5:"monitor",\uD83D\uDCE7:"mail",\uD83D\uDEE0:"wrench",\uD83D\uDDF3:"vote",\uD83D\uDCC5:"calendar",\uD83C\uDFE2:"building-2",\uD83D\uDCAC:"message-square",\uD83D\uDCCB:"clipboard-list",\uD83D\uDCDC:"scroll-text",\uD83D\uDCC2:"folder-open",\uD83D\uDCCE:"paperclip",\uD83D\uDD17:"link",\uD83C\uDF89:"party-popper",\uD83C\uDFAF:"target",\uD83D\uDCB0:"coins"};
-var r=t;for(var[k,v]of Object.entries(m)){r=r.split(k).join('<i data-lucide="'+v+'" class="w-4 h-4 inline-block"></i>');}return r;}
+function formatDetails(t){if(!t)return t;var r=t;
+r=r.split("\uD83D\uDCC4").join("<i data-lucide="file-text" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDC63").join("<i data-lucide="footprints" class="w-4 h-4 inline-block"></i>");
+r=r.split("\u2615").join("<i data-lucide="coffee" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDE80").join("<i data-lucide="rocket" class="w-4 h-4 inline-block"></i>");
+r=r.split("\u2753").join("<i data-lucide="help-circle" class="w-4 h-4 inline-block"></i>");
+r=r.split("\u26A0").join("<i data-lucide="triangle-alert" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83C\uDFAF").join("<i data-lucide="target" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDCA1").join("<i data-lucide="lightbulb" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDCB0").join("<i data-lucide="coins" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDCCC").join("<i data-lucide="pin" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDCCA").join("<i data-lucide="bar-chart-3" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDCDA").join("<i data-lucide="book-open" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDCDD").join("<i data-lucide="pen-line" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDD0D").join("<i data-lucide="search" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDDA5").join("<i data-lucide="monitor" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDCE7").join("<i data-lucide="mail" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDEE0").join("<i data-lucide="wrench" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDCC5").join("<i data-lucide="calendar" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83C\uDFE2").join("<i data-lucide="building-2" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDCAC").join("<i data-lucide="message-square" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDCCB").join("<i data-lucide="clipboard-list" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDCDC").join("<i data-lucide="scroll-text" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDCC2").join("<i data-lucide="folder-open" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDCCE").join("<i data-lucide="paperclip" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83D\uDD17").join("<i data-lucide="link" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83E\uDDEE").join("<i data-lucide="calculator" class="w-4 h-4 inline-block"></i>");
+r=r.split("\uD83C\uDF89").join("<i data-lucide="party-popper" class="w-4 h-4 inline-block"></i>");
+return r;}
 </script>
 </head>
 <body x-data="{
