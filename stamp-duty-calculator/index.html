@@ -102,9 +102,9 @@
       </div>
     </div>
 
-    <!-- ⚠️ 逾期警告 -->
+    <!-- <i data-lucide="triangle-alert" class="inline-block w-4 h-4"></i> 逾期警告 -->
     <div class="mb-4 bg-red-50 border border-red-200 rounded-xl p-3 sm:p-4">
-      <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1">⚠️ 重要提醒：逾期罰款</h4>
+      <h4 class="font-semibold text-red-600 text-xs mb-2 flex items-center gap-1"><i data-lucide="triangle-alert" class="inline-block w-4 h-4"></i> 重要提醒：逾期罰款</h4>
       <ul class="text-xs text-gray-700 space-y-1.5">
         <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>印花稅須喺簽署轉讓書後 <strong>2 個月內</strong> 繳交</li>
         <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 shrink-0">•</span>逾期未繳 — 罰款可高達 <strong>應繳稅額嘅 10 倍</strong></li>
@@ -242,7 +242,7 @@
         '買方印花稅（0.1%）：' + buyerDuty + '\n' +
         '定額印花稅：$5\n' +
         '合共應繳：' + totalDuty + '\n\n' +
-        '⚠️ 須喺簽署轉讓書後 2 個月內繳交，逾期罰款可達 10 倍';
+        '<i data-lucide="triangle-alert" class="inline-block w-4 h-4"></i> 須喺簽署轉讓書後 2 個月內繳交，逾期罰款可達 10 倍';
 
       navigator.clipboard.writeText(text).then(() => {
         const btn = document.querySelector('[onclick="copyResult()"]');
