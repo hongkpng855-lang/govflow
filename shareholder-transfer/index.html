@@ -249,7 +249,7 @@
   get progressPercent() { return (this.currentStep / this.totalSteps) * 100; },
 
   getStepIcon(step) {
-    return '<i data-lucide='+(step.documents && step.documents.length > 0 ? "'file-text'" : "'footprints'")+' class="inline-block w-5 h-5"></i>';
+    return '<i data-lucide='+(step.documents && step.documents.length > 0 ? "'file-text'" : "'footprints'")+' class=\'inline-block w-5 h-5\'></i>';
   },
 
   goToStep(n) {
