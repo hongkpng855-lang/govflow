@@ -63,6 +63,8 @@
   ]
 }
   </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-100 font-sans">
 
@@ -83,14 +85,14 @@
     <!-- 工具說明 -->
     <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
       <div class="flex items-start gap-3 mb-3">
-        <span class="text-lg mt-0.5 shrink-0">📋</span>
+        <span class="text-lg flex items-center gap-1"><i data-lucide="clipboard-list" class="inline-block w-5 h-5"></i></span>
         <div>
           <p class="font-semibold text-navy text-sm">轉讓後跟進 Checklist</p>
           <p class="text-xs text-gray-500 mt-0.5">股份轉讓文件簽署 &amp; 繳交印花稅之後嘅必做 steps</p>
         </div>
       </div>
       <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 sm:p-4">
-        <h4 class="font-semibold text-blue-700 text-xs mb-2 flex items-center gap-1">💡 點樣用</h4>
+        <h4 class="font-semibold text-blue-700 text-xs mb-2 flex items-center gap-1"><i data-lucide="lightbulb" class="inline-block w-4 h-4"></i> 點樣用</h4>
         <ul class="text-xs text-gray-700 space-y-1.5">
           <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5 shrink-0">•</span>逐項㩒個 checkbox 標記為「已完成」</li>
           <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5 shrink-0">•</span>進度 bar 會顯示完成百分比</li>

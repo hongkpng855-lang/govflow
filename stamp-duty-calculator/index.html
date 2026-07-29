@@ -63,6 +63,8 @@
   ]
 }
   </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-100 font-sans">
 
@@ -83,7 +85,7 @@
     <!-- 工具說明 -->
     <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
       <div class="flex items-start gap-3 mb-3">
-        <span class="text-lg mt-0.5 shrink-0">🧮</span>
+        <span class="text-lg flex items-center gap-1"><i data-lucide="calculator" class="inline-block w-5 h-5"></i></span>
         <div>
           <p class="font-semibold text-navy text-sm">印花稅計算器</p>
           <p class="text-xs text-gray-500 mt-0.5">香港股份轉讓印花稅（Stamp Duty）即時計算 — 按《印花稅條例》第117章</p>
@@ -180,7 +182,7 @@
         <!-- 一按複製 -->
         <div class="mt-4 flex gap-2">
           <button onclick="copyResult()" class="flex-1 bg-navy text-white font-bold py-3 px-4 rounded-xl hover:bg-navy-light transition shadow text-sm flex items-center justify-center gap-2">
-            📋 複製結果
+            <i data-lucide="clipboard-list" class="inline-block w-4 h-4"></i> 複製結果
           </button>
           <button onclick="resetCalc()" class="flex-none bg-gray-200 text-gray-600 font-semibold py-3 px-4 rounded-xl hover:bg-gray-300 transition text-sm">
             🔄 重設
