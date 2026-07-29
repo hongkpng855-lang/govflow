@@ -1055,5 +1055,15 @@ if(c>0&&typeof lucide!=='undefined')try{lucide.createIcons()}catch(e){}return c}
 var obs=new MutationObserver(function(){replaceEmoji()});setTimeout(function(){obs.observe(document.body,{childList:true,subtree:true,characterData:true})},200)
 })();
 </script>
+<script>
+(function(){var m={"🔥":"flame","📖":"book-open","🟢":"circle","🟡":"circle","🔴":"circle","📍":"map-pin","📰":"newspaper","🔖":"bookmark","🤝":"handshake","📥":"download"};
+function r(){var c=0;for(var n=document.createTreeWalker(document.body,4,null,false),t;t=n.nextNode();){if(t.parentElement&&t.parentElement.closest("script,style,svg,code,pre"))continue;var v=t.nodeValue||"";for(var[e,i]of Object.entries(m)){if(v.includes(e)){var s=document.createElement("span");s.innerHTML=v.split(e).join('<i data-lucide="'+i+'" class="w-4 h-4 inline-block"></i>');while(s.firstChild)t.parentNode.insertBefore(s.firstChild,t);t.parentNode.removeChild(t);c++;break}}}
+if(c>0&&typeof lucide!==void 0)try{lucide.createIcons()}catch(e){}
+return c}
+var t=setInterval(function(){var c=r();if(c===0&&typeof Alpine!==void 0)clearInterval(t)},800);
+var obs=new MutationObserver(function(){r()});
+setTimeout(function(){obs.observe(document.body,{childList:true,subtree:true,characterData:true})},100);
+})();
+</script>
 </body>
 </html>
