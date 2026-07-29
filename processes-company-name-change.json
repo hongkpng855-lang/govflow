@@ -13,14 +13,14 @@
       "title": "查冊公司名 + 檢查商標",
       "summary": "確認新公司名未被註冊，檢查商標衝突",
       "isFree": true,
-      "details": "第一步：上公司註冊處 e-Services Portal（www.e-services.cr.gov.hk）做免費查冊。用「Exact Name Search」模式輸入心儀嘅公司名，睇下有冇撞名。\n\n同一時間，去知識產權署嘅商標檢索系統（esearch.ipd.gov.hk）查下新名有冇侵犯他人註冊商標。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 公司註冊處唔會幫你 check 商標 — 佢哋只 check 公司名有冇同 existing company 撞名。商標嗰 part 你要自己搞掂。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 如果個名同現有公司「太過相似」（例如差一個字、同音），都會被 reject。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 記得 check 埋 domain 名 — 公司名改咗但 domain 俾人註冊咗就麻煩。\n\n✅ 查冊係免費嘅，唔好 skip 呢步。"
+      "details": "第一步：上公司註冊處 e-Services Portal（www.e-services.cr.gov.hk）做免費查冊。用「Exact Name Search」模式輸入心儀嘅公司名，睇下有冇撞名。\n\n同一時間，去知識產權署嘅商標檢索系統（esearch.ipd.gov.hk）查下新名有冇侵犯他人註冊商標。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 公司註冊處唔會幫你 check 商標 — 佢哋只 check 公司名有冇同 existing company 撞名。商標嗰 part 你要自己搞掂。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 如果個名同現有公司「太過相似」（例如差一個字、同音），都會被 reject。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 記得 check 埋 domain 名 — 公司名改咗但 domain 俾人註冊咗就麻煩。\n\n<i data-lucide='check-circle' class='w-4 h-4 inline-block'></i> 查冊係免費嘅，唔好 skip 呢步。"
     },
     {
       "stepNumber": 2,
       "title": "通過特別決議（Special Resolution）",
       "summary": "股東/董事通過更改公司名稱嘅特別決議",
       "isFree": true,
-      "details": "公司需要通過一份特別決議（Special Resolution），決議內容包括：\n- 舊公司名\n- 新公司名\n- 通過日期\n- 授權董事辦理後續手續\n\n決議可以喺股東大會通過，或者由全體股東書面同意。\n\n✅ 通過後，決議你自己 keep 就得，唔使交俾公司註冊處。\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 但要喺通過後 15 日內交 Form NNC2！錯過 deadline 會被罰款。",
+      "details": "公司需要通過一份特別決議（Special Resolution），決議內容包括：\n- 舊公司名\n- 新公司名\n- 通過日期\n- 授權董事辦理後續手續\n\n決議可以喺股東大會通過，或者由全體股東書面同意。\n\n<i data-lucide='check-circle' class='w-4 h-4 inline-block'></i> 通過後，決議你自己 keep 就得，唔使交俾公司註冊處。\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 但要喺通過後 15 日內交 Form NNC2！錯過 deadline 會被罰款。",
       "documents": [
         {
           "name": "特別決議（Special Resolution）",
@@ -73,7 +73,7 @@
       "title": "更新銀行、供應商、公司紀錄",
       "summary": "全方位更新所有用舊公司名嘅地方",
       "isFree": true,
-      "details": "公司改名後，以下各項要逐個更新：\n\n🏦 **銀行戶口** — 帶改名證書 + 董事決議 + 新公司印親自去分行\n     唔可以用網上銀行搞，一定要親身去\n\n🔏 **公司印（Company Chop）** — 重新訂造\n\n🌐 **公司網站、Email Domain** — 更新名稱\n\n📇 **名片、信紙、發票** — 全部要換\n\n<i data-lucide='coins' class='w-4 h-4 inline-block'></i> **MPF 強積金** — 通知受託人填 form\n\n<i data-lucide='file-text' class='w-4 h-4 inline-block'></i> **保險單** — 通知保險公司更新\n\n<i data-lucide='pen' class='w-4 h-4 inline-block'></i> **合約／協議** — 通知對方更新公司名\n\n®️ **商標、知識產權** — 如已註冊商標要 update\n\n📱 **Google Play / Apple Developer** — 更新開發者帳戶\n\n🎫 **SFC / 旅行社等牌照** — 逐個牌照機構通知\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 以爲銀行會自動更新？一定要親身去分行搞。\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 海外資產（內地商標、離岸公司）要逐個 jurisdiction 搞。\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 冇通知債權人/債務人嘅話，人哋用舊名開票俾你，銀行可能唔收。\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 以爲改咗名就 automatically 全部 update？所有供應商、合約都要自己通知。"
+      "details": "公司改名後，以下各項要逐個更新：\n\n<i data-lucide='banknote' class='w-4 h-4 inline-block'></i> **銀行戶口** — 帶改名證書 + 董事決議 + 新公司印親自去分行\n     唔可以用網上銀行搞，一定要親身去\n\n🔏 **公司印（Company Chop）** — 重新訂造\n\n🌐 **公司網站、Email Domain** — 更新名稱\n\n📇 **名片、信紙、發票** — 全部要換\n\n<i data-lucide='coins' class='w-4 h-4 inline-block'></i> **MPF 強積金** — 通知受託人填 form\n\n<i data-lucide='file-text' class='w-4 h-4 inline-block'></i> **保險單** — 通知保險公司更新\n\n<i data-lucide='pen' class='w-4 h-4 inline-block'></i> **合約／協議** — 通知對方更新公司名\n\n®️ **商標、知識產權** — 如已註冊商標要 update\n\n<i data-lucide='smartphone' class='w-4 h-4 inline-block'></i> **Google Play / Apple Developer** — 更新開發者帳戶\n\n🎫 **SFC / 旅行社等牌照** — 逐個牌照機構通知\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 以爲銀行會自動更新？一定要親身去分行搞。\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 海外資產（內地商標、離岸公司）要逐個 jurisdiction 搞。\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 冇通知債權人/債務人嘅話，人哋用舊名開票俾你，銀行可能唔收。\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 以爲改咗名就 automatically 全部 update？所有供應商、合約都要自己通知。"
     }
   ]
 }

@@ -12,7 +12,7 @@
       "title": "簽署股份賣出單（Sold Note / Bought Note）",
       "summary": "記錄轉讓股數、作價及交易條款，雙方確認",
       "isFree": true,
-      "details": "第一份文件，記錄雙方交易細節。份文件 confirm 咗之後先簽正式轉讓書。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 唔好做嘅事：\n• 唔好 skip 呢一步 → 冇 Sold Note，口頭 agreement 就到填轉讓書嗰陣數字亂晒龍\n• 股份類別唔好寫錯 → 普通股同優先股要分開列明，唔可以溝埋\n• 唔好只寫總額 → 要分開寫每股作價同總額，否則計印花稅要返轉頭計\n• 日期唔好寫錯 → 交易日期同之後嘅轉讓書日期要 match\n\n✅ 一定要做：\n• 雙方簽署確認約定\n• 列明每股作價同總代價\n• 保留簽署副本作記錄",
+      "details": "第一份文件，記錄雙方交易細節。份文件 confirm 咗之後先簽正式轉讓書。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 唔好做嘅事：\n• 唔好 skip 呢一步 → 冇 Sold Note，口頭 agreement 就到填轉讓書嗰陣數字亂晒龍\n• 股份類別唔好寫錯 → 普通股同優先股要分開列明，唔可以溝埋\n• 唔好只寫總額 → 要分開寫每股作價同總額，否則計印花稅要返轉頭計\n• 日期唔好寫錯 → 交易日期同之後嘅轉讓書日期要 match\n\n<i data-lucide='check-circle' class='w-4 h-4 inline-block'></i> 一定要做：\n• 雙方簽署確認約定\n• 列明每股作價同總代價\n• 保留簽署副本作記錄",
       "documents": [
         {
           "name": "股份賣出單（Sold Note）",
@@ -38,7 +38,7 @@
       "title": "簽署股份轉讓書（Instrument of Transfer）",
       "summary": "正式轉讓文件，轉讓人同承讓人雙方簽署，係提交政府嘅核心文件",
       "isFree": true,
-      "details": "核心文件，要交政府。格式錯即時退回。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 唔好做嘅事：\n• 唔好 download 通用模板 → 官方唔收，成個流程遲一個月\n• 公司名唔好寫錯 → 「Limited」漏咗即退\n• 見證人唔好搵親戚 → 被質疑獨立性\n• 日期唔好倒填 → 邏輯唔通被質疑\n\n✅ 一定要做：\n• 用公司註冊處認可格式\n• 雙方親筆簽署 + 見證人（獨立第三方）\n• 公司名同商業登記證 100% 一致\n• 部分轉讓列明：轉讓前 → 轉讓股數 → 轉讓後",
+      "details": "核心文件，要交政府。格式錯即時退回。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 唔好做嘅事：\n• 唔好 download 通用模板 → 官方唔收，成個流程遲一個月\n• 公司名唔好寫錯 → 「Limited」漏咗即退\n• 見證人唔好搵親戚 → 被質疑獨立性\n• 日期唔好倒填 → 邏輯唔通被質疑\n\n<i data-lucide='check-circle' class='w-4 h-4 inline-block'></i> 一定要做：\n• 用公司註冊處認可格式\n• 雙方親筆簽署 + 見證人（獨立第三方）\n• 公司名同商業登記證 100% 一致\n• 部分轉讓列明：轉讓前 → 轉讓股數 → 轉讓後",
       "documents": [
         {
           "name": "股份轉讓書（Instrument of Transfer）",
@@ -67,7 +67,7 @@
       "title": "簽署承讓人確認信（Letter of Transferee of Shares）",
       "summary": "承讓人書面確認接收股份，同意受公司組織章程細則約束",
       "isFree": true,
-      "details": "承讓人確認接收股份，內部記錄用。封信係向印花稅署（Stamp Duty Office）發出，確認股份轉讓嘅詳情。\n\n封信入面可以涵蓋最多 3 點確認事項（根據實際情況，需要嘅點數就寫，唔需要嘅可以得 1 點）：\n\n**第 1 點：股票買賣協議確認**\n呢點係最重要嘅一點。如果雙方之間冇簽訂正式嘅股票買賣協議（Sale and Purchase Agreement），就需要用呢封信做書面確認，代替協議嘅核證副本。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 注意：呢一點只適用於「雙方冇簽訂 Sale and Purchase Agreement」嘅情況。如果有正式協議，就唔需要用呢一點，直接提供協議核證副本就得。\n\n**第 2 點、第 3 點（按需要填寫）：**\n根據實際情況，封信可能需要涵蓋其他確認事項。填寫嘅人可以根據需要加入其餘嘅確認點，唔一定要用到 3 點。如果冇需要，淨係用第 1 點亦可以。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 唔好做嘅事：\n• 唔好 skip 呢份 → 內部記錄唔完整，貸款會出事\n• 公司買股份要有授權代表簽署 → 否則文件失效\n• 唔好夾硬填 3 點 — 根據實際情況，需要先寫\n\n✅ 一定要做：\n• 寫明公司名同股份轉讓詳情\n• 承讓人地址同身份證一致\n• 公司買股份要列公司註冊編號 + 授權代表\n• 夾附公司組織章程細則（Memorandum and Articles of Association）",
+      "details": "承讓人確認接收股份，內部記錄用。封信係向印花稅署（Stamp Duty Office）發出，確認股份轉讓嘅詳情。\n\n封信入面可以涵蓋最多 3 點確認事項（根據實際情況，需要嘅點數就寫，唔需要嘅可以得 1 點）：\n\n**第 1 點：股票買賣協議確認**\n呢點係最重要嘅一點。如果雙方之間冇簽訂正式嘅股票買賣協議（Sale and Purchase Agreement），就需要用呢封信做書面確認，代替協議嘅核證副本。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 注意：呢一點只適用於「雙方冇簽訂 Sale and Purchase Agreement」嘅情況。如果有正式協議，就唔需要用呢一點，直接提供協議核證副本就得。\n\n**第 2 點、第 3 點（按需要填寫）：**\n根據實際情況，封信可能需要涵蓋其他確認事項。填寫嘅人可以根據需要加入其餘嘅確認點，唔一定要用到 3 點。如果冇需要，淨係用第 1 點亦可以。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 唔好做嘅事：\n• 唔好 skip 呢份 → 內部記錄唔完整，貸款會出事\n• 公司買股份要有授權代表簽署 → 否則文件失效\n• 唔好夾硬填 3 點 — 根據實際情況，需要先寫\n\n<i data-lucide='check-circle' class='w-4 h-4 inline-block'></i> 一定要做：\n• 寫明公司名同股份轉讓詳情\n• 承讓人地址同身份證一致\n• 公司買股份要列公司註冊編號 + 授權代表\n• 夾附公司組織章程細則（Memorandum and Articles of Association）",
       "documents": [
         {
           "name": "承讓人確認信（Letter of Transferee of Shares）",
@@ -94,7 +94,7 @@
       "title": "準備 6 個月內審計報告（Audit Report）",
       "summary": "提交最近期嘅審計報告，用於印花稅計算及證明公司財務狀況",
       "isFree": true,
-      "details": "<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 重要：審計報告必須由香港嘅**執業會計師 / 核數師**簽署，唔可以自己整。下面嘅範例只供參考格式，唔係叫你照抄。\n\n稅局用呢份報告計印花稅。作價太低會補稅。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 唔好做嘅事：\n• 唔好自己寫審計報告 → 必須由執業會計師簽署，否則稅局唔收\n• 唔好以為跟 Sold Note 作價就得 → 低過資產淨值要補稅\n• 唔好用過期報告 → 超過 6 個月稅局唔收\n• 公司未做審計唔好唔理 → 管理帳目都得，但要董事簽署\n\n✅ 一定要做：\n• **揾執業會計師**幫手出報告\n• 審計報告要 6 個月內\n• 冇 audit → 準備管理帳目 + 董事簽署\n• 印花稅 = 代價 0.2%（最低 $5）\n• 新公司可出「董事聲明」代替",
+      "details": "<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 重要：審計報告必須由香港嘅**執業會計師 / 核數師**簽署，唔可以自己整。下面嘅範例只供參考格式，唔係叫你照抄。\n\n稅局用呢份報告計印花稅。作價太低會補稅。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 唔好做嘅事：\n• 唔好自己寫審計報告 → 必須由執業會計師簽署，否則稅局唔收\n• 唔好以為跟 Sold Note 作價就得 → 低過資產淨值要補稅\n• 唔好用過期報告 → 超過 6 個月稅局唔收\n• 公司未做審計唔好唔理 → 管理帳目都得，但要董事簽署\n\n<i data-lucide='check-circle' class='w-4 h-4 inline-block'></i> 一定要做：\n• **揾執業會計師**幫手出報告\n• 審計報告要 6 個月內\n• 冇 audit → 準備管理帳目 + 董事簽署\n• 印花稅 = 代價 0.2%（最低 $5）\n• 新公司可出「董事聲明」代替",
       "documents": [
         {
           "name": "6個月內審計報告（Audit Report）",
@@ -121,7 +121,7 @@
       "title": "提交 NAR1 或 NSC1 完成後續申報",
       "summary": "向公司註冊處提交周年申報表（NAR1），如有曾增加股本則提交股份配發申請書（NSC1），更新公司股本紀錄",
       "isFree": true,
-      "details": "最後申報步驟。唔交或遲交會罰錢。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 唔好做嘅事：\n• 唔好以為搞掂轉讓書就完 → 仲要交 NAR1\n• 唔好逾期 → 罰 $870，越耐越罰得多\n• 唔好用舊年董事資料 → 被要求解釋\n\n✅ 一定要做：\n• 成立周年日後 42 日內交\n• 股東資料同轉讓書 match\n• 網上提交最快（eCR 系統）\n• 費用：登記費 $105\n• 轉讓同 annual return 時間差太遠就主動提交\n\n<i data-lucide='pin' class='w-4 h-4 inline-block'></i> 特別情況 — 曾增加股本：\n如果該公司曾增加股本（Allotment of Shares），而呢次股本變動尚未喺組織章程細則（Articles of Association）或週年申報表（NAR1）上反映，請額外提供最近一份已遞交於公司註冊處的股份配發申請書（表格 NSC1）副本，以證明股本變更已獲正規申報。",
+      "details": "最後申報步驟。唔交或遲交會罰錢。\n\n<i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 唔好做嘅事：\n• 唔好以為搞掂轉讓書就完 → 仲要交 NAR1\n• 唔好逾期 → 罰 $870，越耐越罰得多\n• 唔好用舊年董事資料 → 被要求解釋\n\n<i data-lucide='check-circle' class='w-4 h-4 inline-block'></i> 一定要做：\n• 成立周年日後 42 日內交\n• 股東資料同轉讓書 match\n• 網上提交最快（eCR 系統）\n• 費用：登記費 $105\n• 轉讓同 annual return 時間差太遠就主動提交\n\n<i data-lucide='pin' class='w-4 h-4 inline-block'></i> 特別情況 — 曾增加股本：\n如果該公司曾增加股本（Allotment of Shares），而呢次股本變動尚未喺組織章程細則（Articles of Association）或週年申報表（NAR1）上反映，請額外提供最近一份已遞交於公司註冊處的股份配發申請書（表格 NSC1）副本，以證明股本變更已獲正規申報。",
       "documents": [
         {
           "name": "NAR1（周年申報表）",
