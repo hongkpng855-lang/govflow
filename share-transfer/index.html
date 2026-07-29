@@ -113,6 +113,10 @@
   <script defer src="https://unpkg.com/lucide@latest"></script>
   <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 <script>const STEP_ICONS={hasDocs:'<i data-lucide="file-text" class="w-5 h-5 inline-block"></i>',noDocs:'<i data-lucide="footprints" class="w-5 h-5 inline-block"></i>'};</script>
+<script>
+function formatDetails(t){if(!t)return t;var m={\uD83D\uDCC4:"file-text",\uD83D\uDC63:"footprints",\uD83C\uDD93:"sparkles",\u2615:"coffee",\uD83D\uDE80:"rocket",\u2753:"help-circle",\u26A0\uFE0F:"triangle-alert",\uD83C\uDFAF:"target",\uD83D\uDCA1:"lightbulb",\uD83D\uDCB0:"coins",\uD83D\uDCCC:"pin",\uD83C\uDF89:"party-popper",\uD83D\uDCCA:"bar-chart-3",\uD83D\uDCDA:"book-open",\uD83D\uDCDD:"pen-line",\uD83D\uDD0D:"search",\uD83D\uDE34:"sleep",\uD83D\uDDA5:"monitor",\uD83D\uDCE7:"mail",\uD83D\uDEE0:"wrench",\uD83D\uDDF3:"vote",\uD83D\uDCC5:"calendar",\uD83C\uDFE2:"building-2",\uD83D\uDCAC:"message-square",\uD83D\uDCCB:"clipboard-list",\uD83D\uDCDC:"scroll-text",\uD83D\uDCC2:"folder-open",\uD83D\uDCCE:"paperclip",\uD83D\uDD17:"link",\uD83C\uDF89:"party-popper",\uD83C\uDFAF:"target",\uD83D\uDCB0:"coins"};
+var r=t;for(var[k,v]of Object.entries(m)){r=r.split(k).join('<i data-lucide="'+v+'" class="w-4 h-4 inline-block"></i>');}return r;}
+</script>
 </head>
 <body x-data="{
   processData: null,
@@ -134,6 +138,7 @@
       const r = await fetch('/processes-share-transfer.json?v=2.0');
       if (!r.ok) throw new Error('HTTP '+r.status);
       const j = await r.json();
+      if(j&&j.steps)j.steps.forEach(function(s){if(s.details)s.details=formatDetails(s.details);});
       this.processData = j;
       this.totalSteps = j.totalSteps;
     } catch(e) {
@@ -429,7 +434,7 @@
             <!-- Details -->
             <div class="bg-white rounded-xl border border-gray-200 p-4 sm:p-6 mb-8">
               <h3 class="font-semibold text-navy text-lg mb-3">呢個步驟要點做？</h3>
-              <div class="text-gray-700 leading-relaxed whitespace-pre-line text-sm" x-text="s.details"></div>
+              <div class="text-gray-700 leading-relaxed whitespace-pre-line text-sm" x-html="s.details"></div>
             </div>
 
             <!-- Documents -->
