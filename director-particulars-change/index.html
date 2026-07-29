@@ -850,5 +850,13 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 </script>
+
+<script>
+(function(){var m={"📄":"file-text","👣":"footprints","🆓":"sparkles","☕":"coffee","⏱️":"clock","🚀":"rocket","❓":"help-circle","⚖️":"scale","⚠️":"triangle-alert","🎯":"target","💡":"lightbulb","💰":"coins","📌":"pin","🎉":"party-popper","📊":"bar-chart-3","📚":"book-open","📝":"pen-line","🔍":"search","😴":"sleep","🖥":"monitor","📧":"mail","🛠":"wrench","🗳️":"vote","📅":"calendar","🏢":"building-2","💬":"message-square","📬":"mailbox","📮":"mailbox","📋":"clipboard-list","📜":"scroll-text","🧮":"calculator","📂":"folder-open","📎":"paperclip","🔗":"link","🏦":"banknote","➕":"plus","➖":"minus","🔄":"refresh-ccw","🔒":"lock","🤝":"handshake","📥":"download","📰":"newspaper","🔖":"bookmark","📍":"map-pin","🔵":"circle"};function replaceEmoji(){let c=0;const w=document.createTreeWalker(document.body,4,null,false);let n;while(n=w.nextNode()){if(n.parentElement&&n.parentElement.closest('script,style,svg,code,pre'))continue;let t=n.nodeValue||'';for(const[e,i]of Object.entries(m)){if(t.includes(e)){const s=document.createElement('span');s.innerHTML=t.split(e).join('<i data-lucide="'+i+'" class="w-4 h-4 inline-block"></i>');while(s.firstChild)n.parentNode.insertBefore(s.firstChild,n);n.parentNode.removeChild(n);c++;break}}}
+if(c>0&&typeof lucide!=='undefined')try{lucide.createIcons()}catch(e){}return c}
+[500,1500,3000].forEach(function(d){setTimeout(replaceEmoji,d)})
+var obs=new MutationObserver(function(){replaceEmoji()});setTimeout(function(){obs.observe(document.body,{childList:true,subtree:true,characterData:true})},200)
+})();
+</script>
 </body>
 </html>
