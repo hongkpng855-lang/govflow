@@ -311,37 +311,6 @@
     <script defer src="https://unpkg.com/lucide@latest"></script>
   <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 <script>const STEP_ICONS={hasDocs:'<i data-lucide="file-text" class="w-5 h-5 inline-block"></i>',noDocs:'<i data-lucide="footprints" class="w-5 h-5 inline-block"></i>'};</script>
-<script>
-function formatDetails(t){if(!t)return t;var r=t;
-r=r.split("\uD83D\uDCC4").join("<i data-lucide="file-text" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDC63").join("<i data-lucide="footprints" class="w-4 h-4 inline-block"></i>");
-r=r.split("\u2615").join("<i data-lucide="coffee" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDE80").join("<i data-lucide="rocket" class="w-4 h-4 inline-block"></i>");
-r=r.split("\u2753").join("<i data-lucide="help-circle" class="w-4 h-4 inline-block"></i>");
-r=r.split("\u26A0").join("<i data-lucide="triangle-alert" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83C\uDFAF").join("<i data-lucide="target" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDCA1").join("<i data-lucide="lightbulb" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDCB0").join("<i data-lucide="coins" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDCCC").join("<i data-lucide="pin" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDCCA").join("<i data-lucide="bar-chart-3" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDCDA").join("<i data-lucide="book-open" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDCDD").join("<i data-lucide="pen-line" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDD0D").join("<i data-lucide="search" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDDA5").join("<i data-lucide="monitor" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDCE7").join("<i data-lucide="mail" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDEE0").join("<i data-lucide="wrench" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDCC5").join("<i data-lucide="calendar" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83C\uDFE2").join("<i data-lucide="building-2" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDCAC").join("<i data-lucide="message-square" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDCCB").join("<i data-lucide="clipboard-list" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDCDC").join("<i data-lucide="scroll-text" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDCC2").join("<i data-lucide="folder-open" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDCCE").join("<i data-lucide="paperclip" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83D\uDD17").join("<i data-lucide="link" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83E\uDDEE").join("<i data-lucide="calculator" class="w-4 h-4 inline-block"></i>");
-r=r.split("\uD83C\uDF89").join("<i data-lucide="party-popper" class="w-4 h-4 inline-block"></i>");
-return r;}
-</script>
 </head>
 <body x-data="{
   processData: null,
@@ -864,7 +833,7 @@ return r;}
             <!-- Details -->
             <div class="bg-white rounded-xl border border-gray-200 p-4 sm:p-6 mb-8">
               <h3 class="font-semibold text-navy text-lg mb-3">呢個步驟要點做？</h3>
-              <div class="text-gray-700 leading-relaxed whitespace-pre-line text-sm" x-html="s.details"></div>
+              <div class="text-gray-700 leading-relaxed whitespace-pre-line text-sm" x-text="s.details"></div>
             </div>
 
             <!-- Documents -->
