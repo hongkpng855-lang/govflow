@@ -850,42 +850,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 </script>
-
-<script>
-(function(){var m={"📄":"file-text","👣":"footprints","🆓":"sparkles","☕":"coffee","⏱️":"clock","🚀":"rocket","❓":"help-circle","⚖️":"scale","⚠️":"triangle-alert","🎯":"target","💡":"lightbulb","💰":"coins","📌":"pin","🎉":"party-popper","📊":"bar-chart-3","📚":"book-open","📝":"pen-line","🔍":"search","😴":"sleep","🖥":"monitor","📧":"mail","🛠":"wrench","🗳️":"vote","📅":"calendar","🏢":"building-2","💬":"message-square","📬":"mailbox","📮":"mailbox","📋":"clipboard-list","📜":"scroll-text","🧮":"calculator","📂":"folder-open","📎":"paperclip","🔗":"link","🏦":"banknote","➕":"plus","➖":"minus","🔄":"refresh-ccw","🔒":"lock","🤝":"handshake","📥":"download","📰":"newspaper","🔖":"bookmark","📍":"map-pin","🔵":"circle"};function replaceEmoji(){let c=0;const w=document.createTreeWalker(document.body,4,null,false);let n;while(n=w.nextNode()){if(n.parentElement&&n.parentElement.closest('script,style,svg,code,pre'))continue;let t=n.nodeValue||'';for(const[e,i]of Object.entries(m)){if(t.includes(e)){const s=document.createElement('span');s.innerHTML=t.split(e).join('<i data-lucide="'+i+'" class="w-4 h-4 inline-block"></i>');while(s.firstChild)n.parentNode.insertBefore(s.firstChild,n);n.parentNode.removeChild(n);c++;break}}}
-if(c>0&&typeof lucide!=='undefined')try{lucide.createIcons()}catch(e){}return c}
-[500,1500,3000].forEach(function(d){setTimeout(replaceEmoji,d)})
-var obs=new MutationObserver(function(){replaceEmoji()});setTimeout(function(){obs.observe(document.body,{childList:true,subtree:true,characterData:true})},200)
-})();
-</script>
-<script>
-(function(){var m={"🔥":"flame","📖":"book-open","🟢":"circle","🟡":"circle","🔴":"circle","📍":"map-pin","📰":"newspaper","🔖":"bookmark","🤝":"handshake","📥":"download"};
-function r(){var c=0;for(var n=document.createTreeWalker(document.body,4,null,false),t;t=n.nextNode();){if(t.parentElement&&t.parentElement.closest("script,style,svg,code,pre"))continue;var v=t.nodeValue||"";for(var[e,i]of Object.entries(m)){if(v.includes(e)){var s=document.createElement("span");s.innerHTML=v.split(e).join('<i data-lucide="'+i+'" class="w-4 h-4 inline-block"></i>');while(s.firstChild)t.parentNode.insertBefore(s.firstChild,t);t.parentNode.removeChild(t);c++;break}}}
-if(c>0&&typeof lucide!==void 0)try{lucide.createIcons()}catch(e){}
-return c}
-var t=setInterval(function(){var c=r();if(c===0&&typeof Alpine!==void 0)clearInterval(t)},800);
-var obs=new MutationObserver(function(){r()});
-setTimeout(function(){obs.observe(document.body,{childList:true,subtree:true,characterData:true})},100);
-})();
-</script>
-<script>
-(function(){var m={"📄":"file-text","👣":"footprints","🆓":"sparkles","☕":"coffee","⏱️":"clock","🚀":"rocket","❓":"help-circle","⚖️":"scale","⚠️":"triangle-alert","🎯":"target","💡":"lightbulb","💰":"coins","📌":"pin","🎉":"party-popper","📊":"bar-chart-3","📚":"book-open","📝":"pen-line","🔍":"search","😴":"sleep","🖥":"monitor","📧":"mail","🛠":"wrench","🗳️":"vote","📅":"calendar","🏢":"building-2","💬":"message-square","📬":"mailbox","📮":"mailbox","📋":"clipboard-list","📜":"scroll-text","🧮":"calculator","📂":"folder-open","📎":"paperclip","🔗":"link","🏦":"banknote","➕":"plus","➖":"minus","🔄":"refresh-ccw","🔒":"lock","🤝":"handshake","📥":"download","📰":"newspaper","🔖":"bookmark","📍":"map-pin","🔥":"flame","📖":"book-open","🟢":"circle","🟡":"circle","🔴":"circle"};
-function r(){let c=0;let w=document.createTreeWalker(document.body,4,null,false);let n;while(n=w.nextNode()){if(n.parentElement&&n.parentElement.closest('script,style,svg,code,pre'))continue;let t=n.nodeValue||'';for(let[e,i]of Object.entries(m)){if(t.includes(e)){let s=document.createElement('span');s.innerHTML=t.split(e).join('<i data-lucide="'+i+'" class="w-4 h-4 inline-block"></i>');while(s.firstChild)n.parentNode.insertBefore(s.firstChild,n);n.parentNode.removeChild(n);c++;break}}}
-if(c>0&&typeof lucide!=='undefined')try{lucide.createIcons()}catch(e){}return c}
-r();setInterval(r,1800);new MutationObserver(function(){r()});
-})();
-</script>
-<script>
-(function(){var m=[['0x1f4c4','file-text'],['0x1f463','footprints'],['0x1f193','sparkles'],['0x2615','coffee'],['0x23f1+0xfe0f','clock'],['0x1f680','rocket'],['0x2753','help-circle'],['0x2696+0xfe0f','scale'],['0x26a0+0xfe0f','triangle-alert'],['0x1f3af','target'],['0x1f4a1','lightbulb'],['0x1f4b0','coins'],['0x1f4cc','pin'],['0x1f389','party-popper'],['0x1f4ca','bar-chart-3'],['0x1f4da','book-open'],['0x1f4dd','pen-line'],['0x1f50d','search'],['0x1f634','sleep'],['0x1f5a5','monitor'],['0x1f4e7','mail'],['0x1f6e0','wrench'],['0x1f5f3+0xfe0f','vote'],['0x1f4c5','calendar'],['0x1f3e2','building-2'],['0x1f4ac','message-square'],['0x1f4ec','mailbox'],['0x1f4ee','mailbox'],['0x1f4cb','clipboard-list'],['0x1f4dc','scroll-text'],['0x1f9ee','calculator'],['0x1f4c2','folder-open'],['0x1f4ce','paperclip'],['0x1f517','link'],['0x1f3e6','banknote'],['0x2795','plus'],['0x2796','minus'],['0x1f504','refresh-ccw'],['0x1f512','lock'],['0x1f91d','handshake'],['0x1f4e5','download'],['0x1f4f0','newspaper'],['0x1f516','bookmark'],['0x1f4cd','map-pin'],['0x1f525','flame'],['0x1f4d6','book-open'],['0x1f7e2','circle'],['0x1f7e1','circle'],['0x1f534','circle']];function r(){let c=0;let n=document.createTreeWalker(document.body,4,null,false);
-let t;while(t=n.nextNode()){if(t.parentElement&&t.parentElement.closest('script,style,svg,code,pre'))continue;
-let v=t.nodeValue||'';for(let[e,i]of m){var cp=e.split('+');var matched=true;
-for(let j=0;j<cp.length;j++){if(t.nodeValue.charCodeAt(t.nodeValue.indexOf(v.charAt(0)))){}
-if(v.includes(String.fromCodePoint.apply(null,cp.map(x=>parseInt(x,16))))){let s=document.createElement('span');
-s.innerHTML=v.split(String.fromCodePoint.apply(null,cp.map(x=>parseInt(x,16)))).join('<i data-lucide="'+i+'" class="w-4 h-4 inline-block"></i>');
-while(s.firstChild)t.parentNode.insertBefore(s.firstChild,t);t.parentNode.removeChild(t);c++;break}}
-if(c>0&&typeof lucide!=='undefined')try{lucide.createIcons()}catch(e){}return c}
-r();setInterval(r,2000);new MutationObserver(function(){r()});
-})();
-</script>
 </body>
 </html>
