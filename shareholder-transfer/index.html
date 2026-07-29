@@ -16,8 +16,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/style.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
   <script defer src="/assets/js/app.js"></script>
   <script>
     tailwind.config = {
@@ -104,7 +102,7 @@
       "@type": "HowToStep",
       "position": 5,
       "name": "提交 NAR1 或 NSC1 完成後續申報",
-      "text": "最後申報步驟。唔交或遲交會罰錢。 ⚠️ 唔好做嘅事： • 唔好以為搞掂轉讓書就完 → 仲要交 NAR1 • 唔好逾期 → 罰 $870，越耐越罰得多 • 唔好用舊年董事資料 → 被要求解釋 ✅ 一定要做： • 成立周年日後 42 日內交 • 股東資料同轉讓書 match • 網上提交最快（eCR 系統） • 費用：登記費 $105 • 轉讓同 annual return 時間差太遠就主動提交 <i data-lucide="pin" class="inline-block w-4 h-4"></i> 特別情況 — 曾增加股本： 如果該公司曾增加股本（Allotment of Shares），而呢次股本變動尚未喺組織章程細則（Articles of Association）或週年申報表（NAR1）上反映，請額外提供最近一份已遞交於公司註冊處的股份配發申請書（表格 NSC1）副本，以證明股本變更已獲正規申報。"
+      "text": "最後申報步驟。唔交或遲交會罰錢。 ⚠️ 唔好做嘅事： • 唔好以為搞掂轉讓書就完 → 仲要交 NAR1 • 唔好逾期 → 罰 $870，越耐越罰得多 • 唔好用舊年董事資料 → 被要求解釋 ✅ 一定要做： • 成立周年日後 42 日內交 • 股東資料同轉讓書 match • 網上提交最快（eCR 系統） • 費用：登記費 $105 • 轉讓同 annual return 時間差太遠就主動提交 📌 特別情況 — 曾增加股本： 如果該公司曾增加股本（Allotment of Shares），而呢次股本變動尚未喺組織章程細則（Articles of Association）或週年申報表（NAR1）上反映，請額外提供最近一份已遞交於公司註冊處的股份配發申請書（表格 NSC1）副本，以證明股本變更已獲正規申報。"
     }
   ]
 }
@@ -249,7 +247,7 @@
   get progressPercent() { return (this.currentStep / this.totalSteps) * 100; },
 
   getStepIcon(step) {
-    return '<i data-lucide="'+(step.documents && step.documents.length > 0 ? 'file-text' : 'footprints')+'" class="inline-block w-5 h-5"></i>';
+    return step.documents && step.documents.length > 0 ? '📄' : '👣';
   },
 
   goToStep(n) {
@@ -332,7 +330,7 @@
   <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-200">
     <div class="max-w-6xl mx-auto px-4 py-2 text-center">
       <p class="text-xs sm:text-sm font-semibold text-blue-800">
-        <i data-lucide="target" class="inline-block w-4 h-4"></i> 頭 100 次下載完全免費 &middot; 之後會考慮轉為收費模式，而家把握機會！
+        🎯 頭 100 次下載完全免費 &middot; 之後會考慮轉為收費模式，而家把握機會！
       </p>
     </div>
   </div>
@@ -376,7 +374,7 @@
           }"
           @click="goToStep(s.stepNumber)"
         >
-          <span x-html="getStepIcon(s)" class="text-sm"></span>
+          <span class="text-sm" x-text="getStepIcon(s)"></span>
           <span class="text-[10px] text-center leading-[1.1]" x-text="(s.title.split('（')[0] || s.title).substring(0, 6)"></span>
           <span class="text-[10px]">🆓</span>
         </button>
@@ -410,7 +408,7 @@
                   'bg-gold text-navy': currentStep === s.stepNumber,
                   'bg-gray-200 text-gray-500': currentStep !== s.stepNumber
                 }"
-                x-html="getStepIcon(s)"
+                x-text="getStepIcon(s)"
               ></span>
               <div class="min-w-0 flex-1">
                 <span class="block text-xs font-medium leading-snug" x-text="'Step '+s.stepNumber+': '+(s.title.split('（')[0] || s.title)"></span>
@@ -423,7 +421,7 @@
           <!-- Sidebar Donate CTA -->
           <div class="mt-6 bg-amber-50 rounded-xl p-4 border border-amber-200">
             <p class="text-xs text-gray-600 mb-3 leading-relaxed">
-              <i data-lucide="handshake" class="inline-block w-4 h-4"></i> 呢份指南全部免費公開。<br />
+              🤝 呢份指南全部免費公開。<br />
               如果幫到你，可以請我飲杯咖啡 ☕
             </p>
             <button @click="openDonate()" class="w-full bg-gold text-navy font-bold text-sm py-2.5 rounded-xl hover:bg-gold-light transition shadow-sm">
@@ -433,7 +431,7 @@
 
           <!-- Sidebar Email CTA -->
           <div class="mt-3 bg-white rounded-xl p-4 border border-gray-200">
-            <p class="text-xs text-gray-500 mb-2"><i data-lucide="mailbox" class="inline-block w-4 h-4"></i> 有新指南通知你？</p>
+            <p class="text-xs text-gray-500 mb-2">📬 有新指南通知你？</p>
             <button @click="openEmail()" class="w-full text-xs font-semibold text-navy bg-gray-100 py-2 rounded-xl hover:bg-gray-200 transition">
               留低 email →
             </button>
@@ -444,19 +442,19 @@
       <!-- ═══════════════ Content Area ═══════════════ -->
       <main id="step-content" class="flex-1 min-w-0">
 
-        <!-- <i data-lucide="pin" class="inline-block w-4 h-4"></i> 快速概覽 (merged) -->
+        <!-- 📌 快速概覽 (merged) -->
         <div class="bg-gradient-to-br from-amber-50 to-white border border-amber-200 rounded-xl p-4 sm:p-5 mb-8">
           <div class="flex items-center gap-2 mb-2">
-            <i data-lucide="pin" class="inline-block w-5 h-5"></i>
+            <span class="text-base">📌</span>
             <span class="font-bold text-navy text-sm sm:text-base">快速概覽：股份轉讓係指...</span>
           </div>
           <div class="grid sm:grid-cols-3 gap-3 text-xs sm:text-sm text-gray-700">
             <div class="bg-white/70 rounded-lg p-2.5">
-              <span class="font-semibold text-navy block"><i data-lucide="clock" class="inline-block w-4 h-4"></i> 需時</span>
+              <span class="font-semibold text-navy block">🕐 需時</span>
               <span>1–2 個星期（5 步驟）</span>
             </div>
             <div class="bg-white/70 rounded-lg p-2.5">
-              <span class="font-semibold text-navy block"><i data-lucide="coins" class="inline-block w-4 h-4"></i> 費用</span>
+              <span class="font-semibold text-navy block">💰 費用</span>
               <span>約 $250–$300（自己搞）</span>
             </div>
             <div class="bg-white/70 rounded-lg p-2.5">
@@ -469,9 +467,9 @@
           </p>
         </div>
 
-        <!-- <i data-lucide="pen-line" class="inline-block w-4 h-4"></i> TL;DR — 快速答案 -->
+        <!-- 📝 TL;DR — 快速答案 -->
         <div class="bg-blue-50 border-l-4 border-blue-400 rounded-r-xl p-3 mb-6 text-sm text-gray-700 leading-relaxed">
-          <strong class="text-navy"><i data-lucide="lightbulb" class="inline-block w-4 h-4"></i> TL;DR：</strong>股份轉讓需要 5 個步驟：簽署 Sold Note → 簽署 Instrument of Transfer → 買方確認信 → 審計報告 → 提交 NAR1/NSC1。自己搞政府費用約 $250–$300，會計公司收 $3,000–$5,000。全部範本免費下載。
+          <strong class="text-navy">💡 TL;DR：</strong>股份轉讓需要 5 個步驟：簽署 Sold Note → 簽署 Instrument of Transfer → 買方確認信 → 審計報告 → 提交 NAR1/NSC1。自己搞政府費用約 $250–$300，會計公司收 $3,000–$5,000。全部範本免費下載。
         </div>
 
         <!-- ❓ FAQ — Bought and Sold Note (AEO/GEO) -->
@@ -485,7 +483,7 @@
             <div class="mt-3 text-sm text-gray-700 leading-relaxed space-y-2">
               <p><strong>Bought Note（買入單）</strong>同<strong>Sold Note（賣出單）</strong>係股份轉讓嘅第一份文件，記錄買賣雙方嘅交易細節：股份數量、每股作價、總代價、交易日期。雙方簽署確認後先簽正式轉讓書（Instrument of Transfer）。</p>
               <p>根據香港《印花稅條例》，所有股份轉讓必須有書面記錄，Sold Note/Bought Note就係呢份記錄文件。就算係親戚之間嘅股份轉讓，都要有呢份文件。</p>
-              <p class="text-xs text-gray-500"><i data-lucide="lightbulb" class="inline-block w-4 h-4"></i> 唔少人直接 skip 呢步就填轉讓書，結果數字亂晒龍要返轉頭改。</p>
+              <p class="text-xs text-gray-500">💡 唔少人直接 skip 呢步就填轉讓書，結果數字亂晒龍要返轉頭改。</p>
             </div>
           </details>
         </div>
@@ -510,9 +508,9 @@
             <div class="mb-8">
               <div class="flex items-center gap-3 mb-2">
                 <span class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gold text-navy flex items-center justify-center font-bold text-lg">
-                  <span x-html="getStepIcon(s)"></span>
+                  <span x-text="getStepIcon(s)"></span>
                 </span>
-                <span class="text-sm text-green-600 font-semibold"><i data-lucide="sparkles" class="inline-block w-3.5 h-3.5"></i> 免費步驟 | Step <span x-text="s.stepNumber"></span></span>
+                <span class="text-sm text-green-600 font-semibold">🆓 免費步驟 | Step <span x-text="s.stepNumber"></span></span>
               </div>
               <h2 class="text-2xl sm:text-3xl font-bold gov-heading mb-2" x-text="s.title"></h2>
               <p class="text-gray-500" x-text="s.summary"></p>
@@ -540,7 +538,7 @@
                      class="doc-card bg-white border-2 border-gold/30 rounded-xl overflow-hidden hover:border-gold/60 transition block cursor-pointer shadow-sm hover:shadow-md">
                     <template x-if="doc.demoImage">
                       <div class="h-32 sm:h-40 bg-gray-100 overflow-hidden relative">
-                        <img :src="doc.demoImage" :alt="doc.name" class="w-full h-full object-cover" @error="$event.target.closest('div').innerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-sm><i data-lucide="image" class="inline-block w-5 h-5"></i> 範例圖片</div>'" />
+                        <img :src="doc.demoImage" :alt="doc.name" class="w-full h-full object-cover" @error="$event.target.closest('div').innerHTML='<div class=flex items-center justify-center h-full text-gray-400 text-sm>🖼️ 範例圖片</div>'" />
                         <div x-show="doc.hasGenerator" class="absolute top-2 right-2 bg-gold text-navy text-xs font-bold px-2 py-0.5 rounded-full shadow">互動工具</div>
                       </div>
                     </template>
@@ -548,8 +546,8 @@
                       <p class="font-bold text-sm text-navy" x-text="doc.name"></p>
                       <p class="text-xs text-gray-500 mt-1 leading-relaxed" x-text="doc.description"></p>
                       <div class="flex items-center gap-2 mt-3">
-                        <span x-show="doc.hasGenerator" class="inline-flex items-center gap-1.5 text-xs font-bold bg-gold text-navy px-4 py-2 rounded-lg hover:bg-gold-light transition shadow-sm"><i data-lucide="rocket" class="inline-block w-5 h-5"></i> 填寫 + 生成 PDF</span>
-                        <span x-show="!doc.hasGenerator" class="inline-flex items-center gap-1 text-xs font-medium bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition"><i data-lucide="eye" class="inline-block w-5 h-5"></i> 檢視範例 PDF</span>
+                        <span x-show="doc.hasGenerator" class="inline-flex items-center gap-1.5 text-xs font-bold bg-gold text-navy px-4 py-2 rounded-lg hover:bg-gold-light transition shadow-sm">🚀 填寫 + 生成 PDF</span>
+                        <span x-show="!doc.hasGenerator" class="inline-flex items-center gap-1 text-xs font-medium bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition">👁️ 檢視範例 PDF</span>
                       </div>
                     </div>
                   </a>
@@ -593,10 +591,10 @@
           </div>
         </template>
 
-        <!-- <i data-lucide="bar-chart-3" class="inline-block w-4 h-4"></i> 比較表（預設收埋） -->
+        <!-- 📊 比較表（預設收埋） -->
         <div x-data="{ open: false }" class="bg-gray-50 border border-gray-200 rounded-xl p-4 sm:p-5 mb-6">
           <button @click="open = !open" class="w-full flex items-center justify-between text-left">
-            <span class="font-bold text-navy text-base"><i data-lucide="bar-chart-3" class="inline-block w-4 h-4"></i> 自己搞 vs 會計公司 vs 秘書公司</span>
+            <span class="font-bold text-navy text-base">📊 自己搞 vs 會計公司 vs 秘書公司</span>
             <span class="text-gold text-sm shrink-0 ml-2" x-text="open ? '▲ 收埋' : '▼ 睇對比'"></span>
           </button>
           <div x-show="open" x-transition.duration.200ms class="overflow-x-auto mt-3">
@@ -654,9 +652,9 @@
           </div>
         </div>
 
-        <!-- <i data-lucide="book-open" class="inline-block w-4 h-4"></i> 相關指南（搬咗落呢度） -->
+        <!-- 📚 相關指南（搬咗落呢度） -->
         <div class="bg-gold/5 border border-gold/20 rounded-xl p-4 mb-6">
-          <h3 class="font-bold text-navy text-sm mb-2"><i data-lucide="book-open" class="inline-block w-4 h-4"></i> 相關指南</h3>
+          <h3 class="font-bold text-navy text-sm mb-2">📚 相關指南</h3>
           <ul class="space-y-1.5 text-xs">
             <li>• <a href="/blog/香港公司股份轉讓流程2026.html" class="text-gold hover:underline">香港有限公司股份轉讓完整流程2026 — 詳細網誌版本</a></li>
             <li>• <a href="/blog/香港公司印花稅厘印費終極指南.html" class="text-gold hover:underline">香港公司印花稅（厘印費）終極指南</a></li>
@@ -664,11 +662,11 @@
           </ul>
         </div>
 
-        <!-- <i data-lucide="pen-line" class="inline-block w-4 h-4"></i> Cite this (subtle, 預設收埋) -->
+        <!-- 📝 Cite this (subtle, 預設收埋) -->
         <div class="border-t border-gray-200 pt-3 mb-6">
           <details class="group">
             <summary class="text-xs text-gray-400 cursor-pointer hover:text-gray-600 transition list-none flex items-center gap-1">
-              <span><i data-lucide="pen-line" class="inline-block w-4 h-4"></i> Cite this</span>
+              <span>📝 Cite this</span>
               <span class="text-[10px] opacity-50 group-open:rotate-180 transition-transform">▾</span>
             </summary>
             <div class="text-xs text-gray-500 mt-2 leading-relaxed">
@@ -683,7 +681,7 @@
         <div x-show="!isLoading && !error && currentStep === totalSteps" class="mt-8 mb-12">
           <!-- Step-by-step plan recap -->
           <div class="bg-navy text-white rounded-xl p-4 sm:p-5 text-center mb-4">
-            <div class="text-3xl mb-2"><i data-lucide="party-popper" class="inline-block w-8 h-8"></i></div>
+            <div class="text-3xl mb-2">🎉</div>
             <h3 class="text-lg font-bold mb-1">搞掂晒！5 個步驟全部完成</h3>
             <p class="text-gray-300 text-xs max-w-md mx-auto">
               你而家有齊晒所有資料同範例，可以放心提交文件俾政府。
@@ -699,13 +697,13 @@
                class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-2.5 px-6 rounded-xl hover:bg-gold-light transition shadow text-sm">
               ☕ 請我飲咖啡
             </a>
-            <p class="text-xs text-gray-400 mt-2" x-text="processData?.finalDonate?.goalMessage || '每個支持都幫助我繼續製作更多免費指南 <i data-lucide="target" class="inline-block w-4 h-4"></i>'"></p>
+            <p class="text-xs text-gray-400 mt-2" x-text="processData?.finalDonate?.goalMessage || '每個支持都幫助我繼續製作更多免費指南 🎯'"></p>
           </div>
 
           <!-- Email Collection -->
           <div class="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 text-center mb-6 shadow-sm">
-            <div class="text-3xl mb-3"><i data-lucide="mailbox" class="inline-block w-8 h-8"></i></div>
-            <h3 class="text-lg font-bold text-navy mb-2" x-text="processData?.finalDonate?.emailCollectionTitle || '<i data-lucide="mailbox" class="inline-block w-4 h-4"></i> 想收到更多免費指南？'"></h3>
+            <div class="text-3xl mb-3">📬</div>
+            <h3 class="text-lg font-bold text-navy mb-2" x-text="processData?.finalDonate?.emailCollectionTitle || '📬 想收到更多免費指南？'"></h3>
             <p class="text-sm text-gray-500 mb-4 max-w-md mx-auto" x-text="processData?.finalDonate?.emailCollectionMessage || '留低 email，之後有新指南會通知你'"></p>
 
             <div x-show="!emailSubmitted" class="max-w-sm mx-auto flex gap-2">
@@ -719,7 +717,7 @@
               </button>
             </div>
             <div x-show="emailSubmitted" class="text-green-600 font-semibold text-sm">
-              ✅ 多謝！有新指南會通知你 <i data-lucide="mailbox" class="inline-block w-4 h-4"></i>
+              ✅ 多謝！有新指南會通知你 📬
             </div>
           </div>
 
@@ -744,7 +742,7 @@
          class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-3.5 px-8 rounded-xl hover:bg-gold-light transition shadow-lg text-lg">
         ☕ 請我飲咖啡
       </a>
-      <p class="text-xs text-gray-400 mt-3">每個支持都幫助我製作更多免費指南 <i data-lucide="target" class="inline-block w-4 h-4"></i></p>
+      <p class="text-xs text-gray-400 mt-3">每個支持都幫助我製作更多免費指南 🎯</p>
       <button @click="closeDonate()" class="mt-4 text-sm text-gray-400 hover:text-gray-600 transition">或者直接關閉，繼續睇內容 →</button>
     </div>
   </div>
@@ -752,7 +750,7 @@
   <!-- ═══════════════ Email Collection Modal ═══════════════ -->
   <div x-show="showEmail" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" @click.self="closeEmail()">
     <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" @click.stop>
-      <div class="text-3xl mb-3"><i data-lucide="mailbox" class="inline-block w-8 h-8"></i></div>
+      <div class="text-3xl mb-3">📬</div>
       <h3 class="text-lg font-bold text-navy mb-2">想收到更多免費指南？</h3>
       <p class="text-sm text-gray-500 mb-5">先留低 email，之後有新指南會通知你，然後繼續睇內容</p>
       <div x-show="!emailSubmitted" class="flex flex-col gap-3">
@@ -762,11 +760,11 @@
         <button @click="submitEmail()"
                 class="bg-navy text-white font-semibold py-2.5 rounded-xl hover:bg-navy-light transition text-sm"
                 :disabled="!email.includes('@')">
-          <i data-lucide="download" class="inline-block w-4 h-4"></i> 繼續睇內容
+          📥 繼續睇內容
         </button>
       </div>
       <div x-show="emailSubmitted" class="text-green-600 font-semibold text-sm py-4">
-        ✅ 多謝！有新指南會通知你 <i data-lucide="mailbox" class="inline-block w-4 h-4"></i>
+        ✅ 多謝！有新指南會通知你 📬
       </div>
       <button @click="closeEmail()" class="mt-3 text-xs text-gray-400 hover:text-gray-600 transition">關閉</button>
     </div>
@@ -793,11 +791,11 @@
                    @error="$event.target.closest('div').querySelector('.img-fallback').classList.remove('hidden')"
               />
               <div class="img-fallback hidden text-center py-12 text-gray-400 bg-gray-100 rounded-lg">
-                <p class="text-lg mb-2"><i data-lucide="image" class="inline-block w-5 h-5"></i></p>
+                <p class="text-lg mb-2">🖼️</p>
                 <p>[範例圖片載入失敗]</p>
               </div>
             </div>
-            <p class="text-xs text-gray-400 mt-2 text-center"><i data-lucide="arrow-up" class="inline-block w-4 h-4"></i> 按右鍵 → 另存圖片即可儲存範例</p>
+            <p class="text-xs text-gray-400 mt-2 text-center">👆 按右鍵 → 另存圖片即可儲存範例</p>
           </div>
         </template>
 
@@ -807,7 +805,7 @@
           <template x-if="selectedDoc?.officialFormUrl">
             <a :href="selectedDoc.officialFormUrl" target="_blank"
                class="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 mb-3 transition">
-              <i data-lucide="file-text" class="inline-block w-4 h-4"></i> 查看官方表格（公司註冊處）
+              📄 查看官方表格（公司註冊處）
             </a>
           </template>
           <template x-if="selectedDoc?.commonMistakes && selectedDoc.commonMistakes.length > 0">
@@ -830,14 +828,14 @@
           <a :href="selectedDoc.generatorUrl"
              class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-4 px-6 rounded-xl hover:bg-gold-light transition shadow text-base"
              @click="closeDoc()">
-            <i data-lucide="rocket" class="inline-block w-5 h-5"></i> 前往 PDF 生成器 — 填資料、一鍵生成
+            🚀 前往 PDF 生成器 — 填資料、一鍵生成
           </a>
         </template>
         <template x-if="!selectedDoc?.generatorUrl && selectedDoc?.templateFile">
           <a :href="selectedDoc.templateFile"
              class="w-full flex items-center justify-center gap-2 bg-navy text-white font-bold py-3.5 px-6 rounded-xl hover:bg-navy-light transition shadow text-sm"
              @click="closeDoc()">
-            <i data-lucide="download" class="inline-block w-4 h-4"></i> 下載可編輯模板（Word / PDF）
+            📥 下載可編輯模板（Word / PDF）
           </a>
         </template>
         <template x-if="!selectedDoc?.generatorUrl && !selectedDoc?.templateFile">
