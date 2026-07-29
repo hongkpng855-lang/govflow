@@ -106,7 +106,9 @@
   ]
 }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body x-data="{ showDonate: false }">
 
   <!-- ═══════════════ Navigation ═══════════════ -->
@@ -124,7 +126,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5">
       <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-base sm:text-lg font-semibold text-gray-600">
         <span class="flex items-center gap-2">✅ 由真實經歷者整理</span>
-        <span class="flex items-center gap-2">💡 其實自己都做到，慳返唔少金錢</span>
+        <span class="flex items-center gap-2"><i data-lucide="lightbulb" class="inline-block w-4 h-4"></i> 其實自己都做到，慳返唔少金錢</span>
       </div>
     </div>
   </section>
@@ -234,13 +236,13 @@
           <p class="text-gray-500 text-sm mb-4">我哋嘅首個指南，幫你避開所有常見陷阱</p>
           <p class="text-gray-600 mb-5 leading-relaxed">
             由真實經歷者整理，逐個步驟帶你行完整個程序，清清楚楚唔使返轉頭。<br />
-            <span class="text-amber-600 font-semibold">全部免費公開，唔使俾錢 🎉</span>
+            <span class="text-amber-600 font-semibold">全部免費公開，唔使俾錢 <i data-lucide="party-popper" class="inline-block w-4 h-4"></i></span>
           </p>
 
           <!-- Price Comparison -->
           <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-300 rounded-xl p-4 mb-4 text-center shadow-sm">
             <p class="text-sm">
-              💰 會計公司行政費 <span class="line-through text-gray-400 font-semibold">$1,000+</span>
+              <i data-lucide="coins" class="inline-block w-4 h-4"></i> 會計公司行政費 <span class="line-through text-gray-400 font-semibold">$1,000+</span>
               <span class="mx-3 text-amber-400">→</span>
               <span class="text-green-600 font-bold">ESGov 全部免費 ✔️</span>
             </p>
@@ -250,14 +252,14 @@
           <!-- First 100 banner -->
           <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-xl p-3 mb-4 text-center shadow-sm">
             <p class="text-sm font-semibold text-blue-800">
-              🎯 頭 100 次下載完全免費
+              <i data-lucide="target" class="inline-block w-4 h-4"></i> 頭 100 次下載完全免費
             </p>
             <p class="text-xs text-blue-600 mt-0.5">之後我哋會考慮轉為收費模式。而家嚟就慳返，把握機會！</p>
           </div>
 
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">📋 5 個步驟</span>
-            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">📄 5 份文件</span>
+            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full"><i data-lucide="clipboard-list" class="inline-block w-4 h-4"></i> 5 個步驟</span>
+            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full"><i data-lucide="file-text" class="inline-block w-4 h-4"></i> 5 份文件</span>
             <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">⏱️ 1-2 星期</span>
             <span class="inline-flex items-center gap-1.5 text-xs bg-green-50 text-green-700 font-medium px-3 py-1.5 rounded-full">🆓 全部免費</span>
           </div>
@@ -284,13 +286,13 @@
           <p class="text-gray-500 text-sm mb-4">公司改名流程 — 由查冊到銀行更新，逐個步驟搞掂</p>
           <p class="text-gray-600 mb-5 leading-relaxed">
             遞交 Form NNC2、特別決議範本、CR 提交流程、銀行更新 checklist。<br />
-            <span class="text-amber-600 font-semibold">全部免費公開 🎉</span>
+            <span class="text-amber-600 font-semibold">全部免費公開 <i data-lucide="party-popper" class="inline-block w-4 h-4"></i></span>
           </p>
 
           <!-- Price Comparison -->
           <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-300 rounded-xl p-4 mb-4 text-center shadow-sm">
             <p class="text-sm">
-              💰 會計公司收費 <span class="line-through text-gray-400 font-semibold">$500+</span>
+              <i data-lucide="coins" class="inline-block w-4 h-4"></i> 會計公司收費 <span class="line-through text-gray-400 font-semibold">$500+</span>
               <span class="mx-3 text-amber-400">→</span>
               <span class="text-green-600 font-bold">ESGov 全部免費 ✔️</span>
             </p>
@@ -300,14 +302,14 @@
           <!-- First 100 banner -->
           <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-xl p-3 mb-4 text-center shadow-sm">
             <p class="text-sm font-semibold text-blue-800">
-              🎯 頭 100 次下載完全免費
+              <i data-lucide="target" class="inline-block w-4 h-4"></i> 頭 100 次下載完全免費
             </p>
             <p class="text-xs text-blue-600 mt-0.5">之後我哋會考慮轉為收費模式。而家嚟就慳返，把握機會！</p>
           </div>
 
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">📋 5 個步驟</span>
-            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">📄 1 份文件</span>
+            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full"><i data-lucide="clipboard-list" class="inline-block w-4 h-4"></i> 5 個步驟</span>
+            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full"><i data-lucide="file-text" class="inline-block w-4 h-4"></i> 1 份文件</span>
             <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">⏱️ 1-2 星期</span>
             <span class="inline-flex items-center gap-1.5 text-xs bg-green-50 text-green-700 font-medium px-3 py-1.5 rounded-full">🆓 全部免費</span>
           </div>
@@ -334,13 +336,13 @@
           <p class="text-gray-500 text-sm mb-4">7 個步驟搞掂 SCR — 含互動工具</p>
           <p class="text-gray-600 mb-5 leading-relaxed">
             控制權 5 項測試、收集控制人資料、備存維護。每個 step 都有 PDF 生成工具，一鍵搞掂。<br />
-            <span class="text-amber-600 font-semibold">全部免費公開 🎉</span>
+            <span class="text-amber-600 font-semibold">全部免費公開 <i data-lucide="party-popper" class="inline-block w-4 h-4"></i></span>
           </p>
 
           <!-- Price Comparison -->
           <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-300 rounded-xl p-4 mb-4 text-center shadow-sm">
             <p class="text-sm">
-              💰 秘書公司 SCR 收費 <span class="line-through text-gray-400 font-semibold">$1,000/次</span>
+              <i data-lucide="coins" class="inline-block w-4 h-4"></i> 秘書公司 SCR 收費 <span class="line-through text-gray-400 font-semibold">$1,000/次</span>
               <span class="mx-3 text-amber-400">→</span>
               <span class="text-green-600 font-bold">ESGov 全部免費 ✔️</span>
             </p>
@@ -350,15 +352,15 @@
           <!-- First 100 banner -->
           <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-xl p-3 mb-4 text-center shadow-sm">
             <p class="text-sm font-semibold text-blue-800">
-              🎯 頭 100 次下載完全免費
+              <i data-lucide="target" class="inline-block w-4 h-4"></i> 頭 100 次下載完全免費
             </p>
             <p class="text-xs text-blue-600 mt-0.5">之後我哋會考慮轉為收費模式。而家嚟就慳返，把握機會！</p>
           </div>
 
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">📋 7 個步驟</span>
-            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">📄 7 份文件</span>
-            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">🛠️ 5 個生成工具</span>
+            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full"><i data-lucide="clipboard-list" class="inline-block w-4 h-4"></i> 7 個步驟</span>
+            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full"><i data-lucide="file-text" class="inline-block w-4 h-4"></i> 7 份文件</span>
+            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full"><i data-lucide="wrench" class="inline-block w-4 h-4"></i>️ 5 個生成工具</span>
             <span class="inline-flex items-center gap-1.5 text-xs bg-green-50 text-green-700 font-medium px-3 py-1.5 rounded-full">🆓 全部免費</span>
           </div>
           <div class="flex flex-col sm:flex-row gap-2">
@@ -384,13 +386,13 @@
           <p class="text-gray-500 text-sm mb-4">6 個步驟搞掂公司撤銷 — 含互動工具</p>
           <p class="text-gray-600 mb-5 leading-relaxed">
             由停止營運、申請不反對通知書到正式解散，step-by-step 帶你搞掂。<br />
-            <span class="text-amber-600 font-semibold">全部免費公開 🎉</span>
+            <span class="text-amber-600 font-semibold">全部免費公開 <i data-lucide="party-popper" class="inline-block w-4 h-4"></i></span>
           </p>
 
           <!-- Price Comparison -->
           <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-300 rounded-xl p-4 mb-4 text-center shadow-sm">
             <p class="text-sm">
-              💰 秘書公司收費 <span class="line-through text-gray-400 font-semibold">$3,000+</span>
+              <i data-lucide="coins" class="inline-block w-4 h-4"></i> 秘書公司收費 <span class="line-through text-gray-400 font-semibold">$3,000+</span>
               <span class="mx-3 text-amber-400">→</span>
               <span class="text-green-600 font-bold">ESGov 全部免費 ✔️</span>
             </p>
@@ -400,15 +402,15 @@
           <!-- First 100 banner -->
           <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-xl p-3 mb-4 text-center shadow-sm">
             <p class="text-sm font-semibold text-blue-800">
-              🎯 頭 100 次下載完全免費
+              <i data-lucide="target" class="inline-block w-4 h-4"></i> 頭 100 次下載完全免費
             </p>
             <p class="text-xs text-blue-600 mt-0.5">之後我哋會考慮轉為收費模式。而家嚟就慳返，把握機會！</p>
           </div>
 
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">📋 6 個步驟</span>
-            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">📄 4 份文件</span>
-            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">🛠️ 4 個生成工具</span>
+            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full"><i data-lucide="clipboard-list" class="inline-block w-4 h-4"></i> 6 個步驟</span>
+            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full"><i data-lucide="file-text" class="inline-block w-4 h-4"></i> 4 份文件</span>
+            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full"><i data-lucide="wrench" class="inline-block w-4 h-4"></i>️ 4 個生成工具</span>
             <span class="inline-flex items-center gap-1.5 text-xs bg-green-50 text-green-700 font-medium px-3 py-1.5 rounded-full">🆓 全部免費</span>
           </div>
           <div class="flex flex-col sm:flex-row gap-2">
@@ -442,13 +444,13 @@
           <p class="text-gray-500 text-sm mb-4">董事改名、搬屋、換身份證 — ND2B 表格 15 日內申報</p>
           <p class="text-gray-600 mb-5 leading-relaxed">
             公司註冊處 ND2B「公司秘書及董事詳情更改通知書」填寫教學，step-by-step 帶你搞掂申報。<br />
-            <span class="text-amber-600 font-semibold">全部免費公開 🎉</span>
+            <span class="text-amber-600 font-semibold">全部免費公開 <i data-lucide="party-popper" class="inline-block w-4 h-4"></i></span>
           </p>
 
           <!-- Price Comparison -->
           <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-300 rounded-xl p-4 mb-4 text-center shadow-sm">
             <p class="text-sm">
-              💰 秘書公司收費 <span class="line-through text-gray-400 font-semibold">$500+</span>
+              <i data-lucide="coins" class="inline-block w-4 h-4"></i> 秘書公司收費 <span class="line-through text-gray-400 font-semibold">$500+</span>
               <span class="mx-3 text-amber-400">→</span>
               <span class="text-green-600 font-bold">ESGov 全部免費 ✔️</span>
             </p>
@@ -458,14 +460,14 @@
           <!-- First 100 banner -->
           <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-xl p-3 mb-4 text-center shadow-sm">
             <p class="text-sm font-semibold text-blue-800">
-              🎯 頭 100 次下載完全免費
+              <i data-lucide="target" class="inline-block w-4 h-4"></i> 頭 100 次下載完全免費
             </p>
             <p class="text-xs text-blue-600 mt-0.5">之後我哋會考慮轉為收費模式。而家嚟就慳返，把握機會！</p>
           </div>
 
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">📋 5 個步驟</span>
-            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">📄 1 份文件 (ND2B)</span>
+            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full"><i data-lucide="clipboard-list" class="inline-block w-4 h-4"></i> 5 個步驟</span>
+            <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full"><i data-lucide="file-text" class="inline-block w-4 h-4"></i> 1 份文件 (ND2B)</span>
             <span class="inline-flex items-center gap-1.5 text-xs bg-navy/5 text-navy font-medium px-3 py-1.5 rounded-full">⏱️ 15 日申報時限</span>
             <span class="inline-flex items-center gap-1.5 text-xs bg-green-50 text-green-700 font-medium px-3 py-1.5 rounded-full">🆓 全部免費</span>
           </div>
@@ -487,7 +489,7 @@
   <section class="py-16 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
-        <span class="inline-block text-xs font-semibold tracking-widest uppercase text-gold bg-gold/10 px-4 py-1.5 rounded-full mb-3">📝 最新文章</span>
+        <span class="inline-block text-xs font-semibold tracking-widest uppercase text-gold bg-gold/10 px-4 py-1.5 rounded-full mb-3"><i data-lucide="pen-line" class="inline-block w-4 h-4"></i> 最新文章</span>
         <h2 class="text-2xl sm:text-3xl font-bold gov-heading">
           真實經歷 · 實用貼士
         </h2>
@@ -499,13 +501,13 @@
       <div class="max-w-2xl mx-auto space-y-1.5">
         <a href="/blog/%E9%A6%99%E6%B8%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8" class="block bg-white rounded-lg border-2 border-gold/30 px-4 py-3 hover:shadow-md hover:border-gold transition-all duration-200 group bg-gold/[0.02]">
           <div class="flex items-center gap-3">
-            <div class="text-xl shrink-0">🏢</div>
+            <div class="text-xl shrink-0"><i data-lucide="building-2" class="inline-block w-4 h-4"></i></div>
             <div class="flex-1 min-w-0">
               <h3 class="text-sm font-semibold text-navy group-hover:text-gold transition-colors truncate">
                 香港有限公司終極指南大全 — 50+ 文章・9 大分類・一站式目錄
               </h3>
             </div>
-            <span class="text-xs text-gold font-bold shrink-0">📌 精選</span>
+            <span class="text-xs text-gold font-bold shrink-0"><i data-lucide="pin" class="inline-block w-4 h-4"></i> 精選</span>
           </div>
           <p class="text-xs text-gray-500 mt-1 ml-9 truncate leading-relaxed">超過 50 篇香港有限公司實戰指南，分 9 大類：開公司、股份、合規、董事股東、報稅、HR、銀行、變更解散、公司文件。全部免費。</p>
         </a>
@@ -523,7 +525,7 @@
         </a>
         <a href="/blog/香港公司重要控制人登記冊SCR終極指南" class="block bg-white rounded-lg border border-gray-200 px-4 py-3 hover:shadow-md hover:border-gold/30 transition-all duration-200 group">
           <div class="flex items-center gap-3">
-            <div class="text-xl shrink-0">📄</div>
+            <div class="text-xl shrink-0"><i data-lucide="file-text" class="inline-block w-4 h-4"></i></div>
             <div class="flex-1 min-w-0">
               <h3 class="text-sm font-semibold text-navy group-hover:text-gold transition-colors truncate">
                 香港公司重要控制人登記冊（SCR）終極指南 2026 — 5 項測試、登記冊填寫、罰則全面解說
@@ -535,7 +537,7 @@
         </a>
         <a href="/blog/香港公司股份轉讓流程2026" class="block bg-white rounded-lg border border-gray-200 px-4 py-3 hover:shadow-md hover:border-gold/30 transition-all duration-200 group">
           <div class="flex items-center gap-3">
-            <div class="text-xl shrink-0">📄</div>
+            <div class="text-xl shrink-0"><i data-lucide="file-text" class="inline-block w-4 h-4"></i></div>
             <div class="flex-1 min-w-0">
               <h3 class="text-sm font-semibold text-navy group-hover:text-gold transition-colors truncate">
                 香港有限公司股份轉讓完整流程（2026 最新）— 5 個步驟搞掂，自己搞慳返幾千蚊
@@ -559,7 +561,7 @@
         </a>
         <a href="/blog/香港有限公司第一次報稅實戰指南" class="block bg-white rounded-lg border border-gray-200 px-4 py-3 hover:shadow-md hover:border-gold/30 transition-all duration-200 group">
           <div class="flex items-center gap-3">
-            <div class="text-xl shrink-0">📝</div>
+            <div class="text-xl shrink-0"><i data-lucide="pen-line" class="inline-block w-4 h-4"></i></div>
             <div class="flex-1 min-w-0">
               <h3 class="text-sm font-semibold text-navy group-hover:text-gold transition-colors truncate">
                 香港有限公司第一次報稅實戰指南 — 由收到報稅表到成功 Submit 全程教學
@@ -571,7 +573,7 @@
         </a>
         <a href="/blog/公司註冊處電子服務稅務易實戰教學" class="block bg-white rounded-lg border border-gray-200 px-4 py-3 hover:shadow-md hover:border-gold/30 transition-all duration-200 group">
           <div class="flex items-center gap-3">
-            <div class="text-xl shrink-0">🖥️</div>
+            <div class="text-xl shrink-0"><i data-lucide="monitor" class="inline-block w-4 h-4"></i>️</div>
             <div class="flex-1 min-w-0">
               <h3 class="text-sm font-semibold text-navy group-hover:text-gold transition-colors truncate">
                 公司註冊處 e-Services Portal 及稅務易 eTAX 實戰教學 2026 — 網上查冊、遞交文件、付款完全圖解
@@ -583,7 +585,7 @@
         </a>
         <a href="/blog/香港公司授權書PowerOfAttorney終極指南" class="block bg-white rounded-lg border border-gray-200 px-4 py-3 hover:shadow-md hover:border-gold/30 transition-all duration-200 group">
           <div class="flex items-center gap-3">
-            <div class="text-xl shrink-0">📜</div>
+            <div class="text-xl shrink-0"><i data-lucide="scroll-text" class="inline-block w-4 h-4"></i></div>
             <div class="flex-1 min-w-0">
               <h3 class="text-sm font-semibold text-navy group-hover:text-gold transition-colors truncate">
                 香港公司授權書（Power of Attorney）終極指南 — 公司授權書點樣簽先有效？法定格式同常見用途全面拆解
@@ -595,7 +597,7 @@
         </a>
         <a href="/blog/香港公司文件公證認證加簽終極指南" class="block bg-white rounded-lg border border-gray-200 px-4 py-3 hover:shadow-md hover:border-gold/30 transition-all duration-200 group">
           <div class="flex items-center gap-3">
-            <div class="text-xl shrink-0">📜</div>
+            <div class="text-xl shrink-0"><i data-lucide="scroll-text" class="inline-block w-4 h-4"></i></div>
             <div class="flex-1 min-w-0">
               <h3 class="text-sm font-semibold text-navy group-hover:text-gold transition-colors truncate">
                 香港公司文件公證、認證及加簽終極指南 2026 — Notary Public / Apostille 海牙認證 / 中國委託公證人
@@ -607,7 +609,7 @@
         </a>
         <a href="/blog/香港公司股份證明書ShareCertificate終極指南" class="block bg-white rounded-lg border border-gray-200 px-4 py-3 hover:shadow-md hover:border-gold/30 transition-all duration-200 group">
           <div class="flex items-center gap-3">
-            <div class="text-xl shrink-0">📜</div>
+            <div class="text-xl shrink-0"><i data-lucide="scroll-text" class="inline-block w-4 h-4"></i></div>
             <div class="flex-1 min-w-0">
               <h3 class="text-sm font-semibold text-navy group-hover:text-gold transition-colors truncate">
                 香港公司發出股份證明書（Share Certificate）終極指南｜發新股、轉股東後必做
@@ -619,7 +621,7 @@
         </a>
         <a href="/blog/香港有限公司開公司設立註冊終極指南2026" class="block bg-white rounded-lg border border-gray-200 px-4 py-3 hover:shadow-md hover:border-gold/30 transition-all duration-200 group">
           <div class="flex items-center gap-3">
-            <div class="text-xl shrink-0">🏢</div>
+            <div class="text-xl shrink-0"><i data-lucide="building-2" class="inline-block w-4 h-4"></i></div>
             <div class="flex-1 min-w-0">
               <h3 class="text-sm font-semibold text-navy group-hover:text-gold transition-colors truncate">
                 香港有限公司開公司（公司註冊成立）終極指南 2026｜揀名、NNC1、費用、開戶全部步驟
@@ -631,7 +633,7 @@
         </a>
         <a href="/blog/香港有限公司股東大會AGM暨書面決議終極指南" class="block bg-white rounded-lg border border-gray-200 px-4 py-3 hover:shadow-md hover:border-gold/30 transition-all duration-200 group">
           <div class="flex items-center gap-3">
-            <div class="text-xl shrink-0">🗳️</div>
+            <div class="text-xl shrink-0"><i data-lucide="vote" class="inline-block w-4 h-4"></i></div>
             <div class="flex-1 min-w-0">
               <h3 class="text-sm font-semibold text-navy group-hover:text-gold transition-colors truncate">
                 香港有限公司股東大會（AGM & EGM）暨書面決議終極指南｜一定要開會？一人公司可以點做？
@@ -644,7 +646,7 @@
       </div>
       <div class="text-center mt-8">
         <a href="/blog/" class="inline-flex items-center gap-2 text-sm font-semibold text-navy bg-white border-2 border-navy/20 hover:border-gold/40 hover:text-gold transition rounded-xl px-6 py-3 shadow-sm">
-          📚 睇更多文章 →
+          <i data-lucide="book-open" class="inline-block w-4 h-4"></i> 睇更多文章 →
         </a>
       </div>
     
@@ -721,7 +723,7 @@
   <section class="py-16 bg-gray-50 border-t border-gray-100">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gold/20 mb-5">
-        <span class="text-2xl">💬</span>
+        <span class="text-2xl"><i data-lucide="message-square" class="inline-block w-4 h-4"></i></span>
       </div>
       <h2 class="text-xl sm:text-2xl font-bold mb-3 gov-heading">想我哋製作更多指南？</h2>
       <p class="text-gray-500 text-sm sm:text-base leading-relaxed">
@@ -729,7 +731,7 @@
         直接 email 過嚟就得，我哋會盡快回覆你 😊
       </p>
       <a href="mailto:tbstbs0613@gmail.com" class="inline-block mt-4 text-gold font-semibold text-base sm:text-lg hover:underline transition">
-        📧 tbstbs0613@gmail.com
+        <i data-lucide="mail" class="inline-block w-4 h-4"></i> tbstbs0613@gmail.com
       </a>
     </div>
   </section>
@@ -773,7 +775,7 @@
          class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-3.5 px-8 rounded-xl hover:bg-gold-light transition shadow-lg text-lg">
         ☕ 請我飲咖啡
       </a>
-      <p class="text-xs text-gray-400 mt-3">每個支持都幫助我製作更多免費指南 🎯</p>
+      <p class="text-xs text-gray-400 mt-3">每個支持都幫助我製作更多免費指南 <i data-lucide="target" class="inline-block w-4 h-4"></i></p>
       <button @click="showDonate = false" class="mt-4 text-sm text-gray-400 hover:text-gray-600 transition">或者直接關閉，繼續睇內容 →</button>
     </div>
   </div>

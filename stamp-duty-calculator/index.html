@@ -63,6 +63,8 @@
   ]
 }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-100 font-sans">
 
@@ -77,20 +79,20 @@
 
     <!-- Trust Banner -->
     <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 mb-4 text-center text-sm text-gray-700">
-      💰 輸入轉讓價 → 即時計出印花稅金額
+      <i data-lucide="coins" class="inline-block w-4 h-4"></i> 輸入轉讓價 → 即時計出印花稅金額
     </div>
 
     <!-- 工具說明 -->
     <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
       <div class="flex items-start gap-3 mb-3">
-        <span class="text-lg mt-0.5 shrink-0">🧮</span>
+        <span class="text-lg mt-0.5 shrink-0"><i data-lucide="calculator" class="inline-block w-4 h-4"></i></span>
         <div>
           <p class="font-semibold text-navy text-sm">印花稅計算器</p>
           <p class="text-xs text-gray-500 mt-0.5">香港股份轉讓印花稅（Stamp Duty）即時計算 — 按《印花稅條例》第117章</p>
         </div>
       </div>
       <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 sm:p-4">
-        <h4 class="font-semibold text-amber-700 text-xs mb-2 flex items-center gap-1">📌 稅率概要</h4>
+        <h4 class="font-semibold text-amber-700 text-xs mb-2 flex items-center gap-1"><i data-lucide="pin" class="inline-block w-4 h-4"></i> 稅率概要</h4>
         <ul class="text-xs text-gray-700 space-y-1.5">
           <li class="flex items-start gap-2"><span class="text-amber-500 mt-0.5 shrink-0">•</span><strong>賣方（轉讓人）：</strong>轉讓價嘅 0.1%（每 $1,000 收 $1）</li>
           <li class="flex items-start gap-2"><span class="text-amber-500 mt-0.5 shrink-0">•</span><strong>買方（承讓人）：</strong>轉讓價嘅 0.1%（每 $1,000 收 $1）</li>
@@ -180,7 +182,7 @@
         <!-- 一按複製 -->
         <div class="mt-4 flex gap-2">
           <button onclick="copyResult()" class="flex-1 bg-navy text-white font-bold py-3 px-4 rounded-xl hover:bg-navy-light transition shadow text-sm flex items-center justify-center gap-2">
-            📋 複製結果
+            <i data-lucide="clipboard-list" class="inline-block w-4 h-4"></i> 複製結果
           </button>
           <button onclick="resetCalc()" class="flex-none bg-gray-200 text-gray-600 font-semibold py-3 px-4 rounded-xl hover:bg-gray-300 transition text-sm">
             🔄 重設
@@ -234,7 +236,7 @@
       const buyerDuty = document.getElementById('buyerDuty').textContent;
       const totalDuty = document.getElementById('totalDuty').textContent;
 
-      const text = '📊 ESGov 印花稅計算結果\n' +
+      const text = '<i data-lucide="bar-chart-3" class="inline-block w-4 h-4"></i> ESGov 印花稅計算結果\n' +
         '轉讓價：HK$' + Number(price).toLocaleString('en-US') + '\n' +
         '賣方印花稅（0.1%）：' + sellerDuty + '\n' +
         '買方印花稅（0.1%）：' + buyerDuty + '\n' +

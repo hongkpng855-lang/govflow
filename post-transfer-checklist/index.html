@@ -63,6 +63,8 @@
   ]
 }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-100 font-sans">
 
@@ -83,14 +85,14 @@
     <!-- 工具說明 -->
     <div class="mb-4 bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
       <div class="flex items-start gap-3 mb-3">
-        <span class="text-lg mt-0.5 shrink-0">📋</span>
+        <span class="text-lg mt-0.5 shrink-0"><i data-lucide="clipboard-list" class="inline-block w-4 h-4"></i></span>
         <div>
           <p class="font-semibold text-navy text-sm">轉讓後跟進 Checklist</p>
           <p class="text-xs text-gray-500 mt-0.5">股份轉讓文件簽署 &amp; 繳交印花稅之後嘅必做 steps</p>
         </div>
       </div>
       <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 sm:p-4">
-        <h4 class="font-semibold text-blue-700 text-xs mb-2 flex items-center gap-1">💡 點樣用</h4>
+        <h4 class="font-semibold text-blue-700 text-xs mb-2 flex items-center gap-1"><i data-lucide="lightbulb" class="inline-block w-4 h-4"></i> 點樣用</h4>
         <ul class="text-xs text-gray-700 space-y-1.5">
           <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5 shrink-0">•</span>逐項㩒個 checkbox 標記為「已完成」</li>
           <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5 shrink-0">•</span>進度 bar 會顯示完成百分比</li>
@@ -164,7 +166,7 @@
               <p class="text-xs text-gray-500 mt-0.5">如股權變動影響重要控制人（PSC）記錄，須更新 SCR</p>
               <div class="mt-1.5 bg-amber-50 border border-amber-100 rounded-lg px-2.5 py-1.5">
                 <p class="text-xs text-amber-700">
-                  <span class="font-semibold">📌 NR2 表格：</span>如 SCR 存放位置有變，須提交 NR2 通知公司註冊處<br/>
+                  <span class="font-semibold"><i data-lucide="pin" class="inline-block w-4 h-4"></i> NR2 表格：</span>如 SCR 存放位置有變，須提交 NR2 通知公司註冊處<br/>
                   <span class="text-amber-600">SCR 可存放喺：</span>公司註冊辦事處 / 香港嘅指定地點
                 </p>
               </div>
@@ -197,7 +199,7 @@
         <div id="completionMessage" class="mt-5 hidden">
           <div class="border-t-2 border-dashed border-gray-300 pt-4">
             <div id="completionCard" class="rounded-xl p-4 text-center bg-green-50 border border-green-200">
-              <p class="text-2xl mb-1">🎉</p>
+              <p class="text-2xl mb-1"><i data-lucide="party-popper" class="inline-block w-4 h-4"></i></p>
               <p class="text-sm font-bold text-green-700">全部完成！</p>
               <p class="text-xs text-green-600 mt-1">恭喜！所有轉讓後跟進步驟已經做齊。<br/>建議保存呢份記錄做日後參考。</p>
             </div>
