@@ -142,7 +142,7 @@
     } finally {
       this.isLoading = false;
     }
-    this.$nextTick(() => { setTimeout(() => { if(typeof lucide!=='undefined') lucide.createIcons(); }, 0); });
+    setTimeout(function(){if(typeof lucide!=='undefined'){try{lucide.createIcons()}catch(e){}}},500)
   },
 
   get steps() { return this.processData?.steps || []; },
