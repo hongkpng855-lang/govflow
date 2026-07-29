@@ -16,6 +16,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/style.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
   <script defer src="/assets/js/app.js"></script>
   <script>
     tailwind.config = {
@@ -240,6 +241,7 @@
     } finally {
       this.isLoading = false;
     }
+    this.$nextTick(() => { lucide.createIcons(); });
   },
 
   get steps() { return this.processData?.steps || []; },
@@ -247,7 +249,7 @@
   get progressPercent() { return (this.currentStep / this.totalSteps) * 100; },
 
   getStepIcon(step) {
-    return step.documents && step.documents.length > 0 ? '📄' : '👣';
+    return '<i data-lucide='+(step.documents && step.documents.length > 0 ? "'file-text'" : "'footprints'")+' class="inline-block w-5 h-5"></i>';
   },
 
   goToStep(n) {
@@ -374,7 +376,7 @@
           }"
           @click="goToStep(s.stepNumber)"
         >
-          <span class="text-sm" x-text="getStepIcon(s)"></span>
+          <span class="text-sm" x-html="getStepIcon(s)"></span>
           <span class="text-[10px] text-center leading-[1.1]" x-text="(s.title.split('（')[0] || s.title).substring(0, 6)"></span>
           <span class="text-[10px]">🆓</span>
         </button>
@@ -408,7 +410,7 @@
                   'bg-gold text-navy': currentStep === s.stepNumber,
                   'bg-gray-200 text-gray-500': currentStep !== s.stepNumber
                 }"
-                x-text="getStepIcon(s)"
+                x-html="getStepIcon(s)"
               ></span>
               <div class="min-w-0 flex-1">
                 <span class="block text-xs font-medium leading-snug" x-text="'Step '+s.stepNumber+': '+(s.title.split('（')[0] || s.title)"></span>
@@ -508,7 +510,7 @@
             <div class="mb-8">
               <div class="flex items-center gap-3 mb-2">
                 <span class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gold text-navy flex items-center justify-center font-bold text-lg">
-                  <span x-text="getStepIcon(s)"></span>
+                  <span x-html="getStepIcon(s)"></span>
                 </span>
                 <span class="text-sm text-green-600 font-semibold">🆓 免費步驟 | Step <span x-text="s.stepNumber"></span></span>
               </div>
