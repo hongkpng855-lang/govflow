@@ -231,7 +231,7 @@
   <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-200">
     <div class="max-w-6xl mx-auto px-4 py-2 text-center">
       <p class="text-xs sm:text-sm font-semibold text-blue-800">
-        <i data-lucide='target' class='w-4 h-4 inline-block'></i> 頭 100 次下載完全免費 &middot; 之後會考慮轉為收費模式，而家把握機會！
+         頭 100 次下載完全免費 &middot; 之後會考慮轉為收費模式，而家把握機會！
       </p>
     </div>
   </div>
@@ -252,7 +252,7 @@
           <span class="text-xs text-gray-300 hidden sm:inline truncate max-w-[200px]">
             <span x-text="(currentStepData?.title.split('（')[0] || currentStepData?.title || '').substring(0, 20)"></span>
           </span>
-          <button @click="openDonate()" class="text-xs bg-gold/20 text-gold px-2 py-1 rounded-full whitespace-nowrap hover:bg-gold/30 transition"><i data-lucide='coffee' class='w-4 h-4 inline-block'></i> 請咖啡</button>
+          <button @click="openDonate()" class="text-xs bg-gold/20 text-gold px-2 py-1 rounded-full whitespace-nowrap hover:bg-gold/30 transition"> 請咖啡</button>
         </div>
       </div>
       <!-- Progress bar -->
@@ -318,17 +318,17 @@
           <!-- Sidebar Donate CTA -->
           <div class="mt-6 bg-amber-50 rounded-xl p-4 border border-amber-200">
             <p class="text-xs text-gray-600 mb-3 leading-relaxed">
-              <i data-lucide='handshake' class='w-4 h-4 inline-block'></i> 呢份指南全部免費公開。<br />
-              如果幫到你，可以請我飲杯咖啡 <i data-lucide='coffee' class='w-4 h-4 inline-block'></i>
+               呢份指南全部免費公開。<br />
+              如果幫到你，可以請我飲杯咖啡 
             </p>
             <button @click="openDonate()" class="w-full bg-gold text-navy font-bold text-sm py-2.5 rounded-xl hover:bg-gold-light transition shadow-sm">
-              <i data-lucide='coffee' class='w-4 h-4 inline-block'></i> 請我飲咖啡
+               請我飲咖啡
             </button>
           </div>
 
           <!-- Sidebar Email CTA -->
           <div class="mt-3 bg-white rounded-xl p-4 border border-gray-200">
-            <p class="text-xs text-gray-500 mb-2"><i data-lucide='mailbox' class='w-4 h-4 inline-block'></i> 有新指南通知你？</p>
+            <p class="text-xs text-gray-500 mb-2"> 有新指南通知你？</p>
             <button @click="openEmail()" class="w-full text-xs font-semibold text-navy bg-gray-100 py-2 rounded-xl hover:bg-gray-200 transition">
               留低 email →
             </button>
@@ -339,19 +339,19 @@
       <!-- ═══ Content Area ═══ -->
       <main id="step-content" class="flex-1 min-w-0">
 
-        <!-- <i data-lucide='pin' class='w-4 h-4 inline-block'></i> 快速概覽 (merged) -->
+        <!--  快速概覽 (merged) -->
         <div class="bg-gradient-to-br from-amber-50 to-white border border-amber-200 rounded-xl p-4 sm:p-5 mb-8">
           <div class="flex items-center gap-2 mb-2">
-            <span class="text-base"><i data-lucide='pin' class='w-4 h-4 inline-block'></i></span>
+            <span class="text-base"></span>
             <span class="font-bold text-navy text-sm sm:text-base">快速概覽：股份轉讓係指...</span>
           </div>
           <div class="grid sm:grid-cols-3 gap-3 text-xs sm:text-sm text-gray-700">
             <div class="bg-white/70 rounded-lg p-2.5">
-              <span class="font-semibold text-navy block"><i data-lucide='clock' class='w-4 h-4 inline-block'></i> 需時</span>
+              <span class="font-semibold text-navy block"> 需時</span>
               <span>1–2 個星期（5 步驟）</span>
             </div>
             <div class="bg-white/70 rounded-lg p-2.5">
-              <span class="font-semibold text-navy block"><i data-lucide='coins' class='w-4 h-4 inline-block'></i> 費用</span>
+              <span class="font-semibold text-navy block"> 費用</span>
               <span>約 $250–$300（自己搞）</span>
             </div>
             <div class="bg-white/70 rounded-lg p-2.5">
@@ -364,10 +364,10 @@
           </p>
         </div>
 
-        <!-- <i data-lucide='bar-chart-3' class='w-4 h-4 inline-block'></i> 比較表（預設收埋） -->
+        <!--  比較表（預設收埋） -->
         <div x-data="{ open: false }" class="bg-gray-50 border border-gray-200 rounded-xl p-4 sm:p-5 mb-6">
           <button @click="open = !open" class="w-full flex items-center justify-between text-left">
-            <span class="font-bold text-navy text-base"><i data-lucide='bar-chart-3' class='w-4 h-4 inline-block'></i> 自己搞 vs 會計公司 vs 秘書公司</span>
+            <span class="font-bold text-navy text-base"> 自己搞 vs 會計公司 vs 秘書公司</span>
             <span class="text-gold text-sm shrink-0 ml-2" x-text="open ? '▲ 收埋' : '▼ 睇對比'"></span>
           </button>
           <div x-show="open" x-transition.duration.200ms class="overflow-x-auto mt-3">
@@ -375,15 +375,15 @@
               <thead>
                 <tr class="border-b border-gray-300 bg-navy/5">
                   <th class="text-left py-2 px-2 font-bold text-navy text-xs">項目</th>
-                  <th class="text-center py-2 px-2 font-bold text-green-700 text-xs"><i data-lucide='circle' class='w-4 h-4 inline-block'></i> 自己搞（ESGov）</th>
-                  <th class="text-center py-2 px-2 font-bold text-amber-700 text-xs"><i data-lucide='circle' class='w-4 h-4 inline-block'></i> 會計公司</th>
-                  <th class="text-center py-2 px-2 font-bold text-red-700 text-xs"><i data-lucide='circle' class='w-4 h-4 inline-block'></i> 秘書公司</th>
+                  <th class="text-center py-2 px-2 font-bold text-green-700 text-xs"> 自己搞（ESGov）</th>
+                  <th class="text-center py-2 px-2 font-bold text-amber-700 text-xs"> 會計公司</th>
+                  <th class="text-center py-2 px-2 font-bold text-red-700 text-xs"> 秘書公司</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="border-b border-gray-100"><td class="py-2 px-2 font-medium text-navy text-xs">費用</td><td class="text-center py-2 px-2 text-green-700 font-semibold text-xs">約 $250–$300（只係政府費用）</td><td class="text-center py-2 px-2 text-xs">$1,000 – $3,000</td><td class="text-center py-2 px-2 text-xs">$2,000 – $5,000</td></tr>
                 <tr class="border-b border-gray-100"><td class="py-2 px-2 font-medium text-navy text-xs">所需時間</td><td class="text-center py-2 px-2 text-green-700 font-semibold text-xs">1–2 個星期</td><td class="text-center py-2 px-2 text-xs">1–3 個星期</td><td class="text-center py-2 px-2 text-xs">2–4 個星期</td></tr>
-                <tr class="border-b border-gray-100"><td class="py-2 px-2 font-medium text-navy text-xs">需唔需要專業知識？</td><td class="text-center py-2 px-2 text-green-700 text-xs"><i data-lucide='x-circle' class='w-4 h-4 inline-block'></i> 唔需要，跟住指南做就得</td><td class="text-center py-2 px-2 text-xs"><i data-lucide='check-circle' class='w-4 h-4 inline-block'></i> 會計師幫你跟</td><td class="text-center py-2 px-2 text-xs"><i data-lucide='check-circle' class='w-4 h-4 inline-block'></i> 秘書幫你搞</td></tr>
+                <tr class="border-b border-gray-100"><td class="py-2 px-2 font-medium text-navy text-xs">需唔需要專業知識？</td><td class="text-center py-2 px-2 text-green-700 text-xs"> 唔需要，跟住指南做就得</td><td class="text-center py-2 px-2 text-xs"> 會計師幫你跟</td><td class="text-center py-2 px-2 text-xs"> 秘書幫你搞</td></tr>
                 <tr class="border-b border-gray-100"><td class="py-2 px-2 font-medium text-navy text-xs">文件處理</td><td class="text-center py-2 px-2 text-green-700 text-xs">自己填寫 + 生成 PDF 🆓</td><td class="text-center py-2 px-2 text-xs">會計師幫你準備</td><td class="text-center py-2 px-2 text-xs">秘書公司準備</td></tr>
                 <tr><td class="py-2 px-2 font-medium text-navy text-xs">適合情況</td><td class="text-center py-2 px-2 text-green-700 text-xs">簡單轉讓、想慳錢、有時間自學</td><td class="text-center py-2 px-2 text-xs">公司有會計師跟開、複雜稅務</td><td class="text-center py-2 px-2 text-xs">章程複雜、大額交易、冇時間</td></tr>
               </tbody>
@@ -420,7 +420,7 @@
 
               <!-- Donate micro-text (only step 1) -->
               <div x-show="s.stepNumber === 1" class="mt-3 flex items-center gap-2 text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
-                <span class="shrink-0"><i data-lucide='coffee' class='w-4 h-4 inline-block'></i></span>
+                <span class="shrink-0"></span>
                 <span>整理不易，支持下？</span>
                 <button @click="openDonate()" class="font-semibold text-gold hover:text-gold-light underline ml-auto shrink-0">請咖啡</button>
               </div>
@@ -449,7 +449,7 @@
                     <template x-if="!doc.demoImage || doc.demoImage === '_placeholder_'">
                       <div class="h-32 sm:h-40 bg-gradient-to-br from-navy/5 to-gold/5 overflow-hidden relative flex items-center justify-center">
                         <div class="text-center">
-                          <div class="text-3xl mb-1"><i data-lucide='file-text' class='w-4 h-4 inline-block'></i></div>
+                          <div class="text-3xl mb-1"></div>
                           <div class="text-sm font-semibold text-navy/60">線上工具</div>
                           <div class="text-xs text-gray-400 mt-0.5">即時生成 PDF</div>
                         </div>
@@ -484,13 +484,13 @@
         <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 sm:p-8 text-center mt-6">
           <p class="text-xl font-bold text-navy mb-3">想自己搞掂股份轉讓？我哋有齊晒所有範本同工具</p>
           <p class="text-gray-600 mb-4">全部免費 🆓 · 含 Sold Note、Instrument of Transfer、Letter of Transferee 生成工具</p>
-          <a href="/share-transfer/" class="inline-block bg-navy hover:bg-navy-light text-white font-semibold px-8 py-3 rounded-lg transition"><i data-lucide='file-text' class='w-4 h-4 inline-block'></i> 開始免費指南</a>
+          <a href="/share-transfer/" class="inline-block bg-navy hover:bg-navy-light text-white font-semibold px-8 py-3 rounded-lg transition"> 開始免費指南</a>
           <p class="text-xs text-gray-500 mt-3">唔使俾會計公司賺幾千蚊服務費</p>
         </div>
 
-        <!-- <i data-lucide='book-open' class='w-4 h-4 inline-block'></i> 相關指南 -->
+        <!--  相關指南 -->
         <div class="bg-gold/5 border border-gold/20 rounded-xl p-4 mb-3">
-          <h3 class="font-bold text-navy text-sm mb-2"><i data-lucide='book-open' class='w-4 h-4 inline-block'></i> 相關指南</h3>
+          <h3 class="font-bold text-navy text-sm mb-2"> 相關指南</h3>
           <ul class="space-y-1.5 text-xs">
             <li>• <a href="/blog/香港公司股份轉讓流程2026.html" class="text-gold hover:underline">香港有限公司股份轉讓完整流程2026 — 詳細網誌版本</a></li>
             <li>• <a href="/blog/香港公司印花稅（厘印費）終極指南.html" class="text-gold hover:underline">香港公司印花稅（厘印費）終極指南</a></li>
@@ -498,9 +498,9 @@
           </ul>
         </div>
 
-        <!-- <i data-lucide='pen-line' class='w-4 h-4 inline-block'></i> Cite this -->
+        <!--  Cite this -->
         <div class="bg-gray-100 border border-gray-300 rounded-xl p-5 mt-6 text-sm">
-          <p class="font-bold text-navy text-base mb-2 flex items-center gap-2"><i data-lucide='pen-line' class='w-4 h-4 inline-block'></i> Cite this (引用此頁)</p>
+          <p class="font-bold text-navy text-base mb-2 flex items-center gap-2"> Cite this (引用此頁)</p>
           <div class="space-y-1.5 text-gray-700">
             <p><strong>定義：</strong>股份轉讓係指香港有限公司股東將所持股份依法轉讓予另一人嘅法定程序，受《公司條例》（第622章第47-52條）規管。</p>
             <p><strong>關鍵數字：</strong>印花稅 = 轉讓價 0.2% + $5 定額；遲交罰款可達 10 倍；2025 年公司註冊處處理超過 12,000 宗股份轉讓登記。</p>
@@ -517,7 +517,7 @@
   <footer class="bg-navy text-white py-8 mt-10">
     <div class="max-w-6xl mx-auto px-4 text-center text-sm text-gray-400">
       <p>© 2026 ESGov. 由真實經歷者整理，實戰經驗分享。</p>
-      <p class="mt-1"><i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。</p>
+      <p class="mt-1"> 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。</p>
       <p class="mt-1">最後更新：2026年7月</p>
     </div>
   </footer>
@@ -525,18 +525,18 @@
   <!-- ═══ Donate Modal ═══ -->
   <div x-show="showDonate" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" @click.self="closeDonate()">
     <div class="bg-white rounded-xl max-w-md w-full shadow-2xl p-6 sm:p-8 text-center" @click.stop>
-      <div class="text-5xl mb-4"><i data-lucide='coffee' class='w-4 h-4 inline-block'></i></div>
+      <div class="text-5xl mb-4"></div>
       <h3 class="text-xl font-bold text-navy mb-3">幫到你嗎？請我飲杯咖啡</h3>
       <p class="text-sm text-gray-600 mb-6 leading-relaxed">
         呢份指南係我親身經歷整理，完全免費公開。<br />
         如果幫到你節省時間同金錢，<br />
-        可以透過 Buy Me a Coffee 支持下我 <i data-lucide='coffee' class='w-4 h-4 inline-block'></i>
+        可以透過 Buy Me a Coffee 支持下我 
       </p>
       <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
          class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-3.5 px-8 rounded-xl hover:bg-gold-light transition shadow-lg text-lg">
-        <i data-lucide='coffee' class='w-4 h-4 inline-block'></i> 請我飲咖啡
+         請我飲咖啡
       </a>
-      <p class="text-xs text-gray-400 mt-3">每個支持都幫助我製作更多免費指南 <i data-lucide='target' class='w-4 h-4 inline-block'></i></p>
+      <p class="text-xs text-gray-400 mt-3">每個支持都幫助我製作更多免費指南 </p>
       <button @click="closeDonate()" class="mt-4 text-sm text-gray-400 hover:text-gray-600 transition">或者直接關閉，繼續睇內容 →</button>
     </div>
   </div>
@@ -544,7 +544,7 @@
   <!-- ═══ Email Collection Modal ═══ -->
   <div x-show="showEmail" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" @click.self="closeEmail()">
     <div class="bg-white rounded-xl max-w-sm w-full shadow-2xl p-6 sm:p-8 text-center" @click.stop>
-      <div class="text-3xl mb-3"><i data-lucide='mailbox' class='w-4 h-4 inline-block'></i></div>
+      <div class="text-3xl mb-3"></div>
       <h3 class="text-lg font-bold text-navy mb-2">想收到更多免費指南？</h3>
       <p class="text-sm text-gray-500 mb-5">先留低 email，之後有新指南會通知你，然後繼續睇內容</p>
       <div x-show="!emailSubmitted" class="flex flex-col gap-3">
@@ -553,11 +553,11 @@
         <button @click="submitEmail()"
                 class="bg-navy text-white font-semibold py-2.5 rounded-xl hover:bg-navy-light transition text-sm"
                 :disabled="!email.includes('@')">
-          <i data-lucide='download' class='w-4 h-4 inline-block'></i> 繼續睇內容
+           繼續睇內容
         </button>
       </div>
       <div x-show="emailSubmitted" class="text-green-600 font-semibold text-sm py-4">
-        <i data-lucide='check-circle' class='w-4 h-4 inline-block'></i> 多謝！有新指南會通知你 <i data-lucide='mailbox' class='w-4 h-4 inline-block'></i>
+         多謝！有新指南會通知你 
       </div>
       <button @click="closeEmail()" class="mt-3 text-xs text-gray-400 hover:text-gray-600 transition">Skip，直接睇內容 →</button>
     </div>
@@ -577,7 +577,7 @@
           <template x-if="!selectedDoc.demoImage || selectedDoc.demoImage === '_placeholder_'">
             <div class="h-48 bg-gray-50 flex items-center justify-center">
               <div class="text-center">
-                <div class="text-4xl mb-2"><i data-lucide='file-text' class='w-4 h-4 inline-block'></i></div>
+                <div class="text-4xl mb-2"></div>
                 <p class="text-sm font-semibold text-navy/60">線上工具</p>
                 <p class="text-xs text-gray-400">即時生成 PDF</p>
               </div>
@@ -594,7 +594,7 @@
             </template>
             <template x-if="selectedDoc.commonMistakes && selectedDoc.commonMistakes.length >= 1">
               <div class="mt-6">
-                <h4 class="font-bold text-red-700 text-sm mb-2"><i data-lucide='triangle-alert' class='w-4 h-4 inline-block'></i> 常見錯誤導致補交</h4>
+                <h4 class="font-bold text-red-700 text-sm mb-2"> 常見錯誤導致補交</h4>
                 <ul class="list-disc pl-5 space-y-1 text-sm text-red-600">
                   <template x-for="(mistake, mi) in selectedDoc.commonMistakes" :key="mi">
                     <li x-text="mistake"></li>
