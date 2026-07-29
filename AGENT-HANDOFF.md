@@ -21,10 +21,11 @@
 ## 2. Current State (2026-07-29)
 
 ### ✅ Working
-- **Static icons**: 44-88 `<i data-lucide>` tags per page, fully converted to SVGs
+- **Static icons**: 44-88 `<i data-lucide>` tags per page on main pages, 17 icons on each generator page
 - **Step NAV icons**: `STEP_ICONS` global variable + `x-html` — **proven working**
 - **Step content**: Renders correctly from processes.json or embedded data
 - **Document cards**: All interactive tools and demo images display correctly
+- **Generator pages**: All 19 tool pages have Lucide icons loaded via CDN
 - **SEO score**: 99.5/100 (deep-seo-audit.py)
 - **GSC**: Token with webmasters write scope, sitemap submitted (204)
 - **GEO**: robots.txt (491 bytes) + llms.txt (6808 bytes) both present
