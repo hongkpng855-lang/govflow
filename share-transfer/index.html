@@ -141,7 +141,6 @@
     } finally {
       this.isLoading = false;
     }
-    this.$nextTick(() => { setTimeout(() => lucide.createIcons(), 0); });
   },
 
   get steps() { return this.processData?.steps || []; },
@@ -149,7 +148,7 @@
   get progressPercent() { return (this.currentStep / this.totalSteps) * 100; },
 
   getStepIcon(step) {
-    return '<i data-lucide='+(step.documents && step.documents.length > 0 ? "'file-text'" : "'footprints'")+' class=\'inline-block w-5 h-5\'></i>';
+    return step.documents && step.documents.length > 0 ? '📄' : '👣';
   },
 
   goToStep(n) {
@@ -251,7 +250,7 @@
           <span class="text-xs text-gray-300 hidden sm:inline truncate max-w-[200px]">
             <span x-text="(currentStepData?.title.split('（')[0] || currentStepData?.title || '').substring(0, 20)"></span>
           </span>
-          <button @click="openDonate()" class="text-xs bg-gold/20 text-gold px-2 py-1 rounded-full whitespace-nowrap hover:bg-gold/30 transition"><i data-lucide="coffee" class="inline-block w-4 h-4"></i> 請咖啡</button>
+          <button @click="openDonate()" class="text-xs bg-gold/20 text-gold px-2 py-1 rounded-full whitespace-nowrap hover:bg-gold/30 transition">☕ 請咖啡</button>
         </div>
       </div>
       <!-- Progress bar -->
@@ -272,9 +271,9 @@
             'bg-gray-50 text-gray-500 border border-gray-200': currentStep !== s.stepNumber
           }"
           @click="goToStep(s.stepNumber)">
-          <span class="text-sm" x-html="getStepIcon(s)"></span>
+          <span class="text-sm" x-text="getStepIcon(s)"></span>
           <span class="text-[10px] text-center leading-[1.1]" x-text="(s.title.split('（')[0] || s.title).substring(0, 6)"></span>
-          <span class="text-[10px]"><i data-lucide="sparkles" class="inline-block w-4 h-4"></i></span>
+          <span class="text-[10px]">🆓</span>
         </button>
       </template>
     </div>
@@ -288,7 +287,7 @@
       <aside class="hidden sm:block w-64 shrink-0">
         <nav class="sticky top-32">
           <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 px-4">
-            全部步驟（全部免費 <i data-lucide="sparkles" class="inline-block w-4 h-4"></i>）
+            全部步驟（全部免費 🆓）
           </div>
           <div class="space-y-0.5">
           <template x-for="s in steps" :key="s.stepNumber">
@@ -305,10 +304,10 @@
                   'bg-gold text-navy': currentStep === s.stepNumber,
                   'bg-gray-200 text-gray-500': currentStep !== s.stepNumber
                 }"
-                x-html="getStepIcon(s)"></span>
+                x-text="getStepIcon(s)"></span>
               <div class="min-w-0 flex-1">
                 <span class="block text-xs font-medium leading-snug" x-text="'Step '+s.stepNumber+': '+(s.title.split('（')[0] || s.title)"></span>
-                <span class="block text-[10px] mt-0.5 text-green-600"><i data-lucide="sparkles" class="inline-block w-4 h-4"></i> 免費</span>
+                <span class="block text-[10px] mt-0.5 text-green-600">🆓 免費</span>
               </div>
             </button>
           </template>
@@ -318,10 +317,10 @@
           <div class="mt-6 bg-amber-50 rounded-xl p-4 border border-amber-200">
             <p class="text-xs text-gray-600 mb-3 leading-relaxed">
               🤝 呢份指南全部免費公開。<br />
-              如果幫到你，可以請我飲杯咖啡 <i data-lucide="coffee" class="inline-block w-4 h-4"></i>
+              如果幫到你，可以請我飲杯咖啡 ☕
             </p>
             <button @click="openDonate()" class="w-full bg-gold text-navy font-bold text-sm py-2.5 rounded-xl hover:bg-gold-light transition shadow-sm">
-              <i data-lucide="coffee" class="inline-block w-4 h-4"></i> 請我飲咖啡
+              ☕ 請我飲咖啡
             </button>
           </div>
 
@@ -354,7 +353,7 @@
               <span>約 $250–$300（自己搞）</span>
             </div>
             <div class="bg-white/70 rounded-lg p-2.5">
-              <span class="font-semibold text-navy block"><i data-lucide="scale" class="inline-block w-4 h-4"></i> 法律</span>
+              <span class="font-semibold text-navy block">⚖️ 法律</span>
               <span>《公司條例》第47-52條</span>
             </div>
           </div>
@@ -383,7 +382,7 @@
                 <tr class="border-b border-gray-100"><td class="py-2 px-2 font-medium text-navy text-xs">費用</td><td class="text-center py-2 px-2 text-green-700 font-semibold text-xs">約 $250–$300（只係政府費用）</td><td class="text-center py-2 px-2 text-xs">$1,000 – $3,000</td><td class="text-center py-2 px-2 text-xs">$2,000 – $5,000</td></tr>
                 <tr class="border-b border-gray-100"><td class="py-2 px-2 font-medium text-navy text-xs">所需時間</td><td class="text-center py-2 px-2 text-green-700 font-semibold text-xs">1–2 個星期</td><td class="text-center py-2 px-2 text-xs">1–3 個星期</td><td class="text-center py-2 px-2 text-xs">2–4 個星期</td></tr>
                 <tr class="border-b border-gray-100"><td class="py-2 px-2 font-medium text-navy text-xs">需唔需要專業知識？</td><td class="text-center py-2 px-2 text-green-700 text-xs">❌ 唔需要，跟住指南做就得</td><td class="text-center py-2 px-2 text-xs">✅ 會計師幫你跟</td><td class="text-center py-2 px-2 text-xs">✅ 秘書幫你搞</td></tr>
-                <tr class="border-b border-gray-100"><td class="py-2 px-2 font-medium text-navy text-xs">文件處理</td><td class="text-center py-2 px-2 text-green-700 text-xs">自己填寫 + 生成 PDF <i data-lucide="sparkles" class="inline-block w-4 h-4"></i></td><td class="text-center py-2 px-2 text-xs">會計師幫你準備</td><td class="text-center py-2 px-2 text-xs">秘書公司準備</td></tr>
+                <tr class="border-b border-gray-100"><td class="py-2 px-2 font-medium text-navy text-xs">文件處理</td><td class="text-center py-2 px-2 text-green-700 text-xs">自己填寫 + 生成 PDF 🆓</td><td class="text-center py-2 px-2 text-xs">會計師幫你準備</td><td class="text-center py-2 px-2 text-xs">秘書公司準備</td></tr>
                 <tr><td class="py-2 px-2 font-medium text-navy text-xs">適合情況</td><td class="text-center py-2 px-2 text-green-700 text-xs">簡單轉讓、想慳錢、有時間自學</td><td class="text-center py-2 px-2 text-xs">公司有會計師跟開、複雜稅務</td><td class="text-center py-2 px-2 text-xs">章程複雜、大額交易、冇時間</td></tr>
               </tbody>
             </table>
@@ -410,16 +409,16 @@
             <div class="mb-8">
               <div class="flex items-center gap-3 mb-2">
                 <span class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gold text-navy flex items-center justify-center font-bold text-lg">
-                  <span x-html="getStepIcon(s)"></span>
+                  <span x-text="getStepIcon(s)"></span>
                 </span>
-                <span class="text-sm text-green-600 font-semibold"><i data-lucide="sparkles" class="inline-block w-4 h-4"></i> 免費步驟 | Step <span x-text="s.stepNumber"></span></span>
+                <span class="text-sm text-green-600 font-semibold">🆓 免費步驟 | Step <span x-text="s.stepNumber"></span></span>
               </div>
               <h2 class="text-2xl sm:text-3xl font-bold gov-heading mb-2" x-text="s.title"></h2>
               <p class="text-gray-500" x-text="s.summary"></p>
 
               <!-- Donate micro-text (only step 1) -->
               <div x-show="s.stepNumber === 1" class="mt-3 flex items-center gap-2 text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
-                <span class="shrink-0"><i data-lucide="coffee" class="inline-block w-4 h-4"></i></span>
+                <span class="shrink-0">☕</span>
                 <span>整理不易，支持下？</span>
                 <button @click="openDonate()" class="font-semibold text-gold hover:text-gold-light underline ml-auto shrink-0">請咖啡</button>
               </div>
@@ -460,9 +459,9 @@
                       <p class="text-xs text-gray-500 mt-1 line-clamp-2" x-text="doc.description"></p>
                       <div class="mt-2 flex items-center gap-1.5">
                         <template x-if="doc.hasGenerator">
-                          <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium"><i data-lucide="rocket" class="inline-block w-4 h-4"></i> 即時生成</span>
+                          <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">🚀 即時生成</span>
                         </template>
-                        <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full"><i data-lucide="sparkles" class="inline-block w-4 h-4"></i> 免費</span>
+                        <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">🆓 免費</span>
                       </div>
                     </div>
                   </a>
@@ -482,7 +481,7 @@
         <!-- Bottom CTA -->
         <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 sm:p-8 text-center mt-6">
           <p class="text-xl font-bold text-navy mb-3">想自己搞掂股份轉讓？我哋有齊晒所有範本同工具</p>
-          <p class="text-gray-600 mb-4">全部免費 <i data-lucide="sparkles" class="inline-block w-4 h-4"></i> · 含 Sold Note、Instrument of Transfer、Letter of Transferee 生成工具</p>
+          <p class="text-gray-600 mb-4">全部免費 🆓 · 含 Sold Note、Instrument of Transfer、Letter of Transferee 生成工具</p>
           <a href="/share-transfer/" class="inline-block bg-navy hover:bg-navy-light text-white font-semibold px-8 py-3 rounded-lg transition"><i data-lucide="file-text" class="inline-block w-4 h-4"></i> 開始免費指南</a>
           <p class="text-xs text-gray-500 mt-3">唔使俾會計公司賺幾千蚊服務費</p>
         </div>
@@ -516,7 +515,7 @@
   <footer class="bg-navy text-white py-8 mt-10">
     <div class="max-w-6xl mx-auto px-4 text-center text-sm text-gray-400">
       <p>© 2026 ESGov. 由真實經歷者整理，實戰經驗分享。</p>
-      <p class="mt-1"><i data-lucide="triangle-alert" class="inline-block w-4 h-4"></i> 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。</p>
+      <p class="mt-1">⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。</p>
       <p class="mt-1">最後更新：2026年7月</p>
     </div>
   </footer>
@@ -524,16 +523,16 @@
   <!-- ═══ Donate Modal ═══ -->
   <div x-show="showDonate" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" @click.self="closeDonate()">
     <div class="bg-white rounded-xl max-w-md w-full shadow-2xl p-6 sm:p-8 text-center" @click.stop>
-      <div class="text-5xl mb-4"><i data-lucide="coffee" class="inline-block w-4 h-4"></i></div>
+      <div class="text-5xl mb-4">☕</div>
       <h3 class="text-xl font-bold text-navy mb-3">幫到你嗎？請我飲杯咖啡</h3>
       <p class="text-sm text-gray-600 mb-6 leading-relaxed">
         呢份指南係我親身經歷整理，完全免費公開。<br />
         如果幫到你節省時間同金錢，<br />
-        可以透過 Buy Me a Coffee 支持下我 <i data-lucide="coffee" class="inline-block w-4 h-4"></i>
+        可以透過 Buy Me a Coffee 支持下我 ☕
       </p>
       <a href="#" onclick="window.open('https://buymeacoffee.com/esgov','bmac','width=600,height=750,left='+(screen.width-600)/2+',top='+(screen.height-750)/2);return false;"
          class="inline-flex items-center gap-2 bg-gold text-navy font-bold py-3.5 px-8 rounded-xl hover:bg-gold-light transition shadow-lg text-lg">
-        <i data-lucide="coffee" class="inline-block w-4 h-4"></i> 請我飲咖啡
+        ☕ 請我飲咖啡
       </a>
       <p class="text-xs text-gray-400 mt-3">每個支持都幫助我製作更多免費指南 <i data-lucide="target" class="inline-block w-4 h-4"></i></p>
       <button @click="closeDonate()" class="mt-4 text-sm text-gray-400 hover:text-gray-600 transition">或者直接關閉，繼續睇內容 →</button>
@@ -570,7 +569,7 @@
           <template x-if="selectedDoc.demoImage && selectedDoc.demoImage !== '_placeholder_'">
             <div class="h-48 sm:h-64 bg-gray-100 relative">
               <img :src="selectedDoc.demoImage" :alt="selectedDoc.name" class="w-full h-full object-contain" />
-              <div x-show="selectedDoc.hasGenerator" class="absolute top-3 right-3 bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full shadow"><i data-lucide="rocket" class="inline-block w-4 h-4"></i> 互動工具</div>
+              <div x-show="selectedDoc.hasGenerator" class="absolute top-3 right-3 bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full shadow">🚀 互動工具</div>
             </div>
           </template>
           <template x-if="!selectedDoc.demoImage || selectedDoc.demoImage === '_placeholder_'">
@@ -588,12 +587,12 @@
             <template x-if="selectedDoc.hasGenerator">
               <a :href="selectedDoc.generatorUrl"
                  class="inline-flex items-center gap-2 bg-navy text-white font-semibold px-6 py-3 rounded-xl hover:bg-navy-light transition shadow-md text-sm">
-                <i data-lucide="rocket" class="inline-block w-4 h-4"></i> 開啟互動工具
+                🚀 開啟互動工具
               </a>
             </template>
             <template x-if="selectedDoc.commonMistakes && selectedDoc.commonMistakes.length >= 1">
               <div class="mt-6">
-                <h4 class="font-bold text-red-700 text-sm mb-2"><i data-lucide="triangle-alert" class="inline-block w-4 h-4"></i> 常見錯誤導致補交</h4>
+                <h4 class="font-bold text-red-700 text-sm mb-2">⚠️ 常見錯誤導致補交</h4>
                 <ul class="list-disc pl-5 space-y-1 text-sm text-red-600">
                   <template x-for="(mistake, mi) in selectedDoc.commonMistakes" :key="mi">
                     <li x-text="mistake"></li>
