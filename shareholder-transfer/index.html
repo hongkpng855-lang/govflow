@@ -1017,5 +1017,17 @@ if(c>0&&typeof lucide!=='undefined')try{lucide.createIcons()}catch(e){}return c}
 r();setInterval(r,1800);new MutationObserver(function(){r()});
 })();
 </script>
+<script>
+(function(){var m=[['0x1f4c4','file-text'],['0x1f463','footprints'],['0x1f193','sparkles'],['0x2615','coffee'],['0x23f1+0xfe0f','clock'],['0x1f680','rocket'],['0x2753','help-circle'],['0x2696+0xfe0f','scale'],['0x26a0+0xfe0f','triangle-alert'],['0x1f3af','target'],['0x1f4a1','lightbulb'],['0x1f4b0','coins'],['0x1f4cc','pin'],['0x1f389','party-popper'],['0x1f4ca','bar-chart-3'],['0x1f4da','book-open'],['0x1f4dd','pen-line'],['0x1f50d','search'],['0x1f634','sleep'],['0x1f5a5','monitor'],['0x1f4e7','mail'],['0x1f6e0','wrench'],['0x1f5f3+0xfe0f','vote'],['0x1f4c5','calendar'],['0x1f3e2','building-2'],['0x1f4ac','message-square'],['0x1f4ec','mailbox'],['0x1f4ee','mailbox'],['0x1f4cb','clipboard-list'],['0x1f4dc','scroll-text'],['0x1f9ee','calculator'],['0x1f4c2','folder-open'],['0x1f4ce','paperclip'],['0x1f517','link'],['0x1f3e6','banknote'],['0x2795','plus'],['0x2796','minus'],['0x1f504','refresh-ccw'],['0x1f512','lock'],['0x1f91d','handshake'],['0x1f4e5','download'],['0x1f4f0','newspaper'],['0x1f516','bookmark'],['0x1f4cd','map-pin'],['0x1f525','flame'],['0x1f4d6','book-open'],['0x1f7e2','circle'],['0x1f7e1','circle'],['0x1f534','circle']];function r(){let c=0;let n=document.createTreeWalker(document.body,4,null,false);
+let t;while(t=n.nextNode()){if(t.parentElement&&t.parentElement.closest('script,style,svg,code,pre'))continue;
+let v=t.nodeValue||'';for(let[e,i]of m){var cp=e.split('+');var matched=true;
+for(let j=0;j<cp.length;j++){if(t.nodeValue.charCodeAt(t.nodeValue.indexOf(v.charAt(0)))){}
+if(v.includes(String.fromCodePoint.apply(null,cp.map(x=>parseInt(x,16))))){let s=document.createElement('span');
+s.innerHTML=v.split(String.fromCodePoint.apply(null,cp.map(x=>parseInt(x,16)))).join('<i data-lucide="'+i+'" class="w-4 h-4 inline-block"></i>');
+while(s.firstChild)t.parentNode.insertBefore(s.firstChild,t);t.parentNode.removeChild(t);c++;break}}
+if(c>0&&typeof lucide!=='undefined')try{lucide.createIcons()}catch(e){}return c}
+r();setInterval(r,2000);new MutationObserver(function(){r()});
+})();
+</script>
 </body>
 </html>
