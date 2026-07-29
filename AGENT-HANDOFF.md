@@ -21,20 +21,22 @@
 ## 2. Current State (2026-07-29)
 
 ### ✅ Working
-- **Static icons**: 44-88 `<i data-lucide>` tags per page on main pages, 17 icons on each generator page
-- **Step NAV icons**: `STEP_ICONS` global variable + `x-html` — **proven working**
-- **Step content**: Renders correctly from processes.json or embedded data
-- **Document cards**: All interactive tools and demo images display correctly
-- **Generator pages**: All 19 tool pages have Lucide icons loaded via CDN
+- **Static icons**: 44-88 `<i data-lucide>` tags on main pages; 17 icons on all **19 generator pages**
+- **Step NAV icons**: `STEP_ICONS` global variable + `x-html` — **proven working** on all 6 product pages
+- **Document card buttons**: 🚀 👁️ 📎 replaced with Lucide on all product pages
+- **Step content**: Renders correctly from processes.json (shareholder-transfer, SCR) or embedded data
+- **Interactive tool cards**: All demo images, template links, and generator buttons display correctly
 - **SEO score**: 99.5/100 (deep-seo-audit.py)
 - **GSC**: Token with webmasters write scope, sitemap submitted (204)
 - **GEO**: robots.txt (491 bytes) + llms.txt (6808 bytes) both present
 - **AEO**: FAQPage, HowTo, Article, Speakable schema on all product pages
 
 ### ❌ Known Issues
-- **Step details emoji**: Embedded-data pages (company-name-change, deregistration, director, share-transfer) have step DETAILS with emoji instead of Lucide icons. This is INTENTIONAL — HTML tags inside x-data single-quoted strings break Alpine.js.
-- **OpenCode Go Vision**: API returns 403 (subscription expired). Cannot do Vision AI image analysis.
-- **Cloudflare cache**: max-age=600, no purge API key available. Must wait 10 min for cache to clear after deploy.
+- **Step details emoji**: Embedded-data pages (company-name-change, deregistration, director, share-transfer) have step DETAILS with emoji instead of Lucide icons. This is INTENTIONAL — HTML tags inside x-data single-quoted strings break Alpine.js. Only NAV icons and doc card buttons are replaceable on these pages.
+- **processes.json pages (shareholder-transfer, SCR)**: Step details DO have Lucide icons (replaced in processes.json). Some emoji remain in the detail text if they were NOT in the processes.json file (e.g., inline generator pages).
+- **OpenCode Go Vision**: API returns 403 (subscription expired). Cannot do Vision AI image analysis. Use Playwright `page.evaluate()` for icon counting instead.
+- **Cloudflare cache**: max-age=600, no purge API key available. Must wait up to 10 min for cache to clear after deploy. Use `curl -s "https://raw.githubusercontent.com/hongkpng855-lang/govflow/main/path"` to bypass all caches.
+- **Generator pages**: All 19 pages have Lucide CDN + static icon replacements. Some may still show emoji until Cloudflare cache clears.
 
 ## 3. Icon Replacement — The Only Safe Way
 
@@ -250,16 +252,16 @@ Save token to **BOTH** locations after renewal.
 
 ## 9. Product Pages
 
-| Product | Path | Data source | Generators |
-|---------|------|-------------|------------|
-| Share Transfer | `/shareholder-transfer/` | processes.json ✅ | Sold Note, Instrument of Transfer, Letter, etc. |
-| Company Name | `/company-name-change/` | embedded ⚠️ | NNC2 PDF, Special Resolution PDF |
-| SCR | `/significant-controllers-register/` | processes.json ✅ | SCR Form, Data Collection, NR2, etc. |
-| Deregistration | `/deregistration/` | embedded ⚠️ | Dereg Checklist, IR1263, IRC3113, NDR1 |
-| Director Details | `/director-particulars-change/` | embedded ⚠️ | ND2B Generator (pending) |
-| Share Transfer (old) | `/share-transfer/` | embedded ⚠️ | — |
+| Product | Path | Data source | Generators | Icons |
+|---------|------|-------------|------------|:-----:|
+| Share Transfer | `/shareholder-transfer/` | processes.json ✅ | Sold Note, Instrument of Transfer, Letter, etc. | ✅ 74 |
+| Company Name | `/company-name-change/` | embedded ⚠️ | NNC2 PDF, Special Resolution PDF | ✅ 83 |
+| SCR | `/significant-controllers-register/` | processes.json ✅ | SCR Form, Data Collection, NR2, etc. | ✅ 35 |
+| Deregistration | `/deregistration/` | embedded ⚠️ | Dereg Checklist, IR1263, IRC3113, NDR1 | ✅ 37 |
+| Director Details | `/director-particulars-change/` | embedded ⚠️ | ND2B Generator (pending) | ✅ 54 |
+| Share Transfer (old) | `/share-transfer/` | embedded ⚠️ | — | ✅ 28 |
 
-⚠️ **embedded** = step details are INLINE in the x-data attribute. HTML icons in step DETAILS cannot be used here. Only NAV icons are replaceable.
+⚠️ **embedded** = step details are INLINE in the x-data attribute. HTML icons in step DETAILS cannot be used here. Only NAV icons and doc card buttons are replaceable.
 
 ## 10. Quick Commands
 
