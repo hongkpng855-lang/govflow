@@ -606,5 +606,58 @@
     </div>
   </div>
 
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  function replaceEmojiWithLucide() {
+    const map = {
+      '📄': 'file-text', '👣': 'footprints', '🆓': 'sparkles', '☕': 'coffee',
+      '⏱️': 'clock', '🚀': 'rocket', '❓': 'help-circle', '⚖️': 'scale',
+      '⚠️': 'triangle-alert', '🎯': 'target', '💡': 'lightbulb', '💰': 'coins',
+      '📌': 'pin', '🎉': 'party-popper', '📊': 'bar-chart-3', '📚': 'book-open',
+      '📝': 'pen-line', '🔍': 'search', '😴': 'sleep', '🖥': 'monitor',
+      '📧': 'mail', '🛠': 'wrench', '🗳️': 'vote', '📅': 'calendar',
+      '🏢': 'building-2', '💬': 'message-square', '📬': 'mailbox', '📮': 'mailbox',
+      '📋': 'clipboard-list', '📜': 'scroll-text', '🧮': 'calculator',
+      '📂': 'folder-open', '📎': 'paperclip', '🔗': 'link', '🏦': 'banknote',
+      '➕': 'plus', '➖': 'minus', '🔄': 'refresh-ccw', '🔒': 'lock',
+      '⭐': 'star', '✨': 'sparkles', '✅': 'check-circle', '❌': 'x-circle',
+      '🔴': 'circle', '🟢': 'circle', '🟡': 'circle',
+    };
+    
+    let replaced = 0;
+    const walker = document.createTreeWalker(document.body, 4, null, false);
+    let node;
+    while (node = walker.nextNode()) {
+      if (node.parentElement && node.parentElement.closest('script,style,svg,code,pre')) continue;
+      let text = node.nodeValue || '';
+      let changed = false;
+      for (const [emoji, icon] of Object.entries(map)) {
+        if (text.includes(emoji)) {
+          const span = document.createElement('span');
+          span.innerHTML = text.replaceAll(emoji, '<i data-lucide="'+icon+'" class="inline-block w-4 h-4" style="display:inline;vertical-align:middle"></i>');
+          while (span.firstChild) node.parentNode.insertBefore(span.firstChild, node);
+          node.parentNode.removeChild(node);
+          replaced++;
+          break;
+        }
+      }
+    }
+    
+    if (typeof lucide !== 'undefined' && replaced > 0) {
+      lucide.createIcons();
+    }
+    return replaced;
+  }
+  
+  // Run after initial load
+  setTimeout(replaceEmojiWithLucide, 300);
+  
+  // Run after Alpine.js updates
+  if (typeof Alpine !== 'undefined') {
+    document.addEventListener('alpine:init', function() { setTimeout(replaceEmojiWithLucide, 500); });
+  }
+});
+</script>
 </body>
 </html>
