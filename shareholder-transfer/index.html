@@ -266,7 +266,7 @@
     setTimeout(function(){if(typeof lucide!=='undefined'){try{lucide.createIcons()}catch(e){}}},500)
   },
 
-  get steps()
+  openDoc(doc) {
     // Email gate before viewing templates/docs
     const emailDone = localStorage.getItem('esgov_email_done');
     if (!emailDone) {
