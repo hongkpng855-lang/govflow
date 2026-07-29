@@ -235,6 +235,7 @@
       const r = await fetch('/processes.json?v=9.0');
       if (!r.ok) throw new Error('HTTP '+r.status);
       const j = await r.json();
+      if(j&&j.steps)j.steps.forEach(function(s){if(s.details)s.details=s.details.split('\uD83D\uDCC4').join('<i data-lucide=\'file-text\' class=\'w-4 h-4\'></i>').split('\u2615').join('<i data-lucide=\'coffee\' class=\'w-4 h-4\'></i>').split('\uD83D\uDE80').join('<i data-lucide=\'rocket\' class=\'w-4 h-4\'></i>').split('\u26A0').join('<i data-lucide=\'triangle-alert\' class=\'w-4 h-4\'></i>').split('\u2753').join('<i data-lucide=\'help-circle\' class=\'w-4 h-4\'></i>');});
       this.processData = j;
       this.totalSteps = j.totalSteps;
     } catch(e) {
@@ -531,7 +532,7 @@
             <!-- Details -->
             <div class="bg-white rounded-xl border border-gray-200 p-4 sm:p-6 mb-8">
               <h3 class="font-semibold text-navy text-lg mb-3">呢個步驟要點做？</h3>
-              <div class="text-gray-700 leading-relaxed whitespace-pre-line text-sm" x-text="s.details"></div>
+              <div class="text-gray-700 leading-relaxed whitespace-pre-line text-sm" x-html="s.details"></div>
             </div>
 
                         <!-- Documents -->
