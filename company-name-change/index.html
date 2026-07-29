@@ -580,7 +580,7 @@
                     <p class="text-xs text-gray-500 mt-1 line-clamp-2" x-text="doc.description"></p>
                     <div class="mt-2 flex items-center gap-1.5">
                       <template x-if="doc.hasGenerator">
-                        <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">🚀 即時生成</span>
+                        <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium"><i data-lucide="rocket" class="w-3 h-3 inline-block"></i> 即時生成</span>
                       </template>
                       <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">🆓 免費</span>
                     </div>
@@ -858,7 +858,7 @@
           <a :href="selectedDoc.generatorUrl"
              class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold py-4 px-6 rounded-xl hover:bg-gold-light transition shadow text-base"
              @click="closeDoc()">
-            🚀 前往 PDF 生成器 — 填資料、一鍵生成
+            <i data-lucide="rocket" class="w-4 h-4 inline-block"></i> 前往 PDF 生成器 — 填資料、一鍵生成
           </a>
         </template>
         <template x-if="!selectedDoc?.generatorUrl && selectedDoc?.templateFile">

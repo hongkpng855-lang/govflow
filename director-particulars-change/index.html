@@ -735,7 +735,7 @@
         </div>
         <div class="flex flex-col gap-3 max-w-sm mx-auto">
           <template x-if="selectedDoc?.hasGenerator && selectedDoc['generatorUrl']">
-            <a :href="selectedDoc['generatorUrl']" class="btn-gov btn-gov-dark py-3 text-sm w-full">🚀 填寫 + 生成 PDF</a>
+            <a :href="selectedDoc['generatorUrl']" class="btn-gov btn-gov-dark py-3 text-sm w-full"><i data-lucide="rocket" class="w-4 h-4 inline-block"></i> 填寫 + 生成 PDF</a>
           </template>
           <template x-if="!selectedDoc?.hasGenerator && selectedDoc['generatorUrl']">
             <a :href="selectedDoc['generatorUrl']" target="_blank" class="btn-gov bg-navy text-white py-3 text-sm w-full hover:bg-navy-light transition rounded-xl font-semibold inline-flex items-center justify-center gap-1"> 下載官方表格 (CR)</a>
