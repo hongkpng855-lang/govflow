@@ -95,3 +95,17 @@
 - **Schema**: Article + Breadcrumb + FAQPage（5 條 Q&A）
 - **狀態**: ✅ 完成（文章已建立 + sitemap 更新 + GitHub 已推送 + SEO 檢查通過）
 - **blog index**: ✅ 已加入文章 Card（置頂 most recent）
+
+---
+
+## 2026-07-30 01:00（Cron 自動發佈 - ESGov Blog）
+
+- **文章標題**: 香港公司網站及網上營銷法律合規終極指南 2026 — 《商品說明條例》、《私隱條例》、社交媒體營銷法律風險全面拆解
+- **分類**: 法律合規 / 網上營銷 / 數碼轉型 / 商品說明條例
+- **文章路徑**: `blog/香港公司網站及網上營銷法律合規終極指南/index.html`
+- **文章大小**: 約 600 行 HTML（13 個章節 + 8 條 FAQ）
+- **結構**: 前言、TPDO（虛假說明/誤導遺漏/威嚇銷售）、私隱條例（6大原則/Email Marketing/2026修訂）、網站必備文件（T&C/私隱政策/免責聲明）、社交媒體風險（Giveaway/評價轉發/假好評）、KOL合約（7大必備條款）、版權知識產權（圖片/音樂/字體）、消費者權益（貨品售賣條例/不合情理合約/冷靜期）、7個常見中伏位、完整合規Checklist（4大範疇20項）、FAQ（8條 Q&A）、總結（4個必做動作）
+- **Schema**: Article + Breadcrumb + FAQPage（8 條 Q&A）
+- **狀態**: ✅ 完成（文章已建立 + sitemap 更新 + GitHub 已推送）
+- **blog index**: ✅ 已加入文章 Card（置頂 most recent）
+- **SEO 檢查**: ✅ Title/Description/OG/Canonical/H1/FAQ Schema 全部通過

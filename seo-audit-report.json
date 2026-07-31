@@ -109,12 +109,14 @@
     },
     {
       "path": "audit-report-generator/index.html",
-      "issues": [],
-      "score": 100,
+      "issues": [
+        "Description too short (49 chars)"
+      ],
+      "score": 95,
       "title": "ESGov | 審計報告 Audit Report 範例 + 下載 — 需由執業會計師簽署",
       "title_len": 45,
-      "description": "香港公司審計報告（Audit Report）範例及可供參考樣本下載。⚠️ 審計報告必須由香港執業會計師或核數師簽署，唔可...",
-      "desc_len": 123,
+      "description": "香港公司審計報告（Audit Report）範例及可供參考樣本下載。<i data-lucide=",
+      "desc_len": 49,
       "h1_count": 1,
       "h1_text": [
         "審計報告 Audit Report 範例 — 需由執業會計師處理"
