@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>頁面已移動 — ESGov 香港公司秘書文件指南</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="https://cdn.tailwindcss.com" />
+  <script>
+    // Redirect old .html URLs to pretty URLs (GitHub Pages 404 handler)
+    (function() {
+      var path = window.location.pathname;
+      var redirect = null;
+
+      // Case 1: /blog/xxx.html → /blog/xxx/
+      if (path.indexOf('.html') !== -1) {
+        var pretty = path.replace(/\.html$/, '') + '/';
+        // Only redirect if it's a known blog path
+        if (path.indexOf('/blog/') === 0) {
+          redirect = pretty;
+        }
+      }
+
+      if (redirect) {
+        document.location.replace(redirect);
+      }
+    })();
+  </script>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center">
+  <div class="max-w-md mx-auto px-4 text-center">
+    <div class="text-6xl mb-4">🔍</div>
+    <h1 class="text-2xl font-bold text-navy mb-3">搵唔到呢一頁（404）</h1>
+    <p class="text-gray-500 text-sm mb-6">
+      呢個頁面可能已經移動咗或者被刪除。<br />
+      如果冇自動跳轉，可以返去首頁搵返你需要嘅資料。
+    </p>
+    <a href="https://esgov.org/" class="inline-flex items-center justify-center gap-2 rounded-lg bg-navy text-white px-6 py-3 text-sm font-semibold hover:bg-navy-light transition-all duration-200">
+      返回 ESGov 首頁
+    </a>
+  </div>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=https://esgov.org/" />
+  </noscript>
+</body>
+</html>
