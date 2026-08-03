@@ -43,14 +43,16 @@ today = datetime.date.today().isoformat()
 
 for dirpath, dirnames, filenames in os.walk(ROOT):
     # Skip .git, scripts, assets, templates
-    skip = {'.git', 'scripts', 'templates', 'node_modules', 'assets', '.agents', 'references', 'scr'}
+    skip = {'.git', 'scripts', 'templates', 'node_modules', 'assets', '.agents', 'references', 'scr', 'test-share-transfer'}
     dirnames[:] = [d for d in dirnames if d not in skip]
     
     for fn in filenames:
         if not fn.endswith('.html'): continue
         if fn == '404.html': continue
-        
+        # Skip .html redirect stubs (old blog URLs pointing to pretty URLs)
         rel_dir = os.path.relpath(dirpath, ROOT)
+        if fn != 'index.html' and rel_dir.startswith('blog'):
+            continue
         if rel_dir == '.':
             url_path = fn
         else:
