@@ -8,11 +8,11 @@ ESGov helps Hong Kong business owners handle company secretarial documents, comp
 
 ## Core Product Pages
 
-- **Company Share Transfer**: https://esgov.org/shareholder-transfer/ — Complete guide to Hong Kong company share transfer: 5 steps including stamp duty calculation, Instrument of Transfer, Sold Note, Letter of Transferee, and filing requirements.
-- **Company Name Change**: https://esgov.org/company-name-change/ — Hong Kong company name change in 5 steps: special resolution, NNC2 filing, business registration update, bank account update, company chop update.
-- **Significant Controllers Register (SCR)**: https://esgov.org/significant-controllers-register/ — 7-step guide to Hong Kong SCR compliance: 5 identification tests, equity penetration calculation, written notice, designated representative, register maintenance.
-- **Deregistration (Company Strike-off)**: https://esgov.org/deregistration/ — Complete Hong Kong company deregistration process: 6 steps from board resolution to IRC3113 dissolution, including NDR1, gazette notice, and IR1263 tax clearance.
-- **Business Registration Renewal**: https://esgov.org/blog/商業登記續期全攻略 — 1-year vs 3-year certificate, online renewal steps, late payment penalties, BR fees 2026.
+- [Company Share Transfer](https://esgov.org/shareholder-transfer/) — Complete guide to Hong Kong company share transfer: 5 steps including stamp duty calculation, Instrument of Transfer, Sold Note, Letter of Transferee, and filing requirements.
+- [Company Name Change](https://esgov.org/company-name-change/) — Hong Kong company name change in 5 steps: special resolution, NNC2 filing, business registration update, bank account update, company chop update.
+- [Significant Controllers Register (SCR)](https://esgov.org/significant-controllers-register/) — 7-step guide to Hong Kong SCR compliance: 5 identification tests, equity penetration calculation, written notice, designated representative, register maintenance.
+- [Deregistration (Company Strike-off)](https://esgov.org/deregistration/) — Complete Hong Kong company deregistration process: 6 steps from board resolution to IRC3113 dissolution, including NDR1, gazette notice, and IR1263 tax clearance.
+- [Business Registration Renewal](https://esgov.org/blog/商業登記續期全攻略) — 1-year vs 3-year certificate, online renewal steps, late payment penalties, BR fees 2026.
 
 ## Free PDF Generators
 
