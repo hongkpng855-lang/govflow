@@ -497,14 +497,12 @@
     },
     {
       "path": "blog/香港有限公司董事辭任終極指南/index.html",
-      "issues": [
-        "Description could be longer (86 chars)"
-      ],
-      "score": 98,
+      "issues": [],
+      "score": 100,
       "title": "辭任董事程序2026｜香港有限公司董事辭職教學（附辭職信範本）",
       "title_len": 31,
       "description": "辭任董事搵唔到範本？ND2A點交？一人公司辭晒董事點算？由親身辭任過董事嘅過來人分享5步搞掂程序、8大常見陷阱、辭職信範...",
-      "desc_len": 86,
+      "desc_len": 113,
       "h1_count": 1,
       "h1_text": [
         "✍️ 香港有限公司董事辭任（Resignation of Director）終極指南 2026"
