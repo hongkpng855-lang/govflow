@@ -23,6 +23,20 @@ KEY_PAGES = [
     "company-name-change-generator/nnc2/index.html",
 ]
 
+# Top blog posts by GSC traffic — sampled for coverage (not all 98)
+BLOG_SAMPLE = [
+    "blog/香港公司董事會議紀錄終極指南/index.html",
+    "blog/香港公司授權書PowerOfAttorney終極指南/index.html",
+    "blog/香港公司股份證明書ShareCertificate終極指南/index.html",
+    "blog/股份賣出單Sold Note教學/index.html",
+    "blog/香港公司Invoice收據法律要求終極指南/index.html",
+    "blog/董事公司秘書變更指南/index.html",
+    "blog/香港公司股份轉讓流程2026/index.html",
+    "blog/香港有限公司員工手冊EmployeeHandbook終極指南/index.html",
+    "blog/香港有限公司董事辭任終極指南/index.html",
+    "blog/NDR1表格填寫教學/index.html",
+]
+
 DIMENSIONS = [
     "title", "title_len", "description", "desc_len", "h1_count",
     "h1_text", "h2_count", "canonical", "og_title", "og_desc",
@@ -192,8 +206,10 @@ if __name__ == "__main__":
     print("DEEP SEO AUDIT — ESGov")
     print("=" * 80)
 
+    # Audit core pages + blog sample, deduplicate
+    pages_to_check = list(dict.fromkeys(KEY_PAGES + BLOG_SAMPLE))
     results = []
-    for page in KEY_PAGES:
+    for page in pages_to_check:
         r = check_page(page)
         results.append(r)
         status = "❌" if r.get("issues") else "✅"
