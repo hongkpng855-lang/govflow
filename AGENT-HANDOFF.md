@@ -1,7 +1,7 @@
 # ESGov — Agent Handoff Document
 
 > 上一手 Agent：Hermes (DeepSeek V4 Flash via OpenCode Go)
-> 日期：2026-07-29
+> 日期：2026-08-04（更新）
 > 用途：下一手 Agent 可以直接跟呢份文件嚟做嘢，唔使重新摸索
 
 ---
@@ -14,11 +14,19 @@
 | Source | `/mnt/c/Users/hongk/Desktop/esgov/` |
 | Blog | `/home/hongk/blog-repo/` (Jekyll, 1341 posts) |
 | Stack | Vanilla HTML + Tailwind CSS (CDN) + Alpine.js (CDN) |
-| Hosting | GitHub Pages + Cloudflare |
+| Hosting | GitHub Pages + **Cloudflare (Proxied)** |
 | Theme | Navy `#1B2A4A`, Gold `#C9A84C` |
-| Auth | Google OAuth (webmasters write scope) |
+| Auth | Google OAuth (webmasters write scope) + Cloudflare Global API Key |
 
-## 2. Current State (2026-07-29)
+### Cloudflare Access (2026-08-04 added)
+- **Zone**: esgov.org — zone ID `e36d8aa7f072c1ff42043511ed0750a6`
+- **Account ID**: `312d4e1b3786fdc7396c57a9b5afb2c5`
+- **Auth**: Global API Key (NOT bearer token) via headers `X-Auth-Email: tbstbs0613@gmail.com` + `X-Auth-Key: cfk_...`
+- **Saved in**: `~/.hermes/profiles/esgov-builder/.env` (CLOUDFLARE_API_KEY / CLOUDFLARE_EMAIL / CLOUDFLARE_ZONE_ID)
+- **DNS**: apex + www both **Proxied (orange cloud)** — SSL/TLS mode = Full (strict)
+- **Redirects**: `.html` blog URLs → pretty URLs (see section 12)
+
+## 2. Current State (2026-08-04)
 
 ### ✅ Working
 - **Static icons**: 44-88 `<i data-lucide>` tags on main pages; 17 icons on all **19 generator pages**
@@ -26,17 +34,21 @@
 - **Document card buttons**: 🚀 👁️ 📎 replaced with Lucide on all product pages
 - **Step content**: Renders correctly from processes.json (shareholder-transfer, SCR) or embedded data
 - **Interactive tool cards**: All demo images, template links, and generator buttons display correctly
-- **SEO score**: 99.5/100 (deep-seo-audit.py)
-- **GSC**: Token with webmasters write scope, sitemap submitted (204)
-- **GEO**: robots.txt (491 bytes) + llms.txt (6808 bytes) both present
-- **AEO**: FAQPage, HowTo, Article, Speakable schema on all product pages
+- **SEO score**: **100/100** (deep-seo-audit.py — 21 pages incl. top 10 blogs)
+- **GSC**: Token with webmasters write scope, sitemap submitted (204) — **auto-refresh before query** (access token expires hourly; refresh token still valid)
+- **GEO**: robots.txt (491 bytes) + llms.txt (standard markdown links) both present
+- **AEO**: FAQPage + HowTo + Article + Speakable on all product pages (director HowTo added 2026-08-04)
+- **Canonicals**: All 95 blog canonical tags → trailing-slash (2026-08-04, fixed cannibalization)
+- **Sitemap**: 128 URLs, 0 `.html`, 0 test URLs (test-share-transfer removed)
+- **Cloudflare Proxied**: apex + www, Full (strict) SSL, 18/18 `.html` → true 301 redirects
+- **Cron jobs**: SEO Report 09:00 + 17:15 (detailed, auto-refresh GSC token)
 
 ### ❌ Known Issues
 - **Step details emoji**: Embedded-data pages (company-name-change, deregistration, director, share-transfer) have step DETAILS with emoji instead of Lucide icons. This is INTENTIONAL — HTML tags inside x-data single-quoted strings break Alpine.js. Only NAV icons and doc card buttons are replaceable on these pages.
 - **processes.json pages (shareholder-transfer, SCR)**: Step details DO have Lucide icons (replaced in processes.json). Some emoji remain in the detail text if they were NOT in the processes.json file (e.g., inline generator pages).
 - **OpenCode Go Vision**: API returns 403 (subscription expired). Cannot do Vision AI image analysis. Use Playwright `page.evaluate()` for icon counting instead.
-- **Cloudflare cache**: max-age=600, no purge API key available. Must wait up to 10 min for cache to clear after deploy. Use `curl -s "https://raw.githubusercontent.com/hongkpng855-lang/govflow/main/path"` to bypass all caches.
-- **Generator pages**: All 19 pages have Lucide CDN + static icon replacements. Some may still show emoji until Cloudflare cache clears.
+- **Cloudflare cache**: PROXIED — cache can hold old content up to 1hr+. **Always purge cache via API after deploy** (see section 7). Do NOT rely on waiting.
+- **Remaining 8 low-traffic `.html` stubs**: still exist as files (meta-refresh) — harmless because Cloudflare 301 now fires first. Can delete files later if desired.
 
 ## 3. Icon Replacement — The Only Safe Way
 
@@ -209,8 +221,18 @@ sed -i 's/^  get steps()$/  openDoc(doc) {/' file.html
 | Layer | What | Duration | Verify with |
 |-------|------|----------|-------------|
 | raw.githubusercontent.com | GitHub raw CDN | sec-min | `curl "https://raw.githubusercontent.com/..."` |
-| Cloudflare CDN | Live site | 10 min max-age | `curl -s https://esgov.org/page/` |
+| Cloudflare CDN | Live site (PROXIED since 2026-08-04) | **up to 1hr+** | `curl -s https://esgov.org/page/` |
 | Browserbase proxy | Browser tool | 5-10 min | **curl only** — ignore browser tool snapshot |
+
+**⚠️ Since Cloudflare Proxied (2026-08-04):**
+- Cache can hold old content for **up to 1 hour+** (worse than the old 10-min GitHub cache)
+- After deploy, **PURGE CACHE immediately** via API:
+  ```bash
+  curl -s -X POST "https://api.cloudflare.com/client/v4/zones/e36d8aa7f072c1ff42043511ed0750a6/purge_cache" \
+    -H "X-Auth-Email: tbstbs0613@gmail.com" -H "X-Auth-Key: <CLOUDFLARE_API_KEY>" \
+    -H "Content-Type: application/json" -d '{"purge_everything":true}'
+  ```
+- Verify proxy is active: `curl -sI https://esgov.org/ | grep -i 'server\|cf-ray'` → should show `server: cloudflare` + `cf-ray`
 
 **Debugging order:**
 1. `curl -s "https://raw.githubusercontent.com/hongkpng855-lang/govflow/main/path" | grep -c 'marker'`
@@ -319,6 +341,46 @@ The comparison tables (自己搞 vs 會計公司 vs 秘書公司) use 🟢🟡�
 **DO NOT** replace them with `<i data-lucide='circle'>` — the color IS the meaning.
 A generic circle creates blank gaps that look broken.
 
+## 13. Cloudflare Redirects (.html → pretty URLs)
+
+### Setup (2026-08-04)
+All 18 legacy `.html` blog URLs now 301-redirect to pretty URLs via Cloudflare:
+
+| Method | What | Limit |
+|--------|------|-------|
+| Dynamic Redirect Rules (10 rules) | Top 10 `.html` URLs by impressions | 10 rules/phase (free) |
+| Page Rules (1 rule, wildcard) | `*esgov.org/blog/*.html` → `https://esgov.org/blog/$1/` | 3 page rules (free) |
+
+**Result: 18/18 `.html` URLs return true 301** ✅
+
+### Page Rule (the one that matters)
+```
+Pattern: *esgov.org/blog/*.html
+Action: Forwarding URL, 301, https://esgov.org/blog/$1/
+```
+
+### ⚠️ Cloudflare API Bugs/Lessons (2026-08-04)
+1. **`regex_replace` in target_url requires Business/WAF plan** — on Free plan, use static `value` targets instead of dynamic expressions. Error: `not entitled: the use of function regex_replace is not allowed, a Business plan or a WAF Advanced plan is required`
+2. **Dynamic Redirect Rules phase limit = 10 rules** on Free plan (error: `exceeded the maximum number of rules in the phase`)
+3. **Cloudflare matches URL-encoded paths** — `http.request.uri.path` returns PERCENT-ENCODED paths for non-ASCII URLs. An expression with raw Chinese characters (`eq "/blog/香港公司..."`) will NOT match. Must use `urllib.parse.quote()`:
+   ```
+   eq "/blog/%E9%A6%99%E6%B8%AF..."  ← correct
+   eq "/blog/香港公司..."            ← won't match
+   ```
+4. **POST create ruleset → rules may show 0** — after POST, verify rules count; if 0, re-PUT with `{"rules": [...]}`. GET by phase (`/rulesets/phase/...`) may return not_found — use `/rulesets/<id>` instead.
+5. **Bulk Redirect Lists (rules/lists)** — list creation works, but **adding items fails with `filters.api.invalid_json`** on this account. Worked around with Page Rules instead.
+6. **Global API Key ≠ API Token** — Global key uses `X-Auth-Email` + `X-Auth-Key` headers, NOT `Authorization: Bearer`. Token-format keys start with `cfk_` but need email+key headers.
+7. **List/rule names can't contain hyphens or spaces?** — `invalid_name` error; use lowercase alphanumeric names.
+8. **Cache purge after changes** — after any Cloudflare redirect/rule change, `purge_everything` to clear stale 200s, else old status lingers up to 1hr.
+
+### Verification commands
+```bash
+# Check a redirect works (should be 301 + location)
+curl -sI "https://esgov.org/blog/香港公司股份轉讓流程2026.html" | grep -i 'HTTP\|location'
+# URL-encode the Chinese path segment first:
+python3 -c "import urllib.parse; print(urllib.parse.quote('香港公司股份轉讓流程2026'))"
+```
+
 ---
 
-*End of handoff document. Last updated: 2026-07-29*
+*End of handoff document. Last updated: 2026-08-04*

@@ -22,7 +22,7 @@
       "favicon": true,
       "viewport": true,
       "html_lang": "zh-HK",
-      "jsonld": 5,
+      "jsonld": 6,
       "charset": true,
       "img_alt_pct": "2/2",
       "clean_urls": 0
@@ -300,7 +300,7 @@
         "香港公司董事會議紀錄（Board Minutes）終極指南"
       ],
       "h2_count": 8,
-      "canonical": "https://esgov.org/blog/香港公司董事會議紀錄終極指南",
+      "canonical": "https://esgov.org/blog/香港公司董事會議紀錄終極指南/",
       "og_title": true,
       "og_desc": true,
       "og_url": true,
@@ -325,8 +325,8 @@
       "h1_text": [
         "香港公司授權書（Power of Attorney）終極指南"
       ],
-      "h2_count": 10,
-      "canonical": "https://esgov.org/blog/香港公司授權書PowerOfAttorney終極指南",
+      "h2_count": 11,
+      "canonical": "https://esgov.org/blog/香港公司授權書PowerOfAttorney終極指南/",
       "og_title": true,
       "og_desc": true,
       "og_url": true,
@@ -352,7 +352,7 @@
         "香港公司發出股份證明書（Share Certificate）終極指南"
       ],
       "h2_count": 9,
-      "canonical": "https://esgov.org/blog/香港公司股份證明書ShareCertificate終極指南",
+      "canonical": "https://esgov.org/blog/香港公司股份證明書ShareCertificate終極指南/",
       "og_title": true,
       "og_desc": true,
       "og_url": true,
@@ -378,7 +378,7 @@
         "股份賣出單（Sold Note）完整教學 — 範本、填寫教學、常見錯誤"
       ],
       "h2_count": 4,
-      "canonical": "https://esgov.org/blog/股份賣出單Sold Note教學",
+      "canonical": "https://esgov.org/blog/股份賣出單Sold Note教學/",
       "og_title": true,
       "og_desc": true,
       "og_url": true,
@@ -403,8 +403,8 @@
       "h1_text": [
         "香港公司 Invoice 及正式收據法律要求終極指南"
       ],
-      "h2_count": 9,
-      "canonical": "https://esgov.org/blog/香港公司Invoice收據法律要求終極指南",
+      "h2_count": 10,
+      "canonical": "https://esgov.org/blog/香港公司Invoice收據法律要求終極指南/",
       "og_title": true,
       "og_desc": true,
       "og_url": true,
@@ -430,7 +430,7 @@
         "香港公司董事及秘書變更完整指南"
       ],
       "h2_count": 9,
-      "canonical": "https://esgov.org/blog/董事公司秘書變更指南",
+      "canonical": "https://esgov.org/blog/董事公司秘書變更指南/",
       "og_title": true,
       "og_desc": true,
       "og_url": true,
@@ -456,7 +456,7 @@
         "香港有限公司股份轉讓完整流程（2026 最新）— 5 個步驟搞掂"
       ],
       "h2_count": 6,
-      "canonical": "https://esgov.org/blog/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%8F%B8%E8%82%A1%E4%BB%BD%E8%BD%89%E8%AE%93%E6%B5%81%E7%A8%8B2026",
+      "canonical": "https://esgov.org/blog/香港公司股份轉讓流程2026/",
       "og_title": true,
       "og_desc": true,
       "og_url": true,
@@ -482,7 +482,7 @@
         "香港有限公司員工手冊（Employee Handbook）終極指南"
       ],
       "h2_count": 10,
-      "canonical": "https://esgov.org/blog/香港有限公司員工手冊EmployeeHandbook終極指南",
+      "canonical": "https://esgov.org/blog/香港有限公司員工手冊EmployeeHandbook終極指南/",
       "og_title": true,
       "og_desc": true,
       "og_url": true,
@@ -508,7 +508,7 @@
         "✍️ 香港有限公司董事辭任（Resignation of Director）終極指南 2026"
       ],
       "h2_count": 11,
-      "canonical": "https://esgov.org/blog/香港有限公司董事辭任終極指南",
+      "canonical": "https://esgov.org/blog/香港有限公司董事辭任終極指南/",
       "og_title": true,
       "og_desc": true,
       "og_url": true,
@@ -534,7 +534,7 @@
         "NDR1 表格填寫完整教學 — 公司撤銷註冊申請步驟"
       ],
       "h2_count": 6,
-      "canonical": "https://esgov.org/blog/NDR1表格填寫教學",
+      "canonical": "https://esgov.org/blog/NDR1表格填寫教學/",
       "og_title": true,
       "og_desc": true,
       "og_url": true,
