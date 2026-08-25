@@ -89,7 +89,7 @@ SEO（起點）→ Researcher → Writer → SEO（終點+deploy）
 
 | ✅ 用呢啲 | ❌ 唔好用 |
 |-----------|---------|
-| `gold-box`（黃色貼士/真實案例） | `bg-amber-50 border-amber-200`（自創顏色） |
+| `gold-box`（黃色貼士/真實案例） | `bg-amber-50 border-amber-200`（自創顏色，除咗「僅供參考」banner） |
 | `warn-box`（紅色警告/風險） | `bg-red-50 border-red-200` |
 | `tip-box`（藍色提示） | `bg-blue-50 border-blue-200` |
 | `compare-box`（比較內容） | `bg-gray-50` 自創 box |
@@ -99,23 +99,66 @@ SEO（起點）→ Researcher → Writer → SEO（終點+deploy）
 
 **做法：**
 1. Copy 現有文章（例如 `blog/香港公司授權書PowerOfAttorney終極指南/index.html`）嘅 head + `<style>` block，保留佢哋嘅 box classes 定義
-2. 全部 box 用 `gold-box` / `warn-box` / `tip-box` / `compare-box`
+2. 全部 box 用 `gold-box` / `warn-box` / `tip-box` / `compare-box` / `step-card` / `flag-item`
 3. CTA 用 `btn-gov btn-gov-primary`（參考現有文章用法）
 4. **唔好跟 tailwind.config 整新色** — 用已定義嘅 navy/gold 就算
 
+### 3a-2. Icon 規範（⚠️ 唔可以用 emoji 當 icon）
+
+**所有 icon 必須用 Lucide SVG（`<i data-lucide="...">`），唔可以用 emoji（❌⚠️💡📑🔍 等）做裝飾 icon：**
+
+| Emoji | 換做 Lucide |
+|-------|------------|
+| ❌（錯誤） | `circle-x` |
+| ⚠️（警告） | `triangle-alert` |
+| 💡（貼士） | `lightbulb` |
+| 📑（目錄） | `list` |
+| 🔍（真實案例） | `flag` |
+| ✅（完成） | `circle-check` |
+
+**做法：**
+1. 文章 head 加 Lucide CDN（同全站一致）：
+   ```html
+   <script defer src="https://unpkg.com/lucide@latest"></script>
+   <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+   ```
+2. Icon 寫法：`<i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i>`（decorative icon 加 `aria-hidden="true"`，跟 ui-ux-pro-max skill 指引）
+3. **單一 icon 家族**（Lucide）— 唔可以混 Phosphor/Heroicons
+4. 發佈前 check：`grep -cE "❌|⚠️|💡|📑|🔍" 文章` 要 = 0（正文自然用到嘅除外，例如「請教專業人士」唔撓）
+
 ### 3b. 免責聲明（⚠️ 必做）
 
-**涉及法律 / 程序 / 費用 / 合規內容嘅文章，必須加「僅供參考」聲明：**
+**涉及法律 / 程序 / 費用 / 合規內容嘅文章，必須加「僅供參考」警告 banner，而且要放「最上 + 最下」兩個位置：**
 
-1. **Intro 內**（第一段之後）：一個 `warn-box`：
+1. **⬆️ 最上**（文章開頭、目錄之前）：
    ```html
-   <div class="warn-box mt-4">
-     <p><strong>⚠️ 僅供參考：</strong>本文章嘅內容只係一般資訊分享，唔構成法律意見。涉及實際訴訟或授權書簽署，強烈建議先諮詢執業律師。每單案件嘅情況都唔同，適用程序可能因案件而異。</p>
+   <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 mb-8 flex items-start gap-3">
+     <div class="w-9 h-9 shrink-0 rounded-full bg-amber-400/20 flex items-center justify-center">
+       <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-600" aria-hidden="true"></i>
+     </div>
+     <div>
+       <p class="font-bold text-amber-800">僅供參考</p>
+       <p class="text-sm text-amber-700 leading-relaxed">本文章內容只係一般資訊分享，<strong class="text-amber-800">唔構成法律意見</strong>。涉及[主題]，強烈建議先諮詢[專業人士]。每單[案件/情況]嘅細節都唔同，適用[程序/規則]可能因情況而異。</p>
+     </div>
    </div>
    ```
-   （措辭按文章主題調整，但「僅供參考」+「唔構成法律意見」+「建議諮詢專業人士」三點一定要有）
+2. **⬇️ 最下**（文章完結之後、Author Bio 之前）：
+   ```html
+   <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 flex items-start gap-3">
+     <div class="w-9 h-9 shrink-0 rounded-full bg-amber-400/20 flex items-center justify-center">
+       <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-600" aria-hidden="true"></i>
+     </div>
+     <div>
+       <p class="font-bold text-amber-800">僅供參考</p>
+       <p class="text-sm text-amber-700 leading-relaxed">本文章內容只係一般資訊分享，<strong class="text-amber-800">唔構成法律意見</strong>。實際[情況]嘅[程序/費用/可行性]會因個別情況而有重大分別，決定自行處理之前，請務必諮詢[執業律師]。</p>
+     </div>
+   </div>
+   ```
+   （⚠️ 呢個 amber banner 係唯一容許用 `bg-amber-50 border-amber-300` 嘅地方 — 佢係醒目標示，唔係普通 box）
 
-2. **Footer 都要有**：`© 2026 ESGov · 香港公司文件指南（所有內容僅供參考，不構成法律意見）`
+3. **Footer 都要有**：`© 2026 ESGov · 香港公司文件指南（所有內容僅供參考，不構成法律意見）`
+
+4. 措辭按文章主題調整，但「僅供參考」+「唔構成法律意見」+「建議諮詢專業人士」三點一定要有
 
 ### 3c. 範本處理（⚠️ 唔好全文 show 範本）
 
