@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov — 香港公司秘書文件完整指南 (Redesign Demo)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Calm professional palette — soft blue-teal base, gold accent kept but softened
+            calm: {
+              50: '#F5F9FC',
+              100: '#E8F1F7',
+              200: '#D0E3EF',
+              300: '#A9CBE0',
+              400: '#7BADC8',
+              500: '#5690B0',
+              600: '#3F7596',
+              700: '#335E79',
+              800: '#2A4D63',
+              900: '#1E3A4A',
+            },
+            brand: {
+              navy: '#1E3A4A',
+              gold: '#C9A84C',
+              goldlight: '#E8D5A0',
+            }
+          },
+          boxShadow: {
+            'soft': '-6px -6px 16px rgba(255,255,255,0.9), 6px 6px 16px rgba(62, 110, 140, 0.12)',
+            'soft-inset': 'inset -4px -4px 10px rgba(255,255,255,0.9), inset 4px 4px 10px rgba(62, 110, 140, 0.10)',
+            'soft-sm': '-3px -3px 8px rgba(255,255,255,0.9), 3px 3px 8px rgba(62, 110, 140, 0.10)',
+          },
+          fontFamily: {
+            display: ['"Lora"', 'serif'],
+            body: ['"Raleway"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; background: #F5F9FC; color: #1E3A4A; }
+    .font-display { font-family: 'Lora', serif; }
+    .neu-card {
+      background: linear-gradient(145deg, #F8FBFD, #EAF2F7);
+      border-radius: 20px;
+      box-shadow: -6px -6px 16px rgba(255,255,255,0.9), 6px 6px 16px rgba(62, 110, 140, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .neu-card:hover {
+      transform: translateY(-4px);
+      box-shadow: -8px -8px 20px rgba(255,255,255,0.95), 10px 10px 24px rgba(62, 110, 140, 0.16);
+    }
+    .neu-pill {
+      background: linear-gradient(145deg, #F8FBFD, #EAF2F7);
+      border-radius: 999px;
+      box-shadow: -3px -3px 8px rgba(255,255,255,0.9), 3px 3px 8px rgba(62, 110, 140, 0.10);
+    }
+    .hero-blob {
+      background: radial-gradient(circle at 30% 30%, rgba(86,144,176,0.15), transparent 60%),
+                  radial-gradient(circle at 70% 70%, rgba(201,168,76,0.12), transparent 50%);
+    }
+    .step-icon {
+      width: 56px; height: 56px;
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(145deg, #F8FBFD, #EAF2F7);
+      box-shadow: -4px -4px 10px rgba(255,255,255,0.9), 4px 4px 10px rgba(62,110,140,0.12);
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- ═══════ Nav ═══════ -->
+  <nav class="sticky top-0 z-50 bg-calm-50/80 backdrop-blur-md border-b border-calm-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-calm-600 to-calm-800 flex items-center justify-center shadow-soft-sm">
+          <i data-lucide="landmark" class="w-5 h-5 text-white"></i>
+        </div>
+        <span class="font-display font-bold text-xl text-calm-900">ESGov</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-calm-700">
+        <a href="#features" class="hover:text-calm-900 transition-colors">服務</a>
+        <a href="#how" class="hover:text-calm-900 transition-colors">運作方式</a>
+        <a href="#tools" class="hover:text-calm-900 transition-colors">免費工具</a>
+        <a href="#testimonials" class="hover:text-calm-900 transition-colors">用戶評價</a>
+      </div>
+      <a href="#tools" class="neu-pill px-5 py-2.5 text-sm font-semibold text-calm-800 hover:scale-[1.03] transition-transform">
+        免費開始
+      </a>
+    </div>
+  </nav>
+
+  <!-- ═══════ Hero ═══════ -->
+  <section class="relative overflow-hidden hero-blob">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left: copy -->
+        <div>
+          <span class="inline-flex items-center gap-2 neu-pill px-4 py-1.5 text-xs font-semibold text-calm-700 mb-6">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-gold"></i>
+            香港公司秘書文件一站式指南
+          </span>
+          <h1 class="font-display text-4xl sm:text-5xl font-bold leading-tight text-calm-900 mb-6">
+            公司文件<br/>
+            <span class="text-calm-600">原來可以好簡單</span>
+          </h1>
+          <p class="text-calm-700 text-lg leading-relaxed mb-8 max-w-lg">
+            無論係股份轉讓、公司改名、撤銷註冊定係 SCR 合規，
+            我哋幫你踩晒所有大坑，唔使你大海撈針。
+            全部免費，自己一次過搞掂。
+          </p>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <a href="#tools" class="neu-pill px-7 py-3.5 text-sm font-bold text-white bg-gradient-to-br from-calm-600 to-calm-800 hover:scale-[1.02] transition-transform">
+              探索免費工具
+            </a>
+            <a href="#how" class="neu-pill px-7 py-3.5 text-sm font-semibold text-calm-800 hover:scale-[1.02] transition-transform">
+              點樣運作？
+            </a>
+          </div>
+          <!-- Trust stats -->
+          <div class="flex gap-8">
+            <div>
+              <p class="font-display text-2xl font-bold text-calm-900">5+</p>
+              <p class="text-xs text-calm-600 font-medium">公司秘書指南</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl font-bold text-calm-900">17+</p>
+              <p class="text-xs text-calm-600 font-medium">免費工具</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl font-bold text-calm-900">100%</p>
+              <p class="text-xs text-calm-600 font-medium">免費使用</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: neumorphic phone-like card stack -->
+        <div class="relative hidden lg:block">
+          <div class="neu-card p-6 max-w-sm ml-auto">
+            <div class="flex items-center justify-between mb-5">
+              <div>
+                <p class="text-xs text-calm-500 font-medium">今日要處理</p>
+                <p class="font-display font-bold text-calm-900 text-lg">股份轉讓</p>
+              </div>
+              <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-brand-gold to-brand-goldlight flex items-center justify-center shadow-soft-sm">
+                <i data-lucide="arrow-left-right" class="w-5 h-5 text-white"></i>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div class="rounded-2xl bg-calm-50 p-3 flex items-center gap-3 shadow-soft-sm">
+                <div class="step-icon">
+                  <i data-lucide="file-text" class="w-5 h-5 text-calm-600"></i>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-semibold text-calm-800">Instrument of Transfer</p>
+                  <p class="text-xs text-calm-500">文件 1/4</p>
+                </div>
+                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500"></i>
+              </div>
+              <div class="rounded-2xl bg-calm-50 p-3 flex items-center gap-3 shadow-soft-sm">
+                <div class="step-icon">
+                  <i data-lucide="receipt" class="w-5 h-5 text-calm-600"></i>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-semibold text-calm-800">Bought &amp; Sold Note</p>
+                  <p class="text-xs text-calm-500">文件 2/4</p>
+                </div>
+                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500"></i>
+              </div>
+              <div class="rounded-2xl bg-calm-50 p-3 flex items-center gap-3 shadow-soft-sm">
+                <div class="step-icon">
+                  <i data-lucide="stamp" class="w-5 h-5 text-calm-600"></i>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-semibold text-calm-800">厘印費計算</p>
+                  <p class="text-xs text-calm-500">完成度 75%</p>
+                </div>
+                <div class="w-12 h-1.5 rounded-full bg-calm-200 overflow-hidden">
+                  <div class="h-full w-3/4 rounded-full bg-gradient-to-r from-brand-gold to-calm-500"></div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-5 rounded-2xl p-4 shadow-soft-inset bg-calm-50 flex items-center justify-between">
+              <p class="text-sm text-calm-600 font-medium">慳返秘書公司費用</p>
+              <p class="font-display font-bold text-calm-800">HK$0</p>
+            </div>
+          </div>
+          <!-- floating badge -->
+          <div class="neu-pill px-4 py-2.5 text-xs font-semibold text-calm-700 absolute -left-4 top-8 flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-500"></i>
+            100% 免費
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ Features / 6 Products ═══════ -->
+  <section id="features" class="py-16 sm:py-20 bg-calm-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-calm-900 mb-3">六大公司秘書服務</h2>
+        <p class="text-calm-600 max-w-xl mx-auto">由流程到文件，一站式免費指南，自己搞掂唔使靠人。</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Product cards -->
+        <a href="#" class="neu-card p-6 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-calm-500 to-calm-700 flex items-center justify-center mb-4 shadow-soft-sm">
+            <i data-lucide="arrow-left-right" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-calm-900 mb-2">股份轉讓</h3>
+          <p class="text-sm text-calm-600 leading-relaxed mb-4">Instrument of Transfer、Bought &amp; Sold Note、厘印費計算，全部步驟教到你識。</p>
+          <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-calm-600 group-hover:text-calm-800 transition-colors">
+            查看指南 <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </span>
+        </a>
+
+        <a href="#" class="neu-card p-6 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-calm-500 to-calm-700 flex items-center justify-center mb-4 shadow-soft-sm">
+            <i data-lucide="pen-line" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-calm-900 mb-2">公司改名</h3>
+          <p class="text-sm text-calm-600 leading-relaxed mb-4">特別決議 + NNC2 表格，公司註冊處遞交程序，一步一步跟你做。</p>
+          <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-calm-600 group-hover:text-calm-800 transition-colors">
+            查看指南 <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </span>
+        </a>
+
+        <a href="#" class="neu-card p-6 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-calm-500 to-calm-700 flex items-center justify-center mb-4 shadow-soft-sm">
+            <i data-lucide="shield" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-calm-900 mb-2">SCR 合規</h3>
+          <p class="text-sm text-calm-600 leading-relaxed mb-4">重要控制人登記冊，5 項測試逐個解釋，罰則與豁免一次過睇清。</p>
+          <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-calm-600 group-hover:text-calm-800 transition-colors">
+            查看指南 <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </span>
+        </a>
+
+        <a href="#" class="neu-card p-6 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-calm-500 to-calm-700 flex items-center justify-center mb-4 shadow-soft-sm">
+            <i data-lucide="x-circle" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-calm-900 mb-2">撤銷註冊</h3>
+          <p class="text-sm text-calm-600 leading-relaxed mb-4">NDR1 表格、費用、步驟，唔營運嘅公司點樣乾淨咁解散。</p>
+          <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-calm-600 group-hover:text-calm-800 transition-colors">
+            查看指南 <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </span>
+        </a>
+
+        <a href="#" class="neu-card p-6 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-calm-500 to-calm-700 flex items-center justify-center mb-4 shadow-soft-sm">
+            <i data-lucide="user-round" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-calm-900 mb-2">董事詳情變更</h3>
+          <p class="text-sm text-calm-600 leading-relaxed mb-4">ND2B 表格填寫教學，董事辭任同新任程序，唔使請律師。</p>
+          <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-calm-600 group-hover:text-calm-800 transition-colors">
+            查看指南 <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </span>
+        </a>
+
+        <a href="#" class="neu-card p-6 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-calm-500 to-calm-700 flex items-center justify-center mb-4 shadow-soft-sm">
+            <i data-lucide="folder-check" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-calm-900 mb-2">其他文件工具</h3>
+          <p class="text-sm text-calm-600 leading-relaxed mb-4">17+ 免費生成器：NAR1、審計報告、授權書、員工手冊等。</p>
+          <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-calm-600 group-hover:text-calm-800 transition-colors">
+            查看工具 <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ How It Works ═══════ -->
+  <section id="how" class="py-16 sm:py-20 bg-calm-100/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-calm-900 mb-3">點樣運作？</h2>
+        <p class="text-calm-600 max-w-xl mx-auto">三個步驟，自己搞掂公司文件。</p>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="step-icon w-16 h-16 mx-auto mb-4">
+            <i data-lucide="search" class="w-7 h-7 text-calm-600"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-calm-900 mb-2">揀服務</h3>
+          <p class="text-sm text-calm-600 leading-relaxed">搵返你需要嘅公司秘書服務，睇清楚流程同需要嘅文件。</p>
+        </div>
+        <div class="text-center">
+          <div class="step-icon w-16 h-16 mx-auto mb-4">
+            <i data-lucide="download" class="w-7 h-7 text-calm-600"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-calm-900 mb-2">用免費工具</h3>
+          <p class="text-sm text-calm-600 leading-relaxed">用我哋嘅生成器填表、計費、出文件，幾分鐘搞掂。</p>
+        </div>
+        <div class="text-center">
+          <div class="step-icon w-16 h-16 mx-auto mb-4">
+            <i data-lucide="send" class="w-7 h-7 text-calm-600"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-calm-900 mb-2">遞交搞掂</h3>
+          <p class="text-sm text-calm-600 leading-relaxed">跟足步驟遞交去公司註冊處，慳返幾千蚊秘書公司費用。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ Tools Showcase ═══════ -->
+  <section id="tools" class="py-16 sm:py-20 bg-calm-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-calm-900 mb-3">免費工具幫到你</h2>
+        <p class="text-calm-600 max-w-xl mx-auto">17+ 個生成器，PDF 一鍵搞掂。</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="neu-card p-5 text-center">
+          <div class="step-icon w-12 h-12 mx-auto mb-3">
+            <i data-lucide="file-text" class="w-5 h-5 text-calm-600"></i>
+          </div>
+          <p class="font-semibold text-sm text-calm-900">NAR1 週年申報表</p>
+        </div>
+        <div class="neu-card p-5 text-center">
+          <div class="step-icon w-12 h-12 mx-auto mb-3">
+            <i data-lucide="receipt" class="w-5 h-5 text-calm-600"></i>
+          </div>
+          <p class="font-semibold text-sm text-calm-900">Bought &amp; Sold Note</p>
+        </div>
+        <div class="neu-card p-5 text-center">
+          <div class="step-icon w-12 h-12 mx-auto mb-3">
+            <i data-lucide="stamp" class="w-5 h-5 text-calm-600"></i>
+          </div>
+          <p class="font-semibold text-sm text-calm-900">厘印費計算器</p>
+        </div>
+        <div class="neu-card p-5 text-center">
+          <div class="step-icon w-12 h-12 mx-auto mb-3">
+            <i data-lucide="file-check" class="w-5 h-5 text-calm-600"></i>
+          </div>
+          <p class="font-semibold text-sm text-calm-900">審計報告範本</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ Testimonials ═══════ -->
+  <section id="testimonials" class="py-16 sm:py-20 bg-calm-100/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-calm-900 mb-3">用戶點睇？</h2>
+        <p class="text-calm-600 max-w-xl mx-auto">自己搞掂公司文件，慳錢又安心。</p>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="neu-card p-6">
+          <div class="flex gap-1 mb-4">
+            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-current"></i>
+          </div>
+          <p class="text-sm text-calm-700 leading-relaxed mb-5">「股份轉讓成個流程跟住做，兩日搞掂晒，慳返成五千蚊秘書公司費用。」</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-calm-400 to-calm-600 flex items-center justify-center">
+              <span class="text-white text-sm font-bold">陳</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-calm-900">陳先生</p>
+              <p class="text-xs text-calm-500">一人公司老闆</p>
+            </div>
+          </div>
+        </div>
+        <div class="neu-card p-6">
+          <div class="flex gap-1 mb-4">
+            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-current"></i>
+          </div>
+          <p class="text-sm text-calm-700 leading-relaxed mb-5">「啲表格生成器真係好用，打晒資料就出 PDF，唔使再逐個欄目研究。」</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-calm-400 to-calm-600 flex items-center justify-center">
+              <span class="text-white text-sm font-bold">李</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-calm-900">李小姐</p>
+              <p class="text-xs text-calm-500">會計助理</p>
+            </div>
+          </div>
+        </div>
+        <div class="neu-card p-6">
+          <div class="flex gap-1 mb-4">
+            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-current"></i>
+          </div>
+          <p class="text-sm text-calm-700 leading-relaxed mb-5">「SCR 嗰啲條例睇到一頭霧水，呢度用中文講到明明白白，跟住做就得。」</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-calm-400 to-calm-600 flex items-center justify-center">
+              <span class="text-white text-sm font-bold">黃</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-calm-900">黃先生</p>
+              <p class="text-xs text-calm-500">初創公司股東</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ Final CTA ═══════ -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="neu-card p-10 sm:p-14 text-center">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-calm-900 mb-4">開始你嘅公司文件旅程</h2>
+        <p class="text-calm-600 max-w-lg mx-auto mb-8">免費、中文、步驟齊全。唔使再俾幾千蚊秘書公司，自己一次過搞掂。</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#tools" class="px-8 py-4 rounded-full text-sm font-bold text-white bg-gradient-to-br from-calm-600 to-calm-800 shadow-soft hover:scale-[1.02] transition-transform">
+            探索免費指南
+          </a>
+          <a href="#" class="px-8 py-4 rounded-full text-sm font-semibold text-calm-800 neu-pill hover:scale-[1.02] transition-transform">
+            請我飲杯咖啡 ☕
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ Footer ═══════ -->
+  <footer class="py-12 bg-calm-900 text-calm-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-calm-500 to-calm-700 flex items-center justify-center">
+            <i data-lucide="landmark" class="w-4 h-4 text-white"></i>
+          </div>
+          <span class="font-display font-bold">ESGov</span>
+        </div>
+        <p class="text-sm text-calm-300">香港公司秘書文件完整指南 — 全部免費</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</body>
+</html>
