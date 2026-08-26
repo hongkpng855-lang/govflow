@@ -175,6 +175,40 @@ SEO（起點）→ Researcher → Writer → SEO（終點+deploy）
   - 如果 site 有 generator（例如 `nar1-generator`），直接 link generator 頁面
 - 原因：一個係 SEO（唔想 template 內容做成 duplicate content），一個係引導用戶去 site 其他頁面（內連深度）
 
+### 3d. 文章分類（⚠️ 必做 — 分類系統）
+
+**每篇文章必須歸入 8 大分類之一，blog 首頁 filter 靠 `data-category` tag 分組：**
+
+| 分類 | 涵蓋主題 | 例子 |
+|------|---------|------|
+| `開公司` | 公司註冊成立、創業比較、銀行戶口、數碼轉型、開公司後清單 | 開公司終極指南、銀行戶口實戰 |
+| `股份` | 股份轉讓、配發、回購、減資、ESOP、股東協議、轉股東 | 股份轉讓流程、Sold Note |
+| `合規` | SCR、條例622、查冊、法定紀錄、罰則、會計記帳、零申報、e-Services | SCR終極指南、合規時間表 |
+| `董事股東` | 董事職責/辭任/袍金/借貸、股東大會AGM、股權、派息、繼承 | 董事辭任、AGM暨書面決議 |
+| `報稅審計` | 利得稅、審計核數、印花稅厘印、暫繳稅、離岸利得、IR56B | 第一次報稅、審計實戰 |
+| `人事` | 僱傭條例、MPF、員工手冊、解僱、長期服務金 | 僱傭條例、第一次請人 |
+| `財務保險` | 保險(D&O/勞保)、貸款融資、追數、政府資助、跨境資金 | D&O保險、商業貸款 |
+| `公司文件` | 授權書、公章、電子簽署、章程、ND2A/NDR1、周年申報、撤銷註冊、清盤、改名、秘書 | ND2A教學、公司印章 |
+
+**做法：**
+1. 寫文時判斷文章屬於邊個分類（對照上表）
+2. 新 card 加喺 `blog/index.html` 時，一定要加 `data-category="{分類名}"` 喺 card 嘅 `<a>` tag：
+   ```html
+   <a href="/blog/{slug}/" data-category="合規" class="block bg-white rounded-xl border-2 border-gold/30 p-5 hover:shadow-lg hover:border-gold transition-all duration-300 group bg-gold/[0.02]">
+   ```
+   （❌ 唔加 data-category = 文章唔會喺任何分類 filter 出現，淨係喺「全部」見到）
+3. **部 tab 數字**（例如「合規（12）」）要同步 +1：
+   ```html
+   <button data-filter="合規" ...>合規（13）</button>
+   ```
+4. 分類 mapping 檔 `scripts/blog-categories.json` 更新新文章：
+   ```bash
+   python3 scripts/categorize-blog.py   # 重新生成（keyword 自動分類）
+   ```
+5. 發佈後驗證：喺 blog 首頁 click 對應分類 tab，確認新 card 出現
+
+**分類判斷輔助：** `scripts/categorize-blog.py` 用 keyword matching 自動分類，如果文章標題包含分類關鍵字就會自動歸類。手動加入新文章時可以行一次呢個 script 檢查分類準確性。
+
 ---
 
 ## Phase 4：SEO — Review + Optimize + Deploy
@@ -190,11 +224,13 @@ SEO（起點）→ Researcher → Writer → SEO（終點+deploy）
 - [ ] OG tags 有齊
 - [ ] Article schema 已加
 - [ ] Breadcrumb 已加
+- [ ] **文章已歸入正確分類（data-category tag + tab 數字更新）**（見 3d）
 
 ### 4b. Technical Setup
 - [ ] 文章放 `blog/{article-slug}.html`
-- [ ] 更新 `blog/index.html`（加新 card 做第一條）
+- [ ] 更新 `blog/index.html`（加新 card 做第一條 + **data-category tag** + **tab 數字 +1**）
 - [ ] 更新 `index.html`（主頁 blog section — 加新 card 做第一條）
+- [ ] 更新 `scripts/blog-categories.json`（行 `python3 scripts/categorize-blog.py`）
 - [ ] 更新 `sitemap.xml`
 - [ ] 行 seo-checker.py 確認 0 issues
 - [ ] Deploy（等 user 批准）
