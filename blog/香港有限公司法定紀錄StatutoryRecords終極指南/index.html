@@ -151,14 +151,16 @@
   ]
 }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body>
 
   <!-- ═══════════════ Navigation ═══════════════ -->
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 返回網誌</a>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回網誌</a>
     </div>
   </nav>
 
@@ -184,7 +186,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </section>
@@ -304,7 +306,7 @@
       </ul>
       <p>公司秘書就要記錄：姓名、地址、身份證明、委任日期，以及秘書類型（自然人定秘書公司）。</p>
       <div class="flag-item">
-        <p><strong>⚠️ 常見陷阱：</strong>好多公司東主以為董事辭任之後就自動消失喺名冊，錯！你要手動喺名冊上記錄辭任日期，唔可以就咁 delete 咗個紀錄。將來銀行盡職調查可能會問：「點解你個名冊冇之前位董事嘅離任記錄？」</p>
+        <p><strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見陷阱：</strong>好多公司東主以為董事辭任之後就自動消失喺名冊，錯！你要手動喺名冊上記錄辭任日期，唔可以就咁 delete 咗個紀錄。將來銀行盡職調查可能會問：「點解你個名冊冇之前位董事嘅離任記錄？」</p>
       </div>
 
       <!-- Section 3: Register of Charges -->
@@ -385,7 +387,7 @@
         <li><strong>會計紀錄</strong>：保存至少 7 年</li>
       </ul>
       <div class="flag-item">
-        <p><strong>⚠️ 特別提醒：</strong>如果你嘅註冊地址同實際營運地址唔同（好多人用會計師樓地址做註冊地址），SCR 一定要放喺註冊地址，唔係你 office。如果 SCR 放錯地方，執法機構上門 check 嗰陣你係犯法㗎。</p>
+        <p><strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 特別提醒：</strong>如果你嘅註冊地址同實際營運地址唔同（好多人用會計師樓地址做註冊地址），SCR 一定要放喺註冊地址，唔係你 office。如果 SCR 放錯地方，執法機構上門 check 嗰陣你係犯法㗎。</p>
       </div>
 
       <!-- Inspection Rights -->
@@ -426,7 +428,7 @@
       <p>呢個係公司法嘅透明度要求，用意係防止洗錢同提高公司管治水平。所以千祈唔好喺名冊上亂填虛假資料——俾人查到可以告你。</p>
 
       <!-- Penalties -->
-      <h2>⚖️ 唔 keep 嘅後果（罰則一覽）</h2>
+      <h2><i data-lucide="scale" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔 keep 嘅後果（罰則一覽）</h2>
       <p>唔好以為公司紀錄係「做都得唔做都得」。違反法定紀錄要求嘅罰則可以好重：</p>
       <table>
         <thead>
@@ -486,7 +488,7 @@
 
       <!-- Solution CTA -->
       <div class="bg-gray-50 rounded-2xl border-2 border-gold/20 p-8 mt-10 mb-6 text-center">
-        <h2 class="!border-b-0 !mt-0 !mb-3">✅ 法定紀錄管理，可以好簡單</h2>
+        <h2 class="!border-b-0 !mt-0 !mb-3"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 法定紀錄管理，可以好簡單</h2>
         <p class="text-center">公司法定紀錄嘅管理其實唔複雜，最緊要係知道要做啲咩、幾時要做。</p>
         <p class="text-center">如果你想確保公司嘅法定紀錄齊全，以下係我有整理過嘅相關指南，全部由真實經歷者撰寫：</p>
         <div class="grid sm:grid-cols-2 gap-4 my-6 text-left">
@@ -516,7 +518,7 @@
         </p>
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
           <a href="/blog/" class="inline-flex items-center gap-2 text-sm font-semibold text-navy bg-white border-2 border-navy/20 hover:border-gold/40 hover:text-gold transition rounded-xl px-6 py-3 shadow-sm">
-            📚 睇更多文章 →
+            📚 睇更多文章 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
           </a>
           <a href="/" class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-navy hover:bg-navy-light transition rounded-xl px-6 py-3 shadow-sm">
             🏠 返回 ESGov 首頁
@@ -553,7 +555,7 @@
         ︎全部由真實經歷者撰寫，幫你避開公司文件嘅陷阱
       </p>
       <a href="/blog/" class="btn-gov btn-gov-preview">
-        <i data-lucide='book-open' class='w-4 h-4 inline-block'></i> 瀏覽所有文章 →
+        <i data-lucide='book-open' class='w-4 h-4 inline-block'></i> 瀏覽所有文章 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
       </a>
     </div>
   </section>
@@ -569,7 +571,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -589,7 +591,7 @@
       </div>
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">
-          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          <i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
           如有具體法律問題，請諮詢執業律師或專業公司秘書。
         </p>
         <p>© 2026 ESGov. All rights reserved.</p>

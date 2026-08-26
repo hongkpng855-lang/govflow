@@ -193,6 +193,8 @@
     "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-50">
 
@@ -201,7 +203,7 @@
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
       <div class="flex items-center gap-4">
-        <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 網誌總覽</a>
+        <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 網誌總覽</a>
         <a href="/" class="text-sm text-gray-400 hover:text-gold transition">首頁</a>
       </div>
     </div>
@@ -232,7 +234,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </header>
@@ -257,7 +259,7 @@
           <li><a href="#data-retention" class="text-gold font-medium">10. 資料保留與銷毀 — 唔可以無限 Keep</a></li>
           <li><a href="#cross-border" class="text-gold font-medium">11. 跨境資料轉移 — 用 Google Drive / AWS 算唔算？</a></li>
           <li><a href="#penalties" class="text-gold font-medium">12. 違規罰則 &amp; 真實案例</a></li>
-          <li><a href="#checklist" class="text-gold font-medium">13. ✅ 中小企私隱合規 Checklist（即時可用）</a></li>
+          <li><a href="#checklist" class="text-gold font-medium">13. <i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 中小企私隱合規 Checklist（即時可用）</a></li>
           <li><a href="#faq" class="text-gold font-medium">14. FAQ 常見問題</a></li>
         </ul>
       </div>
@@ -288,7 +290,7 @@
         <li><strong>2023 年：</strong>建議修訂引入強制性資料外洩通報機制（截至 2026 年仍在立法程序中）</li>
       </ul>
       <div class="warn-box">
-        <p class="font-semibold">⚠️ 注意</p>
+        <p class="font-semibold"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 注意</p>
         <p>雖然目前香港仲未立法強制通報資料外洩，但 PCPD 強烈建議企業自願通報。如果你間公司有處理 EU 或 UK 居民嘅資料，更可能受 GDPR 規管，嗰邊係強制通報㗎。</p>
       </div>
 
@@ -360,7 +362,7 @@
         <li><strong>敏感資料：</strong>醫療記錄、宗教信仰、工會會員身份</li>
       </ul>
       <div class="warn-box">
-        <p class="font-semibold">⚠️ 重要提醒</p>
+        <p class="font-semibold"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 重要提醒</p>
         <p>就算你只係儲咗客人嘅「電話號碼」，已經算係持有個人資料，受 PDPO 規管。唔好以為「淨係得電話啫，冇問題」。</p>
       </div>
 
@@ -401,7 +403,7 @@
       </ul>
 
       <div class="warn-box">
-        <p class="font-semibold">⚠️ 常見陷阱：舊客 Email 做 Newsletter</p>
+        <p class="font-semibold"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見陷阱：舊客 Email 做 Newsletter</p>
         <p>好多中小企犯呢個錯：將過去幾年幫襯過嘅客人 Email 直接 Import 入 Mailchimp / Brevo 就 Send Newsletter。咁係犯法㗎！對方冇同意過你用佢嘅資料嚟收推廣郵件。除非你之前收集資料嘅 PICS 已經講明「會用嚟 Send 推廣」，否則你要重新得到佢同意。</p>
       </div>
 
@@ -432,7 +434,7 @@
       </ol>
 
       <div class="warn-box">
-        <p class="font-semibold">⚠️ 我嘅親身見聞</p>
+        <p class="font-semibold"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 我嘅親身見聞</p>
         <p>我有個朋友開補習社，唔小心將成個家長聯絡 list（入面有 300 個家長嘅電話同地址）Send 咗去另一個家長嘅 Email。雖然對方最後冇做啲咩，但朋友足足用咗成個星期去處理投訴同安撫家長，最後仲俾 PCPD 發警告信，要求佢全面檢討資料處理政策。</p>
       </div>
 
@@ -553,21 +555,21 @@
       </ul>
 
       <!-- Section 13: Checklist -->
-      <h2 id="checklist">13. ✅ 中小企私隱合規 Checklist（即時可用）</h2>
+      <h2 id="checklist">13. <i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 中小企私隱合規 Checklist（即時可用）</h2>
       <p>以下係你可以即刻 Check 嘅事項：</p>
       <ul>
-        <li>✅ 公司網站有 Privacy Policy</li>
-        <li>✅ Privacy Policy 係根據你公司實際情況寫（唔係 Copy）</li>
-        <li>✅ 收集個人資料嘅表格有 PICS（收集個人資料聲明）</li>
-        <li>✅ Direct Marketing 有得到資料當事人嘅同意（有記錄）</li>
-        <li>✅ 每封推廣訊息都有 Unsubscribe 機制</li>
-        <li>✅ 公司有指定私隱負責人</li>
-        <li>✅ 客戶資料有適當保安（加密、密碼、權限控制）</li>
-        <li>✅ 有資料保留同銷毀政策</li>
-        <li>✅ 員工知道公司嘅私隱政策同處理資料嘅正確方法</li>
-        <li>✅ 有處理資料查閱要求（Data Access Request）嘅流程</li>
-        <li>✅ 有資料外洩應變計劃</li>
-        <li>✅ 如果用緊第三方服務（Mailchimp / Google Analytics / Facebook Pixel），已確保佢哋嘅 DPA 符合要求</li>
+        <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 公司網站有 Privacy Policy</li>
+        <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> Privacy Policy 係根據你公司實際情況寫（唔係 Copy）</li>
+        <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 收集個人資料嘅表格有 PICS（收集個人資料聲明）</li>
+        <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> Direct Marketing 有得到資料當事人嘅同意（有記錄）</li>
+        <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 每封推廣訊息都有 Unsubscribe 機制</li>
+        <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 公司有指定私隱負責人</li>
+        <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 客戶資料有適當保安（加密、密碼、權限控制）</li>
+        <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 有資料保留同銷毀政策</li>
+        <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 員工知道公司嘅私隱政策同處理資料嘅正確方法</li>
+        <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 有處理資料查閱要求（Data Access Request）嘅流程</li>
+        <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 有資料外洩應變計劃</li>
+        <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 如果用緊第三方服務（Mailchimp / Google Analytics / Facebook Pixel），已確保佢哋嘅 DPA 符合要求</li>
       </ul>
 
       <div class="gold-box">
@@ -646,7 +648,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

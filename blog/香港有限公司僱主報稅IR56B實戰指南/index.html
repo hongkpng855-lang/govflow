@@ -84,14 +84,16 @@
   ]
 }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body>
 
 <!-- Nav -->
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -105,7 +107,7 @@
     </div>
     <h1 class="text-3xl md:text-4xl font-extrabold leading-tight mb-4">香港有限公司僱主報稅（IR56B）<br class="hidden md:block">完整實戰指南</h1>
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 
@@ -113,7 +115,7 @@
     <!-- Price comparison badge -->
     <div class="mt-6 flex flex-wrap items-center gap-3">
       <span class="price-badge text-gold px-4 py-2 rounded-full text-sm font-bold inline-flex items-center gap-2">
-        💰 會計公司收費 ~~$2,000+~~ → 自己搞掂慳返
+        💰 會計公司收費 ~~$2,000+~~ <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 自己搞掂慳返
       </span>
     </div>
   </div>
@@ -130,13 +132,13 @@
         <li><a href="#what-is" class="text-gold">🧐 咩係僱主報稅？第一次做嘅你要知</a></li>
         <li><a href="#deadline" class="text-gold">⏰ 重要日期：幾時要交？幾時係死線？</a></li>
         <li><a href="#form-types" class="text-gold">📋 IR56 系列表格：你公司需要邊幾份？</a></li>
-        <li><a href="#filling" class="text-gold">✍️ IR56B 填表教學（逐格拆解）</a></li>
-        <li><a href="#mpf" class="text-gold">⚠️ MPF 記錄核對：最多人錯嘅位</a></li>
+        <li><a href="#filling" class="text-gold"><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> IR56B 填表教學（逐格拆解）</a></li>
+        <li><a href="#mpf" class="text-gold"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> MPF 記錄核對：最多人錯嘅位</a></li>
         <li><a href="#departure" class="text-gold">🚪 員工離職點報？IR56F / IR56G 教學</a></li>
         <li><a href="#late-penalty" class="text-gold">💸 遲交罰款：唔好同錢作對</a></li>
         <li><a href="#digital" class="text-gold">💻 電子報稅 vs 紙本：邊個方法好？</a></li>
         <li><a href="#common-mistakes" class="text-gold">🚩 最多人中嘅 5 個伏位</a></li>
-        <li><a href="#summary" class="text-gold">✅ 僱主報稅 Checklist（對住做）</a></li>
+        <li><a href="#summary" class="text-gold"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 僱主報稅 Checklist（對住做）</a></li>
       </ul>
     </div>
 
@@ -156,14 +158,14 @@
     <p>如果你公司有以下情況，你就需要做僱主報稅：</p>
 
     <ul>
-      <li>✅ 有 <strong>支薪員工</strong>（包括你自己如果係董事兼員工）</li>
-      <li>✅ 有 <strong>兼職員工</strong></li>
-      <li>✅ 有 <strong>離職員工</strong>（喺過去一年走咗嘅都要報）</li>
-      <li>✅ 就算你全年 <strong>冇請過人</strong>，但有收到稅局嘅 BIR56A 都要填返零申報</li>
+      <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 有 <strong>支薪員工</strong>（包括你自己如果係董事兼員工）</li>
+      <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 有 <strong>兼職員工</strong></li>
+      <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 有 <strong>離職員工</strong>（喺過去一年走咗嘅都要報）</li>
+      <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 就算你全年 <strong>冇請過人</strong>，但有收到稅局嘅 BIR56A 都要填返零申報</li>
     </ul>
 
     <div class="callout-warning">
-      <strong>⚠️ 好多新公司嘅誤解：</strong>「我公司今年蝕錢，冇利得稅要交，係咪唔使報僱主稅？」<strong>錯。</strong>僱主報稅同利得稅係兩回事，獨立處理。就算公司蝕錢、甚至未開始營運，只要你請過人（包括你自己出糧俾自己），就要報。
+      <strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 好多新公司嘅誤解：</strong>「我公司今年蝕錢，冇利得稅要交，係咪唔使報僱主稅？」<strong>錯。</strong>僱主報稅同利得稅係兩回事，獨立處理。就算公司蝕錢、甚至未開始營運，只要你請過人（包括你自己出糧俾自己），就要報。
     </div>
 
     <!-- 2. Deadline -->
@@ -232,7 +234,7 @@
     </div>
 
     <!-- 4. Filling -->
-    <h2 id="filling">✍️ IR56B 填表教學（逐格拆解）</h2>
+    <h2 id="filling"><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> IR56B 填表教學（逐格拆解）</h2>
 
     <p>好啦，嚟到最關鍵嘅部分。IR56B 有好多格，我當初見到真係一頭霧水。以下逐格同你拆解：</p>
 
@@ -253,7 +255,7 @@
       <li><strong>第 10 行「薪金 / 工資」</strong>：全年總薪金（未扣 MPF 前嘅數）</li>
       <li><strong>第 11 行「花紅 / 佣金」</strong>：年尾花紅、performance bonus、佣金</li>
       <li><strong>第 12 行「津貼」</strong>：房屋津貼、交通津貼、膳食津貼等</li>
-      <li><strong>第 14 行「強積金供款」</strong>：⚠️ <strong>最多人錯嘅地方</strong> — 呢格只填「僱主自願性供款（AVC）」，唔包括強制性供款（ORSO/MPF 5%）</li>
+      <li><strong>第 14 行「強積金供款」</strong>：<i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>最多人錯嘅地方</strong> — 呢格只填「僱主自願性供款（AVC）」，唔包括強制性供款（ORSO/MPF 5%）</li>
       <li><strong>第 15-16 行</strong>：合約完結金、遣散費等特別款項</li>
     </ul>
 
@@ -270,7 +272,7 @@
     <p>填完之後，要簽名（公司授權人簽署），然後交回稅局。</p>
 
     <!-- 5. MPF -->
-    <h2 id="mpf">⚠️ MPF 記錄核對：最多人錯嘅位</h2>
+    <h2 id="mpf"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> MPF 記錄核對：最多人錯嘅位</h2>
 
     <p>MPF 同 IR56B 嘅關係，係最多公司東主搞錯嘅地方。我同你講幾個鐵一般嘅事實：</p>
 
@@ -314,7 +316,7 @@
     <p>我上年有個 part-time 幫咗我兩個月就辭職，我完全唔知要報。結果半年後收到稅局封信問：「你公司係咪曾經有員工 XXX？點解冇申報？」好彩最後只係補交表格，冇罰款。如果係 IR56G 嗰類（員工離港），你唔報嘅後果可以好嚴重 — 稅局會認為你協助員工逃稅。</p>
 
     <div class="callout-warning">
-      <strong>⚠️ IR56G 特別重要：</strong>如果員工離職後會離開香港（例如返大陸、移民），你一定要填 IR56G 通知稅局。稅局會截查該員工嘅稅務狀況，確保佢走之前交清稅款。你唔報嘅話，稅局有權向你追討該員工嘅欠稅！
+      <strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> IR56G 特別重要：</strong>如果員工離職後會離開香港（例如返大陸、移民），你一定要填 IR56G 通知稅局。稅局會截查該員工嘅稅務狀況，確保佢走之前交清稅款。你唔報嘅話，稅局有權向你追討該員工嘅欠稅！
     </div>
 
     <!-- 7. Late Penalty -->
@@ -431,22 +433,22 @@
     </div>
 
     <!-- 10. Checklist -->
-    <h2 id="summary">✅ 僱主報稅 Checklist（對住做）</h2>
+    <h2 id="summary"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 僱主報稅 Checklist（對住做）</h2>
 
     <p>最後，呢個係我自己每年對住做嘅 checklist，你 save 低佢，出年就唔使驚：</p>
 
     <ol>
-      <li>☐ 收到 BIR56A 後，確認信上日期（計算 Deadline）</li>
-      <li>☐ 整理全年 Payroll 紀錄：每個員工嘅薪酬、花紅、津貼、MPF</li>
-      <li>☐ 核對 MPF 受託人年度報表 — 確保同薪酬一致</li>
-      <li>☐ 填寫 BIR56A 總表（員工人數、薪酬總額）</li>
-      <li>☐ 每位員工填一份 IR56B（董事都要）</li>
-      <li>☐ 如有離職員工：已填 IR56F/IR56G？</li>
-      <li>☐ 如有新員工（未報過）：已填 IR56E？</li>
-      <li>☐ 選用「税務易」電子報稅（慳時間 + 延長 Deadline）</li>
-      <li>☐ 簽名（公司授權人）</li>
-      <li>☐ 保留副本（至少 7 年）</li>
-      <li>☐ 設定明年 3 月行事曆提醒：準備 Payroll Records</li>
+      <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 收到 BIR56A 後，確認信上日期（計算 Deadline）</li>
+      <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 整理全年 Payroll 紀錄：每個員工嘅薪酬、花紅、津貼、MPF</li>
+      <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 核對 MPF 受託人年度報表 — 確保同薪酬一致</li>
+      <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 填寫 BIR56A 總表（員工人數、薪酬總額）</li>
+      <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 每位員工填一份 IR56B（董事都要）</li>
+      <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 如有離職員工：已填 IR56F/IR56G？</li>
+      <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 如有新員工（未報過）：已填 IR56E？</li>
+      <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 選用「税務易」電子報稅（慳時間 + 延長 Deadline）</li>
+      <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 簽名（公司授權人）</li>
+      <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 保留副本（至少 7 年）</li>
+      <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 設定明年 3 月行事曆提醒：準備 Payroll Records</li>
     </ol>
 
     <div class="callout-success">
@@ -502,7 +504,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

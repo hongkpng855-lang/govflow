@@ -79,6 +79,8 @@
     "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-50 text-gray-900 leading-relaxed">
 
@@ -86,7 +88,7 @@
     <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -102,7 +104,7 @@
         📊 香港有限公司審計（核數）實戰指南
       </h1>
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 
@@ -122,7 +124,7 @@
     <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-center text-sm">
       <span class="text-navy font-semibold">💰 會計師樓審計收費</span>
       <span class="line-through text-gray-400 mx-2">$8,000+</span>
-      <span class="text-navy font-bold">→ 自己準備好文件，最低 $3,500 搞掂</span>
+      <span class="text-navy font-bold"><i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 自己準備好文件，最低 $3,500 搞掂</span>
     </div>
   </div>
 
@@ -162,14 +164,14 @@
       <h2>🔍 邊啲公司需要做審計？</h2>
       <p>先搞清楚自己公司駛唔駛做。</p>
 
-      <h3>✅ 一定要做嘅情況</h3>
+      <h3><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 一定要做嘅情況</h3>
       <ul>
         <li><strong>所有香港有限公司</strong>，無論規模</li>
         <li>即使：零收入、零交易、休眠公司（Dormant Company）</li>
         <li>除非：向公司註冊處申請咗「休眠狀態」並獲批</li>
       </ul>
 
-      <h3>❌ 唔使做嘅情況</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔使做嘅情況</h3>
       <ul>
         <li>獨資經營（Sole Proprietorship）— 報利得稅就得</li>
         <li>合夥業務（Partnership）— 報稅就得，唔使審計</li>
@@ -289,7 +291,7 @@
         <p><strong>唔得。</strong> 核數師要有原始單據先可以確認開支。冇單嘅開支，核數師會要求你 disallow（剔除），即係要補稅。</p>
         <p>我試過有一次唔見咗張 $8,000 嘅顧問費單據，結果核數師話要 disallow，嗰年要因為呢 $8,000 補番約 <strong>$1,300 稅</strong>。</p>
         <div class="bg-green-50 border border-green-200 rounded p-3 mt-3">
-          <p class="text-green-800 font-semibold">✅ 解決方法：</p>
+          <p class="text-green-800 font-semibold"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 解決方法：</p>
           <p class="text-green-700">所有單據 scan 存檔，Google Drive / Dropbox 放一份。</p>
         </div>
       </div>
@@ -299,7 +301,7 @@
         <p class="mt-2">「我借咗 $50,000 俾公司周轉，有咩問題？」</p>
         <p><strong>好大問題。</strong> 董事貸款係核數師一定會 chur 嘅位。如果你冇正式借貸協議、冇利息條款、冇還款時間表，核數師可能會要求你將筆數 reclass 做「股本投入」或者「股東往來」，影響盤數。</p>
         <div class="bg-green-50 border border-green-200 rounded p-3 mt-3">
-          <p class="text-green-800 font-semibold">✅ 解決方法：</p>
+          <p class="text-green-800 font-semibold"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 解決方法：</p>
           <p class="text-green-700">所有董事貸款一定要有書面協議，寫明還款期同利息。</p>
         </div>
       </div>
@@ -322,28 +324,28 @@
         <p class="mt-2">「審計啫，最後一刻先搵會計師樓啦。」</p>
         <p>最大嘅錯誤。審計係要時間嘅 — 核數師要排期、要等銀行 confirmation letter、要 review。如果你到 3 月先搵人做前一年嘅審計，高峰期好多行家都唔接，或者收你 rush fee（加價 50%）。</p>
         <div class="bg-green-50 border border-green-200 rounded p-3 mt-3">
-          <p class="text-green-800 font-semibold">✅ 最佳時間：</p>
+          <p class="text-green-800 font-semibold"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 最佳時間：</p>
           <p class="text-green-700">每年 6-9 月（公司財政年度結束後 3-6 個月內），避開高峰期（11 月至 3 月）。</p>
         </div>
       </div>
 
       <!-- Checklist -->
-      <h2>✅ 年度審計 Checklist</h2>
+      <h2><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 年度審計 Checklist</h2>
       <p>搞掂審計其實唔難，最緊要有系統。每年跟呢個 checklist 就得：</p>
 
       <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6">
         <ul class="space-y-3">
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 確定財政年度結束日期（多數公司用 12 月 31 日 / 3 月 31 日）</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 全年銀行月結單整理好</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 全年發票 + 收據 + 合約分類存檔</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> MPF 年度報表對數</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 盤點存貨（貿易公司適用）</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 整理董事貸款記錄</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 整理股東名冊變動</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 預約核數師（建議年度結束後 3 個月內）</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 核數師出 Audit Report + Tax Return</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 簽署文件，核數師交稅局 + 公司註冊處</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 保留文件最少 7 年（公司法規定）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 確定財政年度結束日期（多數公司用 12 月 31 日 / 3 月 31 日）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 全年銀行月結單整理好</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 全年發票 + 收據 + 合約分類存檔</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> MPF 年度報表對數</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 盤點存貨（貿易公司適用）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 整理董事貸款記錄</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 整理股東名冊變動</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 預約核數師（建議年度結束後 3 個月內）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 核數師出 Audit Report + Tax Return</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 簽署文件，核數師交稅局 + 公司註冊處</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 保留文件最少 7 年（公司法規定）</li>
         </ul>
       </div>
 
@@ -396,7 +398,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

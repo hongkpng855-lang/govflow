@@ -210,6 +210,8 @@
     "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-50">
 
@@ -217,7 +219,7 @@
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -249,7 +251,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </header>
@@ -329,7 +331,7 @@
               如果公司冇賺錢或者蝕緊錢，理論上係唔可以派股息嘅。
             </p>
             <div class="warn-box">
-              <p class="font-semibold text-red-800">⚠️ 重要底線</p>
+              <p class="font-semibold text-red-800"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 重要底線</p>
               <p class="text-sm text-red-700">
                 股息只可以從「累計已變現利潤（Accumulated Realised Profits）」減去「累計已變現虧損」之後嘅剩餘度派。
                 簡單講：公司要真係賺咗錢先派得。借錢嚟派息係違法嘅，
@@ -604,15 +606,15 @@
                   </tr>
                   <tr>
                     <td><strong>扣稅（公司）</strong></td>
-                    <td>❌ 不可扣稅</td>
-                    <td>✅ 可扣利得稅</td>
-                    <td>✅ 可扣利得稅</td>
+                    <td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 不可扣稅</td>
+                    <td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 可扣利得稅</td>
+                    <td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 可扣利得稅</td>
                   </tr>
                   <tr>
                     <td><strong>收稅（個人）</strong></td>
-                    <td>✅ 免稅</td>
-                    <td>⚠️ 要報薪俸稅</td>
-                    <td>⚠️ 要報薪俸稅</td>
+                    <td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 免稅</td>
+                    <td><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 要報薪俸稅</td>
+                    <td><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 要報薪俸稅</td>
                   </tr>
                   <tr>
                     <td><strong>法定程序</strong></td>
@@ -622,9 +624,9 @@
                   </tr>
                   <tr>
                     <td><strong>MPF</strong></td>
-                    <td>❌ 唔使</td>
-                    <td>⚠️ 視乎有冇僱傭關係</td>
-                    <td>✅ 要供款</td>
+                    <td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔使</td>
+                    <td><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 視乎有冇僱傭關係</td>
+                    <td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 要供款</td>
                   </tr>
                   <tr>
                     <td><strong>適合邊種情況</strong></td>
@@ -644,10 +646,10 @@
 
           <!-- ───────── Common Mistakes ───────── -->
           <section id="mistakes">
-            <h2>⚠️ 常見錯誤（我踩過嘅坑）</h2>
+            <h2><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見錯誤（我踩過嘅坑）</h2>
 
             <div class="warn-box">
-              <p class="font-semibold text-red-800">❌ 錯誤 1：冇開會就派息</p>
+              <p class="font-semibold text-red-800"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 1：冇開會就派息</p>
               <p class="text-sm text-red-700">
                 我自己第一個錯誤。公司賺咗錢就直接由公司戶口轉錢俾自己，
                 冇開董事會決議。會計師話俾我知咁樣做嘅後果：
@@ -658,7 +660,7 @@
             </div>
 
             <div class="warn-box">
-              <p class="font-semibold text-red-800">❌ 錯誤 2：公司蝕緊錢都派息</p>
+              <p class="font-semibold text-red-800"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 2：公司蝕緊錢都派息</p>
               <p class="text-sm text-red-700">
                 有朋友開餐廳，疫情期間蝕咗兩年，但因為股東 pressure，
                 佢照派股息出嚟。結果核數師出咗 qualified opinion，
@@ -670,7 +672,7 @@
             </div>
 
             <div class="warn-box">
-              <p class="font-semibold text-red-800">❌ 錯誤 3：股息同董事借貸混埋一齊</p>
+              <p class="font-semibold text-red-800"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 3：股息同董事借貸混埋一齊</p>
               <p class="text-sm text-red-700">
                 好多東主嘅公司戶口有「借支」俾董事嘅記錄，年尾會計師埋數嗰陣，
                 問呢啲係「董事借貸」定係「預付股息」。
@@ -681,7 +683,7 @@
             </div>
 
             <div class="warn-box">
-              <p class="font-semibold text-red-800">❌ 錯誤 4：股東之間分紅比例唔跟持股比例</p>
+              <p class="font-semibold text-red-800"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 4：股東之間分紅比例唔跟持股比例</p>
               <p class="text-sm text-red-700">
                 如果你同 partner 合夥開公司，你 60% 佢 40%。
                 有一年你覺得自己出力多啲，想分 70% 股息。
@@ -693,7 +695,7 @@
             </div>
 
             <div class="warn-box">
-              <p class="font-semibold text-red-800">❌ 錯誤 5：派完息冇留營運資金</p>
+              <p class="font-semibold text-red-800"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 5：派完息冇留營運資金</p>
               <p class="text-sm text-red-700">
                 見過太多 case：公司一有錢賺就派晒出去，之後要俾供應商、交租嗰陣先發現唔夠錢。
                 公司要問股東「借錢」周轉，好諷刺。<br /><br />
@@ -788,12 +790,12 @@
               派股息唔複雜，但一定要跟程序。以下係每次派息前嘅 6 步 Checklist：
             </p>
             <ol class="list-decimal pl-5 space-y-2">
-              <li><strong>✅ 確認有足夠嘅可分派利潤</strong>（最好問會計師/核數師）</li>
-              <li><strong>✅ 睇公司章程</strong>，確認派息程序冇違反規定</li>
-              <li><strong>✅ 出董事書面決議</strong>（或召開董事會），記錄派息安排</li>
-              <li><strong>✅ 製作會議記錄</strong>，清楚列明每股金額、記錄日期及支付日期</li>
-              <li><strong>✅ 按持股比例過數</strong>，備註寫「Dividend」</li>
-              <li><strong>✅ 保存所有文件</strong>：決議、記錄、銀行轉賬記錄，以備日後查核</li>
+              <li><strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 確認有足夠嘅可分派利潤</strong>（最好問會計師/核數師）</li>
+              <li><strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 睇公司章程</strong>，確認派息程序冇違反規定</li>
+              <li><strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 出董事書面決議</strong>（或召開董事會），記錄派息安排</li>
+              <li><strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 製作會議記錄</strong>，清楚列明每股金額、記錄日期及支付日期</li>
+              <li><strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 按持股比例過數</strong>，備註寫「Dividend」</li>
+              <li><strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 保存所有文件</strong>：決議、記錄、銀行轉賬記錄，以備日後查核</li>
             </ol>
             <div class="gold-box mt-6">
               <p class="font-semibold text-amber-800">📌 最後一句</p>
@@ -820,7 +822,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -838,7 +840,7 @@
       </div>
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">
-          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          <i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
           如有具體法律問題，請諮詢執業律師或專業公司秘書。
         </p>
         <p>© 2026 ESGov. All rights reserved.</p>

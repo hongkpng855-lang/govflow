@@ -130,6 +130,8 @@
     "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body>
 
@@ -137,7 +139,7 @@
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -159,7 +161,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </section>
@@ -248,24 +250,24 @@
             <td><strong>長鋼印（Common Seal）</strong></td>
             <td>金屬圓形，有公司名 + 成立年份</td>
             <td>股份證明書、債券、正式契約（Deed）</td>
-            <td>❌ 非強制，但部分場合慣常使用</td>
+            <td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 非強制，但部分場合慣常使用</td>
           </tr>
           <tr>
             <td><strong>圓印／公司印章（Company Chop）</strong></td>
             <td>圓形橡膠或原子印，公司名 + 「有限公司」</td>
             <td>合同、銀行文件、發票、日常商業文件</td>
-            <td>❌ 非強制，但銀行同商業夥伴通常要求</td>
+            <td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 非強制，但銀行同商業夥伴通常要求</td>
           </tr>
           <tr>
             <td><strong>簽名檔（Signature Block）</strong></td>
             <td>長方形，公司名 + 「授權簽署人」</td>
             <td>日常文件、授權書、確認信</td>
-            <td>❌ 純商業慣例</td>
+            <td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 純商業慣例</td>
           </tr>
         </table>
 
         <div class="callout-warning">
-          <strong>⚠️ 很多人都唔知道：</strong>長鋼印同圓印嘅法律地位其實一樣。分別只係：長鋼印傳統上用嚟蓋「重要文件」（股份證明書、債券），而圓印用嚟蓋日常商業文件。新《公司條例》後，兩者都唔係強制。
+          <strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 很多人都唔知道：</strong>長鋼印同圓印嘅法律地位其實一樣。分別只係：長鋼印傳統上用嚟蓋「重要文件」（股份證明書、債券），而圓印用嚟蓋日常商業文件。新《公司條例》後，兩者都唔係強制。
         </div>
 
         <!-- Section 4: When to use -->
@@ -296,7 +298,7 @@
         </ul>
 
         <div class="callout-success">
-          <strong>✅ 實戰建議：</strong>最穩陣嘅做法係「準備好但盡量唔用」— 刻定一個圓印（約 $50-100），放喺辦公室。對方要求你就俾，唔要求你就用簽名。靈活處理。
+          <strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 實戰建議：</strong>最穩陣嘅做法係「準備好但盡量唔用」— 刻定一個圓印（約 $50-100），放喺辦公室。對方要求你就俾，唔要求你就用簽名。靈活處理。
         </div>
 
         <!-- Section 5: Bank -->
@@ -321,17 +323,17 @@
 
         <table>
           <tr><th>銀行</th><th>公司印章要求</th><th>備註</th></tr>
-          <tr><td>匯豐 HSBC</td><td>✅ 要蓋章</td><td>開戶文件同支票都要蓋章</td></tr>
-          <tr><td>中銀香港 BOCHK</td><td>✅ 要蓋章</td><td>比較嚴格，長鋼印都有可能要</td></tr>
-          <tr><td>恆生 HSB</td><td>✅ 要蓋章</td><td>開戶一定要求</td></tr>
-          <tr><td>渣打 Standard Chartered</td><td>✅ 要蓋章</td><td>簽名 + 蓋章先得</td></tr>
-          <tr><td>眾安 ZA Bank</td><td>❌ 唔使</td><td>網上開戶，完全數碼簽署</td></tr>
-          <tr><td>Livi Bank</td><td>❌ 唔使</td><td>虛擬銀行，全數碼</td></tr>
-          <tr><td>Airwallex / Neat</td><td>❌ 唔使</td><td>主要做跨境業務</td></tr>
+          <tr><td>匯豐 HSBC</td><td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 要蓋章</td><td>開戶文件同支票都要蓋章</td></tr>
+          <tr><td>中銀香港 BOCHK</td><td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 要蓋章</td><td>比較嚴格，長鋼印都有可能要</td></tr>
+          <tr><td>恆生 HSB</td><td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 要蓋章</td><td>開戶一定要求</td></tr>
+          <tr><td>渣打 Standard Chartered</td><td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 要蓋章</td><td>簽名 + 蓋章先得</td></tr>
+          <tr><td>眾安 ZA Bank</td><td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔使</td><td>網上開戶，完全數碼簽署</td></tr>
+          <tr><td>Livi Bank</td><td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔使</td><td>虛擬銀行，全數碼</td></tr>
+          <tr><td>Airwallex / Neat</td><td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔使</td><td>主要做跨境業務</td></tr>
         </table>
 
         <div class="callout-warning">
-          <strong>⚠️ 注意：</strong>就算間銀行話「可以接受簽名」，都要問清楚「係咪所有文件都係？」。有時開戶文件可以簽名，但支票就要蓋章。唔好估，直接問銀行職員最穩陣。
+          <strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 注意：</strong>就算間銀行話「可以接受簽名」，都要問清楚「係咪所有文件都係？」。有時開戶文件可以簽名，但支票就要蓋章。唔好估，直接問銀行職員最穩陣。
         </div>
 
         <!-- Section 6: China -->
@@ -354,7 +356,7 @@
         <p>好多香港公司東主嘅誤解係：「我喺香港簽咗名，內地合作夥伴就應該接受。」現實係：<strong>內地公司同政府機構唔接受淨簽名嘅文件</strong>。佢哋慣咗見公章先信。</p>
 
         <div class="callout-warning">
-          <strong>⚠️ 常見陷阱：</strong>如果你嘅香港公司同內地公司簽合同，淨係香港簽名，內地公司可能話份合同冇效。同內地做生意，建議：<br>
+          <strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見陷阱：</strong>如果你嘅香港公司同內地公司簽合同，淨係香港簽名，內地公司可能話份合同冇效。同內地做生意，建議：<br>
           1️⃣ 合同蓋香港公司圓印<br>
           2️⃣ 如果對方要求公證，搵中國委託公證人做<br>
           3️⃣ 重要合同考慮用長鋼印，增加「正式感」
@@ -392,27 +394,27 @@
         <p>我同周圍嘅創業朋友傾過，發現大家喺公司印章方面犯過好多相似嘅錯。分享出嚟等你可以避開：</p>
 
         <div class="callout-danger">
-          <p><strong>❌ 錯誤 1：以為公司印章係「公司名就得」</strong></p>
+          <p><strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 1：以為公司印章係「公司名就得」</strong></p>
           <p>真人真事：有朋友開公司，去文具舖刻印，俾咗公司名但冇話要「有限公司」三個字。結果個印刻咗「ABC TRADING」而唔係「ABC TRADING LIMITED」。銀行見到即話唔收，因為個印同商業登記證嘅公司名唔一致。</p>
         </div>
 
         <div class="callout-danger">
-          <p><strong>❌ 錯誤 2：將公司印章亂放，俾員工亂蓋</strong></p>
+          <p><strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 2：將公司印章亂放，俾員工亂蓋</strong></p>
           <p>有創業朋友嘅員工，用公司印章蓋咗一份擔保書俾供應商，結果公司要承擔擔保責任。公司印章係「公司授權」嘅象徵，亂用可以令公司承擔法律責任。</p>
         </div>
 
         <div class="callout-danger">
-          <p><strong>❌ 錯誤 3：Signature 同 Chop 嘅授權人分開</strong></p>
+          <p><strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 3：Signature 同 Chop 嘅授權人分開</strong></p>
           <p>銀行開戶時，授權簽署人係董事 A，但用嘅係公司印章。後來董事 A 離職，但個印仲喺公司。新董事 B 用同一個印簽文件—銀行話唔得，因為授權簽署人已經唔同咗。公司印章係公司嘅，但用嘅人要同銀行授權紀錄一致。</p>
         </div>
 
         <div class="callout-danger">
-          <p><strong>❌ 錯誤 4：以為電子簽署可以完全取代公司印章</strong></p>
+          <p><strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 4：以為電子簽署可以完全取代公司印章</strong></p>
           <p>香港法例接受電子簽署，但銀行同內地業務通常唔接受。我有朋友用 DocuSign 簽完份合約傳俾內地供應商，對方話：「你哋公司冇蓋章，呢份合約我哋唔收。」要補蓋一個實體印再 scan 過去先得。</p>
         </div>
 
         <div class="callout-danger">
-          <p><strong>❌ 錯誤 5：公司改名後用返舊印章</strong></p>
+          <p><strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 5：公司改名後用返舊印章</strong></p>
           <p>公司改名後，舊印章即刻失效。一定要刻一個新印，公司名同商業登記證 100% 一致。用舊印簽嘅文件冇法律效力，銀行會拒收。</p>
         </div>
 
@@ -508,7 +510,7 @@
         <div class="bg-navy text-white rounded-xl p-6 mt-8">
           <h3 class="text-white text-lg font-extrabold" style="border-bottom: none; margin-top: 0; padding-bottom: 0;">📚 延伸閱讀</h3>
           <ul class="text-gray-300 mt-3" style="margin-bottom: 0;">
-            <li><a href="/blog/" class="text-gold hover:underline">← 返回 ESGov 網誌總覽</a></li>
+            <li><a href="/blog/" class="text-gold hover:underline"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回 ESGov 網誌總覽</a></li>
             <li><a href="/blog/香港公司電子簽署終極指南/" class="text-gold hover:underline">🔏 香港公司電子簽署終極指南 — 電子簽名 vs 傳統簽署全面比較</a></li>
             <li><a href="/blog/香港有限公司法定紀錄StatutoryRecords終極指南/" class="text-gold hover:underline">📋 香港有限公司法定紀錄終極指南</a></li>
             <li><a href="/" class="text-gold hover:underline">🏠 返回 ESGov 首頁</a></li>
@@ -531,7 +533,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

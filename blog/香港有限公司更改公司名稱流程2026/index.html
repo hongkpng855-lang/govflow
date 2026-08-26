@@ -155,14 +155,16 @@
   ]
 }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body class="bg-gray-50">
 
   <!-- ═══ Navigation ═══ -->
     <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -192,7 +194,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </header>
@@ -278,7 +280,7 @@
               好彩最後傾掂數，唔使去到最壞情況。
             </p>
             <div class="warn-box">
-              <p class="font-semibold text-red-800">⚠️ 注意</p>
+              <p class="font-semibold text-red-800"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 注意</p>
               <p class="text-sm text-red-700">
                 如果公司有超過一個股東，記得要開股東大會或者 send 書面決議俾所有股東簽。
                 就算對方持股好少，都要通知。我聽過有 case 係細股東事後話「我唔知公司改名」，
@@ -330,8 +332,8 @@
             </div>
             <h3>ND2A 提交方式：</h3>
             <ul>
-              <li><strong>網上</strong>：公司註冊處 eCR 系統 → 最快，有 confirmation</li>
-              <li><strong>親身</strong>：金鐘道政府合署 14 樓 → 可以即場 check 文件</li>
+              <li><strong>網上</strong>：公司註冊處 eCR 系統 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 最快，有 confirmation</li>
+              <li><strong>親身</strong>：金鐘道政府合署 14 樓 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 可以即場 check 文件</li>
               <li><strong>郵寄</strong>：最慢，唔建議</li>
             </ul>
             <p>
@@ -388,7 +390,7 @@
               建議改名後第一時間就去搞，唔好等。
             </p>
             <div class="warn-box">
-              <p class="font-semibold text-red-800">⚠️ 撳機／網上銀行</p>
+              <p class="font-semibold text-red-800"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撳機／網上銀行</p>
               <p class="text-sm text-red-700">
                 銀行戶口更新後，網上銀行嘅公司名會自動更新，但實體提款卡嘅名可能唔會變。
                 如果你有公司提款卡，要申請 replacement card，呢個通常要另外收費（約 HK$50-100）。
@@ -450,32 +452,32 @@
           <section id="mistakes">
             <h2>最常見嘅 5 個錯誤</h2>
 
-            <h3>❌ 錯誤 1：改名後冇及時更新銀行</h3>
+            <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 1：改名後冇及時更新銀行</h3>
             <p>
               以為銀行會自動更新戶口資料。結果俾客入票時銀行彈票，
               話戶口名同支票名唔一致。要親自去銀行搞，仲要俾手續費。
             </p>
 
-            <h3>❌ 錯誤 2：新名同現有公司太相似</h3>
+            <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 2：新名同現有公司太相似</h3>
             <p>
               公司註冊處 reject 咗之後，要重新諗名、再做特別決議、
               再交 ND2A。前後浪費咗一個月。記住提交前先查冊！
             </p>
 
-            <h3>❌ 錯誤 3：商業登記冇更新</h3>
+            <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 3：商業登記冇更新</h3>
             <p>
               以為公司註冊處改名 = 商業登記自動更新。唔係㗎！
               商業登記係稅務局管，要另外通知。如果唔 update，
               將來報稅會有麻煩。
             </p>
 
-            <h3>❌ 錯誤 4：漏咗通知稅局評稅主任</h3>
+            <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 4：漏咗通知稅局評稅主任</h3>
             <p>
               商業登記更新咗，但稅局內部嘅評稅主任紀錄仲係舊名。
               要直接寫信或者填 IR1249 通知稅局。
             </p>
 
-            <h3>❌ 錯誤 5：公司網站同電郵冇跟住改</h3>
+            <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 5：公司網站同電郵冇跟住改</h3>
             <p>
               公司名片換咗新名，但網站 footer 仲係舊名，俾客見到好唔專業。
               電子郵件 signature 都要更新。
@@ -489,51 +491,51 @@
               <ul class="space-y-3">
                 <li class="flex items-start gap-3">
                   <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">1</span>
-                  <span class="text-gray-700">✅ 董事會決議通過改名意向</span>
+                  <span class="text-gray-700"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 董事會決議通過改名意向</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">2</span>
-                  <span class="text-gray-700">✅ 股東特別決議（75% 以上同意）</span>
+                  <span class="text-gray-700"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 股東特別決議（75% 以上同意）</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">3</span>
-                  <span class="text-gray-700">✅ 公司名稱查冊（確認新名未被用）</span>
+                  <span class="text-gray-700"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 公司名稱查冊（確認新名未被用）</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">4</span>
-                  <span class="text-gray-700">✅ 提交 ND2A（改名後 15 日內） + HK$295</span>
+                  <span class="text-gray-700"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 提交 ND2A（改名後 15 日內） + HK$295</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">5</span>
-                  <span class="text-gray-700">✅ 收到更改名稱註冊證書</span>
+                  <span class="text-gray-700"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 收到更改名稱註冊證書</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">6</span>
-                  <span class="text-gray-700">✅ 商業登記更新（IRBR200）</span>
+                  <span class="text-gray-700"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 商業登記更新（IRBR200）</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">7</span>
-                  <span class="text-gray-700">✅ 銀行戶口更新（所有簽署人親身去銀行）</span>
+                  <span class="text-gray-700"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 銀行戶口更新（所有簽署人親身去銀行）</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">8</span>
-                  <span class="text-gray-700">✅ 做新公司印章</span>
+                  <span class="text-gray-700"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 做新公司印章</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">9</span>
-                  <span class="text-gray-700">✅ 通知稅局評稅主任（IR1249 或親身通知）</span>
+                  <span class="text-gray-700"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 通知稅局評稅主任（IR1249 或親身通知）</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">10</span>
-                  <span class="text-gray-700">✅ 通知客戶、供應商、合作夥伴</span>
+                  <span class="text-gray-700"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 通知客戶、供應商、合作夥伴</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">11</span>
-                  <span class="text-gray-700">✅ 更新網站、電郵 signature、社交媒體</span>
+                  <span class="text-gray-700"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 更新網站、電郵 signature、社交媒體</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="shrink-0 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">12</span>
-                  <span class="text-gray-700">✅ 更新保險、租約、牌照、商標註冊</span>
+                  <span class="text-gray-700"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 更新保險、租約、牌照、商標註冊</span>
                 </li>
               </ul>
             </div>
@@ -549,10 +551,10 @@
             </p>
             <div class="flex flex-wrap justify-center gap-3">
               <a href="../" class="inline-flex items-center gap-2 bg-white text-navy font-semibold px-6 py-3 rounded-xl hover:bg-gold transition-colors">
-                睇其他指南 →
+                睇其他指南 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
               </a>
               <a href="/shareholder-transfer/" class="inline-flex items-center gap-2 border-2 border-gold/40 text-gold font-semibold px-6 py-3 rounded-xl hover:bg-gold/10 transition-colors">
-                股份轉讓指南 →
+                股份轉讓指南 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -573,7 +575,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -591,7 +593,7 @@
       </div>
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">
-          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          <i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
           如有具體法律問題，請諮詢執業律師或專業公司秘書。
         </p>
         <p>© 2026 ESGov. All rights reserved.</p>

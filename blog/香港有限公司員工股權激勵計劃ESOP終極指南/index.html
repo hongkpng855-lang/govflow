@@ -80,7 +80,9 @@
   ]
 }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body>
 
   <!-- ═══ Navigation ═══ -->
@@ -90,7 +92,7 @@
         <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" />
         <span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
       </a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -118,7 +120,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </header>
@@ -166,7 +168,7 @@
       <div id="what-is-esop" class="prose-custom">
         <h2>2. 咩係員工股權激勵計劃（ESOP）？</h2>
         <p>
-          ESOP（Employee Stock Ownership Plan）係公司用股份嚟激勵員工嘅制度。核心邏輯好簡單：員工做得好 → 公司 value 升 → 員工嘅股份升值 → 員工賺錢 → 員工更投入。
+          ESOP（Employee Stock Ownership Plan）係公司用股份嚟激勵員工嘅制度。核心邏輯好簡單：員工做得好 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 公司 value 升 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 員工嘅股份升值 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 員工賺錢 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 員工更投入。
         </p>
         <p>
           香港法例冇一個叫「ESOP」嘅法定計劃，而係透過以下方式實現：
@@ -211,7 +213,7 @@
         <p><strong>適合：</strong>較成熟嘅公司，公司 value 比較明確，員工想即刻有 equity 而唔係等 exit。</p>
 
         <div class="callout-warning">
-          <strong>⚠️ 重要分別：</strong>Option 嘅好處係員工可以揀「幾時」俾稅——佢唔行使就唔會有稅務責任。但 Award 係「收到嗰刻」就要報稅，就算未歸屬都可能有稅務影響。呢個係好多人忽略嘅地方。
+          <strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 重要分別：</strong>Option 嘅好處係員工可以揀「幾時」俾稅——佢唔行使就唔會有稅務責任。但 Award 係「收到嗰刻」就要報稅，就算未歸屬都可能有稅務影響。呢個係好多人忽略嘅地方。
         </div>
       </div>
 
@@ -347,14 +349,14 @@
         </p>
         <table>
           <tr><th>事件</th><th>Share Option</th><th>Share Award</th></tr>
-          <tr><td>Grant（授予）</td><td>❌ 唔使課稅（未變現）</td><td>⚠️ Award 可能被視為即刻入息</td></tr>
-          <tr><td>Vesting（歸屬）</td><td>❌ 唔使課稅（未行使）</td><td>✅ 課稅點：收到股份當日嘅 FMV</td></tr>
-          <tr><td>Exercise（行使）</td><td>✅ 課稅點：行使價 vs FMV 差額</td><td>N/A</td></tr>
-          <tr><td>Sell（賣出）</td><td>✅ 可能再課利得稅或資本增值</td><td>✅ 同左</td></tr>
+          <tr><td>Grant（授予）</td><td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔使課稅（未變現）</td><td><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> Award 可能被視為即刻入息</td></tr>
+          <tr><td>Vesting（歸屬）</td><td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔使課稅（未行使）</td><td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 課稅點：收到股份當日嘅 FMV</td></tr>
+          <tr><td>Exercise（行使）</td><td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 課稅點：行使價 vs FMV 差額</td><td>N/A</td></tr>
+          <tr><td>Sell（賣出）</td><td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 可能再課利得稅或資本增值</td><td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 同左</td></tr>
         </table>
 
         <div class="callout-warning">
-          <strong>⚠️ 稅務陷阱：</strong>Option 員工最大嘅問題係「意外稅」（Dry Income Tax）— 佢行使 option 嗰刻要俾稅，但未賣股冇 cash 入口袋。如果行使價同 FMV 差額 HK$500,000，員工要即時俾最多 17%（即 HK$85,000）稅。呢個係員工最常 complain 嘅地方，一定要提前講清楚。
+          <strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 稅務陷阱：</strong>Option 員工最大嘅問題係「意外稅」（Dry Income Tax）— 佢行使 option 嗰刻要俾稅，但未賣股冇 cash 入口袋。如果行使價同 FMV 差額 HK$500,000，員工要即時俾最多 17%（即 HK$85,000）稅。呢個係員工最常 complain 嘅地方，一定要提前講清楚。
         </div>
 
         <h3>6.2 公司角度：利得稅</h3>
@@ -446,33 +448,33 @@
         <h2>9. 5 個常見錯誤（我親身踩過嘅）</h2>
 
         <div class="callout-danger">
-          <strong>❌ 錯誤 1：冇 document 就 grant option</strong><br>
+          <strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 1：冇 document 就 grant option</strong><br>
           我第一次話俾員工聽「俾 5% 你」，乜都冇簽就 whatapp 講咗。半年後員工離職，claim 公司欠佢 5% 股份。最後要俾 $15,000 律師費 settle。<br>
-          <em>✅ 正確：一定要有 Option Award Agreement，列明 vesting schedule、termination condition。</em>
+          <em><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 正確：一定要有 Option Award Agreement，列明 vesting schedule、termination condition。</em>
         </div>
 
         <div class="callout-danger">
-          <strong>❌ 錯誤 2：冇考慮稅務影響</strong><br>
+          <strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 2：冇考慮稅務影響</strong><br>
           我 grant option 俾員工時完全冇提稅務。到員工行使 option 嗰陣，要俾成 $30,000 稅，佢即刻黑面。要公司墊支先搞得掂。<br>
-          <em>✅ 正確：Grant option 前就要同員工講清楚稅務責任，建議俾稅務計算例子。</em>
+          <em><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 正確：Grant option 前就要同員工講清楚稅務責任，建議俾稅務計算例子。</em>
         </div>
 
         <div class="callout-danger">
-          <strong>❌ 錯誤 3：Option Pool Size 定得太細</strong><br>
+          <strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 3：Option Pool Size 定得太細</strong><br>
           我當年 set 咗 5% Option Pool，後來想 grant 俾更多人先發現唔夠。要再開股東會擴張 pool，麻煩兼唔專業。<br>
-          <em>✅ 正確：一般建議 Option Pool 設定喺 10-20% total 已發行股本，預留未來 hiring 需要。</em>
+          <em><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 正確：一般建議 Option Pool 設定喺 10-20% total 已發行股本，預留未來 hiring 需要。</em>
         </div>
 
         <div class="callout-danger">
-          <strong>❌ 錯誤 4：冇諗員工離職點處理</strong><br>
+          <strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 4：冇諗員工離職點處理</strong><br>
           Employee leaves — 佢手上嘅 unvested option 點計？Vested 但未 exercise 嘅點計？我完全冇係 agreement 寫明，結果離職員工同我拗。<br>
-          <em>✅ 正確：一定要寫「Good Leaver vs Bad Leaver」條款，同埋離職後幾耐要 exercise。</em>
+          <em><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 正確：一定要寫「Good Leaver vs Bad Leaver」條款，同埋離職後幾耐要 exercise。</em>
         </div>
 
         <div class="callout-danger">
-          <strong>❌ 錯誤 5：冇更新股東名冊（Register of Members）</strong><br>
+          <strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 5：冇更新股東名冊（Register of Members）</strong><br>
           我 grant 咗 option 後冇即時更新公司嘅 Statutory Records。到 investor due diligence 發現問題，要補簽好多文件。<br>
-          <em>✅ 正確：每次發行新股後即時更新股東名冊、發出 Share Certificate、提交 NSC1。</em>
+          <em><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 正確：每次發行新股後即時更新股東名冊、發出 Share Certificate、提交 NSC1。</em>
         </div>
       </div>
 
@@ -519,7 +521,7 @@
         </p>
 
         <table>
-          <tr><th>條件</th><th>✅ 適合做 ESOP</th><th>❌ 未必要做</th></tr>
+          <tr><th>條件</th><th><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 適合做 ESOP</th><th><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 未必要做</th></tr>
           <tr><td>團隊規模</td><td>3 人以上核心團隊</td><td>1-2 人公司</td></tr>
           <tr><td>未來招聘</td><td>計劃請高質人才，想用 equity 吸引</td><td>用 cash 吸引人都夠</td></tr>
           <tr><td>公司階段</td><td>有成長潛力，exit 可能性合理</td><td>穩定收租型生意</td></tr>
@@ -528,7 +530,7 @@
         </table>
 
         <p>
-          如果你符合大部分 ✅，我強烈建議你開始計劃 ESOP。
+          如果你符合大部分 <i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>，我強烈建議你開始計劃 ESOP。
         </p>
 
         <div class="callout-success">
@@ -579,7 +581,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

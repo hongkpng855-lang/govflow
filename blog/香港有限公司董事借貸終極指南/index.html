@@ -170,6 +170,8 @@
     "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-50">
 
@@ -177,7 +179,7 @@
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -208,7 +210,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </header>
@@ -284,7 +286,7 @@
               <li>🚗 <strong>公司買車俾董事用</strong>：名義上係公司資產，但實際係董事私人用</li>
             </ul>
             <div class="warn-box">
-              <p class="font-semibold text-red-800">⚠️ 重要概念</p>
+              <p class="font-semibold text-red-800"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 重要概念</p>
               <p class="text-sm text-red-700">
                 即使你係公司 100% 股東，公司嘅錢都唔可以直接當係你嘅錢。
                 公司有獨立法律人格。你由公司攞錢出去，如果冇正式嘅分紅決議或者借貸協議，
@@ -384,7 +386,7 @@
               豁免嘅金額就會被視為董事嘅收入，要報薪俸稅</li>
             </ul>
             <div class="warn-box">
-              <p class="font-semibold text-red-800">⚠️ 我見過嘅真實個案</p>
+              <p class="font-semibold text-red-800"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 我見過嘅真實個案</p>
               <p class="text-sm text-red-700">
                 有個東主五年嚟不斷由公司戶口攞錢，總共超過 200 萬，從來冇還過。
                 會計師每年都入賬做 Director's Loan，但稅局 audit 嗰陣話：
@@ -503,28 +505,28 @@
           <section id="mistakes">
             <h2>最常見嘅 5 個錯誤</h2>
 
-            <h3>❌ 錯誤 1：公司錢 = 自己錢，隨便攞</h3>
+            <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 1：公司錢 = 自己錢，隨便攞</h3>
             <p>
               呢個係最常見亦最危險嘅誤解。公司係獨立法律實體，
               即使你係 100% 股東，公司嘅錢都唔可以直接當係你嘅錢。
               <strong>正確做法</strong>：出糧俾自己、出分紅、或者簽借貸協議。
             </p>
 
-            <h3>❌ 錯誤 2：借貸冇任何書面記錄</h3>
+            <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 2：借貸冇任何書面記錄</h3>
             <p>
               就咁 ATM 轉錢，WhatsApp 講句「借住先」。到會計師埋數嗰陣，
               完全唔知筆錢係借貸、人工、分紅定係還款。
               <strong>正確做法</strong>：每一次資金往來都要有文件支持，最簡單係 loan agreement + 董事決議。
             </p>
 
-            <h3>❌ 錯誤 3：董事借貸冇收利息</h3>
+            <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 3：董事借貸冇收利息</h3>
             <p>
               覺得「自己公司借俾自己，收咩利息」。稅局唔係咁睇 — 佢哋會 deemed 公司有應收嘅利息收入，
               然後調整應評稅利潤。
               <strong>正確做法</strong>：收取商業利率利息（例如 P+1%），或者至少喺 loan agreement 寫明利息條款。
             </p>
 
-            <h3>❌ 錯誤 4：年結前唔清還董事借貸</h3>
+            <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 4：年結前唔清還董事借貸</h3>
             <p>
               年結日（公司財政年度 end date）嗰日嘅 Director's Loan balance 好重要。
               如果太大，auditor 會 concern，稅局會注意。
@@ -532,7 +534,7 @@
               出年再借過都得。
             </p>
 
-            <h3>❌ 錯誤 5：董事借錢俾公司都冇記錄</h3>
+            <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 5：董事借錢俾公司都冇記錄</h3>
             <p>
               反轉頭，你借錢俾公司都要有記錄。否則公司還錢俾你嗰陣，
               稅局可能 deem 公司係 in distribution（分紅）而要交稅。
@@ -625,13 +627,13 @@
             </p>
             <div class="flex flex-wrap justify-center gap-3">
               <a href="../" class="inline-flex items-center gap-2 bg-white text-navy font-semibold px-6 py-3 rounded-xl hover:bg-gold transition-colors">
-                睇所有指南 →
+                睇所有指南 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
               </a>
               <a href="/blog/香港有限公司董事法律責任終極指南/" class="inline-flex items-center gap-2 border-2 border-gold/40 text-gold font-semibold px-6 py-3 rounded-xl hover:bg-gold/10 transition-colors">
-                董事法律責任 →
+                董事法律責任 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
               </a>
               <a href="/blog/有限公司撤銷註冊終止營運指南/" class="inline-flex items-center gap-2 border-2 border-gold/40 text-gold font-semibold px-6 py-3 rounded-xl hover:bg-gold/10 transition-colors">
-                撤銷註冊指南 →
+                撤銷註冊指南 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -652,7 +654,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -670,7 +672,7 @@
       </div>
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">
-          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          <i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
           如有具體法律問題，請諮詢執業律師或專業公司秘書。
         </p>
         <p>© 2026 ESGov. All rights reserved.</p>

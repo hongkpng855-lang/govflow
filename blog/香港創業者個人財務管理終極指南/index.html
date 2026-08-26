@@ -170,6 +170,8 @@
     "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-50">
 
@@ -177,7 +179,7 @@
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -208,7 +210,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </header>
@@ -328,13 +330,13 @@
             <div class="gold-box">
               <p class="font-semibold text-amber-700">📊 簡單比較</p>
               <p>假設公司利潤 = HK$500,000，東主想攞走 HK$300,000：</p>
-              <p class="mt-2"><strong>方案 A：全部出糧</strong><br />公司扣稅：8.25%（首HK$200萬利潤）→ 公司交 HK$24,750<br />個人薪俸稅：約 HK$31,000（視乎免稅額）<br />總稅款：約 HK$55,750</p>
-              <p class="mt-2"><strong>方案 B：出糧 HK$200,000 + 股息 HK$100,000</strong><br />公司扣稅：8.25%（利潤少咗薪酬開支）→ 公司交約 HK$16,500<br />個人薪俸稅：約 HK$3,000（基本免稅額後）<br />股息稅：$0<br />總稅款：約 HK$19,500</p>
+              <p class="mt-2"><strong>方案 A：全部出糧</strong><br />公司扣稅：8.25%（首HK$200萬利潤）<i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 公司交 HK$24,750<br />個人薪俸稅：約 HK$31,000（視乎免稅額）<br />總稅款：約 HK$55,750</p>
+              <p class="mt-2"><strong>方案 B：出糧 HK$200,000 + 股息 HK$100,000</strong><br />公司扣稅：8.25%（利潤少咗薪酬開支）<i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 公司交約 HK$16,500<br />個人薪俸稅：約 HK$3,000（基本免稅額後）<br />股息稅：$0<br />總稅款：約 HK$19,500</p>
               <p class="mt-3 font-semibold text-amber-700">慳稅：HK$36,250！</p>
             </div>
 
             <div class="warn-box">
-              <p class="font-semibold text-red-700">⚠️ 重要提醒</p>
+              <p class="font-semibold text-red-700"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 重要提醒</p>
               <p>股息嘅好處係「唔使俾稅」，但係唔代表你可以任派。公司要有足夠嘅 retained profits，兼要有董事會決議紀錄。冇紀錄就派息，係違反公司條例嘅。</p>
             </div>
           </section>
@@ -440,7 +442,7 @@
             </ul>
 
             <div class="warn-box">
-              <p class="font-semibold text-red-700">⚠️ 私人用途要小心</p>
+              <p class="font-semibold text-red-700"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 私人用途要小心</p>
               <p>稅局對公司車嘅私人用途好嚴格。如果你成日 claim 「公司車去機場接屋企人」，稅局可以 challenge 你。最好 keep 低行車紀錄，或者部分私人用途嘅油費自己俾返。</p>
             </div>
 
@@ -483,7 +485,7 @@
             </ul>
 
             <div class="warn-box">
-              <p class="font-semibold text-red-700">⚠️ 我嘅教訓</p>
+              <p class="font-semibold text-red-700"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 我嘅教訓</p>
               <p>
                 我第一年就係咁——公司戶口有錢就直接轉俾自己，諗住「之後先還」。
                 結果報稅嗰陣會計師問我：「呢 HK$200,000 係乜？」
@@ -654,13 +656,13 @@
             </p>
             <div class="flex flex-wrap justify-center gap-3">
               <a href="../" class="inline-flex items-center gap-2 bg-white text-navy font-semibold px-6 py-3 rounded-xl hover:bg-gold transition-colors">
-                睇所有指南 →
+                睇所有指南 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
               </a>
               <a href="/blog/香港有限公司利得稅報稅及審計完整指南/" class="inline-flex items-center gap-2 border-2 border-gold/40 text-gold font-semibold px-6 py-3 rounded-xl hover:bg-gold/10 transition-colors">
-                報稅審計指南 →
+                報稅審計指南 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
               </a>
               <a href="/blog/香港有限公司董事法律責任終極指南/" class="inline-flex items-center gap-2 border-2 border-gold/40 text-gold font-semibold px-6 py-3 rounded-xl hover:bg-gold/10 transition-colors">
-                董事法律責任 →
+                董事法律責任 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -681,7 +683,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -699,7 +701,7 @@
       </div>
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">
-          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          <i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
           如有具體法律問題，請諮詢執業律師或專業公司秘書。
         </p>
         <p>© 2026 ESGov. All rights reserved.</p>

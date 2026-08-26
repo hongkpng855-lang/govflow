@@ -138,14 +138,16 @@
   ]
 }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body>
 
   <!-- Navigation -->
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 返回網誌</a>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回網誌</a>
     </div>
   </nav>
 
@@ -170,7 +172,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </section>
@@ -313,7 +315,7 @@
       </table>
 
       <div class="flag-item">
-        <p><strong>⚠️ 注意：</strong>舊 auditor 冇法律義務俾你所有 working papers，只有義務俾你「合理咁需要」嘅文件。如果 audit fee 未找清，佢哋有權扣起部分文件。所以最好 <strong>先找清尾數，先開始交接程序</strong>。</p>
+        <p><strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 注意：</strong>舊 auditor 冇法律義務俾你所有 working papers，只有義務俾你「合理咁需要」嘅文件。如果 audit fee 未找清，佢哋有權扣起部分文件。所以最好 <strong>先找清尾數，先開始交接程序</strong>。</p>
       </div>
 
       <!-- Section 4 -->
@@ -357,14 +359,14 @@
       <div class="bg-gray-50 rounded-2xl border-2 border-gold/20 p-8 mt-10 mb-6">
         <h2 class="!border-b-0 !mt-0 !mb-3">📝 總結：換核數師 Checklist（即用版）</h2>
         <ol class="space-y-2">
-          <li>✅ 確認辭職/撤換嘅 Notice Period</li>
-          <li>✅ 先找清舊 auditor 尾數</li>
-          <li>✅ 通過股東書面決議（撤換 + 委任）</li>
-          <li>✅ 簽新 auditor 嘅 Engagement Letter</li>
-          <li>✅ 從舊 auditor 拎齊交接文件</li>
-          <li>✅ 14 日內用 NR2 通知公司註冊處（如需）</li>
-          <li>✅ 喺下一份 NAR1 更新核數師資料</li>
-          <li>✅ 通知稅局（如有需要更新聯絡人）</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 確認辭職/撤換嘅 Notice Period</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 先找清舊 auditor 尾數</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 通過股東書面決議（撤換 + 委任）</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 簽新 auditor 嘅 Engagement Letter</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 從舊 auditor 拎齊交接文件</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 14 日內用 NR2 通知公司註冊處（如需）</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 喺下一份 NAR1 更新核數師資料</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 通知稅局（如有需要更新聯絡人）</li>
         </ol>
       </div>
 
@@ -376,7 +378,7 @@
         </p>
         <div class="flex flex-wrap justify-center gap-3">
           <a href="/blog/" class="inline-block bg-gold text-navy font-bold px-6 py-3 rounded-xl hover:bg-gold-light transition">
-            睇更多文章 →
+            睇更多文章 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
           </a>
           <a href="/" class="inline-block bg-white/10 text-white font-bold px-6 py-3 rounded-xl hover:bg-white/20 transition">
             返回首頁
@@ -430,7 +432,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -450,7 +452,7 @@
       </div>
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">
-          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成專業會計或法律意見。
+          <i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 免責聲明：本網站提供嘅內容僅供參考，並不構成專業會計或法律意見。
           如有具體問題，請諮詢執業會計師或律師。
         </p>
         <p>© 2026 ESGov. All rights reserved.</p>

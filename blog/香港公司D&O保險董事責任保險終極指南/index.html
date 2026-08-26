@@ -147,6 +147,8 @@
     ]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-50">
 
@@ -154,7 +156,7 @@
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 返回網誌</a>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回網誌</a>
     </div>
   </nav>
 
@@ -245,17 +247,17 @@
         <p>以下情況，你中咗幾多個？</p>
 
         <ul>
-          <li><strong>✅ 有 external shareholders / 投資者</strong> — 股東可以根據《公司條例》第 724-732 條提出「不公平損害呈請」（Unfair Prejudice Petition），追究董事責任</li>
-          <li><strong>✅ 有銀行貸款或融資</strong> — 銀行貸款合約通常有 Personal Guarantee 條款，如果公司違約，銀行可以追究董事個人</li>
-          <li><strong>✅ 你只係掛名董事</strong> — 唔參與日常營運但掛名做董事，風險其實更高，因為你對公司決策冇控制權但法律責任一樣</li>
-          <li><strong>✅ 公司有生意夥伴或客戶合約</strong> — 商業糾紛中對方有機會同時控告公司同董事個人</li>
-          <li><strong>✅ 公司涉及高風險行業</strong> — 建築、醫療、金融、科技、教育等行業被訴訟嘅風險更高</li>
-          <li><strong>✅ 公司即將引入新股東、融資或賣盤</strong> — 投資者做 Due Diligence 時會 check 公司有冇買 D&O 保險，冇買可能影響估值</li>
-          <li><strong>✅ 你係 Non-Executive Director（獨立非執行董事）</strong> — 唔營運但要孭責，風險回報不成正比</li>
+          <li><strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 有 external shareholders / 投資者</strong> — 股東可以根據《公司條例》第 724-732 條提出「不公平損害呈請」（Unfair Prejudice Petition），追究董事責任</li>
+          <li><strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 有銀行貸款或融資</strong> — 銀行貸款合約通常有 Personal Guarantee 條款，如果公司違約，銀行可以追究董事個人</li>
+          <li><strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 你只係掛名董事</strong> — 唔參與日常營運但掛名做董事，風險其實更高，因為你對公司決策冇控制權但法律責任一樣</li>
+          <li><strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 公司有生意夥伴或客戶合約</strong> — 商業糾紛中對方有機會同時控告公司同董事個人</li>
+          <li><strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 公司涉及高風險行業</strong> — 建築、醫療、金融、科技、教育等行業被訴訟嘅風險更高</li>
+          <li><strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 公司即將引入新股東、融資或賣盤</strong> — 投資者做 Due Diligence 時會 check 公司有冇買 D&O 保險，冇買可能影響估值</li>
+          <li><strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 你係 Non-Executive Director（獨立非執行董事）</strong> — 唔營運但要孭責，風險回報不成正比</li>
         </ul>
 
         <div class="warn-box">
-          <p>⚠️ <strong>最中伏嘅情況：</strong>我識有個朋友，佢俾好朋友請做掛名董事，間公司 3 年後因為欠債俾人 liquidate，清算人發現公司有違規行為（遲交報稅表、冇備存 SCR），直接追究所有董事（包括掛名嗰個）個人責任。佢最後要自己俾 HK$8 萬律師費去處理。如果當時有買 D&O 保險，呢筆錢保險公司會俾。</p>
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>最中伏嘅情況：</strong>我識有個朋友，佢俾好朋友請做掛名董事，間公司 3 年後因為欠債俾人 liquidate，清算人發現公司有違規行為（遲交報稅表、冇備存 SCR），直接追究所有董事（包括掛名嗰個）個人責任。佢最後要自己俾 HK$8 萬律師費去處理。如果當時有買 D&O 保險，呢筆錢保險公司會俾。</p>
         </div>
       </section>
 
@@ -305,7 +307,7 @@
         </ol>
 
         <div class="warn-box">
-          <p>⚠️ <strong>重要：</strong>唔好以為有 D&O 保險就可以亂嚟。如果保險公司發現你嘅行為係故意違法 or 不誠實，佢哋有權拒絕賠償，而且會即時取消保單。D&O 保險保嘅係「疏忽」（Negligence）同「錯誤判斷」（Error of Judgment），唔係「明知故犯」。</p>
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>重要：</strong>唔好以為有 D&O 保險就可以亂嚟。如果保險公司發現你嘅行為係故意違法 or 不誠實，佢哋有權拒絕賠償，而且會即時取消保單。D&O 保險保嘅係「疏忽」（Negligence）同「錯誤判斷」（Error of Judgment），唔係「明知故犯」。</p>
         </div>
       </section>
 
@@ -379,19 +381,19 @@
         </ol>
 
         <div class="warn-box">
-          <p>⚠️ <strong>致命錯誤：</strong>未經保險公司書面同意，唔好自行同索償方達成任何和解協議或者承認任何責任！如果你自己同意和解，保險公司有權拒絕賠償——因為保單條款通常寫明「No admission of liability without insurer's consent」。</p>
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>致命錯誤：</strong>未經保險公司書面同意，唔好自行同索償方達成任何和解協議或者承認任何責任！如果你自己同意和解，保險公司有權拒絕賠償——因為保單條款通常寫明「No admission of liability without insurer's consent」。</p>
         </div>
 
         <h3>索償 Checklist</h3>
         <ul>
-          <li>☐ 保存所有相關文件（電郵、會議記錄、董事決議、合約）</li>
-          <li>☐ 30 日內書面通知保險公司（即使你覺得只係「小事」）</li>
-          <li>☐ 保留律師信同所有法律文件正本</li>
-          <li>☐ 記錄事件時間線（邊日發生咩事、邊個決定、邊個知道）</li>
-          <li>☐ 唔好自己承認任何責任</li>
-          <li>☐ 唔好銷毀任何相關文件（即使你覺得冇用）</li>
-          <li>☐ 通知其他董事（如果佢哋都係受保人）</li>
-          <li>☐ 儘量用書面溝通（Email），保留 audit trail</li>
+          <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 保存所有相關文件（電郵、會議記錄、董事決議、合約）</li>
+          <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 30 日內書面通知保險公司（即使你覺得只係「小事」）</li>
+          <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 保留律師信同所有法律文件正本</li>
+          <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 記錄事件時間線（邊日發生咩事、邊個決定、邊個知道）</li>
+          <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔好自己承認任何責任</li>
+          <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔好銷毀任何相關文件（即使你覺得冇用）</li>
+          <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 通知其他董事（如果佢哋都係受保人）</li>
+          <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 儘量用書面溝通（Email），保留 audit trail</li>
         </ul>
       </section>
 

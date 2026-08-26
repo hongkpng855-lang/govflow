@@ -181,6 +181,8 @@
     "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-50">
 
@@ -188,7 +190,7 @@
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -220,7 +222,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </header>
@@ -332,7 +334,7 @@
             <ul>
               <li>📜 合約審查 — Claude 嘅 200K context window 可以一次過睇晒成份合約</li>
               <li>📄 PDF 分析 — Upload 供應商合約、租約、保險條款，叫佢總結重點</li>
-              <li>✍️ 長篇寫作 — Blog 文、公司簡介、網站內容</li>
+              <li><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 長篇寫作 — Blog 文、公司簡介、網站內容</li>
               <li>💬 中文理解 — 我覺得 Claude 嘅繁體中文能力比 ChatGPT 好少少</li>
             </ul>
             <p>
@@ -340,7 +342,7 @@
               而家 15 分鐘就明晒重點。
             </p>
             <div class="warn-box">
-              <p class="font-semibold text-red-800">⚠️ 重要警告：</p>
+              <p class="font-semibold text-red-800"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 重要警告：</p>
               <p>千祈唔好將包含個人資料嘅文件直接 upload 上去免費版 AI！
               用付費版（ChatGPT Team / Claude Pro）先有資料唔會被用嚟訓練 model 嘅保障。
               公司機密文件更加要小心。</p>
@@ -445,9 +447,9 @@
               <strong>我用嚟做咩：</strong>
             </p>
             <ul>
-              <li>📥 Gmail 收到 invoice attachment → 自動 save 去 Google Drive + 記低喺試算表</li>
-              <li>💳 Stripe 收到付款 → 自動 send thank you email + 更新 CRM</li>
-              <li>📋 Google Form 收到新客戶查詢 → 自動開 Notion page + send Slack notification</li>
+              <li>📥 Gmail 收到 invoice attachment <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 自動 save 去 Google Drive + 記低喺試算表</li>
+              <li>💳 Stripe 收到付款 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 自動 send thank you email + 更新 CRM</li>
+              <li>📋 Google Form 收到新客戶查詢 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 自動開 Notion page + send Slack notification</li>
               <li>📊 每日自動發送 summary email：今日 sales、未回覆查詢、未找數 invoice</li>
             </ul>
             <p>
@@ -599,39 +601,39 @@
             <h2>常見錯誤（我親身踩過嘅坑）</h2>
 
             <div class="warn-box">
-              <p class="font-semibold text-red-800">❌ 錯誤 1：俾 AI 做太重要嘅決策</p>
+              <p class="font-semibold text-red-800"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 1：俾 AI 做太重要嘅決策</p>
               <p>試過叫 ChatGPT 幫我決定 offer 俾客嘅折扣金額，結果佢俾咗個令我蝕本嘅建議。
               AI 係工具，唔係決策者。用嚟搜集資料、分析數據、俾 suggestion 可以，
               但 final call 一定要你自己做。</p>
             </div>
 
             <div class="warn-box">
-              <p class="font-semibold text-red-800">❌ 錯誤 2：冇檢查 AI 輸出</p>
+              <p class="font-semibold text-red-800"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 2：冇檢查 AI 輸出</p>
               <p>AI 會 hallucinate（作嘢）。試過佢作咗個法例條文出嚟，好彩我 double check 咗。
               任何關乎法律、財務、稅務嘅 AI 輸出，<strong>一定要 fact check</strong>。</p>
             </div>
 
             <div class="warn-box">
-              <p class="font-semibold text-red-800">❌ 錯誤 3：輸入公司機密俾免費 AI</p>
+              <p class="font-semibold text-red-800"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 3：輸入公司機密俾免費 AI</p>
               <p>免費版 AI 嘅資料會被用嚟訓練 model。你嘅客戶 list、合約內容、財務數據 —
               全部都係公司敏感資料。用免費版只可以做 general 嘢，
               涉及機密嘅一定要用有資料保密承諾嘅付費版。</p>
             </div>
 
             <div class="warn-box">
-              <p class="font-semibold text-red-800">❌ 錯誤 4：一次過買太多工具</p>
+              <p class="font-semibold text-red-800"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 4：一次過買太多工具</p>
               <p>最 common 嘅 mistake：Month 1 就買齊 ChatGPT Plus、Claude Pro、Copilot、Notion AI、Zapier⋯⋯
               結果全部用唔熟，最後放棄。一嚟開始，逐個工具用熟先加下一個。</p>
             </div>
 
             <div class="warn-box">
-              <p class="font-semibold text-red-800">❌ 錯誤 5：忽略員工培訓</p>
+              <p class="font-semibold text-red-800"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 5：忽略員工培訓</p>
               <p>你買咗 AI 工具，但員工唔識用 / 唔想用 = 浪費錢。
               要俾時間同事學、解釋點樣幫到佢哋、唔係用嚟取代佢哋而係幫佢哋慳時間做更有價值嘅嘢。</p>
             </div>
 
             <div class="gold-box">
-              <p class="font-semibold text-navy">✅ 我嘅 golden rule：</p>
+              <p class="font-semibold text-navy"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 我嘅 golden rule：</p>
               <p>AI 輸出只係 draft，永遠要 human review。
               你可以慳 80% 嘅時間，但永遠留返 20% 嘅時間做 QC。
               呢 20% 就係你作為老闆嘅價值所在。</p>
@@ -719,7 +721,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

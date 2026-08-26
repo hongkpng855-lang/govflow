@@ -52,7 +52,7 @@
   "mainEntity": [
     {"@type":"Question","name":"公司冇營運好耐，可唔可以直接由得佢？","acceptedAnswer":{"@type":"Answer","text":"絕對唔可以！公司如果冇營運但未正式解散，仍然要每年提交周年申報表（Annual Return）、商業登記續期、以及報稅。如果乜都唔做，公司會累積罰款，董事個人可能被檢控，甚至被釘牌。一定要經正式程序撤銷註冊。"}},
     {"@type":"Question","name":"撤銷註冊同清盤有咩分別？","acceptedAnswer":{"@type":"Answer","text":"撤銷註冊（Strike-off）適用於有償付能力嘅空殼公司，將公司從公司註冊處名冊中除名，程序較簡單便宜。清盤（Liquidation/Winding-up）適用於有債務或資產需要處理嘅公司，需由清盤人處理，程序複雜得多。如果公司有未還債務，必須用清盤程序，唔可以用撤銷註冊。"}},
-    {"@type":"Question","name":"撤銷註冊成個過程要幾耐？","acceptedAnswer":{"@type":"Answer","text":"正常情況下大約需要 6-9 個月。流程包括：提交申請 → 稅務局發出不反對通知書（約 1-3 個月）→ 公司註冊處刊登第一份憲報公告 → 等候 3 個月 → 刊登第二份憲報公告 → 公司正式解散。如果有未處理嘅稅務問題或反對意見，時間會更長。"}},
+    {"@type":"Question","name":"撤銷註冊成個過程要幾耐？","acceptedAnswer":{"@type":"Answer","text":"正常情況下大約需要 6-9 個月。流程包括：提交申請 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 稅務局發出不反對通知書（約 1-3 個月）<i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 公司註冊處刊登第一份憲報公告 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 等候 3 個月 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 刊登第二份憲報公告 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 公司正式解散。如果有未處理嘅稅務問題或反對意見，時間會更長。"}},
     {"@type":"Question","name":"公司註銷後仲會唔會俾人追債？","acceptedAnswer":{"@type":"Answer","text":"理論上唔會，因為公司已經唔存在。但要注意：如果公司解散前有未償還債務，債權人可以在公司解散後 20 年內向法庭申請「恢復公司註冊」，追討欠款。而且董事個人擔保嘅債務唔會因為公司解散而消失。所以一定要先清還所有債務先申請撤銷註冊。"}},
     {"@type":"Question","name":"撤銷註冊費用幾多錢？公司註冊處收費係咪好貴？","acceptedAnswer":{"@type":"Answer","text":"公司註冊處嘅行政費用約 HK$420（提交撤銷申請），加上自己處理嘅時間成本及文件準備。如果搵秘書公司代辦，費用約 HK$2,000-HK$5,000。相比每年繼續交商業登記費（HK$2,150/年）同周年申報表登記費（HK$105/年），長痛不如短痛。"}}
   ]
@@ -113,12 +113,14 @@
     "description": "Hong Kong company compliance specialists — real experience, practical guides"
   }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body>
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -128,7 +130,7 @@
     <div class="text-sm text-gold mb-3">📄 文章 · 2026年6月4日</div>
     <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-3">香港有限公司撤銷註冊終止營運完整指南</h1>
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 
@@ -181,7 +183,7 @@
       <p>結果？一年後收到稅局封信，話我欠交商業登記續期費，加埋逾期罰款成 HK$2,500。再隔幾個月，公司註冊處又話我冇提交周年申報表，罰多 HK$870。最慘係我想正式 close 公司嗰陣，先發現因為有未清嘅稅務問題，搞多咗半年先搞得掂。</p>
 
       <div class="callout-danger">
-        <strong>⚠️ 血淚教訓：</strong>唔好以為公司冇營運就唔使理！喺法律上，公司一日未正式解散，你就要交 Annual Return、續商業登記、報稅。乜都唔做只會累積罰款，最後影響你個人信貸記錄，甚至被檢控。
+        <strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 血淚教訓：</strong>唔好以為公司冇營運就唔使理！喺法律上，公司一日未正式解散，你就要交 Annual Return、續商業登記、報稅。乜都唔做只會累積罰款，最後影響你個人信貸記錄，甚至被檢控。
       </div>
 
       <p>所以我想寫呢篇文，用最白話嘅方式，講解香港有限公司撤銷註冊（行內叫 Strike-off / 除名）嘅完整流程。無論你係打算 close 公司、定係諗緊將來點處理，呢篇文都幫到你。</p>
@@ -193,22 +195,22 @@
       <p>先講最重要嘅嘢：唔係間間公司都可以用撤銷註冊（Strike-off）方式解散。你需要符合以下所有條件：</p>
 
       <div class="step-card">
-        <p><span class="step-num">✓</span> <strong>公司已經停止營運</strong> — 至少 3 個月冇任何業務活動，冇交易、冇收入、冇支出</p>
+        <p><span class="step-num"><i data-lucide="check" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>公司已經停止營運</strong> — 至少 3 個月冇任何業務活動，冇交易、冇收入、冇支出</p>
       </div>
       <div class="step-card">
-        <p><span class="step-num">✓</span> <strong>公司冇未償還債務</strong> — 所有債主已經找清，冇欠銀行、供應商、員工任何錢</p>
+        <p><span class="step-num"><i data-lucide="check" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>公司冇未償還債務</strong> — 所有債主已經找清，冇欠銀行、供應商、員工任何錢</p>
       </div>
       <div class="step-card">
-        <p><span class="step-num">✓</span> <strong>公司有償付能力</strong> — 資產多過負債，有能力清還所有債務</p>
+        <p><span class="step-num"><i data-lucide="check" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>公司有償付能力</strong> — 資產多過負債，有能力清還所有債務</p>
       </div>
       <div class="step-card">
-        <p><span class="step-num">✓</span> <strong>全體股東同意</strong> — 所有股東書面同意公司撤銷註冊</p>
+        <p><span class="step-num"><i data-lucide="check" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>全體股東同意</strong> — 所有股東書面同意公司撤銷註冊</p>
       </div>
       <div class="step-card">
-        <p><span class="step-num">✓</span> <strong>公司冇涉及任何法律訴訟</strong> — 冇被起诉、冇仲裁、冇被调查</p>
+        <p><span class="step-num"><i data-lucide="check" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>公司冇涉及任何法律訴訟</strong> — 冇被起诉、冇仲裁、冇被调查</p>
       </div>
       <div class="step-card">
-        <p><span class="step-num">✓</span> <strong>已經處理好稅務</strong> — 已提交所有報稅表，繳清所有稅款，稅局願意發出「不反對撤銷註冊通知書」</p>
+        <p><span class="step-num"><i data-lucide="check" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>已經處理好稅務</strong> — 已提交所有報稅表，繳清所有稅款，稅局願意發出「不反對撤銷註冊通知書」</p>
       </div>
 
       <div class="callout-warning">
@@ -277,7 +279,7 @@
       </div>
 
       <div class="callout-success mt-6">
-        <strong>✅ 完成！</strong>收到公司註冊處嘅解散通知後，你就唔需要再交任何 Annual Return、商業登記、報稅。公司正式「畢業」。
+        <strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 完成！</strong>收到公司註冊處嘅解散通知後，你就唔需要再交任何 Annual Return、商業登記、報稅。公司正式「畢業」。
       </div>
 
       <h3>成個流程時間表</h3>
@@ -329,27 +331,27 @@
       <p>以下係我同朋友們親身經歷過嘅錯誤，希望你唔好再犯：</p>
 
       <div class="callout-danger">
-        <p><strong>❌ 錯誤 1：以為公司冇營運就唔使再報稅</strong></p>
+        <p><strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 1：以為公司冇營運就唔使再報稅</strong></p>
         <p>呢個係最多人中招嘅錯誤。就算公司零收入，你仍然需要每年提交利得稅報稅表（Profits Tax Return）。如果唔交，稅局可以發出估計評稅，罰款仲會累積。我當初就係咁，等申請撒銷註冊嗰陣先發現有幾年未報稅，要一次過補交晒，搞到成個流程延遲咗 4 個月。</p>
       </div>
 
       <div class="callout-danger">
-        <p><strong>❌ 錯誤 2：申請撒銷期間繼續營運</strong></p>
+        <p><strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 2：申請撒銷期間繼續營運</strong></p>
         <p>遞交申請之後，公司必須保持停止營運狀態。如果你喺申請期間仲有交易（例如收一張支票），稅局或者公司註冊處可以拒絕申請。我有個朋友就係因為申請期間收咗一筆應收賬款，成個申請要重新嚟過。</p>
       </div>
 
       <div class="callout-danger">
-        <p><strong>❌ 錯誤 3：冇處理好公司印章</strong></p>
+        <p><strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 3：冇處理好公司印章</strong></p>
         <p>公司解散後，公司印章理論上要銷毀或者歸還。唔好就咁掉喺抽屜，有人會拎去亂用。正式做法係董事見證下銷毀，並記錄銷毀日期同方式。</p>
       </div>
 
       <div class="callout-danger">
-        <p><strong>❌ 錯誤 4：以為公司解散咗就可以掉晒所有文件</strong></p>
+        <p><strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 4：以為公司解散咗就可以掉晒所有文件</strong></p>
         <p>根據公司條例，公司嘅會計記錄需要保存最少 7 年（由交易日期起計）。就算公司已經解散，董事個人仍然有責任保存相關記錄。我建議保存公司文件最少 7 年先銷毀。</p>
       </div>
 
       <div class="callout-danger">
-        <p><strong>❌ 錯誤 5：搞錯撒銷註冊同清盤嘅分別</strong></p>
+        <p><strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 5：搞錯撒銷註冊同清盤嘅分別</strong></p>
         <p>有啲公司明明有債務，但係想用撒銷註冊嚟避債。呢個係違法嘅！撒銷註冊只適用於冇債務、有償付能力嘅公司。有債務嘅公司必須用清盤程序，否則董事可能要承擔個人法律責任。</p>
       </div>
     </section>
@@ -469,7 +471,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

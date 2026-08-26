@@ -117,12 +117,14 @@
     "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body>
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -132,7 +134,7 @@
     <div class="text-sm text-gold mb-3">📄 文章 · 2026年6月6日</div>
     <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-3">香港公司集團架構終極指南</h1>
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 
@@ -187,7 +189,7 @@
       <p>開第一間公司嗰陣乜都唔識，得一個生意。後來擴展到第二個業務，我順手就開多一間公司，用同一個股東名單。結果幾年後先知，原來我可以 set 控股公司架構，可以更有效地保護資產、慳稅、甚至將來賣盤都容易啲。</p>
 
       <div class="callout-warning">
-        <strong>⚠️ 真實經驗：</strong>我當初冇 set 集團架構，結果其中一間公司被人告，另一間公司嘅資產理論上都有風險——雖然係獨立法律實體，但同一班股東嘅情況下，銀行同供應商睇你成個 group 嘅信譽，一間出事會影響晒。
+        <strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 真實經驗：</strong>我當初冇 set 集團架構，結果其中一間公司被人告，另一間公司嘅資產理論上都有風險——雖然係獨立法律實體，但同一班股東嘅情況下，銀行同供應商睇你成個 group 嘅信譽，一間出事會影響晒。
       </div>
 
       <p>呢篇文我會用最白話嘅方式，由基本概念講起，到實際點樣搭集團架構，再講稅務安排。目標係令你以後聽到「集團公司」呢四個字唔會覺得高深，反而知道點樣運用。</p>
@@ -218,9 +220,9 @@
 
       <div class="callout-info">
         <strong>💡 快速記憶：</strong><br>
-        • 控股公司 → 持有其他公司股份嗰間（上面嗰間）<br>
-        • 子公司 → 被持有股份嗰間（下面嗰間）<br>
-        • 關聯公司 → 同一老細但冇互相持股嘅公司（打橫嘅關係）
+        • 控股公司 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 持有其他公司股份嗰間（上面嗰間）<br>
+        • 子公司 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 被持有股份嗰間（下面嗰間）<br>
+        • 關聯公司 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 同一老細但冇互相持股嘅公司（打橫嘅關係）
       </div>
     </section>
 
@@ -233,7 +235,7 @@
       <p>但如果唔同業務分開子公司，A 子公司出事，B 子公司嘅資產係獨立嘅，完全唔會俾人凍結或追討。</p>
 
       <div class="callout-success">
-        <strong>✅ 真實案例：</strong>我有個朋友做飲食業，一間公司做餐廳（高風險），另一間公司 hold 緊佢嘅物業（低風險）。後來餐廳被人告食物中毒，好在物業嗰間公司完全冇事，因為係獨立子公司。
+        <strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 真實案例：</strong>我有個朋友做飲食業，一間公司做餐廳（高風險），另一間公司 hold 緊佢嘅物業（低風險）。後來餐廳被人告食物中毒，好在物業嗰間公司完全冇事，因為係獨立子公司。
       </div>
 
       <h3>好處 2：將來的靈活性（賣盤/集資）</h3>
@@ -247,7 +249,7 @@
       <p>集團架構可以讓你更靈活安排利潤。例如：一間子公司賺錢、另一間蝕錢，集團可以考慮利潤轉移嘅安排。控股公司可以收子公司嘅股息，而香港冇股息稅。持有海外業務嘅控股公司仲可以用外地收入豁免徵稅（FSIE）制度。</p>
 
       <div class="callout-warning">
-        <strong>⚠️ 注意：</strong>稅務安排一定要有商業實質（Commercial Substance），唔可以純粹為咗避稅而 set 架構。稅局會睇你有冇實際營運、有冇員工、有冇辦公室。否則會被視為濫用安排，追討返稅款。
+        <strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 注意：</strong>稅務安排一定要有商業實質（Commercial Substance），唔可以純粹為咗避稅而 set 架構。稅局會睇你有冇實際營運、有冇員工、有冇辦公室。否則會被視為濫用安排，追討返稅款。
       </div>
     </section>
 
@@ -259,9 +261,9 @@
       <h3>模式一：一間控股 + 多間營運子公司（最推薦）</h3>
       <div class="chart-box">
         <div class="level">你（個人股東）</div>
-        <div class="arrow">⬇ 100%</div>
+        <div class="arrow"><i data-lucide="arrow-down" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 100%</div>
         <div class="level">控股有限公司（Holding Company）</div>
-        <div class="arrow">⬇ 100%</div>
+        <div class="arrow"><i data-lucide="arrow-down" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 100%</div>
         <div class="level sub">子公司 A（餐飲）</div>
         <div class="level sub" style="margin-left: 1rem;">子公司 B（物業）</div>
         <div class="level sub" style="margin-left: 1rem;">子公司 C（電商）</div>
@@ -271,7 +273,7 @@
       <h3>模式二：同一股東持有多間關聯公司（最簡單）</h3>
       <div class="chart-box">
         <div class="level">你（個人股東）</div>
-        <div class="arrow">⬇ 100%</div>
+        <div class="arrow"><i data-lucide="arrow-down" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 100%</div>
         <div class="level sub">公司 A（業務 1）</div>
         <div style="margin: 0.25rem 0;">── 關聯關係 ──</div>
         <div class="level sub">公司 B（業務 2）</div>
@@ -281,9 +283,9 @@
       <h3>模式三：控股公司 + 海外子公司（跨境集團）</h3>
       <div class="chart-box">
         <div class="level">你（個人股東）</div>
-        <div class="arrow">⬇ 100%</div>
+        <div class="arrow"><i data-lucide="arrow-down" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 100%</div>
         <div class="level">香港控股公司</div>
-        <div class="arrow">⬇</div>
+        <div class="arrow"><i data-lucide="arrow-down" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></div>
         <div class="level sub">香港營運公司</div>
         <div class="level sub" style="margin-left: 1rem;">海外子公司（例如 BVI / Singapore）</div>
       </div>
@@ -311,7 +313,7 @@
       </ul>
 
       <div class="callout-danger">
-        <strong>⚠️ 重要提醒：</strong>所有集團內部交易都要符合「公平原則」（Arm's Length Principle），即係定價要同市場價格一致。稅局好重視轉讓定價（Transfer Pricing），如果發現集團內部交易價格唔合理，可以調整稅款兼罰款。
+        <strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 重要提醒：</strong>所有集團內部交易都要符合「公平原則」（Arm's Length Principle），即係定價要同市場價格一致。稅局好重視轉讓定價（Transfer Pricing），如果發現集團內部交易價格唔合理，可以調整稅款兼罰款。
       </div>
 
       <h3>外地收入豁免徵稅（FSIE）</h3>
@@ -350,27 +352,27 @@
       <h2>7. 常見錯誤（我親身見過嘅）</h2>
 
       <div class="callout-danger">
-        <strong>❌ 錯誤 1：以為開咗控股公司就可以自動保護資產</strong>
+        <strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 1：以為開咗控股公司就可以自動保護資產</strong>
         <p>控股公司架構唔係「自動保護」機制。如果子公司簽約嗰陣，對方要求控股公司做擔保人（Personal Guarantee），咁控股公司都要負責。好多銀行貸款都會要求控股公司做擔保，咁就冇咗資產保護嘅作用。</p>
       </div>
 
       <div class="callout-danger">
-        <strong>❌ 錯誤 2：控股公司冇商業實質</strong>
+        <strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 2：控股公司冇商業實質</strong>
         <p>控股公司淨係得個名，冇辦公室、冇員工、冇銀行戶口、冇董事會議。咁樣稅局唔會承認呢個集團架構，FSIE 免稅用唔到，銀行開戶都難。控股公司最起碼要有：銀行戶口、董事、registered address、每年做返啲董事會會議紀錄。</p>
       </div>
 
       <div class="callout-danger">
-        <strong>❌ 錯誤 3：集團內部交易亂咁定價</strong>
+        <strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 3：集團內部交易亂咁定價</strong>
         <p>「子公司 A 收子公司 B HK$100 萬顧問費，但其實係同一班人做」— 稅局一查就知有問題。所有集團內部交易一定要有合約、有合理定價、有實際服務。否則會被視為「利潤轉移」，追討稅款。</p>
       </div>
 
       <div class="callout-danger">
-        <strong>❌ 錯誤 4：忘記申報關聯公司資料</strong>
+        <strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 4：忘記申報關聯公司資料</strong>
         <p>如果你有多間關聯公司，喺稅務申報時要披露關聯交易。公司註冊處嘅重要控制人登記冊（SCR）都要記錄每一間公司嘅「重大控制人」。忽略呢啲申報要求，可能會被罰款。</p>
       </div>
 
       <div class="callout-danger">
-        <strong>❌ 錯誤 5：為慳稅而 set 集團架構，但冇實際商業需要</strong>
+        <strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 5：為慳稅而 set 集團架構，但冇實際商業需要</strong>
         <p>稅局唔傻。如果你 set 集團架構純粹為咗將利潤由一間公司搬到另一間，而冇實際商業原因（例如：業務多元化、風險管理、將來賣盤），稅局可以無視你嘅集團安排，直接按實際情況評稅。</p>
       </div>
     </section>
@@ -394,7 +396,7 @@
       </div>
 
       <div class="callout-success">
-        <strong>✅ 建議：</strong>如果你嘅年收入低於 HK$500 萬，或者業務好簡單（得一兩個客戶），集中火力搞生意好過搞架構。到業務擴展到第二個方向、或者年收入過千萬，先認真考慮集團架構。
+        <strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 建議：</strong>如果你嘅年收入低於 HK$500 萬，或者業務好簡單（得一兩個客戶），集中火力搞生意好過搞架構。到業務擴展到第二個方向、或者年收入過千萬，先認真考慮集團架構。
       </div>
     </section>
 
@@ -494,7 +496,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

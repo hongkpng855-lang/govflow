@@ -79,6 +79,8 @@
     "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-50 text-gray-900 leading-relaxed">
 
@@ -86,7 +88,7 @@
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -103,7 +105,7 @@
         🔄 香港有限公司股份回購（Share Buyback）終極指南 2026
       </h1>
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 
@@ -124,7 +126,7 @@
     <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-center text-sm">
       <span class="text-navy font-semibold">🏢 律師樓搞股份回購報價</span>
       <span class="line-through text-gray-400 mx-2">$20,000+</span>
-      <span class="text-navy font-bold">→ 搞清楚程序自己跟進，律師費慳一半</span>
+      <span class="text-navy font-bold"><i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 搞清楚程序自己跟進，律師費慳一半</span>
     </div>
   </div>
 
@@ -154,7 +156,7 @@
       </p>
 
       <div class="bg-red-50 border border-red-200 rounded-lg p-4 my-6">
-        <p class="text-red-800 font-semibold">⚠️ 唔跟程序做嘅後果：</p>
+        <p class="text-red-800 font-semibold"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔跟程序做嘅後果：</p>
         <ul class="text-red-700 mt-2">
           <li>回購無效 — 股份轉讓唔到名，錢又俾咗出去</li>
           <li>董事個人承擔賠償責任</li>
@@ -194,7 +196,7 @@
       </div>
 
       <!-- Section 2 -->
-      <h2>⚖️ 回購嘅資金來源（最重要嘅限制）</h2>
+      <h2><i data-lucide="scale" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 回購嘅資金來源（最重要嘅限制）</h2>
       <p>呢個係最多人忽略嘅重點。公司回購股份一定要用指定資金，唔係話公司有錢就得。</p>
 
       <p>根據《公司條例》第 241 條，回購資金只能嚟自：</p>
@@ -211,22 +213,22 @@
           <tbody class="divide-y divide-gray-200">
             <tr class="bg-white hover:bg-gray-50">
               <td class="p-3 font-medium">可分派利潤（Distributable Profits）</td>
-              <td class="p-3 text-green-600 font-semibold">✅ 可以（最主流）</td>
+              <td class="p-3 text-green-600 font-semibold"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 可以（最主流）</td>
               <td class="p-3">用公司賺咗嘅錢回購，最常見嘅做法</td>
             </tr>
             <tr class="bg-gray-50 hover:bg-gray-100">
               <td class="p-3 font-medium">發行新股集資所得</td>
-              <td class="p-3 text-green-600 font-semibold">✅ 可以</td>
+              <td class="p-3 text-green-600 font-semibold"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 可以</td>
               <td class="p-3">用新發行股份嘅錢去回購舊股（Refinancing）</td>
             </tr>
             <tr class="bg-white hover:bg-gray-50">
               <td class="p-3 font-medium">資本（Capital）</td>
-              <td class="p-3 text-amber-600 font-semibold">⚠️ 有限制</td>
+              <td class="p-3 text-amber-600 font-semibold"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 有限制</td>
               <td class="p-3">私人有限公司可以，但要董事簽 Solvency Statement</td>
             </tr>
             <tr class="bg-gray-50 hover:bg-gray-100">
               <td class="p-3 font-medium">公司營運資金（Working Capital）</td>
-              <td class="p-3 text-red-600 font-semibold">❌ 唔可以直接用</td>
+              <td class="p-3 text-red-600 font-semibold"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔可以直接用</td>
               <td class="p-3">回購後公司必須仍然有足夠營運資金</td>
             </tr>
           </tbody>
@@ -262,7 +264,7 @@
       <p>以下內容集中講 <strong>私人有限公司嘅場外回購（Off-Market Buyback）</strong>，因為呢個係香港最多中小企需要嘅。</p>
 
       <!-- Section 4: Procedure -->
-      <h2>✅ 完整程序（Off-Market Buyback）</h2>
+      <h2><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 完整程序（Off-Market Buyback）</h2>
 
       <h3>Step 1：確認資金來源</h3>
       <p>先確定公司有足夠嘅 Distributable Profits 或者其他合法資金。叫會計師/核數師出份 Distributable Profits 計算表，確認可用金額。</p>
@@ -294,7 +296,7 @@
       </ul>
 
       <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 my-6">
-        <p class="text-amber-800 font-semibold">⚠️ 被回購股東唔可以投票</p>
+        <p class="text-amber-800 font-semibold"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 被回購股東唔可以投票</p>
         <p class="text-amber-700 mt-1">呢個係好多人中招嘅位。有間公司得兩個股東，各持 50%。A 想買 B 嘅股份，叫 B 投票贊成。但 B 係被回購方，唔可以投票。結果得 A 一個人投票（50%），唔夠 75% 嘅門檻，特別決議通過唔到。</p>
         <p class="text-amber-700 mt-1"><strong>解決方法：</strong> 如果兩個股東各持 50%，實務上會用「書面協議」（Unanimous Written Resolution）代替特別決議。全體股東書面同意，就可以繞過投票門檻。但被回購嘅股東仍然要簽同意書。</p>
       </div>
@@ -383,7 +385,7 @@
           <li><strong>溢價部分（Premium over Cost）</strong> — 即係多過原本買入價嘅部分，稅局可能會當係股息收入</li>
         </ul>
         <div class="bg-amber-50 border border-amber-200 rounded p-3 mt-3">
-          <p class="text-amber-800 font-semibold">⚠️ 重要提醒：</p>
+          <p class="text-amber-800 font-semibold"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 重要提醒：</p>
           <p class="text-amber-700">稅局對「disguised dividend distribution」好敏感。如果回購價格明顯高過公平市值（Fair Market Value），稅局會 challenge 呢個係變相派息，要股東補交利得稅。</p>
           <p class="text-amber-700 mt-1"><strong>建議：</strong> 回購前做 Valuation，確保價格合理。如果金額大，最好申請稅局 Pre-assessment（事先裁定）。</p>
         </div>
@@ -398,7 +400,7 @@
         </ul>
         <p>咩情況下交 $5？如果回購價格係名義價格（Nominal Value），例如每股 $0.1，就可以用固定稅率。但實務上多數以市價回購，所以要交 0.2%。</p>
         <div class="bg-green-50 border border-green-200 rounded p-3 mt-3">
-          <p class="text-green-800 font-semibold">✅ 慳印花稅貼士：</p>
+          <p class="text-green-800 font-semibold"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 慳印花稅貼士：</p>
           <p class="text-green-700">如果回購股份嘅面值（Par Value）好低（例如 $0.1），而且回購係「資本重組」性質，可以同印花稅署申請固定 $5 稅率。但前提係回購唔涉及溢價（Premium）。</p>
         </div>
       </div>
@@ -515,31 +517,31 @@
       </div>
 
       <!-- Checklist -->
-      <h2>✅ 股份回購 Checklist</h2>
+      <h2><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 股份回購 Checklist</h2>
       <p>跟住呢個清單逐項做，就唔會漏：</p>
 
       <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6">
         <ul class="space-y-3">
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 確認公司足夠 Distributable Profits 或替代資金</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 做公司 Valuation，確定公平回購價格</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 董事會通過回購決議</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 確認被回購股東唔會參與投票</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 發出 21 日股東會通知（或全體書面同意縮短）</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 股東通過特別決議（≥ 75% 其餘股東贊成）</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 簽署正式回購協議</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 付款 + 收回股份證明書</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 完成後 15 日內提交 <strong>表格 NSC2</strong> 去公司註冊處</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 開立 Capital Redemption Reserve（如有需要）</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 更新股東名冊 + SCR</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 更新公司章程（如有需要）</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 通知核數師</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 處理印花稅</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 評估是否需要稅局 Pre-assessment</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 確認公司足夠 Distributable Profits 或替代資金</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 做公司 Valuation，確定公平回購價格</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 董事會通過回購決議</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 確認被回購股東唔會參與投票</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 發出 21 日股東會通知（或全體書面同意縮短）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 股東通過特別決議（≥ 75% 其餘股東贊成）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 簽署正式回購協議</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 付款 + 收回股份證明書</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 完成後 15 日內提交 <strong>表格 NSC2</strong> 去公司註冊處</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 開立 Capital Redemption Reserve（如有需要）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 更新股東名冊 + SCR</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 更新公司章程（如有需要）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 通知核數師</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 處理印花稅</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 評估是否需要稅局 Pre-assessment</li>
         </ul>
       </div>
 
       <!-- FAQ -->
-      <h2>❓ 常見問題</h2>
+      <h2><i data-lucide="circle-help" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見問題</h2>
 
       <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6">
         <h3 class="text-lg font-bold text-navy mt-0">Q：公司可唔可以回購全部股份，得返我一個股東？</h3>
@@ -614,7 +616,7 @@
         <p class="text-sm text-gray-600 mt-1">我哋嘅完整指南幫你搞掂所有文件，避免被政府退回</p>
         <div class="flex flex-col sm:flex-row gap-3 justify-center mt-4">
           <a href="/shareholder-transfer/" class="inline-flex items-center gap-2 bg-navy text-white font-bold px-6 py-3 rounded-xl hover:bg-navy-light transition shadow text-sm">
-            <i data-lucide='book-open' class='w-4 h-4 inline-block'></i> 免費睇 Step 1 →
+            <i data-lucide='book-open' class='w-4 h-4 inline-block'></i> 免費睇 Step 1 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
           </a>
           <a href="https://1714457598663.gumroad.com/l/wkjykk" target="_blank" class="inline-flex items-center gap-2 bg-gold text-navy font-bold px-6 py-3 rounded-xl hover:bg-gold-light transition shadow text-sm">
             🔓 解鎖完整指南 HK$149
@@ -655,7 +657,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

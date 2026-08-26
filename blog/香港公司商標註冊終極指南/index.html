@@ -151,14 +151,16 @@
   ]
 }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body>
 
   <!-- ═══════════════ Navigation ═══════════════ -->
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 返回網誌</a>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回網誌</a>
     </div>
   </nav>
 
@@ -184,7 +186,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </section>
@@ -267,7 +269,7 @@
 
       <h3>點樣查冊？</h3>
       <ol>
-        <li>去香港知識產權署官網 → <strong>商標註冊處</strong></li>
+        <li>去香港知識產權署官網 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>商標註冊處</strong></li>
         <li>用「網上檢索系統」（IPD Online Search）免費查冊</li>
         <li>輸入你想註冊嘅商標名稱</li>
         <li>睇下有冇相同或近似嘅已註冊商標</li>
@@ -336,7 +338,7 @@
       </table>
 
       <div class="flag-item">
-        <p><strong>⚠️ 常見錯誤：</strong>好多公司只註冊 Class 35（零售服務），但唔記得註冊埋自己實際做緊嘅產品類別。例如你係餐廳，以為 Class 43 就得，但如果你有自家醬料產品賣，就要註冊 Class 29（食品類）。我 friend 就係咁——餐廳名俾人註冊咗 Class 29 嘅醬料品牌，結果佢想賣自家辣醬都唔得。</p>
+        <p><strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見錯誤：</strong>好多公司只註冊 Class 35（零售服務），但唔記得註冊埋自己實際做緊嘅產品類別。例如你係餐廳，以為 Class 43 就得，但如果你有自家醬料產品賣，就要註冊 Class 29（食品類）。我 friend 就係咁——餐廳名俾人註冊咗 Class 29 嘅醬料品牌，結果佢想賣自家辣醬都唔得。</p>
       </div>
 
       <h3>點樣揀類別？</h3>
@@ -353,7 +355,7 @@
 
       <h3>網上申請步驟：</h3>
       <ol>
-        <li>去 IPD 官網 → 網上申請系統（e-filing）</li>
+        <li>去 IPD 官網 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 網上申請系統（e-filing）</li>
         <li>建立帳戶（如果第一次用）</li>
         <li>填寫申請表：申請人名稱、地址、商標圖樣、類別清單</li>
         <li>上載商標圖樣（JPEG 格式，建議 5-10cm 清晰圖）</li>
@@ -442,7 +444,7 @@
       <p>如果有人反對，你需要回應反對通知書，可能要請律師協助。不過反對情況喺香港唔算常見，如果你嘅查冊做得夠徹底，通常唔會有問題。</p>
 
       <!-- Step 6: Registration -->
-      <h2>✅ Step 6：成功註冊！</h2>
+      <h2><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> Step 6：成功註冊！</h2>
       <p>公告期過咗冇人反對，恭喜你！商標註冊處會發出 <strong>註冊證明書</strong>（Certificate of Registration）。</p>
 
       <p>香港商標註冊有效期為 <strong>10 年</strong>，之後可以每 10 年續期一次（續期費 HK$3,000 一個類別）。</p>
@@ -459,30 +461,30 @@
       </ul>
 
       <!-- Common Mistakes -->
-      <h2>⚠️ 最常見嘅 5 個商標註冊錯誤</h2>
+      <h2><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 最常見嘅 5 個商標註冊錯誤</h2>
 
       <div class="flag-item">
-        <p><strong>❌ 錯誤 1：唔做查冊就直接申請</strong><br />
+        <p><strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 1：唔做查冊就直接申請</strong><br />
         呢個係最常見、最浪費錢嘅錯誤。我見過好多人衝衝忙 submit，結果俾人 reject，HK$1,300 就咁冇咗。查冊係免費嘅，花一日時間做好查冊可以慳返好多錢。</p>
       </div>
 
       <div class="flag-item">
-        <p><strong>❌ 錯誤 2：揀錯類別 / 揀得太窄</strong><br />
+        <p><strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 2：揀錯類別 / 揀得太窄</strong><br />
         例如你係做 App 嘅，淨係註冊 Class 9（軟件），但冇註冊 Class 42（科技服務同軟件開發）。結果你嘅競爭對手可以用你個名嚟提供軟件開發服務，而你告唔到佢。</p>
       </div>
 
       <div class="flag-item">
-        <p><strong>❌ 錯誤 3：商品/服務清單寫得太闊</strong><br />
+        <p><strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 3：商品/服務清單寫得太闊</strong><br />
         「所有服務」呢類描述一定會被審查官 challenge。建議逐項列出你實際會提供嘅產品/服務，參考同業成功註冊嘅清單。</p>
       </div>
 
       <div class="flag-item">
-        <p><strong>❌ 錯誤 4：以為公司名 = 商標保護</strong><br />
+        <p><strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 4：以為公司名 = 商標保護</strong><br />
         好多人覺得喺公司註冊處註冊咗公司名，就等於保護咗個品牌。錯！公司註冊同商標註冊係兩個完全獨立嘅系統。公司註冊處唔會 check 你個名有冇侵犯他人商標權。</p>
       </div>
 
       <div class="flag-item">
-        <p><strong>❌ 錯誤 5：註冊咗就唔理</strong><br />
+        <p><strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 5：註冊咗就唔理</strong><br />
         商標註冊後要持續使用。如果連續 3 年冇使用，第三方可以申請撤銷你嘅註冊。所以註冊咗之後一定要 keep 住用，同埋 save 低使用證據（發票、廣告、包裝等）。</p>
       </div>
 
@@ -555,7 +557,7 @@
       </table>
 
       <!-- FAQ -->
-      <h2>❓ 常見問題 FAQ</h2>
+      <h2><i data-lucide="circle-help" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見問題 FAQ</h2>
 
       <h3>1. 我申請咗商標之後，係咪全世界都受到保護？</h3>
       <p>唔係。香港商標註冊只喺香港境內有效。如果你需要國際保護，可以：</p>
@@ -616,7 +618,7 @@
         <p class="text-center">ESGov 有唔少關於公司保護同合規嘅實戰指南，全部由真實經歷者撰寫：</p>
         <div class="grid sm:grid-cols-2 gap-4 my-6 text-left">
           <a href="/blog/香港有限公司董事法律責任終極指南/" class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:shadow-md hover:border-gold/30 transition-all group">
-            <div class="text-2xl mb-2">⚖️</div>
+            <div class="text-2xl mb-2"><i data-lucide="scale" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></div>
             <h3 class="font-bold text-navy !mt-0 !mb-1 group-hover:text-gold transition-colors">董事法律責任指南</h3>
             <p class="text-sm !mb-0">做有限公司董事有咩法律風險？</p>
           </a>
@@ -638,7 +640,7 @@
         </div>
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
           <a href="/blog/" class="inline-flex items-center gap-2 text-sm font-semibold text-navy bg-white border-2 border-navy/20 hover:border-gold/40 hover:text-gold transition rounded-xl px-6 py-3 shadow-sm">
-            📚 睇更多文章 →
+            📚 睇更多文章 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
           </a>
           <a href="/" class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-navy hover:bg-navy-light transition rounded-xl px-6 py-3 shadow-sm">
             🏠 返回 ESGov 首頁
@@ -675,7 +677,7 @@
         全部由真實經歷者撰寫，幫你避開公司文件嘅陷阱
       </p>
       <a href="/blog/" class="btn-gov btn-gov-preview">
-        <i data-lucide='book-open' class='w-4 h-4 inline-block'></i> 瀏覽所有文章 →
+        <i data-lucide='book-open' class='w-4 h-4 inline-block'></i> 瀏覽所有文章 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
       </a>
     </div>
   </section>
@@ -691,7 +693,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -711,7 +713,7 @@
       </div>
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">
-          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          <i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
           如有具體法律問題，請諮詢執業律師或知識產權代理人。
         </p>
         <p>© 2026 ESGov. All rights reserved.</p>

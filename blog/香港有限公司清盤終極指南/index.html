@@ -196,6 +196,8 @@
     "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-50">
 
@@ -203,7 +205,7 @@
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -234,7 +236,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </header>
@@ -296,7 +298,7 @@
               還清債務、然後將剩餘資產分配俾股東，最後公司正式解散（dissolution）。
             </p>
             <p>
-              簡單講：<strong>清盤 = 變賣資產 → 還債 → 分錢 → 正式死亡</strong>
+              簡單講：<strong>清盤 = 變賣資產 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 還債 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 分錢 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 正式死亡</strong>
             </p>
             <p>
               清盤完結之後，公司喺法律上完全唔存在，董事責任亦正式終止。
@@ -344,9 +346,9 @@
                   </tr>
                   <tr class="border-b border-gray-100">
                     <td class="py-2 pr-2 font-medium text-gray-600">償付能力</td>
-                    <td class="py-2 px-2">✅ 有（Solvent）</td>
-                    <td class="py-2 px-2">❌ 冇（Insolvent）</td>
-                    <td class="py-2 pl-2">❌ 冇（Insolvent）</td>
+                    <td class="py-2 px-2"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 有（Solvent）</td>
+                    <td class="py-2 px-2"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 冇（Insolvent）</td>
+                    <td class="py-2 pl-2"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 冇（Insolvent）</td>
                   </tr>
                   <tr class="border-b border-gray-100">
                     <td class="py-2 pr-2 font-medium text-gray-600">清盤人邊個揀</td>
@@ -356,9 +358,9 @@
                   </tr>
                   <tr>
                     <td class="py-2 pr-2 font-medium text-gray-600">法院參與</td>
-                    <td class="py-2 px-2">❌ 唔需要</td>
-                    <td class="py-2 px-2">❌ 唔需要</td>
-                    <td class="py-2 pl-2">✅ 需要</td>
+                    <td class="py-2 px-2"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔需要</td>
+                    <td class="py-2 px-2"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔需要</td>
+                    <td class="py-2 pl-2"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 需要</td>
                   </tr>
                 </tbody>
               </table>
@@ -434,7 +436,7 @@
               <li>董事需要準備一份 <strong>公司事務陳述書（Statement of Affairs）</strong>，詳細列明資產、負債同債權人資料</li>
             </ul>
             <div class="warn-box">
-              <p class="font-semibold text-red-800">⚠️ 董事注意</p>
+              <p class="font-semibold text-red-800"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 董事注意</p>
               <p class="text-sm text-red-700">
                 如果公司資不抵債仍然繼續營運、簽新合約或者提取資金，董事有可能要為<strong>不當交易（Wrongful Trading）</strong>負個人責任。
                 覺得公司救唔返就應該及早行動，越拖責任越大。
@@ -469,7 +471,7 @@
               <li><strong>解散</strong> — 清盤完成，公司解散</li>
             </ol>
             <div class="warn-box">
-              <p class="font-semibold text-red-800">⚠️ 強制清盤對董事嘅影響</p>
+              <p class="font-semibold text-red-800"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 強制清盤對董事嘅影響</p>
               <p class="text-sm text-red-700">
                 強制清盤唔係 closing 咁簡單。破產管理署會調查公司倒閉原因，如果發現董事有<strong>不當行為（如欺詐交易、不當交易、挪用資金）</strong>，
                 董事可能被取消擔任董事資格（最長 15 年）、被命令個人賠償、甚至被刑事檢控。
@@ -512,8 +514,8 @@
                   </tr>
                   <tr class="border-b border-gray-100">
                     <td class="py-2 pr-2 font-medium text-gray-600">委任清盤人</td>
-                    <td class="py-2 px-2">❌ 唔需要</td>
-                    <td class="py-2 pl-2">✅ 需要</td>
+                    <td class="py-2 px-2"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔需要</td>
+                    <td class="py-2 pl-2"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 需要</td>
                   </tr>
                   <tr>
                     <td class="py-2 pr-2 font-medium text-gray-600">憲報公告</td>
@@ -545,35 +547,35 @@
                 <div class="w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">1</div>
                 <div>
                   <p class="font-semibold text-navy">第 1-2 週：準備階段</p>
-                  <p class="text-sm text-gray-600">董事會議 → 財務審查 → 準備償付能力聲明 → 核數師確認財務報表</p>
+                  <p class="text-sm text-gray-600">董事會議 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 財務審查 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 準備償付能力聲明 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 核數師確認財務報表</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
                 <div class="w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">2</div>
                 <div>
                   <p class="font-semibold text-navy">第 3-5 週：股東決議</p>
-                  <p class="text-sm text-gray-600">發出股東大會通告（21 日通知期）→ 召開股東大會 → 通過清盤特別決議 → 委任清盤人</p>
+                  <p class="text-sm text-gray-600">發出股東大會通告（21 日通知期）<i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 召開股東大會 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 通過清盤特別決議 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 委任清盤人</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
                 <div class="w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">3</div>
                 <div>
                   <p class="font-semibold text-navy">第 5-6 週：通告階段</p>
-                  <p class="text-sm text-gray-600">憲報通告 → 兩份報紙刊登通告（中文 + 英文）→ 通知公司註冊處</p>
+                  <p class="text-sm text-gray-600">憲報通告 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 兩份報紙刊登通告（中文 + 英文）<i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 通知公司註冊處</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
                 <div class="w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">4</div>
                 <div>
                   <p class="font-semibold text-navy">第 6-24 週：清盤期</p>
-                  <p class="text-sm text-gray-600">清點資產 → 收數 → 賣資產 → 還債 → 處理未完成合約 → 保留儲備應付未申報債權</p>
+                  <p class="text-sm text-gray-600">清點資產 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 收數 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 賣資產 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 還債 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 處理未完成合約 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 保留儲備應付未申報債權</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
                 <div class="w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">5</div>
                 <div>
                   <p class="font-semibold text-navy">最後階段：解散</p>
-                  <p class="text-sm text-gray-600">清盤人準備最終帳目 → 召開最終股東大會 → 提交最終報告俾公司註冊處 → 公司解散（約 3 個月後）</p>
+                  <p class="text-sm text-gray-600">清盤人準備最終帳目 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 召開最終股東大會 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 提交最終報告俾公司註冊處 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 公司解散（約 3 個月後）</p>
                 </div>
               </div>
             </div>
@@ -675,7 +677,7 @@
 
           <!-- ───────── FAQ ───────── -->
           <section id="faq">
-            <h2>❓ 常見問題（FAQ）</h2>
+            <h2><i data-lucide="circle-help" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見問題（FAQ）</h2>
 
             <h3>Q: 清盤期間董事仲有咩責任？</h3>
             <p>
@@ -762,7 +764,7 @@
         </a>
         <a href="/blog/香港有限公司董事法律責任終極指南/" class="block p-4 border border-gray-200 rounded-xl hover:border-gold/30 hover:shadow-md transition-all group">
           <div class="flex items-start gap-3">
-            <span class="text-2xl">⚖️</span>
+            <span class="text-2xl"><i data-lucide="scale" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
             <div>
               <h3 class="font-semibold text-navy group-hover:text-gold transition-colors text-sm">有限公司董事法律責任終極指南</h3>
               <p class="text-xs text-gray-400 mt-1">公司清盤前董事有咩責任同風險</p>
@@ -784,7 +786,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

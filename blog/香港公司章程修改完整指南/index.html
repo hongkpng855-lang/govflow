@@ -76,7 +76,9 @@
   ]
 }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body>
 
   <!-- ═══════════════ Navigation ═══════════════ -->
@@ -86,7 +88,7 @@
         <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" />
         <span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
       </a>
-      <a href="/#blog" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/#blog" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -102,7 +104,7 @@
         香港公司章程（Article of Association）修改完整指南
       </h1>
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 
@@ -111,7 +113,7 @@
         由特別決議點樣通過、NR1 點樣交，到公司註冊處審批流程，逐個步驟話你知。
       </p>
       <div class="flex flex-wrap gap-2 mt-6 text-sm text-gray-400">
-        <span>✍️ 由真實經歷者整理</span>
+        <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 由真實經歷者整理</span>
       </div>
     </div>
   </header>
@@ -128,9 +130,9 @@
         <a href="#filing-nr1" class="text-gray-600 hover:text-gold transition">5. 提交 NR1 文件</a>
         <a href="#cr-processing" class="text-gray-600 hover:text-gold transition">6. 公司註冊處審批流程</a>
         <a href="#after-approval" class="text-gray-600 hover:text-gold transition">7. 批准後要做嘅事</a>
-        <a href="#checklist" class="text-gray-600 hover:text-gold transition">✅ 修改章程完整 Checklist</a>
-        <a href="#common-mistakes" class="text-gray-600 hover:text-gold transition">⚠️ 常見錯誤</a>
-        <a href="#faq" class="text-gray-600 hover:text-gold transition">❓ FAQ</a>
+        <a href="#checklist" class="text-gray-600 hover:text-gold transition"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 修改章程完整 Checklist</a>
+        <a href="#common-mistakes" class="text-gray-600 hover:text-gold transition"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見錯誤</a>
+        <a href="#faq" class="text-gray-600 hover:text-gold transition"><i data-lucide="circle-help" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> FAQ</a>
       </nav>
     </div>
   </section>
@@ -206,7 +208,7 @@
           </div>
           <div class="bg-white rounded-xl p-5 border border-gray-200">
             <div class="flex items-start gap-3">
-              <span class="text-2xl shrink-0">⚖️</span>
+              <span class="text-2xl shrink-0"><i data-lucide="scale" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
               <div>
                 <h3 class="font-bold text-navy mb-1">改變董事權力</h3>
                 <p class="text-sm text-gray-600">例如想限制董事可以借貸嘅金額上限、或者改變董事會法定人數。</p>
@@ -225,7 +227,7 @@
         </div>
 
         <div class="bg-red-50 border-l-4 border-red-400 p-4 mb-6 rounded-r-lg">
-          <p class="text-sm text-red-800 font-medium">⚠️ 我嘅親身教訓</p>
+          <p class="text-sm text-red-800 font-medium"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 我嘅親身教訓</p>
           <p class="text-sm text-red-700">我試過以為「改少少嘢啫，唔使咁大陣仗」，直接 skip 咗特別決議就做咗決定。後來被會計師發現，話所有相關決定都冇法律效力，要重新嚟過。嗰陣先發現——<strong>公司章程唔係廢紙，係真係有法律約束力㗎。</strong></p>
         </div>
       </section>
@@ -250,7 +252,7 @@
 
         <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 rounded-r-lg">
           <p class="text-sm text-blue-800 font-medium">💡 一人公司都要做</p>
-          <p class="text-sm text-blue-700">即使你係一人公司，全部股份自己揸，改章程都<strong>必須</strong>跟足程序：開股東會（或者簽書面決議）→ 通過特別決議 → 提交 NR1。唔可以因為得自己一個就 skip。</p>
+          <p class="text-sm text-blue-700">即使你係一人公司，全部股份自己揸，改章程都<strong>必須</strong>跟足程序：開股東會（或者簽書面決議）<i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 通過特別決議 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 提交 NR1。唔可以因為得自己一個就 skip。</p>
         </div>
       </section>
 
@@ -313,7 +315,7 @@
                 <h3 class="font-bold text-navy mb-1">通過特別決議</h3>
                 <p class="text-sm text-gray-600">獲得 <strong>不少於 75%</strong> 嘅投票權贊成。如果股東係一人公司，一個人簽書面決議就得，但一樣要清楚寫明係特別決議。</p>
                 <div class="mt-3 bg-amber-50 rounded-lg p-3 text-xs text-amber-800">
-                  <span class="font-semibold">⚠️ 書面決議注意</span>：如果係書面決議代替股東會，<strong>所有有投票權嘅股東都必須簽署</strong>，唔可以有人冇簽。
+                  <span class="font-semibold"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 書面決議注意</span>：如果係書面決議代替股東會，<strong>所有有投票權嘅股東都必須簽署</strong>，唔可以有人冇簽。
                 </div>
               </div>
             </div>
@@ -375,7 +377,7 @@
         </div>
 
         <div class="bg-red-50 border-l-4 border-red-400 p-4 mb-6 rounded-r-lg">
-          <p class="text-sm text-red-800 font-medium">⚠️ 重要時限</p>
+          <p class="text-sm text-red-800 font-medium"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 重要時限</p>
           <p class="text-sm text-red-700">特別決議通過後 <strong>15 日內</strong> 必須提交 NR1。逾期提交公司註冊處會接受，但可能要求解釋點解遲交。</p>
         </div>
       </section>
@@ -395,14 +397,14 @@
             </div>
           </div>
           <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-gray-200">
-            <span class="text-2xl shrink-0">✅</span>
+            <span class="text-2xl shrink-0"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
             <div>
               <p class="font-bold text-navy">審批通過</p>
               <p class="text-sm text-gray-600">公司註冊處會發出確認信，表示修改已登記。章程修改由該日起生效。</p>
             </div>
           </div>
           <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-gray-200">
-            <span class="text-2xl shrink-0">❌</span>
+            <span class="text-2xl shrink-0"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
             <div>
               <p class="font-bold text-navy">被退回</p>
               <p class="text-sm text-gray-600">如果文件有問題（例如格式唔啱、內容抵觸公司條例），公司註冊處會退件並要求修正。修正後重新提交即可。</p>
@@ -456,7 +458,7 @@
 
       <!-- ══════ Checklist Section ══════ -->
       <section id="checklist" class="mt-12">
-        <h2 class="text-2xl font-bold text-navy mb-4">✅ 修改章程完整 Checklist</h2>
+        <h2 class="text-2xl font-bold text-navy mb-4"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 修改章程完整 Checklist</h2>
 
         <div class="bg-white border-2 border-gold/30 rounded-xl p-6 mb-6">
           <p class="text-sm text-gray-500 mb-4">跟住呢張清單做，唔會漏：</p>
@@ -507,12 +509,12 @@
 
       <!-- ══════ Common Mistakes ══════ -->
       <section id="common-mistakes" class="mt-12">
-        <h2 class="text-2xl font-bold text-navy mb-4">⚠️ 常見錯誤</h2>
+        <h2 class="text-2xl font-bold text-navy mb-4"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見錯誤</h2>
 
         <div class="space-y-4 mb-6">
           <div class="bg-red-50 rounded-xl p-5 border border-red-200">
             <div class="flex items-start gap-3">
-              <span class="text-red-500 text-xl shrink-0">❌</span>
+              <span class="text-red-500 text-xl shrink-0"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
               <div>
                 <p class="font-bold text-navy">用普通決議代替特別決議</p>
                 <p class="text-sm text-gray-600">以為超過 50% 就得，結果個修改係無效嘅。特別決議一定要至少 75%。</p>
@@ -521,7 +523,7 @@
           </div>
           <div class="bg-red-50 rounded-xl p-5 border border-red-200">
             <div class="flex items-start gap-3">
-              <span class="text-red-500 text-xl shrink-0">❌</span>
+              <span class="text-red-500 text-xl shrink-0"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
               <div>
                 <p class="font-bold text-navy">冇交 NR1 以為改咗</p>
                 <p class="text-sm text-gray-600">特別決議通過咗但冇提交 NR1，法律上章程冇改過。日後打官司或者做盡職調查會發現唔對路。</p>
@@ -530,7 +532,7 @@
           </div>
           <div class="bg-red-50 rounded-xl p-5 border border-red-200">
             <div class="flex items-start gap-3">
-              <span class="text-red-500 text-xl shrink-0">❌</span>
+              <span class="text-red-500 text-xl shrink-0"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
               <div>
                 <p class="font-bold text-navy">遲交 NR1</p>
                 <p class="text-sm text-gray-600">明知 15 日限期，但係「等得閒先處理」，結果過咗幾個月先交。雖然公司註冊處未必罰款，但係有記錄顯示你唔守法。</p>
@@ -539,7 +541,7 @@
           </div>
           <div class="bg-red-50 rounded-xl p-5 border border-red-200">
             <div class="flex items-start gap-3">
-              <span class="text-red-500 text-xl shrink-0">❌</span>
+              <span class="text-red-500 text-xl shrink-0"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
               <div>
                 <p class="font-bold text-navy">修改內容抵觸《公司條例》</p>
                 <p class="text-sm text-gray-600">例如想加入「董事唔使申報利益衝突」之類嘅條款——呢啲係《公司條例》規定咗嘅權利，章程唔可以剝奪。</p>
@@ -548,7 +550,7 @@
           </div>
           <div class="bg-red-50 rounded-xl p-5 border border-red-200">
             <div class="flex items-start gap-3">
-              <span class="text-red-500 text-xl shrink-0">❌</span>
+              <span class="text-red-500 text-xl shrink-0"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
               <div>
                 <p class="font-bold text-navy">冇保留舊版本章程</p>
                 <p class="text-sm text-gray-600">改章程後丟咗舊版本，日後要查返當年嘅規定就冇記錄。</p>
@@ -560,7 +562,7 @@
 
       <!-- ══════ FAQ Section ══════ -->
       <section id="faq" class="mt-12">
-        <h2 class="text-2xl font-bold text-navy mb-4">❓ 常見問題</h2>
+        <h2 class="text-2xl font-bold text-navy mb-4"><i data-lucide="circle-help" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見問題</h2>
 
         <div class="space-y-4 mb-6">
           <details class="bg-white rounded-xl p-5 border border-gray-200 cursor-pointer">
@@ -619,7 +621,7 @@
         </p>
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
           <a href="/" class="inline-flex items-center justify-center px-6 py-3 bg-gold text-navy font-bold rounded-xl hover:bg-gold/90 transition">
-            睇更多指南 →
+            睇更多指南 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
           </a>
           <a href="/shareholder-transfer/" class="inline-flex items-center justify-center px-6 py-3 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition border border-white/20">
             股份轉讓指南
@@ -641,7 +643,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -659,7 +661,7 @@
       </div>
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">
-          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          <i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
           如有具體法律問題，請諮詢執業律師或專業公司秘書。
         </p>
         <p>© 2025 ESGov. All rights reserved.</p>

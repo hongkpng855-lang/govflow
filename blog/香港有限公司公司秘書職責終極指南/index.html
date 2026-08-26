@@ -139,14 +139,16 @@
   ]
 }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body>
 
   <!-- ═══════════════ Navigation ═══════════════ -->
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 返回網誌</a>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回網誌</a>
     </div>
   </nav>
 
@@ -171,7 +173,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </section>
@@ -209,7 +211,7 @@
       <p>所以如果你係一人公司東主，你可以自己做自己嘅公司秘書。但係你要清楚知道 — <strong>你就要負責晒所有法定申報工作</strong>，唔好以為掛個名就得。</p>
 
       <div class="flag-item">
-        <p><strong>⚠️ 罰則你要知：</strong>如果公司冇公司秘書超過一段時間，或者公司秘書唔符合資格要求，公司同每名責任董事<strong>可被罰款 $100,000</strong>，而且每日持續違規可再罰 $2,000。<strong>呢個唔係講笑。</strong></p>
+        <p><strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 罰則你要知：</strong>如果公司冇公司秘書超過一段時間，或者公司秘書唔符合資格要求，公司同每名責任董事<strong>可被罰款 $100,000</strong>，而且每日持續違規可再罰 $2,000。<strong>呢個唔係講笑。</strong></p>
       </div>
 
       <!-- 2 -->
@@ -291,23 +293,23 @@
       <!-- 5 -->
       <h2>📌 公司秘書常見錯誤（我親身中過嘅）</h2>
 
-      <h3>❌ 錯誤 1：以為公司秘書係「秘書」</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 1：以為公司秘書係「秘書」</h3>
       <p>我初期成日覺得公司秘書係行政助理嗰類角色。點知原來公司秘書係法定職位，有法律責任嘅。做漏嘢或者做錯嘢，公司秘書同董事一樣要孭法律責任。</p>
 
-      <h3>❌ 錯誤 2：唯一董事以為可以自己做秘書</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 2：唯一董事以為可以自己做秘書</h3>
       <p>呢個係最常見嘅 mistake。好多人開一人公司，以為自己做晒董事同秘書就得。但係條例寫明 <strong>唯一董事唔可以做公司秘書</strong>。你一定要搵多一個人／一間公司做秘書。</p>
 
-      <h3>❌ 錯誤 3：掛名秘書但完全冇做嘢</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 3：掛名秘書但完全冇做嘢</h3>
       <p>我初初俾錢會計師樓掛名，諗住佢哋會自動幫我搞掂所有申報。結果我遲交 NAR1 俾人罰咗 $870，先發現原來佢哋只係「掛名」，申報工作係我要自己做或者另外俾錢佢哋做。</p>
 
       <div class="flag-item">
         <p><strong>💡 簽約前一定要問清楚：</strong>「你哋嘅公司秘書服務包括啲乜？」係純掛名定包括申報？NAR1 係咪包？股份轉讓幫唔幫手搞？逐樣問清楚，最好寫落合約。</p>
       </div>
 
-      <h3>❌ 錯誤 4：換咗公司秘書冇通知公司註冊處</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 4：換咗公司秘書冇通知公司註冊處</h3>
       <p>公司秘書離職或者你轉咗人，要喺 <strong>15 日內</strong>填 ND2B 通知公司註冊處。我見過有人轉咗秘書一年都冇申報，到年報嗰陣俾公司註冊處追問。</p>
 
-      <h3>❌ 錯誤 5：公司秘書地址同公司地址唔一致</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 5：公司秘書地址同公司地址唔一致</h3>
       <p>公司秘書嘅通訊地址一定要係香港地址。如果公司秘書係自然人，要提供香港地址（唔可以用郵政信箱）。如果係公司秘書公司，要提供佢哋嘅註冊地址。</p>
 
       <!-- 6 -->
@@ -339,7 +341,7 @@
 
       <!-- Solution CTA -->
       <div class="bg-gray-50 rounded-2xl border-2 border-gold/20 p-8 mt-10 mb-6 text-center">
-        <h2 class="!border-b-0 !mt-0 !mb-3">✅ 搵人幫手？定自己做？</h2>
+        <h2 class="!border-b-0 !mt-0 !mb-3"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 搵人幫手？定自己做？</h2>
         <p class="text-center">公司秘書話難唔難，話易唔易。最大嘅問題係：<strong>你唔知邊啲文件係一定要做嘅，同埋 deadline 係幾時。</strong></p>
         <p class="text-center">如果你都想了解多啲實際文件點樣處理，我嘅旗艦指南幫到你：</p>
         <div class="grid sm:grid-cols-2 gap-4 my-6 text-left">
@@ -356,10 +358,10 @@
         </div>
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
           <a href="/shareholder-transfer/" class="btn-gov btn-gov-preview justify-center">
-            📝 睇股份轉讓指南 →
+            📝 睇股份轉讓指南 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
           </a>
           <a href="/blog/香港有限公司法定紀錄StatutoryRecords終極指南/" class="btn-gov btn-gov-preview justify-center">
-            📚 睇法定紀錄指南 →
+            📚 睇法定紀錄指南 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -417,7 +419,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -435,7 +437,7 @@
       </div>
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">
-          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          <i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
           如有具體法律問題，請諮詢執業律師或專業公司秘書。
         </p>
         <p>© 2026 ESGov. All rights reserved.</p>

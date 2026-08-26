@@ -170,7 +170,9 @@
   ]
 }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body class="bg-gray-50">
 
   <!-- ═══ Navigation ═══ -->
@@ -178,7 +180,7 @@
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
       <div class="flex items-center gap-2">
-        <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 全部文章</a>
+        <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 全部文章</a>
       </div>
     </div>
   </nav>
@@ -207,7 +209,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </header>
@@ -230,7 +232,7 @@
             <li><a href="#cost" class="text-gold hover:underline">7. 費用一覽</a></li>
             <li><a href="#mistakes" class="text-gold hover:underline">8. 常見錯誤（我親身踩過）</a></li>
             <li><a href="#faq" class="text-gold hover:underline">9. 常見問題 FAQ</a></li>
-            <li><a href="#checklist" class="text-gold hover:underline">✅ 申請 Checklist</a></li>
+            <li><a href="#checklist" class="text-gold hover:underline"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 申請 Checklist</a></li>
           </ul>
         </div>
 
@@ -242,7 +244,7 @@
         <p>我初初開公司嗰陣完全唔知呢回事。直到有一次，有個 cold call 打嚟，一開聲就叫我全名，仲講得出我住邊區。我話「你點知我住址？」佢話「公司註冊處查㗎咋嘛，好易咋。」嗰刻我先知原來董事地址係公開資料。</p>
 
         <div class="callout-danger">
-          <p class="font-bold text-orange-800 mb-1">⚠️ 現實問題</p>
+          <p class="font-bold text-orange-800 mb-1"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 現實問題</p>
           <p>任何人（包括推銷員、追數公司、競爭對手、甚至不法分子）只要上公司註冊處網上查冊俾幾十蚊，就可以查到所有董事嘅住宅地址。呢個係公開紀錄，唔需要任何理由。</p>
         </div>
 
@@ -266,7 +268,7 @@
         <p>簡單講就係：你可以向公司註冊處申報一個 <strong>通訊地址</strong>（Correspondence Address）嚟代替你嘅住宅地址，公開查冊只會顯示你嘅通訊地址，唔會 show 你屋企地址出嚟。</p>
 
         <div class="callout-success">
-          <p class="font-bold text-green-800 mb-1">✅ 保護效果</p>
+          <p class="font-bold text-green-800 mb-1"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 保護效果</p>
           <p>通訊地址會顯示喺公開查冊記錄。住宅地址只會保留喺公司內部紀錄（公司名冊，唔係公開查冊嘅文件），除非係授權嘅執法機構，否則一般人查唔到。</p>
         </div>
 
@@ -288,22 +290,22 @@
           <tbody>
             <tr>
               <td>現任董事</td>
-              <td class="text-green-600 font-semibold">✅ 可以</td>
+              <td class="text-green-600 font-semibold"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 可以</td>
               <td>所有類型有限公司董事</td>
             </tr>
             <tr>
               <td>公司秘書</td>
-              <td class="text-green-600 font-semibold">✅ 可以</td>
+              <td class="text-green-600 font-semibold"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 可以</td>
               <td>如果係自然人秘書</td>
             </tr>
             <tr>
               <td>股東</td>
-              <td class="text-yellow-600">⚠️ 有限度</td>
+              <td class="text-yellow-600"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 有限度</td>
               <td>只限於公司名冊顯示嘅地址</td>
             </tr>
             <tr>
               <td>已被取消董事資格人士</td>
-              <td class="text-red-600">❌ 唔可以</td>
+              <td class="text-red-600"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔可以</td>
               <td>受特定法例限制</td>
             </tr>
           </tbody>
@@ -343,7 +345,7 @@
         <p>如果你係開 <strong>新公司</strong>，填寫 NNC1（公司註冊表格）嘅時候，喺董事資料部份，<strong>直接填通訊地址</strong> 就得。住宅地址可以填在另一欄，但唔會顯示喺公開紀錄。</p>
 
         <div class="callout-success">
-          <p class="font-bold text-green-800 mb-1">✅ 最慳功夫</p>
+          <p class="font-bold text-green-800 mb-1"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 最慳功夫</p>
           <p>新公司由一開始就用通訊地址做公開地址，以後就唔使返轉頭改。開公司嘅時候記得同幫你搞註冊嘅人講聲。</p>
         </div>
 
@@ -355,7 +357,7 @@
         <ol>
           <li>
             <strong>準備 ND2A 表格</strong>
-            <p>去公司註冊處網站 download 表格：<a href="https://www.e-cr.gov.hk" target="_blank" class="text-gold hover:underline">eCR 電子服務</a> → Forms → ND2A</p>
+            <p>去公司註冊處網站 download 表格：<a href="https://www.e-cr.gov.hk" target="_blank" class="text-gold hover:underline">eCR 電子服務</a> <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> Forms <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> ND2A</p>
           </li>
           <li>
             <strong>填寫董事資料</strong>
@@ -400,7 +402,7 @@
             <tr>
               <td>網上查冊（公司註冊處）</td>
               <td class="text-red-600">顯示住宅地址 🚫</td>
-              <td class="text-green-600">顯示通訊地址 ✅</td>
+              <td class="text-green-600">顯示通訊地址 <i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></td>
             </tr>
             <tr>
               <td>公司內部名冊</td>
@@ -463,28 +465,28 @@
         <p>我當初申請時犯咗幾個低級錯誤，寫出嚟等大家唔好重蹈覆轍：</p>
 
         <div class="callout-danger">
-          <p class="font-bold text-orange-800 mb-1">❌ 錯誤 1：以為申請一次就永久有效</p>
+          <p class="font-bold text-orange-800 mb-1"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 1：以為申請一次就永久有效</p>
           <p>通訊地址其實係跟 ND2A 嘅紀錄。如果你之後再 submit 另一份 ND2A 改其他資料（例如改公司秘書），而嗰份新 ND2A 冇列明「通訊地址不變」，有機會還原返做原本嘅住宅地址！我中過一次招。</p>
           <p class="mt-1"><strong>解決：</strong>每次交 ND2A 都 check 清楚董事地址欄係咪仲係用通訊地址。</p>
         </div>
 
         <div class="callout-danger">
-          <p class="font-bold text-orange-800 mb-1">❌ 錯誤 2：用郵政信箱做通訊地址</p>
+          <p class="font-bold text-orange-800 mb-1"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 2：用郵政信箱做通訊地址</p>
           <p>我原本諗住用 P.O. Box 最方便，點知公司註冊處唔接受純郵政信箱做通訊地址。最後要用返公司註冊地址。</p>
         </div>
 
         <div class="callout-danger">
-          <p class="font-bold text-orange-800 mb-1">❌ 錯誤 3：以為 NAR1 會自動保留地址保護</p>
+          <p class="font-bold text-orange-800 mb-1"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 3：以為 NAR1 會自動保留地址保護</p>
           <p>每年交 NAR1（周年申報表）嗰陣，如果你喺 NAR1 填返住宅地址，就會「覆蓋」咗之前 ND2A 嘅通訊地址設定。記住：NAR1 嘅董事地址欄都要填通訊地址，唔好填咗屋企地址。</p>
         </div>
 
         <div class="callout-danger">
-          <p class="font-bold text-orange-800 mb-1">❌ 錯誤 4：冇通知商業登記署</p>
+          <p class="font-bold text-orange-800 mb-1"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 4：冇通知商業登記署</p>
           <p>公司註冊處嘅地址改咗，但商業登記署（BR）嘅紀錄係分開嘅。如果你用嘅通訊地址同 BR 地址唔同，記住要分開通知 BR。</p>
         </div>
 
         <div class="callout-danger">
-          <p class="font-bold text-orange-800 mb-1">❌ 錯誤 5：以為地址保護 = 地址完全消失</p>
+          <p class="font-bold text-orange-800 mb-1"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 5：以為地址保護 = 地址完全消失</p>
           <p>有啲人以為申請咗之後，佢嘅地址會完全消失喺公司註冊處嘅系統。其實只係顯示通訊地址，唔係完全消失。查冊紀錄仍然有過去嘅地址變更歷史。</p>
         </div>
 
@@ -519,42 +521,42 @@
         </div>
 
         <!-- ═══ Section 10 ═══ -->
-        <h2 id="checklist">✅ 申請 Checklist</h2>
+        <h2 id="checklist"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 申請 Checklist</h2>
 
         <p>跟住呢個 checklist 做，保證唔會 miss 任何一步：</p>
 
         <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
           <ul class="space-y-2">
             <li class="flex items-start gap-2">
-              <span class="text-green-500 shrink-0 mt-0.5">☐</span>
+              <span class="text-green-500 shrink-0 mt-0.5"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
               <span><strong>決定通訊地址</strong> — 最好用公司註冊地址或秘書公司地址</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-green-500 shrink-0 mt-0.5">☐</span>
+              <span class="text-green-500 shrink-0 mt-0.5"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
               <span><strong>Download ND2A 表格</strong> — eCR 網站揀 ND2A</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-green-500 shrink-0 mt-0.5">☐</span>
+              <span class="text-green-500 shrink-0 mt-0.5"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
               <span><strong>填寫更改事項</strong> — 揀「更改董事地址」，通訊地址填正確</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-green-500 shrink-0 mt-0.5">☐</span>
+              <span class="text-green-500 shrink-0 mt-0.5"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
               <span><strong>公司授權簽署</strong> — 董事或公司秘書簽署</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-green-500 shrink-0 mt-0.5">☐</span>
+              <span class="text-green-500 shrink-0 mt-0.5"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
               <span><strong>提交 + 繳費</strong> — 網上 HK$15，保留提交紀錄</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-green-500 shrink-0 mt-0.5">☐</span>
+              <span class="text-green-500 shrink-0 mt-0.5"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
               <span><strong>2-3 日後 check</strong> — 上公司查冊 confirm 地址已改</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-green-500 shrink-0 mt-0.5">☐</span>
+              <span class="text-green-500 shrink-0 mt-0.5"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
               <span><strong>NAR1 時 check</strong> — 確保周年申報表都係用通訊地址</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-green-500 shrink-0 mt-0.5">☐</span>
+              <span class="text-green-500 shrink-0 mt-0.5"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span>
               <span><strong>每年覆檢</strong> — 通訊地址冇變就不用再申請</span>
             </li>
           </ul>
@@ -604,7 +606,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -615,7 +617,7 @@
       <p>© 2026 ESGov. 由真實經歷者整理，實戰經驗分享。</p>
       <p class="mt-1">本網站內容僅供參考，不構成專業意見。如有需要請諮詢合資格專業人士。</p>
       <p class="mt-2">
-        <a href="/" class="text-gold hover:underline">← 返回首頁</a>
+        <a href="/" class="text-gold hover:underline"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
         <span class="mx-2 opacity-30">|</span>
         <a href="/blog/" class="text-gold hover:underline">📚 全部文章</a>
       </p>

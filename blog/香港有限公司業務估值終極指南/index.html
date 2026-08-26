@@ -142,6 +142,8 @@
     ]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-50">
 
@@ -149,7 +151,7 @@
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="../" class="text-sm text-gray-400 hover:text-gold transition">← 返回 Blog</a>
+      <a href="../" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回 Blog</a>
     </div>
   </nav>
 
@@ -345,7 +347,7 @@
         </table>
 
         <div class="flag-item">
-          <p class="font-semibold text-navy">⚠️ 實際例子：我朋友間貿易公司</p>
+          <p class="font-semibold text-navy"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 實際例子：我朋友間貿易公司</p>
           <p>上年朋友想賣佢間貿易公司，每年 adjusted profit 大約 $200 萬。我同佢搵咗幾間同業嘅成交紀錄，PE 倍數大約 4 倍。即係估值大約 $800 萬（$200 萬 × 4）。最後佢用 $750 萬成交，因為買家話應收賬款有風險，要求 discount。</p>
         </div>
 
@@ -483,33 +485,33 @@
           <tbody>
             <tr>
               <td>內部參考</td>
-              <td>✅ 夠用，用 Excel 計吓就得</td>
-              <td>❌ 冇必要</td>
+              <td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 夠用，用 Excel 計吓就得</td>
+              <td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 冇必要</td>
             </tr>
             <tr>
               <td>傾 sell side 初步價格</td>
-              <td>✅ 可以初步摸底</td>
-              <td>✅ 比較好，有說服力</td>
+              <td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 可以初步摸底</td>
+              <td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 比較好，有說服力</td>
             </tr>
             <tr>
               <td>正式股權轉讓</td>
-              <td>❌ 稅局可能唔接受</td>
-              <td>✅ 必須</td>
+              <td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 稅局可能唔接受</td>
+              <td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 必須</td>
             </tr>
             <tr>
               <td>離婚 / 訴訟</td>
-              <td>❌ 法院唔接受</td>
-              <td>✅ 必須，要有法庭認可資格</td>
+              <td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 法院唔接受</td>
+              <td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 必須，要有法庭認可資格</td>
             </tr>
             <tr>
               <td>稅務轉讓定價報告</td>
-              <td>❌ 稅局要求專業報告</td>
-              <td>✅ 必須</td>
+              <td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 稅局要求專業報告</td>
+              <td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 必須</td>
             </tr>
             <tr>
               <td>銀行融資</td>
-              <td>❌ 銀行唔接受</td>
-              <td>✅ 銀行要求獨立估值</td>
+              <td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 銀行唔接受</td>
+              <td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 銀行要求獨立估值</td>
             </tr>
           </tbody>
         </table>
@@ -535,7 +537,7 @@
 
       <!-- FAQ -->
       <section id="faq">
-        <h2>❓ FAQ 常見問題</h2>
+        <h2><i data-lucide="circle-help" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> FAQ 常見問題</h2>
 
         <div class="step-card">
           <p class="font-bold text-navy">Q: 香港有限公司估值通常用邊種方法？</p>
@@ -592,7 +594,7 @@
         <p>如果你有公司估值嘅經驗或者問題，歡迎留言討論。大家一齊分享，少啲人俾人呃。</p>
 
         <div class="flex flex-wrap gap-3 mt-8">
-          <a href="../" class="inline-flex items-center gap-1.5 bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-navy-light transition-colors">← 返回 Blog 總覽</a>
+          <a href="../" class="inline-flex items-center gap-1.5 bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-navy-light transition-colors"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回 Blog 總覽</a>
           <a href="/" class="inline-flex items-center gap-1.5 border border-navy text-navy px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-navy hover:text-white transition-colors">🏠 返回首頁</a>
         </div>
       </section>

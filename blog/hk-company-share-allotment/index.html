@@ -163,14 +163,16 @@
   ]
 }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body>
 
   <!-- ═══════════════ Navigation ═══════════════ -->
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -196,7 +198,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </section>
@@ -259,8 +261,8 @@
             </tr>
             <tr>
               <td><strong>公司股本</strong></td>
-              <td>✅ 增加</td>
-              <td>❌ 不變</td>
+              <td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 增加</td>
+              <td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 不變</td>
             </tr>
             <tr>
               <td><strong>參與者</strong></td>
@@ -274,13 +276,13 @@
             </tr>
             <tr>
               <td><strong>董事決議</strong></td>
-              <td>✅ 必須有</td>
+              <td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 必須有</td>
               <td>視乎公司章程</td>
             </tr>
             <tr>
               <td><strong>印花稅</strong></td>
               <td>無（配發本身唔使）</td>
-              <td>✅ 要交（代價 0.2%）</td>
+              <td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 要交（代價 0.2%）</td>
             </tr>
             <tr>
               <td><strong>時間</strong></td>
@@ -335,7 +337,7 @@
         <li>董事簽署</li>
       </ul>
       <div class="warn-box">
-        <p>⚠️ <strong>逾期遞交 NSC1 嘅後果：</strong>公司同每名責任人可被罰款 $5,000，而且持續犯罪可以每日再罰 $1,000。我見過有公司遲咗 3 個月先交，夾埋罰咗成 $8,000 幾。</p>
+        <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>逾期遞交 NSC1 嘅後果：</strong>公司同每名責任人可被罰款 $5,000，而且持續犯罪可以每日再罰 $1,000。我見過有公司遲咗 3 個月先交，夾埋罰咗成 $8,000 幾。</p>
       </div>
 
       <h3>5️⃣ 更新公司紀錄</h3>
@@ -393,13 +395,13 @@
       <!-- Common Mistakes -->
       <h2>🚩 5 個常見伏位（我識嘅人中過）</h2>
 
-      <h3>❌ 伏位 1：混淆配發同轉讓</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 伏位 1：混淆配發同轉讓</h3>
       <p>呢個係最 common 嘅錯誤。公司增資擴股要用配發（NSC1），唔係轉讓（Instrument of Transfer）。如果搞錯咗，公司股本紀錄會唔啱，將來賣盤或者做 due diligence 會好大件事。</p>
 
-      <h3>❌ 伏位 2：忘記喺 1 個月內交 NSC1</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 伏位 2：忘記喺 1 個月內交 NSC1</h3>
       <p>配發完成後，好多人就「放低咗」，唔記得交 NSC1。等到年報嗰陣先發現冇交，已經過期幾個月。罰錢事小，問題係如果公司有訴訟或者融資，冇交 NSC1 會俾人質疑股份嘅合法性。</p>
 
-      <h3>❌ 伏位 3：配發作價有問題</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 伏位 3：配發作價有問題</h3>
       <p>股份配發嘅作價有兩個陷阱：</p>
       <ul>
         <li><strong>作價太低</strong>：稅局可能視為「股份贈送」，用市值去追討印花稅</li>
@@ -407,10 +409,10 @@
       </ul>
       <p>我自己見過一個 case：有人用佢嘅軟件源碼換公司股份，冇做估值，結果 NSC1 上面「已繳金額」填錯，到公司賣嗰陣先俾買家發現，差啲撻訂。</p>
 
-      <h3>❌ 伏位 4：冇發出股票書</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 伏位 4：冇發出股票書</h3>
       <p>好多小公司以為「內部記錄就得啦，使乜正式股票」，但法例規定公司要在 2 個月內發出股票證書。冇做嘅話，新股東嘅權益未正式確立，佢可以告公司。</p>
 
-      <h3>❌ 伏位 5：股份配發後冇通知銀行</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 伏位 5：股份配發後冇通知銀行</h3>
       <p>新股東加入後，除非佢係董事，否則銀行唔會自動知。如果新股東需要簽公司戶口、或者要更新銀行授權簽署人，一定要主動通知銀行同更新授權。</p>
       <div class="flag-item">
         <p>我有個朋友就係咁：配發完股份俾個投資者，以為「搞掂晒」，點知無耐投資者要簽公司文件嗰陣先發現銀行冇佢嘅記錄，要成日去銀行排隊搞授權，搞咗成個月。</p>
@@ -474,18 +476,18 @@
           幫你搞掂晒所有文件：
         </p>
         <ul class="inline-block text-left mb-6">
-          <li>✅ 可編輯嘅 Sold Note 模板</li>
-          <li>✅ Instrument of Transfer 官方格式模板</li>
-          <li>✅ 董事決議範本</li>
-          <li>✅ 每份文件嘅真實填寫範例</li>
-          <li>✅ 常見錯誤 & 伏位全部列晒出嚟</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 可編輯嘅 Sold Note 模板</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> Instrument of Transfer 官方格式模板</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 董事決議範本</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 每份文件嘅真實填寫範例</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見錯誤 & 伏位全部列晒出嚟</li>
         </ul>
         <p class="text-sm text-gray-500 mb-6">
           <strong>頭 1 步係完全免費</strong>，你可以睇吓係咪你要嘅嘢。
         </p>
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
           <a href="/shareholder-transfer/" class="btn-gov btn-gov-preview justify-center">
-            免費睇 Step 1 →
+            免費睇 Step 1 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
           </a>
           <a href="https://1714457598663.gumroad.com/l/wkjykk" target="_blank" class="btn-gov btn-gov-buy justify-center btn-gov-pulse">
             🔓 完整解鎖 HK$149
@@ -536,7 +538,7 @@
         由填表到提交，逐個步驟教你點做，附送可下載文件模板
       </p>
       <a href="/shareholder-transfer/" class="btn-gov btn-gov-preview">
-        免費睇 Step 1 →
+        免費睇 Step 1 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
       </a>
     </div>
   </section>
@@ -554,7 +556,7 @@
       </div>
       <div class="border-t border-gray-700 pt-8 text-center text-xs text-gray-500 leading-relaxed">
         <p class="mb-2">
-          ⚠️ 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
+          <i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 免責聲明：本網站提供嘅內容僅供參考，並不構成法律意見。
           如有具體法律問題，請諮詢執業律師或專業公司秘書。
         </p>
         <p>© 2025 ESGov. All rights reserved.</p>
@@ -586,7 +588,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

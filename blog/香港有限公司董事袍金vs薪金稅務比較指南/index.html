@@ -80,7 +80,9 @@
   ]
 }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body>
 
   <!-- ═══ Navigation ═══ -->
@@ -90,7 +92,7 @@
         <img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" />
         <span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span>
       </a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -118,7 +120,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </header>
@@ -201,9 +203,9 @@
             <tr><td>法律基礎</td><td>公司條例（董事職務）</td><td>僱傭條例（僱傭關係）</td></tr>
             <tr><td>合約要求</td><td>董事會決議（Minutes）</td><td>僱傭合約</td></tr>
             <tr><td>MPF 強積金</td><td>一般唔需要（只限董事職務）</td><td>必須供款</td></tr>
-            <tr><td>僱傭保障</td><td>❌ 冇（唔係僱員）</td><td>✅ 有（年假、病假、遣散費等）</td></tr>
+            <tr><td>僱傭保障</td><td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 冇（唔係僱員）</td><td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 有（年假、病假、遣散費等）</td></tr>
             <tr><td>個人報稅類別</td><td>薪俸稅</td><td>薪俸稅</td></tr>
-            <tr><td>公司扣稅</td><td>✅ 可扣稅</td><td>✅ 可扣稅</td></tr>
+            <tr><td>公司扣稅</td><td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 可扣稅</td><td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 可扣稅</td></tr>
             <tr><td>IR56B 申報</td><td>需要（稅局指引）</td><td>需要</td></tr>
             <tr><td>董事名冊記錄</td><td>需要記錄</td><td>不需要記錄</td></tr>
             <tr><td>付款彈性</td><td>高（可按年或按次決定）</td><td>中（合約通常按月）</td></tr>
@@ -234,7 +236,7 @@
         </ul>
 
         <div class="callout-success">
-          <strong>✅ 慳稅重點：</strong>公司俾薪金嘅同時，僱主 MPF 供款（5%）都係可扣稅開支。雖然只係多扣 5%，但積少成多，仲幫員工儲咗退休金。如果用董事袍金，就冇呢 5% 扣稅，但亦唔使俾 5%。
+          <strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 慳稅重點：</strong>公司俾薪金嘅同時，僱主 MPF 供款（5%）都係可扣稅開支。雖然只係多扣 5%，但積少成多，仲幫員工儲咗退休金。如果用董事袍金，就冇呢 5% 扣稅，但亦唔使俾 5%。
         </div>
       </div>
 
@@ -247,7 +249,7 @@
         <p>薪俸稅計算方法（2025/26 課稅年度）：</p>
         <ul>
           <li>基本免稅額：HK$132,000</li>
-          <li>累進稅率：首 $50,000 2% → 次 $50,000 6% → 再 $50,000 10% → 再 $50,000 17% → 之後 27%</li>
+          <li>累進稅率：首 $50,000 2% <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 次 $50,000 6% <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 再 $50,000 10% <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 再 $50,000 17% <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 之後 27%</li>
           <li>標準稅率（上限）：應課稅入息實額的 15%</li>
           <li>最終交稅 = 累進稅款 或 標準稅款（取較低者）</li>
         </ul>
@@ -265,7 +267,7 @@
         </table>
 
         <div class="callout-warning">
-          <strong>⚠️ 重要：</strong>如果你用董事袍金方式出糧，稅局一樣會視為薪俸稅收入。唔好以為寫「董事袍金」就可以報少啲稅，稅局會查董事會決議同公司帳目。
+          <strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 重要：</strong>如果你用董事袍金方式出糧，稅局一樣會視為薪俸稅收入。唔好以為寫「董事袍金」就可以報少啲稅，稅局會查董事會決議同公司帳目。
         </div>
       </div>
 
@@ -298,7 +300,7 @@
         </ul>
 
         <div class="callout-danger">
-          <strong>⚠️ 真實案例：</strong>有朋友公司俾 MPF 調查，佢用董事袍金方式每月出 $50,000 俾自己，但冇開 MPF 戶口。最後積金局裁定佢係「僱員」，要補供 2 年嘅 MPF 欠款（僱主+僱員部分）加 5% 附加費，前後俾咗接近 $70,000。
+          <strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 真實案例：</strong>有朋友公司俾 MPF 調查，佢用董事袍金方式每月出 $50,000 俾自己，但冇開 MPF 戶口。最後積金局裁定佢係「僱員」，要補供 2 年嘅 MPF 欠款（僱主+僱員部分）加 5% 附加費，前後俾咗接近 $70,000。
         </div>
       </div>
 
@@ -362,7 +364,7 @@
         <p><em>年薪過百萬，標準稅（15%）封頂，袍金方案明顯著數，每年差約 $40,000。</em></p>
 
         <div class="callout-success">
-          <strong>✅ 小結：</strong>收入越高，袍金方案越著數。但低過年薪 $200,000 嘅話，MPF 嘅影響細到可以忽略，用薪金反而仲穩陣，因為唔使擔心 MPF 調查風險。
+          <strong><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 小結：</strong>收入越高，袍金方案越著數。但低過年薪 $200,000 嘅話，MPF 嘅影響細到可以忽略，用薪金反而仲穩陣，因為唔使擔心 MPF 調查風險。
         </div>
       </div>
 
@@ -430,27 +432,27 @@
         <h2>10. 真實錯誤經驗 — 5 個常見陷阱</h2>
 
         <div class="callout-danger">
-          <strong>❌ 錯誤 1：以為董事袍金唔使報稅</strong>
+          <strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 1：以為董事袍金唔使報稅</strong>
           <p class="mt-2">有朋友開公司，用董事袍金出糧俾自己，報稅嗰陣完全冇報呢筆收入。結果 3 年後稅局查數，發現公司出咗 $900,000 袍金但董事個人報稅冇申報。最終被罰 $180,000 稅款 + 罰款。記住：<strong>董事袍金係薪俸稅收入，一定要報</strong>。</p>
         </div>
 
         <div class="callout-danger">
-          <strong>❌ 錯誤 2：混合收入報錯稅表</strong>
+          <strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 2：混合收入報錯稅表</strong>
           <p class="mt-2">有啲人喺 A 公司做全職員工（出薪金），自己嘅有限公司收董事袍金。報稅嗰陣要分開申報，全部加埋一齊計薪俸稅。唔好諗住將有限公司嘅袍金當做「利潤」去報利得稅。</p>
         </div>
 
         <div class="callout-danger">
-          <strong>❌ 錯誤 3：冇董事會決議就出袍金</strong>
+          <strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 3：冇董事會決議就出袍金</strong>
           <p class="mt-2">公司稅務審計嗰陣，稅局會要求睇董事會決議記錄。如果你冇 Minutes 證明袍金金額係經董事會批准，稅局有權質疑呢筆開支嘅真實性，甚至 disallow 公司扣稅。</p>
         </div>
 
         <div class="callout-danger">
-          <strong>❌ 錯誤 4：以為股息同袍金一樣</strong>
+          <strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 4：以為股息同袍金一樣</strong>
           <p class="mt-2">股息係公司賺咗錢之後派俾股東，同董事袍金完全唔同。股息係從已課稅利潤中派發，股東收到股息後唔使再交稅。但董事袍金係公司嘅營運開支，可以扣稅，但個人要交薪俸稅。好多人溝亂呢兩個概念。</p>
         </div>
 
         <div class="callout-danger">
-          <strong>❌ 錯誤 5：出高袍金但公司蝕錢</strong>
+          <strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 5：出高袍金但公司蝕錢</strong>
           <p class="mt-2">如果公司蝕錢（稅務虧損），但係出好高嘅董事袍金，稅局會挑戰呢個安排。因為公司蝕錢就冇利得稅要俾，但董事袍金扣稅後公司蝕得仲勁，呢個安排會引起紅旗。建議：公司有 profit 先出高袍金，蝕錢年份就出少啲。</p>
         </div>
       </div>
@@ -465,13 +467,13 @@
           <p class="font-bold text-navy text-lg mb-3">🔀 快速決策</p>
           <ol class="space-y-3 text-gray-700">
             <li>1️⃣ <strong>你有其他全職工作嗎？</strong>
-              <br/>→ 係：用董事袍金（慳 MPF，簡單）<br/>→ 唔係：去第 2 步</li>
+              <br/><i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 係：用董事袍金（慳 MPF，簡單）<br/><i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔係：去第 2 步</li>
             <li>2️⃣ <strong>你年收入少過 $200,000？</strong>
-              <br/>→ 係：用薪金（穩陣，稅務分別唔大）<br/>→ 唔係：去第 3 步</li>
+              <br/><i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 係：用薪金（穩陣，稅務分別唔大）<br/><i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔係：去第 3 步</li>
             <li>3️⃣ <strong>你需要銀行按揭/貸款？</strong>
-              <br/>→ 係：用薪金（穩定收入記錄）<br/>→ 唔係：去第 4 步</li>
+              <br/><i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 係：用薪金（穩定收入記錄）<br/><i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔係：去第 4 步</li>
             <li>4️⃣ <strong>你想慳 MPF 成本？</strong>
-              <br/>→ 係：用董事袍金（但要留意風險）<br/>→ 唔係：出少量薪金 + 餘下袍金</li>
+              <br/><i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 係：用董事袍金（但要留意風險）<br/><i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔係：出少量薪金 + 餘下袍金</li>
           </ol>
         </div>
 
@@ -498,7 +500,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

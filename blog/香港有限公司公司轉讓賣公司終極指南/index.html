@@ -75,14 +75,16 @@
   ]
 }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body class="bg-gray-50 text-gray-900 leading-relaxed">
 
   <!-- Navigation -->
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -99,7 +101,7 @@
         🏢 香港有限公司公司轉讓（賣公司）終極指南 2026
       </h1>
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 
@@ -118,9 +120,9 @@
   <!-- Trust Signal Banner -->
   <div class="bg-gold/10 border-b border-gold/20">
     <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-center text-sm">
-      <span class="text-navy font-semibold">⚖️ 律師樓搞公司轉讓</span>
+      <span class="text-navy font-semibold"><i data-lucide="scale" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 律師樓搞公司轉讓</span>
       <span class="line-through text-gray-400 mx-2">$50,000+</span>
-      <span class="text-navy font-bold">→ 了解程序之後，自己主導整理文件，律師費慳一半</span>
+      <span class="text-navy font-bold"><i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 了解程序之後，自己主導整理文件，律師費慳一半</span>
     </div>
   </div>
 
@@ -163,13 +165,13 @@
           <li><a href="#contract" class="text-blue-700 hover:text-gold transition-colors">5️⃣ 轉讓合約重點（SPA / Business Transfer Agreement）</a></li>
           <li><a href="#tax" class="text-blue-700 hover:text-gold transition-colors">6️⃣ 稅務比較：點慳稅最關鍵</a></li>
           <li><a href="#traps" class="text-blue-700 hover:text-gold transition-colors">7️⃣ 7 個常見陷阱</a></li>
-          <li><a href="#checklist" class="text-blue-700 hover:text-gold transition-colors">✅ Checklist</a></li>
-          <li><a href="#faq" class="text-blue-700 hover:text-gold transition-colors">❓ FAQ</a></li>
+          <li><a href="#checklist" class="text-blue-700 hover:text-gold transition-colors"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> Checklist</a></li>
+          <li><a href="#faq" class="text-blue-700 hover:text-gold transition-colors"><i data-lucide="circle-help" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> FAQ</a></li>
         </ul>
       </div>
 
       <!-- Section 1: Comparison -->
-      <h2 id="compare">⚖️ 賣股份 vs 賣資產：全面比較</h2>
+      <h2 id="compare"><i data-lucide="scale" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 賣股份 vs 賣資產：全面比較</h2>
       <p>呢個係最核心嘅問題。揀錯方式，代價可以好大。</p>
 
       <div class="overflow-x-auto my-6">
@@ -212,7 +214,7 @@
       <p>傾好初步條款：買幾多%、作價幾多、付款方式、排他期（Exclusivity Period）、盡職審查安排。</p>
       <p>通常會簽一份 <strong>Letter of Intent（LOI）</strong> 或者 <strong>Memorandum of Understanding（MOU）</strong>，列明主要條款同 timeline。</p>
       <div class="bg-amber-50 border border-amber-200 rounded p-3 mt-2">
-        <p class="text-amber-800 font-semibold">⚠️ 注意：LOI 通常非 binding（除咗 exclusivity 同 confidentiality 條款），但係好重要嘅溝通工具，唔好 skip。</p>
+        <p class="text-amber-800 font-semibold"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 注意：LOI 通常非 binding（除咗 exclusivity 同 confidentiality 條款），但係好重要嘅溝通工具，唔好 skip。</p>
       </div>
 
       <h3>Step 2：盡職審查（Due Diligence）</h3>
@@ -270,15 +272,15 @@
       <p>買家可以選擇性買以下全部或部分：</p>
       <div class="bg-white border border-gray-200 rounded-lg p-4 my-4">
         <ul class="space-y-2">
-          <li>✅ 商譽（Goodwill）— 品牌、客戶關係</li>
-          <li>✅ 存貨（Stock / Inventory）</li>
-          <li>✅ 設備機器（Plant & Equipment）</li>
-          <li>✅ 知識產權（商標、專利、域名）</li>
-          <li>✅ 客戶合約（Customer Contracts）</li>
-          <li>✅ 供應商合約（Supplier Contracts）</li>
-          <li>✅ 租約（Tenancy / Lease）</li>
-          <li>✅ 应收帳款（Trade Receivables）— 可以揀唔買</li>
-          <li>❌ 公司歷史負債（賣方保留）</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 商譽（Goodwill）— 品牌、客戶關係</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 存貨（Stock / Inventory）</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 設備機器（Plant & Equipment）</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 知識產權（商標、專利、域名）</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 客戶合約（Customer Contracts）</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 供應商合約（Supplier Contracts）</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 租約（Tenancy / Lease）</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 应收帳款（Trade Receivables）— 可以揀唔買</li>
+          <li><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 公司歷史負債（賣方保留）</li>
         </ul>
       </div>
 
@@ -295,7 +297,7 @@
         <li>如果合約有「不得轉讓條款」，要對方 waiver</li>
       </ul>
       <div class="bg-red-50 border border-red-200 rounded-lg p-3 my-3">
-        <p class="text-red-800 font-semibold">⚠️ 最常見嘅卡關位：</p>
+        <p class="text-red-800 font-semibold"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 最常見嘅卡關位：</p>
         <p class="text-red-700">業主唔同意轉租約、大客戶趁機重新傾條件、供應商話要重新 credit check。呢啲全部要預時間處理。</p>
       </div>
 
@@ -329,14 +331,14 @@
       <h3>賣方 VDD Checklist</h3>
       <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-4">
         <ul class="space-y-3">
-          <li><span class="text-green-500 mr-2">☐</span> <strong>公司文件</strong>：公司章程、公司註冊處紀錄、股東名冊、董事名冊</li>
-          <li><span class="text-green-500 mr-2">☐</span> <strong>財務文件</strong>：最近 3 年審計報告、銀行月結單、AR 清單</li>
-          <li><span class="text-green-500 mr-2">☐</span> <strong>稅務文件</strong>：報稅表、稅局評稅通知、稅務局查詢紀錄</li>
-          <li><span class="text-green-500 mr-2">☐</span> <strong>合約文件</strong>：重大客戶合約、供應商合約、租約、貸款協議</li>
-          <li><span class="text-green-500 mr-2">☐</span> <strong>知識產權</strong>：商標註冊證、域名登記</li>
-          <li><span class="text-green-500 mr-2">☐</span> <strong>員工文件</strong>：僱傭合約、強積金紀錄、工傷紀錄</li>
-          <li><span class="text-green-500 mr-2">☐</span> <strong>訴訟紀錄</strong>：任何過去 6 年嘅訴訟、調解、仲裁</li>
-          <li><span class="text-green-500 mr-2">☐</span> <strong>牌照許可證</strong>：商業登記、特定行業牌照</li>
+          <li><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>公司文件</strong>：公司章程、公司註冊處紀錄、股東名冊、董事名冊</li>
+          <li><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>財務文件</strong>：最近 3 年審計報告、銀行月結單、AR 清單</li>
+          <li><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>稅務文件</strong>：報稅表、稅局評稅通知、稅務局查詢紀錄</li>
+          <li><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>合約文件</strong>：重大客戶合約、供應商合約、租約、貸款協議</li>
+          <li><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>知識產權</strong>：商標註冊證、域名登記</li>
+          <li><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>員工文件</strong>：僱傭合約、強積金紀錄、工傷紀錄</li>
+          <li><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>訴訟紀錄</strong>：任何過去 6 年嘅訴訟、調解、仲裁</li>
+          <li><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>牌照許可證</strong>：商業登記、特定行業牌照</li>
         </ul>
       </div>
 
@@ -448,7 +450,7 @@
         <p><strong>賣股份：</strong>買家買咗間公司，公司仲欠銀行錢，charge 仍然有效。買家要承擔呢筆債。</p>
         <p><strong>賣資產：</strong>如果你公司仲有 charge，銀行可能有權阻止你出售主要資產（因為資產係抵押品）。要賣之前先同銀行傾 release。</p>
         <div class="bg-green-50 border border-green-200 rounded p-3 mt-3">
-          <p class="text-green-800 font-semibold">✅ 事前一定要查公司註冊處嘅押記登記冊（Register of Charges）</p>
+          <p class="text-green-800 font-semibold"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 事前一定要查公司註冊處嘅押記登記冊（Register of Charges）</p>
         </div>
       </div>
 
@@ -469,7 +471,7 @@
         <p class="mt-2">賣資產嗰陣，你同買家協議總價 $500 萬。但 $500 萬入面，幾多係商譽？幾多係設備？幾多係存貨？</p>
         <p>如果冇分配，稅局可能全部當商譽（Goodwill），影響賣方嘅稅務（賺咗可能要交稅）同買方嘅折舊權益。</p>
         <div class="bg-amber-50 border border-amber-200 rounded p-3 mt-3">
-          <p class="text-amber-800 font-semibold">✅ 建議：</p>
+          <p class="text-amber-800 font-semibold"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 建議：</p>
           <p class="text-amber-700">SPA / BTA 入面一定要有 Purchase Price Allocation 條款，列明每項資產嘅作價。最好事前同會計師傾好點分配最慳稅。</p>
         </div>
       </div>
@@ -499,29 +501,29 @@
       </div>
 
       <!-- Checklist -->
-      <h2 id="checklist">✅ 賣公司 Checklist（Share Sale 路線）</h2>
+      <h2 id="checklist"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 賣公司 Checklist（Share Sale 路線）</h2>
       <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6">
         <ul class="space-y-3">
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 確認公司註冊處紀錄正確（ND2A、ND2B、NAR1 全部 updated）</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 查清公司嘅押記（Register of Charges）</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 準備盡職審查 Data Room（財務、法律、稅務、營運）</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 審閱主要客戶合約有冇 Change of Control 條款</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 確認所有股東同意賣股（特別係 minority shareholders）</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 同銀行傾 Personal Guarantee release 或轉讓</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 簽署 LOI / MOU</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 買家完成 Due Diligence</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 律師起草 SPA（Share Purchase Agreement）</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 簽署 SPA + Completion</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 填寫及簽署股份轉讓文書（Instrument of Transfer）</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 30 日內去稅局 stamp（0.2% + $5）</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 更新股東名冊 + 發新股東股份證明書</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 更新公司註冊處（ND2A 董事變更等）</li>
-          <li class="flex items-start"><span class="text-green-500 mr-2">☐</span> 通知銀行、供應商、客戶（如有需要）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 確認公司註冊處紀錄正確（ND2A、ND2B、NAR1 全部 updated）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 查清公司嘅押記（Register of Charges）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 準備盡職審查 Data Room（財務、法律、稅務、營運）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 審閱主要客戶合約有冇 Change of Control 條款</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 確認所有股東同意賣股（特別係 minority shareholders）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 同銀行傾 Personal Guarantee release 或轉讓</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 簽署 LOI / MOU</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 買家完成 Due Diligence</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 律師起草 SPA（Share Purchase Agreement）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 簽署 SPA + Completion</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 填寫及簽署股份轉讓文書（Instrument of Transfer）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 30 日內去稅局 stamp（0.2% + $5）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 更新股東名冊 + 發新股東股份證明書</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 更新公司註冊處（ND2A 董事變更等）</li>
+          <li class="flex items-start"><span class="text-green-500 mr-2"><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> 通知銀行、供應商、客戶（如有需要）</li>
         </ul>
       </div>
 
       <!-- FAQ -->
-      <h2 id="faq">❓ 常見問題</h2>
+      <h2 id="faq"><i data-lucide="circle-help" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見問題</h2>
 
       <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 my-6">
         <h3 class="text-lg font-bold text-navy mt-0">Q：我想賣公司，買家想做 Asset Sale，但我怕多交稅，點算？</h3>
@@ -594,7 +596,7 @@
     <p class="text-sm text-gray-600 mt-1">我哋嘅完整指南幫你搞掂所有文件，避免被政府退回</p>
     <div class="flex flex-col sm:flex-row gap-3 justify-center mt-4">
       <a href="/shareholder-transfer/" class="inline-flex items-center gap-2 bg-navy text-white font-bold px-6 py-3 rounded-xl hover:bg-navy-light transition shadow text-sm">
-        <i data-lucide='book-open' class='w-4 h-4 inline-block'></i> 免費睇 Step 1 →
+        <i data-lucide='book-open' class='w-4 h-4 inline-block'></i> 免費睇 Step 1 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
       </a>
       <a href="https://1714457598663.gumroad.com/l/wkjykk" target="_blank" class="inline-flex items-center gap-2 bg-gold text-navy font-bold px-6 py-3 rounded-xl hover:bg-gold-light transition shadow text-sm">
         🔓 解鎖完整指南 HK$149
@@ -642,7 +644,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

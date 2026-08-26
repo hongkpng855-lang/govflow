@@ -75,14 +75,16 @@
   ]
 }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body class="bg-gray-50 text-gray-900 leading-relaxed">
 
   <!-- Navigation -->
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -99,7 +101,7 @@
         🏝️ 香港公司離岸利得稅申報（Offshore Profit Claim）終極指南 2026
       </h1>
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 
@@ -120,7 +122,7 @@
     <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-center text-sm">
       <span class="text-navy font-semibold">💰 正常利得稅率 16.5%</span>
       <span class="line-through text-gray-400 mx-2">（兩級制都係 8.25%/16.5%）</span>
-      <span class="text-navy font-bold">→ Offshore Claim 成功，該筆利潤徵稅率 = 0%</span>
+      <span class="text-navy font-bold"><i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> Offshore Claim 成功，該筆利潤徵稅率 = 0%</span>
     </div>
   </div>
 
@@ -265,12 +267,12 @@
         </div>
       </div>
 
-      <h3>❌ 以下情況 Offshore Claim 難度極高：</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 以下情況 Offshore Claim 難度極高：</h3>
       <ul>
-        <li>❌ <strong>本地服務業</strong>：香港老師教香港學生（offline/online 都係香港 source）</li>
-        <li>❌ <strong>本地零售 / 餐飲</strong>：香港舖位做嘅生意，100% 香港 source</li>
-        <li>❌ <strong>網上平台</strong>：如果 server 喺香港、管理喺香港、客戶全球 — 情況複雜，睇實際 operation</li>
-        <li>❌ <strong>本地物業租金收入</strong>：物業喺香港，香港 source 冇得走</li>
+        <li><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>本地服務業</strong>：香港老師教香港學生（offline/online 都係香港 source）</li>
+        <li><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>本地零售 / 餐飲</strong>：香港舖位做嘅生意，100% 香港 source</li>
+        <li><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>網上平台</strong>：如果 server 喺香港、管理喺香港、客戶全球 — 情況複雜，睇實際 operation</li>
+        <li><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>本地物業租金收入</strong>：物業喺香港，香港 source 冇得走</li>
       </ul>
 
       <h2 id="preparation">4. 申請 Offshore Claim 前嘅 Operation 調整（好重要！）</h2>
@@ -280,7 +282,7 @@
       <p>以下係成功 claim offshore 嘅 operation 關鍵：</p>
 
       <div class="flag-item">
-        <p class="font-bold text-navy">✅ 關鍵操作調整</p>
+        <p class="font-bold text-navy"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 關鍵操作調整</p>
         <ul class="mt-2 space-y-1.5">
           <li><strong>合約簽訂</strong>：避免喺香港簽約。可以考慮由海外員工/海外子公司/海外 agent 喺當地簽約。</li>
           <li><strong>洽談地點</strong>：訂單洽談、價格商議、條款敲定 — 記錄清楚喺邊度進行。旅行記錄、email 記錄、會議記錄都好重要。</li>
@@ -296,22 +298,22 @@
       <div class="bg-white border border-gray-200 rounded-xl p-6 mb-6">
         <h3 class="font-bold text-navy mb-3">📋 Offshore Claim 必備文件 Checklist</h3>
         <ul class="space-y-2 text-sm">
-          <li class="flex gap-2"><span class="text-green-600 shrink-0">✅</span> <strong>公司架構圖</strong>：顯示香港公司同海外 operation 嘅關係</li>
-          <li class="flex gap-2"><span class="text-green-600 shrink-0">✅</span> <strong>業務流程描述</strong>：詳細文字說明成個交易流程（from order to delivery）</li>
-          <li class="flex gap-2"><span class="text-green-600 shrink-0">✅</span> <strong>合約</strong>：所有買賣合約、採購合約、服務合約（標明簽約地點）</li>
-          <li class="flex gap-2"><span class="text-green-600 shrink-0">✅</span> <strong>訂單文件</strong>：採購訂單（PO）、銷售訂單（SO）、發票（Invoice）</li>
-          <li class="flex gap-2"><span class="text-green-600 shrink-0">✅</span> <strong>付款記錄</strong>：銀行入數記錄、匯款單、信用證（L/C）</li>
-          <li class="flex gap-2"><span class="text-green-600 shrink-0">✅</span> <strong>運輸文件</strong>：提單（Bill of Lading）、空運提單（Airway Bill）、packing list</li>
-          <li class="flex gap-2"><span class="text-green-600 shrink-0">✅</span> <strong>溝通記錄</strong>：與客戶/supplier 洽談嘅 email、會議記錄（證明傾價同決定喺海外進行）</li>
-          <li class="flex gap-2"><span class="text-green-600 shrink-0">✅</span> <strong>員工出差記錄</strong>：海外員工/董事嘅 travel itinerary、機票、酒店記錄</li>
-          <li class="flex gap-2"><span class="text-green-600 shrink-0">✅</span> <strong>香港 office 角色說明</strong>：點解香港需要存在，做咩支援工作</li>
-          <li class="flex gap-2"><span class="text-green-600 shrink-0">✅</span> <strong>審計財務報表</strong>：已經由會計師審計嘅 financial statements</li>
-          <li class="flex gap-2"><span class="text-green-600 shrink-0">✅</span> <strong>稅務計算表</strong>：清晰列明 onshore vs offshore profit 嘅計算同分配方法</li>
+          <li class="flex gap-2"><span class="text-green-600 shrink-0"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>公司架構圖</strong>：顯示香港公司同海外 operation 嘅關係</li>
+          <li class="flex gap-2"><span class="text-green-600 shrink-0"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>業務流程描述</strong>：詳細文字說明成個交易流程（from order to delivery）</li>
+          <li class="flex gap-2"><span class="text-green-600 shrink-0"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>合約</strong>：所有買賣合約、採購合約、服務合約（標明簽約地點）</li>
+          <li class="flex gap-2"><span class="text-green-600 shrink-0"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>訂單文件</strong>：採購訂單（PO）、銷售訂單（SO）、發票（Invoice）</li>
+          <li class="flex gap-2"><span class="text-green-600 shrink-0"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>付款記錄</strong>：銀行入數記錄、匯款單、信用證（L/C）</li>
+          <li class="flex gap-2"><span class="text-green-600 shrink-0"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>運輸文件</strong>：提單（Bill of Lading）、空運提單（Airway Bill）、packing list</li>
+          <li class="flex gap-2"><span class="text-green-600 shrink-0"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>溝通記錄</strong>：與客戶/supplier 洽談嘅 email、會議記錄（證明傾價同決定喺海外進行）</li>
+          <li class="flex gap-2"><span class="text-green-600 shrink-0"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>員工出差記錄</strong>：海外員工/董事嘅 travel itinerary、機票、酒店記錄</li>
+          <li class="flex gap-2"><span class="text-green-600 shrink-0"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>香港 office 角色說明</strong>：點解香港需要存在，做咩支援工作</li>
+          <li class="flex gap-2"><span class="text-green-600 shrink-0"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>審計財務報表</strong>：已經由會計師審計嘅 financial statements</li>
+          <li class="flex gap-2"><span class="text-green-600 shrink-0"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></span> <strong>稅務計算表</strong>：清晰列明 onshore vs offshore profit 嘅計算同分配方法</li>
         </ul>
       </div>
 
       <div class="flag-item">
-        <p class="font-bold text-navy">⚠️ 好重要嘅提醒</p>
+        <p class="font-bold text-navy"><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 好重要嘅提醒</p>
         <p class="mt-1">文件唔係「事後整」就得。稅局會睇文件嘅 <strong>contemporaneous nature（即時性）</strong>。即係話，你要證明當初做生意時就係咁做，唔係事後先補文件。所以最好係平日做生意時就留起所有記錄。</p>
       </div>
 
@@ -374,31 +376,31 @@
 
       <div class="grid gap-3 mb-6">
         <div class="flag-item">
-          <p class="font-bold text-navy">❌ 錯誤 1：「我間公司冇香港員工，所以肯定 offshore」</p>
+          <p class="font-bold text-navy"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 1：「我間公司冇香港員工，所以肯定 offshore」</p>
           <p class="mt-1 text-sm">錯！就算你冇香港員工，但你自己（董事）喺香港做決定、簽合約、落 order，都係香港 source。</p>
         </div>
         <div class="flag-item">
-          <p class="font-bold text-navy">❌ 錯誤 2：「貨唔經香港就係 offshore」</p>
+          <p class="font-bold text-navy"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 2：「貨唔經香港就係 offshore」</p>
           <p class="mt-1 text-sm">經典謬誤！Nordico 案已經清楚講咗：貨物經過邊度唔係關鍵，合約喺邊度簽先係。</p>
         </div>
         <div class="flag-item">
-          <p class="font-bold text-navy">❌ 錯誤 3：「開咗公司好耐先轉 offshore claim」</p>
+          <p class="font-bold text-navy"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 3：「開咗公司好耐先轉 offshore claim」</p>
           <p class="mt-1 text-sm">如果你公司以前一直都係香港 operation，突然轉 offshore，稅局會好懷疑。最好係由公司成立初期就設定好 offshore operation。</p>
         </div>
         <div class="flag-item">
-          <p class="font-bold text-navy">❌ 錯誤 4：「claim offshore 就唔使報稅」</p>
+          <p class="font-bold text-navy"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 4：「claim offshore 就唔使報稅」</p>
           <p class="mt-1 text-sm">大錯特錯！Offshore claim 都要報稅，只係喺報稅表上 claim exemption。你唔報稅 = 無報稅，係犯法嘅，最高罰款 HK$50,000 同加 3 倍評稅。</p>
         </div>
         <div class="flag-item">
-          <p class="font-bold text-navy">❌ 錯誤 5：「以為會計師搞掂晒，自己唔使參與」</p>
+          <p class="font-bold text-navy"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 5：「以為會計師搞掂晒，自己唔使參與」</p>
           <p class="mt-1 text-sm">會計師幫你 prepare documents，但實際 operation details 只有你最清楚。你一定要主動提供具體嘅業務流程同文件。</p>
         </div>
         <div class="flag-item">
-          <p class="font-bold text-navy">❌ 錯誤 6：「Offshore claim 批咗就年年自動續」</p>
+          <p class="font-bold text-navy"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 6：「Offshore claim 批咗就年年自動續」</p>
           <p class="mt-1 text-sm">唔係。每年都要重新 claim，因為每年嘅 operation 可能唔同。稅局會重新審視。</p>
         </div>
         <div class="flag-item">
-          <p class="font-bold text-navy">❌ 錯誤 7：「全部利潤 claim offshore，冇留任何 onshore profit」</p>
+          <p class="font-bold text-navy"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 7：「全部利潤 claim offshore，冇留任何 onshore profit」</p>
           <p class="mt-1 text-sm">如果香港公司完全冇任何香港 operation 利潤，稅局會質疑「你間香港公司存在嘅商業理由係咩？」建議保留合理比例嘅 onshore profit。</p>
         </div>
       </div>
@@ -410,7 +412,7 @@
         <div class="mt-3 space-y-2 text-sm">
           <p><strong>背景</strong>：香港貿易公司，從越南採購成衣，賣俾歐洲買家。香港有 3 個員工處理文書。董事兼買手常駐泰國，喺泰國同越南 supplier 傾價落單。歐洲 sales team 喺當地接單。</p>
           <p><strong>關鍵事實</strong>：合約喺泰國（採購）同歐洲（銷售）簽訂。買手喺泰國決定採購數量同價格。香港只負責 L/C、會計、行政。</p>
-          <p><strong>結果</strong>：✅ 稅局接納 offshore claim，約 85% 利潤豁免香港利得稅。剩餘 15% 係香港提供嘅融資安排所產生嘅利潤。</p>
+          <p><strong>結果</strong>：<i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 稅局接納 offshore claim，約 85% 利潤豁免香港利得稅。剩餘 15% 係香港提供嘅融資安排所產生嘅利潤。</p>
           <p class="text-green-700 font-semibold">關鍵成功因素：清楚嘅 operation flow、充分嘅海外洽談記錄、香港角色明確劃分為支援角色。</p>
         </div>
       </div>
@@ -430,7 +432,7 @@
         <div class="mt-3 space-y-2 text-sm">
           <p><strong>背景</strong>：香港公司做 Amazon FBA，貨由大陸 supplier 直送 Amazon 美國 warehouse，香港公司 remote 管理 Amazon 帳戶。</p>
           <p><strong>IRD 判定</strong>：雖然貨物冇經過香港，但所有商業決定（產品選擇、定價、廣告策略）都係由香港 office 嘅員工做，合約條款都由香港決定。</p>
-          <p><strong>結果</strong>：❌ Offshore claim 被拒。</p>
+          <p><strong>結果</strong>：<i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> Offshore claim 被拒。</p>
           <p class="text-red-700 font-semibold">教訓：Amazon / 電商 operation 模式令香港成為管理中心，好難成功 claim offshore。</p>
         </div>
       </div>
@@ -499,7 +501,7 @@
           <p class="text-xs text-gray-500 mt-1">股份轉讓、物業買賣、租約印花稅計算</p>
         </a>
         <a href="/blog/香港有限公司違反公司條例罰則終極指南/" class="block bg-gray-50 border border-gray-200 rounded-xl p-4 hover:shadow-md transition-shadow">
-          <div class="text-2xl mb-2">⚖️</div>
+          <div class="text-2xl mb-2"><i data-lucide="scale" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></div>
           <h3 class="font-bold text-navy text-sm">違反《公司條例》罰則終極指南</h3>
           <p class="text-xs text-gray-500 mt-1">SME 東主踩中嘅違規行為同罰款</p>
         </a>
@@ -530,7 +532,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

@@ -168,14 +168,16 @@
     ]
   }
   </script>
-  </head>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+</head>
 <body class="bg-gray-50">
 
   <!-- ═══ Navigation ═══ -->
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 返回網誌</a>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回網誌</a>
     </div>
   </nav>
 
@@ -223,7 +225,7 @@
           <li><a href="#real-cases" class="text-navy hover:text-gold transition-colors">8. 真實案例：三種情境話你知點揀</a></li>
           <li><a href="#flowchart" class="text-navy hover:text-gold transition-colors">9. 決策流程圖 — 你應該揀邊種？</a></li>
           <li><a href="#switch" class="text-navy hover:text-gold transition-colors">10. 無限公司轉有限公司：點做？貴唔貴？</a></li>
-          <li><a href="#faq" class="text-navy hover:text-gold transition-colors">❓ 常見問題 FAQ</a></li>
+          <li><a href="#faq" class="text-navy hover:text-gold transition-colors"><i data-lucide="circle-help" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見問題 FAQ</a></li>
         </ul>
       </div>
 
@@ -284,63 +286,63 @@
         <tbody>
           <tr>
             <td><strong>法律責任</strong></td>
-            <td>無限責任 ⚠️<br/>追你個人身家</td>
-            <td>共同無限責任 ⚠️<br/>一人犯錯全部上身</td>
-            <td class="winner">有限責任 ✅<br/>只限未繳股本</td>
+            <td>無限責任 <i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i><br/>追你個人身家</td>
+            <td>共同無限責任 <i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i><br/>一人犯錯全部上身</td>
+            <td class="winner">有限責任 <i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i><br/>只限未繳股本</td>
           </tr>
           <tr>
             <td><strong>開業成本</strong></td>
-            <td class="winner">$2,150 起 ✅</td>
+            <td class="winner">$2,150 起 <i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></td>
             <td>$2,150 + 合夥協議費</td>
             <td>$3,695 起</td>
           </tr>
           <tr>
             <td><strong>每年合規成本</strong></td>
-            <td class="winner">約 $2,150 ✅</td>
+            <td class="winner">約 $2,150 <i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></td>
             <td>約 $2,150</td>
             <td>約 $6,750-$13,250</td>
           </tr>
           <tr>
             <td><strong>審計要求</strong></td>
-            <td class="winner">❌ 唔需要</td>
-            <td class="winner">❌ 唔需要</td>
-            <td>✅ 一定要</td>
+            <td class="winner"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔需要</td>
+            <td class="winner"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔需要</td>
+            <td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 一定要</td>
           </tr>
           <tr>
             <td><strong>利得稅稅率（首 $200 萬）</strong></td>
             <td>個人入息稅率<br/>（最高 15%）</td>
             <td>個人入息稅率<br/>（最高 15%）</td>
-            <td class="winner">8.25% ✅</td>
+            <td class="winner">8.25% <i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></td>
           </tr>
           <tr>
             <td><strong>銀行開戶難度</strong></td>
-            <td>⚠️ 中等（個人名義）</td>
-            <td>⚠️ 中等</td>
-            <td class="winner">✅ 較易開公司戶口</td>
+            <td><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 中等（個人名義）</td>
+            <td><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 中等</td>
+            <td class="winner"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 較易開公司戶口</td>
           </tr>
           <tr>
             <td><strong>企業形象</strong></td>
             <td>個人名義</td>
             <td>合夥名義</td>
-            <td class="winner">公司名義 ✅</td>
+            <td class="winner">公司名義 <i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></td>
           </tr>
           <tr>
             <td><strong>申請政府資助</strong></td>
-            <td>❌ BUD/TVP 唔適用</td>
-            <td>❌ 大部分唔適用</td>
-            <td class="winner">✅ 可申請</td>
+            <td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> BUD/TVP 唔適用</td>
+            <td><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 大部分唔適用</td>
+            <td class="winner"><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 可申請</td>
           </tr>
           <tr>
             <td><strong>轉讓/賣盤</strong></td>
             <td>賣唔到（冇股份）</td>
             <td>複雜</td>
-            <td class="winner">可轉讓股權 ✅</td>
+            <td class="winner">可轉讓股權 <i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></td>
           </tr>
           <tr>
             <td><strong>適合邊類生意</strong></td>
             <td>低風險個人服務<br/>Freelance、零售</td>
             <td>專業團隊<br/>（會計師樓、律師樓）</td>
-            <td class="winner">高風險、請人、<br/>想發展 ✅</td>
+            <td class="winner">高風險、請人、<br/>想發展 <i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></td>
           </tr>
         </tbody>
       </table>
@@ -370,9 +372,9 @@
       </ul>
 
       <div class="flag-item">
-        <p><strong>⚠️ 真實案例比較：</strong></p>
-        <p><strong>利潤 $50 萬：</strong> 有限公司 → 利得稅約 $41,250 | 無限公司 → 個人入息稅約 $75,000（視乎其他收入）→ <strong>有限公司慳稅</strong></p>
-        <p><strong>利潤 $400 萬：</strong> 有限公司 → 首 $200 萬 @8.25% + 後 $200 萬 @16.5% = 約 $495,000 | 無限公司 → 最高 15% = 約 $600,000 → <strong>有限公司繼續慳稅</strong></p>
+        <p><strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 真實案例比較：</strong></p>
+        <p><strong>利潤 $50 萬：</strong> 有限公司 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 利得稅約 $41,250 | 無限公司 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 個人入息稅約 $75,000（視乎其他收入）<i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>有限公司慳稅</strong></p>
+        <p><strong>利潤 $400 萬：</strong> 有限公司 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 首 $200 萬 @8.25% + 後 $200 萬 @16.5% = 約 $495,000 | 無限公司 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 最高 15% = 約 $600,000 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>有限公司繼續慳稅</strong></p>
         <p><strong>穩定利潤 $50 萬（東主仲有其他正職收入）：</strong> 無限公司利潤 + 正職薪俸稅一齊計，有機會跳入更高稅階。</p>
       </div>
 
@@ -395,7 +397,7 @@
       <p>相反，無限公司就真係「公司即係你」：公司欠債 $100 萬，你個人要還 $100 萬，債主可以追你層樓、架車、戶口存款，甚至申請你破產。</p>
 
       <div class="flag-item">
-        <p><strong>⚠️ 我嘅親身教訓：</strong> 初期用獨資形式做 Freelance，以為自己唔會俾人告。結果俾客反咬賠償時，我先知「無限」兩個字有幾甘。如果你嘅業務有任何「俾人告嘅風險」（就算得少少），都強烈建議用有限公司。</p>
+        <p><strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 我嘅親身教訓：</strong> 初期用獨資形式做 Freelance，以為自己唔會俾人告。結果俾客反咬賠償時，我先知「無限」兩個字有幾甘。如果你嘅業務有任何「俾人告嘅風險」（就算得少少），都強烈建議用有限公司。</p>
       </div>
 
       <!-- ═══ Section 6 ═══ -->
@@ -473,38 +475,38 @@
       <ol>
         <li><strong>你係咪自己一個人做？（冇 partner）</strong>
           <ul>
-            <li>是 → Q2</li>
-            <li>否（有 partner）→ <strong>考慮有限公司</strong>（合夥嘅連帶責任風險太高）</li>
+            <li>是 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> Q2</li>
+            <li>否（有 partner）<i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>考慮有限公司</strong>（合夥嘅連帶責任風險太高）</li>
           </ul>
         </li>
         <li><strong>你嘅業務容唔容易俾人告？</strong>（產品安全、合約糾紛、專業責任）</li>
         <li>
           <ul>
-            <li>容易 → <strong>有限公司</strong>（有限責任保護）</li>
-            <li>唔容易（例如純顧問、內容創作）→ Q3</li>
+            <li>容易 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>有限公司</strong>（有限責任保護）</li>
+            <li>唔容易（例如純顧問、內容創作）<i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> Q3</li>
           </ul>
         </li>
         <li><strong>你預計每年利潤 $20 萬以上？</strong>
           <ul>
-            <li>是 → <strong>有限公司</strong>（8.25% 利得稅優惠）</li>
-            <li>否 → Q4</li>
+            <li>是 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>有限公司</strong>（8.25% 利得稅優惠）</li>
+            <li>否 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> Q4</li>
           </ul>
         </li>
         <li><strong>你會唔會申請政府資助（BUD/TVP）或銀行貸款？</strong>
           <ul>
-            <li>會 → <strong>有限公司</strong>（無限公司大部分唔適用）</li>
-            <li>唔會 → Q5</li>
+            <li>會 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>有限公司</strong>（無限公司大部分唔適用）</li>
+            <li>唔會 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> Q5</li>
           </ul>
         </li>
         <li><strong>你會唔會請人？</strong>
           <ul>
-            <li>會 → <strong>有限公司</strong>（請人用有限公身份比較專業）</li>
-            <li>唔會 → <strong>獨資（無限公司）</strong> 都可以</li>
+            <li>會 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>有限公司</strong>（請人用有限公身份比較專業）</li>
+            <li>唔會 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>獨資（無限公司）</strong> 都可以</li>
           </ul>
         </li>
       </ol>
 
-      <p>簡單結論：<strong>有風險、有 partner、想請人、想申請資助、利潤較高 → 有限公司。低風險、一人 Freelance、想慳合規成本 → 獨資/無限公司。</strong></p>
+      <p>簡單結論：<strong>有風險、有 partner、想請人、想申請資助、利潤較高 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 有限公司。低風險、一人 Freelance、想慳合規成本 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 獨資/無限公司。</strong></p>
 
       <!-- ═══ Section 10 ═══ -->
       <h2 id="switch">10. 無限公司轉有限公司：點做？貴唔貴？</h2>
@@ -521,11 +523,11 @@
       <p><strong>費用：</strong> 約 $5,000-$10,000（公司註冊 $1,545 + 商業登記 $2,150 + 秘書代辦 $1,000-$2,000 + 轉名費）。</p>
 
       <div class="flag-item">
-        <p><strong>⚠️ 注意：</strong> 轉公司唔係「改名」咁簡單。你嘅現有合約（租約、供應商協議、客戶合約）全部都係舊公司名義，要逐個通知對方更新。銀行戶口都要重新開。建議預留 1-2 個月做過渡安排。</p>
+        <p><strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 注意：</strong> 轉公司唔係「改名」咁簡單。你嘅現有合約（租約、供應商協議、客戶合約）全部都係舊公司名義，要逐個通知對方更新。銀行戶口都要重新開。建議預留 1-2 個月做過渡安排。</p>
       </div>
 
       <!-- ═══ FAQ ═══ -->
-      <h2 id="faq" class="mt-12">❓ 常見問題 FAQ</h2>
+      <h2 id="faq" class="mt-12"><i data-lucide="circle-help" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見問題 FAQ</h2>
 
       <div class="space-y-6">
         <div>
@@ -581,7 +583,7 @@
         <h3 class="text-xl font-bold mb-2">🚀 準備好開公司未？</h3>
         <p class="text-gray-300 mb-4">睇完呢篇比較，決定咗揀邊種公司形式未？下一步就去睇完整嘅開公司教學！</p>
         <a href="/blog/香港有限公司開公司設立註冊終極指南2026/" class="inline-block bg-gold text-navy font-bold px-6 py-3 rounded-lg hover:bg-gold-light transition-colors">
-          睇開公司終極指南 →
+          睇開公司終極指南 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
         </a>
       </div>
 

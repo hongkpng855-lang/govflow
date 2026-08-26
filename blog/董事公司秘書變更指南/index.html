@@ -147,6 +147,8 @@
     ]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body>
 
@@ -154,7 +156,7 @@
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← 返回首頁</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回首頁</a>
     </div>
   </nav>
 
@@ -172,7 +174,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </header>
@@ -244,7 +246,7 @@
     <h3>Step 3：召開董事會記錄辭職</h3>
     <p>雖然辭職唔需要公司批准，但最好開個董事會（或者用書面決議）正式記錄辭職事宜，以便日後有紀錄可查。</p>
 
-    <h3>Step 4：填寫 ND2A 表格 → 提交公司註冊處</h3>
+    <h3>Step 4：填寫 ND2A 表格 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 提交公司註冊處</h3>
     <p>呢步最關鍵！ND2A 表格係「更改公司秘書及董事詳情通知書」，需要在變更後 <strong>15 日內</strong> 提交。</p>
 
     <p><strong>ND2A 填寫要點：</strong></p>
@@ -256,7 +258,7 @@
     </ul>
 
     <div class="callout-danger">
-      <strong>⚠️ 大量人忽略：</strong> 辭職生效後，你仍然係公司註冊處記錄上嘅董事，直到有人提交咗 ND2A 先算正式更新。如果你辭咗職但公司唔幫你交表，公司註冊處嘅紀錄仍然顯示你係董事，日後出咗問題你都有責任。建議你辭職時 <strong>要求公司書面承諾會準時交 ND2A</strong>。
+      <strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 大量人忽略：</strong> 辭職生效後，你仍然係公司註冊處記錄上嘅董事，直到有人提交咗 ND2A 先算正式更新。如果你辭咗職但公司唔幫你交表，公司註冊處嘅紀錄仍然顯示你係董事，日後出咗問題你都有責任。建議你辭職時 <strong>要求公司書面承諾會準時交 ND2A</strong>。
     </div>
 
     <!-- Section 3 -->
@@ -274,11 +276,11 @@
 
     <h3>董事資格要求</h3>
     <ul>
-      <li>✅ 必須係自然人（法人唔可以做董事）</li>
-      <li>✅ 任何國籍都可以</li>
-      <li>✅ 無年齡上限，但最少 18 歲</li>
-      <li>❌ 未解除破產令嘅破產人士唔可以</li>
-      <li>❌ 曾被定罪（某啲詐騙相關罪名）可能被法庭禁止擔任董事</li>
+      <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 必須係自然人（法人唔可以做董事）</li>
+      <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 任何國籍都可以</li>
+      <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 無年齡上限，但最少 18 歲</li>
+      <li><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 未解除破產令嘅破產人士唔可以</li>
+      <li><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 曾被定罪（某啲詐騙相關罪名）可能被法庭禁止擔任董事</li>
     </ul>
 
     <div class="callout-success">
@@ -319,26 +321,26 @@
     <!-- Section 5 -->
     <h2 id="common-mistakes">最多人中招嘅 6 個錯誤</h2>
 
-    <h3>❌ 錯誤 1：冇喺 15 日內提交變更通知</h3>
+    <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 1：冇喺 15 日內提交變更通知</h3>
     <p>呢個係最常見的錯誤。好多公司以為「等交 NAR1 先一次過改哂」就得。事實上，公司註冊處要求任何董事或秘書變更必須 <strong>喺變更後 15 日內</strong> 提交 ND2A 或 ND4，否則公司同負責人都有可能被檢控。</p>
 
-    <h3>❌ 錯誤 2：辭職董事冇確認 ND2A 已提交</h3>
+    <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 2：辭職董事冇確認 ND2A 已提交</h3>
     <p>辭職嘅董事往往以為「我簽咗辭職信就得」。但如果你辭職後公司唔幫你交 ND2A，公司註冊處嘅公共紀錄上你仍然係董事。萬一公司之後有違規，你可能會收到罰款通知。最好：</p>
     <ul>
       <li>要求公司俾一份已提交 ND2A 嘅副本你</li>
       <li>或者自己去公司註冊處嘅查冊系統 confirm 自己嘅董事身份已被移除</li>
     </ul>
 
-    <h3>❌ 錯誤 3：公司秘書同唯一董事係同一自然人</h3>
+    <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 3：公司秘書同唯一董事係同一自然人</h3>
     <p>根據《公司條例》第 474(4) 條，如果一間公司只有一個董事，<strong>呢個董事唔可以同時兼任公司秘書</strong>。如果間公司係一人董事，公司秘書一定要搵另一個人或者秘書公司做。呢個係好多人唔知嘅陷阱。</p>
 
-    <h3>❌ 錯誤 4：冇保存 Consent to Act 文件</h3>
+    <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 4：冇保存 Consent to Act 文件</h3>
     <p>新董事的書面同意書（Consent to Act）必須保存喺公司註冊辦事處，並納入公司紀錄冊。如果公司註冊處檢查時搵唔到，可以罰款 $5,000 或以上。</p>
 
-    <h3>❌ 錯誤 5：ND2A / ND4 簽署人唔啱</h3>
+    <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 5：ND2A / ND4 簽署人唔啱</h3>
     <p>表格必須由公司嘅董事或公司秘書簽署，唔可以由其他人代簽（例如會計文員）。如果簽署人唔係現任董事或秘書，公司註冊處會退件。</p>
 
-    <h3>❌ 錯誤 6：外國人做公司秘書</h3>
+    <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 6：外國人做公司秘書</h3>
     <p>如果公司秘書係自然人，必須 <strong>通常居於香港</strong>。好多 startup 搵外國 co-founder 做公司秘書，但對方根本唔喺香港住。正確做法係搵香港居民或者秘書公司。</p>
 
     <div class="callout-danger">
@@ -376,7 +378,7 @@
     </table>
 
     <div class="callout-warning">
-      <strong>⚠️ 注意：</strong> 公司註冊處雖然唔會自動檢查每間公司有冇準時提交變更，但如果佢哋抽查到（特別係公司之後辦理其他手續時被發現），罰款係可以追溯的。唔好博。
+      <strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 注意：</strong> 公司註冊處雖然唔會自動檢查每間公司有冇準時提交變更，但如果佢哋抽查到（特別係公司之後辦理其他手續時被發現），罰款係可以追溯的。唔好博。
     </div>
 
     <!-- Section 7 -->
@@ -431,7 +433,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

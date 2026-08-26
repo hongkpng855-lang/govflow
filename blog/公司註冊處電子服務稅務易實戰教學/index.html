@@ -128,6 +128,8 @@
     ]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body>
 
@@ -135,7 +137,7 @@
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 網誌總覽</a>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 網誌總覽</a>
     </div>
   </nav>
 
@@ -160,7 +162,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </section>
@@ -241,13 +243,13 @@
         </table>
       </div>
 
-      <p>簡單記法：<strong>同公司結構有關嘅 → 用 CR e-Services；同報稅有關嘅 → 用 eTAX</strong>。</p>
+      <p>簡單記法：<strong>同公司結構有關嘅 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 用 CR e-Services；同報稅有關嘅 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 用 eTAX</strong>。</p>
 
       <!-- Section 2 -->
       <h2 id="account">2️⃣ 開 Account 完整步驟（兩個系統）</h2>
 
       <h3>🔹 CR e-Services Portal 開戶</h3>
-      <p>去公司註冊處嘅<a href="https://www.eregistry.gov.hk" target="_blank" rel="noopener">e-Registry 網站</a>，撳「網上服務」→「登記用戶」：</p>
+      <p>去公司註冊處嘅<a href="https://www.eregistry.gov.hk" target="_blank" rel="noopener">e-Registry 網站</a>，撳「網上服務」<i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>「登記用戶」：</p>
       <ol>
         <li><strong>填個人資料</strong> — 姓名、身份證號碼、電話、電郵</li>
         <li><strong>設定登入資料</strong> — 用戶名（6-30 字英數字）、密碼、提示問題</li>
@@ -306,11 +308,11 @@
       </ul>
       <p>遞交流程：</p>
       <ol>
-        <li>揀「網上提交文件」→ 選擇表格類型</li>
+        <li>揀「網上提交文件」<i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 選擇表格類型</li>
         <li>填寫表格（系統會自動 check 格式）</li>
         <li>上載附件（如有）</li>
         <li>網上俾錢（信用卡/PPS/FPS）</li>
-        <li>確認遞交 →系統俾 transaction ID 你</li>
+        <li>確認遞交 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>系統俾 transaction ID 你</li>
       </ol>
 
       <div class="tip-box">
@@ -318,7 +320,7 @@
       </div>
 
       <h3>📥 下載電子證書</h3>
-      <p>提交成功後，登入 e-Services Portal →「查詢提交紀錄」→ 下載 PDF 證書。電子證書同實體證書有同等法律效力，可以用嚟更新銀行戶口、商業登記等。</p>
+      <p>提交成功後，登入 e-Services Portal <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>「查詢提交紀錄」<i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 下載 PDF 證書。電子證書同實體證書有同等法律效力，可以用嚟更新銀行戶口、商業登記等。</p>
 
       <!-- Section 4 -->
       <h2 id="etax">4️⃣ 稅務易 eTAX 實戰</h2>
@@ -326,15 +328,15 @@
       <h3>📋 公司利得稅報稅</h3>
       <p>用 eTAX 報公司利得稅嘅基本流程：</p>
       <ol>
-        <li>登入 eTAX → 揀「公司利得稅」</li>
+        <li>登入 eTAX <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 揀「公司利得稅」</li>
         <li>選擇要報稅嘅課稅年度</li>
         <li>填報稅表（網上 form 會自動計算）</li>
         <li>上載審計報告 + 稅項計算表（如有）</li>
-        <li>核對資料 → 電子簽署 → 遞交</li>
+        <li>核對資料 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 電子簽署 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 遞交</li>
       </ol>
 
       <div class="warn-box">
-        <p><strong>⚠️ 注意：</strong>第一次用 eTAX 報公司稅，系統會要求你確認「公司授權」。如果你係董事/公司秘書，可以直接授權俾自己。如果係會計師代報，要填授權書交俾稅局。</p>
+        <p><strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 注意：</strong>第一次用 eTAX 報公司稅，系統會要求你確認「公司授權」。如果你係董事/公司秘書，可以直接授權俾自己。如果係會計師代報，要填授權書交俾稅局。</p>
       </div>
 
       <h3>📊 查詢報稅狀態</h3>
@@ -408,29 +410,29 @@
 
       <p>以下係我用呢兩個系統時親身犯過嘅錯誤，你千祈唔好學：</p>
 
-      <h3>❌ 錯誤 1：CR Account 開咗但冇 Activate</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 1：CR Account 開咗但冇 Activate</h3>
       <p>以為填完表就得，原來要等審批電郵，收到後 30 日內 click activate link。我試過等咗成個星期都 login 唔到，先發現原來未 activate。</p>
 
-      <h3>❌ 錯誤 2：身份證副本唔清晰</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 2：身份證副本唔清晰</h3>
       <p>用手機影身份證，影得有啲反光+矇，俾人 reject。浪費咗 2 日再 submit。</p>
 
-      <h3>❌ 錯誤 3：用錯瀏覽器</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 3：用錯瀏覽器</h3>
       <p>CR e-Services Portal 對 <strong>Chrome / Edge</strong> 相容性最好。用 Safari 有時 submit 制冇反應，用 Firefox 試過上載 PDF 失敗。呢個係親身試過嘅。</p>
 
-      <h3>❌ 錯誤 4：NAR1 網上提交時附件超過限制</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 4：NAR1 網上提交時附件超過限制</h3>
       <p>系統限制每份附件 5MB，總共 10MB。我有一次掃描文件太清晰（300 DPI），成個 PDF 成 15MB，上載咗幾次都 fail。解決方法：用 150 DPI 掃描，或者壓縮 PDF。</p>
 
-      <h3>❌ 錯誤 5：eTAX 報稅表冇 save draft</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 5：eTAX 報稅表冇 save draft</h3>
       <p>第一次用 eTAX 報公司稅，填到一半有事要離開，以為 system 會自動 save，點知冇。結果要重新填過。記住：eTAX 嘅 draft 係要你自己㩒「暫存草稿」先 save 到。</p>
 
-      <h3>❌ 錯誤 6：電子證書冇 backup</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 6：電子證書冇 backup</h3>
       <p>成功 submit NNC2 之後 download 咗證書，諗住「放喺 desktop 就得啦」。點知電腦死咗，晒咗 $295 同時間，要另外俾錢申請補發。收到電子檔案一定要 backup 去 cloud（Google Drive / Dropbox）。</p>
 
-      <h3>❌ 錯誤 7：付款成功但冇㩒「確認遞交」</h3>
+      <h3><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 7：付款成功但冇㩒「確認遞交」</h3>
       <p>呢個最陰濕！俾完錢之後，系統唔會自動 submit 文件，你要喺付款成功畫面再㩒「確認遞交」，先叫正式提交。我有一次俾咗錢以為搞掂，點知隔咗成個月先發現份文件仲係草稿狀態。</p>
 
       <div class="warn-box">
-        <p><strong>⚠️ 錯誤 7 係最多人中嘅陷阱：</strong>付款後一定要㩒「確認遞交（Confirm Submission）」，然後抄低系統俾你嘅 <strong>Transaction ID</strong>。之後可以喺「查詢提交紀錄」check 到 status。</p>
+        <p><strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 錯誤 7 係最多人中嘅陷阱：</strong>付款後一定要㩒「確認遞交（Confirm Submission）」，然後抄低系統俾你嘅 <strong>Transaction ID</strong>。之後可以喺「查詢提交紀錄」check 到 status。</p>
       </div>
 
       <!-- Section 7 -->
@@ -457,9 +459,9 @@
             <p class="text-sm !mb-0 text-gray-500">由 Sold Note 到 NAR1，逐個 step 教你填</p>
           </a>
           <a href="/company-name-change/" class="block bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:border-gold/40 hover:shadow-md transition">
-            <div class="text-2xl mb-2">✏️</div>
+            <div class="text-2xl mb-2"><i data-lucide="pencil" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></div>
             <h3 class="font-bold text-navy !mt-0 !mb-1">更改公司名稱指南</h3>
-            <p class="text-sm !mb-0 text-gray-500">特別決議 → NNC2 → 銀行更新完整流程</p>
+            <p class="text-sm !mb-0 text-gray-500">特別決議 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> NNC2 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 銀行更新完整流程</p>
           </a>
           <a href="/nar1-generator/" class="block bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:border-gold/40 hover:shadow-md transition">
             <div class="text-2xl mb-2">📅</div>
@@ -504,13 +506,13 @@
       </p>
       <div class="flex flex-col sm:flex-row gap-3 justify-center">
         <a href="/shareholder-transfer/" class="inline-flex items-center gap-2 text-sm font-semibold text-navy bg-white border-2 border-navy/20 hover:border-gold/40 hover:text-gold transition rounded-xl px-6 py-3 shadow-sm">
-          🔄 股份轉讓指南 →
+          🔄 股份轉讓指南 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
         </a>
         <a href="/company-name-change/" class="inline-flex items-center gap-2 text-sm font-semibold text-navy bg-white border-2 border-navy/20 hover:border-gold/40 hover:text-gold transition rounded-xl px-6 py-3 shadow-sm">
-          ✏️ 公司改名指南 →
+          <i data-lucide="pencil" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 公司改名指南 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
         </a>
         <a href="/blog/" class="inline-flex items-center gap-2 text-sm font-semibold text-gold bg-white border-2 border-gold/30 hover:bg-gold hover:text-white transition rounded-xl px-6 py-3 shadow-sm">
-          📚 睇更多文章 →
+          📚 睇更多文章 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
         </a>
       </div>
     </div>
@@ -527,7 +529,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

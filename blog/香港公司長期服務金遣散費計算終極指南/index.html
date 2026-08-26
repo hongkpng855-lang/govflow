@@ -168,6 +168,8 @@
     "knowsAbout": ["Hong Kong company law", "Company secretarial", "SCR compliance"]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-50">
 
@@ -175,7 +177,7 @@
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 網誌總覽</a>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 網誌總覽</a>
     </div>
   </nav>
 
@@ -213,7 +215,7 @@
     </div>
   
     <div class="author-byline text-sm text-gray-500 mt-2 mb-6">
-      <span>✍️ 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
+      <span><i data-lucide="pen-line" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰文：<strong>ESGov 團隊</strong>（香港公司秘書及合規顧問）</span>
       <span class="ml-4">📅 最後更新：2026年6月</span>
     </div>
 </header>
@@ -278,11 +280,11 @@
             </tr>
             <tr>
               <td><strong>可否同時領取？</strong></td>
-              <td colspan="2">❌ 唔可以。同一事件只可以拎 LSP 或遣散費其一（以較高者為準）</td>
+              <td colspan="2"><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔可以。同一事件只可以拎 LSP 或遣散費其一（以較高者為準）</td>
             </tr>
             <tr>
               <td><strong>僱主可否用 MPF 對沖？</strong></td>
-              <td colspan="2"><strong>2025.5.1 前：</strong>可以（用僱主強制性供款）<br /><strong>2025.5.1 後：</strong>❌ 唔可以</td>
+              <td colspan="2"><strong>2025.5.1 前：</strong>可以（用僱主強制性供款）<br /><strong>2025.5.1 後：</strong><i data-lucide="circle-x" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 唔可以</td>
             </tr>
           </tbody>
         </table>
@@ -341,7 +343,7 @@
             </tr>
             <tr>
               <td>上限測試</td>
-              <td>$60,000 < $390,000 ✅</td>
+              <td>$60,000 < $390,000 <i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></td>
               <td>冇超出上限</td>
             </tr>
             <tr>
@@ -382,7 +384,7 @@
             </tr>
             <tr>
               <td>上限測試</td>
-              <td>$180,000 < $390,000 ✅</td>
+              <td>$180,000 < $390,000 <i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></td>
               <td>冇超出上限</td>
             </tr>
             <tr>
@@ -424,7 +426,7 @@
             <tr>
               <td>上限測試</td>
               <td>月薪 $8,000 ≤ $15,000</td>
-              <td>冇上限 ✅</td>
+              <td>冇上限 <i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></td>
             </tr>
             <tr>
               <td class="font-bold text-navy">最終 LSP／遣散費</td>
@@ -459,14 +461,14 @@
       <p>即係話，如果你員工喺 2025 年 5 月 1 日前已經做咗 10 年，之後再做多 2 年先離開，頭 10 年嘅 LSP 可以用 MPF 對沖，後 2 年嘅就唔得。</p>
 
       <div class="warn-box">
-        <p><strong>⚠️ 好多人中招嘅位：</strong>「取消對沖」條例生效後，<strong>自願性供款（Voluntary Contribution）</strong>一直以嚟都唔可以用嚟對沖 LSP／遣散費，呢個冇變過。但有好多人誤會咗，以為 2025 年 5 月 1 日前連自願性供款都可以對沖 — 其實從來都唔得。</p>
+        <p><strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 好多人中招嘅位：</strong>「取消對沖」條例生效後，<strong>自願性供款（Voluntary Contribution）</strong>一直以嚟都唔可以用嚟對沖 LSP／遣散費，呢個冇變過。但有好多人誤會咗，以為 2025 年 5 月 1 日前連自願性供款都可以對沖 — 其實從來都唔得。</p>
       </div>
 
       <h3>4.2 政府嘅支援措施</h3>
       <p>為咗幫僱主適應新制度，政府推出咗：</p>
       <ul>
         <li><strong>「專項儲蓄戶口」計劃：</strong>僱主可以開一個指定戶口，每月按薪酬嘅 1% 儲錢，用嚟未來支付 LSP／遣散費。戶口嘅存款唔計入公司利得稅，提取時亦免稅。</li>
-        <li><strong>25 年補貼：</strong>政府會喺 25 年內向僱主提供補貼，分擔部分 LSP／遣散費支出。補貼比例逐步遞減：首年 50% → 第 10 年 30% → 第 25 年 0%。</li>
+        <li><strong>25 年補貼：</strong>政府會喺 25 年內向僱主提供補貼，分擔部分 LSP／遣散費支出。補貼比例逐步遞減：首年 50% <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 第 10 年 30% <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 第 25 年 0%。</li>
         <li><strong>再就業津貼：</strong>僱主重新聘用年滿 60 歲嘅長者員工，可獲政府津貼。</li>
       </ul>
 
@@ -490,11 +492,11 @@
       </ul>
       <p>但壞處係：保險產品有條款限制（例如年資要求、賠償上限），同埋長期計貴過自己儲。我自己就冇買，但聽同行講今年開始多咗呢類產品。</p>
 
-      <h3>5.3 調整薪酬結構（⚠️ 小心法律風險）</h3>
+      <h3>5.3 調整薪酬結構（<i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 小心法律風險）</h3>
       <p>部分僱主會將員工部分薪酬轉為「佣金」或者「獎金」，因為 LSP 同遣散費係根據「最後一個月嘅月薪」計算，而佣金同獎金嘅計算方法唔同。但呢個做法有風險：</p>
 
       <div class="warn-box">
-        <p><strong>⚠️ 勞工處有權審視你嘅薪酬結構是否「合理商業安排」。如果被認定為刻意逃避 LSP 責任，可能會被檢控。</strong>唔建議為咗慳 LSP 而亂改薪酬結構，尤其係大幅降低底薪。</p>
+        <p><strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 勞工處有權審視你嘅薪酬結構是否「合理商業安排」。如果被認定為刻意逃避 LSP 責任，可能會被檢控。</strong>唔建議為咗慳 LSP 而亂改薪酬結構，尤其係大幅降低底薪。</p>
       </div>
 
       <h3>5.4 靈活運用試用期同合約制</h3>
@@ -558,7 +560,7 @@
       </div>
 
       <!-- ═══ Section 9 ═══ -->
-      <h2>9. ❓ FAQ — 10 個最常見問題</h2>
+      <h2>9. <i data-lucide="circle-help" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> FAQ — 10 個最常見問題</h2>
 
       <h3>Q1：遣散費同長期服務金可以同時拎嗎？</h3>
       <p><strong>唔可以。</strong>同一離職事件只可以選擇 LSP 或遣散費其中一樣。僱主應該揀對員工有利嘅方式（即係金額較高嗰個）。</p>
@@ -591,20 +593,20 @@
       <p>唔使驚，勞工處通常係收到員工查詢後先會聯絡僱主。你只需要準備：員工入職紀錄、薪金紀錄、MPF 供款紀錄、離職文件。如果你嘅計算正確，一般唔會有問題。如果有爭議，可以去勞資審裁處解決。</p>
 
       <!-- ═══ Section 10 ═══ -->
-      <h2>10. ✅ 總結 Checklist — 每個僱主都應該做嘅嘢</h2>
+      <h2>10. <i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 總結 Checklist — 每個僱主都應該做嘅嘢</h2>
 
       <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
         <ul class="space-y-2">
-          <li>✅ <strong>了解 LSP 同遣散費嘅分別</strong> — 唔好炒錯人俾錯錢</li>
-          <li>✅ <strong>計算公式背熟：</strong>（月薪 × ⅔ × 年資）vs（$22,500 × ⅔ × 年資），揀較低者</li>
-          <li>✅ <strong>記錄員工準確入職日期</strong> — 年資計錯差好遠</li>
-          <li>✅ <strong>開設「專項儲蓄戶口」</strong> — 為未來 LSP／遣散費做好準備</li>
-          <li>✅ <strong>購買 LSP 保險</strong> — 評估成本效益後決定</li>
-          <li>✅ <strong>員工離職時確認原因</strong> — 係裁員定 misconduct？影響好大</li>
-          <li>✅ <strong>留意過渡期安排</strong> — 2025.5.1 前後嘅年資要分開計</li>
-          <li>✅ <strong>按時通知稅局</strong> — 離職後 1 個月內交 IR56G</li>
-          <li>✅ <strong>保留付款紀錄</strong> — 扣稅同將來查核都要用</li>
-          <li>✅ <strong>定期 review 薪酬結構</strong> — 確保合規同時做好成本規劃</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>了解 LSP 同遣散費嘅分別</strong> — 唔好炒錯人俾錯錢</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>計算公式背熟：</strong>（月薪 × ⅔ × 年資）vs（$22,500 × ⅔ × 年資），揀較低者</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>記錄員工準確入職日期</strong> — 年資計錯差好遠</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>開設「專項儲蓄戶口」</strong> — 為未來 LSP／遣散費做好準備</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>購買 LSP 保險</strong> — 評估成本效益後決定</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>員工離職時確認原因</strong> — 係裁員定 misconduct？影響好大</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>留意過渡期安排</strong> — 2025.5.1 前後嘅年資要分開計</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>按時通知稅局</strong> — 離職後 1 個月內交 IR56G</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>保留付款紀錄</strong> — 扣稅同將來查核都要用</li>
+          <li><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> <strong>定期 review 薪酬結構</strong> — 確保合規同時做好成本規劃</li>
         </ul>
       </div>
 
@@ -630,7 +632,7 @@
         <p class="text-gold font-bold text-lg mb-2">📋 你需要幫手處理員工離職文件？</p>
         <p class="text-white/80 text-sm mb-4">我哋嘅指南幫你搞清所有僱傭條例要求，避免法律風險</p>
         <a href="/" class="inline-block bg-gold text-navy font-bold px-6 py-3 rounded-lg hover:bg-gold/90 transition-colors">
-          瀏覽所有僱傭相關指南 →
+          瀏覽所有僱傭相關指南 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i>
         </a>
       </div>
 
@@ -655,7 +657,7 @@
         <div>
           <p class="font-bold text-navy text-sm">👤 關於作者</p>
           <p class="text-gray-600 text-sm mt-1 leading-relaxed">ESGov 由一位親身經歷過香港公司秘書文件嘅創業者建立。所有內容都係真實經驗分享。</p>
-          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov →</a>
+          <a href="/about/" class="inline-block mt-2 text-xs text-gold font-semibold hover:underline">了解更多關於 ESGov <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

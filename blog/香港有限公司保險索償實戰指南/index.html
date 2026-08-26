@@ -139,6 +139,8 @@
     ]
   }
   </script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
 </head>
 <body class="bg-gray-50">
 
@@ -146,7 +148,7 @@
   <nav class="bg-navy text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="flex items-center gap-2.5"><img src="/assets/images/esgov-logo.png?v=9.0" alt="ESGov" class="w-12 h-12 bg-gold/20 rounded-xl p-1.5" /><span class="font-bold text-xl tracking-tight"><span class="text-gold">ES</span><span class="text-white">Gov</span></span></a>
-      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition">← 返回網誌</a>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回網誌</a>
     </div>
   </nav>
 
@@ -213,17 +215,17 @@
 
         <h3>索償流程（7 步）</h3>
         <ol>
-          <li><strong>意外發生 → 即時醫療：</strong>安排受傷員工去睇醫生（中醫/西醫都得），保留所有醫療收據正本。</li>
+          <li><strong>意外發生 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 即時醫療：</strong>安排受傷員工去睇醫生（中醫/西醫都得），保留所有醫療收據正本。</li>
           <li><strong>通知保險公司（24-48 小時內）：</strong>打電話或經經紀通知保險公司，獲取索償編號（Claim Reference）。</li>
           <li><strong>呈報勞工處（14 日內）：</strong>填寫「工傷呈報表」——<a href="https://www.labour.gov.hk/tc/forms/ld351.htm" target="_blank" rel="noopener">Form 2（僱主呈報表）</a>或 <a href="https://www.labour.gov.hk/tc/forms/ld351b.htm" target="_blank" rel="noopener">Form 2B（僱員呈報表）</a>，提交至勞工處。</li>
           <li><strong>保險公司調查：</strong>保險公司會派人上門或打電話調查意外經過，可能會要求公司提供安全紀錄、工作指引等文件。</li>
           <li><strong>判傷評估：</strong>保險公司委託醫生評估員工傷勢，發出「判傷證明書」（評估永久傷殘百分比）。</li>
           <li><strong>賠償計算：</strong>根據《僱員補償條例》計算賠償金額，包括：病假錢（4/5 人工）、永久傷殘賠償、醫療費、復康費用等。</li>
-          <li><strong>和解或裁決：</strong>雙方同意賠償金額 → 簽署和解書；未能達成共識 → 由勞工處或區域法院裁決。</li>
+          <li><strong>和解或裁決：</strong>雙方同意賠償金額 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 簽署和解書；未能達成共識 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 由勞工處或區域法院裁決。</li>
         </ol>
 
         <div class="warn-box">
-          <p><strong>⚠️ 常見中伏位：</strong>好多東主以為「同事返工扭親/搬重物整親」只係小事，叫同事自己睇醫生就得，冇通知保險公司。結果同事之後 claim 工傷，保險公司以「未及時通知」為由拒賠，公司要自己賠足！<strong>即使係輕傷，都建議通知保險公司備案（Notify Only），唔使 claim 住都得。</strong></p>
+          <p><strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 常見中伏位：</strong>好多東主以為「同事返工扭親/搬重物整親」只係小事，叫同事自己睇醫生就得，冇通知保險公司。結果同事之後 claim 工傷，保險公司以「未及時通知」為由拒賠，公司要自己賠足！<strong>即使係輕傷，都建議通知保險公司備案（Notify Only），唔使 claim 住都得。</strong></p>
         </div>
 
         <h3>公司要負責嘅費用</h3>
@@ -257,7 +259,7 @@
 
         <h3>索償流程（5 步）</h3>
         <ol>
-          <li><strong>事故發生 → 即時記錄：</strong>影相拍片、記錄目擊者聯絡資料、保存所有相關物品（唔好掉咗）。</li>
+          <li><strong>事故發生 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 即時記錄：</strong>影相拍片、記錄目擊者聯絡資料、保存所有相關物品（唔好掉咗）。</li>
           <li><strong>通知保險公司（7 日內）：</strong>即使對方話「唔會追究」，都要通知保險公司備案。好多 case 係事隔幾個月對方突然變卦。</li>
           <li><strong>收集證據：</strong>撰寫詳細意外報告、收集第三者索償信（如有）、保存通訊紀錄。</li>
           <li><strong>保險公司調查：</strong>保險公司會委託公證行（Loss Adjuster）調查事件，評估責任歸屬同賠償金額。</li>
@@ -265,7 +267,7 @@
         </ol>
 
         <div class="flag-item">
-          <p><strong>⚠️ 真實教訓：</strong>我有個朋友開餐廳，有客人在舖入面跣親，佢第一時間帶咗個客去睇醫生，仲主動賠咗 HK$5,000 醫藥費。點知幾個月後收到律師信，對方 claim 佢 HK$200,000！原來佢冇通知保險公司就私下和解，保險公司話「未獲授權嘅和解唔受保」，最後佢要自己賠晒。<strong>公眾責任保險索償：即使係小意外，都唔好自己私下和解，一定要通知保險公司由佢哋處理。</strong></p>
+          <p><strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 真實教訓：</strong>我有個朋友開餐廳，有客人在舖入面跣親，佢第一時間帶咗個客去睇醫生，仲主動賠咗 HK$5,000 醫藥費。點知幾個月後收到律師信，對方 claim 佢 HK$200,000！原來佢冇通知保險公司就私下和解，保險公司話「未獲授權嘅和解唔受保」，最後佢要自己賠晒。<strong>公眾責任保險索償：即使係小意外，都唔好自己私下和解，一定要通知保險公司由佢哋處理。</strong></p>
         </div>
 
         <h3>索償所需文件</h3>
@@ -288,7 +290,7 @@
 
         <h3>索償流程（5 步）</h3>
         <ol>
-          <li><strong>發現損失 → 即時保護現場：</strong>防止損失擴大（例如爆水管要即時關水掣）。</li>
+          <li><strong>發現損失 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 即時保護現場：</strong>防止損失擴大（例如爆水管要即時關水掣）。</li>
           <li><strong>通知保險公司（24-72 小時內）：</strong>大部分財產保險條款要求 7 日內通知。水浸/火災等緊急情況建議即時通知。</li>
           <li><strong>保留所有損失物品：</strong>唔好掉咗受損嘅貨物或設備，保險公司需要檢查。</li>
           <li><strong>準備損失清單：</strong>詳細列出所有受損物品、數量、購買日期、價值（最好有發票或存貨紀錄）。</li>
@@ -296,7 +298,7 @@
         </ol>
 
         <div class="warn-box">
-          <p><strong>⚠️ 關鍵提醒：</strong>財產保險索償最常見嘅爭議係「折舊率」（Depreciation）。保險公司會按物品嘅年齡同折舊計算賠償金額，例如一部 5 年前買嘅電腦（原價 HK$10,000）可能只賠 HK$2,000。如果你買嘅係「新換舊保單」（New for Old / Replacement Value），就可以獲得全新替代品嘅賠償。<strong>投保時可以問清楚係「折舊值」定係「新換舊」</strong>。</p>
+          <p><strong><i data-lucide="triangle-alert" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 關鍵提醒：</strong>財產保險索償最常見嘅爭議係「折舊率」（Depreciation）。保險公司會按物品嘅年齡同折舊計算賠償金額，例如一部 5 年前買嘅電腦（原價 HK$10,000）可能只賠 HK$2,000。如果你買嘅係「新換舊保單」（New for Old / Replacement Value），就可以獲得全新替代品嘅賠償。<strong>投保時可以問清楚係「折舊值」定係「新換舊」</strong>。</p>
         </div>
 
         <h3>索償所需文件</h3>
@@ -319,7 +321,7 @@
 
         <h3>索償流程（6 步）</h3>
         <ol>
-          <li><strong>意外發生 → 確保安全：</strong>如果有人受傷，即時報警（999）。唔好移動車輛（除非影響交通安全）。</li>
+          <li><strong>意外發生 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 確保安全：</strong>如果有人受傷，即時報警（999）。唔好移動車輛（除非影響交通安全）。</li>
           <li><strong>交換資料：</strong>同對方交換駕駛執照、車牌號碼、保險資料。影低對方車輛損毀情況。</li>
           <li><strong>通知保險公司（即時）：</strong>大部分汽車保單要求意外後即時通知。如果拖延，保險公司可以拒賠。</li>
           <li><strong>填寫「意外報告書」：</strong>詳細描述意外經過，附上現場草圖同照片。</li>
@@ -357,7 +359,7 @@
       <!-- 7. Appeal -->
       <section id="appeal" class="mt-8">
         <h2>7. 被拒賠後嘅 Appeal 策略</h2>
-        <p>收到拒賠信（Declinature Letter）唔代表冇得翻身。Appeal 成功嘅關鍵在於：<strong>搞清楚拒賠原因 → 針對性補充證據 → 用啱渠道上訴</strong>。</p>
+        <p>收到拒賠信（Declinature Letter）唔代表冇得翻身。Appeal 成功嘅關鍵在於：<strong>搞清楚拒賠原因 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 針對性補充證據 <i data-lucide="arrow-right" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 用啱渠道上訴</strong>。</p>
 
         <h3>5 步 Appeal 流程</h3>
         <ol>
@@ -381,9 +383,9 @@
         <table>
           <tr><th>渠道</th><th>費用</th><th>時限</th><th>對保險公司約束力</th><th>適合情況</th></tr>
           <tr><td>保險公司內部 Appeal</td><td>免費</td><td>一般 1-3 個月</td><td>內部決定</td><td>文件唔齊/溝通誤會</td></tr>
-          <tr><td>保險索償投訴局（ICB）</td><td>免費</td><td>3-6 個月</td><td>✅ 裁決約束保險公司</td><td>索償額 HK$120 萬以下</td></tr>
+          <tr><td>保險索償投訴局（ICB）</td><td>免費</td><td>3-6 個月</td><td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 裁決約束保險公司</td><td>索償額 HK$120 萬以下</td></tr>
           <tr><td>保險業監管局（IA）</td><td>免費</td><td>視乎個案</td><td>操守監管（可罰款/譴責）</td><td>投訴保險公司不當行為</td></tr>
-          <tr><td>民事訴訟</td><td>律師費 HK$50,000+</td><td>1-2 年</td><td>✅ 法院判決</td><td>索償金額大/案情複雜</td></tr>
+          <tr><td>民事訴訟</td><td>律師費 HK$50,000+</td><td>1-2 年</td><td><i data-lucide="check-circle" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 法院判決</td><td>索償金額大/案情複雜</td></tr>
         </table>
       </section>
 
@@ -417,31 +419,31 @@
         <div class="step-card">
           <p><strong>📋 意外後 24 小時內：</strong></p>
           <ul>
-            <li>☐ 確保人員安全，安排醫療（如有需要）</li>
-            <li>☐ 影相拍片記錄現場情況</li>
-            <li>☐ 記錄目擊者姓名同聯絡電話</li>
-            <li>☐ 通知保險公司／保險經紀（獲取 Claim Reference）</li>
-            <li>☐ 保留所有受損物品（唔好掉）</li>
-            <li>☐ 如涉及警方事件（交通意外/盜竊/傷人），報警備案</li>
+            <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 確保人員安全，安排醫療（如有需要）</li>
+            <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 影相拍片記錄現場情況</li>
+            <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 記錄目擊者姓名同聯絡電話</li>
+            <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 通知保險公司／保險經紀（獲取 Claim Reference）</li>
+            <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 保留所有受損物品（唔好掉）</li>
+            <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 如涉及警方事件（交通意外/盜竊/傷人），報警備案</li>
           </ul>
         </div>
         <div class="step-card">
           <p><strong>📋 意外後 7 日內：</strong></p>
           <ul>
-            <li>☐ 撰寫詳細意外報告</li>
-            <li>☐ 收集所有相關文件（發票/合約/醫療報告）</li>
-            <li>☐ 填寫索償申請表</li>
-            <li>☐ 勞保：填寫 Form 2（14 日內交勞工處）</li>
-            <li>☐ 聯絡保險公司確認收到所有文件</li>
+            <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 撰寫詳細意外報告</li>
+            <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 收集所有相關文件（發票/合約/醫療報告）</li>
+            <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 填寫索償申請表</li>
+            <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 勞保：填寫 Form 2（14 日內交勞工處）</li>
+            <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 聯絡保險公司確認收到所有文件</li>
           </ul>
         </div>
         <div class="step-card">
           <p><strong>📋 索償期間：</strong></p>
           <ul>
-            <li>☐ 每 2-4 星期跟進索償進度</li>
-            <li>☐ 保留所有書面通訊紀錄</li>
-            <li>☐ 配合保險公司調查（提供所需文件）</li>
-            <li>☐ 如有爭議，考慮 Appeal 或向 ICB 投訴</li>
+            <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 每 2-4 星期跟進索償進度</li>
+            <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 保留所有書面通訊紀錄</li>
+            <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 配合保險公司調查（提供所需文件）</li>
+            <li><i data-lucide="square" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 如有爭議，考慮 Appeal 或向 ICB 投訴</li>
           </ul>
         </div>
       </section>
