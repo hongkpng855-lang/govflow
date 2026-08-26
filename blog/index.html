@@ -96,8 +96,25 @@
       <h2 class="sr-only">所有網誌文章列表</h2>
       <div id="article-list" class="space-y-3">
 
+      <!-- ═══ Category Filter ═══ -->
+      <div id="category-filter" class="flex flex-wrap gap-2 mb-6">
+        <button data-filter="all" class="cat-btn px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 bg-navy text-white">全部（92）</button>
+        <button data-filter="開公司" class="cat-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white border border-gray-200 text-gray-600 hover:border-gold hover:text-gold">開公司（12）</button>
+        <button data-filter="股份" class="cat-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white border border-gray-200 text-gray-600 hover:border-gold hover:text-gold">股份（8）</button>
+        <button data-filter="合規" class="cat-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white border border-gray-200 text-gray-600 hover:border-gold hover:text-gold">合規（12）</button>
+        <button data-filter="董事股東" class="cat-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white border border-gray-200 text-gray-600 hover:border-gold hover:text-gold">董事股東（14）</button>
+        <button data-filter="報稅審計" class="cat-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white border border-gray-200 text-gray-600 hover:border-gold hover:text-gold">報稅審計（8）</button>
+        <button data-filter="人事" class="cat-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white border border-gray-200 text-gray-600 hover:border-gold hover:text-gold">人事（6）</button>
+        <button data-filter="財務保險" class="cat-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white border border-gray-200 text-gray-600 hover:border-gold hover:text-gold">財務保險（7）</button>
+        <button data-filter="公司文件" class="cat-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white border border-gray-200 text-gray-600 hover:border-gold hover:text-gold">公司文件（25）</button>
+      </div>
+
+      <p id="cat-count" class="text-sm text-gray-400 mb-4"></p>
+
+
+
         <!-- ND2A 表格填寫教學 (Newest) -->
-        <a href="/blog/ND2A表格填寫教學/" class="block bg-white rounded-xl border-2 border-gold/30 p-5 hover:shadow-lg hover:border-gold transition-all duration-300 group bg-gold/[0.02]">
+        <a href="/blog/ND2A表格填寫教學/" data-category="董事股東">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="building-2" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -109,7 +126,7 @@
         </a>
 
         <!-- 代表公司上庭授權書 (Newest) -->
-        <a href="/blog/代表公司上庭授權書/" class="block bg-white rounded-xl border-2 border-gold/30 p-5 hover:shadow-lg hover:border-gold transition-all duration-300 group bg-gold/[0.02]">
+        <a href="/blog/代表公司上庭授權書/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="scale" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -121,7 +138,7 @@
         </a>
 
         <!-- 網站及網上營銷法律合規終極指南 (Newest) -->
-        <a href="/blog/香港公司網站及網上營銷法律合規終極指南/" class="block bg-white rounded-xl border-2 border-gold/30 p-5 hover:shadow-lg hover:border-gold transition-all duration-300 group bg-gold/[0.02]">
+        <a href="/blog/香港公司網站及網上營銷法律合規終極指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="scale" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -133,7 +150,7 @@
         </a>
 
         <!-- D&O 保險終極指南 -->
-        <a href="/blog/香港公司D&O保險董事責任保險終極指南/" class="block bg-white rounded-xl border-2 border-gold/30 p-5 hover:shadow-lg hover:border-gold transition-all duration-300 group bg-gold/[0.02]">
+        <a href="/blog/香港公司D&O保險董事責任保險終極指南/" data-category="董事股東">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="shield" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -145,7 +162,7 @@
         </a>
 
         <!-- 保險索償實戰指南 -->
-        <a href="/blog/香港有限公司保險索償實戰指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司保險索償實戰指南/" data-category="財務保險">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="shield" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -157,7 +174,7 @@
         </a>
 
         <!-- Hub Page: 香港有限公司終極指南大全 -->
-        <a href="/blog/香港有限公司/" class="block bg-white rounded-xl border-2 border-gold/30 p-5 hover:shadow-lg hover:border-gold transition-all duration-300 group bg-gold/[0.02]">
+        <a href="/blog/香港有限公司/" data-category="開公司">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="building-2" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -169,7 +186,7 @@
         </a>
 
         <!-- 商業糾紛解決終極指南 (Newest) -->
-        <a href="/blog/香港公司商業糾紛解決終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司商業糾紛解決終極指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="scale" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -181,7 +198,7 @@
         </a>
 
         <!-- 業務估值終極指南 -->
-        <a href="/blog/香港有限公司業務估值終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司業務估值終極指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="coins" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -193,7 +210,7 @@
         </a>
 
         <!-- 公司條例第622章合規終極指南 -->
-        <a href="/blog/香港公司條例第622章合規終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司條例第622章合規終極指南/" data-category="合規">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="scroll-text" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -205,7 +222,7 @@
         </a>
 
         <!-- 繼承計劃及家族企業傳承終極指南 -->
-        <a href="/blog/香港有限公司繼承計劃及家族企業傳承終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司繼承計劃及家族企業傳承終極指南/" data-category="董事股東">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="landmark" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -217,7 +234,7 @@
         </a>
 
         <!-- 數碼轉型終極指南 -->
-        <a href="/blog/香港有限公司數碼轉型終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司數碼轉型終極指南/" data-category="開公司">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="monitor" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -229,7 +246,7 @@
         </a>
 
         <!-- 大灣區業務拓展終極指南 -->
-        <a href="/blog/香港有限公司大灣區業務拓展終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司大灣區業務拓展終極指南/" data-category="開公司">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="globe" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -242,7 +259,7 @@
 
         <!-- 清盤 vs 撤銷註冊全面比較 -->
         <!-- 跨境交易及資金調撥終極指南 -->
-        <a href="/blog/香港有限公司跨境交易及資金調撥終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司跨境交易及資金調撥終極指南/" data-category="財務保險">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="globe" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -253,7 +270,7 @@
           </div>
         </a>
 
-        <a href="/blog/香港有限公司清盤vs撤銷註冊全面比較/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司清盤vs撤銷註冊全面比較/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="scale" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -265,7 +282,7 @@
         </a>
 
         <!-- 終止僱傭合約解僱員工終極指南 -->
-        <a href="/blog/香港有限公司終止僱傭合約解僱員工終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司終止僱傭合約解僱員工終極指南/" data-category="人事">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="clipboard-list" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -277,7 +294,7 @@
         </a>
 
         <!-- 有限公司 vs 無限公司 vs 合夥全面比較 -->
-        <a href="/blog/香港創業有限公司vs無限公司vs合夥全面比較/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港創業有限公司vs無限公司vs合夥全面比較/" data-category="開公司">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="building-2" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -289,7 +306,7 @@
         </a>
 
         <!-- 商業合約管理終極指南 -->
-        <a href="/blog/香港公司商業合約管理終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司商業合約管理終極指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="clipboard-list" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -301,7 +318,7 @@
         </a>
 
         <!-- ESG 終極指南 -->
-        <a href="/blog/香港中小企ESG入門終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港中小企ESG入門終極指南/" data-category="財務保險">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="sprout" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -313,7 +330,7 @@
         </a>
 
         <!-- SCR 魔鬼細節 -->
-        <a href="/blog/SCR重要控制人登記冊魔鬼細節/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/SCR重要控制人登記冊魔鬼細節/" data-category="合規">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="triangle-alert" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -325,7 +342,7 @@
         </a>
 
         <!-- New Article: SCR 終極指南 -->
-        <a href="/blog/香港公司重要控制人登記冊SCR終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司重要控制人登記冊SCR終極指南/" data-category="合規">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="file-text" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -338,7 +355,7 @@
 
         <!-- New Article: 零申報Dormant Company終極指南 -->
         <!-- New Article: 香港公司股份轉讓流程2026 -->
-        <a href="/blog/香港公司股份轉讓流程2026/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司股份轉讓流程2026/" data-category="股份">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="file-text" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -349,7 +366,7 @@
           </div>
         </a>
 
-        <a href="/blog/香港有限公司零申報DormantCompany終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司零申報DormantCompany終極指南/" data-category="合規">
           <div class="flex items-start gap-4">
             <div class="text-3xl shrink-0 mt-1"><i data-lucide='moon' class='w-4 h-4 inline-block'></i></div>
             <div class="flex-1 min-w-0">
@@ -361,7 +378,7 @@
         </a>
 
         <!-- New Article: 第一次報稅實戰指南 -->
-        <a href="/blog/香港有限公司第一次報稅實戰指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司第一次報稅實戰指南/" data-category="報稅審計">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="file-text" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -373,7 +390,7 @@
         </a>
 
         <!-- New Article: CR e-Services + eTAX 實戰教學 -->
-        <a href="/blog/公司註冊處電子服務稅務易實戰教學/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/公司註冊處電子服務稅務易實戰教學/" data-category="合規">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="monitor" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -385,7 +402,7 @@
         </a>
 
         <!-- New Article: Credit Control 信用管理追數終極指南 -->
-        <a href="/blog/香港有限公司CreditControl信用管理追數終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司CreditControl信用管理追數終極指南/" data-category="財務保險">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="coins" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -397,7 +414,7 @@
         </a>
 
         <!-- New Article: 商業貸款銀行融資終極指南 -->
-        <a href="/blog/香港公司商業貸款銀行融資終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司商業貸款銀行融資終極指南/" data-category="財務保險">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="landmark" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -409,7 +426,7 @@
         </a>
 
         <!-- New Article: Employee Handbook 員工手冊終極指南 -->
-        <a href="/blog/香港有限公司員工手冊EmployeeHandbook終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司員工手冊EmployeeHandbook終極指南/" data-category="人事">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="clipboard-list" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -421,7 +438,7 @@
         </a>
 
         <!-- New Article: Power of Attorney 授權書終極指南 -->
-        <a href="/blog/香港公司授權書PowerOfAttorney終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司授權書PowerOfAttorney終極指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="scroll-text" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -433,7 +450,7 @@
         </a>
 
         <!-- New Article: 會計記帳及文件保存指南 -->
-        <a href="/blog/香港有限公司會計記帳文件保存指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司會計記帳文件保存指南/" data-category="合規">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="bar-chart-3" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -445,9 +462,9 @@
         </a>
 
         <!-- New Article: Offshore Claim 離岸利得稅申報終極指南 -->
-        <a href="/blog/香港公司離岸利得稅申報OffshoreClaim終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司離岸利得稅申報OffshoreClaim終極指南/" data-category="報稅審計">
           <div class="flex items-start gap-4">
-            <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="palm-tree" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
+            <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="tree-palm" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
               <h3 class="font-bold text-lg text-navy group-hover:text-gold transition-colors mb-1">香港公司離岸利得稅申報（Offshore Profit Claim）終極指南 2026 — 慳稅 50-100% 嘅合法方法，9 成公司做錯文件俾 IRD Challenge</h3>
               <p class="text-sm text-gray-500 mb-2">Offshore Claim 係慳香港利得稅最直接嘅方法，但 9 成公司文件準備不足俾稅局 challenge。符合咩條件先可以 claim？要準備咩文件？IRD 審批流程同被 challenge 點應對？由成功 claim 到 offshore 嘅貿易公司東主分享實戰經驗，附完整文件 checklist、真實案例同 7 大常見錯誤。明晒先開始 operation 調整，避免被稅局追討過去 6 年稅款。</p>
@@ -457,7 +474,7 @@
         </a>
 
         <!-- New Article: LSP 遣散費終極指南 -->
-        <a href="/blog/香港公司長期服務金遣散費計算終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司長期服務金遣散費計算終極指南/" data-category="人事">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="calculator" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -469,7 +486,7 @@
         </a>
 
         <!-- New Article: 公司轉讓賣公司終極指南 -->
-        <a href="/blog/香港有限公司公司轉讓賣公司終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司公司轉讓賣公司終極指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="building-2" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -481,7 +498,7 @@
         </a>
 
         <!-- New Article: 商業租約終極指南 -->
-        <a href="/blog/香港公司商業租約CommercialLease終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司商業租約CommercialLease終極指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="building-2" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -493,7 +510,7 @@
         </a>
 
         <!-- New Article: 股東股權糾紛終極指南 -->
-        <a href="/blog/香港有限公司股東股權糾紛終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司股東股權糾紛終極指南/" data-category="董事股東">
           <div class="flex items-start gap-4">
             <div class="text-3xl shrink-0 mt-1"><i data-lucide='zap' class='w-4 h-4 inline-block'></i></div>
             <div class="flex-1 min-w-0">
@@ -505,7 +522,7 @@
         </a>
 
         <!-- New Article: 公司印章終極指南 -->
-        <a href="/blog/香港有限公司公司印章CompanyChop終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司公司印章CompanyChop終極指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="lock" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -517,7 +534,7 @@
         </a>
 
         <!-- New Article: 減資終極指南 -->
-        <a href="/blog/香港有限公司減資終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司減資終極指南/" data-category="股份">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="trending-down" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -529,7 +546,7 @@
         </a>
 
         <!-- New Article: 資料私隱合規終極指南 -->
-        <a href="/blog/香港有限公司資料私隱合規終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司資料私隱合規終極指南/" data-category="合規">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="lock" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -541,7 +558,7 @@
         </a>
 
         <!-- New Article: 公司條例罰則終極指南 -->
-        <a href="/blog/香港有限公司違反公司條例罰則終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司違反公司條例罰則終極指南/" data-category="合規">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="scale" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -553,7 +570,7 @@
         </a>
 
         <!-- New Article: 更換核數師終極指南 -->
-        <a href="/blog/有限公司更換核數師終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/有限公司更換核數師終極指南/" data-category="報稅審計">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="refresh-cw" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -566,7 +583,7 @@
 
         <!-- New Article: Due Diligence 盡職審查 -->
         <!-- New Article: Share Buyback 股份回購 -->
-        <a href="/blog/香港有限公司股份回購終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司股份回購終極指南/" data-category="股份">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="refresh-cw" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -578,7 +595,7 @@
         </a>
 
         <!-- New Article: Due Diligence 盡職審查 -->
-        <a href="/blog/香港公司盡職審查DueDiligence終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司盡職審查DueDiligence終極指南/" data-category="財務保險">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="search" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -590,7 +607,7 @@
         </a>
 
         <!-- New Article: ESOP 員工股權激勵計劃 -->
-        <a href="/blog/香港有限公司員工股權激勵計劃ESOP終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司員工股權激勵計劃ESOP終極指南/" data-category="股份">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="user-round" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -602,7 +619,7 @@
         </a>
 
         <!-- Article 2 (newest) -->
-        <a href="/blog/香港公司印花稅厘印費終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司印花稅厘印費終極指南/" data-category="報稅審計">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="tag" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -614,7 +631,7 @@
         </a>
 
         <!-- Article 2 (newest) -->
-        <a href="/blog/香港公司董事地址保護終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司董事地址保護終極指南/" data-category="合規">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="lock" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -626,7 +643,7 @@
         </a>
 
         <!-- Article 3 (newest) -->
-        <a href="/blog/香港有限公司公司秘書外判vsDIY終極比較指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司公司秘書外判vsDIY終極比較指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="text-3xl shrink-0 mt-1"><i data-lucide='handshake' class='w-4 h-4 inline-block'></i></div>
             <div class="flex-1 min-w-0">
@@ -638,7 +655,7 @@
         </a>
 
         <!-- Article 2 (newest) -->
-        <a href="/blog/香港公司文件公證認證加簽終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司文件公證認證加簽終極指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="scroll-text" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -650,7 +667,7 @@
         </a>
 
         <!-- Article 2 (newest) -->
-        <a href="/blog/香港虛擬銀行公司戶口開戶終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港虛擬銀行公司戶口開戶終極指南/" data-category="開公司">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="landmark" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -662,7 +679,7 @@
         </a>
 
         <!-- Article 2 (newest) -->
-        <a href="/blog/香港公司Invoice收據法律要求終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司Invoice收據法律要求終極指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="receipt" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -674,7 +691,7 @@
         </a>
 
         <!-- Article 2 (newest) -->
-        <a href="/blog/香港中小企AI自動化工具終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港中小企AI自動化工具終極指南/" data-category="開公司">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="monitor" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -686,7 +703,7 @@
         </a>
 
         <!-- Article 2 -->
-        <a href="/blog/香港有限公司政府資助BUD_TVP_EMF終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司政府資助BUD_TVP_EMF終極指南/" data-category="財務保險">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="coins" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -698,7 +715,7 @@
         </a>
 
         <!-- Article 2 (newest) -->
-        <a href="/blog/香港有限公司董事辭任終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司董事辭任終極指南/" data-category="董事股東">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="pen-line" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -710,7 +727,7 @@
         </a>
 
         <!-- Article 2 (newest) -->
-        <a href="/blog/香港公司僱傭條例EmploymentOrdinance終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司僱傭條例EmploymentOrdinance終極指南/" data-category="人事">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="scale" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -722,7 +739,7 @@
         </a>
 
         <!-- Article 2 (newest) -->
-        <a href="/blog/香港公司電子簽署終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司電子簽署終極指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="pen-line" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -734,7 +751,7 @@
         </a>
 
         <!-- Article 2 (newest) -->
-        <a href="/blog/香港有限公司股東大會AGM暨書面決議終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司股東大會AGM暨書面決議終極指南/" data-category="董事股東">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="vote" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -746,7 +763,7 @@
         </a>
 
         <!-- Article 2 (second newest) -->
-        <a href="/blog/香港有限公司清盤終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司清盤終極指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="flag" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -758,7 +775,7 @@
         </a>
 
         <!-- Article 2 (previous newest) -->
-        <a href="/blog/香港公司查冊終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司查冊終極指南/" data-category="合規">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="search" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -770,7 +787,7 @@
         </a>
 
         <!-- Article 2 (previous newest) -->
-        <a href="/blog/香港有限公司商業保險終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司商業保險終極指南/" data-category="人事">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="shield" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -782,7 +799,7 @@
         </a>
 
         <!-- Article 2 -->
-        <a href="/blog/香港有限公司合規時間表終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司合規時間表終極指南/" data-category="開公司">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="calendar" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -794,7 +811,7 @@
         </a>
 
         <!-- Article 2 -->
-        <a href="/blog/香港有限公司公司秘書職責終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司公司秘書職責終極指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="clipboard-list" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -806,7 +823,7 @@
         </a>
 
         <!-- Article 2 -->
-        <a href="/blog/香港公司股份證明書ShareCertificate終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司股份證明書ShareCertificate終極指南/" data-category="股份">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="scroll-text" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -818,7 +835,7 @@
         </a>
 
         <!-- Article 2 -->
-        <a href="/blog/香港有限公司董事袍金vs薪金稅務比較指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司董事袍金vs薪金稅務比較指南/" data-category="董事股東">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="briefcase" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -830,7 +847,7 @@
         </a>
 
         <!-- Article 2 -->
-        <a href="/blog/香港有限公司註冊地址變更指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司註冊地址變更指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="mail-open" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -842,7 +859,7 @@
         </a>
 
         <!-- Article 2 -->
-        <a href="/blog/香港公司商標註冊終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司商標註冊終極指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="tag" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -854,7 +871,7 @@
         </a>
 
         <!-- Article 2 -->
-        <a href="/blog/香港有限公司開公司設立註冊終極指南2026/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司開公司設立註冊終極指南2026/" data-category="開公司">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="building-2" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -866,7 +883,7 @@
         </a>
 
         <!-- Article 3 -->
-        <a href="/blog/香港有限公司法定紀錄StatutoryRecords終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司法定紀錄StatutoryRecords終極指南/" data-category="合規">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="book-open" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -878,7 +895,7 @@
         </a>
 
         <!-- Article 4 -->
-        <a href="/blog/香港公司章程修改完整指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司章程修改完整指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="scroll-text" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -890,7 +907,7 @@
         </a>
 
         <!-- Article 5 -->
-        <a href="/blog/香港公司董事會議紀錄終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司董事會議紀錄終極指南/" data-category="董事股東">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="clipboard-list" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -902,7 +919,7 @@
         </a>
 
         <!-- Article 6 -->
-        <a href="/blog/香港有限公司分紅派息終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司分紅派息終極指南/" data-category="董事股東">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="banknote" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -914,7 +931,7 @@
         </a>
 
         <!-- Article 7 -->
-        <a href="/blog/香港公司股東協議終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司股東協議終極指南/" data-category="開公司">
           <div class="flex items-start gap-4">
             <div class="text-3xl shrink-0 mt-1"><i data-lucide='handshake' class='w-4 h-4 inline-block'></i></div>
             <div class="flex-1 min-w-0">
@@ -926,7 +943,7 @@
         </a>
 
         <!-- Article 8 -->
-        <a href="/blog/香港有限公司董事借貸終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司董事借貸終極指南/" data-category="董事股東">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="landmark" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -938,7 +955,7 @@
         </a>
 
         <!-- Article 9 -->
-        <a href="/blog/香港有限公司股東墊款董事貸款終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司股東墊款董事貸款終極指南/" data-category="董事股東">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="coins" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -950,7 +967,7 @@
         </a>
 
         <!-- Article 10 -->
-        <a href="/blog/香港有限公司董事法律責任終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司董事法律責任終極指南/" data-category="董事股東">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="scale" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -962,7 +979,7 @@
         </a>
 
         <!-- Article 11 -->
-        <a href="/blog/香港公司集團架構控股子公司終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司集團架構控股子公司終極指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="construction" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -974,7 +991,7 @@
         </a>
 
         <!-- Article 12 -->
-        <a href="/blog/香港創業者個人財務管理終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港創業者個人財務管理終極指南/" data-category="開公司">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="bar-chart-3" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -986,7 +1003,7 @@
         </a>
 
         <!-- Article 13 -->
-        <a href="/blog/香港公司利得稅報稅及審計完整指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司利得稅報稅及審計完整指南/" data-category="報稅審計">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="receipt" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -998,7 +1015,7 @@
         </a>
 
         <!-- Article 14 -->
-        <a href="/blog/有限公司審計核數實戰指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/有限公司審計核數實戰指南/" data-category="報稅審計">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="search" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1010,7 +1027,7 @@
         </a>
 
         <!-- Article 15 -->
-        <a href="/blog/香港有限公司僱主報稅IR56B實戰指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司僱主報稅IR56B實戰指南/" data-category="報稅審計">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="file-text" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1022,7 +1039,7 @@
         </a>
 
         <!-- Article 16 -->
-        <a href="/blog/香港有限公司第一次請人終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司第一次請人終極指南/" data-category="報稅審計">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="users" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1034,7 +1051,7 @@
         </a>
 
         <!-- Article 17 -->
-        <a href="/blog/香港公司強積金MPF安排終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司強積金MPF安排終極指南/" data-category="人事">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="landmark" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1046,7 +1063,7 @@
         </a>
 
         <!-- Article 18 -->
-        <a href="/blog/香港有限公司更改公司名稱流程2026/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司更改公司名稱流程2026/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="pencil" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1058,7 +1075,7 @@
         </a>
 
         <!-- Article 19 -->
-        <a href="/blog/商業登記續期全攻略/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/商業登記續期全攻略/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="book-open" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1070,7 +1087,7 @@
         </a>
 
         <!-- Article 20 -->
-        <a href="/blog/有限公司周年申報表/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/有限公司周年申報表/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="clipboard-list" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1082,7 +1099,7 @@
         </a>
 
         <!-- Article 21 -->
-        <a href="/blog/香港公司開銀行戶口2026實戰指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司開銀行戶口2026實戰指南/" data-category="開公司">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="landmark" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1094,7 +1111,7 @@
         </a>
 
         <!-- Article 22 -->
-        <a href="/blog/香港公司重要控制人登記冊SCR終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港公司重要控制人登記冊SCR終極指南/" data-category="合規">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="contact" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1106,7 +1123,7 @@
         </a>
 
         <!-- Article 23 -->
-        <a href="/blog/董事公司秘書變更指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/董事公司秘書變更指南/" data-category="董事股東">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="refresh-cw" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1118,7 +1135,7 @@
         </a>
 
         <!-- Article 24 -->
-        <a href="/blog/公司秘書辭任更換指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/公司秘書辭任更換指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="pen-line" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1130,7 +1147,7 @@
         </a>
 
         <!-- Article 25 -->
-        <a href="/blog/有限公司撤銷註冊終止營運指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/有限公司撤銷註冊終止營運指南/" data-category="公司文件">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="door-open" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1154,7 +1171,7 @@
         </a>
 
         <!-- Article 27 -->
-        <a href="/blog/轉股東後必做5件事/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/轉股東後必做5件事/" data-category="股份">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="check-circle" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1166,7 +1183,7 @@
         </a>
 
         <!-- Article 28 -->
-        <a href="/blog/hk-company-share-allotment/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/hk-company-share-allotment/" data-category="股份">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="trending-up" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1178,7 +1195,7 @@
         </a>
 
         <!-- Article 29 -->
-        <a href="/blog/香港有限公司董事借貸終極指南/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/香港有限公司董事借貸終極指南/" data-category="董事股東">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="landmark" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1190,7 +1207,7 @@
         </a>
 
         <!-- Article 30 -->
-        <a href="/blog/hk-company-first-year-checklist/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/hk-company-first-year-checklist/" data-category="開公司">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="pin" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1202,7 +1219,7 @@
         </a>
 
         <!-- Article 31 -->
-        <a href="/blog/share-transfer-mistakes/" class="block bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gold/30 transition-all duration-300 group">
+        <a href="/blog/share-transfer-mistakes/" data-category="股份">
           <div class="flex items-start gap-4">
             <div class="shrink-0 mt-1 w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center"><i data-lucide="triangle-alert" class="w-5 h-5 text-gold" aria-hidden="true"></i></div>
             <div class="flex-1 min-w-0">
@@ -1331,6 +1348,43 @@
       // Initial render
       showPage(1);
     });
+  </script>
+
+
+  <script>
+    (function() {
+      var buttons = document.querySelectorAll('.cat-btn');
+      var cards = document.querySelectorAll('#article-list > a[data-category]');
+      var countEl = document.getElementById('cat-count');
+
+      function applyFilter(cat) {
+        var visible = 0;
+        cards.forEach(function(card) {
+          var show = (cat === 'all') || (card.getAttribute('data-category') === cat);
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        buttons.forEach(function(b) {
+          var active = (b.getAttribute('data-filter') === cat);
+          b.className = active
+            ? 'cat-btn px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 bg-navy text-white shadow'
+            : 'cat-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white border border-gray-200 text-gray-600 hover:border-gold hover:text-gold';
+        });
+        if (countEl) {
+          countEl.textContent = cat === 'all'
+            ? '顯示全部 ' + visible + ' 篇文章'
+            : '「' + cat + '」分類 — ' + visible + ' 篇文章';
+        }
+      }
+
+      buttons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          applyFilter(btn.getAttribute('data-filter'));
+        });
+      });
+
+      // Keep the 精選 hub card visible in all views (it has no data-category)
+    })();
   </script>
 
 </body>
