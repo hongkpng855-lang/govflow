@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港有限公司利得稅兩級制終極指南 2026 — 首200萬利潤8.25%？計算、提名、申報</title>
+  <meta name="description" content="香港公司利得稅兩級制完整教學！有限公司首HK$200萬應評稅利潤只係8.25%稅率、超出部分16.5%，獨資合夥業務7.5%／15%。集團提名規則、計算實例、申報程序同6大常見誤解全拆解，由真實東主分享點樣合法慳稅、避免中伏，一文搞清兩級制利得稅。" />
+  <meta property="og:title" content="香港有限公司利得稅兩級制終極指南 2026 — 首200萬利潤8.25%？ | ESGov" />
+  <meta property="og:description" content="兩級制利得稅點計？有限公司首HK$200萬利潤稅率8.25%、集團提名規則、申報程序同常見誤解全拆解。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司利得稅兩級制終極指南/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港有限公司利得稅兩級制終極指南/" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+
+  <style>
+    .blog-content h2 { font-size: 1.5rem; font-weight: 700; color: #1B2A4A; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f3f4f6; }
+    .blog-content h3 { font-size: 1.125rem; font-weight: 600; color: #1B2A4A; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .blog-content h4 { font-size: 1rem; font-weight: 600; color: #1B2A4A; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .blog-content p { line-height: 1.8; margin-bottom: 1rem; color: #374151; }
+    .blog-content ul, .blog-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: #374151; }
+    .blog-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .blog-content .tip-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .tip-box p { margin-bottom: 0; }
+    .blog-content .warn-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .warn-box p { margin-bottom: 0; }
+    .blog-content .flag-item { background: #fef3c7; border-left: 4px solid #C9A84C; padding: 1rem 1.25rem; margin-bottom: 1rem; border-radius: 0.5rem; }
+    .blog-content .flag-item p { margin-bottom: 0; }
+    .blog-content .step-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content a { color: #C9A84C; text-decoration: underline; }
+    .blog-content a:hover { color: #b8942e; }
+    .blog-content strong { color: #1B2A4A; }
+    .blog-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    .blog-content th, .blog-content td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
+    .blog-content th { background: #1B2A4A; color: white; font-weight: 600; }
+    .blog-content blockquote { border-left: 4px solid #C9A84C; background: #fefce8; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+    .blog-content blockquote p { margin-bottom: 0; color: #92400e; }
+    .sample-box { background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 0.75rem; padding: 1.5rem; margin: 1rem 0; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.6; }
+  </style>
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港有限公司利得稅兩級制終極指南 2026 — 首200萬利潤8.25%？計算、提名、申報",
+    "description": "香港公司利得稅兩級制完整教學：有限公司首HK$200萬應評稅利潤稅率8.25%、超出部分16.5%，集團提名規則、計算實例、申報程序同常見誤解。",
+    "author": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-08-29",
+    "dateModified": "2026-08-29",
+    "publisher": { "@type": "Organization", "name": "ESGov" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://esgov.org/blog/香港有限公司利得稅兩級制終極指南/" }
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://esgov.org" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://esgov.org/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "香港有限公司利得稅兩級制終極指南", "item": "https://esgov.org/blog/香港有限公司利得稅兩級制終極指南/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "有限公司兩級制利得稅稅率係幾多？",
+        "acceptedAnswer": { "@type": "Answer", "text": "自2018/19課稅年度起，香港實施兩級制利得稅：有限公司（法團）首HK$2,000,000應評稅利潤稅率8.25%，超出部分16.5%；獨資／合夥業務首HK$2,000,000稅率7.5%，超出部分15%。此稅率結構沿用至今（2025/26課稅年度仍然生效）。" }
+      },
+      {
+        "@type": "Question",
+        "name": "公司利潤超過HK$200萬，稅點樣計？",
+        "acceptedAnswer": { "@type": "Answer", "text": "超過HK$200萬後，只有超出嘅部分先用16.5%，首HK$200萬仍然用8.25%。例如應評稅利潤HK$2,500,000，稅款 = 首HK$2,000,000 × 8.25%（HK$165,000）+ 餘下HK$500,000 × 16.5%（HK$82,500）= 合共HK$247,500。" }
+      },
+      {
+        "@type": "Question",
+        "name": "集團有幾間公司，係咪每間都可以用8.25%？",
+        "acceptedAnswer": { "@type": "Answer", "text": "唔係。如果幾間公司屬「相聯法團」（例如一間公司控制另一間公司，或者兩間公司都俾同一班人控制），成個集團只可以提名其中一間享用兩級制，其餘公司全部按16.5%計算。應該提名應評稅利潤最高嗰間，先可以慳到最多稅。" }
+      },
+      {
+        "@type": "Question",
+        "name": "兩級制利得稅要唔要主動申請？",
+        "acceptedAnswer": { "@type": "Answer", "text": "有限公司一般會自動適用兩級制稅率，唔使另外申請。獨資／合夥業務就要喺報稅表（或相關補充表格）揀選選用兩級制先會用到。集團公司就要喺報稅時處理好提名，邊間用8.25%要寫清楚。" }
+      },
+      {
+        "@type": "Question",
+        "name": "兩級制同暫繳稅、財政預算案一次性稅務寬減有咩分別？",
+        "acceptedAnswer": { "@type": "Answer", "text": "三樣係唔同嘅嘢。兩級制係稅率結構（首HK$200萬利潤用低稅率）；暫繳稅係稅局預先收取下一年度嘅稅款；財政預算案一次性稅務寬減（例如利得稅100%寬減、設上限）係額外嘅扣減措施，年年唔同。三樣嘢同時適用，計算上要分清楚。" }
+      },
+      {
+        "@type": "Question",
+        "name": "銀行、保險公司可以用兩級制嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "一般嚟講，金融機構（例如銀行、保險公司、再保險公司）唔適用兩級制，全部應評稅利潤按標準稅率16.5%計算。如果你嘅公司屬於呢類受監管金融業務，申報前最好同會計師確認適用稅率。" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ═══════════════ Nav ═══════════════ -->
+  <nav class="sticky top-0 z-50 bg-navy text-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <span class="text-2xl font-bold tracking-tight">ESGov</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
+        <a href="/#how-it-works" class="hover:text-gold transition-colors">流程</a>
+        <a href="/#products" class="hover:text-gold transition-colors">產品</a>
+        <a href="/blog/" class="text-gold">網誌</a>
+      </div>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition-colors"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回網誌</a>
+    </div>
+  </nav>
+
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-4">
+        香港有限公司利得稅兩級制終極指南 2026 — 首HK$200萬利潤稅率8.25%？計算、集團提名、申報全拆解
+      </h1>
+      <p class="text-gray-500 text-sm">ESGov 編輯部 · 2026 年 8 月 · 閱讀時間 9 分鐘</p>
+    </div>
+  </header>
+
+  <article class="py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- 僅供參考 警告（頂部） -->
+      <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 mb-8 flex items-start gap-3">
+        <div class="w-9 h-9 shrink-0 rounded-full bg-amber-400/20 flex items-center justify-center">
+          <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-600" aria-hidden="true"></i>
+        </div>
+        <div>
+          <p class="font-bold text-amber-800">僅供參考</p>
+          <p class="text-sm text-amber-700 leading-relaxed">本文章內容只係一般資訊分享，<strong class="text-amber-800">唔構成法律或稅務意見</strong>。涉及實際報稅、集團提名或者稅務安排，強烈建議先諮詢執業會計師或稅務顧問。每間公司嘅情況都唔同，適用稅率同程序可能因情況而異。</p>
+        </div>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="bg-white rounded-xl border border-gray-200 p-6 mb-8">
+        <h2 class="text-lg font-bold text-navy mb-4 flex items-center gap-2"><i data-lucide="list" class="w-5 h-5" aria-hidden="true"></i> 目錄</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#intro" class="text-gray-600 hover:text-gold transition-colors">1. 前言 — 朋友差啲多交成十幾萬稅</a></li>
+          <li><a href="#what" class="text-gray-600 hover:text-gold transition-colors">2. 兩級制利得稅係咩？2026 年現行稅率一覽</a></li>
+          <li><a href="#calc" class="text-gray-600 hover:text-gold transition-colors">3. 兩級制點計？三個實例話你知</a></li>
+          <li><a href="#group" class="text-gray-600 hover:text-gold transition-colors">4. 集團公司提名規則 — 一間集團只可以一間用 8.25%？</a></li>
+          <li><a href="#excluded" class="text-gray-600 hover:text-gold transition-colors">5. 邊啲公司唔適用兩級制？</a></li>
+          <li><a href="#filing" class="text-gray-600 hover:text-gold transition-colors">6. 申報程序 — 要唔要主動申請？報稅表點處理？</a></li>
+          <li><a href="#mistakes" class="text-gray-600 hover:text-gold transition-colors">7. 六個常見誤解（唔好做）</a></li>
+          <li><a href="#faq" class="text-gray-600 hover:text-gold transition-colors">8. 常見問題（FAQ）</a></li>
+        </ul>
+      </div>
+
+      <div class="blog-content">
+
+        <!-- Section 1: Intro -->
+        <h2 id="intro">1. 前言 — 朋友差啲多交成十幾萬稅</h2>
+        <p>上年報稅季節，我朋友阿強揸住一間貿易有限公司，全年應評稅利潤約 HK$180 萬。佢一直以為有限公司利得稅全部按 16.5% 計，仲成日同我呻「香港稅都唔輕」。直至佢個會計師幫佢報稅嗰陣同佢講：<strong>兩級制利得稅之下，首 HK$200 萬利潤只係用 8.25%</strong>，佢先如夢初醒。</p>
+        <p>計返條數：HK$1,800,000 × 16.5% = HK$297,000；但兩級制下 HK$1,800,000 × 8.25% 只係 HK$148,500 — <strong>慳咗接近 HK$148,500</strong>。阿強話如果唔係會計師提佢，佢年年都以為自己交緊「正價稅」，真係唔知慳咗咁多。</p>
+        <p>但係兩級制又唔係咁簡單。我另一個 friend 開咗兩間公司（一間零售、一間批發，同一班股東），兩間公司報稅時都報咗 8.25% 稅率。後來稅局覆核話佢哋兩間公司屬「<strong>相聯法團</strong>」，成個集團只可以提名一間公司享用兩級制，另一間要補返 16.5% 嘅差額，仲連利息同罰款一齊追 — 為咗慳稅，最後仲蝕埋。</p>
+        <p>呢篇文章係我研究完稅局規定加朋友真實經歷嘅總結，同你一次過拆解：<strong>兩級制利得稅</strong>點計、集團提名點玩、申報要點做、常見誤解有邊啲，幫你合法慳到應慳嘅稅。</p>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>僅供參考：</strong>本文章嘅內容只係一般資訊分享，唔構成法律或稅務意見。實際報稅、集團提名或者稅務安排，強烈建議先諮詢執業會計師或稅務顧問。</p>
+        </div>
+
+        <!-- Section 2: 兩級制係咩 -->
+        <h2 id="what">2. 兩級制利得稅係咩？2026 年現行稅率一覽</h2>
+        <p>兩級制利得稅係香港由 <strong>2018/19 課稅年度</strong>起實施嘅稅率結構：應評稅利潤頭一個金額用低稅率，超出嘅部分先用標準稅率。呢個措施一直沿用至今，<strong>2025/26 課稅年度（即 2026 年報稅）仍然生效</strong>。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>納稅人類別</th>
+              <th>首 HK$2,000,000 應評稅利潤</th>
+              <th>超出 HK$2,000,000 嘅部分</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>有限公司（法團）</strong></td>
+              <td>8.25%</td>
+              <td>16.5%</td>
+            </tr>
+            <tr>
+              <td><strong>獨資／合夥業務</strong></td>
+              <td>7.5%</td>
+              <td>15%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>有兩點要搞清楚：第一，兩級制計算嘅基礎係<strong>「應評稅利潤」</strong>，即係扣晒所有可扣稅開支之後嘅利潤，唔係營業額，更加唔係銀行戶口嘅結餘。第二，有限公司同獨資／合夥個稅率唔同，前者 8.25%／16.5%，後者 7.5%／15% — 呢個分別源自有限公司同非公司法團喺稅務上本身唔同嘅標準稅率。</p>
+
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>溫馨提示：</strong>如果你係獨資／合夥經營，可以睇我哋嘅 <a href="/blog/香港創業有限公司vs無限公司vs合夥全面比較/">有限公司 vs 無限公司 vs 合夥全面比較</a>，了解一下三種經營模式喺稅務上嘅分別，再決定轉唔轉有限公司。</p>
+        </div>
+
+        <!-- Section 3: 計算 -->
+        <h2 id="calc">3. 兩級制點計？三個實例話你知</h2>
+        <p>用有限公司做例子，三個唔同利潤水平嘅計算如下：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>應評稅利潤</th>
+              <th>兩級制稅款</th>
+              <th>冇兩級制（全數 16.5%）</th>
+              <th>慳到幾多</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HK$1,500,000</td>
+              <td>1.5M × 8.25% = <strong>HK$123,750</strong></td>
+              <td>HK$247,500</td>
+              <td>慳 HK$123,750</td>
+            </tr>
+            <tr>
+              <td>HK$2,500,000</td>
+              <td>2M × 8.25% + 0.5M × 16.5% = <strong>HK$247,500</strong></td>
+              <td>HK$412,500</td>
+              <td>慳 HK$165,000</td>
+            </tr>
+            <tr>
+              <td>HK$5,000,000</td>
+              <td>2M × 8.25% + 3M × 16.5% = <strong>HK$660,000</strong></td>
+              <td>HK$825,000</td>
+              <td>慳 HK$165,000</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>睇到個 pattern 未？<strong>每間有限公司每年最多只可以慳 HK$165,000</strong>（即係 HK$2,000,000 × 8.25%）。利潤越高，相對慳嘅比例就越細；利潤超過 HK$200 萬之後，每賺多一蚊都係按 16.5% 交稅。</p>
+        <p>獨資／合夥嘅計法一樣，只係稅率換成 7.5%／15%：例如合夥全年應評稅利潤 HK$180 萬，稅款就係 HK$1,800,000 × 7.5% = HK$135,000（冇兩級制就要 HK$270,000）。合夥嘅兩級制額度係成個合夥計，再按合夥人嘅利潤比例分攤俾各人。</p>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>快速心算：</strong>利潤冇超過 HK$200 萬？直接 × 8.25% 就係稅款。超過咗？記住「首 200 萬 8.25%，之後先係 16.5%」，唔好成筆數乘 16.5%，咁樣會計多咗。</p>
+        </div>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>重要提醒：</strong>兩級制係按「應評稅利潤」計，唔係按「應課稅利潤」或者其他基數。帳目上嘅利潤經過審計調整同扣稅項目處理之後，先係應評稅利潤 — 所以審計報告同報稅表嘅數字要對得埋，呢部分可以參考我哋嘅 <a href="/blog/香港有限公司第一次報稅實戰指南/">第一次報稅實戰指南</a>。</p>
+        </div>
+
+        <!-- Section 4: 集團提名 -->
+        <h2 id="group">4. 集團公司提名規則 — 一間集團只可以一間用 8.25%？</h2>
+        <p>呢個係兩級制最多人中伏嘅地方。如果你名下或者你同人夾份揸住幾間公司，就要搞清楚：<strong>呢幾間公司係咪「相聯法團」</strong>。</p>
+        <p>一般嚟講，以下情況會令兩間公司成為相聯法團：</p>
+
+        <ul>
+          <li><strong>一間公司直接或間接控制另一間公司</strong> — 例如 A 公司揸住 B 公司超過一半股權／表決權，或者有權委任過半數董事；或者</li>
+          <li><strong>兩間公司都俾同一班人控制</strong> — 例如阿強同阿明同時控制緊零售公司同批發公司，就算兩間公司冇互相持股，都一樣屬於相聯法團。</li>
+        </ul>
+
+        <p>一旦屬於相聯法團，<strong>成個集團只可以提名其中一間公司享用兩級制 8.25% 稅率</strong>，其餘公司全部應評稅利潤按 16.5% 計。呢個制度嘅目的好簡單：防止有人開十間公司，每間賺 HK$200 萬以下，全部用低稅率，變相走稅。</p>
+
+        <div class="flag-item">
+          <p><i data-lucide="flag" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>真實案例：</strong>我朋友兩間公司（零售＋批發，同一班股東 50/50），首年報稅各自申報 8.25% 稅率，帳面慳咗十幾萬。第二年稅局查問之下，要求佢哋解釋點解兩間都用低稅率，最終判定兩間公司屬相聯法團，其中一間要補交 16.5% 同 8.25% 之間嘅差額，仲要罰款加利息 — 慳嘅稅全部嘔返出嚟，仲要倒貼。之後佢先學識：<strong>報稅前先確認集團結構，再決定提名邊間。</strong></p>
+        </div>
+
+        <p>咁提名邊間最著數？原則好簡單：<strong>提名應評稅利潤最高嗰間公司</strong>，因為佢喺首 HK$200 萬嗰段慳得最多。但實戰上仲要考慮其他因素，例如邊間公司嘅利潤最穩定、邊間將來會賣盤或者重組 — 提名咗就係嗰年嘅決定，所以最好每年報稅前都同會計師重新review一次。</p>
+
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>貼士：</strong>唔肯定自己幾間公司係咪「相聯法團」？最穩陣係報稅前將公司架構（股權、董事、表決權）俾會計師睇一睇，佢會幫你判斷同處理提名。事前搞清楚，好過事後俾稅局追差額。</p>
+        </div>
+
+        <!-- Section 5: 唔適用情況 -->
+        <h2 id="excluded">5. 邊啲公司唔適用兩級制？</h2>
+        <p>兩級制唔係人人用得，以下幾種情況要特別留意：</p>
+
+        <h3>5.1 金融機構一般唔適用</h3>
+        <p>一般嚟講，<strong>銀行、保險公司、再保險公司呢類受監管金融機構唔適用兩級制</strong>，應評稅利潤全部按標準稅率 16.5% 計算。如果你嘅公司唔係普通貿易／服務業，而係持牌金融業務，報稅前一定要同會計師確認適用稅率。</p>
+
+        <h3>5.2 揀咗個人入息課稅就唔再用兩級制</h3>
+        <p>獨資經營者或者合夥人如果選擇<strong>個人入息課稅（Personal Assessment）</strong>，稅款會按個人入息課稅嘅方法重新計算，唔會直接套用兩級制稅率。個人入息課稅可能對部分人有利（例如有其他收入可以合併計算、有免稅額），所以「兩級制 vs 個人入息課稅」邊樣著數，要實際計過先知 — 唔好一刀切話邊個好。</p>
+
+        <h3>5.3 虧損公司冇稅交，兩級制幫唔到手</h3>
+        <p>公司有虧損或者應評稅利潤係零，就冇稅要交，兩級制自然冇作用。虧損可以結轉去扣減將來年度嘅利潤，呢個係另一個課題。千祈唔好為咗「用盡」兩級制而夾硬將收入或者利潤搬嚟搬去 — 咁樣好容易惹嚟稅務調查（詳情見 <a href="/blog/香港公司稅務調查終極指南/">稅務調查終極指南</a>）。</p>
+
+        <h3>5.4 兩級制同離岸利得稅申報有咩關係？</h3>
+        <p>兩級制針對嘅係「應評稅利潤」— 即係要喺香港課稅嘅利潤。如果你間公司做緊離岸業務（例如買賣雙方同貨物都唔經過香港），利潤可能可以按「離岸利得稅申報」（Offshore Claim）處理，<strong>成筆利潤根本唔使課稅</strong>，咁兩級制就完全冇出場嘅機會 — 因為冇應評稅利潤，就冇稅可以計。</p>
+        <p>呢個位好多人搞錯：以為申報咗離岸，就可以「先慳離岸、再用兩級制」，其實兩者係二揀一嘅關係：利潤一係離岸（唔課稅），一係在岸（先有得用兩級制）。想搞清楚自己盤生意符合唔符合離岸申報資格，可以睇我哋嘅 <a href="/blog/香港公司離岸利得稅申報OffshoreClaim終極指南/">離岸利得稅申報終極指南</a> — 不過要提你：離岸申報係稅務調查嘅高危區域，唔係公司自己話離岸就離岸。</p>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>重要提醒：</strong>公司之間搬利潤、搬收入去「平均」每間公司嘅利潤，喺稅務上係好危險嘅做法。稅局有轉讓定價（Transfer Pricing）規則，關聯公司之間嘅交易要符合「公平交易原則」，亂咁安排隨時被重新計算稅款，仲可能被罰。公司結業前嘅稅務安排都一樣要小心，詳情可以睇 <a href="/deregistration/">撤銷註冊完整指南</a>。</p>
+        </div>
+
+        <!-- Section 6: 申報程序 -->
+        <h2 id="filing">6. 申報程序 — 要唔要主動申請？報稅表點處理？</h2>
+        <p>好多人問：「兩級制係咪要申請先用得？」答案視乎你係邊種經營者：</p>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>有限公司：一般自動適用，唔使申請。</strong>只要你間公司唔屬於集團提名問題，稅局計稅嗰陣就會自動用兩級制（首 HK$200 萬 8.25%）。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>獨資／合夥：要喺報稅表揀選。</strong>獨資或者合夥業務想用兩級制（7.5%／15%），要喺報稅表（或相關補充表格）入面選用，唔揀就會按標準稅率計。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>集團公司：處理好提名。</strong>相聯法團要喺報稅時一併處理提名（邊間用 8.25%），並保留提名記錄，以備稅局查問。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>保留帳目同審計報告。</strong>有限公司報利得稅一定要有經審計嘅財務報表，報稅表數字同審計報告要一致。審計報告唔係淨係交咗就算，仲要保存至少 7 年（可參考 <a href="/blog/香港有限公司會計記帳文件保存指南/">會計記帳文件保存指南</a>）。</p>
+        </div>
+
+        <p>成個報稅流程（審計 → 填報稅表 → 交稅 → 暫繳稅）可以參考我哋嘅 <a href="/blog/香港有限公司第一次報稅實戰指南/">第一次報稅實戰指南</a> 同 <a href="/blog/香港公司利得稅報稅及審計完整指南/">利得稅報稅及審計完整指南</a>，步驟同時間表都寫得好清楚。簡單總結三種情況點處理：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>情況</th>
+              <th>兩級制點處理</th>
+              <th>要唔要做嘢？</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>有限公司（單一公司）</strong></td>
+              <td>首 HK$200 萬 8.25%，超出 16.5%</td>
+              <td>自動適用，照常報稅就得</td>
+            </tr>
+            <tr>
+              <td><strong>獨資／合夥</strong></td>
+              <td>首 HK$200 萬 7.5%，超出 15%</td>
+              <td>要喺報稅表揀選選用兩級制</td>
+            </tr>
+            <tr>
+              <td><strong>集團（相聯法團）</strong></td>
+              <td>集團只可以一間用低稅率</td>
+              <td>提名邊間用 8.25%，報稅時一併處理</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="tip-box mt-4">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>免費工具：</strong>想知一份標準審計報告係咩樣、有咩內容？可以喺<a href="/audit-report-generator/" class="text-gold font-medium">審計報告 Audit Report 範例頁面</a>免費下載參考範例；實際報告一定要由執業會計師簽署，範例只係用嚟俾你了解內容同格式。</p>
+        </div>
+
+        <!-- Section 7: 常見誤解 -->
+        <h2 id="mistakes">7. 六個常見誤解（唔好做）</h2>
+        <p>以下係我身邊朋友同自己做過嘅錯，你千祈唔好跟住錯：</p>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>誤解 1：有限公司利得稅全部都係 16.5%。</strong></p>
+          <p>呢個係最普遍嘅誤解，連好多做咗生意好多年嘅老闆都搞錯。首 HK$200 萬應評稅利潤只係 8.25%，唔好年年「白交」多一倍稅。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>誤解 2：集團每間公司都可以用 8.25%。</strong></p>
+          <p>相聯法團只可以提名一間。開多幾間公司分攤利潤嚟「用盡」兩級制，正正係稅局要堵塞嘅漏洞，隨時被追稅。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>誤解 3：利潤超過 HK$200 萬就全數按 16.5%。</strong></p>
+          <p>唔係。係「首 HK$200 萬 8.25% + 超出部分 16.5%」，兩段分開計。成筆數乘 16.5% 會計多咗。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>誤解 4：兩級制要申請先用到。</strong></p>
+          <p>有限公司一般自動適用，唔使申請；獨資／合夥就要喺報稅表揀選。唔好以為冇申請就冇得用，都唔好以為公司會自動幫你揀咗。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>誤解 5：將利潤搬去另一間公司就可以慳多啲。</strong></p>
+          <p>公司之間嘅交易要符合轉讓定價規則，亂搬利潤有稅務調查風險（睇 <a href="/blog/香港公司稅務調查終極指南/">稅務調查終極指南</a>），而且相聯法團規則下，搬嚟搬去都係得一個 8.25% 額度。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>誤解 6：兩級制同暫繳稅、一次性稅務寬減係同一樣嘢。</strong></p>
+          <p>三樣係完全唔同嘅嘢。兩級制係稅率結構；暫繳稅係稅局預收下一年稅款（可參考 <a href="/blog/香港公司暫繳稅終極指南2026/">暫繳稅終極指南</a>）；財政預算案嘅一次性寬減（例如 100% 寬減設上限）係每年另外推出嘅措施。三樣同時適用，計稅時要分清楚。</p>
+        </div>
+
+        <blockquote>
+          <p>想慳稅，第一步係搞清公司稅務結構。我哋有大量免費指南 — <a href="/blog/">睇更多 ESGov 指南</a>，第一次報稅、暫繳稅、離岸利得稅申報、審計核數等實戰教學全部免費。</p>
+        </blockquote>
+
+        <!-- Section 8: FAQ -->
+        <h2 id="faq">8. 常見問題（FAQ）</h2>
+
+        <h3>有限公司兩級制利得稅稅率係幾多？</h3>
+        <p>自 2018/19 課稅年度起，香港實施兩級制利得稅：有限公司（法團）首 HK$2,000,000 應評稅利潤稅率 8.25%，超出部分 16.5%；獨資／合夥業務首 HK$2,000,000 稅率 7.5%，超出部分 15%。呢個稅率結構沿用至今（2025/26 課稅年度仍然生效）。</p>
+
+        <h3>公司利潤超過 HK$200 萬，稅點樣計？</h3>
+        <p>超過 HK$200 萬後，只有超出嘅部分先用 16.5%，首 HK$200 萬仍然用 8.25%。例如應評稅利潤 HK$2,500,000，稅款 = 首 HK$2,000,000 × 8.25%（HK$165,000）+ 餘下 HK$500,000 × 16.5%（HK$82,500）= 合共 HK$247,500。</p>
+
+        <h3>集團有幾間公司，係咪每間都可以用 8.25%？</h3>
+        <p>唔係。如果幾間公司屬「相聯法團」（例如一間公司控制另一間公司，或者兩間公司都俾同一班人控制），成個集團只可以提名其中一間享用兩級制，其餘公司全部按 16.5% 計算。應該提名應評稅利潤最高嗰間，先可以慳到最多稅。</p>
+
+        <h3>兩級制利得稅要唔要主動申請？</h3>
+        <p>有限公司一般會自動適用兩級制稅率，唔使另外申請。獨資／合夥業務就要喺報稅表（或相關補充表格）揀選選用兩級制先會用到。集團公司就要喺報稅時處理好提名，邊間用 8.25% 要寫清楚。</p>
+
+        <h3>兩級制同暫繳稅、財政預算案一次性稅務寬減有咩分別？</h3>
+        <p>三樣係唔同嘅嘢。兩級制係稅率結構（首 HK$200 萬利潤用低稅率）；暫繳稅係稅局預先收取下一年度嘅稅款；財政預算案一次性稅務寬減（例如利得稅 100% 寬減、設上限）係額外嘅扣減措施，年年唔同。三樣嘢同時適用，計算上要分清楚。</p>
+
+        <h3>銀行、保險公司可以用兩級制嗎？</h3>
+        <p>一般嚟講，金融機構（例如銀行、保險公司、再保險公司）唔適用兩級制，全部應評稅利潤按標準稅率 16.5% 計算。如果你嘅公司屬於呢類受監管金融業務，申報前最好同會計師確認適用稅率。</p>
+
+      </div>
+
+      <!-- 相關指南 -->
+      <div class="mt-8 mb-4">
+        <h3 class="font-bold text-navy text-base mb-3">相關指南</h3>
+        <ul class="space-y-1.5 text-sm">
+          <li>• <a href="/blog/香港有限公司第一次報稅實戰指南/" class="text-gold hover:underline">香港有限公司第一次報稅實戰指南</a></li>
+          <li>• <a href="/blog/香港公司暫繳稅終極指南2026/" class="text-gold hover:underline">香港公司暫繳稅終極指南 2026</a></li>
+          <li>• <a href="/blog/香港公司利得稅報稅及審計完整指南/" class="text-gold hover:underline">香港公司利得稅報稅及審計完整指南</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- 僅供參考 警告（底部） -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+    <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 flex items-start gap-3">
+      <div class="w-9 h-9 shrink-0 rounded-full bg-amber-400/20 flex items-center justify-center">
+        <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-600" aria-hidden="true"></i>
+      </div>
+      <div>
+        <p class="font-bold text-amber-800">僅供參考</p>
+        <p class="text-sm text-amber-700 leading-relaxed">本文章內容只係一般資訊分享，<strong class="text-amber-800">唔構成法律或稅務意見</strong>。實際稅務情況、集團提名可行性同適用稅率會因個別公司情況而有重大分別，決定自行申報之前，請務必諮詢執業會計師或稅務顧問。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-6 flex items-center gap-4">
+      <div class="w-14 h-14 rounded-full bg-navy text-gold flex items-center justify-center text-2xl font-bold shrink-0">E</div>
+      <div>
+        <p class="font-bold text-navy">ESGov 編輯部</p>
+        <p class="text-sm text-gray-500 mt-1">香港公司秘書文件指南，由真實東主執筆，分享自己搞掂公司文件同法律程序嘅實戰經驗。</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-8 bg-navy text-gray-400">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-xl text-white">ESGov</span>
+      </div>
+      <p class="text-sm">© 2026 ESGov · 香港公司文件指南（所有內容僅供參考，不構成法律意見）</p>
+    </div>
+  </footer>
+
+</body>
+</html>
