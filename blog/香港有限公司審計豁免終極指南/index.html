@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港有限公司審計豁免 2026 — 小型公司幾時唔使核數？條件、股東決議、報稅影響</title>
+  <meta name="description" content="香港有限公司審計豁免完整教學！符合 3 揀 2 小型公司測試（收入、資產、員工），全體股東喺年結日前通過決議就可以唔使核數。拆解 s.359D 決議程序、15 日內交註冊處、報稅交未經審計報表方法同 5 大常見錯誤。由真實錯過限期嘅東主分享實戰經驗，幫你慳返每年幾萬蚊核數費。" />
+  <meta property="og:title" content="香港有限公司審計豁免 2026 — 小型公司幾時唔使核數？ | ESGov" />
+  <meta property="og:description" content="香港有限公司審計豁免完整教學：3 揀 2 小型公司測試、股東一致決議、報稅交未經審計報表方法、5 大常見錯誤。由真實東主分享實戰經驗。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司審計豁免終極指南/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港有限公司審計豁免終極指南/" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+
+  <style>
+    .blog-content h2 { font-size: 1.5rem; font-weight: 700; color: #1B2A4A; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f3f4f6; }
+    .blog-content h3 { font-size: 1.125rem; font-weight: 600; color: #1B2A4A; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .blog-content h4 { font-size: 1rem; font-weight: 600; color: #1B2A4A; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .blog-content p { line-height: 1.8; margin-bottom: 1rem; color: #374151; }
+    .blog-content ul, .blog-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: #374151; }
+    .blog-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .blog-content .tip-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .tip-box p { margin-bottom: 0; }
+    .blog-content .warn-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .warn-box p { margin-bottom: 0; }
+    .blog-content .flag-item { background: #fef3c7; border-left: 4px solid #C9A84C; padding: 1rem 1.25rem; margin-bottom: 1rem; border-radius: 0.5rem; }
+    .blog-content .flag-item p { margin-bottom: 0; }
+    .blog-content .step-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content a { color: #C9A84C; text-decoration: underline; }
+    .blog-content a:hover { color: #b8942e; }
+    .blog-content strong { color: #1B2A4A; }
+    .blog-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    .blog-content th, .blog-content td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
+    .blog-content th { background: #1B2A4A; color: white; font-weight: 600; }
+    .blog-content blockquote { border-left: 4px solid #C9A84C; background: #fefce8; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+    .blog-content blockquote p { margin-bottom: 0; color: #92400e; }
+    .sample-box { background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 0.75rem; padding: 1.5rem; margin: 1rem 0; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.6; }
+  </style>
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港有限公司審計豁免 2026 — 小型公司幾時唔使核數？",
+    "description": "香港有限公司審計豁免完整教學：3 揀 2 小型公司測試、股東一致決議、報稅交未經審計報表方法、5 大常見錯誤。",
+    "author": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-08-31",
+    "dateModified": "2026-08-31",
+    "publisher": { "@type": "Organization", "name": "ESGov" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://esgov.org/blog/香港有限公司審計豁免終極指南/" }
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://esgov.org" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://esgov.org/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "香港有限公司審計豁免終極指南", "item": "https://esgov.org/blog/香港有限公司審計豁免終極指南/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "有限公司幾時可以豁免核數？",
+        "acceptedAnswer": { "@type": "Answer", "text": "私人有限公司只要符合「小型私人公司」測試（收入、總資產、員工數目三項入面符合至少兩項），再由全體股東通過審計豁免決議，就可以豁免該財政年度嘅法定審計。金融機構、上市公司集團成員等一般唔適用。" }
+      },
+      {
+        "@type": "Question",
+        "name": "審計豁免決議要幾時通過？",
+        "acceptedAnswer": { "@type": "Answer", "text": "按《公司條例》第 359D 條，決議必須喺該財政年度結束之前由全體股東一致通過先有效。年結之後先至諗起就太遲，當年就要照核數。決議通過後 15 日內仲要將副本送達公司註冊處。" }
+      },
+      {
+        "@type": "Question",
+        "name": "豁免核數之後，報稅仲使唔使交財務報表？",
+        "acceptedAnswer": { "@type": "Answer", "text": "要。遞交利得稅報稅表（BIR51）時仍然要連同財務報表同稅務計算表一齊交，但可以交「未經審計」嘅財務報表，唔需要核數師報告。稅務局接受符合《公司條例》審計豁免資格公司嘅未經審計帳目。" }
+      },
+      {
+        "@type": "Question",
+        "name": "有股東唔同意豁免核數點算？",
+        "acceptedAnswer": { "@type": "Answer", "text": "審計豁免決議要全體成員一致通過，任何一位股東反對都唔可以豁免。另外法例亦容許股東以書面通知要求公司核數。如果股東之間有分歧，最穩陣做法係照常核數，用核數師報告平息爭拗。" }
+      },
+      {
+        "@type": "Question",
+        "name": "審計豁免咗，仲要交周年申報表同做其他合規嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "要。審計豁免只係免除核數師審計，公司仍然要每年準備財務報表、提交周年申報表（NAR1）、續期商業登記、備存重要控制人登記冊（SCR）同法定紀錄，並保存會計紀錄 7 年。" }
+      },
+      {
+        "@type": "Question",
+        "name": "審計豁免同 Dormant Company（零申報）有咩分別？",
+        "acceptedAnswer": { "@type": "Answer", "text": "Dormant Company 係公司完全冇營運（冇收入、冇開支、冇銀行出入）嗰種特殊狀態，向公司註冊處申請後可以豁免審計；審計豁免係俾「有營運但符合小型公司測試」嘅私人有限公司，每年通過股東決議就可以唔核數。兩條路嘅條件同手續完全唔同。" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ═══════════════ Nav ═══════════════ -->
+  <nav class="sticky top-0 z-50 bg-navy text-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <span class="text-2xl font-bold tracking-tight">ESGov</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
+        <a href="/#how-it-works" class="hover:text-gold transition-colors">流程</a>
+        <a href="/#products" class="hover:text-gold transition-colors">產品</a>
+        <a href="/blog/" class="text-gold">網誌</a>
+      </div>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition-colors"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回網誌</a>
+    </div>
+  </nav>
+
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-4">
+        香港有限公司審計豁免 2026 — 小型公司幾時唔使核數？條件、股東決議、報稅影響
+      </h1>
+      <p class="text-gray-500 text-sm">ESGov 編輯部 · 2026 年 8 月 · 閱讀時間 10 分鐘</p>
+    </div>
+  </header>
+
+  <article class="py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- 僅供參考 警告（頂部） -->
+      <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 mb-8 flex items-start gap-3">
+        <div class="w-9 h-9 shrink-0 rounded-full bg-amber-400/20 flex items-center justify-center">
+          <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-600" aria-hidden="true"></i>
+        </div>
+        <div>
+          <p class="font-bold text-amber-800">僅供參考</p>
+          <p class="text-sm text-amber-700 leading-relaxed">本文章內容只係一般資訊分享，<strong class="text-amber-800">唔構成法律意見</strong>。涉及審計豁免資格、決議程序或者報稅安排，強烈建議先諮詢執業會計師或核數師。每間公司嘅財務狀況同股東結構都唔同，適用規則可能因情況而異。</p>
+        </div>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="bg-white rounded-xl border border-gray-200 p-6 mb-8">
+        <h2 class="text-lg font-bold text-navy mb-4 flex items-center gap-2"><i data-lucide="list" class="w-5 h-5" aria-hidden="true"></i> 目錄</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#intro" class="text-gray-600 hover:text-gold transition-colors">1. 前言 — 我以為公司細就自動豁免，結果俾多咗兩萬蚊</a></li>
+          <li><a href="#audit-basics" class="text-gray-600 hover:text-gold transition-colors">2. 有限公司點解年年要核數？審計係乜嘢一回事</a></li>
+          <li><a href="#small-test" class="text-gray-600 hover:text-gold transition-colors">3. 邊啲公司可以豁免？「3 揀 2」小型公司測試</a></li>
+          <li><a href="#resolution" class="text-gray-600 hover:text-gold transition-colors">4. 核心程序：全體股東一致決議（s.359D）</a></li>
+          <li><a href="#resolution-fields" class="text-gray-600 hover:text-gold transition-colors">5. 決議範本包含啲乜？欄位逐個數</a></li>
+          <li><a href="#after-exempt" class="text-gray-600 hover:text-gold transition-colors">6. 豁免咗之後，仲要做啲乜？豁免後清單</a></li>
+          <li><a href="#tax" class="text-gray-600 hover:text-gold transition-colors">7. 報稅點算？未經審計報表照交</a></li>
+          <li><a href="#not-free" class="text-gray-600 hover:text-gold transition-colors">8. 豁免唔代表萬事大吉：邊啲情況仲係要核數</a></li>
+          <li><a href="#mistakes" class="text-gray-600 hover:text-gold transition-colors">9. 5 大常見錯誤（唔好做）</a></li>
+          <li><a href="#diy" class="text-gray-600 hover:text-gold transition-colors">10. 自己做定搵會計師？</a></li>
+          <li><a href="#faq" class="text-gray-600 hover:text-gold transition-colors">11. 常見問題（FAQ）</a></li>
+        </ul>
+      </div>
+
+      <div class="blog-content">
+
+        <!-- Section 1: Intro -->
+        <h2 id="intro">1. 前言 — 我以為公司細就自動豁免，結果俾多咗兩萬蚊</h2>
+        <p>我間貿易公司開咗三年，年年俾成兩萬蚊核數費，一直覺得好唔抵。有次同個做會計嘅朋友傾偈，先知原來香港有限公司有個「審計豁免」機制 — 小型公司符合條件，可以唔使核數。我心諗：我公司咁細，一定得啦！</p>
+        <p>點知核數師同我講：<strong>「豁免唔係自動嘅，要全體股東喺年結日前通過決議，仲要 15 日內遞交公司註冊處。你今年已經年結咗，太遲喇。」</strong>結果嗰年照俾兩萬蚊核數，仲要係我自己冇做足功課，白俾。</p>
+        <p>呢篇文章就係我當時應該一早睇到嘅嘢 — 用口語廣東話同你拆解晒審計豁免嘅條件、決議程序、報稅影響同常見中伏位，等你唔使好似我咁白交一年核數費。</p>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>僅供參考：</strong>本文章嘅內容只係一般資訊分享，唔構成法律意見。審計豁免涉及《公司條例》（Cap. 622）具體條文，實際情況一定要同執業會計師或核數師核實。</p>
+        </div>
+
+        <!-- Section 2: 審計係乜 -->
+        <h2 id="audit-basics">2. 有限公司點解年年要核數？審計係乜嘢一回事</h2>
+        <p>先講返基本嘢：根據《公司條例》，有限公司每年都要準備財務報表（Financial Statements），而且原則上要搵執業會計師做核數（Audit）— 即係由獨立核數師檢查你盤數，出返一份「核數師報告」（Auditor's Report），證明帳目係咪真實公平咁反映公司嘅財務狀況。</p>
+        <p>呢個法定審計要求係保護股東、債權人同公眾：你間公司嘅錢點嚟點去，有第三方獨立核實過，大家先信你。所以好多公司先至「年年俾幾萬蚊核數」。</p>
+        <p>但係，如果所有公司都一視同仁咁核數，對啱啱起步、生意唔大嘅小型公司嚟講，核數費可能係一大負擔。所以法例就開咗一道閘：<strong>符合資格嘅小型私人有限公司，可以豁免法定審計</strong> — 呢個就係今次講嘅「審計豁免」（Audit Exemption）。</p>
+        <div class="flag-item">
+          <p><i data-lucide="flag" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>真實案例：</strong>我朋友間設計公司，得 3 個人，年收入百幾萬，年年俾會計師樓核數，收佢萬八蚊。佢一直以為「有限公司就要核數」，其實佢公司三項小型測試全部符合，搞掂個決議就慳返萬八蚊一年。五年落嚟就係九萬蚊 — 唔係小數目嚟㗎。</p>
+        </div>
+        <p>想了解核數成個流程係點行、核數師會睇啲乜，可以參考我哋另一篇 <a href="/blog/有限公司審計核數實戰指南/">有限公司審計核數實戰指南</a>。今篇集中講點樣「唔使核」。</p>
+
+        <!-- Section 3: 小型公司測試 -->
+        <h2 id="small-test">3. 邊啲公司可以豁免？「3 揀 2」小型公司測試</h2>
+        <p>審計豁免唔係間間公司都用得。《公司條例》第 359 條定義咗「小型私人公司」（Small Private Company）：喺一個財政年度入面，<strong>三項條件符合至少兩項</strong>，就符合小型公司資格：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>條件</th>
+              <th>門檻</th>
+              <th>點樣量度</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. 全年收入</strong></td>
+              <td>唔超過 <strong>HK$10,000,000</strong>（一千萬）</td>
+              <td>該財政年度損益表嘅總收入</td>
+            </tr>
+            <tr>
+              <td><strong>2. 總資產</strong></td>
+              <td>唔超過 <strong>HK$10,000,000</strong>（一千萬）</td>
+              <td>結算日資產負債表嘅總資產</td>
+            </tr>
+            <tr>
+              <td><strong>3. 員工人數</strong></td>
+              <td>唔超過 <strong>100 人</strong></td>
+              <td>該年度公司僱員數目</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>重點係「<strong>至少兩項</strong>」：唔使三項全部符合，中兩項就得。呢個位好多人誤解，睇實例就明：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>例子</th>
+              <th>收入</th>
+              <th>資產</th>
+              <th>員工</th>
+              <th>結果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>貿易公司 A</strong></td>
+              <td>HK$500 萬</td>
+              <td>HK$800 萬</td>
+              <td>8 人</td>
+              <td>3/3 符合 → 小型公司，可豁免</td>
+            </tr>
+            <tr>
+              <td><strong>網店 B</strong></td>
+              <td>HK$2,500 萬</td>
+              <td>HK$900 萬</td>
+              <td>20 人</td>
+              <td>2/3 符合 → 可豁免（收入超標都冇問題）</td>
+            </tr>
+            <tr>
+              <td><strong>工程公司 C</strong></td>
+              <td>HK$2,500 萬</td>
+              <td>HK$3,000 萬</td>
+              <td>5 人</td>
+              <td>1/3 符合 → 唔合資格，要核數</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>記住：</strong>網店 B 嗰種情況好常見 — 生意額大但資產同人手都細，一樣符合資格。唔好一睇收入高就以為一定冇得豁免，搵你盤數計一計先講。</p>
+        </div>
+
+        <h3>3.1 集團公司點計？</h3>
+        <p>如果你間公司有母公司或者子公司（即係屬於一個集團），就唔係淨係計自己一間，而係要計<strong>成個集團</strong>：</p>
+        <ul>
+          <li>集團入面所有成員都要係私人公司（或者符合資格嘅公司），任何一間係上市公司就通常唔得。</li>
+          <li>用集團合併嘅總收入、總資產同員工人數去計「3 揀 2」測試。</li>
+          <li>如果公司喺某個財政年度內，曾經屬於一個「唔符合資格嘅集團」，成個年度都唔可以豁免。</li>
+        </ul>
+        <p>集團結構嘅計算比較複雜，我強烈建議你直接問核數師確認。想初步了解集團架構嘅概念，可以睇 <a href="/blog/香港公司集團架構控股子公司終極指南/">香港公司集團架構控股子公司終極指南</a>。</p>
+
+        <h3>3.2 邊啲公司一定唔可以豁免？</h3>
+        <p>以下情況即使符合小型測試，都<strong>唔可以</strong>用審計豁免：</p>
+        <ul>
+          <li>上市公司，或者上市公司集團嘅成員公司</li>
+          <li>持牌銀行、保險公司、持牌法團（券商）等受監管金融機構</li>
+          <li>屬於「唔符合資格集團」嘅成員公司（例如集團入面有上市公司或金融機構）</li>
+        </ul>
+        <p>另外要留意：<strong>豁免對象係「私人有限公司」</strong>。無限公司、合夥本身冇法定審計要求，唔喺呢篇討論範圍。</p>
+
+        <!-- Section 4: 決議程序 -->
+        <h2 id="resolution">4. 核心程序：全體股東一致決議（s.359D）</h2>
+        <p>符合小型公司測試只係第一關。就算你間公司完全合資格，都要做埋下面程序，先真正豁免到：</p>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>步驟 1：確認符合小型測試</strong></p>
+          <p>用最新一期帳目計一計：收入、總資產、員工人數，三項中至少兩項過關。唔肯定就搵會計師幫手計。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>步驟 2：全體股東一致通過決議（最重要）</strong></p>
+          <p>要求<strong>所有成員一致同意</strong>（Unanimous Resolution），可以喺股東大會通過，或者用書面決議形式。任何一位股東反對，就唔可以豁免。決議內容要指明邊一個財政年度嘅帳目獲豁免核數。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>步驟 3：年結日前通過（死線！）</strong></p>
+          <p>按第 359D(2) 條，決議<strong>必須喺該財政年度結束之前通過</strong>。即係話你年結日係 12 月 31 日，就要喺 12 月 31 日之前過咗個決議先得。年結之後先記得？太遲，嗰年照核數。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>步驟 4：15 日內遞交公司註冊處</strong></p>
+          <p>決議通過後，公司要喺 <strong>15 日內</strong>將決議副本送達公司註冊處（可以經公司註冊處電子服務遞交）。逾期遞交係違反《公司條例》，公司同負責人都可能被罰款。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>步驟 5：年年都要再做一次</strong></p>
+          <p>豁免係<strong>按年度計</strong>嘅 — 今年過咗決議，唔代表下年自動豁免。每年都要重新確認符合測試、再過一次決議、再遞交。最好喺公司年曆度 set 個提示，年結前兩個月處理。</p>
+        </div>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>最常見中伏位：</strong>好多公司係年結之後，收到會計師通知「你間公司可以豁免」，先至去過決議 — 但法例要求係年結<strong>之前</strong>通過。結果當年豁免唔到，白俾一年核數費。限期錯過咗就係錯過咗，冇得補返。</p>
+        </div>
+
+        <!-- Section 5: 決議範本 -->
+        <h2 id="resolution-fields">5. 決議範本包含啲乜？欄位逐個數</h2>
+        <p>審計豁免決議係一份好簡單嘅公司文件，基本包含以下內容。我哋唔會喺度成篇貼出嚟（避免大家直接照抄出事），但欄位你逐個核對就得：</p>
+        <ul>
+          <li><strong>公司名稱同註冊編號</strong> — 一定要同公司註冊處紀錄一致</li>
+          <li><strong>決議標題</strong> — 例如「關於豁免截至 XXXX 年 XX 月 XX 日止年度財務報表審計之股東決議」</li>
+          <li><strong>適用年度</strong> — 指明邊一個財政年度嘅帳目獲豁免，唔可以含糊</li>
+          <li><strong>確認符合資格</strong> — 寫明公司係小型私人公司（或符合資格集團成員），符合第 359 條小型測試</li>
+          <li><strong>通過方式</strong> — 全體股東一致書面決議 / 股東大會一致通過</li>
+          <li><strong>簽署</strong> — 全體股東簽名同意（書面決議）或會議記錄記錄；董事簽署確認</li>
+          <li><strong>日期</strong> — 通過日期，必須喺年結日或之前</li>
+          <li><strong>遞交紀錄</strong> — 通過後 15 日內遞交公司註冊處嘅收據／確認編號，自己留底</li>
+        </ul>
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>免費參考：</strong>書面決議嘅格式同簽署要求，可以參考我哋嘅 <a href="/blog/香港有限公司股東大會AGM暨書面決議終極指南/">股東大會暨書面決議終極指南</a>，入面有齊全體股東書面決議嘅做法同注意事項。</p>
+        </div>
+        <p>遞交決議副本俾公司註冊處嗰陣，通常用公司註冊處電子服務（eCR）上載文件，程序可以參考 <a href="/blog/公司註冊處電子服務稅務易實戰教學/">公司註冊處電子服務實戰教學</a>。</p>
+
+        <!-- Section 6: 豁免後清單 -->
+        <h2 id="after-exempt">6. 豁免咗之後，仲要做啲乜？豁免後清單</h2>
+        <p>好多人以為「豁免核數 = 乜都唔使做」，大錯特錯。審計豁免只係免除「核數師審計」呢一個環節，其他法定責任一樣要跟足：</p>
+        <ul>
+          <li><strong>照樣要準備財務報表</strong> — 損益表、資產負債表仍然要準備，而且要經董事會批准同簽署。第 359C 條之下，符合資格嘅小型私人公司可以同時豁免「董事會報告」（Directors' Report），但財務報表本身唔可以慳。</li>
+          <li><strong>照樣要交周年申報表（NAR1）</strong> — 每年周年申報表照交，逾期要罰錢。可以用我哋嘅 <a href="/nar1-generator/">NAR1 周年申報表工具</a> 快速搞掂。</li>
+          <li><strong>照樣要續商業登記</strong> — 商業登記費同徵費照交。</li>
+          <li><strong>照樣要備存重要控制人登記冊（SCR）</strong>、法定紀錄，保存會計紀錄最少 7 年（第 373 條）。</li>
+          <li><strong>帳目要準備好俾股東睇</strong> — 股東有權查閱財務報表，唔可以因為冇核數就亂咁做盤數。</li>
+        </ul>
+        <div class="flag-item">
+          <p><i data-lucide="flag" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>真實案例：</strong>有個客豁免咗核數之後，以為盤數都唔使理，會計紀錄亂晒龍，7 年嘅單據冇晒。後來俾稅局抽查，要補做三年帳目，淨係會計費都俾咗六位數字。豁免核數唔等於豁免記帳呀。</p>
+        </div>
+        <p>公司其他長期合規責任，可以睇我哋嘅 <a href="/blog/香港有限公司每年合規費用預算/">每年合規費用預算指南</a> 同 <a href="/blog/香港有限公司合規時間表終極指南/">合規時間表終極指南</a>，知道全年有咩要交。</p>
+
+        <!-- Section 7: 報稅 -->
+        <h2 id="tax">7. 報稅點算？未經審計報表照交</h2>
+        <p>呢個係最多人問嘅問題：<strong>「唔核數，稅局嗰邊點交代？」</strong></p>
+        <p>有限公司報利得稅，遞交報稅表（BIR51）時要連同<strong>財務報表 + 稅務計算表</strong>一齊交。如果你間公司符合《公司條例》嘅審計豁免資格，就可以交<strong>未經審計嘅財務報表</strong>，稅務局係接受嘅 — 唔需要有核數師報告。</p>
+        <p>但有幾點要留意：</p>
+        <ul>
+          <li>財務報表一樣要整齊、完整，唔可以求其交張手寫數。稅局有權要求你提交更多資料，帳目太爛反而會惹嚟查稅。</li>
+          <li>稅務計算表（Tax Computation）要自己計好，申報免稅額、資本開支等項目。</li>
+          <li>如果稅局抽查你，你仍然要攞得出會計紀錄證明盤數 — 所以帳目紀錄一定要keep好。</li>
+        </ul>
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>慳稅貼士：</strong>報稅同核數係兩件事。就算你豁免咗審計，利得稅兩級制（首 HK$200 萬利潤只係 8.25%）一樣適用，報稅表點填先慳到稅，參考我哋嘅 <a href="/blog/香港有限公司利得稅兩級制終極指南/">利得稅兩級制終極指南</a>。</p>
+        </div>
+
+        <!-- Section 8: 唔係萬事大吉 -->
+        <h2 id="not-free">8. 豁免唔代表萬事大吉：邊啲情況仲係要核數</h2>
+        <p>法定審計可以豁免，但「契約要求」豁免唔到。以下情況，你間公司一樣要出核數報告：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>情況</th>
+              <th>點解仲要核數</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>銀行貸款 / 透支</strong></td>
+              <td>銀行授信好多時要求每年提交經審計財務報表</td>
+            </tr>
+            <tr>
+              <td><strong>投資者 / 新股東</strong></td>
+              <td>投資者盡職審查通常要 audited accounts</td>
+            </tr>
+            <tr>
+              <td><strong>政府資助（BUD / TVP）</strong></td>
+              <td>好多資助計劃要求提交已審計帳目證明開支</td>
+            </tr>
+            <tr>
+              <td><strong>股東要求</strong></td>
+              <td>第 360 條容許股東書面要求公司核數，任何人反對豁免都可以令核數照做</td>
+            </tr>
+            <tr>
+              <td><strong>公司轉讓 / 賣盤</strong></td>
+              <td>買家一定要睇核數報告先肯俾錢</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>所以豁免咗唔代表永遠唔核數 — 係「<strong>法定唔使核，但商業上可能需要</strong>」。如果你預見一年內會借銀行錢、請投資者或者申請政府資助，不如嗰年照核數，一次過滿足晒。<a href="/audit-report-generator/">核數數據清單工具</a>可以幫你執齊核數師要嘅資料，慳返準備時間。</p>
+
+        <!-- Section 9: 常見錯誤 -->
+        <h2 id="mistakes">9. 5 大常見錯誤（唔好做）</h2>
+        <p>以下係我親身同聽返嚟嘅血淚教訓，你千祈唔好犯：</p>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 1：以為豁免係自動嘅</strong></p>
+          <p>符合小型測試唔代表自動豁免。冇過股東決議、冇遞交註冊處，就等於冇豁免 — 核數師會照出報告，或者你被發現冇核數時要補做，費用仲貴。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 2：年結之後先過決議</strong></p>
+          <p>決議必須喺年結日前通過。年結後先補做係無效嘅，嗰年照樣要核數。呢個係最常見、最嘥錢嘅錯誤。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 3：決議冇全體股東簽名</strong></p>
+          <p>書面決議要全體股東一致簽署。有股東冇簽、或者簽漏咗，決議就唔成立。股東之間有拗撬嗰陣，更加要白紙黑字簽清楚。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 4：遞交註冊處逾期</strong></p>
+          <p>決議通過後 15 日內要送達公司註冊處。逾期遞交係違例，有罰款風險，而且紀錄上會好肉酸 — 將來查冊都會見到。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 5：豁免咗就唔理盤數</strong></p>
+          <p>同上文講過，帳目照要完整、紀錄照要保存 7 年。靠「豁免核數」嚟掩飾混亂帳目，係同稅局玩緊火 — 抽查嗰陣你就知死。</p>
+        </div>
+
+        <!-- Section 10: DIY vs 會計師 -->
+        <h2 id="diy">10. 自己做定搵會計師？</h2>
+        <p>審計豁免程序本身唔複雜，但每一步都要準時、準確。畀你一個思考框架：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>情況</th>
+              <th>建議</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>公司簡單（一兩個股東）、帳目清晰</td>
+              <td>可以自己處理決議文件，但記住年結日前搞掂</td>
+            </tr>
+            <tr>
+              <td>股東多、集團結構、有拗撬風險</td>
+              <td>搵會計師幫手，確保決議同遞交冇出錯</td>
+            </tr>
+            <tr>
+              <td>準備借錢 / 融資 / 申請資助</td>
+              <td>諗清楚係咪照核數仲實際</td>
+            </tr>
+            <tr>
+              <td>上年錯過咗限期</td>
+              <td>即刻安排核數，唔好拖 — 拖得越耐，費用越高</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>就算你自己處理決議，財務報表同稅務計算表通常都要搵會計師執 — 因為未經審計都唔代表可以亂填報稅表。慳核數費之餘，記帳同報稅嗰份錢唔好慳。</p>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>僅供參考：</strong>本文章內容僅供一般參考，唔構成法律意見。實際公司嘅審計豁免資格、決議程序同報稅安排，會因個別情況而有重大分別，決定自行處理之前，請務必諮詢執業會計師或核數師。</p>
+        </div>
+
+        <blockquote>
+          <p>想了解多啲公司文件同合規程序？我哋有大量免費指南 — <a href="/blog/">睇更多 ESGov 指南</a>，股份轉讓、公司註冊、合規申報等全部免費。</p>
+        </blockquote>
+
+        <!-- Section 11: FAQ -->
+        <h2 id="faq">11. 常見問題（FAQ）</h2>
+
+        <h3>有限公司幾時可以豁免核數？</h3>
+        <p>私人有限公司符合「小型私人公司」測試 — 收入、總資產、員工數目三項入面符合至少兩項 — 再由全體股東通過審計豁免決議，就可以豁免該財政年度嘅法定審計。金融機構、上市公司集團成員等一般唔適用。</p>
+
+        <h3>審計豁免決議要幾時通過？</h3>
+        <p>按《公司條例》第 359D 條，決議必須喺該財政年度結束之前由全體股東一致通過先有效。年結之後先至諗起就太遲，當年就要照核數。決議通過後 15 日內仲要將副本送達公司註冊處。</p>
+
+        <h3>豁免核數之後，報稅仲使唔使交財務報表？</h3>
+        <p>要。遞交利得稅報稅表（BIR51）時仍然要連同財務報表同稅務計算表一齊交，但可以交未經審計嘅財務報表，唔需要核數師報告。稅務局接受符合《公司條例》審計豁免資格公司嘅未經審計帳目。</p>
+
+        <h3>有股東唔同意豁免核數點算？</h3>
+        <p>審計豁免決議要全體成員一致通過，任何一位股東反對都唔可以豁免。另外法例亦容許股東以書面通知要求公司核數。如果股東之間有分歧，最穩陣做法係照常核數，用核數師報告平息爭拗。</p>
+
+        <h3>審計豁免咗，仲要交周年申報表同做其他合規嗎？</h3>
+        <p>要。審計豁免只係免除核數師審計，公司仍然要每年準備財務報表、提交周年申報表（NAR1）、續期商業登記、備存重要控制人登記冊（SCR）同法定紀錄，並保存會計紀錄 7 年。</p>
+
+        <h3>審計豁免同 Dormant Company（零申報）有咩分別？</h3>
+        <p>Dormant Company 係公司完全冇營運嗰種特殊狀態，向公司註冊處申請後可以豁免審計；審計豁免係俾「有營運但符合小型公司測試」嘅私人有限公司，每年通過股東決議就可以唔核數。兩條路嘅條件同手續完全唔同，可以參考我哋嘅 <a href="/blog/香港有限公司零申報DormantCompany終極指南/">零申報 Dormant Company 指南</a>。</p>
+
+      </div>
+
+      <!-- 相關指南 -->
+      <div class="mt-8 mb-4">
+        <h3 class="font-bold text-navy text-base mb-3">相關指南</h3>
+        <ul class="space-y-1.5 text-sm">
+          <li>• <a href="/blog/有限公司審計核數實戰指南/" class="text-gold hover:underline">有限公司審計核數實戰指南</a></li>
+          <li>• <a href="/blog/香港有限公司利得稅兩級制終極指南/" class="text-gold hover:underline">香港有限公司利得稅兩級制終極指南 2026</a></li>
+          <li>• <a href="/blog/香港有限公司零申報DormantCompany終極指南/" class="text-gold hover:underline">香港有限公司零申報（Dormant Company）終極指南</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- 僅供參考 警告（底部） -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+    <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 flex items-start gap-3">
+      <div class="w-9 h-9 shrink-0 rounded-full bg-amber-400/20 flex items-center justify-center">
+        <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-600" aria-hidden="true"></i>
+      </div>
+      <div>
+        <p class="font-bold text-amber-800">僅供參考</p>
+        <p class="text-sm text-amber-700 leading-relaxed">本文章內容只係一般資訊分享，<strong class="text-amber-800">唔構成法律意見</strong>。實際公司嘅審計豁免資格、決議程序同報稅安排，會因個別情況而有重大分別，決定自行處理之前，請務必諮詢執業會計師或核數師。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-6 flex items-center gap-4">
+      <div class="w-14 h-14 rounded-full bg-navy text-gold flex items-center justify-center text-2xl font-bold shrink-0">E</div>
+      <div>
+        <p class="font-bold text-navy">ESGov 編輯部</p>
+        <p class="text-sm text-gray-500 mt-1">香港公司秘書文件指南，由真實東主執筆，分享自己搞掂公司文件同法律程序嘅實戰經驗。</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-8 bg-navy text-gray-400">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-xl text-white">ESGov</span>
+      </div>
+      <p class="text-sm">© 2026 ESGov · 香港公司文件指南（所有內容僅供參考，不構成法律意見）</p>
+    </div>
+  </footer>
+
+</body>
+</html>
