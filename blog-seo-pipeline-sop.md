@@ -230,6 +230,12 @@ SEO（起點）→ Researcher → Writer → SEO（終點+deploy）
 - [ ] 文章放 `blog/{article-slug}.html`
 - [ ] 更新 `blog/index.html`（加新 card 做第一條 + **data-category tag** + **tab 數字 +1**）
 - [ ] 更新 `index.html`（主頁 blog section — 加新 card 做第一條）
+- [ ] **主頁 blog section 維持 8 條**（精選 hub + 最近 7 篇）：加新文時刪走最舊嗰篇（即第 8 條）
+- [ ] **主頁新 card 用日期 badge 唔用「🆕 最新」**：
+  ```html
+  <span class="text-xs text-gray-400 shrink-0"><i data-lucide="calendar" class="inline-block w-4 h-4"></i> YYYY.MM.DD</span>
+  ```
+  （❌ 唔好用 `🆕 最新` badge — 用戶要求用日期）
 - [ ] 更新 `scripts/blog-categories.json`（行 `python3 scripts/categorize-blog.py`）
 - [ ] 更新 `sitemap.xml`
 - [ ] 行 seo-checker.py 確認 0 issues
