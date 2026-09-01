@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 股東過身股份轉讓 2026 — 香港公司股份承繼點處理？遺產承辦人登記、免厘印、常見錯誤</title>
+  <meta name="description" content="香港公司股東過身之後，名下股份點處理？遺產承辦人點樣登記做股東？遺產承辦書（Probate／Letters of Administration）、股份傳轉程序、印花稅豁免、SCR 更新同 6 大常見錯誤全拆解，由真實處理過嘅東主分享實戰經驗，幫你搞清股份承繼成個流程。" />
+  <meta property="og:title" content="股東過身股份轉讓 2026 — 香港公司股份承繼點處理？遺產承辦人登記、免厘印、FAQ | ESGov" />
+  <meta property="og:description" content="香港公司股東過身之後股份點處理？遺產承辦人登記做股東、股份承繼程序、印花稅豁免同常見錯誤全拆解。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/股東過身股份承繼指南/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/股東過身股份承繼指南/" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+
+  <style>
+    .blog-content h2 { font-size: 1.5rem; font-weight: 700; color: #1B2A4A; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f3f4f6; }
+    .blog-content h3 { font-size: 1.125rem; font-weight: 600; color: #1B2A4A; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .blog-content h4 { font-size: 1rem; font-weight: 600; color: #1B2A4A; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .blog-content p { line-height: 1.8; margin-bottom: 1rem; color: #374151; }
+    .blog-content ul, .blog-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: #374151; }
+    .blog-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .blog-content .tip-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .tip-box p { margin-bottom: 0; }
+    .blog-content .warn-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .warn-box p { margin-bottom: 0; }
+    .blog-content .flag-item { background: #fef3c7; border-left: 4px solid #C9A84C; padding: 1rem 1.25rem; margin-bottom: 1rem; border-radius: 0.5rem; }
+    .blog-content .flag-item p { margin-bottom: 0; }
+    .blog-content .step-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content a { color: #C9A84C; text-decoration: underline; }
+    .blog-content a:hover { color: #b8942e; }
+    .blog-content strong { color: #1B2A4A; }
+    .blog-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    .blog-content th, .blog-content td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
+    .blog-content th { background: #1B2A4A; color: white; font-weight: 600; }
+    .blog-content blockquote { border-left: 4px solid #C9A84C; background: #fefce8; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+    .blog-content blockquote p { margin-bottom: 0; color: #92400e; }
+    .sample-box { background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 0.75rem; padding: 1.5rem; margin: 1rem 0; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.6; }
+  </style>
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "股東過身股份轉讓 2026 — 香港公司股份承繼點處理？遺產承辦人登記、免厘印、常見錯誤",
+    "description": "香港公司股東過身之後股份點處理？遺產承辦人登記做股東、股份承繼程序、印花稅豁免同常見錯誤全拆解。",
+    "author": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-09-02",
+    "dateModified": "2026-09-02",
+    "publisher": { "@type": "Organization", "name": "ESGov" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://esgov.org/blog/股東過身股份承繼指南/" }
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://esgov.org" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://esgov.org/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "股東過身股份承繼指南", "item": "https://esgov.org/blog/股東過身股份承繼指南/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "股東過身之後，啲股份會自動轉俾屋企人嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "唔會。公司名冊唔會因為股東過身就自動改。股份要透過「承繼」（Transmission）程序處理：由遺產承辦人出示遺產承辦書，公司核實之後先會將股份登記喺遺產承辦人或受益人嘅名下。未做承繼程序之前，公司紀錄仍然係死者嘅名。"
+      },
+      {
+        "@type": "Question",
+        "name": "股份承繼（Transmission）同普通股份轉讓有咩分別？",
+        "acceptedAnswer": { "@type": "Answer", "text": "股份轉讓係股東生前透過買賣或贈送轉讓股份，一般要用轉讓文書（Instrument of Transfer）同埋計印花稅；股份承繼係因為股東過身而由法律自動產生嘅轉名機制，冇買賣代價，以遺產承辦書做依據，一般可以豁免印花稅。"
+      },
+      {
+        "@type": "Question",
+        "name": "遺產承辦人要提供咩文件先可以登記做股東？",
+        "acceptedAnswer": { "@type": "Answer", "text": "通常要：死者死亡證明書、遺囑認證（Grant of Probate）或遺產管理書（Letters of Administration）正本或核證副本、原有股票（Share Certificate），以及公司可能要求嘅聲明書或彌償書。實際要求要睇返公司細則（Articles of Association）。"
+      },
+      {
+        "@type": "Question",
+        "name": "承繼股份要唔要交印花稅（厘印費）？",
+        "acceptedAnswer": { "@type": "Answer", "text": "一般情況下，遺產承繼嘅股份傳轉（傳俾遺產承辦人，再傳俾受益人）可以豁免印花稅，但要向稅務局申報並提交證明文件（例如遺產承辦書副本）。如果遺產承辦人將股份賣俾第三者（唔係受益人），嗰啲就係正常股份轉讓，要照交厘印費。每單情況唔同，簽文件前最好同稅務局確認。"
+      },
+      {
+        "@type": "Question",
+        "name": "股東冇留低遺遺囑，啲股份點算？",
+        "acceptedAnswer": { "@type": "Answer", "text": "冇遺囑嘅話，親屬或受益人要先向高等法院申請遺產管理書（Letters of Administration），由獲委任嘅遺產管理人處理死者嘅資產，包括公司股份。程序同上，只係文件由 Probate 變成 Letters of Administration，通常要請律師代辦。"
+      },
+      {
+        "@type": "Question",
+        "name": "聯名持有嘅股份，其中一位股東過身，要做承繼程序嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "如果股份係聯名持有（Joint Tenancy），過身股東嘅權益會自動由另一位聯名股東承受（存活者取得權），唔使做承繼程序，但公司紀錄都要更新，一般提交死亡證明書就可以。要留意公司細則點寫，同埋確認係咪真係 Joint Tenancy（而唔係 Tenancy in Common）。"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ═══════════════ Nav ═══════════════ -->
+  <nav class="sticky top-0 z-50 bg-navy text-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <span class="text-2xl font-bold tracking-tight">ESGov</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
+        <a href="/#how-it-works" class="hover:text-gold transition-colors">流程</a>
+        <a href="/#products" class="hover:text-gold transition-colors">產品</a>
+        <a href="/blog/" class="text-gold">網誌</a>
+      </div>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition-colors"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回網誌</a>
+    </div>
+  </nav>
+
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-4">
+        股東過身股份轉讓 2026 — 香港公司股份承繼點處理？遺產承辦人登記、免厘印、常見錯誤
+      </h1>
+      <p class="text-gray-500 text-sm">ESGov 編輯部 · 2026 年 9 月 · 閱讀時間 9 分鐘</p>
+    </div>
+  </header>
+
+  <article class="py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- 僅供參考 警告（頂部） -->
+      <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 mb-8 flex items-start gap-3">
+        <div class="w-9 h-9 shrink-0 rounded-full bg-amber-400/20 flex items-center justify-center">
+          <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-600" aria-hidden="true"></i>
+        </div>
+        <div>
+          <p class="font-bold text-amber-800">僅供參考</p>
+          <p class="text-sm text-amber-700 leading-relaxed">本文章內容只係一般資訊分享，<strong class="text-amber-800">唔構成法律意見</strong>。涉及遺產承繼、股份承繼或稅務處理，強烈建議先諮詢律師同會計師。每單遺產嘅情況都唔同，適用程序同費用可能因情況而異。</p>
+        </div>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="bg-white rounded-xl border border-gray-200 p-6 mb-8">
+        <h2 class="text-lg font-bold text-navy mb-4 flex items-center gap-2"><i data-lucide="list" class="w-5 h-5" aria-hidden="true"></i> 目錄</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#intro" class="text-gray-600 hover:text-gold transition-colors">1. 前言 — 股東過身，啲股份點算？</a></li>
+          <li><a href="#transfer-vs-transmission" class="text-gray-600 hover:text-gold transition-colors">2. 股份承繼（Transmission）同普通股份轉讓有咩分別？</a></li>
+          <li><a href="#pr" class="text-gray-600 hover:text-gold transition-colors">3. 第一步：遺產承辦人（Personal Representative）係邊個？</a></li>
+          <li><a href="#steps" class="text-gray-600 hover:text-gold transition-colors">4. 公司點樣核實同登記？遺產承辦人要做嘅四步</a></li>
+          <li><a href="#after" class="text-gray-600 hover:text-gold transition-colors">5. 承繼之後：股票、SCR、周年申報表點更新？</a></li>
+          <li><a href="#stamp" class="text-gray-600 hover:text-gold transition-colors">6. 承繼股份要唔要交印花稅（厘印費）？</a></li>
+          <li><a href="#special" class="text-gray-600 hover:text-gold transition-colors">7. 三個特殊情況：聯名持股、冇遺囑、公司唔合作</a></li>
+          <li><a href="#mistakes" class="text-gray-600 hover:text-gold transition-colors">8. 常見錯誤（唔好做）</a></li>
+          <li><a href="#faq" class="text-gray-600 hover:text-gold transition-colors">9. 常見問題（FAQ）</a></li>
+        </ul>
+      </div>
+
+      <div class="blog-content">
+
+        <!-- Section 1: Intro -->
+        <h2 id="intro">1. 前言 — 股東過身，啲股份點算？</h2>
+        <p>我朋友阿強同拍檔夾份開咗間貿易公司，各佔一半股份。前年拍檔突然病逝，阿強以為公司自然由拍檔個仔接手 — 點知拍檔個仔一直都冇理公司嘢，阿強自己又唔識處理。到今年想將成間公司賣俾人，對方做盡職審查一睇：公司股東名冊上面，個拍檔仍然係 50% 股東，隻名三年都冇郁過。賣家即刻縮沙，成單交易撻Q。</p>
+        <p>之後我先陪佢補做返成個程序，先知香港有限公司股東過身之後，啲股份<strong>唔會自動轉名</strong>，要行一個叫<strong>「股份承繼」（Transmission of Shares）</strong>嘅程序，由遺產承辦人出文件、公司核實、再更新名冊，先搞得掂。成個過程拖足幾個月，仲要補交唔少文件。</p>
+        <p>呢篇文章係我親身陪朋友行完呢個程序嘅總結，同你拆解晒<strong>股東過身股份轉讓</strong>點處理：遺產承辦人登記、所需文件、印花稅、承繼後要更新嘅紀錄，同埋大家最易中嘅陷阱。</p>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>僅供參考：</strong>本文章嘅內容只係一般資訊分享，唔構成法律意見。涉及遺產承繼或公司股份處理，強烈建議先諮詢律師同會計師。每單情況都唔同，適用程序可能因公司細則而異。</p>
+        </div>
+
+        <!-- Section 2: Transmission vs Transfer -->
+        <h2 id="transfer-vs-transmission">2. 股份承繼（Transmission）同普通股份轉讓有咩分別？</h2>
+        <p>好多人撈亂「股份轉讓」同「股份承繼」，其實兩者係完全唔同嘅機制。普通股份轉讓係股東生前自願做嘅（賣俾人、送俾人），股份承繼係因為股東過身，由法律自動產生嘅轉名安排。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>股份轉讓（Transfer）</th>
+              <th>股份承繼（Transmission）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>觸發原因</strong></td>
+              <td>股東生前自願（買賣／贈送）</td>
+              <td>股東過身（by operation of law）</td>
+            </tr>
+            <tr>
+              <td><strong>主要文件</strong></td>
+              <td>轉讓文書（Instrument of Transfer，如 Bought &amp; Sold Note）</td>
+              <td>遺產承辦書（Probate 或 Letters of Administration）</td>
+            </tr>
+            <tr>
+              <td><strong>有冇代價</strong></td>
+              <td>有（價金或贈送）</td>
+              <td>冇買賣代價</td>
+            </tr>
+            <tr>
+              <td><strong>印花稅</strong></td>
+              <td>一般要交（0.1% 級別，視乎性質）</td>
+              <td>遺產承繼一般可以豁免，但要申報</td>
+            </tr>
+            <tr>
+              <td><strong>董事會角色</strong></td>
+              <td>有權拒絕登記（按章程）</td>
+              <td>核實文件後原則上要登記</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>想了解正常股份轉讓嘅完整流程（轉讓書、厘印、註冊處申報），可以睇我哋另一篇 <a href="/blog/香港公司股份轉讓流程2026/">香港公司股份轉讓流程 2026</a>；想知承繼完成之後仲要做啲咩，可以睇 <a href="/blog/轉股東後必做5件事/">轉股東後必做 5 件事</a>。</p>
+
+        <!-- Section 3: PR -->
+        <h2 id="pr">3. 第一步：遺產承辦人（Personal Representative）係邊個？</h2>
+        <p>死者名下嘅股份，第一站唔係直接去受益人度，而係去<strong>遺產承辦人（Personal Representative, PR）</strong>手上。遺產承辦人係法律上負責處理死者遺產嘅人，佢哋先有權同公司打交道。邊個做得 PR，要睇死者有冇遺囑：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>情況</th>
+              <th>遺產承辦人</th>
+              <th>需要文件</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>有遺囑</strong></td>
+              <td>遺囑執行人（Executor）</td>
+              <td>遺囑認證（Grant of Probate）</td>
+            </tr>
+            <tr>
+              <td><strong>冇遺囑</strong></td>
+              <td>遺產管理人（Administrator）</td>
+              <td>遺產管理書（Letters of Administration）</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Probate 同 Letters of Administration 都係由<strong>高等法院遺產承辦處</strong>發出嘅正式文件，證明 PR 有權處理死者遺產。呢兩份文件就係你同公司講「我哋有權攞呢啲股份」嘅法律依據。</p>
+
+        <div class="flag-item">
+          <p><i data-lucide="flag" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>真實案例：</strong>阿強個拍檔有遺囑，但遺囑執行人（拍檔老婆）本身唔識公司法，淨係以為攞到 Probate 就得。點知 Probate 出咗之後，佢直接將股份「轉」俾個仔，用咗一般股份轉讓書，仲諗住要交厘印 — 最後公司同稅局兩邊都彈回頭，話承繼程序唔係咁做，要重新用正確文件搞。兜咗大圈，浪費咗成兩個月。</p>
+        </div>
+
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>貼士：</strong>申請 Probate 或者 Letters of Administration 通常要經律師代辦，需時由幾個星期到幾個月不等，視乎遺產複雜程度。文件未到手之前，公司股份係「凍結」狀態 — 冇 PR 授權，任何人都動唔到啲股份。</p>
+        </div>
+
+        <!-- Section 4: Steps -->
+        <h2 id="steps">4. 公司點樣核實同登記？遺產承辦人要做嘅四步</h2>
+        <p>攞到遺產承辦書之後，就要同公司（通常係公司秘書）對接，行承繼程序。以下四步係標準流程：</p>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>第一步：通知公司 + 交文件</strong></p>
+          <p>PR 要書面通知公司秘書，並提交：死者死亡證明書、遺產承辦書（正本或核證副本）、原有股票（Share Certificate，如有）。公司有權要求睇文件正本核實。公司秘書職責點處理？可以參考我哋嘅 <a href="/blog/香港有限公司公司秘書職責終極指南/">公司秘書職責終極指南</a>。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>第二步：董事會核實</strong></p>
+          <p>董事會核實文件無誤之後，會按公司章程（Articles of Association）確認承繼安排。好多公司細則有 transmission 條款，列明 PR 要簽點樣嘅文件（例如傳轉文書或聲明書）。公司有權要求 PR 簽「彌償書」（Indemnity），保障公司唔會因為轉名俾人告。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>第三步：決定登記邊個</strong></p>
+          <p>PR 有兩個選擇：一係將股份登記喺 PR 自己名下（以遺產信託人身份持有），二係直接將股份轉俾受益人（死者喺遺囑指定嘅人）。如果受益人係未成年人，通常會登記喺 PR 名下，等受益人成年先轉。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>第四步：更新名冊 + 出新股</strong></p>
+          <p>公司更新股東名冊（Register of Members），將死者個名刪走，寫入承繼人；註銷原有股票，重新發出承繼人名義嘅股票。呢一步完成，承繼程序先算正式搞掂。</p>
+        </div>
+
+        <p>成個過程公司會收行政費（視乎公司秘書收費），PR 一方可能要俾律師費核證文件。想知公司紀錄點樣妥善保存，可以睇我哋嘅 <a href="/blog/香港有限公司法定紀錄StatutoryRecords終極指南/">法定紀錄（Statutory Records）終極指南</a>。</p>
+
+        <h3>文件清單：承繼程序要準備嘅嘢</h3>
+        <p>等你可以一次過執齊，唔使來回補交：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>文件</th>
+              <th>邊個準備</th>
+              <th>注意事項</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>死亡證明書</strong></td>
+              <td>PR／親屬</td>
+              <td>要政府發出嘅正式證明，最好準備多份核證副本</td>
+            </tr>
+            <tr>
+              <td><strong>遺囑認證（Probate）／遺產管理書</strong></td>
+              <td>PR（經律師申請）</td>
+              <td>正本或者核證副本；公司有權要求睇正本</td>
+            </tr>
+            <tr>
+              <td><strong>原有股票（Share Certificate）</strong></td>
+              <td>PR／死者文件</td>
+              <td>搵唔到要簽聲明書（Indemnity）補救</td>
+            </tr>
+            <tr>
+              <td><strong>傳轉文件／聲明書</strong></td>
+              <td>公司提供格式</td>
+              <td>按公司細則要求，通常由 PR 簽署</td>
+            </tr>
+            <tr>
+              <td><strong>身份證明</strong></td>
+              <td>PR／受益人</td>
+              <td>核實身份用，公司要留記錄</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>貼士：</strong>每間公司嘅細則（Articles of Association）對承繼嘅要求可以唔同 — 有啲公司要求 PR 提交「傳轉指示書」，有啲只要求簡單聲明。遞交文件之前，先問公司秘書攞一份佢哋要求嘅文件清單，可以慳返好多嚟回。</p>
+        </div>
+
+        <!-- Section 5: After -->
+        <h2 id="after">5. 承繼之後：股票、SCR、周年申報表點更新？</h2>
+        <p>股份登記完成之後，以為乜都搞掂？仲有三樣嘢要跟，唔跟好易食罰單：</p>
+
+        <h3>5.1 股票重新發出</h3>
+        <p>如上文所講，死者嘅舊股票要註銷，公司會出新股俾承繼人。股票細節點睇、點核對？可以參考我哋嘅 <a href="/blog/香港公司股份證明書ShareCertificate終極指南/">股份證明書（Share Certificate）終極指南</a>。</p>
+
+        <h3>5.2 重要控制人登記冊（SCR）要更新</h3>
+        <p>如果承繼人變成公司嘅重要控制人（例如持股 25% 以上或者有重大控制權），公司要喺<strong>7 日內</strong>更新重要控制人登記冊（SCR），並註明變更日期。呢樣係《公司條例》規定，漏咗有罰則。想知點做，可以睇我哋嘅 <a href="/blog/香港公司重要控制人登記冊SCR終極指南/">SCR 終極指南</a>，或者用我哋嘅 <a href="/significant-controllers-register/" class="text-gold font-medium">重要控制人登記冊工具</a>。</p>
+
+        <h3>5.3 周年申報表（NAR1）會反映新股東</h3>
+        <p>下期遞交周年申報表嘅時候，股東名單會以承繼後嘅最新狀態申報。如果中間有新承繼人加入，記住喺 NAR1 度更新資料，想知逐格點填可以睇我哋嘅 <a href="/blog/有限公司周年申報表/">周年申報表教學</a>。</p>
+
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>實用貼士：</strong>承繼人登記做股東之後，如果打算將股份賣俾其他人（例如賣俾公司其他股東），嗰個就係正常嘅股份轉讓程序，可以用我哋嘅 <a href="/shareholder-transfer/" class="text-gold font-medium">股份轉讓文件工具</a>，一站式準備轉讓文書同埋核對所需文件。</p>
+        </div>
+
+        <!-- Section 6: Stamp -->
+        <h2 id="stamp">6. 承繼股份要唔要交印花稅（厘印費）？</h2>
+        <p>呢個係最多人問嘅問題。一般情況下：<strong>遺產承繼嘅股份傳轉可以豁免印花稅</strong> — 包括傳轉俾遺產承辦人，以及由遺產承辦人傳轉俾受益人，呢啲都係處理遺產嘅必要步驟，唔係買賣。</p>
+        <p>但「可以豁免」唔等於「自動豁免」。通常要向稅務局印花稅署申報，提交遺產承辦書副本等證明文件，等稅局確認豁免或者發出免稅證明。程序點行、要交咩表，最好問返幫你搞 Probate 嘅律師。</p>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>重要提醒：</strong>如果遺產承辦人將股份<strong>賣俾第三者</strong>（例如賣俾公司其他股東，而唔係受益人），嗰啲就係正常嘅股份買賣，一定要照交印花稅（厘印費），唔可以話「遺產」就豁免。想知厘印費點計，可以睇我哋嘅 <a href="/blog/香港公司印花稅厘印費終極指南/">香港公司印花稅（厘印費）終極指南</a>。</p>
+        </div>
+
+        <!-- Section 7: Special -->
+        <h2 id="special">7. 三個特殊情況：聯名持股、冇遺囑、公司唔合作</h2>
+
+        <h3>7.1 聯名持股（Joint Tenancy）— 有可能唔使做承繼</h3>
+        <p>如果死者嘅股份係同人<strong>聯名持有（Joint Tenancy）</strong>，例如兩公婆聯名，咁過身嗰位嘅權益會自動由另一位聯名股東承受（即「存活者取得權」Right of Survivorship），唔使行承繼程序。但公司紀錄都要更新：提交死亡證明書，公司會將死者個名刪走，股份歸晒存活嗰位聯名股東。要確認你嘅情況係咪 Joint Tenancy（定係 Tenancy in Common），最穩陣係睇公司名冊同章程點寫。</p>
+
+        <h3>7.2 冇遺囑（Intestacy）— 行遺產管理書</h3>
+        <p>冇遺囑嘅話，親屬要按<strong>無遺囑繼承法</strong>申請遺產管理書（Letters of Administration），由法院委任遺產管理人。股份承繼程序同有遺囑嘅情況一樣，只係文件唔同、步驟多咗，通常要請律師。遺產管理人處理完股份之後，再按法定比例分配俾受益人。</p>
+
+        <h3>7.3 公司唔合作或者有爭拗 — 點算？</h3>
+        <p>如果董事會無理拒絕登記承繼人，或者公司內部有人爭股份，PR 可以考慮：要求公司書面講明拒絕理由、向法庭申請命令要求公司登記、或者先處理其他爭拗（例如股東協議有冇相關條款，可以參考我哋嘅 <a href="/blog/香港公司股東協議終極指南/">股東協議終極指南</a>）。呢類情況已經超出一般行政程序，一定要搵律師。</p>
+
+        <div class="flag-item">
+          <p><i data-lucide="flag" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>真實案例：</strong>有間公司三個股東，其中一個過身之後，另外兩個股東想「食」咗佢啲股份，一直以「文件唔齊」為由拖住唔登記。遺產承辦人最後出律師信，公司先肯正視。其實公司冇權因為「唔想」就拒絕登記 — 只要文件齊全，董事會係有責任處理嘅。</p>
+        </div>
+
+        <!-- Section 8: Mistakes -->
+        <h2 id="mistakes">8. 常見錯誤（唔好做）</h2>
+        <p>以下係我親身見過同聽過嘅血淚教訓，你千祈唔好犯同樣嘅錯：</p>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 1：以為股份會自動轉名</strong></p>
+          <p>以為「人走咗，股份自然歸屋企人」，幾年都唔理 — 到要賣公司、轉股或者申請貸款先發現做唔到，仲要補返幾年嘅文件。股份唔會自動轉名，一定要行承繼程序。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 2：用普通股份轉讓書做承繼</strong></p>
+          <p>有人諗住慳事，用一般轉讓文書「轉」死者啲股份，仲填埋價金。結果公司同稅局都唔收 — 承繼唔係買賣，冇代價，文件類型都唔啱。用錯文件俾彈回頭，白白浪費幾個月。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 3：公司自作主張「執」股東名冊</strong></p>
+          <p>有啲公司秘書貪方便，見股東過身就自行將股份轉俾死者個仔 — 冇遺產承辦書做依據。之後第二個受益人出現，話公司冇權咁做，隨時要公司賠償。公司一定要跟足程序，睇文件、留記錄。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 4：承繼之後唔更新 SCR</strong></p>
+          <p>股份登記搞掂，但重要控制人登記冊（SCR）冇喺 7 日內更新 — 呢個係獨立嘅合規責任，漏咗一樣有罰則。SCR 同股東名冊係兩本唔同嘅冊，兩樣都要跟。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 5：忽略股票正本</strong></p>
+          <p>死者啲股票唔見咗、或者持有人唔記得交返俾公司 — 公司通常會要求 PR 簽聲明書（Indemnity）先肯註銷舊股票出新股票。搵唔到股票唔係世界末日，但程序會拖長，早啲同公司秘書講。</p>
+        </div>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>僅供參考：</strong>本文章內容僅供一般參考，唔構成法律意見。實際遺產同公司股份處理嘅程序、費用同可行性會因個別情況而有重大分別，決定自行處理之前，請務必諮詢執業律師同會計師。</p>
+        </div>
+
+        <blockquote>
+          <p>想了解多啲公司文件同法律程序？我哋有大量免費指南 — <a href="/blog/">睇更多 ESGov 指南</a>，股份轉讓、公司註冊、合規申報等全部免費。</p>
+        </blockquote>
+
+        <!-- Section 9: FAQ -->
+        <h2 id="faq">9. 常見問題（FAQ）</h2>
+
+        <h3>股東過身之後，啲股份會自動轉俾屋企人嗎？</h3>
+        <p>唔會。公司名冊唔會因為股東過身就自動改。股份要透過「承繼」（Transmission）程序處理：由遺產承辦人出示遺產承辦書，公司核實之後先會將股份登記喺遺產承辦人或受益人嘅名下。未做承繼程序之前，公司紀錄仍然係死者嘅名。</p>
+
+        <h3>股份承繼（Transmission）同普通股份轉讓有咩分別？</h3>
+        <p>股份轉讓係股東生前透過買賣或贈送轉讓股份，一般要用轉讓文書同埋計印花稅；股份承繼係因為股東過身而由法律自動產生嘅轉名機制，冇買賣代價，以遺產承辦書做依據，一般可以豁免印花稅。</p>
+
+        <h3>遺產承辦人要提供咩文件先可以登記做股東？</h3>
+        <p>通常要：死者死亡證明書、遺囑認證（Grant of Probate）或遺產管理書（Letters of Administration）正本或核證副本、原有股票，以及公司可能要求嘅聲明書或彌償書。實際要求要睇返公司細則（Articles of Association）。</p>
+
+        <h3>承繼股份要唔要交印花稅（厘印費）？</h3>
+        <p>一般情況下，遺產承繼嘅股份傳轉（傳俾遺產承辦人，再傳俾受益人）可以豁免印花稅，但要向稅務局申報並提交證明文件（例如遺產承辦書副本）。如果遺產承辦人將股份賣俾第三者（唔係受益人），嗰啲就係正常股份轉讓，要照交厘印費。每單情況唔同，簽文件前最好同稅務局確認。</p>
+
+        <h3>股東冇留低遺低遺囑，啲股份點算？</h3>
+        <p>冇遺囑嘅話，親屬或受益人要先向高等法院申請遺產管理書（Letters of Administration），由獲委任嘅遺產管理人處理死者嘅資產，包括公司股份。程序同上，只係文件由 Probate 變成 Letters of Administration，通常要請律師代辦。</p>
+
+        <h3>聯名持有嘅股份，其中一位股東過身，要做承繼程序嗎？</h3>
+        <p>如果股份係聯名持有（Joint Tenancy），過身股東嘅權益會自動由另一位聯名股東承受（存活者取得權），唔使做承繼程序，但公司紀錄都要更新，一般提交死亡證明書就可以。要留意公司細則點寫，同埋確認係咪真係 Joint Tenancy（而唔係 Tenancy in Common）。</p>
+
+      </div>
+
+      <!-- 相關指南 -->
+      <div class="mt-8 mb-4">
+        <h3 class="font-bold text-navy text-base mb-3">相關指南</h3>
+        <ul class="space-y-1.5 text-sm">
+          <li>• <a href="/blog/香港公司股份證明書ShareCertificate終極指南/" class="text-gold hover:underline">香港公司股份證明書（Share Certificate）終極指南</a></li>
+          <li>• <a href="/blog/轉股東後必做5件事/" class="text-gold hover:underline">轉股東後必做 5 件事</a></li>
+          <li>• <a href="/blog/香港有限公司繼承計劃及家族企業傳承終極指南/" class="text-gold hover:underline">香港有限公司繼承計劃及家族企業傳承終極指南</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- 僅供參考 警告（底部） -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+    <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 flex items-start gap-3">
+      <div class="w-9 h-9 shrink-0 rounded-full bg-amber-400/20 flex items-center justify-center">
+        <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-600" aria-hidden="true"></i>
+      </div>
+      <div>
+        <p class="font-bold text-amber-800">僅供參考</p>
+        <p class="text-sm text-amber-700 leading-relaxed">本文章內容只係一般資訊分享，<strong class="text-amber-800">唔構成法律意見</strong>。實際遺產承繼同股份承繼嘅程序、費用同可行性會因個別情況而有重大分別，決定自行處理之前，請務必諮詢執業律師同會計師。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-6 flex items-center gap-4">
+      <div class="w-14 h-14 rounded-full bg-navy text-gold flex items-center justify-center text-2xl font-bold shrink-0">E</div>
+      <div>
+        <p class="font-bold text-navy">ESGov 編輯部</p>
+        <p class="text-sm text-gray-500 mt-1">香港公司秘書文件指南，由真實東主執筆，分享自己搞掂公司文件同法律程序嘅實戰經驗。</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-8 bg-navy text-gray-400">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-xl text-white">ESGov</span>
+      </div>
+      <p class="text-sm">© 2026 ESGov · 香港公司文件指南（所有內容僅供參考，不構成法律意見）</p>
+    </div>
+  </footer>
+
+</body>
+</html>
