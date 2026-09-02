@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港公司銀行戶口凍結終極指南 2026 — 戶口俾凍結點算？解凍程序、原因、預防全拆解</title>
+  <meta name="description" content="香港公司銀行戶口俾凍結點算？銀行凍結公司戶口嘅 8 大原因、Soft/Hard Freeze 分別、解凍程序同 CDD 文件清單、5 大實戰錯誤同預防方法全拆解。由真實戶口被凍結過嘅東主分享，幫你快速解凍、避免再被凍結。" />
+  <meta property="og:title" content="香港公司銀行戶口凍結終極指南 2026 — 戶口俾凍結點算？解凍程序、原因、預防全拆解 | ESGov" />
+  <meta property="og:description" content="香港公司銀行戶口凍結完整教學：8 大凍結原因、Soft/Hard Freeze 分別、解凍程序、CDD 文件清單、預防方法，由真實東主分享實戰經驗。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港有限公司銀行戶口凍結終極指南/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港有限公司銀行戶口凍結終極指南/" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+
+  <style>
+    .blog-content h2 { font-size: 1.5rem; font-weight: 700; color: #1B2A4A; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f3f4f6; }
+    .blog-content h3 { font-size: 1.125rem; font-weight: 600; color: #1B2A4A; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .blog-content h4 { font-size: 1rem; font-weight: 600; color: #1B2A4A; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .blog-content p { line-height: 1.8; margin-bottom: 1rem; color: #374151; }
+    .blog-content ul, .blog-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: #374151; }
+    .blog-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .blog-content .tip-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .tip-box p { margin-bottom: 0; }
+    .blog-content .warn-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .warn-box p { margin-bottom: 0; }
+    .blog-content .flag-item { background: #fef3c7; border-left: 4px solid #C9A84C; padding: 1rem 1.25rem; margin-bottom: 1rem; border-radius: 0.5rem; }
+    .blog-content .flag-item p { margin-bottom: 0; }
+    .blog-content .step-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content a { color: #C9A84C; text-decoration: underline; }
+    .blog-content a:hover { color: #b8942e; }
+    .blog-content strong { color: #1B2A4A; }
+    .blog-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    .blog-content th, .blog-content td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
+    .blog-content th { background: #1B2A4A; color: white; font-weight: 600; }
+    .blog-content blockquote { border-left: 4px solid #C9A84C; background: #fefce8; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+    .blog-content blockquote p { margin-bottom: 0; color: #92400e; }
+    .sample-box { background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 0.75rem; padding: 1.5rem; margin: 1rem 0; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.6; }
+  </style>
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港公司銀行戶口凍結終極指南 2026 — 戶口俾凍結點算？解凍程序、原因、預防全拆解",
+    "description": "香港公司銀行戶口凍結完整教學：8 大凍結原因、Soft/Hard Freeze 分別、解凍程序、CDD 文件清單、預防方法。",
+    "author": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-09-03",
+    "dateModified": "2026-09-03",
+    "publisher": { "@type": "Organization", "name": "ESGov" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://esgov.org/blog/香港有限公司銀行戶口凍結終極指南/" }
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://esgov.org" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://esgov.org/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "香港公司銀行戶口凍結終極指南", "item": "https://esgov.org/blog/香港有限公司銀行戶口凍結終極指南/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "銀行可以無緣無故凍結公司戶口嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "銀行唔會無緣無故凍結戶口，通常都有原因：戶口長時間冇活動、公司資料過期、觸發 KYC/CDD 審查、有可疑交易、收到執法機關或稅局指示等。銀行凍結戶口前多數會先出信或通知，但喺緊急合規情況下可以即時凍結，之後再補通知。" }
+      },
+      {
+        "@type": "Question",
+        "name": "公司戶口凍結通常要幾耐先解凍？",
+        "acceptedAnswer": { "@type": "Answer", "text": "一般 CDD/文件審查引起嘅凍結，文件齊全嘅話大約 1 至 4 星期可以解凍；涉及執法機關調查嘅凍結，可能要幾個月甚至更長，視乎調查進度。愈快交齊銀行要求嘅文件，解凍愈快。" }
+      },
+      {
+        "@type": "Question",
+        "name": "戶口凍結期間仲可以出糧畀員工嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "戶口全面凍結（Hard Freeze）期間，轉出交易通常全部暫停，包括出糧同繳稅。如果公司有第二個銀行戶口，可以改用另一個戶口出糧；冇嘅話要盡快同銀行商討安排，或者諮詢律師睇下有冇其他合法途徑。" }
+      },
+      {
+        "@type": "Question",
+        "name": "公司戶口俾凍結之後，開新戶口避開得唔得？",
+        "acceptedAnswer": { "@type": "Answer", "text": "唔建議咁做。銀行體系係互通嘅，開新戶口時銀行會問你現有戶口狀況，隱瞞凍結紀錄可能構成虛假陳述，新戶口一樣會被審查甚至拒絕開戶。正確做法係主動處理凍結原因，解凍後先再考慮其他銀行。" }
+      },
+      {
+        "@type": "Question",
+        "name": "公司戶口俾執法機關或稅局凍結係咩情況？點算？",
+        "acceptedAnswer": { "@type": "Answer", "text": "如果戶口係俾執法機關（例如海關、警方、廉政公署）或稅局根據法庭命令凍結，通常涉及刑事調查或稅務調查，呢種情況唔係銀行可以自行解凍，必須由發出命令嘅機關解除。遇到呢種情況一定要即刻請律師跟進，千祈唔好自行處理。" }
+      },
+      {
+        "@type": "Question",
+        "name": "點樣先知公司戶口有機會被凍結？",
+        "acceptedAnswer": { "@type": "Answer", "text": "通常有先兆：收到銀行合規部門嘅 CDD/KYC 問卷、被要求補交文件、單筆大額交易被 hold 住、RM 突然約你傾業務詳情。收到呢啲訊號就應該主動回應、盡快交文件，唔好拖延，咁樣可以大大減低戶口被全面凍結嘅機會。" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ═══════════════ Nav ═══════════════ -->
+  <nav class="sticky top-0 z-50 bg-navy text-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <span class="text-2xl font-bold tracking-tight">ESGov</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
+        <a href="/#how-it-works" class="hover:text-gold transition-colors">流程</a>
+        <a href="/#products" class="hover:text-gold transition-colors">產品</a>
+        <a href="/blog/" class="text-gold">網誌</a>
+      </div>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition-colors"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回網誌</a>
+    </div>
+  </nav>
+
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-4">
+        香港有限公司銀行戶口凍結終極指南 2026 — 公司戶口俾銀行凍結咗點算？解凍程序、原因、預防全拆解
+      </h1>
+      <p class="text-gray-500 text-sm">ESGov 編輯部 · 2026 年 9 月 · 閱讀時間 9 分鐘</p>
+    </div>
+  </header>
+
+  <article class="py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- 僅供參考 警告（頂部） -->
+      <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 mb-8 flex items-start gap-3">
+        <div class="w-9 h-9 shrink-0 rounded-full bg-amber-400/20 flex items-center justify-center">
+          <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-600" aria-hidden="true"></i>
+        </div>
+        <div>
+          <p class="font-bold text-amber-800">僅供參考</p>
+          <p class="text-sm text-amber-700 leading-relaxed">本文章內容只係一般資訊分享，<strong class="text-amber-800">唔構成法律意見</strong>。涉及銀行凍結戶口或執法機關調查，強烈建議先諮詢執業律師。每間銀行嘅合規程序同每單案件嘅情況都唔同，實際處理方法可能因情況而異。</p>
+        </div>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="bg-white rounded-xl border border-gray-200 p-6 mb-8">
+        <h2 class="text-lg font-bold text-navy mb-4 flex items-center gap-2"><i data-lucide="list" class="w-5 h-5" aria-hidden="true"></i> 目錄</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#intro" class="text-gray-600 hover:text-gold transition-colors">1. 前言 — 戶口凍結嗰日，先知道銀包俾人鎖起</a></li>
+          <li><a href="#reasons" class="text-gray-600 hover:text-gold transition-colors">2. 點解銀行會凍結公司戶口？八個最常見原因</a></li>
+          <li><a href="#freeze-types" class="text-gray-600 hover:text-gold transition-colors">3. Soft Freeze、Hard Freeze、單筆 Hold 有咩分別？</a></li>
+          <li><a href="#first-steps" class="text-gray-600 hover:text-gold transition-colors">4. 收到凍結通知，第一時間要做嘅 5 件事</a></li>
+          <li><a href="#unfreeze" class="text-gray-600 hover:text-gold transition-colors">5. 解凍實戰：遞咩文件、點同銀行傾、要幾耐？</a></li>
+          <li><a href="#mistakes" class="text-gray-600 hover:text-gold transition-colors">6. 七個令情況更糟嘅錯誤（唔好做）</a></li>
+          <li><a href="#prevent" class="text-gray-600 hover:text-gold transition-colors">7. 點樣預防公司戶口俾凍結？</a></li>
+          <li><a href="#authority" class="text-gray-600 hover:text-gold transition-colors">8. 執法機關同稅局介入嘅凍結點處理？</a></li>
+          <li><a href="#faq" class="text-gray-600 hover:text-gold transition-colors">9. 常見問題（FAQ）</a></li>
+        </ul>
+      </div>
+
+      <div class="blog-content">
+
+        <!-- Section 1: Intro -->
+        <h2 id="intro">1. 前言 — 戶口凍結嗰日，先知道銀包俾人鎖起</h2>
+        <p>嗰日係月頭，我諗住用公司戶口出糧畀幾個員工，點知登入網上銀行，見到戶口狀態寫住「Account Restricted」，轉賬功能全部灰咗。打去銀行熱線，等咗 40 分鐘，客戶服務先話合規部門正在審查我哋公司戶口，叫我等佢哋通知。</p>
+        <p>嗰一刻我真係成個人呆咗。公司冇咗銀行戶口，等於連出糧、交租、交稅都做唔到，成盤生意好似俾人㩒咗暫停掣。之後我同幾個行家傾開，先發現原來近兩年愈來愈多中小企公司戶口俾銀行凍結，有人甚至凍結咗三個月都未解到。</p>
+        <p>呢篇文章係我親身經歷加研究嘅總結，同你拆解晒<strong>公司銀行戶口點解會被凍結、凍結咗點算、點樣解凍、同埋點樣預防</strong>。希望你睇完之後，唔使好似我咁喺恐慌之中摸索。</p>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>僅供參考：</strong>本文章嘅內容只係一般資訊分享，唔構成法律意見。涉及銀行凍結戶口或執法機關調查，強烈建議先諮詢執業律師。每間銀行嘅合規程序都唔同，實際處理方法可能因情況而異。</p>
+        </div>
+
+        <!-- Section 2: 原因 -->
+        <h2 id="reasons">2. 點解銀行會凍結公司戶口？八個最常見原因</h2>
+        <p>銀行凍結公司戶口，唔會無緣無故。香港銀行受《打擊洗錢及恐怖分子資金籌集條例》（AMLO）監管，加上金管局指引，銀行要對每個戶口做「認識你的客戶」（KYC）同持續盡職審查（CDD）。一旦戶口觸動咗銀行嘅風險系統，銀行就有責任審查，審查期間戶口就可能被限制。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>原因</th>
+              <th>常見觸發情況</th>
+              <th>風險程度</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>戶口長期冇活動</strong></td>
+              <td>超過 12 個月零交易、零結餘</td>
+              <td>低（通常通知後處理）</td>
+            </tr>
+            <tr>
+              <td><strong>公司資料過期</strong></td>
+              <td>改名、董事變更、地址變更後冇通知銀行</td>
+              <td>中</td>
+            </tr>
+            <tr>
+              <td><strong>KYC / CDD 年度審查</strong></td>
+              <td>銀行定期問卷、要求更新實益擁有人資料</td>
+              <td>中（最多公司中招）</td>
+            </tr>
+            <tr>
+              <td><strong>可疑交易模式</strong></td>
+              <td>突然大額入賬、密集中介轉賬、同業務性質唔符</td>
+              <td>高</td>
+            </tr>
+            <tr>
+              <td><strong>大額現金出入</strong></td>
+              <td>頻繁現金存款、現金找換、同業務收入唔匹配</td>
+              <td>高</td>
+            </tr>
+            <tr>
+              <td><strong>收款涉及詐騙</strong></td>
+              <td>誤收詐騙款項、被利用做「洗錢艇」、收到來歷不明資金</td>
+              <td>高</td>
+            </tr>
+            <tr>
+              <td><strong>執法機關 / 稅局指示</strong></td>
+              <td>海關、警方、廉署調查，稅局追稅或查稅</td>
+              <td>極高（銀行無權自行解凍）</td>
+            </tr>
+            <tr>
+              <td><strong>涉制裁名單</strong></td>
+              <td>股東、董事或交易對手名稱同制裁名單相似</td>
+              <td>極高</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>睇返上面個表，你會發現大部分情況都唔係銀行「針對你」，而係銀行喺合規壓力之下嘅正常動作。分別只係：<strong>一啲原因你主動補文件就搞掂，一啲原因（執法機關、制裁）就唔係你補文件可以解決</strong>。</p>
+
+        <div class="flag-item">
+          <p><i data-lucide="flag" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>真實案例：</strong>我朋友間貿易公司上年改咗公司名，淨係記住去公司註冊處交表，完全冇諗起要通知銀行。幾個月後有筆大額客戶款項入賬，銀行即刻 hold 咗筆錢，因為系統入面嘅公司名同收款人唔一致。最後佢要補交公司改名證書（Certificate of Change of Name）、商業登記證副本再加董事會決議，搞咗成個月先放行。公司改名之後，記得第一時間去銀行更新紀錄！</p>
+        </div>
+
+        <!-- Section 3: 凍結類型 -->
+        <h2 id="freeze-types">3. Soft Freeze、Hard Freeze、單筆 Hold 有咩分別？</h2>
+        <p>「凍結」係一個好籠統嘅講法。實際上有三種程度，搞清楚自己係邊種，先知道點應對：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>類型</th>
+              <th>戶口狀態</th>
+              <th>應對策略</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>單筆 Hold（交易凍結）</strong></td>
+              <td>戶口照用，但某筆交易被留住，等銀行審查</td>
+              <td>最快處理：交文件證明交易背景，通常數日至兩星期放行</td>
+            </tr>
+            <tr>
+              <td><strong>Soft Freeze（部分限制）</strong></td>
+              <td>可以入錢，但轉出被限制；或網上銀行功能被收窄</td>
+              <td>盡快完成銀行要求嘅 CDD 更新，恢復正常功能</td>
+            </tr>
+            <tr>
+              <td><strong>Hard Freeze（全面凍結）</strong></td>
+              <td>入錢出錢全部暫停，戶口等於報廢</td>
+              <td>最嚴重，要按銀行程序逐項處理，可能要律師介入</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>好多時凍結係「漸進式」：銀行先 hold 一筆交易，你冇回應，再升級做 Soft Freeze，最後先 Hard Freeze。所以<strong>收到任何 hold 或者 CDD 問卷，千祈唔好扮睇唔到</strong>，愈早處理，愈唔會升級。</p>
+
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>實戰貼士：</strong>銀行寄嚟嘅合規信（通常英文，標題有 "KYC"、"CDD"、"Account Review" 字眼）有 deadline，一般俾你 30 日。如果你喺限期內交齊文件，大部分審查會靜靜雞完成，戶口照常運作 — 你根本唔會意識到「就嚟被凍結」。所以定期開銀行信、睇 e-banking 訊息，係最簡單嘅預防方法。</p>
+        </div>
+
+        <!-- Section 4: 第一時間要做 -->
+        <h2 id="first-steps">4. 收到凍結通知，第一時間要做嘅 5 件事</h2>
+        <p>戶口真係被凍結咗，先冷靜落嚟，跟住以下 5 步做，唔好亂。以下係我同朋友們實戰過嘅順序：</p>
+
+        <div class="step-card">
+          <p><strong><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i>第 1 步：搞清楚凍結類型同邊個部門處理</strong></p>
+          <p>打銀行熱線或者搵你嘅客戶經理（Relationship Manager），直接問三條問題：戶口係單筆 hold、soft freeze 定 hard freeze？邊個部門處理（合規部／制裁篩查部／調查組）？有冇書面通知或者案件編號？問清楚先可以對症下藥。</p>
+        </div>
+
+        <div class="step-card">
+          <p><strong><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i>第 2 步：即刻檢查公司文件齊唔齊</strong></p>
+          <p>銀行要求嘅文件九成係同一批：公司註冊證書、商業登記證、公司章程、董事同股東身份證、實益擁有人資料、註冊地址證明。如果公司啱啱改名或者換咗董事，記住要準備埋公司註冊處嘅變更文件（例如 <a href="/director-particulars-change/">董事／秘書變更通知</a>嘅存檔副本）。</p>
+        </div>
+
+        <div class="step-card">
+          <p><strong><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i>第 3 步：回帶睇返最近 3-6 個月交易</strong></p>
+          <p>自己預先審視一轉：有冇大額現金？有冇同新嘅第三方來回轉賬？有冇一筆客戶錢特別大？搵定相關嘅合約、Invoice、送貨單等證明。銀行問起嗰陣，你拎得出證據，印象分差好遠。</p>
+        </div>
+
+        <div class="step-card">
+          <p><strong><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i>第 4 步：準備「業務背景說明書」</strong></p>
+          <p>寫一頁紙講清楚：公司做咩生意、主要客源同供應商、每個月大概幾多交易同金額、點解會有近期嗰啲大額交易。用英文寫（銀行審查部門多數用英文），簡潔、具體、有數字，比空泛描述有用好多。</p>
+        </div>
+
+        <div class="step-card">
+          <p><strong><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i>第 5 步：所有溝通留低紀錄</strong></p>
+          <p>打過幾多次電話、幾時交咗咩文件、銀行回覆咗咩，全部用 Excel 記低。銀行電話熱線答你嘅嘢，同合規部最後決定，好多時係兩回事；有紀錄，日後上訴或者追究都有依據。</p>
+        </div>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>重要提醒：</strong>如果銀行透露凍結係因為收到執法機關或法庭命令，你就要即刻停手，唔好自己再查嚟查去，直接搵律師。呢種情況同銀行嘈係冇用嘅，重點係搞清楚調查緊咩，再決定點應對。</p>
+        </div>
+
+        <!-- Section 5: 解凍實戰 -->
+        <h2 id="unfreeze">5. 解凍實戰：遞咩文件、點同銀行傾、要幾耐？</h2>
+        <p>凍結之後，解凍嘅核心就係「滿足銀行合規部門嘅要求」。呢個過程有啲似面試：銀行想確認你間公司「正經做生意」，而唔係拎嚟洗錢嘅空殼。準備以下文件清單，可以慳返好多來回：</p>
+
+        <ul>
+          <li><strong>公司基本文件</strong> — 公司註冊證書、商業登記證、公司章程、最近周年申報表（NAR1）存檔副本。</li>
+          <li><strong>身份證明</strong> — 所有董事、股東（實益擁有人）嘅身份證或護照副本；如果股權結構複雜，要解釋埋每層持股關係。</li>
+          <li><strong>地址證明</strong> — 註冊地址同營業地址最近三個月嘅水電煤或銀行月結單。</li>
+          <li><strong>業務證明</strong> — 最近審計報告（如有）、租約、牌照、公司網站、最近幾個月嘅 Invoice 同採購單。</li>
+          <li><strong>大額交易證明</strong> — 被審查嗰筆或嗰幾筆交易嘅合約、報價單、收據、物流紀錄。</li>
+          <li><strong>實益擁有人申報</strong> — 銀行會對照公司嘅 <a href="/significant-controllers-register/">重要控制人登記冊（SCR）</a>，確保申報一致；SCR 紀錄同銀行申報唔一致，係常見嘅延誤原因。</li>
+        </ul>
+
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>慳時間貼士：</strong>將以上文件全部掃描做 PDF，一次過電郵畀銀行，加一封 cover letter 列明文件清單同案件編號。好多銀行內部要「分行 → 合規」逐層遞交，文件唔齊會彈返轉頭重新排隊 — 一次過交齊，就係最快嘅解凍方法。</p>
+        </div>
+
+        <p>時間預算方面，老實講好睇情況：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>凍結原因</th>
+              <th>文件齊全下大約時間</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>資料過期 / 年度 CDD 審查</td>
+              <td>1 – 2 星期</td>
+            </tr>
+            <tr>
+              <td>單筆交易審查</td>
+              <td>數日至 2 星期</td>
+            </tr>
+            <tr>
+              <td>可疑交易模式調查</td>
+              <td>1 – 3 個月（視乎複雜程度）</td>
+            </tr>
+            <tr>
+              <td>執法機關 / 法庭命令</td>
+              <td>以月計，直至調查完結</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>如果拖咗超過合理時間（例如純文件審查拖足兩個月），你可以正式書面投訴銀行，再唔得就向金管局投訴。但要記住：<strong>投訴係最後手段，而且會令銀行更嚴陣以待</strong>，正常情況都係先保持合作態度，文件交足、跟進有禮貌，通常最有效。</p>
+
+        <div class="flag-item">
+          <p><i data-lucide="flag" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>真實案例：</strong>另一個做餐飲嘅朋友，戶口俾銀行凍結咗，原因係佢間餐廳日日有幾萬蚊現金存款，銀行覺得同佢申報嘅業務規模唔符。佢交咗租約、酒牌、POS 每日營業紀錄同埋報稅表，證明現金收入係真金白銀嘅生意，兩個星期左右就解凍。重點係：證據要具體，講到銀行信服。</p>
+        </div>
+
+        <!-- Section 6: 錯誤 -->
+        <h2 id="mistakes">6. 七個令情況更糟嘅錯誤（唔好做）</h2>
+        <p>以下係我親身見過同聽過嘅血淚教訓，你千祈唔好犯同樣嘅錯：</p>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 1：扮睇唔到銀行信，等到 freeze 先嚟驚</strong></p>
+          <p>銀行 CDD 信多數有 30 日限期，你唔覆，銀行有權直接限制戶口。收到合規信，第一時間覆，就算文件未齊，都先覆一封講低你喺度處理緊。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 2：開新銀行戶口諗住「避開」</strong></p>
+          <p>銀行體系互通，開戶時你要申報現有戶口狀況；隱瞞凍結紀錄，隨時構成虛假陳述，新戶口一樣被審查。正確做法係解凍咗先，再諗其他銀行。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 3：刪除或者「整理」交易紀錄</strong></p>
+          <p>銀行要求嘅紀錄，你私自刪走或者改動，一旦被發現，銀行會直接當你意圖隱瞞，升級做嚴重調查。真金不怕洪爐火，紀錄留原狀，照交。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 4：只靠 WhatsApp / 口頭同 RM 傾</strong></p>
+          <p>客戶經理（RM）只係中間人，最終決定喺合規部門。WhatsApp 傾完唔等於交咗文件，一定要經正式途徑（電郵或銀行表格）遞交，先有紀錄、先算數。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 5：公司紀錄（SCR、NAR1）同銀行申報不一致</strong></p>
+          <p>銀行會查公司註冊處紀錄，如果實益擁有人、董事名單同你申報嘅唔一致，審查即刻拖長。公司內部紀錄平時就要執正，特別係 <a href="/significant-controllers-register/">SCR 重要控制人登記冊</a>。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 6：凍結期間照用公司名義收錢（轉去私人戶口）</strong></p>
+          <p>有人為咗「疏通」現金流，叫客戶過數去自己私人戶口或者屋企人戶口。呢個動作好危險 — 稅局角度係公司收入冇入公司數，銀行角度係可疑資金流，兩邊都係大鑊。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 7：情況複雜都唔肯搵律師</strong></p>
+          <p>涉及執法機關、法庭命令、或者銀行話「轉介咗去調查組」嘅情況，已經超出 DIY 範圍。律師一封正式信，好多時比你自己同銀行嘈一個月更有效。</p>
+        </div>
+
+        <!-- Section 7: 預防 -->
+        <h2 id="prevent">7. 點樣預防公司戶口俾凍結？</h2>
+        <p>冰凍三尺非一日之寒，公司戶口俾凍結，好多時係長期「紀錄唔乾淨」累積出嚟。以下呢份預防清單，同你公司嘅合規紀錄直接掛鈎，做齊基本上可以避開九成情況：</p>
+
+        <ul>
+          <li><strong>公司資料一變更，即刻通知銀行</strong> — 改名、換董事、換秘書、搬地址，全部要喺合理時間內向銀行更新。公司註冊處方面記得交齊相應表格（例如 <a href="/director-particulars-change/">委任／停任董事通知 ND2A</a>），兩邊紀錄一致，銀行就冇藉口 hold 你。</li>
+          <li><strong>保持戶口有正常活動</strong> — 就算冇生意，都定時入少少錢、交下費用，避免戶口變「休眠戶口」。</li>
+          <li><strong>交易同業務性質要對辦</strong> — 做生意嘅，Invoice 點寫、幾時收錢、幾時找數，最好有固定模式。突然爆一筆巨額或者頻繁同個人戶口來回，好易觸發警示。</li>
+          <li><strong>大額現金走回頭路</strong> — 現金生意嘅，紀錄要做足（收據、POS、入數紙），入銀行嘅現金同營業額要講得通。</li>
+          <li><strong>定期回覆銀行 CDD</strong> — 銀行每年都會做 review，主動交文件，好過被動等佢限你。</li>
+          <li><strong>同客戶經理保持聯繫</strong> — 有咩大動作（例如開新業務線、有大額收款），提早同 RM 講一聲，佢哋可以喺內部幫你「預報」，大大減低被 hold 機會。</li>
+          <li><strong>公司合規紀錄長期執正</strong> — 周年申報表、SCR、審計報稅全部準時做，銀行查你背景嗰陣，見你紀錄乾淨，自然快速放行。記得用<a href="/nar1-generator/">周年申報表 NAR1 生成器</a>，自己執正文件慳返 agent 費。</li>
+        </ul>
+
+        <div class="flag-item">
+          <p><i data-lucide="flag" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>真實案例：</strong>我另一個行家就聰明，佢公司每年九月都會收到銀行嘅 CDD 問卷，佢索性喺公司度整個「銀行文件資料夾」，所有文件一次過放晒入去，銀行一問就五分鐘內交齊。佢話：同銀行打交道，最緊要係「答得快、交得齊、講得清」，咁樣銀行根本冇理由搞你。</p>
+        </div>
+
+        <!-- Section 8: 執法機關 -->
+        <h2 id="authority">8. 執法機關同稅局介入嘅凍結點處理？</h2>
+        <p>最後講一個比較嚴肅嘅情況：如果戶口凍結係因為執法機關（警方、海關、廉署）或者稅局根據法庭命令／法定權力作出，咁就完全唔係銀行層面嘅問題。銀行只係執行者，佢冇權自行解凍。</p>
+
+        <p>呢種情況你應該：</p>
+
+        <ul>
+          <li><strong>第一時間搵律師</strong> — 唔好自己估，唔好周圍問，律師會幫你搞清楚係咩命令、調查緊咩、你可以點應對。</li>
+          <li><strong>唔好轉移資產</strong> — 明知戶口被凍結仲諗住轉走其他資產，分分鐘構成妨礙司法公正，罪加一等。</li>
+          <li><strong>準備長期作戰</strong> — 呢類型凍結以月甚至以年計，公司現金流要諗定後備方案（例如股東墊支要記錄清楚，日後先講得清）。</li>
+          <li><strong>照常處理日常合規</strong> — 就算戶口凍結，周年申報、報稅、審計照做，唔好因為情緒亂咗而製造第二個問題。</li>
+        </ul>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>嚴重警告：</strong>如果涉及刑事調查或稅務調查，呢篇文章嘅所有「DIY 方法」都唔適用。呢個時候最應該做嘅，係即刻聯絡執業律師，由律師幫你同執法機關溝通。自己亂咁回應，隨時講多錯多。</p>
+        </div>
+
+        <blockquote>
+          <p>想了解多啲公司文件同財務管理？我哋有大量免費指南 — <a href="/blog/">睇更多 ESGov 指南</a>，銀行開戶、跨境資金、信用管理、股份轉讓等全部免費。</p>
+        </blockquote>
+
+        <!-- Section 9: FAQ -->
+        <h2 id="faq">9. 常見問題（FAQ）</h2>
+
+        <h3>銀行可以無緣無故凍結公司戶口嗎？</h3>
+        <p>銀行唔會無緣無故凍結戶口，通常都有原因：戶口長時間冇活動、公司資料過期、觸發 KYC/CDD 審查、有可疑交易、收到執法機關或稅局指示等。銀行凍結戶口前多數會先出信或通知，但喺緊急合規情況下可以即時凍結，之後再補通知。</p>
+
+        <h3>公司戶口凍結通常要幾耐先解凍？</h3>
+        <p>一般 CDD/文件審查引起嘅凍結，文件齊全嘅話大約 1 至 4 星期可以解凍；涉及執法機關調查嘅凍結，可能要幾個月甚至更長，視乎調查進度。愈快交齊銀行要求嘅文件，解凍愈快。</p>
+
+        <h3>戶口凍結期間仲可以出糧畀員工嗎？</h3>
+        <p>戶口全面凍結（Hard Freeze）期間，轉出交易通常全部暫停，包括出糧同繳稅。如果公司有第二個銀行戶口，可以改用另一個戶口出糧；冇嘅話要盡快同銀行商討安排，或者諮詢律師睇下有冇其他合法途徑。</p>
+
+        <h3>公司戶口俾凍結之後，開新戶口避開得唔得？</h3>
+        <p>唔建議咁做。銀行體系係互通嘅，開新戶口時銀行會問你現有戶口狀況，隱瞞凍結紀錄可能構成虛假陳述，新戶口一樣會被審查甚至拒絕開戶。正確做法係主動處理凍結原因，解凍後先再考慮其他銀行。</p>
+
+        <h3>公司戶口俾執法機關或稅局凍結係咩情況？點算？</h3>
+        <p>如果戶口係俾執法機關（例如海關、警方、廉政公署）或稅局根據法庭命令凍結，通常涉及刑事調查或稅務調查，呢種情況唔係銀行可以自行解凍，必須由發出命令嘅機關解除。遇到呢種情況一定要即刻請律師跟進，千祈唔好自行處理。</p>
+
+        <h3>點樣先知公司戶口有機會被凍結？</h3>
+        <p>通常有先兆：收到銀行合規部門嘅 CDD/KYC 問卷、被要求補交文件、單筆大額交易被 hold 住、RM 突然約你傾業務詳情。收到呢啲訊號就應該主動回應、盡快交文件，唔好拖延，咁樣可以大大減低戶口被全面凍結嘅機會。</p>
+
+      </div>
+
+      <!-- 相關指南 -->
+      <div class="mt-8 mb-4">
+        <h3 class="font-bold text-navy text-base mb-3">相關指南</h3>
+        <ul class="space-y-1.5 text-sm">
+          <li>• <a href="/blog/香港公司開銀行戶口2026實戰指南/" class="text-gold hover:underline">香港公司開銀行戶口 2026 實戰指南</a></li>
+          <li>• <a href="/blog/香港有限公司跨境交易及資金調撥終極指南/" class="text-gold hover:underline">香港有限公司跨境交易及資金調撥終極指南</a></li>
+          <li>• <a href="/blog/香港有限公司CreditControl信用管理追數終極指南/" class="text-gold hover:underline">香港有限公司 Credit Control（信用管理及追數）終極指南</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- 僅供參考 警告（底部） -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+    <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 flex items-start gap-3">
+      <div class="w-9 h-9 shrink-0 rounded-full bg-amber-400/20 flex items-center justify-center">
+        <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-600" aria-hidden="true"></i>
+      </div>
+      <div>
+        <p class="font-bold text-amber-800">僅供參考</p>
+        <p class="text-sm text-amber-700 leading-relaxed">本文章內容只係一般資訊分享，<strong class="text-amber-800">唔構成法律意見</strong>。實際凍結情況嘅程序、時間同結果會因銀行政策同個別案件而有重大分別，決定自行處理之前，請務必諮詢執業律師。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-6 flex items-center gap-4">
+      <div class="w-14 h-14 rounded-full bg-navy text-gold flex items-center justify-center text-2xl font-bold shrink-0">E</div>
+      <div>
+        <p class="font-bold text-navy">ESGov 編輯部</p>
+        <p class="text-sm text-gray-500 mt-1">香港公司秘書文件指南，由真實東主執筆，分享自己搞掂公司文件同法律程序嘅實戰經驗。</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-8 bg-navy text-gray-400">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-xl text-white">ESGov</span>
+      </div>
+      <p class="text-sm">© 2026 ESGov · 香港公司文件指南（所有內容僅供參考，不構成法律意見）</p>
+    </div>
+  </footer>
+
+</body>
+</html>
