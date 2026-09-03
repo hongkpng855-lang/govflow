@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港公司股份質押終極指南 2026 — Share Pledge 用公司股份做抵押借錢點做？</title>
+  <meta name="description" content="香港公司股份質押（Share Pledge）完整教學！股東用公司股份做抵押借錢，協議點寫、公司同意程序、股票保管、違約執行同風險全拆解。由真實處理過股份質押嘅東主分享：銀行點解唔收私人公司股份？財務公司點做法？一文搞清股份抵押借錢嘅利弊，借錢之前必讀。" />
+  <meta property="og:title" content="香港公司股份質押終極指南 2026 — Share Pledge 用公司股份做抵押借錢點做？ | ESGov" />
+  <meta property="og:description" content="香港公司股份質押（Share Pledge）完整教學：協議、程序、股票保管、違約執行、風險。由真實東主分享實戰經驗。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港公司股份質押終極指南/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港公司股份質押終極指南/" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+
+  <style>
+    .blog-content h2 { font-size: 1.5rem; font-weight: 700; color: #1B2A4A; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f3f4f6; }
+    .blog-content h3 { font-size: 1.125rem; font-weight: 600; color: #1B2A4A; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .blog-content h4 { font-size: 1rem; font-weight: 600; color: #1B2A4A; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .blog-content p { line-height: 1.8; margin-bottom: 1rem; color: #374151; }
+    .blog-content ul, .blog-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: #374151; }
+    .blog-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .blog-content .tip-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .tip-box p { margin-bottom: 0; }
+    .blog-content .warn-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .warn-box p { margin-bottom: 0; }
+    .blog-content .flag-item { background: #fef3c7; border-left: 4px solid #C9A84C; padding: 1rem 1.25rem; margin-bottom: 1rem; border-radius: 0.5rem; }
+    .blog-content .flag-item p { margin-bottom: 0; }
+    .blog-content .step-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content a { color: #C9A84C; text-decoration: underline; }
+    .blog-content a:hover { color: #b8942e; }
+    .blog-content strong { color: #1B2A4A; }
+    .blog-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    .blog-content th, .blog-content td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
+    .blog-content th { background: #1B2A4A; color: white; font-weight: 600; }
+    .blog-content blockquote { border-left: 4px solid #C9A84C; background: #fefce8; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+    .blog-content blockquote p { margin-bottom: 0; color: #92400e; }
+    .sample-box { background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 0.75rem; padding: 1.5rem; margin: 1rem 0; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.6; }
+  </style>
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港公司股份質押終極指南 2026 — 用公司股份做抵押借錢 Share Pledge 點做？",
+    "description": "香港公司股份質押（Share Pledge）完整教學：協議、程序、股票保管、違約執行、風險。",
+    "author": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-09-04",
+    "dateModified": "2026-09-04",
+    "publisher": { "@type": "Organization", "name": "ESGov" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://esgov.org/blog/香港公司股份質押終極指南/" }
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://esgov.org" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://esgov.org/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "香港公司股份質押終極指南", "item": "https://esgov.org/blog/香港公司股份質押終極指南/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "股份質押等於賣股份嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "唔係。股份質押（Share Pledge）只係將股份作為擔保品押俾貸款人，股份所有權仍然係股東嘅，股息投票權照舊。只有當借款人違約，貸款人先有權按協議執行，將股份轉名變賣抵債。" }
+      },
+      {
+        "@type": "Question",
+        "name": "銀行會接受私人有限公司股份做貸款抵押嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "一般唔會。銀行貸款主要收物業、定期存款等流通性高嘅抵押品。私人公司股份冇公開市場、估值困難、變現手續繁複，所以銀行通常唔收。實際接受股份質押嘅多數係財務公司、私人貸款人或者投資者。" }
+      },
+      {
+        "@type": "Question",
+        "name": "股份質押要交公司註冊處嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "要分清兩件事：股東用自己名下股份做質押，係股東同貸款人之間嘅安排，唔需要交公司註冊處。但如果係公司用自己嘅資產（包括公司持有嘅附屬公司股份）做押記（Charge），就要按《公司條例》第334至335條，一個月內用 NSC14 表格向公司註冊處登記，否則押記對清盤人同其他債權人可能無效。" }
+      },
+      {
+        "@type": "Question",
+        "name": "貸款人違約後可以直接攞走啲股份嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "唔可以話攞走就攞走。貸款人要按質押協議訂明嘅執行程序做，通常包括通知、估值、出售或者要求公司辦理股份轉名。私人公司股份轉名要跟公司程序（董事會批准、提交轉讓文書、更新股東登記冊），而且轉讓涉及印花稅，唔係貸款人單方面簽個名就搞得掂。" }
+      },
+      {
+        "@type": "Question",
+        "name": "公司章程限制股份轉讓，會影響股份質押嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "會。好多公司章程都有優先購買權（Right of First Refusal）或者轉讓須經董事會批准嘅條款。質押執行時要轉名，就可能觸發優先購買權，其他股東有權優先買呢批股份，貸款人未必可以自由賣俾第三者。所以質押之前一定要睇清楚章程點寫。" }
+      },
+      {
+        "@type": "Question",
+        "name": "股份質押同公司押記（Charge）有咩分別？",
+        "acceptedAnswer": { "@type": "Answer", "text": "股份質押通常係指股東將名下股份抵押俾貸款人，主體係股東；公司押記（Charge）係公司用自己資產（包括附屬公司股份）做擔保，主體係公司，而且要按《公司條例》向公司註冊處登記先有完整效力。兩者嘅文件、程序同法律後果都唔同。" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ═══════════════ Nav ═══════════════ -->
+  <nav class="sticky top-0 z-50 bg-navy text-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <span class="text-2xl font-bold tracking-tight">ESGov</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
+        <a href="/#how-it-works" class="hover:text-gold transition-colors">流程</a>
+        <a href="/#products" class="hover:text-gold transition-colors">產品</a>
+        <a href="/blog/" class="text-gold">網誌</a>
+      </div>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition-colors"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回網誌</a>
+    </div>
+  </nav>
+
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-4">
+        香港公司股份質押終極指南 2026 — 用公司股份做抵押借錢 Share Pledge 點做？協議、程序、風險
+      </h1>
+      <p class="text-gray-500 text-sm">ESGov 編輯部 · 2026 年 9 月 · 閱讀時間 8 分鐘</p>
+    </div>
+  </header>
+
+  <article class="py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- 僅供參考 警告（頂部） -->
+      <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 mb-8 flex items-start gap-3">
+        <div class="w-9 h-9 shrink-0 rounded-full bg-amber-400/20 flex items-center justify-center">
+          <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-600" aria-hidden="true"></i>
+        </div>
+        <div>
+          <p class="font-bold text-amber-800">僅供參考</p>
+          <p class="text-sm text-amber-700 leading-relaxed">本文章內容只係一般資訊分享，<strong class="text-amber-800">唔構成法律意見</strong>。涉及股份質押協議簽署或公司押記登記，強烈建議先諮詢執業律師。每單借貸嘅情況都唔同，適用條款可能因個案而異。</p>
+        </div>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="bg-white rounded-xl border border-gray-200 p-6 mb-8">
+        <h2 class="text-lg font-bold text-navy mb-4 flex items-center gap-2"><i data-lucide="list" class="w-5 h-5" aria-hidden="true"></i> 目錄</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#intro" class="text-gray-600 hover:text-gold transition-colors">1. 前言 — 公司要資金，股份可以做抵押借錢嗎？</a></li>
+          <li><a href="#what" class="text-gray-600 hover:text-gold transition-colors">2. 股份質押係咩？同轉讓、押記有咩分別？</a></li>
+          <li><a href="#when" class="text-gray-600 hover:text-gold transition-colors">3. 幾時會用到股份質押？</a></li>
+          <li><a href="#steps" class="text-gray-600 hover:text-gold transition-colors">4. 股份質押點樣做？五步流程</a></li>
+          <li><a href="#agreement" class="text-gray-600 hover:text-gold transition-colors">5. 質押協議要有咩欄位？</a></li>
+          <li><a href="#lenders" class="text-gray-600 hover:text-gold transition-colors">6. 銀行 VS 財務公司 VS 私人投資者 — 邊個會收？</a></li>
+          <li><a href="#mistakes" class="text-gray-600 hover:text-gold transition-colors">7. 常見錯誤（唔好做）</a></li>
+          <li><a href="#enforce" class="text-gray-600 hover:text-gold transition-colors">8. 違約之後點算？執行質押＝股份轉讓</a></li>
+          <li><a href="#faq" class="text-gray-600 hover:text-gold transition-colors">9. 常見問題（FAQ）</a></li>
+        </ul>
+      </div>
+
+      <div class="blog-content">
+
+        <!-- Section 1: Intro -->
+        <h2 id="intro">1. 前言 — 公司要資金，股份可以做抵押借錢嗎？</h2>
+        <p>我朋友 Wilson 做貿易生意，舊年想接單大 project，但公司戶口現金唔夠，銀行貸款又要抵押品。佢諗起一個「idea」：我間公司啲股份咁值錢，可唔可以抵押啲股份嚟借錢？</p>
+        <p>結果佢去銀行問，銀行經理直接搖頭：私人有限公司股份，銀行一般唔收。佢以為件事就此打住，點知一個月後，有間財務公司主動搵佢，話可以用公司股份做抵押借畀佢 — 但利息同條款，睇到佢眼都突。</p>
+        <p>之後我先發現，股份質押（Share Pledge）喺香港中小企融資入面其實成日出現，但好多人對佢嘅程序同風險一知半解，包括我自己都研究咗好耐。呢篇文章將我研究到嘅嘢一次過同你拆解，等你想用公司股份借錢之前，知道有咩要準備、有咩坑要避。</p>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>僅供參考：</strong>本文章嘅內容只係一般資訊分享，唔構成法律意見。涉及實際質押協議或押記登記，強烈建議先諮詢執業律師。每單借貸嘅條款同風險都唔同，適用規則可能因個案而異。</p>
+        </div>
+
+        <!-- Section 2: 股份質押係咩 -->
+        <h2 id="what">2. 股份質押係咩？同轉讓、押記有咩分別？</h2>
+        <p>簡單講，<strong>股份質押就係股東將自己名下嘅公司股份，作為擔保品「押」俾貸款人</strong>，換取貸款。還到錢，股份就完璧歸趙；還唔到錢，貸款人有權按協議執行，將股份變賣或者轉名抵債。</p>
+        <p>好多人將佢同「股份轉讓」同「押記（Charge）」混淆，其實三者好唔同：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>股份轉讓（Transfer）</th>
+              <th>股份質押（Pledge）</th>
+              <th>公司押記（Charge）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>做嘅人</strong></td>
+              <td>股東賣股份俾買家</td>
+              <td>股東抵押自己啲股份</td>
+              <td>公司抵押自己資產</td>
+            </tr>
+            <tr>
+              <td><strong>所有權</strong></td>
+              <td>即時轉移</td>
+              <td>保留喺股東度</td>
+              <td>保留喺公司度</td>
+            </tr>
+            <tr>
+              <td><strong>要交公司註冊處？</strong></td>
+              <td>唔使（但要交印花稅）</td>
+              <td>股東層面質押唔使</td>
+              <td>要（NSC14，一個月內）</td>
+            </tr>
+            <tr>
+              <td><strong>常見文件</strong></td>
+              <td>股份轉讓文書</td>
+              <td>股份質押／押股協議</td>
+              <td>押記文件＋NSC14</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>關鍵分別喺「主體」：<strong>股份質押係股東層面嘅事</strong>，貸款人係信你（股東）個人；<strong>公司押記係公司層面嘅事</strong>，貸款人係信間公司。如果係公司用自己持有嘅附屬公司股份或者資產做擔保，嗰個就係押記，要按《公司條例》登記，程序完全不同。</p>
+
+        <div class="flag-item">
+          <p><i data-lucide="flag" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>真實案例：</strong>有間公司老闆想用自己持有嘅另一間附屬公司股份去銀行融資，以為簽份協議就得。銀行律師一睇就話：呢個係公司押記，要一個月內交 NSC14 俾公司註冊處登記，唔登記嘅話，第時公司清盤，你個押記排隊都排唔上。最後佢哋補交晒文件先搞掂 — 差啲因為漏登記而令成筆貸款失去保障。</p>
+        </div>
+
+        <!-- Section 3: 幾時用 -->
+        <h2 id="when">3. 幾時會用到股份質押？</h2>
+        <p>股份質押最常出現喺以下幾種場景：</p>
+
+        <ul>
+          <li><strong>私人貸款／過橋資金</strong> — 公司短期周轉，股東唔想賣股份套現，用股份做抵押借短期錢。</li>
+          <li><strong>投資者入股前嘅過渡安排</strong> — 新投資者未正式入股，先借錢入公司，用現有股東股份做擔保。</li>
+          <li><strong>股東之間／關聯公司借貸</strong> — 股東向公司或者關聯公司借錢，貸款方要求有擔保，用股份質押做抵押。</li>
+          <li><strong>財務公司融資</strong> — 部分財務公司接受以私人公司股份做抵押嘅借貸，多數會要求同時簽個人擔保。</li>
+        </ul>
+
+        <p>乜嘢情況下唔建議？如果貸款方要求「質押」嘅同時仲想控制公司（例如要求股份轉名、要求你辭任董事），嗰個已經唔係質押而係變相賣公司 — 呢種情況你睇我哋另一篇 <a href="/blog/香港有限公司公司轉讓賣公司終極指南/">公司轉讓終極指南</a> 會更清楚。</p>
+
+        <!-- Section 4: 五步流程 -->
+        <h2 id="steps">4. 股份質押點樣做？五步流程</h2>
+        <p>一個完整嘅股份質押，唔係淨係簽份協議咁簡單。以下係實戰上要做嘅五步：</p>
+
+        <div class="step-card">
+          <p><i data-lucide="file-search" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>第 1 步：檢查公司章程（Articles of Association）</strong></p>
+          <p>第一件事唔係簽約，而係打開公司章程睇清楚：章程有冇禁止股東抵押股份？有冇優先購買權（Right of First Refusal）或者轉讓須經董事會批准嘅條款？好多章程都有呢啲限制，直接影響質押執行嗰日點樣轉名。想知章程點睇，可以參考我哋嘅 <a href="/blog/香港公司章程修改完整指南/">公司章程指南</a>。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="users" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>第 2 步：攞公司同意（董事會／股東）</strong></p>
+          <p>視乎章程規定，可能要做董事會決議甚至股東決議，批准股份質押呢件事，特別係章程有優先購買權時，要處理其他股東「放棄優先購買權」嘅安排。講到決議點樣做先有效，可以參考我哋嘅 <a href="/blog/香港有限公司股東大會AGM暨書面決議終極指南/">股東大會暨書面決議指南</a>。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="file-lock" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>第 3 步：簽股份質押協議</strong></p>
+          <p>由股東（質押人）同貸款人（質權人）簽署股份質押協議，寫清楚貸款金額、利率、還款期、擔保範圍、違約事件、執行權等等（第 5 節有完整欄位清單）。呢份文件係成單交易嘅核心，千祈唔好求其上網搵份範本就算。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="file-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>第 4 步：交付股份證明書正本＋通知公司</strong></p>
+          <p>貸款人一般會要求保管股份證明書（Share Certificate）正本，防止股東私下轉名。同時要正式通知公司，要求公司喺股東登記冊（Register of Members）註記「股份已設質押」，並出確認信俾貸款人。呢步好重要 — 唔通知公司，第時爭拗起上嚟好麻煩。想知股份證明書係咩，可以睇 <a href="/blog/香港公司股份證明書ShareCertificate終極指南/">股份證明書終極指南</a>。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>第 5 步：確認使唔使交公司註冊處</strong></p>
+          <p>再次確認：如果係股東層面嘅股份質押，唔使交公司註冊處。但如果涉及公司資產（包括公司持有嘅附屬公司股份）做押記，就要一個月內用 <strong>NSC14 表格</strong>向公司註冊處登記，漏咗會令押記失效。搞唔清楚自己係邊種？問律師最穩陣。</p>
+        </div>
+
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>小貼士：</strong>質押協議簽好之後，好多時都要再行股份轉讓程序（例如執行質押或者日後還清後解除質押）。我哋準備咗<a href="/shareholder-transfer/" class="text-gold font-medium">股份轉讓文件生成器</a>，可以幫你快速生成轉讓文書，跟住改資料就用到。</p>
+        </div>
+
+        <h3>4.1 還清貸款之後 — 解除質押程序</h3>
+        <p>好多人以為還清貸款就自動搞掂，其實解除質押都要做足程序，唔係話還咗錢就完：</p>
+
+        <ul>
+          <li><strong>攞返股份證明書正本</strong> — 貸款人保管咗正本，還清之後一定要佢歸還，並且要核對股份證明書資料冇被改動。</li>
+          <li><strong>公司登記冊除註</strong> — 要求公司喺股東登記冊移除「股份已設質押」嘅註記，並出確認信。</li>
+          <li><strong>貸款人出解除確認書</strong> — 正式書面確認質押已解除、貸款人放棄對股份嘅所有權利，一式兩份各自保存。</li>
+          <li><strong>檢查有冇其他隱藏擔保</strong> — 有啲協議寫「擔保所有現有及將來債務」，就算還清呢筆，貸款人可能仍然聲稱對股份有權利，解除文件一定要寫清楚「全部債務已清償、擔保全面解除」。</li>
+        </ul>
+
+        <p>如果貸款人遲遲唔肯歸還股份證明書或者唔出解除確認書，呢個係危險訊號，要即刻搵律師處理，唔好拖。股份證明書嘅重要性，可以參考我哋嘅 <a href="/blog/香港公司股份證明書ShareCertificate終極指南/">股份證明書終極指南</a>。</p>
+
+        <!-- Section 5: 協議欄位 -->
+        <h2 id="agreement">5. 質押協議要有咩欄位？</h2>
+        <p>一份完整嘅股份質押協議，基本要包含以下內容。缺少任何一樣都可能令貸款人唔肯放款，或者第時執行嗰陣拗數：</p>
+
+        <ul>
+          <li><strong>雙方身份</strong> — 質押人（股東）同質權人（貸款人）全名、身份證明、地址；如果質權人係公司，要寫公司註冊資料。</li>
+          <li><strong>擔保嘅貸款</strong> — 貸款金額、利率、還款期、逾期利息，以及呢份質押係擔保「邊筆」債務（有啲協議寫到明擔保所有現有及將來債務，呢點要睇清楚）。</li>
+          <li><strong>質押股份</strong> — 公司全名及註冊編號、股份數量、股份類別（普通股／優先股）、股份證明書編號。</li>
+          <li><strong>質押期間股東權利</strong> — 股息、投票權歸邊個？通常股息照歸股東，但大額派息可能要貸款人同意（因為派息會攤薄股份價值）。</li>
+          <li><strong>違約事件（Events of Default）</strong> — 乜嘢情況算違約：遲還款、公司清盤、股東破產、股份被第三方查封等等。呢個 list 直接決定貸款人幾時可以執行質押。</li>
+          <li><strong>執行權（Enforcement）</strong> — 違約後貸款人可以點做：出售股份、要求公司轉名、委任接管人等等，以及通知期、估值程序。</li>
+          <li><strong>解除質押</strong> — 還清貸款之後點樣解除：歸還股份證明書、公司登記冊除註、出解除確認信。</li>
+        </ul>
+
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>重要提醒：</strong>股份質押協議係法律文件，唔好貪方便用網上求其一份範本 — 尤其係「違約事件」同「執行權」兩Part，寫得唔好，第時想執行先知有排搞。呢份嘢值得俾律師睇一睇，幾千蚊律師費好過第時蝕幾十萬。</p>
+        </div>
+
+        <!-- Section 6: 邊個會收 -->
+        <h2 id="lenders">6. 銀行 VS 財務公司 VS 私人投資者 — 邊個會收？</h2>
+        <p>Wilson 嘅經歷話咗俾我哋知：唔係個個貸款人都會接受私人公司股份做抵押。以下係我整理嘅接受程度比較：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>貸款人類型</th>
+              <th>會收私人公司股份？</th>
+              <th>原因／條件</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>銀行</strong></td>
+              <td>通常唔收</td>
+              <td>私人公司股份冇公開市場、估值困難、變現程序繁複，銀行風險部門一般唔批</td>
+            </tr>
+            <tr>
+              <td><strong>持牌財務公司</strong></td>
+              <td>部分接受</td>
+              <td>多數會要求同時簽個人擔保，利率較高，貸款成數（LTV）會大打折扣</td>
+            </tr>
+            <tr>
+              <td><strong>私人投資者／家族辦公室</strong></td>
+              <td>有機會接受</td>
+              <td>通常睇公司業務同股東背景，條款彈性大，但利息同條款要自己傾</td>
+            </tr>
+            <tr>
+              <td><strong>股東／關聯公司</strong></td>
+              <td>內部安排</td>
+              <td>配偶、家族成員之間嘅資金調配，協議照樣要簽清楚，避免稅務同合規問題</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>如果你係想幫公司攞銀行貸款，其實銀行更常見嘅要求係<strong>董事私人擔保</strong>而唔係股份質押。想知銀行貸款嘅實際流程同要準備咩文件，可以參考我哋嘅 <a href="/blog/香港公司商業貸款銀行融資終極指南/">商業貸款銀行融資終極指南</a>。</p>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>風險提醒：</strong>財務公司或私人貸款人嘅股份質押條款，好多時包含「交叉違約」或者「全數擔保」條款 — 即係公司任何一筆數逾期，所有貸款即刻到期，質押股份即刻可以被執行。簽之前一定要逐條睇清楚，唔明就問。</p>
+        </div>
+
+        <!-- Section 7: 常見錯誤 -->
+        <h2 id="mistakes">7. 常見錯誤（唔好做）</h2>
+        <p>以下係我聽過同見過嘅中伏位，你千祈唔好犯同樣嘅錯：</p>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 1：冇睇公司章程就簽約</strong></p>
+          <p>簽完質押協議先發現章程有優先購買權，執行嗰陣貸款人想賣股份俾第三者，其他股東突然話「我要優先買」— 個 deal 即刻爛尾。章程永遠係第一步。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 2：冇通知公司、冇公司紀錄</strong></p>
+          <p>質押係股東同貸款人之間嘅事，但公司作為股份發行人都要知。冇正式通知公司、股東登記冊冇註記，貸款人第時執行轉名，公司話「我唔知有質押」就大件事。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 3：股份證明書都未攞到就話有股份</strong></p>
+          <p>有啲公司成立咗成年都未出股份證明書。貸款人一要求睇正本，即刻穿煲，成筆貸款凍過水。質押之前，確保股份證明書真係存在、資料正確。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 4：公司資產押記漏交 NSC14</strong></p>
+          <p>用公司持有嘅附屬公司股份或者公司資產做擔保，但以為「簽咗約就得」，冇一個月內交 NSC14 俾公司註冊處。公司一清盤，呢個押記對其他債權人嚟講形同虛設，貸款人即刻冇晒保障。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 5：估值被人牽住鼻子走</strong></p>
+          <p>私人公司股份冇公開價格，貸款人話「你間公司淨值 100 萬，我當 30 萬」，你以為好正常？其實估值方法（資產基礎法、盈利倍數法）可以差好遠。想知股份值幾錢，參考我哋嘅 <a href="/blog/香港有限公司業務估值終極指南/">業務估值終極指南</a>，至少心中有數。</p>
+        </div>
+
+        <!-- Section 8: 執行質押 -->
+        <h2 id="enforce">8. 違約之後點算？執行質押＝股份轉讓</h2>
+        <p>如果借款人還唔到錢，貸款人就要「執行質押」。好多香港公司東主以為貸款人可以一嘢攞走啲股份，其實現實係：<strong>執行股份質押，最終都要行返股份轉讓程序</strong>。</p>
+
+        <ul>
+          <li><strong>出售股份</strong> — 貸款人按協議出售質押股份（通常要事先通知、公平估值），搵到買家之後，雙方簽股份轉讓文書（Instrument of Transfer）。</li>
+          <li><strong>公司批准轉名</strong> — 私人公司轉名多數要董事會批准，如果章程有優先購買權，仲要行完優先購買程序。公司會更新股東登記冊、出新股東嘅股份證明書。</li>
+          <li><strong>交印花稅</strong> — 股份轉讓要交印花稅（厘印費），以轉讓代價同股份資產淨值較高者計算。唔知要交幾多？可以用我哋嘅 <a href="/stamp-duty-calculator/">印花稅計算器</a> 計一計。</li>
+          <li><strong>更新 SCR</strong> — 轉名之後，如果新舊股東涉及重要控制人變動，要更新重要控制人登記冊（SCR）。質押本身唔影響 SCR，但執行轉名後就要處理。想知點做，睇我哋嘅 <a href="/blog/香港公司重要控制人登記冊SCR終極指南/">SCR 終極指南</a>。</li>
+        </ul>
+
+        <p>成個股份轉讓程序點行，可以參考我哋嘅 <a href="/blog/香港公司股份轉讓流程2026/">股份轉讓流程 2026</a>，或者直接用 <a href="/shareholder-transfer/" class="text-gold font-medium">股份轉讓文件生成器</a> 一次過搞掂文書。</p>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>僅供參考：</strong>本文章內容僅供一般參考，唔構成法律意見。實際質押執行嘅程序、費用同可行性會因個別情況而有重大分別，決定自行處理之前，請務必諮詢執業律師。</p>
+        </div>
+
+        <blockquote>
+          <p>想了解多啲公司文件同法律程序？我哋有大量免費指南 — <a href="/blog/">睇更多 ESGov 指南</a>，股份轉讓、公司註冊、合規申報等全部免費。</p>
+        </blockquote>
+
+        <!-- Section 9: FAQ -->
+        <h2 id="faq">9. 常見問題（FAQ）</h2>
+
+        <h3>股份質押等於賣股份嗎？</h3>
+        <p>唔係。股份質押（Share Pledge）只係將股份作為擔保品押俾貸款人，股份所有權仍然係股東嘅，股息投票權照舊。只有當借款人違約，貸款人先有權按協議執行，將股份轉名變賣抵債。</p>
+
+        <h3>銀行會接受私人有限公司股份做貸款抵押嗎？</h3>
+        <p>一般唔會。銀行貸款主要收物業、定期存款等流通性高嘅抵押品。私人公司股份冇公開市場、估值困難、變現手續繁複，所以銀行通常唔收。實際接受股份質押嘅多數係財務公司、私人貸款人或者投資者。</p>
+
+        <h3>股份質押要交公司註冊處嗎？</h3>
+        <p>要分清兩件事：股東用自己名下股份做質押，係股東同貸款人之間嘅安排，唔需要交公司註冊處。但如果係公司用自己嘅資產（包括公司持有嘅附屬公司股份）做押記（Charge），就要按《公司條例》第334至335條，一個月內用 NSC14 表格向公司註冊處登記，否則押記對清盤人同其他債權人可能無效。</p>
+
+        <h3>貸款人違約後可以直接攞走啲股份嗎？</h3>
+        <p>唔可以話攞走就攞走。貸款人要按質押協議訂明嘅執行程序做，通常包括通知、估值、出售或者要求公司辦理股份轉名。私人公司股份轉名要跟公司程序（董事會批准、提交轉讓文書、更新股東登記冊），而且轉讓涉及印花稅，唔係貸款人單方面簽個名就搞得掂。</p>
+
+        <h3>公司章程限制股份轉讓，會影響股份質押嗎？</h3>
+        <p>會。好多公司章程都有優先購買權（Right of First Refusal）或者轉讓須經董事會批准嘅條款。質押執行時要轉名，就可能觸發優先購買權，其他股東有權優先買呢批股份，貸款人未必可以自由賣俾第三者。所以質押之前一定要睇清楚章程點寫。</p>
+
+        <h3>股份質押同公司押記（Charge）有咩分別？</h3>
+        <p>股份質押通常係指股東將名下股份抵押俾貸款人，主體係股東；公司押記（Charge）係公司用自己資產（包括附屬公司股份）做擔保，主體係公司，而且要按《公司條例》向公司註冊處登記先有完整效力。兩者嘅文件、程序同法律後果都唔同。</p>
+
+      </div>
+
+      <!-- 相關指南 -->
+      <div class="mt-8 mb-4">
+        <h3 class="font-bold text-navy text-base mb-3">相關指南</h3>
+        <ul class="space-y-1.5 text-sm">
+          <li>• <a href="/blog/香港公司股份轉讓流程2026/" class="text-gold hover:underline">香港公司股份轉讓流程 2026</a></li>
+          <li>• <a href="/blog/香港公司商業貸款銀行融資終極指南/" class="text-gold hover:underline">香港公司商業貸款銀行融資終極指南</a></li>
+          <li>• <a href="/blog/香港公司印花稅厘印費終極指南/" class="text-gold hover:underline">香港公司印花稅厘印費終極指南</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- 僅供參考 警告（底部） -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+    <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 flex items-start gap-3">
+      <div class="w-9 h-9 shrink-0 rounded-full bg-amber-400/20 flex items-center justify-center">
+        <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-600" aria-hidden="true"></i>
+      </div>
+      <div>
+        <p class="font-bold text-amber-800">僅供參考</p>
+        <p class="text-sm text-amber-700 leading-relaxed">本文章內容只係一般資訊分享，<strong class="text-amber-800">唔構成法律意見</strong>。實際質押協議嘅條款、費用同可行性會因個別情況而有重大分別，決定自行處理之前，請務必諮詢執業律師。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-6 flex items-center gap-4">
+      <div class="w-14 h-14 rounded-full bg-navy text-gold flex items-center justify-center text-2xl font-bold shrink-0">E</div>
+      <div>
+        <p class="font-bold text-navy">ESGov 編輯部</p>
+        <p class="text-sm text-gray-500 mt-1">香港公司秘書文件指南，由真實東主執筆，分享自己搞掂公司文件同法律程序嘅實戰經驗。</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-8 bg-navy text-gray-400">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-xl text-white">ESGov</span>
+      </div>
+      <p class="text-sm">© 2026 ESGov · 香港公司文件指南（所有內容僅供參考，不構成法律意見）</p>
+    </div>
+  </footer>
+
+</body>
+</html>
