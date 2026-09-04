@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESGov | 香港公司股份拆細合股終極指南 2026 — Share Split 點做？程序、NSC11、常見錯誤</title>
+  <meta name="description" content="香港公司股份拆細（Share Split）同合股完整教學！私人公司點解要拆細、特別決議程序、NSC11 更改股本通知書一個月限期、股票換發、SCR 同周年申報點更新、5 大常見錯誤全拆解，由真實東主分享實戰經驗，自己搞掂慳返 Agent Fee，一文睇晒。" />
+  <meta property="og:title" content="香港公司股份拆細合股終極指南 2026 — Share Split 點做？ | ESGov" />
+  <meta property="og:description" content="香港公司股份拆細同合股完整教學：程序、特別決議、NSC11 表格、股票換發、常見錯誤，由真實東主分享實戰經驗。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta property="og:url" content="https://esgov.org/blog/香港公司股份拆細合股終極指南/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B' },
+            gold: { DEFAULT: '#C9A84C', light: '#E8D48B' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://esgov.org/blog/香港公司股份拆細合股終極指南/" />
+  <meta property="og:image" content="https://esgov.org/assets/images/og-blog.png" />
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){lucide.createIcons()});</script>
+
+  <style>
+    .blog-content h2 { font-size: 1.5rem; font-weight: 700; color: #1B2A4A; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f3f4f6; }
+    .blog-content h3 { font-size: 1.125rem; font-weight: 600; color: #1B2A4A; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .blog-content h4 { font-size: 1rem; font-weight: 600; color: #1B2A4A; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .blog-content p { line-height: 1.8; margin-bottom: 1rem; color: #374151; }
+    .blog-content ul, .blog-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: #374151; }
+    .blog-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .blog-content .tip-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .tip-box p { margin-bottom: 0; }
+    .blog-content .warn-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content .warn-box p { margin-bottom: 0; }
+    .blog-content .flag-item { background: #fef3c7; border-left: 4px solid #C9A84C; padding: 1rem 1.25rem; margin-bottom: 1rem; border-radius: 0.5rem; }
+    .blog-content .flag-item p { margin-bottom: 0; }
+    .blog-content .step-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1rem; }
+    .blog-content a { color: #C9A84C; text-decoration: underline; }
+    .blog-content a:hover { color: #b8942e; }
+    .blog-content strong { color: #1B2A4A; }
+    .blog-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    .blog-content th, .blog-content td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
+    .blog-content th { background: #1B2A4A; color: white; font-weight: 600; }
+    .blog-content blockquote { border-left: 4px solid #C9A84C; background: #fefce8; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+    .blog-content blockquote p { margin-bottom: 0; color: #92400e; }
+    .sample-box { background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 0.75rem; padding: 1.5rem; margin: 1rem 0; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.6; }
+  </style>
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "香港公司股份拆細合股終極指南 2026 — Share Split 點做？程序、NSC11、常見錯誤",
+    "description": "香港公司股份拆細同合股完整教學：程序、特別決議、NSC11 表格、股票換發、常見錯誤。",
+    "author": { "@type": "Organization", "name": "ESGov" },
+    "datePublished": "2026-09-05",
+    "dateModified": "2026-09-05",
+    "publisher": { "@type": "Organization", "name": "ESGov" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://esgov.org/blog/香港公司股份拆細合股終極指南/" }
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://esgov.org" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://esgov.org/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "香港公司股份拆細合股終極指南", "item": "https://esgov.org/blog/香港公司股份拆細合股終極指南/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "股份拆細要唔要交印花稅？",
+        "acceptedAnswer": { "@type": "Answer", "text": "拆細本身唔使交印花稅，因為拆細唔涉及轉讓文書，股東持股比例完全不變。但如果拆細之後再將股份轉讓俾其他人（例如送俾仔女），轉讓部分就要照正常股份轉讓交厘印費（買賣雙方各0.1%）。" }
+      },
+      {
+        "@type": "Question",
+        "name": "股份拆細要唔要特別決議？",
+        "acceptedAnswer": { "@type": "Answer", "text": "股份拆細同合股屬於《公司條例》第170條嘅股本更改，要經公司決議授權先可以做。實務上通常以特別決議（須獲不少於75%股東通過）處理，好多公司嘅章程亦明確要求特別決議。做之前一定要翻一翻公司嘅Articles of Association確認。" }
+      },
+      {
+        "@type": "Question",
+        "name": "NSC11 幾時要交？",
+        "acceptedAnswer": { "@type": "Answer", "text": "根據《公司條例》第171(1)條，公司更改股本（包括拆細、合股）後，須喺一個月內將更改股本通知書（表格NSC11）交付公司註冊處登記。如果更改涉及配發新股，就唔使用NSC11，改為喺配發後一個月內交NSC1股份配發申報書。" }
+      },
+      {
+        "@type": "Question",
+        "name": "NSC11 表格邊個簽名？",
+        "acceptedAnswer": { "@type": "Answer", "text": "NSC11 必須由一名董事或公司秘書簽署，公司註冊處唔接受未簽妥嘅表格。另外要留意，公司註冊處明確話手寫填寫嘅表格或會被拒絕，所以最好用電腦打字填寫，全部資料統一用中文或者統一用英文。" }
+      },
+      {
+        "@type": "Question",
+        "name": "拆細會唔會影響股東嘅持股比例？",
+        "acceptedAnswer": { "@type": "Answer", "text": "唔會。拆細係將每股拆做更多細股，所有股東嘅股份數目按同一比例增加，持股百分比完全不變。但拆細之後要更新股東名冊、重新簽發股票，重要控制人登記冊（SCR）同周年申報表入面嘅股份數目都要同步更新。" }
+      },
+      {
+        "@type": "Question",
+        "name": "拆細之後想即時轉讓股份俾仔女，程序點行？",
+        "acceptedAnswer": { "@type": "Answer", "text": "先完成拆細程序（特別決議＋一個月內交NSC11＋換發股票），然後按正常股份轉讓程序處理：簽署轉讓文書（Instrument of Transfer）、交印花稅（厘印費）、更新股東名冊同SCR。兩件事分開做，唔好撈埋一齊申報。" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ═══════════════ Nav ═══════════════ -->
+  <nav class="sticky top-0 z-50 bg-navy text-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <span class="text-2xl font-bold tracking-tight">ESGov</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
+        <a href="/#how-it-works" class="hover:text-gold transition-colors">流程</a>
+        <a href="/#products" class="hover:text-gold transition-colors">產品</a>
+        <a href="/blog/" class="text-gold">網誌</a>
+      </div>
+      <a href="/blog/" class="text-sm text-gray-400 hover:text-gold transition-colors"><i data-lucide="arrow-left" class="w-4 h-4 inline-block align-middle" aria-hidden="true"></i> 返回網誌</a>
+    </div>
+  </nav>
+
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-navy leading-tight mb-4">
+        香港公司股份拆細合股終極指南 2026 — Share Split 點做？程序、NSC11表格、常見錯誤
+      </h1>
+      <p class="text-gray-500 text-sm">ESGov 編輯部 · 2026 年 9 月 · 閱讀時間 8 分鐘</p>
+    </div>
+  </header>
+
+  <article class="py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- 僅供參考 警告（頂部） -->
+      <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 mb-8 flex items-start gap-3">
+        <div class="w-9 h-9 shrink-0 rounded-full bg-amber-400/20 flex items-center justify-center">
+          <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-600" aria-hidden="true"></i>
+        </div>
+        <div>
+          <p class="font-bold text-amber-800">僅供參考</p>
+          <p class="text-sm text-amber-700 leading-relaxed">本文章內容只係一般資訊分享，<strong class="text-amber-800">唔構成法律意見</strong>。涉及股份拆細、合股或股本更改，強烈建議先諮詢執業律師或公司秘書。每間公司嘅章程同股本結構都唔同，適用程序可能因情況而異。</p>
+        </div>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="bg-white rounded-xl border border-gray-200 p-6 mb-8">
+        <h2 class="text-lg font-bold text-navy mb-4 flex items-center gap-2"><i data-lucide="list" class="w-5 h-5" aria-hidden="true"></i> 目錄</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#intro" class="text-gray-600 hover:text-gold transition-colors">1. 前言 — 想分股份俾仔女，先發現 1,000 股好難分</a></li>
+          <li><a href="#what" class="text-gray-600 hover:text-gold transition-colors">2. 拆細同合股係咩？五種股本更改一次過睇</a></li>
+          <li><a href="#why" class="text-gray-600 hover:text-gold transition-colors">3. 私人公司點解要拆細？真實場景拆解</a></li>
+          <li><a href="#process" class="text-gray-600 hover:text-gold transition-colors">4. 拆細程序 — 五步搞掂</a></li>
+          <li><a href="#nsc11" class="text-gray-600 hover:text-gold transition-colors">5. NSC11 更改股本通知書逐格睇</a></li>
+          <li><a href="#stamp" class="text-gray-600 hover:text-gold transition-colors">6. 拆細要唔要交印花稅？同轉讓有咩分別</a></li>
+          <li><a href="#after" class="text-gray-600 hover:text-gold transition-colors">7. 拆細之後必做清單（股票、SCR、周年申報）</a></li>
+          <li><a href="#mistakes" class="text-gray-600 hover:text-gold transition-colors">8. 真實犯錯故事 + 6 大常見錯誤</a></li>
+          <li><a href="#choose" class="text-gray-600 hover:text-gold transition-colors">9. 拆細定合股？幾時用邊樣</a></li>
+          <li><a href="#faq" class="text-gray-600 hover:text-gold transition-colors">10. 常見問題（FAQ）</a></li>
+        </ul>
+      </div>
+
+      <div class="blog-content">
+
+        <!-- Section 1: Intro -->
+        <h2 id="intro">1. 前言 — 想分股份俾仔女，先發現 1,000 股好難分</h2>
+        <p>我朋友阿強間貿易公司，最初成立嗰陣得 1,000 股，兩個股東每人 500 股。做咗十年，他想開始規劃退休，打算將公司股份慢慢分俾三個仔女，一人一份。點知一計就頭痕：500 股要分三份，點都分唔勻 — 除唔盡。</p>
+        <p>佢以為可以就咁「割」股份出嚟，甚至以為要重新註冊公司。後嚟佢個會計師同佢講：正路做法係<strong>股份拆細（Share Subdivision / Share Split）</strong>，將每股拆細做 1,000 股，500 股變 500,000 股，三個仔女每人 166,666 股，剩返 2 股自己揸住，點分都得。</p>
+        <p>阿強跟住條路行，先發現拆細唔係「開個會話拆就拆」咁簡單 — 要股東決議、要交表俾公司註冊處、要換股票、要更新一大輪紀錄。中間仲差啲中咗個大伏：以為拆細要交厘印費，又以為同普通轉讓一樣用轉讓文書搞掂。</p>
+        <p>呢篇文章係我陪阿強行完成個過程之後嘅總結，同你拆解晒<strong>香港公司股份拆細同合股</strong>點樣做：程序、NSC11 表格、印花稅、同埋最易中嘅伏。你公司如果都有分家、傳承、引入投資者或者做員工持股嘅打算，呢篇幫你慳返幾千蚊 Agent Fee。</p>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>僅供參考：</strong>本文章嘅內容只係一般資訊分享，唔構成法律意見。涉及公司股本更改，強烈建議先諮詢執業律師或公司秘書。每間公司嘅章程同股本結構都唔同，適用程序可能因公司而異。</p>
+        </div>
+
+        <!-- Section 2: 拆細同合股係咩 -->
+        <h2 id="what">2. 拆細同合股係咩？五種股本更改一次過睇</h2>
+        <p>先講最基本概念。拆細（Subdivision）係將公司嘅股份拆做更多、面值更細嘅股份 — 例如 1 股面值 HK$1 拆做 100 股面值 HK$0.01。合股（Consolidation）就係相反：將股份合併做更少、面值更大嘅股份 — 例如 100 股合做 1 股。兩者都係股東之間嘅比例完全不變，只係股份數目同面值變。</p>
+        <p>法律上，兩者都係《公司條例》（第622章）<strong>第170條</strong>所講嘅「更改股本」：公司可以「將其全部或任何股份，轉換為更大或更細數目嘅股份」。除咗拆細同合股，同一條仲涵蓋其他幾種股本更改，好多新手老闆會撈亂：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>股本更改方式</th>
+              <th>係咩</th>
+              <th>申報表格</th>
+              <th>限期</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>拆細</strong>（Subdivision）</td>
+              <td>1 股拆做多股，面值變細</td>
+              <td>NSC11 更改股本通知書</td>
+              <td>更改後一個月內</td>
+            </tr>
+            <tr>
+              <td><strong>合股</strong>（Consolidation）</td>
+              <td>多股合做 1 股，面值變大</td>
+              <td>NSC11 更改股本通知書</td>
+              <td>更改後一個月內</td>
+            </tr>
+            <tr>
+              <td><strong>配發新股</strong>（Allotment）</td>
+              <td>發行新股份，通常增加股本</td>
+              <td>NSC1 股份配發申報書</td>
+              <td>配發後一個月內</td>
+            </tr>
+            <tr>
+              <td><strong>贖回/回購股份</strong>（Buy-back）</td>
+              <td>公司買返自己啲股份</td>
+              <td>NSC2 股份贖回或回購申報表</td>
+              <td>股份交付公司後15日內</td>
+            </tr>
+            <tr>
+              <td><strong>減少股本</strong>（Reduction）</td>
+              <td>削減股本，程序最重</td>
+              <td>NSC17 償付能力陳述書 + NSC19 減少股本申報書</td>
+              <td>特別程序（5-7星期）</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>留意錶入面最重要嘅一點：<strong>拆細同合股用 NSC11，唔係 NSC1</strong>。NSC1 係配發新股先用（詳情可以睇我哋嘅 <a href="/blog/NSC1表格填寫教學/">NSC1 表格填寫教學</a>），成日有人撈亂，交錯表格俾公司註冊處彈返轉頭，白白浪費時間。</p>
+
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>補充：</strong>香港由 2014 年《公司條例》全面實施「無面值制度」（No-par Regime），舊公司嘅「法定股本」概念已經廢除，公司亦唔再需要喺章程度列明股本。所以而家拆細唔使改章程，淨係要股東決議＋交 NSC11 就得 — 比以前簡單咗好多。</p>
+        </div>
+
+        <!-- Section 3: 點解要拆細 -->
+        <h2 id="why">3. 私人公司點解要拆細？真實場景拆解</h2>
+        <p>好多人以為拆細係上市公司先用（例如將股價壓低吸引散戶），其實私人有限公司拆細嘅原因仲實際：</p>
+
+        <div class="flag-item">
+          <p><i data-lucide="flag" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>真實案例 1（家庭傳承）：</strong>阿強間公司原本 1,000 股，三個仔女加老婆，點分都除唔勻。拆細做 1,000,000 股之後，按 33.33%／33.33%／33.33% 分都得，剩下嘅零頭由自己揸住，留返彈性。分完之後仲可以用正常股份轉讓程序過戶，詳情可以參考我哋嘅 <a href="/blog/香港公司股份轉讓流程2026/">股份轉讓流程指南</a>。</p>
+        </div>
+
+        <div class="flag-item">
+          <p><i data-lucide="flag" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>真實案例 2（員工持股）：</strong>另一個朋友想用股份獎勵三個核心員工，但公司得 10,000 股，員工每人 3% 就係 333.33 股 — 又係除唔盡。佢拆細做 100,000 股之後，每人 3,333 股，乾手淨腳。想做員工持股計劃（ESOP）嘅話，可以參考我哋嘅 <a href="/blog/香港有限公司員工股權激勵計劃ESOP終極指南/">員工股權激勵計劃（ESOP）指南</a>。</p>
+        </div>
+
+        <div class="flag-item">
+          <p><i data-lucide="flag" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>真實案例 3（引入投資者）：</strong>有天使投資者想入股 2.5%，但公司啱啱好 40,000 股 — 2.5% 就係 1,000 股，理論上得，但之後再有第二個投資者想拎 1.5%，就又要計餐飽。拆細做 1,000,000 股之後，任何百分比都有整數股份對應，傾計、寫股東協議都方便好多。</p>
+        </div>
+
+        <p>而<strong>合股（股份合併）</strong>嘅場景就啱啱相反：股東數目太少想簡化、每股價值想做大啲（例如準備賣盤，買家想股份數目少、每股金額整齊）、或者公司啲股份碎到唔想逐張股票管。總之，拆細同合股都係「調整股份嘅單位」，唔係「轉讓」，呢一點好重要 — 下面會詳細講。</p>
+
+        <!-- Section 4: 程序 -->
+        <h2 id="process">4. 拆細程序 — 五步搞掂</h2>
+        <p>拆細成個程序，由開會到完成，一般 3 至 6 個星期內搞得掂（視乎你幾快簽齊文件同交表）。以下五步係標準流程：</p>
+
+        <div class="step-card">
+          <p><i data-lucide="file-search" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>第 1 步：睇章程 + 開董事會</strong></p>
+          <p>首先翻一翻公司嘅 Articles of Association（章程細則），確認拆細嘅程序有冇特別規定（例如決議門檻、董事會授權等）。大多數章程跟《公司條例》默認安排，但一定要自己確認。之後董事會開會通過建議，敲定拆細比例同生效日期，並安排召開股東會議。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="users" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>第 2 步：股東通過特別決議</strong></p>
+          <p>股份拆細同合股屬於《公司條例》第170條嘅股本更改，要經公司決議授權。實務上通常以<strong>特別決議（Special Resolution）</strong>處理 — 即須獲不少於 75% 有投票權股東通過 — 而好多公司嘅章程亦明確要求特別決議。決議內容要寫清楚拆細比例（例如「每股拆細為 1,000 股」）同生效日期，並留低書面決議紀錄。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="calendar-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>第 3 步：訂生效日期（拆細日）</strong></p>
+          <p>決議通過後，揀一個生效日期（Effective Date）— 即拆細正式生效嗰日，股東名冊會喺呢日反映新股份數目。生效日期要寫喺 NSC11 同股票換發紀錄度，全部文件要一致，唔好一個日期喺決議、另一個日期喺表格。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="file-text" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>第 4 步：一個月內交 NSC11 俾公司註冊處</strong></p>
+          <p>根據《公司條例》第171(1)條，拆細／合股後<strong>一個月內</strong>，要將更改股本通知書（<strong>表格 NSC11</strong>）交付公司註冊處登記。表格由一名董事或公司秘書簽署，可以郵寄或親身遞交（金鐘道政府合署14樓）。注意：如果更改涉及配發新股，就唔用 NSC11，改用 NSC1。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="badge-check" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>第 5 步：換發股票 + 更新所有紀錄</strong></p>
+          <p>拆細之後要收返舊股票、簽發新股票，並更新股東名冊（Register of Members）、重要控制人登記冊（SCR）、周年申報表資料同公司紀錄文件。詳細清單見第 7 部分。</p>
+        </div>
+
+        <p>費用方面：如果全部自己搞，主要成本係遞交費（實際金額以公司註冊處最新收費表為準，電子遞交通常有折扣），加埋換股票印刷。如果搵公司秘書／Agent 代辦，市價一般幾千蚊 — 佢哋幫你搞決議文件、填表同遞交，慳時間但唔平。自己識做嘅話，完全可以慳返呢筆。</p>
+
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>慳錢貼士：</strong>拆細嘅「重」喺文件一致性，唔係表格本身。自己做嘅話，記得所有文件用同一個生效日期、同一個股份數字，簽名前double-check。搞掂之後周年申報（NAR1）亦要用新數字 — 我哋有個<a href="/nar1-generator/" class="text-gold font-medium">NAR1 周年申報表線上工具</a>，跟住填就唔會錯。</p>
+        </div>
+
+        <!-- Section 5: NSC11 逐格睇 -->
+        <h2 id="nsc11">5. NSC11 更改股本通知書逐格睇</h2>
+        <p>NSC11 係成個拆細程序最核心嘅文件。以下係官方表格（指明編號 1/2023 版本）嘅欄位清單，你跟住呢個 checklist 準備資料就唔會漏：</p>
+
+        <ul>
+          <li><strong>商業登記號碼（Business Registration Number）</strong> — 填商業登記證號碼嘅<strong>頭 8 位數字</strong>，「-」後面嘅數字唔使填。2023 年 12 月 27 日之後成立嘅公司，公司註冊證明書已經直接用商業登記號碼做編號。</li>
+          <li><strong>公司名稱（Company Name）</strong> — 公司全名，要同公司註冊處紀錄完全一致。</li>
+          <li><strong>更改股本詳情</strong> — 填生效日期（日／月／年），再喺適用嘅空格打剔：增加已發行股本（列明增加款額）、將股份轉換為更大／更細數目（即合股／拆細）等。</li>
+          <li><strong>股本說明（Statement of Capital）</strong> — 以緊接更改股本之後嘅狀況填寫：股份類別（普通股／優先股等）、貨幣單位、已發行股份總數、總款額、已繳／視作已繳同未繳／視作未繳嘅款額。</li>
+          <li><strong>股份所附帶嘅權利詳情（第3B項）</strong> — 只適用於發行超過一類股份嘅公司：每類股份嘅投票權、收取股息權利、分派股本（包括清盤）權利、以及係咪可贖回股份。</li>
+          <li><strong>續頁（Continuation Sheet）</strong> — 如果股份超過一類或者空格唔夠用，要用續頁 A（股本說明）／續頁 B（股份權利），並喺正表填返續頁頁數。</li>
+          <li><strong>提交人資料（Presentor's Reference）</strong> — 姓名／名稱、地址、電話、電郵、檔號。如果冇特別事項要公司註冊處注意，無須另加附函。</li>
+          <li><strong>簽署（Signed）</strong> — 由一名<strong>董事或公司秘書</strong>簽署，填姓名同日期。未簽妥嘅表格會被拒收。</li>
+        </ul>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>重要提醒（官方規定）：</strong>公司註冊處喺 NSC11 填表須知講到明，<strong>以手寫方式填寫嘅表格或唔會被接納</strong> — 所以一定要用電腦打字填，全部資料統一用中文（繁體）或者統一用英文，唔好中英混雜。我朋友阿強就係貪快手寫，結果俾公司註冊處彈返轉頭，差啲拖過一個月限期。</p>
+        </div>
+
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>冇 NSC11 生成器點算？</strong>我哋暫時未有 NSC11 自動生成工具，但表格只有兩頁紙，跟住上面 checklist 自己填完全冇問題 — 重點係數字要同股東名冊對得齊。搞掂之後周年申報記得用我哋嘅<a href="/nar1-generator/" class="text-gold font-medium">NAR1 周年申報表工具</a>，一次過搞掂。</p>
+        </div>
+
+        <!-- Section 6: 印花稅 -->
+        <h2 id="stamp">6. 拆細要唔要交印花稅？同轉讓有咩分別</h2>
+        <p>呢個係最多人搞錯嘅位。<strong>拆細本身唔使交印花稅（厘印費）</strong>。點解？因為印花稅係針對「轉讓文書」徵收 — 有股份由一個人轉俾另一個人先要交稅。拆細只係股份單位嘅重新計算，股東冇變、持股比例冇變，冇任何轉讓發生，自然冇稅。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>股份拆細</th>
+              <th>股份轉讓</th>
+              <th>配發新股</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>股東有冇變？</strong></td>
+              <td>冇（比例不變）</td>
+              <td>有（買賣雙方）</td>
+              <td>有（新投資者加入）</td>
+            </tr>
+            <tr>
+              <td><strong>印花稅</strong></td>
+              <td>唔使交</td>
+              <td>買賣雙方各 0.1%（合共 0.2%）+ 每張文書 HK$5</td>
+              <td>一般唔使（除非涉及轉讓）</td>
+            </tr>
+            <tr>
+              <td><strong>主要文件</strong></td>
+              <td>特別決議 + NSC11</td>
+              <td>轉讓文書（Instrument of Transfer）+ Bought/Sold Note</td>
+              <td>董事決議 + NSC1</td>
+            </tr>
+            <tr>
+              <td><strong>緊要期限</strong></td>
+              <td>更改後一個月內交 NSC11</td>
+              <td>簽署後 30 日內交印花稅署打厘印</td>
+              <td>配發後一個月內交 NSC1</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>但係留意一個變形：如果<strong>拆細之後再轉讓</strong>股份（例如分俾仔女），轉讓嗰部分就要照正常程序交厘印費 — 買賣雙方各 0.1%，合共 0.2%。以市價計，轉讓 100 萬市值嘅股份，厘印費大約 HK$2,000，呢筆錢冇得慳。想慳時間慳錯漏，可以用我哋嘅 <a href="/shareholder-transfer/" class="text-gold font-medium">股份轉讓工具</a>同 <a href="/blog/香港公司印花稅厘印費終極指南/">印花稅厘印費終極指南</a>，一次過搞掂轉讓文書同厘印程序。</p>
+
+        <div class="flag-item">
+          <p><i data-lucide="flag" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>真實案例：</strong>阿強最初以為「拆細＝分股份」，諗住拆細嗰陣順便報埋厘印，仲走去問稅局打厘印收幾錢。好彩佢個會計師叫停 — 拆細冇轉讓，根本唔關印花稅事。如果佢傻更更將拆細當轉讓申報，反而會搞到文件一塌糊塗。</p>
+        </div>
+
+        <!-- Section 7: 拆細之後必做 -->
+        <h2 id="after">7. 拆細之後必做清單（股票、SCR、周年申報）</h2>
+        <p>交完 NSC11 唔代表完事。以下係拆細之後你公司必定要做嘅嘢，我列成 checklist 方便你跟住做：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>事項</th>
+              <th>點解要做</th>
+              <th>幾時做</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>收返舊股票、簽發新股票</strong></td>
+              <td>舊股票面值同數量已經唔啱，拆細後一定要換發新股票俾每位股東</td>
+              <td>拆細生效後盡快做</td>
+            </tr>
+            <tr>
+              <td><strong>更新股東名冊（Register of Members）</strong></td>
+              <td>股東名冊要反映新股份數目，係公司法定紀錄</td>
+              <td>拆細生效日同步更新</td>
+            </tr>
+            <tr>
+              <td><strong>更新重要控制人登記冊（SCR）</strong></td>
+              <td>SCR 記錄重要控制人持有股份嘅詳情，拆細後股份數目變咗要同步</td>
+              <td>拆細生效後 7 日內完成為佳</td>
+            </tr>
+            <tr>
+              <td><strong>周年申報表（NAR1）用新數字</strong></td>
+              <td>下次周年申報要報正確嘅已發行股份數目，報錯會俾人追問</td>
+              <td>下次周年申報限期前</td>
+            </tr>
+            <tr>
+              <td><strong>更新公司紀錄文件</strong></td>
+              <td>決議紀錄、董事會紀錄、股東名冊、股票存根全部要歸檔一致</td>
+              <td>即日</td>
+            </tr>
+            <tr>
+              <td><strong>通知公司秘書／會計師</strong></td>
+              <td>佢哋要幫你處理報稅、審計同合規，股份數目影響文件</td>
+              <td>拆細後即時通知</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>其中 SCR 同周年申報表係最多人遺忘嘅兩項。SCR 要求公司保存重要控制人嘅最新資料，拆細後股份數目變咗，如果公司註冊處查到紀錄唔齊，公司同每名責任人都可以被罰款。周年申報就更加直接 — <strong>NAR1 上面填嘅股份數目一定要同股東名冊一致</strong>。想穩陣起見，我建議用我哋嘅兩個工具：<a href="/nar1-generator/" class="text-gold font-medium">NAR1 周年申報表工具</a>（跟住填報股份數目）同埋 <a href="/significant-controllers-register/" class="text-gold font-medium">SCR 重要控制人登記冊工具</a>（更新持有人持股詳情）。</p>
+
+        <div class="tip-box">
+          <p><i data-lucide="lightbulb" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>股票換發都要換晒：</strong>有人以為拆細淨係「數字遊戲」，舊股票照用都得 — 大錯特錯。股票係股權憑證，舊股票寫住舊面值同舊數量，同股東名冊對唔上，將來做轉讓、質押或者銀行融資都會被質疑。一定要收返舊股票、發新股票，一張都唔好漏。</p>
+        </div>
+
+        <!-- Section 8: 常見錯誤 -->
+        <h2 id="mistakes">8. 真實犯錯故事 + 6 大常見錯誤</h2>
+        <p>以下係我親身見過同聽過嘅血淚教訓，你千祈唔好犯同樣嘅錯：</p>
+
+        <div class="flag-item">
+          <p><i data-lucide="flag" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>真實故事：</strong>朋友 B 間公司做咗拆細之後，以為「自己公司內部嘢，唔使報公司註冊處」，NSC11 影都冇影。半年後佢想用公司去做銀行融資，銀行做盡職審查（Due Diligence）時發現公司註冊處嘅股本紀錄同實際股東名冊對唔上，貸款直接 hold 住，要佢補交晒文件先肯繼續。拆細完成後一個月內唔交 NSC11，輕則罰款，重則累街坊 — 銀行、投資者、政府部門全部會查公司註冊處紀錄。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 1：用錯表格 — 攞 NSC1 當 NSC11 用</strong></p>
+          <p>NSC1 係股份配發申報書，淨係配發新股先用；拆細、合股要用 NSC11 更改股本通知書。交錯表格會被彈返轉頭，仲要重新計過一個月限期，分分鐘逾期罰款。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 2：手寫表格</strong></p>
+          <p>公司註冊處官方講到明，手寫表格或唔會被接納。用電腦打字，中英文統一，先至穩陣。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 3：搵個唔係董事／秘書嘅人簽名</strong></p>
+          <p>NSC11 一定要由董事或公司秘書簽署。叫個會計文員簽，表格直接唔受理，仲要俾註冊處質疑文件真偽。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 4：生效日期亂咁填</strong></p>
+          <p>決議一個日期、NSC11 一個日期、股票又另一個日期 — 三份文件夾唔埋，將來核數師、銀行一對就穿。全部文件要用同一個生效日期。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 5：以為拆細要交厘印費／當轉讓處理</strong></p>
+          <p>拆細冇轉讓發生，唔使交印花稅。搞錯咗走去報稅局，反而製造混亂。記住：拆細同轉讓係兩件事，之後先至係轉讓。</p>
+        </div>
+
+        <div class="step-card">
+          <p><i data-lucide="circle-x" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>錯誤 6：拆細之後冇換股票、冇更新 SCR</strong></p>
+          <p>舊股票照流通、SCR 冇更新、周年申報用舊數字 — 三樣嘢任何一樣漏咗，將來做融資、轉讓、承繼都會卡住。跟住第 7 部分嘅 checklist 逐項剔。</p>
+        </div>
+
+        <!-- Section 9: 拆細定合股 -->
+        <h2 id="choose">9. 拆細定合股？幾時用邊樣</h2>
+        <p>拆細同合股方向相反，用途亦相反。總結一個簡單對照表俾你揀：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>情況</th>
+              <th>建議</th>
+              <th>原因</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>想分股份俾仔女、家人</td>
+              <td><strong>拆細</strong></td>
+              <td>股份數目多，先可以分得勻、分得精</td>
+            </tr>
+            <tr>
+              <td>想做員工持股（ESOP）</td>
+              <td><strong>拆細</strong></td>
+              <td>有足夠股份單位俾員工比例分配</td>
+            </tr>
+            <tr>
+              <td>準備引入投資者</td>
+              <td><strong>拆細</strong></td>
+              <td>任何持股百分比都有整數股份對應，談判方便</td>
+            </tr>
+            <tr>
+              <td>股份太碎、股東名冊太長</td>
+              <td><strong>合股</strong></td>
+              <td>股份數目少，管理簡單，每股價值整齊</td>
+            </tr>
+            <tr>
+              <td>準備賣盤／重組，買家想股份整齊</td>
+              <td><strong>合股</strong></td>
+              <td>每股金額做大做靚，轉讓計價方便</td>
+            </tr>
+            <tr>
+              <td>只係想簡單加個新投資者（冇比例問題）</td>
+              <td><strong>配發新股</strong>（NSC1）</td>
+              <td>直接發新股就搞掂，唔使拆細</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>仲有一點：拆細同合股喺法律上<strong>可以喺同一次股本更改度一齊做</strong>（《公司條例》第170條容許多於一種方式），但實際申報同換股票會複雜好多，冇特別需要嘅話唔建議一次過搞。</p>
+
+        <div class="warn-box">
+          <p><i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1" aria-hidden="true"></i><strong>僅供參考：</strong>本文章內容僅供一般參考，唔構成法律意見。實際股本更改嘅程序、費用同可行性會因個別公司嘅章程同股本結構而有重大分別，決定自行處理之前，請務必諮詢執業律師或公司秘書。</p>
+        </div>
+
+        <blockquote>
+          <p>想了解多啲公司文件同法律程序？我哋有大量免費指南 — <a href="/blog/">睇更多 ESGov 指南</a>，股份轉讓、公司註冊、合規申報等全部免費。</p>
+        </blockquote>
+
+        <!-- Section 10: FAQ -->
+        <h2 id="faq">10. 常見問題（FAQ）</h2>
+
+        <h3>股份拆細要唔要交印花稅？</h3>
+        <p>拆細本身唔使交印花稅，因為拆細唔涉及轉讓文書，股東持股比例完全不變。但如果拆細之後再將股份轉讓俾其他人（例如送俾仔女），轉讓部分就要照正常股份轉讓交厘印費（買賣雙方各 0.1%）。</p>
+
+        <h3>股份拆細要唔要特別決議？</h3>
+        <p>股份拆細同合股屬於《公司條例》第170條嘅股本更改，要經公司決議授權先可以做。實務上通常以特別決議（須獲不少於 75% 股東通過）處理，好多公司嘅章程亦明確要求特別決議。做之前一定要翻一翻公司嘅 Articles of Association 確認。</p>
+
+        <h3>NSC11 幾時要交？</h3>
+        <p>根據《公司條例》第171(1)條，公司更改股本（包括拆細、合股）後，須喺一個月內將更改股本通知書（表格 NSC11）交付公司註冊處登記。如果更改涉及配發新股，就唔使用 NSC11，改為喺配發後一個月內交 NSC1 股份配發申報書。</p>
+
+        <h3>NSC11 表格邊個簽名？</h3>
+        <p>NSC11 必須由一名董事或公司秘書簽署，公司註冊處唔接受未簽妥嘅表格。另外要留意，公司註冊處明確話手寫填寫嘅表格或會被拒絕，所以最好用電腦打字填寫，全部資料統一用中文或者統一用英文。</p>
+
+        <h3>拆細會唔會影響股東嘅持股比例？</h3>
+        <p>唔會。拆細係將每股拆做更多細股，所有股東嘅股份數目按同一比例增加，持股百分比完全不變。但拆細之後要更新股東名冊、重新簽發股票，重要控制人登記冊（SCR）同周年申報表入面嘅股份數目都要同步更新。</p>
+
+        <h3>拆細之後想即時轉讓股份俾仔女，程序點行？</h3>
+        <p>先完成拆細程序（特別決議＋一個月內交 NSC11＋換發股票），然後按正常股份轉讓程序處理：簽署轉讓文書（Instrument of Transfer）、交印花稅（厘印費）、更新股東名冊同 SCR。兩件事分開做，唔好撈埋一齊申報。</p>
+
+      </div>
+
+      <!-- 相關指南 -->
+      <div class="mt-8 mb-4">
+        <h3 class="font-bold text-navy text-base mb-3">相關指南</h3>
+        <ul class="space-y-1.5 text-sm">
+          <li>• <a href="/blog/香港公司股份證明書ShareCertificate終極指南/" class="text-gold hover:underline">香港公司股份證明書（Share Certificate）終極指南 — 拆細換股票必睇</a></li>
+          <li>• <a href="/blog/NSC1表格填寫教學/" class="text-gold hover:underline">NSC1 表格填寫教學 — 配發新股用 NSC1、拆細用 NSC11，唔好撈亂</a></li>
+          <li>• <a href="/blog/香港有限公司減資終極指南/" class="text-gold hover:underline">香港有限公司減資終極指南 — 股本大工程嘅另一條路</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- 僅供參考 警告（底部） -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+    <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 flex items-start gap-3">
+      <div class="w-9 h-9 shrink-0 rounded-full bg-amber-400/20 flex items-center justify-center">
+        <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-600" aria-hidden="true"></i>
+      </div>
+      <div>
+        <p class="font-bold text-amber-800">僅供參考</p>
+        <p class="text-sm text-amber-700 leading-relaxed">本文章內容只係一般資訊分享，<strong class="text-amber-800">唔構成法律意見</strong>。實際股本更改嘅程序、費用同可行性會因個別公司嘅章程同股本結構而有重大分別，決定自行處理之前，請務必諮詢執業律師或公司秘書。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ Author Bio ═══════════════ -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="bg-white rounded-xl border border-gray-200 p-6 flex items-center gap-4">
+      <div class="w-14 h-14 rounded-full bg-navy text-gold flex items-center justify-center text-2xl font-bold shrink-0">E</div>
+      <div>
+        <p class="font-bold text-navy">ESGov 編輯部</p>
+        <p class="text-sm text-gray-500 mt-1">香港公司秘書文件指南，由真實東主執筆，分享自己搞掂公司文件同法律程序嘅實戰經驗。</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-8 bg-navy text-gray-400">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-xl text-white">ESGov</span>
+      </div>
+      <p class="text-sm">© 2026 ESGov · 香港公司文件指南（所有內容僅供參考，不構成法律意見）</p>
+    </div>
+  </footer>
+
+</body>
+</html>
